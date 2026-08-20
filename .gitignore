@@ -1,0 +1,7 @@
+node_modules/
+dist/
+scratch/
+.env
+*.log
+google_oauth_client.json
+google_oauth_token.json

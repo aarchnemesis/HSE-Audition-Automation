@@ -1,0 +1,70 @@
+name: HSE Audit & Storz Automated Cron
+
+on:
+  schedule:
+    # Executa de Segunda a Sexta-feira às 09:00 UTC (06:00 BRT - Horário de Brasília)
+    - cron: '0 9 * * 1-5'
+  workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout do Repositório
+        uses: actions/checkout@v4
+      - name: 🟢 Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: 📦 Instalar Dependências do Projeto
+        run: npm ci
+      - name: 🔎 Type-check
+        run: npm run lint
+      - name: 🧪 Rodar Testes
+        run: npm test
+
+  audit-and-notify:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: 🟢 Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Instalar Dependências do Projeto
+        run: npm ci
+
+      - name: 🎭 Instalar Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: 🤖 Executar Auditoria Tripla & Gerar Relatório HSE
+        env:
+          STORZ_URL: ${{ secrets.STORZ_URL }}
+          STORZ_USER: ${{ secrets.STORZ_USER }}
+          STORZ_PASS: ${{ secrets.STORZ_PASS }}
+          HSE_DRIVE_FOLDER_ID: ${{ secrets.HSE_DRIVE_FOLDER_ID }}
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
+        run: npm run hse-report
+
+      # Contém nomes, status EHS e localização de colaboradores (dados pessoais).
+      # Retenção curta e visibilidade restrita a quem já tem acesso de leitura ao repositório.
+      - name: 📊 Upload do Relatório Excel Consolidado
+        uses: actions/upload-artifact@v4
+        with:
+          name: hse_relatorio_consolidado_${{ github.run_id }}
+          path: scratch/hse_relatorio_consolidado.xlsx
+          retention-days: 7
