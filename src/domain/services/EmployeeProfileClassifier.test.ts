@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { classifyEmployeeProfile, getRequiredDocCodesForProfile } from './EmployeeProfileClassifier.js';
+import { DOC_CATALOG_MAP } from './ComplianceEngine.js';
 
 describe('classifyEmployeeProfile', () => {
   it('classifica códigos de campo (IQ, TO, LO, IE, CO) como CAMPO', () => {
@@ -42,5 +43,17 @@ describe('getRequiredDocCodesForProfile', () => {
   it('ADMINISTRATIVO exige só o básico (ASO)', () => {
     const codes = getRequiredDocCodesForProfile('ADMINISTRATIVO');
     expect(codes).toEqual(['01']);
+  });
+
+  it('CAMPO cobre todas as variações de GWO do catálogo, não só uma (regressão: só WINDA ID aparecia antes)', () => {
+    const gwoCodes = Object.entries(DOC_CATALOG_MAP)
+      .filter(([, name]) => name.toUpperCase().includes('GWO'))
+      .map(([code]) => code);
+    const codes = getRequiredDocCodesForProfile('CAMPO');
+
+    expect(gwoCodes.length).toBeGreaterThanOrEqual(5); // 16,17,19,21,30,32 no catálogo atual
+    for (const code of gwoCodes) {
+      expect(codes).toContain(code);
+    }
   });
 });

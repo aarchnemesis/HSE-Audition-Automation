@@ -6,6 +6,7 @@ import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
 import { IEmailService } from '../ports/IEmailService.js';
 import { ParkRequirement } from '../domain/models/Certificate.js';
+import { getRequiredDocCodesForProfile } from '../domain/services/EmployeeProfileClassifier.js';
 
 const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
 
@@ -17,7 +18,7 @@ const PARKS_WITH_MODALITY: ParkRequirement[] = [
     parkName: 'Parque Eólico Serra dos Ventos',
     clientName: 'Vestas',
     description: 'Exige NR-35 PRESENCIAL e treinamentos específicos Vestas.',
-    requiredDocCodes: ['01', '08', '12', '13', '21', '22', '25', '26', '30'],
+    requiredDocCodes: getRequiredDocCodesForProfile('CAMPO'),
     requiredModalities: {
       '21': 'PRESENCIAL',
       '22': 'PRESENCIAL'

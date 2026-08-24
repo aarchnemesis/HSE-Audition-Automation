@@ -39,7 +39,10 @@ export function classifyEmployeeProfile(funcaoCode: string | undefined): Employe
  * Se isso precisar aparecer, dá pra estender o AuditTriangulator pra incluir documentos extras
  * encontrados fora da lista de exigidos, marcados como informativos (não contam pra apto/inapto).
  */
-const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '21', '22', '25', '26', '30'];
+// GWO não é um treinamento único — o catálogo tem 6 variações (16, 17, 19, 21, 30, 32).
+// Faltavam 4 delas aqui antes (só 21 e 30 estavam na lista), por isso só "GWO WINDA ID"
+// aparecia nos relatórios — corrigido em 21/08/2026.
+const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '16', '17', '19', '21', '22', '25', '26', '30', '32'];
 const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01'];
 
 export function getRequiredDocCodesForProfile(profile: EmployeeProfile): string[] {

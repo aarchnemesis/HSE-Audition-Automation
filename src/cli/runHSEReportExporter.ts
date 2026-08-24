@@ -6,6 +6,7 @@ import { AuditTriangulator } from '../domain/services/AuditTriangulator.js';
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js';
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js';
 import { buildRoster } from '../domain/services/InspectorRosterBuilder.js';
+import { getRequiredDocCodesForProfile } from '../domain/services/EmployeeProfileClassifier.js';
 import { buildPendencyDigest } from '../domain/services/PendencyDigestBuilder.js';
 import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
@@ -49,7 +50,7 @@ async function main() {
     console.log('[Roster] SMARTSHEET_API_TOKEN/SMARTSHEET_RPO_SHEET_ID não configurados — usando só quem tem pasta no Drive (perfil CAMPO).');
     roster = driveInspectors.map((inspector) => ({
       inspector,
-      requiredDocCodes: ['01', '08', '12', '13', '21', '22', '25', '26', '30'],
+      requiredDocCodes: getRequiredDocCodesForProfile('CAMPO'),
       profile: 'CAMPO',
       hasDriveFolder: true
     }));
