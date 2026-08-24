@@ -5,6 +5,8 @@ import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
 import { SmartsheetRPOAdapter, RPO_TRACKED_DOC_CODES } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
 import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js';
+import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
+import { matchesInspector } from '../domain/services/InspectorMatcher.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
 import { IEmailService } from '../ports/IEmailService.js';
@@ -75,12 +77,26 @@ async function main() {
   const driveAdapter = createDriveAdapter(REF_DATE);
 
   console.log('📂 Lendo inspetores do Drive...');
-  const driveInspectors = await driveAdapter.getInspectors();
-  console.log(`   ${driveInspectors.length} inspetor(es) encontrado(s) no Drive.`);
+  const driveInspectorsRaw = await driveAdapter.getInspectors();
+  console.log(`   ${driveInspectorsRaw.length} inspetor(es) encontrado(s) no Drive.`);
 
   console.log('📊 Lendo planilha RPO via Smartsheet (somente leitura)...');
-  const rpoInspectors = await rpoAdapter.readRPOData();
-  console.log(`   ${rpoInspectors.length} linha(s) encontrada(s) na RPO.`);
+  const rpoInspectorsRaw = await rpoAdapter.readRPOData();
+  console.log(`   ${rpoInspectorsRaw.length} linha(s) encontrada(s) na RPO.`);
+
+  // Mesmo filtro do relatório diário (buildRoster): desligado não é gente ativa, divergência de
+  // data pra quem já saiu não é uma pendência de digitação que alguém precise corrigir.
+  const desligadoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) === null);
+  const rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
+  console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`);
+
+  // Filtra também as pastas do Drive de quem já foi identificado como desligado na RPO — senão
+  // o auditor vê uma pasta "órfã" (sem RPO ativa correspondente) e marca tudo como SOMENTE_DRIVE,
+  // o que pareceria pendência de digitação quando na verdade é só gente que já saiu.
+  const driveInspectors = driveInspectorsRaw.filter(
+    (d) => !desligadoInspectors.some((deslig) => matchesInspector(deslig, d.name, d.cpf))
+  );
+  console.log(`   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`);
 
   console.log('🤖 Executando raspagem / auditoria na plataforma Storz...');
   const storzScraper = new StorzPlaywrightScraper();
