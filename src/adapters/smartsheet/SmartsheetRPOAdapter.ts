@@ -58,6 +58,14 @@ export const RPO_TRACKED_DOC_CODES = new Set(Object.values(RPO_DATE_COLUMN_TO_CO
 // desconhecido for adicionado no futuro, ele fica de fora por padrão em vez de vazar como gente.
 const EMPLOYEE_ROOT_BRANCH_NAME = 'RECURSOS HUMANOS';
 
+// A coluna FUNÇÃO não é o único (nem o mais confiável) sinal de desligamento: a planilha também
+// tem um grupo hierárquico "DESLIGADOS" (dentro de RECURSOS HUMANOS) contendo gente cuja FUNÇÃO
+// ainda diz um cargo ativo (ex.: "TO", "IQ") — bug de dado real encontrado em 22/08/2026 (Hamilcar
+// Campos dos Santos Júnior: FUNÇÃO="TO", mas está fisicamente dentro do grupo "DESLIGADOS"). Nesse
+// caso o grupo hierárquico é mais autoritativo que o texto da célula FUNÇÃO — 228 pessoas estão
+// sob esse grupo, contra só 139 com FUNÇÃO="DE" literal (89 escapavam do filtro antigo).
+const DESLIGADOS_BRANCH_NAME_HINT = 'DESLIGADO';
+
 const NAME_COLUMN = 'FUNCIONARIO';
 const ROLE_COLUMN = 'FUNÇÃO';
 const SECTOR_COLUMN = 'SETOR';
@@ -136,17 +144,29 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
       console.warn(`[SmartsheetRPOAdapter] Ramo "${EMPLOYEE_ROOT_BRANCH_NAME}" não encontrado na planilha — lendo todas as linhas sem filtrar por ramo (pode incluir linhas que não são pessoas).`);
     }
 
-    const isDescendantOfEmployeeRoot = (row: SmartsheetRow): boolean => {
-      if (!employeeRootRow) return true;
+    const isDescendantOf = (row: SmartsheetRow, ancestorId: number): boolean => {
       let current: SmartsheetRow | undefined = row;
       const visited = new Set<number>();
       while (current?.parentId !== undefined && !visited.has(current.id)) {
         visited.add(current.id);
-        if (current.parentId === employeeRootRow.id) return true;
+        if (current.parentId === ancestorId) return true;
         current = rowById.get(current.parentId);
       }
       return false;
     };
+
+    const isDescendantOfEmployeeRoot = (row: SmartsheetRow): boolean =>
+      !employeeRootRow || isDescendantOf(row, employeeRootRow.id);
+
+    const desligadosRow = sheet.rows.find((r) => {
+      const cell = r.cells.find((c) => columnTitleById.get(c.columnId) === NAME_COLUMN);
+      return typeof cell?.value === 'string' && cell.value.toUpperCase().includes(DESLIGADOS_BRANCH_NAME_HINT);
+    });
+    if (!desligadosRow) {
+      console.warn('[SmartsheetRPOAdapter] Grupo "DESLIGADOS" não encontrado na planilha — só o filtro por FUNÇÃO="DE" será aplicado (pode deixar passar gente desligada cuja FUNÇÃO não foi atualizada).');
+    }
+    const isDesligadoByHierarchy = (row: SmartsheetRow): boolean =>
+      !!desligadosRow && isDescendantOf(row, desligadosRow.id);
 
     const inspectors: Inspector[] = [];
 
@@ -181,10 +201,13 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         });
       }
 
+      // Grupo hierárquico "DESLIGADOS" vence o texto da célula FUNÇÃO — ver comentário acima.
+      const role = isDesligadoByHierarchy(row) ? 'DE' : (cellByTitle.get(ROLE_COLUMN) as string) || 'INSPETOR';
+
       inspectors.push({
         id: `rpo_${row.rowNumber}`,
         name: name.trim(),
-        role: (cellByTitle.get(ROLE_COLUMN) as string) || 'INSPETOR',
+        role,
         sector: cellByTitle.get(SECTOR_COLUMN) as string | undefined,
         windaId: cellByTitle.get(WINDA_COLUMN) as string | undefined,
         certificates
