@@ -1,5 +1,8 @@
 import 'dotenv/config';
+import fs from 'fs';
+import path from 'path';
 import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
+import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js';
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
 import { AuditTriangulator } from '../domain/services/AuditTriangulator.js';
@@ -106,6 +109,16 @@ async function main() {
   console.log('================================================================================');
   const excelPath = await filterEngine.exportToExcel(dbRepo.getAllRecords());
   console.log(`✅ Relatório gerado em: ${excelPath}\n`);
+
+  // 7b. Gerar o dashboard HTML autocontido (mesmo snapshot do Excel). Não é publicado como site
+  //     público — sai como artifact do workflow do GitHub Actions, igual ao Excel, porque o repo
+  //     é privado num plano que não suporta Pages com acesso restrito e os dados são pessoais.
+  console.log('================================================================================');
+  console.log('   🖥️  GERANDO DASHBOARD HTML PARA A EQUIPE HSE');
+  console.log('================================================================================');
+  const dashboardPath = path.join(process.cwd(), 'scratch', 'hse_dashboard.html');
+  fs.writeFileSync(dashboardPath, buildDashboardHtml(dbRepo.getAllRecords()));
+  console.log(`✅ Dashboard gerado em: ${dashboardPath}\n`);
 
   // 8. Enviar o resumo diário — um único e-mail agrupando todo mundo com pendência, em vez de
   //    um e-mail por inspetor. Frequência de disparo ainda não definida com o time de HSE.

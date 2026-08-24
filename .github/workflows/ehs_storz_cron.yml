@@ -70,3 +70,12 @@ jobs:
           name: hse_relatorio_consolidado_${{ github.run_id }}
           path: scratch/hse_relatorio_consolidado.xlsx
           retention-days: 7
+
+      # Mesmo cuidado do Excel: dashboard HTML com dados pessoais, não publicado como site
+      # (o repo é privado num plano sem Pages com acesso restrito) — só artifact do workflow.
+      - name: 🖥️ Upload do Dashboard HTML
+        uses: actions/upload-artifact@v4
+        with:
+          name: hse_dashboard_${{ github.run_id }}
+          path: scratch/hse_dashboard.html
+          retention-days: 7
