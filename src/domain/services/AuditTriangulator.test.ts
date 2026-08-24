@@ -50,7 +50,7 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.missingDocsCount).toBe(1);
   });
 
-  it('promove para SOLICITADO_STORZ quando o curso na Storz ainda não foi iniciado (state SOLICITADO)', () => {
+  it('MANTÉM o status de urgência real (VENCE_07) mesmo com solicitação SOLICITADO na Storz — o prazo é o do documento, não o prazo interno da Storz', () => {
     const inspector = makeInspector([makeCert('21', NEAR_EXPIRY)]);
     const storzRequests: StorzRequest[] = [
       {
@@ -66,13 +66,15 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
 
     const result = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE);
 
-    expect(result.auditItems[0].status).toBe('SOLICITADO_STORZ');
+    expect(result.auditItems[0].status).toBe('VENCE_07');
+    expect(result.auditItems[0].detail).toContain('SOLICITADO NA STORZ');
+    expect(result.warningDocsCount).toBe(1);
     expect(result.storzPendingCount).toBe(1);
     expect(result.storzInProgressCount).toBe(0);
     expect(result.overallStatus).toBe('APTO_COM_ATENCAO');
   });
 
-  it('promove para STORZ_EM_ANDAMENTO quando o curso já foi iniciado mas ainda não concluído (state EM_ANDAMENTO)', () => {
+  it('MANTÉM o status de urgência real mesmo com curso EM_ANDAMENTO na Storz — não estende o prazo', () => {
     const inspector = makeInspector([makeCert('21', NEAR_EXPIRY)]);
     const storzRequests: StorzRequest[] = [
       {
@@ -88,9 +90,38 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
 
     const result = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE);
 
-    expect(result.auditItems[0].status).toBe('STORZ_EM_ANDAMENTO');
+    expect(result.auditItems[0].status).toBe('VENCE_07');
+    expect(result.auditItems[0].detail).toContain('EM ANDAMENTO NA STORZ');
+    expect(result.warningDocsCount).toBe(1);
     expect(result.storzInProgressCount).toBe(1);
     expect(result.storzPendingCount).toBe(0);
+    expect(result.overallStatus).toBe('APTO_COM_ATENCAO');
+  });
+
+  it('quando o documento está VENCIDO (não só vencendo) e há solicitação na Storz, mantém VENCIDO — Storz não perdoa o vencimento já ocorrido', () => {
+    const inspector = makeInspector([makeCert('21', new Date(2026, 6, 1))]); // já vencido antes da REF_DATE
+    const storzRequests: StorzRequest[] = [
+      { id: 'REQ-1', collaboratorName: 'FULANO DE TAL', trainingCode: '21', trainingName: 'NR-35', modality: 'PRESENCIAL', requestDate: new Date(2026, 7, 1), state: 'EM_ANDAMENTO' }
+    ];
+
+    const result = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE);
+
+    expect(result.auditItems[0].status).toBe('VENCIDO');
+    expect(result.expiredDocsCount).toBe(1);
+    expect(result.overallStatus).toBe('INAPTO');
+  });
+
+  it('documento AUSENTE (sem prazo real conhecido) SIM usa o status da Storz como melhor referência disponível', () => {
+    const inspector = makeInspector([]); // sem certificado nenhum no Drive
+    const storzRequests: StorzRequest[] = [
+      { id: 'REQ-1', collaboratorName: 'FULANO DE TAL', trainingCode: '21', trainingName: 'NR-35', modality: 'PRESENCIAL', requestDate: new Date(2026, 7, 1), state: 'SOLICITADO' }
+    ];
+
+    const result = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE);
+
+    expect(result.auditItems[0].status).toBe('SOLICITADO_STORZ');
+    expect(result.missingDocsCount).toBe(0);
+    expect(result.storzPendingCount).toBe(1);
     expect(result.overallStatus).toBe('APTO_COM_ATENCAO');
   });
 

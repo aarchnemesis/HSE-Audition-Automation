@@ -58,25 +58,6 @@ export class AuditTriangulator {
       (r) => r.collaboratorCpf
     );
 
-    // SOLICITADO_STORZ só vale para quem AINDA NÃO iniciou o curso (state SOLICITADO — sem data
-    // de início). Quem já iniciou mas não concluiu (state EM_ANDAMENTO) precisa ser monitorado à
-    // parte — não pode ficar escondido atrás do mesmo status de "só pedi e não fiz nada ainda".
-    // CONCLUIDO conta como resolvido (mesma classe de SOLICITADO_STORZ: "coberto pela Storz").
-    const applyStorzOverride = (storzReq: StorzRequest, baseDetail: string): { status: EHSStatus; detail: string } => {
-      if (storzReq.state === 'EM_ANDAMENTO') {
-        storzInProgressCount++;
-        return {
-          status: 'STORZ_EM_ANDAMENTO',
-          detail: `${baseDetail} | 🟣 EM ANDAMENTO NA STORZ, curso iniciado mas ainda não concluído (${storzReq.id})`
-        };
-      }
-      storzPendingCount++;
-      return {
-        status: 'SOLICITADO_STORZ',
-        detail: `${baseDetail} | 🔵 SOLICITADO NA STORZ (${storzReq.id} - Status: ${storzReq.state})`
-      };
-    };
-
     const auditItems = park.requiredDocCodes.map((code) => {
       const reqName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`;
       const cert = inspector.certificates.get(code);
@@ -100,10 +81,18 @@ export class AuditTriangulator {
       let detail = '';
 
       if (!cert) {
+        // Documento ausente = não existe um prazo real conhecido pra comparar. A Storz é a
+        // única referência que temos, então aqui SIM ela vira o status principal.
         if (storzReq) {
-          const overridden = applyStorzOverride(storzReq, 'Documento ausente no Drive, mas');
-          status = overridden.status;
-          detail = overridden.detail;
+          if (storzReq.state === 'EM_ANDAMENTO') {
+            storzInProgressCount++;
+            status = 'STORZ_EM_ANDAMENTO';
+            detail = `Documento ausente no Drive, mas EM ANDAMENTO NA STORZ, curso iniciado mas ainda não concluído (${storzReq.id}).`;
+          } else {
+            storzPendingCount++;
+            status = 'SOLICITADO_STORZ';
+            detail = `Documento ausente no Drive, mas SOLICITADO NA STORZ (${storzReq.id} - Status: ${storzReq.state}).`;
+          }
         } else {
           status = 'AUSENTE';
           detail = 'Documento obrigatório não encontrado no Drive nem solicitado na Storz.';
@@ -114,15 +103,25 @@ export class AuditTriangulator {
         status = evaluation.status;
         detail = evaluation.detail;
 
-        // Se o documento estiver vencido ou vencendo em 60/30/15/7 dias, checa se a Storz já tem solicitação
+        // O prazo real é sempre o do próprio documento (data de vencimento), NUNCA o prazo
+        // interno da Storz pra concluir o curso (ex.: Storz dá até 60 dias pro aluno concluir,
+        // mas se o documento já vence em 30, o prazo que importa é 30 — a Storz só informa "já
+        // está em andamento", não estende o vencimento). Por isso, quando o documento vence ou
+        // já venceu, mantemos o status de urgência real (VENCE_07/15/30/60/VENCIDO) mesmo que
+        // haja solicitação ativa na Storz — só anexamos a informação no detalhe e contamos à
+        // parte, sem esconder a urgência.
         if (['VENCIDO', 'VENCE_07', 'VENCE_15', 'VENCE_30', 'VENCE_60'].includes(status)) {
+          if (status === 'VENCIDO') expiredCount++;
+          else warningCount++;
+
           if (storzReq) {
-            const overridden = applyStorzOverride(storzReq, evaluation.detail);
-            status = overridden.status;
-            detail = overridden.detail;
-          } else {
-            if (status === 'VENCIDO') expiredCount++;
-            else warningCount++;
+            if (storzReq.state === 'EM_ANDAMENTO') {
+              storzInProgressCount++;
+              detail += ` | 🟣 EM ANDAMENTO NA STORZ, curso iniciado mas ainda não concluído (${storzReq.id}) — o prazo que vale é o vencimento do documento, não o prazo interno da Storz para concluir o curso.`;
+            } else {
+              storzPendingCount++;
+              detail += ` | 🔵 SOLICITADO NA STORZ (${storzReq.id} - Status: ${storzReq.state}) — o prazo que vale é o vencimento do documento, não o prazo interno da Storz para concluir o curso.`;
+            }
           }
         } else {
           validCount++;
