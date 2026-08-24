@@ -22,4 +22,12 @@ describe('matchesInspector', () => {
     expect(matchesInspector(inspector, 'ADRIANO CIRILO GARCIA LIMA - Solicitação Storz')).toBe(true);
     expect(matchesInspector(inspector, 'OUTRO COLABORADOR')).toBe(false);
   });
+
+  it('ignora diferença de acentuação entre as fontes (bug real: Hamilcar Campos dos Santos Júnior)', () => {
+    const inspectorDrive = makeInspector('HAMILCAR CAMPOS DOS SANTOS JÚNIOR');
+    expect(matchesInspector(inspectorDrive, 'HAMILCAR CAMPOS DOS SANTOS JUNIOR')).toBe(true);
+
+    const inspectorSemAcento = makeInspector('HAMILCAR CAMPOS DOS SANTOS JUNIOR');
+    expect(matchesInspector(inspectorSemAcento, 'HAMILCAR CAMPOS DOS SANTOS JÚNIOR')).toBe(true);
+  });
 });
