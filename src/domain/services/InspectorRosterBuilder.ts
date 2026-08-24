@@ -41,7 +41,7 @@ export function buildRoster(rpoInspectors: Inspector[], driveInspectors: Inspect
     entries.push({
       inspector,
       profile,
-      requiredDocCodes: getRequiredDocCodesForProfile(profile),
+      requiredDocCodes: getRequiredDocCodesForProfile(profile, rpoInspector.employmentType),
       hasDriveFolder: !!driveMatch
     });
   }

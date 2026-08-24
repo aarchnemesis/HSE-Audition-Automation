@@ -31,6 +31,7 @@ export interface Inspector {
   name: string;                  // Nome completo
   cpf?: string;                  // CPF (usado como chave primária de matching com a Storz, quando disponível)
   role: string;                  // Ex: "INSP. DE QUALIDADE", "TÉC. EM OPERAÇÃO"
+  employmentType?: string;       // Ex: "CLT", "PJ" — vem da coluna TIPO da RPO
   sector?: string;               // Ex: "INTERNAS", "OPERAÇÕES"
   windaId?: string;              // WINDA ID (GWO)
   cnhNumber?: string;            // Número da CNH

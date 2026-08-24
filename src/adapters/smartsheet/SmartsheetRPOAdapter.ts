@@ -70,6 +70,7 @@ const NAME_COLUMN = 'FUNCIONARIO';
 const ROLE_COLUMN = 'FUNÇÃO';
 const SECTOR_COLUMN = 'SETOR';
 const WINDA_COLUMN = 'WINDA';
+const TIPO_COLUMN = 'TIPO';
 
 interface SmartsheetColumn {
   id: number;
@@ -208,6 +209,7 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         id: `rpo_${row.rowNumber}`,
         name: name.trim(),
         role,
+        employmentType: cellByTitle.get(TIPO_COLUMN) as string | undefined,
         sector: cellByTitle.get(SECTOR_COLUMN) as string | undefined,
         windaId: cellByTitle.get(WINDA_COLUMN) as string | undefined,
         certificates

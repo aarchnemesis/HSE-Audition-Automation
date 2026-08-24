@@ -45,6 +45,16 @@ export function classifyEmployeeProfile(funcaoCode: string | undefined): Employe
 const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '16', '17', '19', '21', '22', '25', '26', '30', '32'];
 const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01'];
 
-export function getRequiredDocCodesForProfile(profile: EmployeeProfile): string[] {
-  return profile === 'CAMPO' ? CAMPO_REQUIRED_DOC_CODES : ADMINISTRATIVO_REQUIRED_DOC_CODES;
+/**
+ * ASO não é sobre vínculo empregatício, é sobre EXPOSIÇÃO A RISCO. Confirmado com o time de HSE
+ * em 22/08/2026: perfil CAMPO exige ASO independente de ser CLT ou PJ (a atividade no parque
+ * eólico é o motivo, não o vínculo). Perfil ADMINISTRATIVO CLT ainda precisa (obrigação legal da
+ * CLT, NR-07, vale pra qualquer função). Mas ADMINISTRATIVO + PJ não tem nenhum dos dois motivos
+ * (nem risco de campo, nem vínculo CLT) — não deveria ser cobrado.
+ */
+export function getRequiredDocCodesForProfile(profile: EmployeeProfile, employmentType?: string): string[] {
+  if (profile === 'CAMPO') return CAMPO_REQUIRED_DOC_CODES;
+
+  const isPJ = (employmentType || '').trim().toUpperCase() === 'PJ';
+  return isPJ ? [] : ADMINISTRATIVO_REQUIRED_DOC_CODES;
 }

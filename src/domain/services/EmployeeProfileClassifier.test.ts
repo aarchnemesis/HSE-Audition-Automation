@@ -56,4 +56,18 @@ describe('getRequiredDocCodesForProfile', () => {
       expect(codes).toContain(code);
     }
   });
+
+  it('ADMINISTRATIVO + PJ não exige nenhum documento — ASO é sobre risco de campo ou vínculo CLT, PJ+ADM não tem nenhum dos dois (confirmado com HSE em 22/08/2026)', () => {
+    expect(getRequiredDocCodesForProfile('ADMINISTRATIVO', 'PJ')).toEqual([]);
+    expect(getRequiredDocCodesForProfile('ADMINISTRATIVO', 'pj')).toEqual([]); // case-insensitive
+  });
+
+  it('ADMINISTRATIVO + CLT continua exigindo ASO (obrigação legal da CLT independente da função)', () => {
+    expect(getRequiredDocCodesForProfile('ADMINISTRATIVO', 'CLT')).toEqual(['01']);
+  });
+
+  it('CAMPO exige ASO mesmo sendo PJ — o motivo é a atividade de risco no parque, não o vínculo', () => {
+    const codes = getRequiredDocCodesForProfile('CAMPO', 'PJ');
+    expect(codes).toContain('01');
+  });
 });
