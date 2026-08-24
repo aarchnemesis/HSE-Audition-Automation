@@ -7,6 +7,7 @@ import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js';
 import { buildRoster } from '../domain/services/InspectorRosterBuilder.js';
 import { buildPendencyDigest } from '../domain/services/PendencyDigestBuilder.js';
+import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
 import { IEmailService } from '../ports/IEmailService.js';
@@ -15,7 +16,9 @@ import { Inspector, ParkRequirement } from '../domain/models/Certificate.js';
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
 const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
 
-const MODALITY_REQUIREMENTS: ParkRequirement['requiredModalities'] = { '21': 'PRESENCIAL', '22': 'PRESENCIAL' };
+const MODALITY_REQUIREMENTS: ParkRequirement['requiredModalities'] = Object.fromEntries(
+  Array.from(PRESENCIAL_REQUIRED_DOC_CODES, (code) => [code, 'PRESENCIAL' as const])
+);
 
 async function main() {
   console.log('================================================================================');

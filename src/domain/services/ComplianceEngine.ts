@@ -55,6 +55,24 @@ export const STORZ_SEARCHABLE_DOC_CODES = new Set([
   '10', '11', '12', '13', '14', '15', '17', '18', '19', '20', '21', '22', '34'
 ]);
 
+/**
+ * Documentos que exigem modalidade PRESENCIAL, confirmado com o time de HSE em 21/08/2026:
+ * NR-35 (código 21, que também cobre "GWO Working at Heights"), ASO (código 01) e qualquer
+ * variação de treinamento GWO (Primeiros Socorros, NR-17, NR-23, WINDA ID, ART — "GWO geral").
+ * Isso é sobre o que é EXIGIDO, não sobre a modalidade real do certificado da pessoa — a
+ * detecção da modalidade real de cada certificado ainda depende de uma fonte de dados que o
+ * time de HSE vai levantar (ver EmployeeProfileClassifier.ts e conversa de 20-21/08/2026).
+ */
+export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
+  '01', // ASO
+  '21', // NR-35 / GWO Working at Heights
+  '16', // GWO Primeiros Socorros
+  '17', // GWO NR-17 Ergonomia / Carga Manual
+  '19', // GWO NR-23 Combate a Incêndio
+  '30', // GWO WINDA ID
+  '32'  // GWO ART
+]);
+
 export class ComplianceEngine {
   /**
    * Triangula o perfil do inspetor com a matriz de requisitos de um parque específico.
