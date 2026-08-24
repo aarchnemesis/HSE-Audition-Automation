@@ -1,7 +1,6 @@
 import nodemailer, { Transporter } from 'nodemailer';
 import { IEmailService, EmailMessage, DigestInspectorGroup } from '../../ports/IEmailService.js';
-
-const EMAIL_TITLE = 'Alerta EHS - Documentação';
+import { EMAIL_TITLE, wrapEmailHtml, buildEHSAlertBodyHtml, buildDigestBodyHtml } from './emailTemplates.js';
 
 export interface SmtpConfig {
   host: string;
@@ -40,13 +39,18 @@ export class SmtpEmailService implements IEmailService {
     });
   }
 
+  /**
+   * `message.htmlContent` é só o CORPO do e-mail (mesmo formato usado pelo DummyEmailService) —
+   * sempre envolvido no template com a identidade visual da ArthWind antes de enviar, pra
+   * garantir que o e-mail real fique idêntico ao preview gerado localmente.
+   */
   async sendEmail(message: EmailMessage): Promise<{ success: boolean; messageId?: string }> {
     try {
       const info = await this.transporter.sendMail({
         from: this.from,
         to: message.to,
         subject: message.subject,
-        html: message.htmlContent,
+        html: wrapEmailHtml(message.subject, message.htmlContent),
         text: message.textContent
       });
       console.log(`[SmtpEmailService] ✉️ E-mail enviado para ${message.to}: ${info.messageId}`);
@@ -64,22 +68,11 @@ export class SmtpEmailService implements IEmailService {
     auditItems: any[]
   ): Promise<{ success: boolean; filePath?: string }> {
     const subject = `${EMAIL_TITLE} - ${inspectorName}`;
-
-    let rowsHtml = '';
-    for (const item of auditItems) {
-      rowsHtml += `<tr><td><strong>${item.code}</strong> - ${item.reqName}</td><td>${item.status}</td><td>${item.detail}</td></tr>`;
-    }
-
-    const htmlContent = `
-      <p><strong>Inspetor:</strong> ${inspectorName}</p>
-      <p><strong>Parque Destino:</strong> ${parkName}</p>
-      <table border="1" cellpadding="6" cellspacing="0">
-        <thead><tr><th>Documento / Requisito</th><th>Status EHS</th><th>Detalhes & Storz</th></tr></thead>
-        <tbody>${rowsHtml}</tbody>
-      </table>
-    `;
-
-    const res = await this.sendEmail({ to: recipient, subject, htmlContent });
+    const res = await this.sendEmail({
+      to: recipient,
+      subject,
+      htmlContent: buildEHSAlertBodyHtml(inspectorName, parkName, auditItems)
+    });
     return { success: res.success };
   }
 
@@ -89,26 +82,7 @@ export class SmtpEmailService implements IEmailService {
     refDate: Date
   ): Promise<{ success: boolean; filePath?: string }> {
     const subject = `${EMAIL_TITLE} - Resumo (${refDate.toLocaleDateString('pt-BR')})`;
-
-    let groupsHtml = '';
-    for (const group of groups) {
-      let rowsHtml = '';
-      for (const item of group.items) {
-        rowsHtml += `<tr><td><strong>${item.docCode}</strong> - ${item.docName}</td><td>${item.status}</td><td>${item.detail}</td></tr>`;
-      }
-      groupsHtml += `
-        <h4>${group.inspectorName} — ${group.role}${group.sector ? ` — ${group.sector}` : ''} (${group.items.length} pendência(s))</h4>
-        <table border="1" cellpadding="6" cellspacing="0">
-          <tbody>${rowsHtml}</tbody>
-        </table>
-      `;
-    }
-
-    const htmlContent = groups.length === 0
-      ? '<p>Nenhuma pendência encontrada — todo mundo está em dia.</p>'
-      : `<p>${groups.length} pessoa(s) com pendência.</p>${groupsHtml}`;
-
-    const res = await this.sendEmail({ to: recipient, subject, htmlContent });
+    const res = await this.sendEmail({ to: recipient, subject, htmlContent: buildDigestBodyHtml(groups) });
     return { success: res.success };
   }
 }
