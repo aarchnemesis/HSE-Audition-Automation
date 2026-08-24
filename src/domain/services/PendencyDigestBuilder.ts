@@ -1,4 +1,5 @@
 import { HSEDatabaseRecord } from './HSEDatabaseRepository.js';
+import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js';
 
 export interface PendencyItem {
   docCode: string;
@@ -24,6 +25,10 @@ export function buildPendencyDigest(records: HSEDatabaseRecord[]): InspectorPend
 
   for (const rec of records) {
     if (rec.statusEHS === 'CONFORME') continue;
+
+    // Documento eletivo (ex.: SIT/ESO Vestas) ausente não é uma pendência ativa — só aparece
+    // na planilha pra visibilidade, não gera alerta por e-mail.
+    if (rec.statusEHS === 'AUSENTE' && ELECTIVE_DOC_CODES.has(rec.docCode)) continue;
 
     let group = groupsByName.get(rec.inspectorName);
     if (!group) {

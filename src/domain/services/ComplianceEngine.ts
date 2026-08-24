@@ -73,6 +73,19 @@ export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
   '32'  // GWO ART
 ]);
 
+/**
+ * Documentos ELETIVOS: exigidos pelo cliente/parque específico (Vestas), não por todo mundo do
+ * perfil Campo. Confirmado com o time de HSE em 22/08/2026: quem TEM o treinamento Vestas tem
+ * a validade monitorada normalmente (vence em X dias, vencido etc.). Quem NÃO tem ainda continua
+ * aparecendo como AUSENTE na planilha (pra visibilidade/auditoria), mas isso NÃO é uma pendência
+ * que exige ação — não conta pra INAPTO e não entra no resumo diário de alertas por e-mail. É só
+ * algo "a verificar" quando a pessoa for alocada num parque Vestas, não uma cobrança ativa.
+ */
+export const ELECTIVE_DOC_CODES = new Set([
+  '25', // SIT (Vestas)
+  '26'  // ESO (Vestas)
+]);
+
 export class ComplianceEngine {
   /**
    * Triangula o perfil do inspetor com a matriz de requisitos de um parque específico.

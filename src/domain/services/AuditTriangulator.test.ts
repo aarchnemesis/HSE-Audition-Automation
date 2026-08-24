@@ -161,6 +161,37 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.storzPendingCount).toBe(0);
   });
 
+  it('documento eletivo ausente (ex.: SIT Vestas) aparece como AUSENTE mas NÃO conta como pendência (INAPTO)', () => {
+    const parkVestas: ParkRequirement = { ...PARK, requiredDocCodes: ['25'] }; // SIT (Vestas)
+    const inspector = makeInspector([]); // não tem o treinamento
+
+    const result = AuditTriangulator.performTripleAudit(inspector, parkVestas, [], REF_DATE);
+
+    expect(result.auditItems[0].status).toBe('AUSENTE');
+    expect(result.missingDocsCount).toBe(0);
+    expect(result.overallStatus).not.toBe('INAPTO');
+  });
+
+  it('documento eletivo PRESENTE continua sendo monitorado normalmente pelo vencimento', () => {
+    const parkVestas: ParkRequirement = { ...PARK, requiredDocCodes: ['25'] };
+    const inspector = makeInspector([makeCert('25', NEAR_EXPIRY)]);
+
+    const result = AuditTriangulator.performTripleAudit(inspector, parkVestas, [], REF_DATE);
+
+    expect(result.auditItems[0].status).toBe('VENCE_07');
+    expect(result.warningDocsCount).toBe(1);
+  });
+
+  it('mensagem de AUSENTE não menciona a Storz para documentos que ela nunca administra (ex.: ASO)', () => {
+    const parkAso: ParkRequirement = { ...PARK, requiredDocCodes: ['01'] };
+    const inspector = makeInspector([]);
+
+    const result = AuditTriangulator.performTripleAudit(inspector, parkAso, [], REF_DATE);
+
+    expect(result.auditItems[0].detail).not.toContain('Storz');
+    expect(result.missingDocsCount).toBe(1);
+  });
+
   it('sinaliza incompatibilidade de modalidade sem mudar o status EHS', () => {
     const parkPresencial: ParkRequirement = {
       ...PARK,

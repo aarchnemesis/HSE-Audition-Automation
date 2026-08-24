@@ -56,4 +56,14 @@ describe('buildPendencyDigest', () => {
     ];
     expect(buildPendencyDigest(records)).toHaveLength(2);
   });
+
+  it('não alerta documento eletivo ausente (ex.: SIT Vestas código 25) — não é uma pendência ativa', () => {
+    const records = [makeRecord({ inspectorName: 'FULANO', docCode: '25', statusEHS: 'AUSENTE' })];
+    expect(buildPendencyDigest(records)).toHaveLength(0);
+  });
+
+  it('mas se o documento eletivo estiver vencendo (tem, mas vai vencer), continua alertando normalmente', () => {
+    const records = [makeRecord({ inspectorName: 'FULANO', docCode: '25', statusEHS: 'VENCE_07' })];
+    expect(buildPendencyDigest(records)).toHaveLength(1);
+  });
 });

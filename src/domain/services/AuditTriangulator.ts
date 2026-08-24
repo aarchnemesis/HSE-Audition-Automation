@@ -1,7 +1,7 @@
 import { Inspector, ParkRequirement, EHSStatus } from '../models/Certificate.js';
 import { StorzRequest } from '../models/StorzRequest.js';
 import { EHSEvaluator } from './EHSEvaluator.js';
-import { DOC_CATALOG_MAP, STORZ_SEARCHABLE_DOC_CODES } from './ComplianceEngine.js';
+import { DOC_CATALOG_MAP, STORZ_SEARCHABLE_DOC_CODES, ELECTIVE_DOC_CODES } from './ComplianceEngine.js';
 import { findInspectorMatch } from './InspectorMatcher.js';
 
 export interface TripleAuditResult {
@@ -95,8 +95,20 @@ export class AuditTriangulator {
           }
         } else {
           status = 'AUSENTE';
-          detail = 'Documento obrigatório não encontrado no Drive nem solicitado na Storz.';
-          missingCount++;
+
+          if (ELECTIVE_DOC_CODES.has(code)) {
+            // Eletivo (ex.: SIT/ESO Vestas): não ter ainda não é uma pendência — só aparece na
+            // planilha pra visibilidade, sem contar pra INAPTO e sem entrar no alerta por e-mail.
+            detail = 'Documento eletivo não encontrado no Drive — depende do cliente/parque, a verificar quando a pessoa for alocada. Não é cobrado como pendência.';
+          } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
+            detail = 'Documento obrigatório não encontrado no Drive nem solicitado na Storz.';
+            missingCount++;
+          } else {
+            // Documentos que a Storz nunca administra (ASO, CNH etc.) — não faz sentido dizer
+            // "nem na Storz" já que ela nunca foi (nem seria) consultada pra esses.
+            detail = 'Documento obrigatório não encontrado no Drive.';
+            missingCount++;
+          }
         }
       } else {
         const evaluation = EHSEvaluator.evaluateDate(cert.expirationDate, refDate);
