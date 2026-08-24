@@ -1,0 +1,59 @@
+name: Auditoria RPO (Divergência de Digitação)
+
+# Separado do cron diário de propósito: compara as fontes CONFIÁVEIS (Drive — documento real;
+# Storz — curso efetivamente concluído) com a planilha RPO, que é DIGITADA À MÃO e por isso a
+# fonte mais sujeita a erro de digitação. O objetivo aqui não é status de vencimento pro dia a
+# dia, é achar divergência de data pra alguém corrigir na RPO.
+
+on:
+  schedule:
+    # Toda segunda-feira às 09:00 UTC (06:00 BRT)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: 🟢 Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Instalar Dependências do Projeto
+        run: npm ci
+
+      - name: 🎭 Instalar Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: 🔍 Comparar Drive + Storz (confiáveis) x RPO (digitada)
+        env:
+          STORZ_URL: ${{ secrets.STORZ_URL }}
+          STORZ_USER: ${{ secrets.STORZ_USER }}
+          STORZ_PASS: ${{ secrets.STORZ_PASS }}
+          HSE_DRIVE_FOLDER_ID: ${{ secrets.HSE_DRIVE_FOLDER_ID }}
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+          SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
+          SMARTSHEET_RPO_SHEET_ID: ${{ secrets.SMARTSHEET_RPO_SHEET_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
+        run: npm run drive-rpo-audit
+
+      # Contém nomes e datas de documentos (dados pessoais) — mesma retenção curta do relatório
+      # diário, visível só a quem já tem acesso de leitura ao repositório.
+      - name: 📊 Upload do Relatório de Divergências
+        uses: actions/upload-artifact@v4
+        with:
+          name: auditoria_rpo_divergencias_${{ github.run_id }}
+          path: scratch/auditoria_drive_rpo.xlsx
+          retention-days: 7

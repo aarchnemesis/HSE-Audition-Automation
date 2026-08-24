@@ -3,9 +3,14 @@ import ExcelJS from 'exceljs';
 import path from 'path';
 import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
 import { SmartsheetRPOAdapter, RPO_TRACKED_DOC_CODES } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
+import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
 import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js';
+import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
+import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
+import { IEmailService } from '../ports/IEmailService.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
 
 async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, outputPath: string): Promise<void> {
   const workbook = new ExcelJS.Workbook();
@@ -16,7 +21,9 @@ async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, 
     { header: 'Código', key: 'docCode', width: 10 },
     { header: 'Documento', key: 'docName', width: 30 },
     { header: 'Validade Drive', key: 'driveExpiration', width: 16 },
+    { header: 'Validade Storz (estimada)', key: 'storzExpiration', width: 20 },
     { header: 'Validade RPO', key: 'rpoExpiration', width: 16 },
+    { header: 'Fonte Confiável', key: 'trustedSource', width: 14 },
     { header: 'Divergente', key: 'divergent', width: 12 },
     { header: 'Tipo', key: 'divergenceKind', width: 18 },
     { header: 'Detalhes', key: 'detail', width: 60 }
@@ -35,7 +42,9 @@ async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, 
       docCode: item.docCode,
       docName: item.docName,
       driveExpiration: dateFmt(item.driveExpiration),
+      storzExpiration: dateFmt(item.storzExpiration),
       rpoExpiration: dateFmt(item.rpoExpiration),
+      trustedSource: item.trustedSource || '',
       divergent: item.divergent ? 'SIM' : 'NÃO',
       divergenceKind: item.divergenceKind || '',
       detail: item.detail
@@ -73,8 +82,16 @@ async function main() {
   const rpoInspectors = await rpoAdapter.readRPOData();
   console.log(`   ${rpoInspectors.length} linha(s) encontrada(s) na RPO.`);
 
-  console.log('\n🔍 Comparando Drive x RPO...');
-  const items = DriveRpoAuditor.compare(driveInspectors, rpoInspectors, Array.from(RPO_TRACKED_DOC_CODES));
+  console.log('🤖 Executando raspagem / auditoria na plataforma Storz...');
+  const storzScraper = new StorzPlaywrightScraper();
+  const storzResult = await storzScraper.runAuditScrape({
+    headless: true,
+    targetCollaborators: rpoInspectors.map((i) => i.name)
+  });
+  console.log(`   ${storzResult.requests.length} matrícula(s)/curso(s) raspado(s) na Storz.`);
+
+  console.log('\n🔍 Comparando Drive + Storz (confiáveis) x RPO (digitada)...');
+  const items = DriveRpoAuditor.compare(driveInspectors, rpoInspectors, Array.from(RPO_TRACKED_DOC_CODES), storzResult.requests);
   const divergences = items.filter((i) => i.divergent);
   console.log(`   ${items.length} combinação(ões) comparada(s), ${divergences.length} divergência(s) encontrada(s).`);
 
@@ -91,6 +108,59 @@ async function main() {
   await exportToExcel(items, outputPath);
   console.log(`\n✅ Relatório gerado em: ${outputPath}`);
   console.log('   (Somente leitura — nada foi alterado na planilha RPO/Smartsheet.)\n');
+
+  console.log('================================================================================');
+  console.log('   📧 ENVIANDO RESUMO DA AUDITORIA DRIVE+STORZ x RPO');
+  console.log('================================================================================');
+  const emailService: IEmailService = SmtpEmailService.fromEnv() || new DummyEmailService();
+  const emailRes = await emailService.sendEmail({
+    to: EMAIL_RECIPIENT,
+    subject: `Auditoria RPO — ${divergences.length} divergência(s) de digitação encontrada(s)`,
+    htmlContent: buildDivergenceSummaryHtml(divergences, REF_DATE)
+  });
+  console.log(`   Resumo ${emailRes.success ? 'enviado' : 'falhou'}\n`);
+}
+
+function buildDivergenceSummaryHtml(divergences: ReturnType<typeof DriveRpoAuditor.compare>, refDate: Date): string {
+  const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '—');
+  const kindLabel: Record<string, string> = {
+    SOMENTE_DRIVE: 'Só existe no Drive',
+    SOMENTE_STORZ: 'Só existe na Storz',
+    SOMENTE_RPO: 'Só existe na RPO',
+    DATA_DIVERGENTE: 'Data divergente'
+  };
+
+  const rows = divergences
+    .slice(0, 200) // e-mail não é o relatório completo — o xlsx anexado ao artifact do workflow é
+    .map((d) => `
+      <tr>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${d.inspectorName}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${d.docName}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${kindLabel[d.divergenceKind || ''] || d.divergenceKind}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.driveExpiration)}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.storzExpiration)}</td>
+        <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.rpoExpiration)}</td>
+      </tr>`)
+    .join('');
+
+  return `
+    <p>Auditoria semanal Drive + Storz (fontes confiáveis) x RPO (digitada à mão) — data de referência ${refDate.toLocaleDateString('pt-BR')}.</p>
+    <p><strong>${divergences.length}</strong> divergência(s) encontrada(s). O relatório completo em Excel está disponível como artifact desta execução no GitHub Actions.</p>
+    <table style="border-collapse:collapse;width:100%;font-size:13px;">
+      <thead>
+        <tr style="background:#f1f5f9;text-align:left;">
+          <th style="padding:6px 10px;">Colaborador</th>
+          <th style="padding:6px 10px;">Documento</th>
+          <th style="padding:6px 10px;">Tipo</th>
+          <th style="padding:6px 10px;">Drive</th>
+          <th style="padding:6px 10px;">Storz (estimado)</th>
+          <th style="padding:6px 10px;">RPO</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+    ${divergences.length > 200 ? `<p><em>Mostrando as primeiras 200 de ${divergences.length} — ver o Excel completo no artifact.</em></p>` : ''}
+  `;
 }
 
 main().catch((err) => {

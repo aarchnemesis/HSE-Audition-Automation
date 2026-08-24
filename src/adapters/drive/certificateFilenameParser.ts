@@ -43,6 +43,14 @@ export function parseDocCode(filename: string): string | null {
   return rawCode;
 }
 
+/** Anos de validade por código de documento — mesma regra usada pro Drive, reaproveitada por
+ *  qualquer lugar que precise estimar validade a partir de uma data de emissão/conclusão (ex.:
+ *  DriveRpoAuditor calculando a validade implícita de um curso concluído na Storz). */
+export function getValidityYearsForCode(code: string): number {
+  if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) return EVENT_TRIGGERED_VALIDITY_YEARS;
+  return ANNUAL_VALIDITY_CODES.includes(code) ? 1 : 2;
+}
+
 export function calculateDocExpiration(code: string, parsedDate: Date | null, refDate: Date): Date | undefined {
   if (!parsedDate) return undefined;
 
@@ -50,8 +58,5 @@ export function calculateDocExpiration(code: string, parsedDate: Date | null, re
     return parsedDate;
   }
 
-  const validityYears = EVENT_TRIGGERED_ONLY_CODES.includes(code)
-    ? EVENT_TRIGGERED_VALIDITY_YEARS
-    : ANNUAL_VALIDITY_CODES.includes(code) ? 1 : 2;
-  return EHSEvaluator.calculateExpirationFromIssue(parsedDate, validityYears);
+  return EHSEvaluator.calculateExpirationFromIssue(parsedDate, getValidityYearsForCode(code));
 }
