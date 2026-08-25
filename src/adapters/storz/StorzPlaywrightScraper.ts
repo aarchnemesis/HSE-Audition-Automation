@@ -176,6 +176,7 @@ export class StorzPlaywrightScraper {
             requestDate: parseBrDate(course.iniciado) || new Date(),
             completionDate: parseBrDate(course.concluido),
             state: mapSituacaoToState(course.situacao),
+            rawSituacao: course.situacao || undefined,
             notes: `Raspado via Dossiê do Aluno em ${new Date().toLocaleString('pt-BR')} — Situação original: "${course.situacao}"`
           });
         }

@@ -10,6 +10,7 @@
     "hse-report": "npx tsx src/cli/runHSEReportExporter.ts",
     "test-gdrive": "npx tsx src/cli/testGoogleDriveApi.ts",
     "drive-rpo-audit": "npx tsx src/cli/runDriveRpoAudit.ts",
+    "storz-history-report": "npx tsx src/cli/runStorzHistoryReport.ts",
     "build": "tsc",
     "test": "vitest run",
     "lint": "tsc --noEmit"

@@ -11,5 +11,9 @@ export interface StorzRequest {
   scheduledDate?: Date;          // Data agendada para realização
   completionDate?: Date;         // Data de conclusão
   state: StorzRequestState;      // Estado da solicitação
+  /** Texto original da "Situação do aluno" na Storz (ex.: "Aprovado", "Reprovado", "Cancelado",
+   *  "Em andamento") — mais granular que `state`, que colapsa Reprovado e Cancelado juntos. Usado
+   *  em relatórios que precisam mostrar a situação real, não só o estado interno simplificado. */
+  rawSituacao?: string;
   notes?: string;                // Observações (ex: "Agendado via e-mail")
 }
