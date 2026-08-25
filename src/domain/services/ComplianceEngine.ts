@@ -56,9 +56,11 @@ export const STORZ_SEARCHABLE_DOC_CODES = new Set([
 ]);
 
 /**
- * Documentos que exigem modalidade PRESENCIAL, confirmado com o time de HSE em 21/08/2026:
- * NR-35 (código 21, que também cobre "GWO Working at Heights"), ASO (código 01) e qualquer
- * variação de treinamento GWO (Primeiros Socorros, NR-17, NR-23, WINDA ID, ART — "GWO geral").
+ * Documentos que exigem modalidade PRESENCIAL, confirmado com o time de HSE em 21/08/2026 e
+ * revalidado em 25/08/2026 (incluindo o NR-33 Supervisor, código 28): NR-35 (código 21, que
+ * também cobre "GWO Working at Heights"), ASO (código 01), NR-33 Supervisor e qualquer variação
+ * de treinamento GWO (Primeiros Socorros, NR-17, NR-23, WINDA ID, ART — "GWO geral"). Confirmado
+ * que o restante do catálogo pode ser feito online — essa lista é a exceção, não a regra.
  * Isso é sobre o que é EXIGIDO, não sobre a modalidade real do certificado da pessoa — a
  * detecção da modalidade real de cada certificado ainda depende de uma fonte de dados que o
  * time de HSE vai levantar (ver EmployeeProfileClassifier.ts e conversa de 20-21/08/2026).
@@ -69,17 +71,19 @@ export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
   '16', // GWO Primeiros Socorros
   '17', // GWO NR-17 Ergonomia / Carga Manual
   '19', // GWO NR-23 Combate a Incêndio
+  '28', // NR-33 Supervisor
   '30', // GWO WINDA ID
   '32'  // GWO ART
 ]);
 
 /**
  * Documentos ELETIVOS: exigidos pelo cliente/parque específico (Vestas), não por todo mundo do
- * perfil Campo. Confirmado com o time de HSE em 22/08/2026: quem TEM o treinamento Vestas tem
- * a validade monitorada normalmente (vence em X dias, vencido etc.). Quem NÃO tem ainda continua
- * aparecendo como AUSENTE na planilha (pra visibilidade/auditoria), mas isso NÃO é uma pendência
- * que exige ação — não conta pra INAPTO e não entra no resumo diário de alertas por e-mail. É só
- * algo "a verificar" quando a pessoa for alocada num parque Vestas, não uma cobrança ativa.
+ * perfil Campo — treinamento muito específico, nem todo mundo trabalha com Vestas. Confirmado com
+ * o time de HSE em 22/08/2026 e revisado em 25/08/2026: quem TEM o treinamento Vestas tem a
+ * validade monitorada normalmente (vence em X dias, vencido etc.). Quem NÃO tem NÃO aparece em
+ * lugar nenhum (Excel, dashboard, e-mail) — a versão anterior deixava aparecer como AUSENTE "pra
+ * visibilidade", mas isso poluía os relatórios com gente que nunca vai precisar desse documento.
+ * Ver filtro em AuditTriangulator.ts (perform TripleAudit) e HSEDatabaseRepository.ts.
  */
 export const ELECTIVE_DOC_CODES = new Set([
   '25', // SIT (Vestas)

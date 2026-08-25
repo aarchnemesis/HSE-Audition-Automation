@@ -97,8 +97,10 @@ export class AuditTriangulator {
           status = 'AUSENTE';
 
           if (ELECTIVE_DOC_CODES.has(code)) {
-            // Eletivo (ex.: SIT/ESO Vestas): não ter ainda não é uma pendência — só aparece na
-            // planilha pra visibilidade, sem contar pra INAPTO e sem entrar no alerta por e-mail.
+            // Eletivo (ex.: SIT/ESO Vestas): não ter ainda não é uma pendência — não conta pra
+            // INAPTO. HSEDatabaseRepository.saveAuditSnapshot filtra esse item inteiro fora do
+            // banco/relatórios quando AUSENTE (revisado 25/08/2026 — antes aparecia "pra
+            // visibilidade", mas isso poluía os relatórios com gente que nunca vai precisar disso).
             detail = 'Documento eletivo não encontrado no Drive — depende do cliente/parque, a verificar quando a pessoa for alocada. Não é cobrado como pendência.';
           } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
             detail = 'Documento obrigatório não encontrado no Drive nem solicitado na Storz.';

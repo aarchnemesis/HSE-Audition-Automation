@@ -4,6 +4,7 @@ import { Inspector, Certificate, EHSStatus, TrainingModality } from '../models/C
 import { StorzRequest } from '../models/StorzRequest.js';
 import { TripleAuditResult } from './AuditTriangulator.js';
 import { matchesInspector } from './InspectorMatcher.js';
+import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js';
 
 export interface HSEDatabaseRecord {
   inspectorId: string;
@@ -46,6 +47,11 @@ export class HSEDatabaseRepository {
       const inspector = inspectors.find((i) => matchesInspector(i, audit.inspectorName));
 
       for (const item of audit.auditItems) {
+        // Eletivo (SIT/ESO Vestas) e ausente: revisado em 25/08/2026 — não é pra apontar em lugar
+        // nenhum (Excel, dashboard, e-mail), nem como "visibilidade". É um treinamento muito
+        // específico do parque Vestas, a maioria da equipe nunca vai precisar dele.
+        if (item.status === 'AUSENTE' && ELECTIVE_DOC_CODES.has(item.code)) continue;
+
         records.push({
           inspectorId: inspector?.id || audit.inspectorName,
           inspectorName: audit.inspectorName,
