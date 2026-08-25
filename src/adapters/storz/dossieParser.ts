@@ -91,6 +91,13 @@ export function classifyTrainingCode(trainingName: string): string | null {
   if (upperTrainingName.includes('SEP')) return '13';
   if (upperTrainingName.includes('LOTO')) return '22';
   if (upperTrainingName.includes('CIPA')) return '34'; // ex. real: "NR5 - CIPA - GRAU DE RISCO 3"
+  // NR-33 tem turma própria pra Supervisor (curso mais longo, responsabilidade extra) — nomes
+  // reais raspados da Storz: "NR33 SUPERVISOR (PERIÓDICO)" x "NR33 TRABALHADOR E VIGIA
+  // (PERIÓDICO)". Sem esse check, os dois caíam no mesmo código '20' e o '28' (NR-33 Supervisor,
+  // já existente no catálogo) nunca era preenchido a partir da Storz — só vinha da coluna
+  // "NR 33 SUP" digitada na RPO. Tem que vir antes do NR_CODE_MAP genérico, senão o regex de
+  // NR-33 pega primeiro e devolve '20' pros dois casos.
+  if (/\bNR-?33\b/.test(upperTrainingName) && upperTrainingName.includes('SUPERVISOR')) return '28';
 
   for (const [regex, code] of NR_CODE_MAP) {
     if (regex.test(upperTrainingName)) return code;

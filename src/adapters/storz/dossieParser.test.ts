@@ -98,9 +98,14 @@ describe('parseBrDate', () => {
 });
 
 describe('classifyTrainingCode', () => {
-  it('classifica NR-33 e NR-35 corretamente mesmo com variações de hífen', () => {
-    expect(classifyTrainingCode('NR33 SUPERVISOR (INICIAÇÃO)')).toBe('20');
+  it('classifica NR-35 corretamente mesmo com variações de hífen', () => {
     expect(classifyTrainingCode('NR-35 Trabalho em Altura')).toBe('21');
+  });
+
+  it('separa NR-33 Supervisor (28) de NR-33 Trabalhador/Vigia (20) — nomes reais raspados da Storz', () => {
+    expect(classifyTrainingCode('[STORZ] - NR33 SUPERVISOR (PERIÓDICO)')).toBe('28');
+    expect(classifyTrainingCode('NR33 SUPERVISOR (INICIAÇÃO)')).toBe('28');
+    expect(classifyTrainingCode('[STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO)')).toBe('20');
   });
 
   it('prioriza SEP sobre NR-10 básico', () => {

@@ -52,7 +52,7 @@ export const DOC_CATALOG_MAP: Record<string, string> = {
  * de turma raspados.
  */
 export const STORZ_SEARCHABLE_DOC_CODES = new Set([
-  '10', '11', '12', '13', '14', '15', '17', '18', '19', '20', '21', '22', '34'
+  '10', '11', '12', '13', '14', '15', '17', '18', '19', '20', '21', '22', '28', '34'
 ]);
 
 /**
