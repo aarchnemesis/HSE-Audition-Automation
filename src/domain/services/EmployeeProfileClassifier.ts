@@ -32,18 +32,21 @@ export function classifyEmployeeProfile(funcaoCode: string | undefined): Employe
 
 /**
  * Pacote de documentos exigido por perfil. CAMPO usa o mesmo catálogo dos parques (NR/GWO/Vestas);
- * ADMINISTRATIVO exige só o básico (hoje só ASO). IMPORTANTE: o AuditTriangulator só audita os
- * códigos exigidos — um treinamento extra que a pessoa faça fora do perfil (ex.: alguém do
- * administrativo que entra pra CIPA) NÃO aparece no relatório hoje, mesmo estando presente no
- * Drive/Storz/RPO, porque a auditoria itera sobre `requiredDocCodes`, não sobre "tudo que existe".
- * Se isso precisar aparecer, dá pra estender o AuditTriangulator pra incluir documentos extras
- * encontrados fora da lista de exigidos, marcados como informativos (não contam pra apto/inapto).
+ * ADMINISTRATIVO exige só o básico (hoje só ASO, mais CIPA pra quem for membro eleito). IMPORTANTE:
+ * o AuditTriangulator só audita os códigos exigidos — um treinamento extra que a pessoa faça fora
+ * dessa lista NÃO aparece no relatório, mesmo estando presente no Drive/Storz/RPO, porque a
+ * auditoria itera sobre `requiredDocCodes`, não sobre "tudo que existe". É por isso que os
+ * documentos ELETIVOS (ver ELECTIVE_DOC_CODES em ComplianceEngine.ts: Vestas, Elevador JASO, CIPA)
+ * precisam estar nessa lista mesmo não sendo obrigatórios pra todo mundo — sem isso, mesmo quem
+ * TEM o documento nunca apareceria em relatório nenhum.
  */
 // GWO não é um treinamento único — o catálogo tem 6 variações (16, 17, 19, 21, 30, 32).
 // Faltavam 4 delas aqui antes (só 21 e 30 estavam na lista), por isso só "GWO WINDA ID"
 // aparecia nos relatórios — corrigido em 21/08/2026.
-const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '16', '17', '19', '21', '22', '25', '26', '30', '32'];
-const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01'];
+// '31' (Elevador JASO) e '34' (CIPA) adicionados em 25/08/2026 como eletivos — exigência de
+// parque/comissão, não do perfil, mas quem tem precisa ter a validade monitorada.
+const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '16', '17', '19', '21', '22', '25', '26', '30', '31', '32', '34'];
+const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01', '34'];
 
 /**
  * ASO não é sobre vínculo empregatício, é sobre EXPOSIÇÃO A RISCO. Confirmado com o time de HSE

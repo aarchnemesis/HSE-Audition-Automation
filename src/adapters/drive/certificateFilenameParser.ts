@@ -10,8 +10,12 @@ const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20'];
 // EPI), nunca por calendário. Calcular uma validade fixa pra eles gera vencimento falso. Como
 // nosso modelo de dados não tem um conceito de "documento sem prazo, só por evento", marcamos
 // com uma validade bem distante (50 anos) — o documento fica CONFORME indefinidamente até
-// alguém decidir modelar retreinamento por gatilho de verdade.
-const EVENT_TRIGGERED_ONLY_CODES = ['10', '11'];
+// alguém decidir modelar retreinamento por gatilho de verdade. Exportado porque DriveRpoAuditor
+// precisa saber quais códigos são event-triggered pra NÃO comparar data de validade entre Drive
+// e RPO nesses casos — comparar um prazo de "não vence" (proxy de 50 anos) contra uma data real
+// digitada na RPO sempre vai divergir em ~17.500 dias, mascarando divergências reais no meio de
+// centenas de falsos positivos (achado em 25/08/2026, 118 ocorrências na auditoria real).
+export const EVENT_TRIGGERED_ONLY_CODES = ['10', '11'];
 const EVENT_TRIGGERED_VALIDITY_YEARS = 50;
 
 export function parseDateFromFilename(filename: string): Date | null {

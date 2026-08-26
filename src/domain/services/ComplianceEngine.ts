@@ -52,7 +52,7 @@ export const DOC_CATALOG_MAP: Record<string, string> = {
  * de turma raspados.
  */
 export const STORZ_SEARCHABLE_DOC_CODES = new Set([
-  '10', '11', '12', '13', '14', '15', '17', '18', '19', '20', '21', '22', '28', '34'
+  '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '28', '34'
 ]);
 
 /**
@@ -77,17 +77,25 @@ export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
 ]);
 
 /**
- * Documentos ELETIVOS: exigidos pelo cliente/parque específico (Vestas), não por todo mundo do
- * perfil Campo — treinamento muito específico, nem todo mundo trabalha com Vestas. Confirmado com
- * o time de HSE em 22/08/2026 e revisado em 25/08/2026: quem TEM o treinamento Vestas tem a
- * validade monitorada normalmente (vence em X dias, vencido etc.). Quem NÃO tem NÃO aparece em
- * lugar nenhum (Excel, dashboard, e-mail) — a versão anterior deixava aparecer como AUSENTE "pra
- * visibilidade", mas isso poluía os relatórios com gente que nunca vai precisar desse documento.
- * Ver filtro em AuditTriangulator.ts (perform TripleAudit) e HSEDatabaseRepository.ts.
+ * Documentos ELETIVOS: não são pra todo mundo, mas quem TEM precisa ter a validade monitorada
+ * (reciclagem/vencimento) igual qualquer outro documento. Quem NÃO tem NÃO aparece em lugar
+ * nenhum (Excel, dashboard, e-mail) — não é uma pendência, é "não se aplica a essa pessoa".
+ * Confirmado com o usuário em 22 e 25/08/2026:
+ *   - SIT/ESO (Vestas): exigido pelo cliente/parque específico, nem todo mundo trabalha com Vestas.
+ *   - Elevador (JASO): exigência de EHS de parque a parque, pra o inspetor operar o elevador da
+ *     turbina com segurança quando estiver naquele parque — não é do perfil CAMPO como um todo.
+ *   - CIPA (NR-05): só quem é membro eleito da comissão precisa, não é do perfil de ninguém por
+ *     padrão — mas enquanto for membro, o treinamento tem que estar em dia.
+ * Esses três precisam estar em CAMPO_REQUIRED_DOC_CODES pra sequer serem avaliados pelo
+ * AuditTriangulator (que só itera sobre `requiredDocCodes`) — sem isso, mesmo quem TEM o
+ * documento nunca aparece em relatório nenhum. Ver filtro de ausente em AuditTriangulator.ts e
+ * HSEDatabaseRepository.ts.
  */
 export const ELECTIVE_DOC_CODES = new Set([
   '25', // SIT (Vestas)
-  '26'  // ESO (Vestas)
+  '26', // ESO (Vestas)
+  '31', // Elevador (JASO)
+  '34'  // CIPA (NR-05)
 ]);
 
 export class ComplianceEngine {

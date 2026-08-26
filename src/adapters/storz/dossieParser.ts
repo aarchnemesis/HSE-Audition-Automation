@@ -81,8 +81,24 @@ const NR_CODE_MAP: [RegExp, string][] = [
   [/\bNR-?35\b/, '21']    // NR-35 Trabalho em Altura
 ];
 
+/**
+ * A Storz salva alguns nomes de turma com acento em letra MINÚSCULA no meio de texto EM
+ * MAIÚSCULA (ex. real: "PREVENçãO E PROTEçãO CONTRA INCêNDIOS", "ATENDIMENTO PRé HOSPITALAR") —
+ * confirmado nos bytes reais raspados, não é problema de encoding nosso, é assim que a Storz
+ * grava. `.toUpperCase()` sozinho não normaliza isso porque already-lowercase-accented chars
+ * viram maiúsculas acentuadas, mas comparar string literal com acento seria frágil pra outras
+ * variações. Removemos os acentos via NFD antes de comparar, então a comparação nunca depende de
+ * como a Storz decidiu capitalizar aquela letra específica.
+ */
+function normalizeForMatch(text: string): string {
+  return text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toUpperCase();
+}
+
 export function classifyTrainingCode(trainingName: string): string | null {
-  const upperTrainingName = trainingName.toUpperCase();
+  const upperTrainingName = normalizeForMatch(trainingName);
   // ASO, CNH, SIT/ESO Vestas e GWO WINDA ID NÃO são classificados aqui de propósito: a Storz é
   // uma empresa de treinamentos NORMATIVOS (NRs/GWO/LOTO/CIPA) — ASO é exame médico, CNH é
   // documento de trânsito, SIT/ESO/WINDA são certificações de terceiros (Vestas/GWO), nenhum
@@ -98,6 +114,13 @@ export function classifyTrainingCode(trainingName: string): string | null {
   // "NR 33 SUP" digitada na RPO. Tem que vir antes do NR_CODE_MAP genérico, senão o regex de
   // NR-33 pega primeiro e devolve '20' pros dois casos.
   if (/\bNR-?33\b/.test(upperTrainingName) && upperTrainingName.includes('SUPERVISOR')) return '28';
+  // GWO Primeiros Socorros e GWO Combate a Incêndio: a Storz não usa "NR" nem "GWO" no nome real
+  // dessas duas turmas ("ATENDIMENTO PRÉ HOSPITALAR (PRIMEIROS SOCORROS) BÁSICO" e "PREVENÇÃO E
+  // PROTEÇÃO CONTRA INCÊNDIOS"), então caíam em '99' (não classificado) e nunca eram encontradas
+  // na busca — a pessoa aparecia AUSENTE mesmo tendo feito o curso de verdade. Confirmado contra
+  // scratch/storz_cache.json em 25/08/2026.
+  if (upperTrainingName.includes('ATENDIMENTO PRE HOSPITALAR') || upperTrainingName.includes('PRIMEIROS SOCORROS')) return '16';
+  if (upperTrainingName.includes('PROTECAO CONTRA INCENDIO') || upperTrainingName.includes('PREVENCAO E PROTECAO')) return '19';
 
   for (const [regex, code] of NR_CODE_MAP) {
     if (regex.test(upperTrainingName)) return code;

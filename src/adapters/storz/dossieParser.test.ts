@@ -117,6 +117,19 @@ describe('classifyTrainingCode', () => {
     expect(classifyTrainingCode('[STORZ] - NR5 - CIPA - GRAU DE RISCO 3')).toBe('34');
   });
 
+  it('classifica GWO Primeiros Socorros (16) mesmo sem "NR" ou "GWO" no nome — regressão: caía em 99 (não classificado) e a pessoa aparecia AUSENTE mesmo tendo feito o curso', () => {
+    expect(classifyTrainingCode('[STORZ] - ATENDIMENTO PRÉ HOSPITALAR (PRIMEIROS SOCORROS) BÁSICO')).toBe('16');
+  });
+
+  it('classifica GWO Combate a Incêndio (19) mesmo sem "NR23" no nome — mesma regressão do 16', () => {
+    expect(classifyTrainingCode('[STORZ] - PREVENÇÃO E PROTEÇÃO CONTRA INCÊNDIOS')).toBe('19');
+  });
+
+  it('classifica corretamente mesmo com o acento em minúscula que a Storz grava no meio de texto maiúsculo (ex. real: "PREVENçãO E PROTEçãO CONTRA INCêNDIOS")', () => {
+    expect(classifyTrainingCode('[STORZ] - PREVENçãO E PROTEçãO CONTRA INCêNDIOS')).toBe('19');
+    expect(classifyTrainingCode('[STORZ] - ATENDIMENTO PRé HOSPITALAR (PRIMEIROS SOCORROS) BáSICO')).toBe('16');
+  });
+
   it('retorna null quando não consegue classificar', () => {
     expect(classifyTrainingCode('Curso qualquer sem padrão conhecido')).toBeNull();
   });

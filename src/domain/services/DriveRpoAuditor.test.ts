@@ -129,4 +129,32 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'], storz);
     expect(result).toHaveLength(0);
   });
+
+  it('não compara data pra NR-01 (código 10) mesmo com datas muito diferentes — event-triggered, só a presença importa', () => {
+    const drive = [makeInspector('FULANO', [makeCert('10', new Date(2075, 0, 10))])]; // proxy de "não vence"
+    const rpo = [makeInspector('FULANO', [makeCert('10', new Date(2027, 0, 10))])]; // RPO digitado com regra padrão de 2 anos
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['10']);
+    expect(result).toHaveLength(1);
+    expect(result[0].divergent).toBe(false);
+    expect(result[0].divergenceKind).toBeUndefined();
+  });
+
+  it('não compara data pra NR-06 (código 11) pelo mesmo motivo', () => {
+    const drive = [makeInspector('FULANO', [makeCert('11', new Date(2074, 5, 25))])];
+    const rpo = [makeInspector('FULANO', [makeCert('11', new Date(2028, 3, 8))])];
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['11']);
+    expect(result).toHaveLength(1);
+    expect(result[0].divergent).toBe(false);
+  });
+
+  it('continua marcando SOMENTE_RPO ou SOMENTE_DRIVE normalmente pra NR-01/NR-06 quando só uma fonte tem o documento', () => {
+    const drive = [makeInspector('FULANO', [])];
+    const rpo = [makeInspector('FULANO', [makeCert('10', new Date(2027, 0, 10))])];
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['10']);
+    expect(result).toHaveLength(1);
+    expect(result[0].divergenceKind).toBe('SOMENTE_RPO');
+  });
 });

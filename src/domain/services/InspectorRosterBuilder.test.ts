@@ -32,7 +32,7 @@ describe('buildRoster', () => {
     const roster = buildRoster(rpo, []);
 
     expect(roster[0].profile).toBe('ADMINISTRATIVO');
-    expect(roster[0].requiredDocCodes).toEqual(['01']);
+    expect(roster[0].requiredDocCodes).toEqual(['01', '34']); // ASO + CIPA (eletivo, só conta pra quem for membro)
     expect(roster[0].hasDriveFolder).toBe(false);
   });
 

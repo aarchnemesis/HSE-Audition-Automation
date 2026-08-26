@@ -40,9 +40,9 @@ describe('getRequiredDocCodesForProfile', () => {
     expect(codes.length).toBeGreaterThan(1);
   });
 
-  it('ADMINISTRATIVO exige só o básico (ASO)', () => {
+  it('ADMINISTRATIVO exige o básico (ASO) mais CIPA, que é eletivo — só conta pra quem for membro (código 34)', () => {
     const codes = getRequiredDocCodesForProfile('ADMINISTRATIVO');
-    expect(codes).toEqual(['01']);
+    expect(codes).toEqual(['01', '34']);
   });
 
   it('CAMPO cobre todas as variações de GWO do catálogo, não só uma (regressão: só WINDA ID aparecia antes)', () => {
@@ -63,11 +63,17 @@ describe('getRequiredDocCodesForProfile', () => {
   });
 
   it('ADMINISTRATIVO + CLT continua exigindo ASO (obrigação legal da CLT independente da função)', () => {
-    expect(getRequiredDocCodesForProfile('ADMINISTRATIVO', 'CLT')).toEqual(['01']);
+    expect(getRequiredDocCodesForProfile('ADMINISTRATIVO', 'CLT')).toEqual(['01', '34']);
   });
 
   it('CAMPO exige ASO mesmo sendo PJ — o motivo é a atividade de risco no parque, não o vínculo', () => {
     const codes = getRequiredDocCodesForProfile('CAMPO', 'PJ');
     expect(codes).toContain('01');
+  });
+
+  it('CAMPO inclui os eletivos Elevador (JASO, 31) e CIPA (34) — não são obrigatórios de fato (ELECTIVE_DOC_CODES), mas precisam estar na lista pra aparecer quando a pessoa TEM o documento', () => {
+    const codes = getRequiredDocCodesForProfile('CAMPO');
+    expect(codes).toContain('31');
+    expect(codes).toContain('34');
   });
 });

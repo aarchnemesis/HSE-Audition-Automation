@@ -2,7 +2,7 @@ import { Inspector } from '../models/Certificate.js';
 import { StorzRequest } from '../models/StorzRequest.js';
 import { DOC_CATALOG_MAP, STORZ_SEARCHABLE_DOC_CODES } from './ComplianceEngine.js';
 import { matchesInspector, findInspectorMatch } from './InspectorMatcher.js';
-import { getValidityYearsForCode } from '../../adapters/drive/certificateFilenameParser.js';
+import { getValidityYearsForCode, EVENT_TRIGGERED_ONLY_CODES } from '../../adapters/drive/certificateFilenameParser.js';
 import { EHSEvaluator } from './EHSEvaluator.js';
 
 export type DriveRpoDivergenceKind = 'SOMENTE_DRIVE' | 'SOMENTE_STORZ' | 'SOMENTE_RPO' | 'DATA_DIVERGENTE';
@@ -101,6 +101,26 @@ export class DriveRpoAuditor {
             divergent: true,
             divergenceKind: 'SOMENTE_RPO',
             detail: 'Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.'
+          });
+          continue;
+        }
+
+        // NR-01/NR-06 (event-triggered, sem periodicidade fixa) não têm data comparável entre as
+        // fontes: o Drive usa uma validade de 50 anos como proxy de "não vence", a RPO tem uma
+        // data real digitada com a regra padrão de 2 anos — comparar as duas sempre diverge em
+        // ~17.500 dias, mesmo quando não há erro nenhum de digitação. Pra esses dois, só a
+        // presença em ambas as fontes importa.
+        if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
+          items.push({
+            inspectorName: driveInspector.name,
+            docCode: code,
+            docName,
+            driveExpiration: driveCert?.expirationDate,
+            storzExpiration,
+            trustedSource,
+            rpoExpiration: rpoCert!.expirationDate,
+            divergent: false,
+            detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).`
           });
           continue;
         }
