@@ -6,7 +6,7 @@ import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapte
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
 import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
 import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js';
-import { StorzRequest } from '../domain/models/StorzRequest.js';
+import { StorzRequest, computeCourseDeadline } from '../domain/models/StorzRequest.js';
 import { groupRetests, RetestAttempt } from '../domain/services/RetestTracker.js';
 import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
@@ -58,6 +58,8 @@ function buildHistorySheet(workbook: ExcelJS.Workbook, requests: StorzRequest[])
     { header: 'Data Matrícula', key: 'requestDate', width: 16 },
     { header: 'Data Conclusão', key: 'completionDate', width: 16 },
     { header: 'Situação', key: 'situacao', width: 18 },
+    { header: 'Progresso', key: 'progresso', width: 12 },
+    { header: 'Prazo (a partir do início)', key: 'prazo', width: 20 },
     { header: 'Tentativa', key: 'attemptNumber', width: 12 },
     { header: 'Nº Matrícula (Storz)', key: 'id', width: 20 }
   ];
@@ -78,6 +80,9 @@ function buildHistorySheet(workbook: ExcelJS.Workbook, requests: StorzRequest[])
     const attempt = attemptByRequestId.get(req.id);
     const totalAttempts = groups.find((g) => g.collaboratorName === req.collaboratorName && g.trainingCode === req.trainingCode)?.attempts.length || 1;
 
+    const deadline = computeCourseDeadline(req);
+    const isOverdue = deadline ? deadline.getTime() < REF_DATE.getTime() : false;
+
     const row = sheet.addRow({
       collaboratorName: req.collaboratorName,
       collaboratorCpf: req.collaboratorCpf || '',
@@ -87,12 +92,17 @@ function buildHistorySheet(workbook: ExcelJS.Workbook, requests: StorzRequest[])
       requestDate: dateFmt(req.requestDate),
       completionDate: dateFmt(req.completionDate),
       situacao,
+      progresso: req.progressPercent !== undefined ? `${req.progressPercent}%` : '',
+      prazo: deadline ? `${dateFmt(deadline)}${isOverdue ? ' (atrasado)' : ''}` : '',
       attemptNumber: totalAttempts > 1 ? `${attempt?.attemptNumber || 1}/${totalAttempts}` : '',
       id: req.id
     });
 
     const bg = situacaoColors[situacao.toUpperCase()];
     if (bg) row.getCell('situacao').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: bg } };
+    if (deadline) {
+      row.getCell('prazo').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: isOverdue ? 'FEE2E2' : 'FEF9C3' } };
+    }
   }
 }
 

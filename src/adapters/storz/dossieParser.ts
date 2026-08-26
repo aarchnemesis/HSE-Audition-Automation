@@ -6,6 +6,10 @@ export interface ParsedDossieCourse {
   codMatricula?: string;
   iniciado?: string;
   concluido?: string;
+  /** Ex.: "65" (de "Progresso: 65%") — só faz sentido pra quem está em andamento/não concluiu. */
+  progresso?: string;
+  /** Ex.: "60" (de "Tempo de Curso: 60 Dias") — prazo em dias a partir de "Iniciado" pra concluir. */
+  tempoCursoDias?: string;
 }
 
 export interface ParsedDossie {
@@ -32,6 +36,8 @@ export function parseDossieText(text: string): ParsedDossie {
     const matriculaMatch = block.match(/Cod\.?\s*Matrícula:\s*([^\n]+)/i);
     const iniciadoMatch = block.match(/Iniciado:\s*([^\n]+)/i);
     const concluidoMatch = block.match(/Conclu[ií]do:\s*([^\n]+)/i);
+    const progressoMatch = block.match(/Progresso:\s*(\d+)\s*%/i);
+    const tempoCursoMatch = block.match(/Tempo de Curso:\s*(\d+)\s*Dias/i);
 
     if (!turmaMatch) continue;
 
@@ -40,7 +46,9 @@ export function parseDossieText(text: string): ParsedDossie {
       situacao: situacaoMatch ? situacaoMatch[1].trim() : '',
       codMatricula: matriculaMatch ? matriculaMatch[1].trim() : undefined,
       iniciado: iniciadoMatch ? iniciadoMatch[1].trim() : undefined,
-      concluido: concluidoMatch ? concluidoMatch[1].trim() : undefined
+      concluido: concluidoMatch ? concluidoMatch[1].trim() : undefined,
+      progresso: progressoMatch ? progressoMatch[1] : undefined,
+      tempoCursoDias: tempoCursoMatch ? tempoCursoMatch[1] : undefined
     });
   }
 

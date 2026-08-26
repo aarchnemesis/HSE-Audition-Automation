@@ -177,6 +177,8 @@ export class StorzPlaywrightScraper {
             completionDate: parseBrDate(course.concluido),
             state: mapSituacaoToState(course.situacao),
             rawSituacao: course.situacao || undefined,
+            progressPercent: course.progresso !== undefined ? parseInt(course.progresso, 10) : undefined,
+            courseDurationDays: course.tempoCursoDias !== undefined ? parseInt(course.tempoCursoDias, 10) : undefined,
             notes: `Raspado via Dossiê do Aluno em ${new Date().toLocaleString('pt-BR')} — Situação original: "${course.situacao}"`
           });
         }
@@ -302,6 +304,10 @@ export class StorzPlaywrightScraper {
         },
         { elcToken, pessoaId }
       );
+
+      if (process.env.DEBUG_STORZ_RAW) {
+        fs.writeFileSync(`scratch/debug_dossie_${pessoaId}.txt`, text);
+      }
 
       return parseDossieText(text);
     } catch (err: any) {

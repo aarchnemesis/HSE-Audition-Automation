@@ -241,6 +241,8 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
               <th>Matrícula</th>
               <th>Conclusão</th>
               <th>Situação</th>
+              <th>Progresso</th>
+              <th>Prazo</th>
             </tr>
           </thead>
           <tbody id="tableBody"></tbody>
@@ -276,6 +278,18 @@ const DOC_CATALOG = ${JSON.stringify(DOC_CATALOG_MAP)};
 function courseLabel(r){
   const catalogName = DOC_CATALOG[r.trainingCode];
   return catalogName ? (r.trainingName + ' (' + catalogName + ')') : r.trainingName;
+}
+
+// Espelha computeCourseDeadline (StorzRequest.ts) — prazo real só existe pra curso que já
+// começou de verdade e ainda não concluiu; "Não iniciado" não tem data de início real.
+function computeDeadline(r){
+  if (r.completionDate || !r.courseDurationDays) return null;
+  const situacao = (r.rawSituacao || '').toUpperCase();
+  if (situacao.includes('NÃO INICIADO') || situacao.includes('NAO INICIADO')) return null;
+  const start = new Date(r.requestDate);
+  const deadline = new Date(start);
+  deadline.setDate(deadline.getDate() + r.courseDurationDays);
+  return deadline;
 }
 
 let state = { statFilter: 'all', query: '' };
@@ -361,12 +375,14 @@ function renderTable(){
   const body = document.getElementById('tableBody');
   document.getElementById('rowCount').textContent = rows.length + ' registro(s) exibido(s)';
   if (!rows.length){
-    body.innerHTML = '<tr class="empty-row"><td colspan="6">Nenhum registro encontrado para este filtro.</td></tr>';
+    body.innerHTML = '<tr class="empty-row"><td colspan="8">Nenhum registro encontrado para este filtro.</td></tr>';
     return;
   }
   body.innerHTML = rows.map(r => {
     const outcome = classifyOutcome(r.rawSituacao || r.state);
     const tone = outcome === 'APROVADO' ? 'good' : outcome === 'REPROVADO' ? 'critical' : 'neutral';
+    const deadline = computeDeadline(r);
+    const overdue = deadline && deadline.getTime() < Date.now();
     return \`<tr>
       <td><div class="cell-name">\${r.collaboratorName}</div></td>
       <td>\${courseLabel(r)}</td>
@@ -374,6 +390,8 @@ function renderTable(){
       <td>\${fmtDate(r.requestDate)}</td>
       <td>\${fmtDate(r.completionDate)}</td>
       <td><span class="badge s-\${tone}">\${r.rawSituacao || r.state}</span></td>
+      <td>\${r.progressPercent !== undefined && r.progressPercent !== null ? r.progressPercent + '%' : '—'}</td>
+      <td>\${deadline ? \`<span class="badge s-\${overdue ? 'critical' : 'warning'}">\${fmtDate(deadline)}\${overdue ? ' (atrasado)' : ''}</span>\` : '—'}</td>
     </tr>\`;
   }).join('');
 }

@@ -36,8 +36,25 @@ describe('parseDossieText', () => {
       situacao: 'Aprovado',
       codMatricula: '516258',
       iniciado: '02/06/2026',
-      concluido: '13/07/2026'
+      concluido: '13/07/2026',
+      progresso: '100',
+      tempoCursoDias: '60'
     });
+  });
+
+  it('extrai progresso e prazo de curso ainda em andamento (regressão 26/08/2026: campos não eram capturados)', () => {
+    const emAndamento = `
+Turma: [STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO) / Tipo: Turma Contínua
+Situação do aluno: Em andamento
+Cod. Matrícula: 514657
+Iniciado: 10/06/2026
+Concluído: -
+Progresso: 65%
+Tempo de Curso: 60 Dias
+`;
+    const result = parseDossieText(emAndamento);
+    expect(result.courses[0].progresso).toBe('65');
+    expect(result.courses[0].tempoCursoDias).toBe('60');
   });
 
   it('lida com múltiplos blocos de curso no mesmo dossiê', () => {
