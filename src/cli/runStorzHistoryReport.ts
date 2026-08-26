@@ -9,8 +9,14 @@ import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js';
 import { StorzRequest } from '../domain/models/StorzRequest.js';
 import { groupRetests, RetestAttempt } from '../domain/services/RetestTracker.js';
 import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js';
+import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
+import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
+import { IEmailService } from '../ports/IEmailService.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
+// Audiência diferente do EHS (Desenvolvimento Organizacional) — lista separada de propósito,
+// nunca cai no HSE_EMAIL_TO. Fase de teste: só a Mayanna, confirmado pelo usuário em 26/08/2026.
+const DO_EMAIL_RECIPIENT = process.env.DO_EMAIL_TO;
 
 /**
  * Gera um "Histórico do Aluno" — um registro por colaborador+curso, no molde do exemplo que a
@@ -176,6 +182,32 @@ async function main() {
   const dashboardPath = path.join(process.cwd(), 'scratch', 'do_dashboard.html');
   fs.writeFileSync(dashboardPath, buildDoDashboardHtml(storzResult.requests));
   console.log(`✅ Dashboard DO gerado em: ${dashboardPath}\n`);
+
+  if (!DO_EMAIL_RECIPIENT) {
+    console.log('ℹ️  DO_EMAIL_TO não configurado — pulando envio de e-mail (só gerou os arquivos).\n');
+    return;
+  }
+
+  console.log('================================================================================');
+  console.log('   📧 ENVIANDO HISTÓRICO DO ALUNO (DESENVOLVIMENTO ORGANIZACIONAL)');
+  console.log('================================================================================');
+  const emailService: IEmailService = SmtpEmailService.fromEnv() || new DummyEmailService();
+  const groups = groupRetests(storzResult.requests).filter((g) => g.hasFailedAttempt);
+  const pendingRetest = groups.filter((g) => g.pendingRetest).length;
+  const emailRes = await emailService.sendEmail({
+    to: DO_EMAIL_RECIPIENT,
+    subject: `Histórico do Aluno — ${REF_DATE.toLocaleDateString('pt-BR')}`,
+    htmlContent: `
+      <p>Segue em anexo o histórico completo de matrículas na Storz (Excel) e o dashboard interativo (HTML).</p>
+      <p><strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${pendingRetest}</strong> pessoa(s) com reprovação ainda pendente de reteste aprovado (de ${groups.length} com reprovação em algum momento).</p>
+      <p>Esse é um teste inicial — qualquer ajuste que precisar, é só retornar.</p>
+    `,
+    attachments: [
+      { filename: 'historico_aluno_storz.xlsx', path: outputPath },
+      { filename: 'do_dashboard.html', path: dashboardPath }
+    ]
+  });
+  console.log(`   ${emailRes.success ? 'Enviado' : 'Falhou'} para ${DO_EMAIL_RECIPIENT}\n`);
 }
 
 main().catch((err) => {
