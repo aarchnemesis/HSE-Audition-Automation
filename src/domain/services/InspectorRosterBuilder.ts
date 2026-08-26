@@ -20,7 +20,7 @@ export function buildRoster(rpoInspectors: Inspector[], driveInspectors: Inspect
   const entries: RosterEntry[] = [];
 
   for (const rpoInspector of rpoInspectors) {
-    const profile = classifyEmployeeProfile(rpoInspector.role);
+    const profile = classifyEmployeeProfile(rpoInspector.role, rpoInspector.rpoBranch);
     if (!profile) continue; // DE — desligado, fora do universo de auditoria
 
     const driveMatch = driveInspectors.find((d) => matchesInspector(d, rpoInspector.name));

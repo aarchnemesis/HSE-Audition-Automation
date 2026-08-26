@@ -66,6 +66,20 @@ const EMPLOYEE_ROOT_BRANCH_NAME = 'RECURSOS HUMANOS';
 // sob esse grupo, contra só 139 com FUNÇÃO="DE" literal (89 escapavam do filtro antigo).
 const DESLIGADOS_BRANCH_NAME_HINT = 'DESLIGADO';
 
+// Ramos de segundo nível (dentro de "RECURSOS HUMANOS") usados como fonte primária de perfil —
+// ver EmployeeProfileClassifier.classifyEmployeeProfile. Confirmado em 25/08/2026 conferindo a
+// composição real de cada ramo. "DESLIGADOS" fica de fora daqui de propósito, já tem tratamento
+// próprio acima (isDesligadoByHierarchy).
+const HIERARCHY_BRANCH_NAMES = [
+  'INSP. QUALIDADE & TÉC. OPERAÇÕES',
+  'LÍDERES / EHS',
+  'DRONE INSP. EQUIPAMENTO',
+  'LPS - SPDA',
+  'ENGENHARIA',
+  'ADMINISTRATIVO',
+  'VISIBILIDADE'
+];
+
 const NAME_COLUMN = 'FUNCIONARIO';
 const ROLE_COLUMN = 'FUNÇÃO';
 const SECTOR_COLUMN = 'SETOR';
@@ -169,6 +183,17 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
     const isDesligadoByHierarchy = (row: SmartsheetRow): boolean =>
       !!desligadosRow && isDescendantOf(row, desligadosRow.id);
 
+    const branchRoots = HIERARCHY_BRANCH_NAMES.map((branchName) => ({
+      name: branchName,
+      row: sheet.rows.find((r) => {
+        const cell = r.cells.find((c) => columnTitleById.get(c.columnId) === NAME_COLUMN);
+        return cell?.value === branchName;
+      })
+    })).filter((b): b is { name: string; row: SmartsheetRow } => !!b.row);
+
+    const findRpoBranch = (row: SmartsheetRow): string | undefined =>
+      branchRoots.find((b) => isDescendantOf(row, b.row.id))?.name;
+
     const inspectors: Inspector[] = [];
 
     for (const row of sheet.rows) {
@@ -211,6 +236,7 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         role,
         employmentType: cellByTitle.get(TIPO_COLUMN) as string | undefined,
         sector: cellByTitle.get(SECTOR_COLUMN) as string | undefined,
+        rpoBranch: findRpoBranch(row),
         windaId: cellByTitle.get(WINDA_COLUMN) as string | undefined,
         certificates
       });

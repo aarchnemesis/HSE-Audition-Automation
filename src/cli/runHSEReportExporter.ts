@@ -9,7 +9,7 @@ import { AuditTriangulator } from '../domain/services/AuditTriangulator.js';
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js';
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js';
 import { buildRoster } from '../domain/services/InspectorRosterBuilder.js';
-import { getRequiredDocCodesForProfile } from '../domain/services/EmployeeProfileClassifier.js';
+import { getRequiredDocCodesForProfile, getElectiveDocCodesForProfile, EmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
 import { buildPendencyDigest } from '../domain/services/PendencyDigestBuilder.js';
 import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
@@ -43,7 +43,7 @@ async function main() {
   const driveInspectors = await driveAdapter.getInspectors();
   console.log(`[DriveAdapter] Inspetores lidos do Drive: ${driveInspectors.length}`);
 
-  let roster: { inspector: Inspector; requiredDocCodes: string[]; profile: string; hasDriveFolder: boolean }[];
+  let roster: { inspector: Inspector; requiredDocCodes: string[]; profile: EmployeeProfile; hasDriveFolder: boolean }[];
   if (rpoAdapter) {
     const rpoInspectors = await rpoAdapter.readRPOData();
     console.log(`[SmartsheetRPOAdapter] Pessoas lidas da RPO: ${rpoInspectors.length}`);
@@ -76,6 +76,7 @@ async function main() {
       clientName: '-',
       description: `Requisitos do perfil ${profile}`,
       requiredDocCodes,
+      electiveDocCodes: getElectiveDocCodesForProfile(profile),
       requiredModalities: MODALITY_REQUIREMENTS
     };
     return AuditTriangulator.performTripleAudit(inspector, park, storzResult.requests, REF_DATE);

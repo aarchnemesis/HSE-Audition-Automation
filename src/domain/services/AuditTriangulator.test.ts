@@ -206,4 +206,19 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.auditItems[0].status).toBe('CONFORME');
     expect(result.auditItems[0].detail).toContain('ALERTA MODALIDADE');
   });
+
+  it('respeita electiveDocCodes por park — código ausente marcado como eletivo não conta pra missingDocsCount (ex.: perfil COORDENADOR)', () => {
+    const parkCoordenador: ParkRequirement = {
+      ...PARK,
+      requiredDocCodes: ['01', '21'],
+      electiveDocCodes: ['21'] // NR-35 monitorado, não obrigatório de fato pro perfil COORDENADOR
+    };
+    const inspector = makeInspector([]); // sem ASO nem NR-35
+
+    const result = AuditTriangulator.performTripleAudit(inspector, parkCoordenador, [], REF_DATE);
+
+    expect(result.missingDocsCount).toBe(1); // só o ASO conta
+    const nr35Item = result.auditItems.find((i) => i.code === '21')!;
+    expect(nr35Item.status).toBe('AUSENTE');
+  });
 });

@@ -33,6 +33,11 @@ export interface Inspector {
   role: string;                  // Ex: "INSP. DE QUALIDADE", "TÉC. EM OPERAÇÃO"
   employmentType?: string;       // Ex: "CLT", "PJ" — vem da coluna TIPO da RPO
   sector?: string;               // Ex: "INTERNAS", "OPERAÇÕES"
+  /** Ramo hierárquico da RPO (ex.: "INSP. QUALIDADE & TÉC. OPERAÇÕES", "ADMINISTRATIVO",
+   *  "VISIBILIDADE") — usado como fonte primária de classificação de perfil (ver
+   *  EmployeeProfileClassifier.ts), mais confiável que o texto da coluna FUNÇÃO quando o ramo é
+   *  homogêneo. Undefined pra inspetor que só existe no Drive (sem linha correspondente na RPO). */
+  rpoBranch?: string;
   windaId?: string;              // WINDA ID (GWO)
   cnhNumber?: string;            // Número da CNH
   location?: {
@@ -50,6 +55,10 @@ export interface ParkRequirement {
   clientName: string;
   description: string;
   requiredDocCodes: string[];
+  /** Códigos que estão em requiredDocCodes mas são só MONITORADOS — se ausentes, não contam
+   *  como pendência (não entram em missingCount, não aparecem no e-mail/dashboard). Se omitido,
+   *  usa o padrão global ELECTIVE_DOC_CODES (ComplianceEngine.ts). Ver getElectiveDocCodesForProfile. */
+  electiveDocCodes?: string[];
   requiredModalities?: Record<string, TrainingModality>;
   minValidityDays?: number;
   location?: {

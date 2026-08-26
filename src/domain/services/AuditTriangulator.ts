@@ -58,6 +58,10 @@ export class AuditTriangulator {
       (r) => r.collaboratorCpf
     );
 
+    // Perfil específico (ex.: COORDENADOR) pode ter seu próprio conjunto de códigos eletivos —
+    // ver ParkRequirement.electiveDocCodes. Sem override, usa o padrão global (Vestas/Elevador/CIPA).
+    const electiveCodes = park.electiveDocCodes ? new Set(park.electiveDocCodes) : ELECTIVE_DOC_CODES;
+
     const auditItems = park.requiredDocCodes.map((code) => {
       const reqName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`;
       const cert = inspector.certificates.get(code);
@@ -96,12 +100,13 @@ export class AuditTriangulator {
         } else {
           status = 'AUSENTE';
 
-          if (ELECTIVE_DOC_CODES.has(code)) {
-            // Eletivo (ex.: SIT/ESO Vestas): não ter ainda não é uma pendência — não conta pra
-            // INAPTO. HSEDatabaseRepository.saveAuditSnapshot filtra esse item inteiro fora do
+          if (electiveCodes.has(code)) {
+            // Eletivo/monitorado (ex.: SIT/ESO Vestas, ou todo o catálogo de treinamentos pro
+            // perfil COORDENADOR): não ter ainda não é uma pendência — não conta pra INAPTO.
+            // HSEDatabaseRepository.saveAuditSnapshot filtra esse item inteiro fora do
             // banco/relatórios quando AUSENTE (revisado 25/08/2026 — antes aparecia "pra
             // visibilidade", mas isso poluía os relatórios com gente que nunca vai precisar disso).
-            detail = 'Documento eletivo não encontrado no Drive — depende do cliente/parque, a verificar quando a pessoa for alocada. Não é cobrado como pendência.';
+            detail = 'Documento eletivo/monitorado não encontrado no Drive — não é cobrado como pendência.';
           } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
             detail = 'Documento obrigatório não encontrado no Drive nem solicitado na Storz.';
             missingCount++;

@@ -1,12 +1,16 @@
 import { describe, it, expect } from 'vitest';
-import { classifyEmployeeProfile, getRequiredDocCodesForProfile } from './EmployeeProfileClassifier.js';
+import { classifyEmployeeProfile, getRequiredDocCodesForProfile, getElectiveDocCodesForProfile } from './EmployeeProfileClassifier.js';
 import { DOC_CATALOG_MAP } from './ComplianceEngine.js';
 
 describe('classifyEmployeeProfile', () => {
-  it('classifica códigos de campo (IQ, TO, LO, IE, CO) como CAMPO', () => {
-    for (const code of ['IQ', 'TO', 'LO', 'IE', 'CO']) {
+  it('classifica códigos de campo (IQ, TO, LO, IE) como CAMPO', () => {
+    for (const code of ['IQ', 'TO', 'LO', 'IE']) {
       expect(classifyEmployeeProfile(code)).toBe('CAMPO');
     }
+  });
+
+  it('classifica CO (Coordenador) como COORDENADOR, não CAMPO — perfil próprio desde 25/08/2026 (caso real: João Victor Costa Campos)', () => {
+    expect(classifyEmployeeProfile('CO')).toBe('COORDENADOR');
   });
 
   it('classifica códigos administrativos (ADM, EHS, ENG, DO, DS) como ADMINISTRATIVO', () => {
@@ -29,6 +33,30 @@ describe('classifyEmployeeProfile', () => {
   it('é case-insensitive', () => {
     expect(classifyEmployeeProfile('iq')).toBe('CAMPO');
     expect(classifyEmployeeProfile('de')).toBeNull();
+  });
+
+  it('ramo homogêneo da RPO decide o perfil, mesmo com FUNÇÃO ambígua/desconhecida', () => {
+    expect(classifyEmployeeProfile('XYZ', 'INSP. QUALIDADE & TÉC. OPERAÇÕES')).toBe('CAMPO');
+    expect(classifyEmployeeProfile('XYZ', 'DRONE INSP. EQUIPAMENTO')).toBe('CAMPO');
+    expect(classifyEmployeeProfile('XYZ', 'LPS - SPDA')).toBe('CAMPO');
+    expect(classifyEmployeeProfile('XYZ', 'ENGENHARIA')).toBe('ADMINISTRATIVO');
+    expect(classifyEmployeeProfile('XYZ', 'ADMINISTRATIVO')).toBe('ADMINISTRATIVO');
+    expect(classifyEmployeeProfile('XYZ', 'VISIBILIDADE')).toBe('ADMINISTRATIVO');
+  });
+
+  it('ramo "LÍDERES / EHS" é misto — não decide sozinho, cai no fallback por FUNÇÃO', () => {
+    expect(classifyEmployeeProfile('LO', 'LÍDERES / EHS')).toBe('CAMPO');
+    expect(classifyEmployeeProfile('ADM', 'LÍDERES / EHS')).toBe('ADMINISTRATIVO');
+    expect(classifyEmployeeProfile('CO', 'LÍDERES / EHS')).toBe('COORDENADOR');
+  });
+
+  it('CO (Coordenador) tem prioridade sobre o ramo — coordenador é sempre COORDENADOR, não importa em qual ramo esteja', () => {
+    expect(classifyEmployeeProfile('CO', 'INSP. QUALIDADE & TÉC. OPERAÇÕES')).toBe('COORDENADOR');
+    expect(classifyEmployeeProfile('CO', 'ADMINISTRATIVO')).toBe('COORDENADOR');
+  });
+
+  it('DE (desligado) tem prioridade sobre o ramo — desligado é sempre excluído, não importa o ramo', () => {
+    expect(classifyEmployeeProfile('DE', 'INSP. QUALIDADE & TÉC. OPERAÇÕES')).toBeNull();
   });
 });
 
@@ -75,5 +103,32 @@ describe('getRequiredDocCodesForProfile', () => {
     const codes = getRequiredDocCodesForProfile('CAMPO');
     expect(codes).toContain('31');
     expect(codes).toContain('34');
+  });
+
+  it('COORDENADOR exige ASO e monitora o resto do catálogo de campo (confirmado 25/08/2026, caso real: João Victor Costa Campos)', () => {
+    const codes = getRequiredDocCodesForProfile('COORDENADOR');
+    expect(codes).toContain('01');
+    expect(codes).toContain('21'); // NR-35 aparece se a pessoa tiver, mas é monitorado — ver getElectiveDocCodesForProfile
+  });
+
+  it('COORDENADOR + PJ não exige nada — sem o mesmo motivo de exposição a risco do perfil CAMPO', () => {
+    expect(getRequiredDocCodesForProfile('COORDENADOR', 'PJ')).toEqual([]);
+  });
+});
+
+describe('getElectiveDocCodesForProfile', () => {
+  it('COORDENADOR trata todo o catálogo de treinamentos como monitoramento, exceto ASO', () => {
+    const elective = getElectiveDocCodesForProfile('COORDENADOR');
+    expect(elective).toContain('21'); // NR-35
+    expect(elective).toContain('12'); // NR-10
+    expect(elective).not.toContain('01'); // ASO continua obrigatório de verdade
+  });
+
+  it('CAMPO usa o conjunto eletivo global (Vestas, Elevador, CIPA) — NR-35 continua obrigatório de verdade', () => {
+    const elective = getElectiveDocCodesForProfile('CAMPO');
+    expect(elective).toContain('25'); // SIT Vestas
+    expect(elective).toContain('31'); // Elevador
+    expect(elective).toContain('34'); // CIPA
+    expect(elective).not.toContain('21'); // NR-35 NÃO é eletivo pro perfil CAMPO
   });
 });
