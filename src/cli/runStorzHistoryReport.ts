@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import ExcelJS from 'exceljs';
+import fs from 'fs';
 import path from 'path';
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
@@ -7,6 +8,7 @@ import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClass
 import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js';
 import { StorzRequest } from '../domain/models/StorzRequest.js';
 import { groupRetests, RetestAttempt } from '../domain/services/RetestTracker.js';
+import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
 
@@ -168,6 +170,12 @@ async function main() {
   const outputPath = path.join(process.cwd(), 'scratch', 'historico_aluno_storz.xlsx');
   await exportToExcel(storzResult.requests, outputPath);
   console.log(`\n✅ Relatório gerado em: ${outputPath}\n`);
+
+  // Dashboard separado do EHS — público diferente (Desenvolvimento Organizacional), não é uma
+  // aba dentro do dashboard de EHS. Ver DoDashboardHtmlGenerator.ts.
+  const dashboardPath = path.join(process.cwd(), 'scratch', 'do_dashboard.html');
+  fs.writeFileSync(dashboardPath, buildDoDashboardHtml(storzResult.requests));
+  console.log(`✅ Dashboard DO gerado em: ${dashboardPath}\n`);
 }
 
 main().catch((err) => {
