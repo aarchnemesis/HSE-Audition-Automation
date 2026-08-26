@@ -1,5 +1,5 @@
 import nodemailer, { Transporter } from 'nodemailer';
-import { IEmailService, EmailMessage, DigestInspectorGroup } from '../../ports/IEmailService.js';
+import { IEmailService, EmailMessage, DigestInspectorGroup, EmailAttachment } from '../../ports/IEmailService.js';
 import { EMAIL_TITLE, wrapEmailHtml, buildEHSAlertBodyHtml, buildDigestBodyHtml } from './emailTemplates.js';
 
 export interface SmtpConfig {
@@ -51,7 +51,8 @@ export class SmtpEmailService implements IEmailService {
         to: message.to,
         subject: message.subject,
         html: wrapEmailHtml(message.subject, message.htmlContent),
-        text: message.textContent
+        text: message.textContent,
+        attachments: message.attachments
       });
       console.log(`[SmtpEmailService] ✉️ E-mail enviado para ${message.to}: ${info.messageId}`);
       return { success: true, messageId: info.messageId };
@@ -79,10 +80,11 @@ export class SmtpEmailService implements IEmailService {
   async sendDailyDigest(
     recipient: string,
     groups: DigestInspectorGroup[],
-    refDate: Date
+    refDate: Date,
+    attachments?: EmailAttachment[]
   ): Promise<{ success: boolean; filePath?: string }> {
     const subject = `${EMAIL_TITLE} - Resumo (${refDate.toLocaleDateString('pt-BR')})`;
-    const res = await this.sendEmail({ to: recipient, subject, htmlContent: buildDigestBodyHtml(groups) });
+    const res = await this.sendEmail({ to: recipient, subject, htmlContent: buildDigestBodyHtml(groups), attachments });
     return { success: res.success };
   }
 }

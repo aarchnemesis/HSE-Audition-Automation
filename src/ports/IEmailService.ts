@@ -1,8 +1,14 @@
+export interface EmailAttachment {
+  filename: string;
+  path: string; // caminho local do arquivo — nodemailer lê e anexa
+}
+
 export interface EmailMessage {
   to: string;
   subject: string;
   htmlContent: string;
   textContent?: string;
+  attachments?: EmailAttachment[];
 }
 
 export interface DigestPendencyItem {
@@ -27,10 +33,12 @@ export interface IEmailService {
     parkName: string,
     auditItems: any[]
   ): Promise<{ success: boolean; filePath?: string }>;
-  /** Resumo consolidado: um único e-mail agrupando todas as pessoas com pendência e quais são */
+  /** Resumo consolidado: um único e-mail agrupando todas as pessoas com pendência e quais são.
+   *  `attachments` é usado pra anexar o Excel/relatório completo junto do resumo. */
   sendDailyDigest(
     recipient: string,
     groups: DigestInspectorGroup[],
-    refDate: Date
+    refDate: Date,
+    attachments?: EmailAttachment[]
   ): Promise<{ success: boolean; filePath?: string }>;
 }

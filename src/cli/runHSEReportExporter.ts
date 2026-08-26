@@ -127,7 +127,11 @@ async function main() {
   console.log('================================================================================');
   const emailService: IEmailService = SmtpEmailService.fromEnv() || new DummyEmailService();
   const digestGroups = buildPendencyDigest(dbRepo.getAllRecords());
-  const digestRes = await emailService.sendDailyDigest(EMAIL_RECIPIENT, digestGroups, REF_DATE);
+  // Anexa o Excel completo direto no e-mail (fase beta: time recebe o relatório pronto, sem
+  // precisar ir no GitHub Actions baixar o artifact) — pedido do usuário em 25/08/2026.
+  const digestRes = await emailService.sendDailyDigest(EMAIL_RECIPIENT, digestGroups, REF_DATE, [
+    { filename: 'hse_relatorio_consolidado.xlsx', path: excelPath }
+  ]);
   console.log(`   ${digestGroups.length} pessoa(s) com pendência incluída(s) no resumo.`);
   console.log(`   Resumo ${digestRes.success ? 'enviado' : 'falhou'}${digestRes.filePath ? ` (${digestRes.filePath})` : ''}\n`);
 }

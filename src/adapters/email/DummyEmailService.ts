@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { IEmailService, EmailMessage, DigestInspectorGroup } from '../../ports/IEmailService.js';
+import { IEmailService, EmailMessage, DigestInspectorGroup, EmailAttachment } from '../../ports/IEmailService.js';
 import { EMAIL_TITLE, wrapEmailHtml, buildEHSAlertBodyHtml, buildDigestBodyHtml } from './emailTemplates.js';
 
 export class DummyEmailService implements IEmailService {
@@ -20,6 +20,9 @@ export class DummyEmailService implements IEmailService {
 
     fs.writeFileSync(fullPath, wrapEmailHtml(message.subject, message.htmlContent), 'utf-8');
     console.log(`[DummyEmailService] 📧 E-mail dummy gravado em: ${fullPath}`);
+    if (message.attachments?.length) {
+      console.log(`[DummyEmailService] 📎 Anexo(s) que iriam junto: ${message.attachments.map((a) => a.filename).join(', ')}`);
+    }
 
     return { success: true, messageId: filename };
   }
@@ -43,10 +46,11 @@ export class DummyEmailService implements IEmailService {
   async sendDailyDigest(
     recipient: string,
     groups: DigestInspectorGroup[],
-    refDate: Date
+    refDate: Date,
+    attachments?: EmailAttachment[]
   ): Promise<{ success: boolean; filePath?: string }> {
     const subject = `${EMAIL_TITLE} - Resumo (${refDate.toLocaleDateString('pt-BR')})`;
-    const res = await this.sendEmail({ to: recipient, subject, htmlContent: buildDigestBodyHtml(groups) });
+    const res = await this.sendEmail({ to: recipient, subject, htmlContent: buildDigestBodyHtml(groups), attachments });
     return { success: res.success, filePath: res.messageId };
   }
 }
