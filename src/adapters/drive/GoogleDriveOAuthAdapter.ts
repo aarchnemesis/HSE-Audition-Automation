@@ -8,17 +8,47 @@ import { getAuthorizedClient } from './googleAuth.js';
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder';
 
+const DRONE_ROOT_FOLDER_ID = '1AyOLeSdD5S3fcELziWhT1ORwij3UbPgC'; // 03 - Drone Insp. Equipamento
+const LPS_SPDA_ROOT_FOLDER_ID = '1Yn9_peIcUruJkfVsDHLbEeHzwyVCqEX3'; // 04 - LPS - SPDA
+
 /**
- * Cada pasta de ramo tem sua PRÓPRIA numeração de documento — o mesmo código pode significar
- * coisas diferentes em ramos diferentes (achado real em 27/08/2026: código "04" é "CTPS Digital"
- * na pasta de Inspetores/Técnicos, mas "Contrato (Piloto Drone)" na pasta de Drone/LPS-SPDA).
- * Sem remapear, os dois se misturariam no catálogo global único (DOC_CATALOG_MAP). Mapeado por
- * ID da pasta raiz — se o ID mudar (pasta recriada), esse remap para de funcionar silenciosamente,
- * mas os documentos ainda aparecem com o código original errado, não desaparecem.
+ * Cada pasta de ramo pode ter sua PRÓPRIA numeração de documento — confirmado em 27/08/2026 contra
+ * o arquivo oficial "Nomeclatura de Documentos.txt" e validado com 2 pilotos reais (Alison, Kelvin):
+ * o ramo DRONE usa uma numeração inteira diferente do catálogo padrão pros códigos 07-16 (ex.:
+ * código "11" = Primeiros Socorros no Drone, mas "NR-06 Uso de EPI" no catálogo padrão). LPS-SPDA
+ * usa a numeração PADRÃO (validado contra José Marcelo) — só compartilha o remap de Contrato/Aditivo
+ * (04/04.1 → 40/40.1) com o Drone, porque as duas pastas têm pilotos PJ com contrato de prestação
+ * de serviço.
  */
 const BRANCH_CODE_REMAP: Record<string, Record<string, string>> = {
-  '1AyOLeSdD5S3fcELziWhT1ORwij3UbPgC': { '04': '40', '04.1': '40.1' }, // 03 - Drone Insp. Equipamento
-  '1Yn9_peIcUruJkfVsDHLbEeHzwyVCqEX3': { '04': '40', '04.1': '40.1' }  // 04 - LPS - SPDA
+  [DRONE_ROOT_FOLDER_ID]: {
+    '04': '40', '04.1': '40.1', // Contrato / Aditivo
+    '07': '08',  // CNH
+    '08': '09',  // Direção Defensiva
+    '09': '10',  // NR-01 Integração
+    '10': '11',  // NR-06 Uso EPI
+    '11': '16',  // Primeiros Socorros (GWO)
+    '14': '18',  // NR-18 Integração de EHS
+    '15': '19',  // NR-23 C. Incêndio (GWO)
+    '16': '15',  // NR-12
+    '16.1': '15.1' // Carta NR-12
+  },
+  [LPS_SPDA_ROOT_FOLDER_ID]: { '04': '40', '04.1': '40.1' }
+};
+
+/**
+ * Achado real em 27/08/2026 (caso Felipe Alan Peghin): dentro das pastas de piloto, a subpasta
+ * "Outros" (case-insensitive) tem certificados antigos/duplicados com nomenclatura pré-convenção
+ * do Drone — um "16 – Primeiros Socorros" de 2023 ali dentro estava sendo lido como se fosse o
+ * documento válido (mesmo código, catálogo padrão), gerando um VENCIDO falso por cima do
+ * certificado real de 2025 (que está em "02.Treinamentos", código "11" na convenção do Drone).
+ * "Outros" não é "Obsoletos" — passava pelo filtro de exclusão existente sem ser pego. Só
+ * excluído nos ramos onde essa pasta lixo foi confirmada (Drone/LPS-SPDA); não assumido pra
+ * outros ramos sem verificar.
+ */
+const BRANCH_EXCLUDED_FOLDER_NAMES: Record<string, string[]> = {
+  [DRONE_ROOT_FOLDER_ID]: ['outros'],
+  [LPS_SPDA_ROOT_FOLDER_ID]: ['outros']
 };
 
 export class GoogleDriveOAuthAdapter implements IDocumentProvider {
@@ -83,7 +113,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         const role = nameParts.length > 1 ? nameParts[1].trim() : 'TÉCNICO / INSPETOR';
 
         const certificates = new Map<string, Certificate>();
-        await this.scanFolderRecursive(entry.id, certificates, BRANCH_CODE_REMAP[rootFolderId]);
+        await this.scanFolderRecursive(entry.id, certificates, BRANCH_CODE_REMAP[rootFolderId], BRANCH_EXCLUDED_FOLDER_NAMES[rootFolderId]);
 
         inspectors.push({ id: entry.id, name, role, certificates });
       }
@@ -92,15 +122,17 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
     return inspectors;
   }
 
-  private async scanFolderRecursive(folderId: string, certificates: Map<string, Certificate>, codeRemap?: Record<string, string>): Promise<void> {
+  private async scanFolderRecursive(folderId: string, certificates: Map<string, Certificate>, codeRemap?: Record<string, string>, excludedFolderNames?: string[]): Promise<void> {
     const children = await this.listChildren(folderId);
 
     for (const entry of children) {
       if (!entry.name) continue;
 
       if (entry.mimeType === FOLDER_MIME) {
-        if (entry.name.toLowerCase().includes('obsoleto') || !entry.id) continue;
-        await this.scanFolderRecursive(entry.id, certificates, codeRemap);
+        const lowerName = entry.name.toLowerCase();
+        if (lowerName.includes('obsoleto') || !entry.id) continue;
+        if (excludedFolderNames?.some((excluded) => lowerName.includes(excluded))) continue;
+        await this.scanFolderRecursive(entry.id, certificates, codeRemap, excludedFolderNames);
         continue;
       }
 
