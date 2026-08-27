@@ -118,4 +118,44 @@ describe('groupRetests', () => {
       expect(groups[0].retestStage).toBeUndefined();
     });
   });
+
+  describe('rematriculado / iniciado / latestProgressPercent — pedido do usuário em 26/08/2026', () => {
+    it('reprovou e não rematriculou: rematriculado=false, iniciado=false', () => {
+      const requests = [makeReq({ id: 'A', requestDate: new Date(2026, 0, 1), rawSituacao: 'Reprovado' })];
+      const groups = groupRetests(requests);
+      expect(groups[0].rematriculado).toBe(false);
+      expect(groups[0].iniciado).toBe(false);
+    });
+
+    it('rematriculado mas "Não iniciado": rematriculado=true, iniciado=false', () => {
+      const requests = [
+        makeReq({ id: 'A', requestDate: new Date(2026, 0, 1), rawSituacao: 'Reprovado' }),
+        makeReq({ id: 'B', requestDate: new Date(2026, 1, 1), rawSituacao: 'Não iniciado', progressPercent: 0 })
+      ];
+      const groups = groupRetests(requests);
+      expect(groups[0].rematriculado).toBe(true);
+      expect(groups[0].iniciado).toBe(false);
+    });
+
+    it('rematriculado e em andamento: rematriculado=true, iniciado=true, expõe o progresso atual', () => {
+      const requests = [
+        makeReq({ id: 'A', requestDate: new Date(2026, 0, 1), rawSituacao: 'Reprovado' }),
+        makeReq({ id: 'B', requestDate: new Date(2026, 1, 1), rawSituacao: 'Em andamento', progressPercent: 42 })
+      ];
+      const groups = groupRetests(requests);
+      expect(groups[0].rematriculado).toBe(true);
+      expect(groups[0].iniciado).toBe(true);
+      expect(groups[0].latestProgressPercent).toBe(42);
+    });
+
+    it('reprovou de novo no reteste: ainda conta como rematriculado E iniciado (chegou a fazer, só que reprovou outra vez)', () => {
+      const requests = [
+        makeReq({ id: 'A', requestDate: new Date(2026, 0, 1), rawSituacao: 'Reprovado' }),
+        makeReq({ id: 'B', requestDate: new Date(2026, 1, 1), rawSituacao: 'Reprovado' })
+      ];
+      const groups = groupRetests(requests);
+      expect(groups[0].rematriculado).toBe(true);
+      expect(groups[0].iniciado).toBe(true);
+    });
+  });
 });

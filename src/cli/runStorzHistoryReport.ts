@@ -134,6 +134,9 @@ function buildRetestSheet(workbook: ExcelJS.Workbook, requests: StorzRequest[]):
     { header: 'Nome do Curso', key: 'trainingName', width: 45 },
     { header: 'Nº Tentativas', key: 'totalAttempts', width: 14 },
     { header: 'Data da Reprovação', key: 'failedDate', width: 18 },
+    { header: 'Rematriculado?', key: 'rematriculado', width: 14 },
+    { header: 'Iniciado?', key: 'iniciado', width: 12 },
+    { header: 'Progresso Atual', key: 'progresso', width: 14 },
     { header: 'Etapa do Reteste', key: 'retestStage', width: 20 },
     { header: 'Data do Reteste Aprovado', key: 'retestApprovedDate', width: 22 },
     { header: 'Situação Atual', key: 'latestOutcome', width: 16 }
@@ -155,6 +158,9 @@ function buildRetestSheet(workbook: ExcelJS.Workbook, requests: StorzRequest[]):
       trainingName: docLabel(group.trainingCode, firstFailed.request.trainingName),
       totalAttempts: group.attempts.length,
       failedDate: dateFmt(firstFailed.request.requestDate),
+      rematriculado: group.rematriculado ? 'SIM' : 'NÃO',
+      iniciado: group.iniciado ? 'SIM' : 'NÃO',
+      progresso: group.latestProgressPercent !== undefined ? `${group.latestProgressPercent}%` : '',
       retestStage: RETEST_STAGE_LABEL[group.retestStage!],
       retestApprovedDate: approvedRetest ? dateFmt(approvedRetest.request.completionDate || approvedRetest.request.requestDate) : '',
       latestOutcome: group.latestOutcome

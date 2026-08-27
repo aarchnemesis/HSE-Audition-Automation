@@ -197,6 +197,8 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   .retest-item{ display:flex; flex-direction:column; gap:4px; padding:10px; border-radius:10px; background:var(--surface-2); }
   .retest-item .name{ font-weight:600; font-size:13px; }
   .retest-item .course{ font-size:12px; color:var(--text-secondary); }
+  .retest-facts{ display:flex; flex-wrap:wrap; gap:8px 12px; font-size:11.5px; color:var(--text-secondary); margin-top:2px; }
+  .retest-facts strong{ color:var(--text-primary); font-weight:600; }
   .retest-list{ display:flex; flex-direction:column; gap:8px; max-height:520px; overflow-y:auto; }
 
   footer{ text-align:center; font-size:11.5px; color:var(--text-muted); padding-top:8px; }
@@ -347,12 +349,17 @@ function groupRetests(){
     const latest = outcomes[outcomes.length - 1];
     if (!hasFailed) continue;
     const retestStage = latest === 'APROVADO' ? 'RETESTE_APROVADO' : latest === 'EM_ANDAMENTO' ? 'RETESTE_EM_ANDAMENTO' : 'AGUARDANDO_RETESTE';
+    const rematriculado = sorted.length > 1;
+    const iniciado = rematriculado && latest !== 'NAO_INICIADO';
     result.push({
       collaboratorName: sorted[0].collaboratorName,
       courseLabel: courseLabel(sorted[0]),
       attempts: sorted.length,
       retestStage,
-      latest
+      latest,
+      rematriculado,
+      iniciado,
+      latestProgressPercent: sorted[sorted.length - 1].progressPercent
     });
   }
   return result.sort((a,b) => RETEST_STAGE_ORDER.indexOf(a.retestStage) - RETEST_STAGE_ORDER.indexOf(b.retestStage) || a.collaboratorName.localeCompare(b.collaboratorName));
@@ -433,6 +440,11 @@ function renderRetests(){
       <span class="name">\${g.collaboratorName}</span>
       <span class="course">\${g.courseLabel} · \${g.attempts} tentativa(s)</span>
       <span class="badge s-\${RETEST_STAGE_TONE[g.retestStage]}">\${RETEST_STAGE_LABEL[g.retestStage]}</span>
+      <div class="retest-facts">
+        <span>Rematriculado: <strong>\${g.rematriculado ? 'Sim' : 'Não'}</strong></span>
+        <span>Iniciado: <strong>\${g.iniciado ? 'Sim' : 'Não'}</strong></span>
+        \${g.iniciado && g.latestProgressPercent !== undefined && g.latestProgressPercent !== null ? \`<span>Progresso: <strong>\${g.latestProgressPercent}%</strong></span>\` : ''}
+      </div>
     </div>\`).join('');
 }
 

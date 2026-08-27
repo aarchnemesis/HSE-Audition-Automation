@@ -25,6 +25,14 @@ export interface RetestGroup {
   latestOutcome: AttemptOutcome;
   /** Só definido quando hasFailedAttempt é true — ver RetestStage. */
   retestStage?: RetestStage;
+  /** Existe uma matrícula depois da reprovação (nova tentativa registrada), independente de já
+   *  ter começado ou não. Pedido do usuário em 26/08/2026: quer ver esse fato separado da etapa. */
+  rematriculado: boolean;
+  /** A tentativa mais recente já tem data de início real (não é mais "Não iniciado"). */
+  iniciado: boolean;
+  /** Progresso (0-100) da tentativa mais recente, quando disponível — só relevante se `iniciado`
+   *  for true e ainda não tiver concluído. */
+  latestProgressPercent?: number;
   /** @deprecated mantido por compatibilidade — equivalente a retestStage === 'RETESTE_APROVADO'. */
   retestApproved: boolean;
   /** @deprecated mantido por compatibilidade — equivalente a retestStage !== 'RETESTE_APROVADO'.
@@ -76,8 +84,15 @@ export function groupRetests(requests: StorzRequest[]): RetestGroup[] {
     }));
 
     const hasFailedAttempt = attempts.some((a) => a.outcome === 'REPROVADO');
-    const latestOutcome = attempts[attempts.length - 1].outcome;
+    const latestAttempt = attempts[attempts.length - 1];
+    const latestOutcome = latestAttempt.outcome;
     const retestStage = hasFailedAttempt ? computeRetestStage(latestOutcome) : undefined;
+
+    // Rematriculado = teve mais de uma matrícula nesse curso (a primeira reprovou, existe pelo
+    // menos mais uma depois) — vale mesmo que a rematrícula tenha reprovado de novo.
+    const rematriculado = hasFailedAttempt && attempts.length > 1;
+    // Iniciado = a rematrícula já tem data de início real (deixou de ser "Não iniciado").
+    const iniciado = rematriculado && latestOutcome !== 'NAO_INICIADO';
 
     result.push({
       collaboratorName: sorted[0].collaboratorName,
@@ -86,6 +101,9 @@ export function groupRetests(requests: StorzRequest[]): RetestGroup[] {
       hasFailedAttempt,
       latestOutcome,
       retestStage,
+      rematriculado,
+      iniciado,
+      latestProgressPercent: hasFailedAttempt ? latestAttempt.request.progressPercent : undefined,
       retestApproved: retestStage === 'RETESTE_APROVADO',
       pendingRetest: hasFailedAttempt && retestStage !== 'RETESTE_APROVADO'
     });
