@@ -187,6 +187,12 @@ async function main() {
   console.log(`   Data de Referência: ${REF_DATE.toLocaleDateString('pt-BR')}`);
   console.log('================================================================================\n');
 
+  // Diferente do runHSEReportExporter.ts, esse CLI não instancia HSEDatabaseRepository (que cria
+  // scratch/ como efeito colateral) — sem isso, num checkout limpo (ex.: CI), o writeFile do
+  // Excel/dashboard falha com ENOENT porque a pasta nunca existiu.
+  const scratchDir = path.join(process.cwd(), 'scratch');
+  if (!fs.existsSync(scratchDir)) fs.mkdirSync(scratchDir, { recursive: true });
+
   const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE);
   if (!rpoAdapter) {
     console.error('❌ SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados no .env.');
