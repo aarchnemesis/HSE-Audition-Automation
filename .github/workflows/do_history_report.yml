@@ -1,0 +1,78 @@
+name: Histórico do Aluno (Desenvolvimento Organizacional)
+
+# Separado do cron de EHS de propósito: público diferente (analista de treinamentos/DO), não
+# status de conformidade — histórico completo de matrículas na Storz e controle de retestes.
+
+on:
+  schedule:
+    # Terça e sexta-feira às 10:00 UTC (07:00 BRT - Horário de Brasília)
+    - cron: '0 10 * * 2,5'
+  workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout do Repositório
+        uses: actions/checkout@v4
+      - name: 🟢 Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: 📦 Instalar Dependências do Projeto
+        run: npm ci
+      - name: 🔎 Type-check
+        run: npm run lint
+      - name: 🧪 Rodar Testes
+        run: npm test
+
+  report-and-notify:
+    needs: test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: 🟢 Configurar Node.js (v20)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 📦 Instalar Dependências do Projeto
+        run: npm ci
+
+      - name: 🎭 Instalar Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      - name: 🎓 Gerar Histórico do Aluno & Enviar por E-mail
+        env:
+          STORZ_URL: ${{ secrets.STORZ_URL }}
+          STORZ_USER: ${{ secrets.STORZ_USER }}
+          STORZ_PASS: ${{ secrets.STORZ_PASS }}
+          SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
+          SMARTSHEET_RPO_SHEET_ID: ${{ secrets.SMARTSHEET_RPO_SHEET_ID }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          DO_EMAIL_TO: ${{ secrets.DO_EMAIL_TO }}
+        run: npm run storz-history-report
+
+      # Contém nomes e histórico de treinamento (dados pessoais). Retenção curta e visibilidade
+      # restrita a quem já tem acesso de leitura ao repositório.
+      - name: 📊 Upload do Histórico do Aluno (Excel)
+        uses: actions/upload-artifact@v4
+        with:
+          name: historico_aluno_storz_${{ github.run_id }}
+          path: scratch/historico_aluno_storz.xlsx
+          retention-days: 7
+
+      - name: 🖥️ Upload do Dashboard DO
+        uses: actions/upload-artifact@v4
+        with:
+          name: do_dashboard_${{ github.run_id }}
+          path: scratch/do_dashboard.html
+          retention-days: 7
