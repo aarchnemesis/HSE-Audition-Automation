@@ -308,6 +308,30 @@ function computeStats(){
   return { total: RAW.length, aprovado, reprovado, pendente };
 }
 
+// Espelha classifyOutcome do RetestTracker.ts (domínio) — mais granular que a classifyOutcome
+// local (que só serve pros stat tiles gerais Aprovado/Reprovado/Pendente).
+function classifyRetestOutcome(situacao){
+  const upper = (situacao || '').toUpperCase();
+  if (upper.includes('APROVADO') || upper.includes('CONCLU')) return 'APROVADO';
+  if (upper.includes('REPROVADO')) return 'REPROVADO';
+  if (upper.includes('ANDAMENTO') || upper.includes('CURSANDO')) return 'EM_ANDAMENTO';
+  if (upper.includes('NÃO INICIADO') || upper.includes('NAO INICIADO')) return 'NAO_INICIADO';
+  return 'PENDENTE';
+}
+
+const RETEST_STAGE_LABEL = {
+  AGUARDANDO_RETESTE: 'Aguardando reteste',
+  RETESTE_EM_ANDAMENTO: 'Reteste em andamento',
+  RETESTE_APROVADO: 'Reteste aprovado'
+};
+const RETEST_STAGE_TONE = {
+  AGUARDANDO_RETESTE: 'critical',
+  RETESTE_EM_ANDAMENTO: 'warning',
+  RETESTE_APROVADO: 'good'
+};
+const RETEST_STAGE_ORDER = ['AGUARDANDO_RETESTE', 'RETESTE_EM_ANDAMENTO', 'RETESTE_APROVADO'];
+
+// 3 etapas (pedido do usuário 26/08/2026): aguardando reteste, reteste em andamento, reteste aprovado.
 function groupRetests(){
   const groups = new Map();
   for (const r of RAW) {
@@ -318,19 +342,20 @@ function groupRetests(){
   const result = [];
   for (const reqs of groups.values()) {
     const sorted = [...reqs].sort((a,b) => new Date(a.requestDate) - new Date(b.requestDate));
-    const outcomes = sorted.map(r => classifyOutcome(r.rawSituacao || r.state));
+    const outcomes = sorted.map(r => classifyRetestOutcome(r.rawSituacao || r.state));
     const hasFailed = outcomes.includes('REPROVADO');
     const latest = outcomes[outcomes.length - 1];
     if (!hasFailed) continue;
+    const retestStage = latest === 'APROVADO' ? 'RETESTE_APROVADO' : latest === 'EM_ANDAMENTO' ? 'RETESTE_EM_ANDAMENTO' : 'AGUARDANDO_RETESTE';
     result.push({
       collaboratorName: sorted[0].collaboratorName,
       courseLabel: courseLabel(sorted[0]),
       attempts: sorted.length,
-      pendingRetest: latest !== 'APROVADO',
+      retestStage,
       latest
     });
   }
-  return result.sort((a,b) => (a.pendingRetest === b.pendingRetest ? 0 : a.pendingRetest ? -1 : 1) || a.collaboratorName.localeCompare(b.collaboratorName));
+  return result.sort((a,b) => RETEST_STAGE_ORDER.indexOf(a.retestStage) - RETEST_STAGE_ORDER.indexOf(b.retestStage) || a.collaboratorName.localeCompare(b.collaboratorName));
 }
 
 function renderStats(){
@@ -407,7 +432,7 @@ function renderRetests(){
     <div class="retest-item">
       <span class="name">\${g.collaboratorName}</span>
       <span class="course">\${g.courseLabel} · \${g.attempts} tentativa(s)</span>
-      <span class="badge s-\${g.pendingRetest ? 'critical' : 'good'}">\${g.pendingRetest ? 'Reteste pendente' : 'Reteste aprovado'}</span>
+      <span class="badge s-\${RETEST_STAGE_TONE[g.retestStage]}">\${RETEST_STAGE_LABEL[g.retestStage]}</span>
     </div>\`).join('');
 }
 

@@ -1,6 +1,15 @@
 import { StorzRequest } from '../models/StorzRequest.js';
 
-export type AttemptOutcome = 'APROVADO' | 'REPROVADO' | 'PENDENTE';
+export type AttemptOutcome = 'APROVADO' | 'REPROVADO' | 'EM_ANDAMENTO' | 'NAO_INICIADO' | 'PENDENTE';
+
+/**
+ * As 3 etapas de reteste pedidas pelo usuário em 26/08/2026 — não é só "aprovou depois ou não":
+ *   1. AGUARDANDO_RETESTE: reprovou e não tem nenhuma rematrícula em andamento ainda (só reprovado,
+ *      ou rematriculado mas "Não iniciado")
+ *   2. RETESTE_EM_ANDAMENTO: reprovou e JÁ ESTÁ fazendo o mesmo curso de novo agora
+ *   3. RETESTE_APROVADO: reprovou e a tentativa mais recente foi aprovada
+ */
+export type RetestStage = 'AGUARDANDO_RETESTE' | 'RETESTE_EM_ANDAMENTO' | 'RETESTE_APROVADO';
 
 export interface RetestAttempt {
   request: StorzRequest;
@@ -14,27 +23,39 @@ export interface RetestGroup {
   attempts: RetestAttempt[];
   hasFailedAttempt: boolean;
   latestOutcome: AttemptOutcome;
-  /** Reprovou em algum momento, mas a tentativa mais recente é aprovação — reteste OK. */
+  /** Só definido quando hasFailedAttempt é true — ver RetestStage. */
+  retestStage?: RetestStage;
+  /** @deprecated mantido por compatibilidade — equivalente a retestStage === 'RETESTE_APROVADO'. */
   retestApproved: boolean;
-  /** Reprovou e ainda não tem uma aprovação depois disso — precisa refazer ou está parado. */
+  /** @deprecated mantido por compatibilidade — equivalente a retestStage !== 'RETESTE_APROVADO'.
+   *  Não distingue mais "aguardando" de "em andamento" — usar retestStage pra isso. */
   pendingRetest: boolean;
 }
 
 /**
  * "Situação do aluno" original da Storz (rawSituacao) tem mais granularidade que o `state`
- * interno — precisamos distinguir Reprovado de Cancelado/Pendente pra saber se teve reteste.
+ * interno — precisamos distinguir Reprovado/Em andamento/Não iniciado pra saber em que etapa do
+ * reteste a pessoa está, não só se "passou depois ou não".
  */
 function classifyOutcome(situacao: string): AttemptOutcome {
   const upper = situacao.toUpperCase();
   if (upper.includes('APROVADO') || upper.includes('CONCLU')) return 'APROVADO';
   if (upper.includes('REPROVADO')) return 'REPROVADO';
+  if (upper.includes('ANDAMENTO') || upper.includes('CURSANDO')) return 'EM_ANDAMENTO';
+  if (upper.includes('NÃO INICIADO') || upper.includes('NAO INICIADO')) return 'NAO_INICIADO';
   return 'PENDENTE';
+}
+
+function computeRetestStage(latestOutcome: AttemptOutcome): RetestStage {
+  if (latestOutcome === 'APROVADO') return 'RETESTE_APROVADO';
+  if (latestOutcome === 'EM_ANDAMENTO') return 'RETESTE_EM_ANDAMENTO';
+  return 'AGUARDANDO_RETESTE'; // REPROVADO, NAO_INICIADO ou PENDENTE — nenhuma rematrícula ativa
 }
 
 /**
  * Agrupa as matrículas por (colaborador, código do documento) e ordena por data de matrícula —
- * cada grupo é o histórico de tentativas daquela pessoa naquele curso, permitindo ver se uma
- * reprovação foi seguida de um reteste aprovado ou se ainda está pendente.
+ * cada grupo é o histórico de tentativas daquela pessoa naquele curso, permitindo ver em que
+ * etapa do reteste a pessoa está (ver RetestStage).
  */
 export function groupRetests(requests: StorzRequest[]): RetestGroup[] {
   const groups = new Map<string, StorzRequest[]>();
@@ -56,6 +77,7 @@ export function groupRetests(requests: StorzRequest[]): RetestGroup[] {
 
     const hasFailedAttempt = attempts.some((a) => a.outcome === 'REPROVADO');
     const latestOutcome = attempts[attempts.length - 1].outcome;
+    const retestStage = hasFailedAttempt ? computeRetestStage(latestOutcome) : undefined;
 
     result.push({
       collaboratorName: sorted[0].collaboratorName,
@@ -63,8 +85,9 @@ export function groupRetests(requests: StorzRequest[]): RetestGroup[] {
       attempts,
       hasFailedAttempt,
       latestOutcome,
-      retestApproved: hasFailedAttempt && latestOutcome === 'APROVADO',
-      pendingRetest: hasFailedAttempt && latestOutcome !== 'APROVADO'
+      retestStage,
+      retestApproved: retestStage === 'RETESTE_APROVADO',
+      pendingRetest: hasFailedAttempt && retestStage !== 'RETESTE_APROVADO'
     });
   }
 
