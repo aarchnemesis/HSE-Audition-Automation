@@ -13,8 +13,12 @@ const DEFAULT_LOCAL_DRIVE_PATH = `D:\\Drive\\.shortcut-targets-by-id\\1ftfSSauhV
 export function createDriveAdapter(refDate: Date): IDocumentProvider {
   const folderId = process.env.HSE_DRIVE_FOLDER_ID;
   if (folderId) {
-    console.log('[driveAdapterFactory] Usando GoogleDriveOAuthAdapter (HSE_DRIVE_FOLDER_ID configurado).');
-    return new GoogleDriveOAuthAdapter(folderId, refDate);
+    // Aceita uma lista separada por vírgula — o Drive real tem uma pasta por ramo hierárquico
+    // (Inspetores/Técnicos, Líderes & EHS, Drone Insp. Equipamento, LPS-SPDA), confirmado com o
+    // usuário em 27/08/2026. Uma única ID continua funcionando (retrocompatível).
+    const folderIds = folderId.split(',').map((id) => id.trim()).filter(Boolean);
+    console.log(`[driveAdapterFactory] Usando GoogleDriveOAuthAdapter (${folderIds.length} pasta(s) raiz configurada(s)).`);
+    return new GoogleDriveOAuthAdapter(folderIds, refDate);
   }
 
   const localPath = process.env.HSE_DRIVE_PATH || DEFAULT_LOCAL_DRIVE_PATH;

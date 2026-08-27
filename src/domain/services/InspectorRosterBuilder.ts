@@ -32,6 +32,16 @@ export function buildRoster(rpoInspectors: Inspector[], driveInspectors: Inspect
       }
     }
 
+    // Aditivo ao Contrato (40.1) substitui o prazo do Contrato original (40) quando existe —
+    // pedido do usuário em 27/08/2026: "quando termina o prazo do contrato caso só tenha o
+    // contrato, e quando acaba o aditivo caso tenha o contrato e o aditivo". Mantém o código '40'
+    // (é o que requiredDocCodes cobra) mas com a data/detalhe do aditivo, que é sempre a mais
+    // recente/válida das duas.
+    const aditivo = mergedCertificates.get('40.1');
+    if (aditivo) {
+      mergedCertificates.set('40', { ...aditivo, code: '40' });
+    }
+
     const inspector: Inspector = {
       ...rpoInspector,
       location: driveMatch?.location,

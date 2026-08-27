@@ -9,7 +9,7 @@ import { AuditTriangulator } from '../domain/services/AuditTriangulator.js';
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js';
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js';
 import { buildRoster } from '../domain/services/InspectorRosterBuilder.js';
-import { getRequiredDocCodesForProfile, getElectiveDocCodesForProfile, EmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
+import { getRequiredDocCodesForProfile, getElectiveDocCodesForProfile, EmployeeProfile, EHS_TRAINING_SCOPE_BRANCHES } from '../domain/services/EmployeeProfileClassifier.js';
 import { buildPendencyDigest } from '../domain/services/PendencyDigestBuilder.js';
 import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js';
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
@@ -47,8 +47,12 @@ async function main() {
   if (rpoAdapter) {
     const rpoInspectors = await rpoAdapter.readRPOData();
     console.log(`[SmartsheetRPOAdapter] Pessoas lidas da RPO: ${rpoInspectors.length}`);
-    roster = buildRoster(rpoInspectors, driveInspectors);
-    console.log(`[Roster] ${roster.length} pessoa(s) no universo de auditoria (excluídos os desligados).`);
+    const fullRoster = buildRoster(rpoInspectors, driveInspectors);
+    // Escopo reduzido em 27/08/2026: relatório de EHS é só pra quem está no Drive (campo) — ramos
+    // INSP. QUALIDADE & TÉC. OPERAÇÕES, LÍDERES/EHS, DRONE INSP. EQUIPAMENTO, LPS-SPDA. ADMINISTRATIVO
+    // e VISIBILIDADE saem do relatório por completo (ver EHS_TRAINING_SCOPE_BRANCHES).
+    roster = fullRoster.filter((r) => EHS_TRAINING_SCOPE_BRANCHES.includes(r.inspector.rpoBranch || ''));
+    console.log(`[Roster] ${roster.length} pessoa(s) no universo de auditoria (de ${fullRoster.length}, escopo campo — excluídos desligados, administrativo e visibilidade).`);
   } else {
     console.log('[Roster] SMARTSHEET_API_TOKEN/SMARTSHEET_RPO_SHEET_ID não configurados — usando só quem tem pasta no Drive (perfil CAMPO).');
     roster = driveInspectors.map((inspector) => ({

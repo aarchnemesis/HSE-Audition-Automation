@@ -18,6 +18,11 @@ const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20'];
 export const EVENT_TRIGGERED_ONLY_CODES = ['10', '11'];
 const EVENT_TRIGGERED_VALIDITY_YEARS = 50;
 
+// Contrato PJ (40) e Aditivo ao Contrato (40.1) — confirmado pelo usuário em 27/08/2026: a data
+// no nome do arquivo já É o prazo final (não uma data de emissão pra somar anos de validade em
+// cima). Diferente de todo o resto do catálogo, onde a data no nome costuma ser emissão/conclusão.
+const DIRECT_EXPIRATION_CODES = ['40', '40.1'];
+
 export function parseDateFromFilename(filename: string): Date | null {
   const dates = filename.match(/\b(\d{2})[\.\/-](\d{2})[\.\/-](\d{2,4})\b/);
   if (!dates) return null;
@@ -58,7 +63,7 @@ export function getValidityYearsForCode(code: string): number {
 export function calculateDocExpiration(code: string, parsedDate: Date | null, refDate: Date): Date | undefined {
   if (!parsedDate) return undefined;
 
-  if (parsedDate.getTime() >= refDate.getTime()) {
+  if (DIRECT_EXPIRATION_CODES.includes(code) || parsedDate.getTime() >= refDate.getTime()) {
     return parsedDate;
   }
 

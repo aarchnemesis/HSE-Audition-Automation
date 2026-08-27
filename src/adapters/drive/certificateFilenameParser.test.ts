@@ -14,6 +14,11 @@ describe('parseDocCode', () => {
   it('ignora desktop.ini', () => {
     expect(parseDocCode('desktop.ini')).toBeNull();
   });
+
+  it('extrai sub-código com ponto (ex.: Aditivo ao Contrato, código real "04.1" na pasta de pilotos)', () => {
+    expect(parseDocCode('04.1 - Aditivo ao Contrato - 15.01.2027 - Fulano - Clicksign.pdf')).toBe('04.1');
+    expect(parseDocCode('04 - Contrato (Piloto Drone)– 06.03.23 – Fulano.pdf')).toBe('04');
+  });
 });
 
 describe('parseDateFromFilename', () => {
@@ -59,5 +64,11 @@ describe('calculateDocExpiration', () => {
 
   it('retorna undefined quando não há data parseada', () => {
     expect(calculateDocExpiration('01', null, REF_DATE)).toBeUndefined();
+  });
+
+  it('Contrato PJ (40) e Aditivo (40.1) usam a data do arquivo direto como prazo, mesmo se já passou — confirmado pelo usuário em 27/08/2026 que a data no nome já é o vencimento, não a emissão', () => {
+    const past = new Date(2023, 2, 6); // bem antes da REF_DATE
+    expect(calculateDocExpiration('40', past, REF_DATE)).toEqual(past);
+    expect(calculateDocExpiration('40.1', past, REF_DATE)).toEqual(past);
   });
 });

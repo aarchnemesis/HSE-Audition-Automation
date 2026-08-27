@@ -40,6 +40,21 @@ const BRANCH_TO_PROFILE: Record<string, 'CAMPO' | 'ADMINISTRATIVO'> = {
 };
 
 /**
+ * Escopo do relatório de EHS a partir de 27/08/2026 (pedido do usuário: "a questão de
+ * treinamentos vai ficar exclusivamente pras pessoas de campo, então no Drive" — líderes/EHS,
+ * inspetores/técnicos, piloto de drone e SPA-LPS). ADMINISTRATIVO, VISIBILIDADE e ENGENHARIA
+ * saem do relatório de EHS por completo (não é redução de exigência, é redução de quem aparece).
+ * "LÍDERES / EHS" entra inteiro, mesmo sendo um ramo misto de FUNÇÃO (confirmado pelo usuário:
+ * todo mundo desse ramo conta como campo pra esse escopo, independente do código FUNÇÃO).
+ */
+export const EHS_TRAINING_SCOPE_BRANCHES = [
+  'INSP. QUALIDADE & TÉC. OPERAÇÕES',
+  'LÍDERES / EHS',
+  'DRONE INSP. EQUIPAMENTO',
+  'LPS - SPDA'
+];
+
+/**
  * Classifica o perfil de exigência documental de um colaborador. Prioridade:
  *   1. FUNÇÃO=DE (desligado) — sempre exclui, independente de ramo.
  *   2. FUNÇÃO=CO (coordenador) — perfil próprio, independente de ramo (coordenador pode estar em
@@ -105,7 +120,9 @@ const COORDENADOR_MONITORED_ONLY_CODES = CAMPO_REQUIRED_DOC_CODES.filter((c) => 
 export function getRequiredDocCodesForProfile(profile: EmployeeProfile, employmentType?: string): string[] {
   const isPJ = (employmentType || '').trim().toUpperCase() === 'PJ';
 
-  if (profile === 'CAMPO') return CAMPO_REQUIRED_DOC_CODES;
+  // Contrato PJ (40) só se aplica a quem é PJ de verdade — CLT não tem esse documento. Confirmado
+  // pelo usuário em 27/08/2026: quer saber quando termina o prazo do contrato/aditivo dos pilotos PJ.
+  if (profile === 'CAMPO') return isPJ ? [...CAMPO_REQUIRED_DOC_CODES, '40'] : CAMPO_REQUIRED_DOC_CODES;
   if (profile === 'COORDENADOR') return isPJ ? [] : COORDENADOR_REQUIRED_DOC_CODES;
 
   return isPJ ? [] : ADMINISTRATIVO_REQUIRED_DOC_CODES;
