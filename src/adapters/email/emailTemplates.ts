@@ -56,7 +56,8 @@ export function wrapEmailHtml(subject: string, bodyHtml: string): string {
       ${bodyHtml}
     </div>
     <div class="footer">
-      <p>Gerado automaticamente pelo HSE Audit Automation · não responda este e-mail.</p>
+      <p style="margin: 0 0 4px;">Gerado automaticamente pelo HSE Audit Automation &middot; ArthWind</p>
+      <p style="margin: 0;">Acesse o painel online a qualquer momento através do portal corporativo.</p>
     </div>
   </div>
 </body>
@@ -97,9 +98,27 @@ export function buildEHSAlertBodyHtml(inspectorName: string, parkName: string, a
 
 export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
   const totalItems = groups.reduce((sum, g) => sum + g.items.length, 0);
+  const dashboardUrl = process.env.HSE_DASHBOARD_URL || 'https://hse-audition-automation.vercel.app';
+
+  const ctaButtonHtml = `
+    <div style="text-align: center; margin: 20px 0 24px; padding: 18px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px;">
+      <p style="margin: 0 0 10px; font-size: 13px; font-weight: 600; color: #1E293B;">
+        Visualize a Matriz de Qualificação (Skill Matrix) e o Dossiê completo:
+      </p>
+      <a href="${dashboardUrl}" target="_blank" style="background-color: #00D2B4; color: #090D16; font-weight: 700; font-size: 13px; text-decoration: none; padding: 10px 20px; border-radius: 6px; display: inline-block; box-shadow: 0 2px 6px rgba(0,210,180,0.25);">
+        🚀 Acessar Portal de DO & Treinamentos ao Vivo
+      </a>
+      <div style="margin-top: 8px; font-size: 11px; color: #64748B;">
+        Não é necessário baixar arquivos HTML anexos.
+      </div>
+    </div>
+  `;
 
   if (groups.length === 0) {
-    return `<p style="font-size: 14px; color: #1E7A4C;">Nenhuma pendência encontrada — todo mundo está em dia.</p>`;
+    return `
+      <p style="font-size: 14px; color: #1E7A4C; font-weight: 600;">Nenhuma pendência encontrada — todo mundo está 100% em dia.</p>
+      ${ctaButtonHtml}
+    `;
   }
 
   let groupsHtml = '';
@@ -131,6 +150,7 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
   }
 
   return `
+    ${ctaButtonHtml}
     <p style="margin: 0 0 16px; font-size: 14px; color: #6B7A8D;">
       <strong style="color: #25386B;">${groups.length}</strong> pessoa(s) com pendência, <strong style="color: #25386B;">${totalItems}</strong> item(ns) no total.
     </p>
