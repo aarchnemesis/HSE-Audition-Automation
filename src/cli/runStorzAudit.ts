@@ -8,7 +8,7 @@ import { IEmailService } from '../ports/IEmailService.js';
 import { ParkRequirement } from '../domain/models/Certificate.js';
 import { getRequiredDocCodesForProfile } from '../domain/services/EmployeeProfileClassifier.js';
 
-const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
 

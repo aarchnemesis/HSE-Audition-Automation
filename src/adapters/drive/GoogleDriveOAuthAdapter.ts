@@ -63,7 +63,9 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
    * confirmado com o usuário em 27/08/2026. Cada pasta é escaneada e os inspetores são mesclados.
    */
   constructor(rootFolderId: string | string[], refDate: Date = new Date()) {
-    this.rootFolderIds = Array.isArray(rootFolderId) ? rootFolderId : [rootFolderId];
+    this.rootFolderIds = Array.isArray(rootFolderId)
+      ? rootFolderId
+      : rootFolderId.split(',').map((id) => id.trim()).filter(Boolean);
     this.refDate = refDate;
   }
 

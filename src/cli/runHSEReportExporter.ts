@@ -18,7 +18,7 @@ import { IEmailService } from '../ports/IEmailService.js';
 import { Inspector, ParkRequirement } from '../domain/models/Certificate.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
-const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
 
 const MODALITY_REQUIREMENTS: ParkRequirement['requiredModalities'] = Object.fromEntries(
   Array.from(PRESENCIAL_REQUIRED_DOC_CODES, (code) => [code, 'PRESENCIAL' as const])
@@ -122,8 +122,13 @@ async function main() {
   console.log('   🖥️  GERANDO DASHBOARD HTML PARA A EQUIPE HSE');
   console.log('================================================================================');
   const dashboardPath = path.join(process.cwd(), 'scratch', 'hse_dashboard.html');
-  fs.writeFileSync(dashboardPath, buildDashboardHtml(dbRepo.getAllRecords()));
-  console.log(`✅ Dashboard gerado em: ${dashboardPath}\n`);
+  const publicDir = path.join(process.cwd(), 'public');
+  if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
+  const publicDashboardPath = path.join(publicDir, 'index.html');
+  const dashboardHtml = buildDashboardHtml(dbRepo.getAllRecords());
+  fs.writeFileSync(dashboardPath, dashboardHtml);
+  fs.writeFileSync(publicDashboardPath, dashboardHtml);
+  console.log(`✅ Dashboard gerado em: ${dashboardPath} e ${publicDashboardPath}\n`);
 
   // 8. Enviar o resumo diário — um único e-mail agrupando todo mundo com pendência, em vez de
   //    um e-mail por inspetor. Frequência de disparo ainda não definida com o time de HSE.

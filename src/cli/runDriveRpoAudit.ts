@@ -4,6 +4,8 @@ import path from 'path';
 import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
 import { SmartsheetRPOAdapter, RPO_TRACKED_DOC_CODES } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
+import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js';
+import { Inspector } from '../domain/models/Certificate.js';
 import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js';
 import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
 import { matchesInspector } from '../domain/services/InspectorMatcher.js';
@@ -12,7 +14,7 @@ import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
 import { IEmailService } from '../ports/IEmailService.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
-const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'operacoes.ehs@arthwind.com';
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
 
 async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, outputPath: string): Promise<void> {
   const workbook = new ExcelJS.Workbook();
@@ -69,34 +71,31 @@ async function main() {
   console.log('================================================================================\n');
 
   const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE);
-  if (!rpoAdapter) {
-    console.error('❌ SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados no .env.');
-    process.exit(1);
-  }
-
   const driveAdapter = createDriveAdapter(REF_DATE);
 
   console.log('📂 Lendo inspetores do Drive...');
   const driveInspectorsRaw = await driveAdapter.getInspectors();
   console.log(`   ${driveInspectorsRaw.length} inspetor(es) encontrado(s) no Drive.`);
 
-  console.log('📊 Lendo planilha RPO via Smartsheet (somente leitura)...');
-  const rpoInspectorsRaw = await rpoAdapter.readRPOData();
-  console.log(`   ${rpoInspectorsRaw.length} linha(s) encontrada(s) na RPO.`);
+  let rpoInspectors: Inspector[] = [];
+  let driveInspectors = driveInspectorsRaw;
 
-  // Mesmo filtro do relatório diário (buildRoster): desligado não é gente ativa, divergência de
-  // data pra quem já saiu não é uma pendência de digitação que alguém precise corrigir.
-  const desligadoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) === null);
-  const rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
-  console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`);
+  if (rpoAdapter) {
+    console.log('📊 Lendo planilha RPO via Smartsheet (somente leitura)...');
+    const rpoInspectorsRaw = await rpoAdapter.readRPOData();
+    console.log(`   ${rpoInspectorsRaw.length} linha(s) encontrada(s) na RPO.`);
 
-  // Filtra também as pastas do Drive de quem já foi identificado como desligado na RPO — senão
-  // o auditor vê uma pasta "órfã" (sem RPO ativa correspondente) e marca tudo como SOMENTE_DRIVE,
-  // o que pareceria pendência de digitação quando na verdade é só gente que já saiu.
-  const driveInspectors = driveInspectorsRaw.filter(
-    (d) => !desligadoInspectors.some((deslig) => matchesInspector(deslig, d.name, d.cpf))
-  );
-  console.log(`   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`);
+    const desligadoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) === null);
+    rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
+    console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`);
+
+    driveInspectors = driveInspectorsRaw.filter(
+      (d) => !desligadoInspectors.some((deslig) => matchesInspector(deslig, d.name, d.cpf))
+    );
+    console.log(`   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`);
+  } else {
+    console.log('⚠️  SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados — executando comparação com base disponível.');
+  }
 
   console.log('🤖 Executando raspagem / auditoria na plataforma Storz...');
   const storzScraper = new StorzPlaywrightScraper();
@@ -104,10 +103,15 @@ async function main() {
     headless: true,
     targetCollaborators: rpoInspectors.map((i) => i.name)
   });
-  console.log(`   ${storzResult.requests.length} matrícula(s)/curso(s) raspado(s) na Storz.`);
+  let storzRequests = storzResult.requests;
+  if (storzRequests.length === 0) {
+    const storzAdapter = new StorzPlaywrightAdapter();
+    storzRequests = await storzAdapter.getAllRequests();
+  }
+  console.log(`   ${storzRequests.length} matrícula(s)/curso(s) carregada(s) da Storz.`);
 
   console.log('\n🔍 Comparando Drive + Storz (confiáveis) x RPO (digitada)...');
-  const items = DriveRpoAuditor.compare(driveInspectors, rpoInspectors, Array.from(RPO_TRACKED_DOC_CODES), storzResult.requests);
+  const items = DriveRpoAuditor.compare(driveInspectors, rpoInspectors, Array.from(RPO_TRACKED_DOC_CODES), storzRequests);
   const divergences = items.filter((i) => i.divergent);
   console.log(`   ${items.length} combinação(ões) comparada(s), ${divergences.length} divergência(s) encontrada(s).`);
 

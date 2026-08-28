@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
 import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
+import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js';
 import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
 import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js';
 import { StorzRequest, computeCourseDeadline } from '../domain/models/StorzRequest.js';
@@ -16,7 +17,7 @@ import { IEmailService } from '../ports/IEmailService.js';
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
 // Audiência diferente do EHS (Desenvolvimento Organizacional) — lista separada de propósito,
 // nunca cai no HSE_EMAIL_TO. Fase de teste: só a Mayanna, confirmado pelo usuário em 26/08/2026.
-const DO_EMAIL_RECIPIENT = process.env.DO_EMAIL_TO;
+const DO_EMAIL_RECIPIENT = process.env.DO_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
 
 /**
  * Gera um "Histórico do Aluno" — um registro por colaborador+curso, no molde do exemplo que a
@@ -194,26 +195,32 @@ async function main() {
   if (!fs.existsSync(scratchDir)) fs.mkdirSync(scratchDir, { recursive: true });
 
   const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE);
-  if (!rpoAdapter) {
-    console.error('❌ SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados no .env.');
-    process.exit(1);
+  let targetCollaborators: string[] | undefined;
+  if (rpoAdapter) {
+    console.log('📊 Lendo planilha RPO via Smartsheet (só pra saber quem auditar — não editamos nada)...');
+    const rpoInspectorsRaw = await rpoAdapter.readRPOData();
+    const rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
+    console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) (de ${rpoInspectorsRaw.length} linhas na RPO).`);
+    targetCollaborators = rpoInspectors.map((i) => i.name);
+  } else {
+    console.log('⚠️  SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados no .env — buscando solicitações disponíveis na Storz/cache.');
   }
-
-  console.log('📊 Lendo planilha RPO via Smartsheet (só pra saber quem auditar — não editamos nada)...');
-  const rpoInspectorsRaw = await rpoAdapter.readRPOData();
-  const rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
-  console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) (de ${rpoInspectorsRaw.length} linhas na RPO).`);
 
   console.log('🤖 Executando raspagem do histórico completo na plataforma Storz...');
   const storzScraper = new StorzPlaywrightScraper();
   const storzResult = await storzScraper.runAuditScrape({
     headless: true,
-    targetCollaborators: rpoInspectors.map((i) => i.name)
+    targetCollaborators
   });
-  console.log(`   ${storzResult.requests.length} matrícula(s)/curso(s) raspado(s).`);
+  let requests = storzResult.requests;
+  if (requests.length === 0) {
+    const storzAdapter = new StorzPlaywrightAdapter();
+    requests = await storzAdapter.getAllRequests();
+  }
+  console.log(`   ${requests.length} matrícula(s)/curso(s) carregada(s).`);
 
   const outputPath = path.join(process.cwd(), 'scratch', 'historico_aluno_storz.xlsx');
-  await exportToExcel(storzResult.requests, outputPath);
+  await exportToExcel(requests, outputPath);
   console.log(`\n✅ Relatório gerado em: ${outputPath}\n`);
 
   // Dashboard separado do EHS — público diferente (Desenvolvimento Organizacional), não é uma
