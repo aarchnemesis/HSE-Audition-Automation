@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>arthnex | EHS & DO Training Matrix Dashboard</title>
+  <title>ArthWind | EHS & DO Training Matrix Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ==========================================================================
-       ARTHNEX CORPORATE DESIGN SYSTEM - HSE & DO TRAINING MATRIX
+       ARTHWIND CORPORATE DESIGN SYSTEM - HSE & DO TRAINING MATRIX (ARTHNEX STYLE)
        ========================================================================== */
     :root {
       --sidebar-bg: #090D16;
@@ -99,19 +99,22 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 8px 16px 8px;
+      padding: 0 8px 14px 8px;
       border-bottom: 1px solid var(--sidebar-border);
       margin-bottom: 12px;
     }
-    .arthnex-logo {
-      font-size: 20px;
-      font-weight: 800;
-      color: #FFFFFF;
-      letter-spacing: -0.5px;
+    .brand-logo-wrap {
+      background: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 6px;
       display: flex;
       align-items: center;
     }
-    .arthnex-logo span { color: var(--brand-cyan); }
+    .brand-logo-img {
+      height: 22px;
+      width: auto;
+      object-fit: contain;
+    }
     .sidebar-collapse-btn { color: var(--sidebar-text); cursor: pointer; font-size: 12px; }
 
     .nav-section { margin-bottom: 14px; }
@@ -145,18 +148,6 @@
       background: rgba(0, 210, 180, 0.12);
       color: var(--brand-cyan);
       font-weight: 700;
-    }
-    .nav-badge {
-      font-size: 10px;
-      font-weight: 700;
-      padding: 2px 6px;
-      border-radius: 999px;
-      background: var(--sidebar-hover);
-      color: var(--sidebar-text);
-    }
-    .nav-item.active .nav-badge {
-      background: var(--brand-cyan);
-      color: #090D16;
     }
 
     /* MAIN VIEWPORT */
@@ -470,7 +461,9 @@
   <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-brand">
-      <div class="arthnex-logo">arth<span>nex</span></div>
+      <div class="brand-logo-wrap">
+        <img src="https://arthwind.com.br/assets/Img/arthwindLogo.png" alt="ArthWind" class="brand-logo-img">
+      </div>
       <div class="sidebar-collapse-btn">«</div>
     </div>
 
@@ -506,7 +499,7 @@
     <div class="topbar">
       <div class="breadcrumb-wrap">
         <button class="btn-back" onclick="window.history.back()">←</button>
-        <div class="breadcrumb-pill">DO &amp; Treinamentos &gt; Skill Matrix &amp; EHS Compliance</div>
+        <div class="breadcrumb-pill">ArthWind &gt; Skill Matrix &amp; EHS Compliance</div>
       </div>
 
       <div class="topbar-filters">
