@@ -1,463 +1,800 @@
 import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js';
 
-/**
- * Gera um dashboard HTML autocontido (sem dependências externas além do Google Fonts) a partir
- * do snapshot mais recente do banco HSE. Pensado para sair como artifact do GitHub Actions a
- * cada rodada do cron (não é publicado como site público — o repo é privado e os dados são
- * pessoais/sensíveis, ver decisão registrada em 24/08/2026).
- */
 export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
   const dataJson = JSON.stringify(records);
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Painel HSE — ArthWind</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Public+Sans:wght@400;500;600;700&display=swap">
-<style>
-  :root{
-    color-scheme: light;
-    --navy: #25386b;
-    --navy-ink: #1a2952;
-    --coral: #ed6f57;
-    --coral-ink: #c9503a;
-    --teal-tint: #deeff1;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArthWind | Portal de DO & Treinamentos Normativos (EHS / SST)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-950: #0B1120;
+      --navy-900: #111A2E;
+      --navy-800: #1B2640;
+      --navy-700: #25386B;
+      --coral-500: #ED6F57;
+      --coral-600: #D8563E;
+      --teal-500: #1E6B77;
+      --teal-100: #DEEFF1;
+      --teal-50:  #EDF7F8;
+      
+      --slate-900: #0F172A;
+      --slate-800: #1E293B;
+      --slate-700: #334155;
+      --slate-500: #64748B;
+      --slate-400: #94A3B8;
+      --slate-200: #E2E8F0;
+      --slate-100: #F1F5F9;
+      --slate-50:  #F8FAFC;
+      --white:     #FFFFFF;
 
-    --surface-0: #f4f6fa;
-    --surface-1: #ffffff;
-    --surface-2: #eef1f7;
-    --text-primary: #16213f;
-    --text-secondary: #4d597a;
-    --text-muted: #8590ab;
-    --border: rgba(22,33,63,0.10);
-    --border-strong: rgba(22,33,63,0.18);
-
-    --good: #0ca30c;
-    --warning: #b5790a;
-    --serious: #c65a2e;
-    --critical: #d03b3b;
-    --good-bg: rgba(12,163,12,0.10);
-    --warning-bg: rgba(181,121,10,0.12);
-    --serious-bg: rgba(198,90,46,0.12);
-    --critical-bg: rgba(208,59,59,0.10);
-    --neutral-bg: rgba(77,89,122,0.10);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      color-scheme: dark;
-      --navy: #5b7bc4;
-      --navy-ink: #7d99d6;
-      --coral: #f0876e;
-      --coral-ink: #f4a58f;
-      --teal-tint: #17323a;
-
-      --surface-0: #10141f;
-      --surface-1: #171c2b;
-      --surface-2: #1e2436;
-      --text-primary: #eef1fb;
-      --text-secondary: #aab3d0;
-      --text-muted: #7580a3;
-      --border: rgba(238,241,251,0.10);
-      --border-strong: rgba(238,241,251,0.18);
-
-      --good: #35c65a;
-      --warning: #e0a930;
-      --serious: #ec835a;
-      --critical: #e66767;
-      --good-bg: rgba(53,198,90,0.14);
-      --warning-bg: rgba(224,169,48,0.14);
-      --serious-bg: rgba(236,131,90,0.14);
-      --critical-bg: rgba(230,103,103,0.14);
-      --neutral-bg: rgba(170,179,208,0.12);
+      --status-ok: #16A34A;
+      --status-ok-bg: #DCFCE7;
+      --status-warn: #D97706;
+      --status-warn-bg: #FEF3C7;
+      --status-crit: #DC2626;
+      --status-crit-bg: #FEE2E2;
+      --status-storz: #7C3AED;
+      --status-storz-bg: #F3E8FF;
+      --status-na: #94A3B8;
+      --status-na-bg: #F1F5F9;
     }
-  }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --navy: #5b7bc4;
-    --navy-ink: #7d99d6;
-    --coral: #f0876e;
-    --coral-ink: #f4a58f;
-    --teal-tint: #17323a;
 
-    --surface-0: #10141f;
-    --surface-1: #171c2b;
-    --surface-2: #1e2436;
-    --text-primary: #eef1fb;
-    --text-secondary: #aab3d0;
-    --text-muted: #7580a3;
-    --border: rgba(238,241,251,0.10);
-    --border-strong: rgba(238,241,251,0.18);
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background-color: var(--slate-50);
+      color: var(--slate-900);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
 
-    --good: #35c65a;
-    --warning: #e0a930;
-    --serious: #ec835a;
-    --critical: #e66767;
-    --good-bg: rgba(53,198,90,0.14);
-    --warning-bg: rgba(224,169,48,0.14);
-    --serious-bg: rgba(236,131,90,0.14);
-    --critical-bg: rgba(230,103,103,0.14);
-    --neutral-bg: rgba(170,179,208,0.12);
-  }
+    .mono { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
+    .heading { font-family: 'Sora', sans-serif; }
 
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background: var(--surface-0);
-    color: var(--text-primary);
-    font-family: "Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  h1,h2,h3{ font-family:"Sora", system-ui, sans-serif; text-wrap: balance; margin:0; }
-  table{ font-variant-numeric: tabular-nums; }
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-950) 100%);
+      color: var(--white);
+      padding: 16px 28px;
+      border-bottom: 3px solid var(--coral-500);
+      box-shadow: 0 4px 20px rgba(17, 26, 46, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-badge {
+      background: var(--white);
+      color: var(--navy-800);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: -0.3px;
+    }
+    .header-titles h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+    }
+    .header-titles p {
+      font-size: 12px;
+      color: var(--slate-400);
+      margin-top: 2px;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-updated {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
 
-  .shell{ max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px; display:flex; flex-direction:column; gap:22px; }
+    /* CONTAINER */
+    .container {
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 28px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  .topbar{
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-    padding-bottom: 4px;
-  }
-  .brand{ display:flex; align-items:center; gap:12px; }
-  .brand-mark{
-    width:38px; height:38px; border-radius:10px;
-    background: linear-gradient(135deg, var(--navy), var(--navy-ink));
-    display:flex; align-items:center; justify-content:center;
-    color:#fff; font-family:"Sora",sans-serif; font-weight:700; font-size:15px;
-    flex-shrink:0;
-  }
-  .brand-text h1{ font-size:19px; font-weight:700; color:var(--text-primary); }
-  .brand-text p{ margin:2px 0 0; font-size:12.5px; color:var(--text-muted); }
-  .topbar-meta{ text-align:right; font-size:12px; color:var(--text-muted); }
-  .topbar-meta strong{ color:var(--text-secondary); font-weight:600; }
+    /* KPI METRICS ROW */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 1100px) { .kpi-row { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 700px) { .kpi-row { grid-template-columns: 1fr; } }
 
-  .stats{ display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; }
-  .stat{
-    background:var(--surface-1); border:1px solid var(--border); border-radius:12px;
-    padding:16px 16px 14px; display:flex; flex-direction:column; gap:6px;
-    cursor:pointer; transition: border-color .12s ease, transform .12s ease;
-  }
-  .stat:hover{ border-color: var(--border-strong); }
-  .stat.active{ border-color: var(--navy); box-shadow: inset 0 0 0 1px var(--navy); }
-  .stat-label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:600; }
-  .stat-value{ font-family:"Sora",sans-serif; font-size:26px; font-weight:700; font-variant-numeric: tabular-nums; }
-  .stat-sub{ font-size:12px; color:var(--text-secondary); }
-  .stat[data-tone="all"] .stat-value{ color:var(--text-primary); }
-  .stat[data-tone="critical"] .stat-value{ color:var(--critical); }
-  .stat[data-tone="serious"] .stat-value{ color:var(--serious); }
-  .stat[data-tone="warning"] .stat-value{ color:var(--warning); }
-  .stat[data-tone="neutral"] .stat-value{ color:var(--text-secondary); }
+    .kpi-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      border-color: var(--slate-400);
+    }
+    .kpi-card.active {
+      border-color: var(--navy-700);
+      box-shadow: 0 0 0 2px var(--navy-700);
+    }
+    .kpi-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--slate-500); }
+    .kpi-val { font-size: 28px; font-weight: 800; color: var(--navy-800); margin: 6px 0 2px; }
+    .kpi-sub { font-size: 12px; color: var(--slate-500); font-weight: 500; }
 
-  .maingrid{ display:grid; grid-template-columns: minmax(0,1fr) 300px; gap:16px; align-items:start; }
-  @media (max-width: 880px){ .maingrid{ grid-template-columns: 1fr; } }
+    .kpi-card.good { border-top: 4px solid var(--status-ok); }
+    .kpi-card.good .kpi-val { color: var(--status-ok); }
+    .kpi-card.warn { border-top: 4px solid var(--status-warn); }
+    .kpi-card.warn .kpi-val { color: var(--status-warn); }
+    .kpi-card.danger { border-top: 4px solid var(--status-crit); }
+    .kpi-card.danger .kpi-val { color: var(--status-crit); }
+    .kpi-card.storz { border-top: 4px solid var(--status-storz); }
+    .kpi-card.storz .kpi-val { color: var(--status-storz); }
 
-  .panel{
-    background:var(--surface-1); border:1px solid var(--border); border-radius:14px;
-    padding:18px 20px 20px;
-  }
-  .panel-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
-  .panel-head h2{ font-size:15px; font-weight:600; }
-  .panel-head .count{ font-size:12px; color:var(--text-muted); }
+    /* VIEW TABS */
+    .tabs-nav {
+      display: flex;
+      gap: 10px;
+      border-bottom: 2px solid var(--slate-200);
+      padding-bottom: 2px;
+    }
+    .tab-btn {
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--slate-500);
+      background: none;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .tab-btn:hover { color: var(--navy-800); background: var(--slate-100); }
+    .tab-btn.active {
+      color: var(--navy-800);
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-bottom: 2px solid var(--white);
+      margin-bottom: -2px;
+    }
+    .tab-btn.active::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--coral-500);
+      border-radius: 8px 8px 0 0;
+    }
 
-  .filters{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
-  .filters input[type="search"]{
-    background:var(--surface-2); border:1px solid var(--border); border-radius:8px;
-    padding:7px 10px; font-size:13px; color:var(--text-primary); font-family:inherit;
-    min-width:200px;
-  }
-  .filters input[type="search"]::placeholder{ color:var(--text-muted); }
-  .filters select{
-    background:var(--surface-2); border:1px solid var(--border); border-radius:8px;
-    padding:7px 10px; font-size:13px; color:var(--text-primary); font-family:inherit;
-  }
-  .chip-clear{
-    background:none; border:1px solid var(--border-strong); border-radius:8px;
-    padding:6px 10px; font-size:12px; color:var(--text-secondary); cursor:pointer; font-family:inherit;
-    display:none;
-  }
-  .chip-clear.show{ display:inline-flex; align-items:center; gap:6px; }
+    /* CONTROL BAR (SEARCH & FILTERS) */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+    .search-input {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      min-width: 280px;
+      font-family: inherit;
+      color: var(--slate-800);
+    }
+    .search-input:focus { outline: none; border-color: var(--navy-700); background: var(--white); }
+    .filter-select {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--slate-800);
+      cursor: pointer;
+    }
 
-  .table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:10px; }
-  table{ width:100%; border-collapse:collapse; font-size:13px; }
-  thead th{
-    text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.04em;
-    color:var(--text-muted); font-weight:600; padding:10px 12px; background:var(--surface-2);
-    border-bottom:1px solid var(--border); white-space:nowrap; position:sticky; top:0;
-  }
-  tbody td{ padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top; }
-  tbody tr:last-child td{ border-bottom:none; }
-  tbody tr:hover{ background: var(--surface-2); }
-  .cell-name{ font-weight:600; color:var(--text-primary); }
-  .cell-sub{ font-size:11.5px; color:var(--text-muted); margin-top:1px; }
-  .cell-doc{ color:var(--text-secondary); }
-  .cell-detail{ color:var(--text-secondary); font-size:12.5px; }
+    /* TAB VIEWS */
+    .tab-view { display: none; }
+    .tab-view.active { display: block; animation: fadeIn 0.2s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
-  .badge{
-    display:inline-flex; align-items:center; gap:5px; padding:3px 9px 3px 7px;
-    border-radius:999px; font-size:11.5px; font-weight:600; white-space:nowrap;
-  }
-  .badge::before{ content:""; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
-  .badge.s-critical{ background:var(--critical-bg); color:var(--critical); }
-  .badge.s-critical::before{ background:var(--critical); }
-  .badge.s-serious{ background:var(--serious-bg); color:var(--serious); }
-  .badge.s-serious::before{ background:var(--serious); }
-  .badge.s-warning{ background:var(--warning-bg); color:var(--warning); }
-  .badge.s-warning::before{ background:var(--warning); }
-  .badge.s-good{ background:var(--good-bg); color:var(--good); }
-  .badge.s-good::before{ background:var(--good); }
-  .badge.s-neutral{ background:var(--neutral-bg); color:var(--text-secondary); }
-  .badge.s-neutral::before{ background:var(--text-muted); }
+    /* MATRIX (SKILL MATRIX GRID) */
+    .matrix-card-wrap {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .matrix-table-container {
+      overflow-x: auto;
+      max-height: 650px;
+      position: relative;
+    }
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      font-size: 12px;
+    }
+    .matrix-table th {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 12px 10px;
+      font-weight: 700;
+      font-size: 11px;
+      text-align: center;
+      white-space: nowrap;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid var(--coral-500);
+    }
+    .matrix-table th.th-sticky-left {
+      position: sticky;
+      left: 0;
+      z-index: 20;
+      text-align: left;
+      min-width: 220px;
+      background: var(--navy-900);
+    }
+    .matrix-table td {
+      padding: 10px 8px;
+      border-bottom: 1px solid var(--slate-200);
+      border-right: 1px solid var(--slate-100);
+      text-align: center;
+      vertical-align: middle;
+      background: var(--white);
+    }
+    .matrix-table tr:hover td { background: var(--slate-50); }
+    .matrix-table td.td-sticky-left {
+      position: sticky;
+      left: 0;
+      z-index: 5;
+      text-align: left;
+      font-weight: 700;
+      color: var(--navy-800);
+      background: var(--white);
+      border-right: 2px solid var(--slate-200);
+      cursor: pointer;
+    }
+    .matrix-table tr:hover td.td-sticky-left { background: #EDF2F7; }
 
-  .empty-row td{ text-align:center; color:var(--text-muted); padding:32px 12px; }
+    /* STATUS CELL BADGES */
+    .cell-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .cell-badge:hover { transform: scale(1.05); }
+    .cell-badge.ok { background: var(--status-ok-bg); color: var(--status-ok); }
+    .cell-badge.warn { background: var(--status-warn-bg); color: var(--status-warn); }
+    .cell-badge.danger { background: var(--status-crit-bg); color: var(--status-crit); }
+    .cell-badge.storz { background: var(--status-storz-bg); color: var(--status-storz); }
+    .cell-badge.na { background: var(--status-na-bg); color: var(--status-na); }
 
-  .side-stack{ display:flex; flex-direction:column; gap:16px; }
-  .barlist{ display:flex; flex-direction:column; gap:10px; }
-  .barlist-row{ display:flex; flex-direction:column; gap:4px; cursor:pointer; }
-  .barlist-row .label-row{ display:flex; justify-content:space-between; font-size:12.5px; }
-  .barlist-row .label-row .name{ color:var(--text-secondary); font-weight:500; }
-  .barlist-row .label-row .val{ color:var(--text-primary); font-weight:600; font-variant-numeric: tabular-nums; }
-  .barlist-track{ height:6px; border-radius:4px; background:var(--surface-2); overflow:hidden; }
-  .barlist-fill{ height:100%; border-radius:4px; background:var(--navy); transition: width .3s ease; }
-  .barlist-row.active .barlist-fill{ background: var(--coral); }
-  .barlist-row.active .label-row .name{ color:var(--text-primary); }
+    /* DATA TABLE VIEW */
+    .data-table-wrap {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .data-table th {
+      background: var(--slate-100);
+      padding: 10px 14px;
+      font-weight: 700;
+      color: var(--slate-500);
+      text-transform: uppercase;
+      font-size: 11px;
+      text-align: left;
+      border-bottom: 1px solid var(--slate-200);
+    }
+    .data-table td { padding: 12px 14px; border-bottom: 1px solid var(--slate-100); }
+    .data-table tr:hover { background: var(--slate-50); }
 
-  .legend-note{ font-size:11.5px; color:var(--text-muted); line-height:1.5; margin-top:2px; }
-
-  footer{ text-align:center; font-size:11.5px; color:var(--text-muted); padding-top:8px; }
-
-  @media (max-width: 720px){ .stats{ grid-template-columns: repeat(2,1fr); } }
-</style>
+    /* MODAL DOSSIÊ DO COLABORADOR */
+    .modal-backdrop {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+    .modal-backdrop.show { display: flex; animation: fadeIn 0.15s ease-out; }
+    .modal-box {
+      background: var(--white);
+      border-radius: 14px;
+      max-width: 750px;
+      width: 100%;
+      max-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    .modal-header {
+      background: var(--navy-900);
+      color: var(--white);
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--coral-500);
+    }
+    .modal-header h3 { font-size: 16px; font-weight: 700; }
+    .modal-close-btn {
+      background: none; border: none; color: var(--white); font-size: 20px; font-weight: 700; cursor: pointer;
+    }
+    .modal-body { padding: 20px 24px; overflow-y: auto; flex: 1; }
+  </style>
 </head>
 <body>
-<div class="shell viz-root">
 
-  <div class="topbar">
-    <div class="brand">
-      <div class="brand-mark">AW</div>
-      <div class="brand-text">
-        <h1>Painel HSE — ArthWind</h1>
-        <p>Documentação normativa de campo e administrativo, por colaborador</p>
+  <header>
+    <div class="brand-left">
+      <div class="brand-badge heading">ARTHWIND</div>
+      <div class="header-titles">
+        <h1 class="heading">Portal de Desenvolvimento Organizacional (DO) & Treinamentos Normativos</h1>
+        <p>Matriz de Qualificação, Conformidade EHS/SST e Acompanhamento de Reciclagens</p>
       </div>
     </div>
-    <div class="topbar-meta">
-      Atualizado em <strong id="lastUpdated">—</strong><br>
-      <span id="peopleCount">—</span> colaboradores auditados
+    <div class="header-right">
+      <div class="badge-updated">
+        Auditado em: <strong id="headerAuditDate">28/08/2026</strong>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="stats" id="statTiles"></div>
+  <div class="container">
+    
+    <!-- 5 CARDS KPIS DO & TREINAMENTOS -->
+    <div class="kpi-row">
+      <div class="kpi-card" onclick="applyStatusFilter('ALL')">
+        <span class="kpi-title">Total de Colaboradores</span>
+        <div class="kpi-val mono" id="kpiTotalPeople">0</div>
+        <div class="kpi-sub">Equipe Operacional & Campo</div>
+      </div>
 
-  <div class="maingrid">
-    <div class="panel">
-      <div class="panel-head">
-        <h2>Pendências por documento</h2>
-        <div class="filters">
-          <input type="search" id="searchBox" placeholder="Buscar colaborador ou documento…">
-          <select id="sectorFilter"><option value="">Todos os setores</option></select>
-          <button class="chip-clear" id="clearFilter">Limpar filtro ✕</button>
+      <div class="kpi-card good" onclick="applyStatusFilter('CONFORME')">
+        <span class="kpi-title">Cursos em Dia</span>
+        <div class="kpi-val mono" id="kpiOkCount">0</div>
+        <div class="kpi-sub" id="kpiComplianceRate">0% de conformidade</div>
+      </div>
+
+      <div class="kpi-card warn" onclick="applyStatusFilter('VENCE_30')">
+        <span class="kpi-title">Reciclagens Próximas (&lt;30d)</span>
+        <div class="kpi-val mono" id="kpiWarnCount">0</div>
+        <div class="kpi-sub">Prioridade de agendamento DO</div>
+      </div>
+
+      <div class="kpi-card danger" onclick="applyStatusFilter('VENCIDO')">
+        <span class="kpi-title">Cursos Vencidos / Bloqueados</span>
+        <div class="kpi-val mono" id="kpiCritCount">0</div>
+        <div class="kpi-sub">Impedimento de mobilização</div>
+      </div>
+
+      <div class="kpi-card storz" onclick="applyStatusFilter('STORZ')">
+        <span class="kpi-title">Em Andamento na Storz</span>
+        <div class="kpi-val mono" id="kpiStorzCount">0</div>
+        <div class="kpi-sub">Matrículas e turmas ativas</div>
+      </div>
+    </div>
+
+    <!-- ABAS DE VISUALIZAÇÃO -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchView('matrix')">
+        <span>🧩 Matriz de Qualificação & NRs (Skill Matrix)</span>
+      </button>
+      <button class="tab-btn" onclick="switchView('table')">
+        <span>📋 Gestão de Pendências & Reciclagens</span>
+      </button>
+      <button class="tab-btn" onclick="switchView('storz')">
+        <span>🎓 Acompanhamento Storz & Matrículas</span>
+      </button>
+    </div>
+
+    <!-- CONTROLES (BUSCA & FILTROS) -->
+    <div class="controls-bar">
+      <input type="search" id="searchInput" class="search-input" placeholder="🔍 Buscar colaborador, documento ou setor..." oninput="renderAll()">
+      
+      <div style="display:flex; gap:10px; align-items:center;">
+        <select id="sectorFilter" class="filter-select" onchange="renderAll()">
+          <option value="ALL">Todos os Ramos / Setores</option>
+        </select>
+
+        <select id="statusFilter" class="filter-select" onchange="renderAll()">
+          <option value="ALL">Todos os Status</option>
+          <option value="CONFORME">🟢 Em Dia / Conforme</option>
+          <option value="VENCE_30">🟡 A Vencer em 30 Dias</option>
+          <option value="VENCIDO">🔴 Vencido / Ausente</option>
+          <option value="STORZ">🟣 Em Andamento Storz</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- VIEW 1: MATRIZ DE QUALIFICAÇÃO -->
+    <div id="view-matrix" class="tab-view active">
+      <div class="matrix-card-wrap">
+        <div class="matrix-table-container">
+          <table class="matrix-table" id="matrixTable">
+            <thead>
+              <tr id="matrixHeaderRow"></tr>
+            </thead>
+            <tbody id="matrixBody"></tbody>
+          </table>
         </div>
       </div>
-      <div class="table-wrap">
-        <table>
+    </div>
+
+    <!-- VIEW 2: TABELA DE PENDÊNCIAS ANALÍTICA -->
+    <div id="view-table" class="tab-view">
+      <div class="data-table-wrap">
+        <table class="data-table">
           <thead>
             <tr>
               <th>Colaborador</th>
-              <th>Documento</th>
-              <th>Status</th>
-              <th>Detalhe</th>
+              <th>Ramo / Cargo</th>
+              <th>Treinamento / Documento</th>
+              <th>Modalidade</th>
+              <th>Status EHS / DO</th>
+              <th>Validade / Detalhe</th>
             </tr>
           </thead>
-          <tbody id="tableBody"></tbody>
+          <tbody id="dataTableBody"></tbody>
         </table>
-      </div>
-      <div class="panel-head" style="margin-top:6px; margin-bottom:0;">
-        <span class="count" id="rowCount"></span>
       </div>
     </div>
 
-    <div class="side-stack">
-      <div class="panel">
-        <div class="panel-head"><h2>Por setor</h2></div>
-        <div class="barlist" id="sectorBars"></div>
+    <!-- VIEW 3: ACOMPANHAMENTO STORZ -->
+    <div id="view-storz" class="tab-view">
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Colaborador</th>
+              <th>Curso Solicitado</th>
+              <th>Storz Request ID</th>
+              <th>Status da Matrícula</th>
+              <th>Detalhe Operacional</th>
+            </tr>
+          </thead>
+          <tbody id="storzTableBody"></tbody>
+        </table>
       </div>
-      <div class="panel">
-        <div class="panel-head"><h2>Por perfil</h2></div>
-        <div class="barlist" id="roleBars"></div>
-        <p class="legend-note">CAMPO: IQ, TO, LO, IE, CO — pacote completo de documentos.<br>ADMINISTRATIVO: ADM, EHS, ENG, DO, DS — pacote básico (ASO quando CLT).</p>
+    </div>
+
+  </div>
+
+  <!-- MODAL DOSSIÊ DO COLABORADOR -->
+  <div class="modal-backdrop" id="collabModal" onclick="closeModal(event)">
+    <div class="modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalCollabName">Dossiê do Colaborador</h3>
+        <button class="modal-close-btn" onclick="closeModal()">×</button>
       </div>
+      <div class="modal-body" id="modalCollabContent"></div>
     </div>
   </div>
 
-  <footer>Gerado automaticamente pelo pipeline HSE a cada rodada do cron — dados pessoais, não publicar publicamente.</footer>
-</div>
+  <script>
+    const rawData = ${dataJson};
 
-<script>
-const RAW = ${dataJson};
+    // Documentos prioritários para a Matriz de Qualificação
+    const priorityDocCodes = ['01', '21', '12', '13', '16', '17', '19', '22', '08', '30', '32', '31'];
+    const docShortNames = {
+      '01': 'ASO',
+      '21': 'NR-35 Altura',
+      '12': 'NR-10 Básico',
+      '13': 'NR-10 SEP',
+      '16': 'GWO 1º Socorros',
+      '17': 'GWO NR-17 Ergo',
+      '19': 'GWO NR-23 Fogo',
+      '22': 'LOTO Bloqueio',
+      '08': 'CNH',
+      '30': 'GWO WINDA',
+      '32': 'GWO ART',
+      '31': 'Elevador JASO'
+    };
 
-const STATUS_META = {
-  VENCIDO:     { tone:'critical', label:'Vencido' },
-  VENCE_07:    { tone:'critical', label:'Vence em 7 dias' },
-  VENCE_15:    { tone:'serious',  label:'Vence em 15 dias' },
-  VENCE_30:    { tone:'serious',  label:'Vence em 30 dias' },
-  VENCE_60:    { tone:'warning',  label:'Vence em 60 dias' },
-  AUSENTE:     { tone:'neutral',  label:'Ausente' },
-  SOLICITADO_STORZ:    { tone:'neutral', label:'Solicitado na Storz' },
-  STORZ_EM_ANDAMENTO:  { tone:'neutral', label:'Em andamento na Storz' },
-  INDETERMINADO:       { tone:'neutral', label:'Indeterminado' },
-  CONFORME:    { tone:'good',     label:'Conforme' },
-};
-const PENDENCY_STATUSES = new Set(['VENCIDO','VENCE_07','VENCE_15','VENCE_30','VENCE_60','AUSENTE','SOLICITADO_STORZ','STORZ_EM_ANDAMENTO','INDETERMINADO']);
+    // Extrair universo único de pessoas e setores
+    const peopleMap = new Map();
+    const sectorsSet = new Set();
 
-let state = { statFilter: 'all', sector: '', query: '' };
-
-function fmtDate(iso){
-  const d = new Date(iso);
-  return d.toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
-}
-
-function computeStats(){
-  const byStatus = {};
-  for (const r of RAW) byStatus[r.statusEHS] = (byStatus[r.statusEHS]||0) + 1;
-  const critical = (byStatus.VENCIDO||0) + (byStatus.VENCE_07||0);
-  const serious = (byStatus.VENCE_15||0) + (byStatus.VENCE_30||0);
-  const warning = byStatus.VENCE_60||0;
-  const absent = byStatus.AUSENTE||0;
-  return { byStatus, critical, serious, warning, absent, total: RAW.length };
-}
-
-function renderStats(){
-  const s = computeStats();
-  const tiles = [
-    { key:'all', tone:'all', label:'Total de registros', value: s.total, sub: 'documentos auditados' },
-    { key:'critical', tone:'critical', label:'Vencidos / venc. 7d', value: s.critical, sub: 'ação imediata' },
-    { key:'serious', tone:'serious', label:'Vence em 15–30d', value: s.serious, sub: 'priorizar renovação' },
-    { key:'warning', tone:'warning', label:'Vence em até 60d', value: s.warning, sub: 'acompanhar' },
-    { key:'absent', tone:'neutral', label:'Ausentes no Drive', value: s.absent, sub: 'sem documento localizado' },
-  ];
-  const wrap = document.getElementById('statTiles');
-  wrap.innerHTML = tiles.map(t => \`
-    <div class="stat" data-tone="\${t.tone}" data-key="\${t.key}">
-      <span class="stat-label">\${t.label}</span>
-      <span class="stat-value">\${t.value}</span>
-      <span class="stat-sub">\${t.sub}</span>
-    </div>\`).join('');
-  wrap.querySelectorAll('.stat').forEach(el => {
-    el.addEventListener('click', () => {
-      state.statFilter = state.statFilter === el.dataset.key ? 'all' : el.dataset.key;
-      render();
+    rawData.forEach(r => {
+      if (r.sector) sectorsSet.add(r.sector);
+      if (!peopleMap.has(r.inspectorName)) {
+        peopleMap.set(r.inspectorName, {
+          id: r.inspectorId,
+          name: r.inspectorName,
+          role: r.role || 'Técnico',
+          sector: r.sector || 'Operações',
+          records: []
+        });
+      }
+      peopleMap.get(r.inspectorName).records.push(r);
     });
-  });
-}
 
-function matchesStatFilter(r){
-  const st = r.statusEHS;
-  switch(state.statFilter){
-    case 'critical': return st === 'VENCIDO' || st === 'VENCE_07';
-    case 'serious': return st === 'VENCE_15' || st === 'VENCE_30';
-    case 'warning': return st === 'VENCE_60';
-    case 'absent': return st === 'AUSENTE';
-    default: return true;
-  }
-}
-
-function filteredRows(){
-  const q = state.query.trim().toLowerCase();
-  return RAW.filter(r => {
-    if (!PENDENCY_STATUSES.has(r.statusEHS)) return false;
-    if (!matchesStatFilter(r)) return false;
-    if (state.sector && r.sector !== state.sector) return false;
-    if (q && !(r.inspectorName.toLowerCase().includes(q) || (r.docName||'').toLowerCase().includes(q))) return false;
-    return true;
-  }).sort((a,b) => {
-    const order = ['VENCIDO','VENCE_07','VENCE_15','VENCE_30','VENCE_60','AUSENTE','STORZ_EM_ANDAMENTO','SOLICITADO_STORZ','INDETERMINADO'];
-    return order.indexOf(a.statusEHS) - order.indexOf(b.statusEHS) || a.inspectorName.localeCompare(b.inspectorName);
-  });
-}
-
-function renderTable(){
-  const rows = filteredRows();
-  const body = document.getElementById('tableBody');
-  document.getElementById('rowCount').textContent = rows.length + ' pendência(s) exibida(s)';
-  if (!rows.length){
-    body.innerHTML = '<tr class="empty-row"><td colspan="4">Nenhuma pendência encontrada para este filtro.</td></tr>';
-    return;
-  }
-  body.innerHTML = rows.map(r => {
-    const meta = STATUS_META[r.statusEHS] || { tone:'neutral', label:r.statusEHS };
-    return \`<tr>
-      <td>
-        <div class="cell-name">\${r.inspectorName}</div>
-        <div class="cell-sub">\${r.role || ''}\${r.sector ? ' · ' + r.sector : ''}</div>
-      </td>
-      <td class="cell-doc">\${r.docName || r.docCode}</td>
-      <td><span class="badge s-\${meta.tone}">\${meta.label}</span></td>
-      <td class="cell-detail">\${(r.detail||'').replace(/[🟢🟡🟠🔴🔵🟣]/g,'').trim()}</td>
-    </tr>\`;
-  }).join('');
-}
-
-function renderSideBars(){
-  const rows = RAW.filter(r => PENDENCY_STATUSES.has(r.statusEHS) && matchesStatFilter(r));
-
-  const bySector = {};
-  for (const r of rows) bySector[r.sector || '—'] = (bySector[r.sector || '—']||0) + 1;
-  const sectorEntries = Object.entries(bySector).sort((a,b) => b[1]-a[1]).slice(0, 8);
-  const maxSector = Math.max(1, ...sectorEntries.map(e => e[1]));
-  document.getElementById('sectorBars').innerHTML = sectorEntries.map(([name, val]) => \`
-    <div class="barlist-row \${state.sector === name ? 'active' : ''}" data-sector="\${name}">
-      <div class="label-row"><span class="name">\${name}</span><span class="val">\${val}</span></div>
-      <div class="barlist-track"><div class="barlist-fill" style="width:\${(val/maxSector*100).toFixed(0)}%"></div></div>
-    </div>\`).join('');
-  document.querySelectorAll('#sectorBars .barlist-row').forEach(el => {
-    el.addEventListener('click', () => {
-      state.sector = state.sector === el.dataset.sector ? '' : el.dataset.sector;
-      document.getElementById('sectorFilter').value = state.sector;
-      render();
+    // Popular select de setores
+    const sectorFilter = document.getElementById('sectorFilter');
+    Array.from(sectorsSet).sort().forEach(s => {
+      const opt = document.createElement('option');
+      opt.value = s;
+      opt.innerText = s;
+      sectorFilter.appendChild(opt);
     });
-  });
 
-  const ROLE_PROFILE = { IQ:'CAMPO', TO:'CAMPO', LO:'CAMPO', IE:'CAMPO', CO:'CAMPO', ADM:'ADMINISTRATIVO', EHS:'ADMINISTRATIVO', ENG:'ADMINISTRATIVO', DO:'ADMINISTRATIVO', DS:'ADMINISTRATIVO' };
-  const byProfile = { CAMPO: 0, ADMINISTRATIVO: 0 };
-  for (const r of rows) byProfile[ROLE_PROFILE[r.role] || 'ADMINISTRATIVO']++;
-  const maxProfile = Math.max(1, byProfile.CAMPO, byProfile.ADMINISTRATIVO);
-  document.getElementById('roleBars').innerHTML = ['CAMPO','ADMINISTRATIVO'].map(name => \`
-    <div class="barlist-row">
-      <div class="label-row"><span class="name">\${name}</span><span class="val">\${byProfile[name]}</span></div>
-      <div class="barlist-track"><div class="barlist-fill" style="width:\${(byProfile[name]/maxProfile*100).toFixed(0)}%"></div></div>
-    </div>\`).join('');
-}
+    // Calcular KPIs
+    const totalPeople = peopleMap.size;
+    let okCount = 0;
+    let warnCount = 0;
+    let critCount = 0;
+    let storzCount = 0;
 
-function populateSectorFilter(){
-  const sectors = [...new Set(RAW.map(r => r.sector).filter(Boolean))].sort();
-  const sel = document.getElementById('sectorFilter');
-  sel.innerHTML = '<option value="">Todos os setores</option>' + sectors.map(s => \`<option value="\${s}">\${s}</option>\`).join('');
-}
+    rawData.forEach(r => {
+      if (r.statusEHS === 'CONFORME') okCount++;
+      else if (r.statusEHS === 'VENCE_30') warnCount++;
+      else if (r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE') critCount++;
+      else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') storzCount++;
+    });
 
-function render(){
-  renderStats();
-  document.querySelectorAll('#statTiles .stat').forEach(el => el.classList.toggle('active', el.dataset.key === state.statFilter));
-  renderTable();
-  renderSideBars();
-  document.getElementById('clearFilter').classList.toggle('show', state.sector !== '' || state.query !== '' || state.statFilter !== 'all');
-}
+    document.getElementById('kpiTotalPeople').innerText = totalPeople;
+    document.getElementById('kpiOkCount').innerText = okCount;
+    document.getElementById('kpiComplianceRate').innerText = Math.round((okCount / (rawData.length || 1)) * 100) + '% dos cursos em conformidade';
+    document.getElementById('kpiWarnCount').innerText = warnCount;
+    document.getElementById('kpiCritCount').innerText = critCount;
+    document.getElementById('kpiStorzCount').innerText = storzCount;
 
-document.getElementById('searchBox').addEventListener('input', e => { state.query = e.target.value; render(); });
-document.getElementById('sectorFilter').addEventListener('change', e => { state.sector = e.target.value; render(); });
-document.getElementById('clearFilter').addEventListener('click', () => {
-  state = { statFilter:'all', sector:'', query:'' };
-  document.getElementById('searchBox').value = '';
-  document.getElementById('sectorFilter').value = '';
-  render();
-});
+    function switchView(viewKey) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
 
-populateSectorFilter();
-document.getElementById('peopleCount').textContent = new Set(RAW.map(r => r.inspectorName)).size;
-document.getElementById('lastUpdated').textContent = RAW.length ? fmtDate(RAW[0].lastUpdated) : '—';
-render();
-</script>
+      const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.innerText.toLowerCase().includes(viewKey === 'matrix' ? 'matriz' : viewKey === 'table' ? 'gestão' : 'storz'));
+      if (btn) btn.classList.add('active');
+
+      const view = document.getElementById('view-' + viewKey);
+      if (view) view.classList.add('active');
+    }
+
+    function applyStatusFilter(status) {
+      document.getElementById('statusFilter').value = status;
+      renderAll();
+    }
+
+    function renderAll() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const sec = document.getElementById('sectorFilter').value;
+      const st = document.getElementById('statusFilter').value;
+
+      // 1. Filtrar pessoas
+      const filteredPeople = Array.from(peopleMap.values()).filter(p => {
+        const matchesQuery = p.name.toLowerCase().includes(q) || p.sector.toLowerCase().includes(q) || p.role.toLowerCase().includes(q);
+        const matchesSec = sec === 'ALL' || p.sector === sec;
+        
+        let matchesStatus = true;
+        if (st !== 'ALL') {
+          matchesStatus = p.records.some(r => {
+            if (st === 'CONFORME') return r.statusEHS === 'CONFORME';
+            if (st === 'VENCE_30') return r.statusEHS === 'VENCE_30';
+            if (st === 'VENCIDO') return r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE';
+            if (st === 'STORZ') return r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO';
+            return true;
+          });
+        }
+        return matchesQuery && matchesSec && matchesStatus;
+      });
+
+      // 2. Renderizar Matriz
+      renderMatrix(filteredPeople);
+
+      // 3. Renderizar Tabela Geral
+      renderTable(filteredPeople, q, st);
+
+      // 4. Renderizar Tabela Storz
+      renderStorz(filteredPeople);
+    }
+
+    function renderMatrix(peopleList) {
+      const headerRow = document.getElementById('matrixHeaderRow');
+      headerRow.innerHTML = '<th class="th-sticky-left">Colaborador / Ramo</th>' + 
+        priorityDocCodes.map(c => '<th>' + (docShortNames[c] || 'Doc ' + c) + '</th>').join('');
+
+      const tbody = document.getElementById('matrixBody');
+      tbody.innerHTML = '';
+
+      if (peopleList.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="' + (priorityDocCodes.length + 1) + '" style="padding:32px;color:var(--slate-500);text-align:center;">Nenhum colaborador encontrado com os filtros atuais.</td></tr>';
+        return;
+      }
+
+      peopleList.forEach(p => {
+        const tr = document.createElement('tr');
+        
+        let html = '<td class="td-sticky-left" onclick="openCollabModal(\\'' + p.name.replace(/'/g, "\\\\'") + '\\')">' +
+          '<div>' + p.name + '</div>' +
+          '<div style="font-size:11px;font-weight:500;color:var(--slate-500);">' + p.role + ' · ' + p.sector + '</div>' +
+          '</td>';
+
+        priorityDocCodes.forEach(code => {
+          const r = p.records.find(rec => rec.docCode === code);
+          if (!r) {
+            html += '<td><span class="cell-badge na">—</span></td>';
+          } else if (r.statusEHS === 'CONFORME') {
+            html += '<td><span class="cell-badge ok" title="' + r.detail + '">✔ Em Dia</span></td>';
+          } else if (r.statusEHS === 'VENCE_30') {
+            html += '<td><span class="cell-badge warn" title="' + r.detail + '">⏳ &lt;30d</span></td>';
+          } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
+            html += '<td><span class="cell-badge storz" title="' + r.detail + '">🎓 Storz</span></td>';
+          } else {
+            html += '<td><span class="cell-badge danger" title="' + r.detail + '">✘ Vencido</span></td>';
+          }
+        });
+
+        tr.innerHTML = html;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderTable(peopleList, q, st) {
+      const tbody = document.getElementById('dataTableBody');
+      tbody.innerHTML = '';
+
+      const rowsToDisplay = [];
+      peopleList.forEach(p => {
+        p.records.forEach(r => {
+          let matchStatus = true;
+          if (st === 'CONFORME') matchStatus = r.statusEHS === 'CONFORME';
+          else if (st === 'VENCE_30') matchStatus = r.statusEHS === 'VENCE_30';
+          else if (st === 'VENCIDO') matchStatus = r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE';
+          else if (st === 'STORZ') matchStatus = r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO';
+
+          if (matchStatus) rowsToDisplay.push(r);
+        });
+      });
+
+      if (rowsToDisplay.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="6" style="padding:32px;color:var(--slate-500);text-align:center;">Nenhum registro encontrado.</td></tr>';
+        return;
+      }
+
+      rowsToDisplay.slice(0, 150).forEach(r => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = 
+          '<td><strong>' + r.inspectorName + '</strong></td>' +
+          '<td style="color:var(--slate-500);">' + (r.role || 'Técnico') + ' · ' + (r.sector || 'Operações') + '</td>' +
+          '<td><strong>' + r.docName + '</strong></td>' +
+          '<td><span style="font-size:11px;background:var(--slate-100);padding:2px 6px;border-radius:4px;">' + (r.modality || 'PRESENCIAL') + '</span></td>' +
+          '<td>' +
+            (r.statusEHS === 'CONFORME' ? '<span class="cell-badge ok">✔ Em Dia</span>' :
+             r.statusEHS === 'VENCE_30' ? '<span class="cell-badge warn">⏳ A Vencer</span>' :
+             r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO' ? '<span class="cell-badge storz">🎓 Storz</span>' :
+             '<span class="cell-badge danger">✘ Vencido/Pendente</span>') +
+          '</td>' +
+          '<td style="font-size:12px;color:var(--slate-600);">' + r.detail + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderStorz(peopleList) {
+      const tbody = document.getElementById('storzTableBody');
+      tbody.innerHTML = '';
+
+      const storzRecords = [];
+      peopleList.forEach(p => {
+        p.records.forEach(r => {
+          if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO' || r.storzRequestId) {
+            storzRecords.push(r);
+          }
+        });
+      });
+
+      if (storzRecords.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="padding:32px;color:var(--slate-500);text-align:center;">Nenhuma solicitação ativa na Storz no momento.</td></tr>';
+        return;
+      }
+
+      storzRecords.forEach(r => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = 
+          '<td><strong>' + r.inspectorName + '</strong><div style="font-size:11px;color:var(--slate-500);">' + (r.sector || 'Operações') + '</div></td>' +
+          '<td><strong>' + r.docName + '</strong></td>' +
+          '<td><span class="mono" style="font-weight:700;color:var(--status-storz);">' + (r.storzRequestId || '—') + '</span></td>' +
+          '<td><span class="cell-badge storz">' + (r.storzState || 'EM ANDAMENTO') + '</span></td>' +
+          '<td style="font-size:12px;color:var(--slate-600);">' + r.detail + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+
+    function openCollabModal(name) {
+      const p = peopleMap.get(name);
+      if (!p) return;
+
+      document.getElementById('modalCollabName').innerText = p.name + ' (' + p.role + ' - ' + p.sector + ')';
+      
+      let html = '<table class="data-table">' +
+        '<thead><tr><th>Treinamento / Documento</th><th>Status</th><th>Detalhes</th></tr></thead><tbody>';
+
+      p.records.forEach(r => {
+        html += '<tr>' +
+          '<td><strong>' + r.docName + '</strong></td>' +
+          '<td>' +
+            (r.statusEHS === 'CONFORME' ? '<span class="cell-badge ok">✔ Em Dia</span>' :
+             r.statusEHS === 'VENCE_30' ? '<span class="cell-badge warn">⏳ A Vencer</span>' :
+             r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO' ? '<span class="cell-badge storz">🎓 Storz</span>' :
+             '<span class="cell-badge danger">✘ Vencido</span>') +
+          '</td>' +
+          '<td style="font-size:12px;color:var(--slate-600);">' + r.detail + '</td>' +
+          '</tr>';
+      });
+
+      html += '</tbody></table>';
+      document.getElementById('modalCollabContent').innerHTML = html;
+      document.getElementById('collabModal').classList.add('show');
+    }
+
+    function closeModal() {
+      document.getElementById('collabModal').classList.remove('show');
+    }
+
+    // Inicialização
+    renderAll();
+  </script>
 </body>
-</html>
-`;
+</html>`;
 }
