@@ -5,8 +5,8 @@ name: Histórico do Aluno (Desenvolvimento Organizacional)
 
 on:
   schedule:
-    # Terça e sexta-feira às 10:00 UTC (07:00 BRT - Horário de Brasília)
-    - cron: '0 10 * * 2,5'
+    # Terça e sexta-feira às 10:15 UTC (07:15 BRT - Horário de Brasília)
+    - cron: '15 10 * * 2,5'
   workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
 
 jobs:
@@ -15,10 +15,10 @@ jobs:
     steps:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
-      - name: 🟢 Configurar Node.js (v20)
+      - name: 🟢 Configurar Node.js (v22)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
       - name: 📦 Instalar Dependências do Projeto
         run: npm ci
@@ -35,10 +35,10 @@ jobs:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
 
-      - name: 🟢 Configurar Node.js (v20)
+      - name: 🟢 Configurar Node.js (v22)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: 📦 Instalar Dependências do Projeto

@@ -7,8 +7,8 @@ name: Auditoria RPO (Divergência de Digitação)
 
 on:
   schedule:
-    # Toda segunda-feira às 09:00 UTC (06:00 BRT)
-    - cron: '0 9 * * 1'
+    # Toda segunda-feira às 09:15 UTC (06:15 BRT - Horário de Brasília)
+    - cron: '15 9 * * 1'
   workflow_dispatch:
 
 jobs:
@@ -19,10 +19,10 @@ jobs:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
 
-      - name: 🟢 Configurar Node.js (v20)
+      - name: 🟢 Configurar Node.js (v22)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: 📦 Instalar Dependências do Projeto

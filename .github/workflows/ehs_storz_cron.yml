@@ -2,9 +2,8 @@ name: HSE Audit & Storz Automated Cron
 
 on:
   schedule:
-    # Só segunda-feira às 09:00 UTC (06:00 BRT - Horário de Brasília) — reduzido de diário pra
-    # semanal, pedido do usuário em 27/08/2026.
-    - cron: '0 9 * * 1'
+    # Segunda-feira às 09:15 UTC (06:15 BRT - Horário de Brasília)
+    - cron: '15 9 * * 1'
   workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
 
 permissions:

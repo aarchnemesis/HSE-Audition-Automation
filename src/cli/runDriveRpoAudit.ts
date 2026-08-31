@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import fs from 'fs';
 import ExcelJS from 'exceljs';
 import path from 'path';
 import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
@@ -17,6 +18,9 @@ const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) :
 const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
 
 async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, outputPath: string): Promise<void> {
+  const dir = path.dirname(outputPath);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
   const workbook = new ExcelJS.Workbook();
   const sheet = workbook.addWorksheet('Auditoria Drive x RPO');
 
