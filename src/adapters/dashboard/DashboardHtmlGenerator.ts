@@ -693,14 +693,49 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       sectorFilter.appendChild(opt);
     });
 
+    function isConforme(st) {
+      return st === 'CONFORME';
+    }
+
+    function isAVencer(st) {
+      return st === 'VENCE_60' || st === 'VENCE_30' || st === 'VENCE_15' || st === 'VENCE_07';
+    }
+
+    function isVencido(st) {
+      return st === 'VENCIDO' || st === 'AUSENTE';
+    }
+
+    function isStorz(st) {
+      return st === 'SOLICITADO_STORZ' || st === 'STORZ_EM_ANDAMENTO';
+    }
+
+    function renderBadge(r) {
+      if (!r) return '<span class="badge na">—</span>';
+      if (r.statusEHS === 'CONFORME') {
+        return '<span class="badge ok" title="' + r.detail + '">✔ Em Dia</span>';
+      } else if (r.statusEHS === 'VENCE_60') {
+        return '<span class="badge warn" style="background:rgba(37,99,235,0.1); color:#2563EB;" title="' + r.detail + '">⏳ &lt;60d</span>';
+      } else if (r.statusEHS === 'VENCE_30') {
+        return '<span class="badge warn" title="' + r.detail + '">⏳ &lt;30d</span>';
+      } else if (r.statusEHS === 'VENCE_15') {
+        return '<span class="badge warn" style="background:#FEF3C7; color:#D97706; font-weight:800;" title="' + r.detail + '">⏳ &lt;15d</span>';
+      } else if (r.statusEHS === 'VENCE_07') {
+        return '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + r.detail + '">⚠️ &lt;7d</span>';
+      } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
+        return '<span class="badge storz" title="' + r.detail + '">🎓 Storz</span>';
+      } else {
+        return '<span class="badge danger" title="' + r.detail + '">✘ Vencido</span>';
+      }
+    }
+
     const totalPeople = peopleMap.size;
     let okCount = 0, warnCount = 0, critCount = 0, storzCount = 0;
 
     rawData.forEach(r => {
-      if (r.statusEHS === 'CONFORME') okCount++;
-      else if (r.statusEHS === 'VENCE_30') warnCount++;
-      else if (r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE') critCount++;
-      else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') storzCount++;
+      if (isConforme(r.statusEHS)) okCount++;
+      else if (isAVencer(r.statusEHS)) warnCount++;
+      else if (isVencido(r.statusEHS)) critCount++;
+      else if (isStorz(r.statusEHS)) storzCount++;
     });
 
     document.getElementById('kpiTotalPeople').innerText = totalPeople;
@@ -745,10 +780,10 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
         let matchesStatus = true;
         if (st !== 'ALL') {
           matchesStatus = p.records.some(r => {
-            if (st === 'CONFORME') return r.statusEHS === 'CONFORME';
-            if (st === 'VENCE_30') return r.statusEHS === 'VENCE_30';
-            if (st === 'VENCIDO') return r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE';
-            if (st === 'STORZ') return r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO';
+            if (st === 'CONFORME') return isConforme(r.statusEHS);
+            if (st === 'VENCE_30') return isAVencer(r.statusEHS);
+            if (st === 'VENCIDO') return isVencido(r.statusEHS);
+            if (st === 'STORZ') return isStorz(r.statusEHS);
             return true;
           });
         }
@@ -783,17 +818,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
 
         priorityDocCodes.forEach(code => {
           const r = p.records.find(rec => rec.docCode === code);
-          if (!r) {
-            html += '<td><span class="badge na">—</span></td>';
-          } else if (r.statusEHS === 'CONFORME') {
-            html += '<td><span class="badge ok" title="' + r.detail + '">✔ Em Dia</span></td>';
-          } else if (r.statusEHS === 'VENCE_30') {
-            html += '<td><span class="badge warn" title="' + r.detail + '">⏳ &lt;30d</span></td>';
-          } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
-            html += '<td><span class="badge storz" title="' + r.detail + '">🎓 Storz</span></td>';
-          } else {
-            html += '<td><span class="badge danger" title="' + r.detail + '">✘ Vencido</span></td>';
-          }
+          html += '<td>' + renderBadge(r) + '</td>';
         });
 
         tr.innerHTML = html;
@@ -809,10 +834,10 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       peopleList.forEach(p => {
         p.records.forEach(r => {
           let matchStatus = true;
-          if (st === 'CONFORME') matchStatus = r.statusEHS === 'CONFORME';
-          else if (st === 'VENCE_30') matchStatus = r.statusEHS === 'VENCE_30';
-          else if (st === 'VENCIDO') matchStatus = r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE';
-          else if (st === 'STORZ') matchStatus = r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO';
+          if (st === 'CONFORME') matchStatus = isConforme(r.statusEHS);
+          else if (st === 'VENCE_30') matchStatus = isAVencer(r.statusEHS);
+          else if (st === 'VENCIDO') matchStatus = isVencido(r.statusEHS);
+          else if (st === 'STORZ') matchStatus = isStorz(r.statusEHS);
 
           if (matchStatus) rowsToDisplay.push(r);
         });
@@ -830,12 +855,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
           '<td style="text-align:left;color:var(--text-muted);">' + (r.role || 'Técnico') + ' · ' + (r.sector || 'Operações') + '</td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td><span style="font-size:10px;background:var(--pill-bg);padding:2px 6px;border-radius:4px;">' + (r.modality || 'PRESENCIAL') + '</span></td>' +
-          '<td>' +
-            (r.statusEHS === 'CONFORME' ? '<span class="badge ok">✔ Em Dia</span>' :
-             r.statusEHS === 'VENCE_30' ? '<span class="badge warn">⏳ A Vencer</span>' :
-             r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO' ? '<span class="badge storz">🎓 Storz</span>' :
-             '<span class="badge danger">✘ Vencido</span>') +
-          '</td>' +
+          '<td>' + renderBadge(r) + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>';
         tbody.appendChild(tr);
       });
@@ -883,12 +903,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       p.records.forEach(r => {
         html += '<tr>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
-          '<td>' +
-            (r.statusEHS === 'CONFORME' ? '<span class="badge ok">✔ Em Dia</span>' :
-             r.statusEHS === 'VENCE_30' ? '<span class="badge warn">⏳ A Vencer</span>' :
-             r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO' ? '<span class="badge storz">🎓 Storz</span>' :
-             '<span class="badge danger">✘ Vencido</span>') +
-          '</td>' +
+          '<td>' + renderBadge(r) + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>' +
           '</tr>';
       });
