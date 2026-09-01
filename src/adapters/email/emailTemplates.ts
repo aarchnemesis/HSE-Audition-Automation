@@ -65,7 +65,7 @@ export function wrapEmailHtml(subject: string, bodyHtml: string): string {
   <div class="container">
     <div class="header">
       <img src="https://arthwind.com.br/assets/Img/logo.png" alt="ArthWind" />
-      <h2>${EMAIL_TITLE}</h2>
+      <h2>${subject || EMAIL_TITLE}</h2>
     </div>
     <div class="body">
       ${bodyHtml}

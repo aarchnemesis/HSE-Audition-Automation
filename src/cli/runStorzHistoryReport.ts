@@ -233,6 +233,11 @@ async function main() {
     return;
   }
 
+  if (storzResult.requests.length === 0) {
+    console.warn('⚠️ Nenhuma matrícula/curso carregada da Storz — cancelando envio de e-mail vazio para não notificar com dados zerados.\n');
+    return;
+  }
+
   console.log('================================================================================');
   console.log('   📧 ENVIANDO HISTÓRICO DO ALUNO (DESENVOLVIMENTO ORGANIZACIONAL)');
   console.log('================================================================================');
@@ -271,7 +276,7 @@ async function main() {
   const emailRes = await emailService.sendEmail({
     to: DO_EMAIL_RECIPIENT,
     subject: `Histórico do Aluno (DO) — ${REF_DATE.toLocaleDateString('pt-BR')}`,
-    htmlContent: wrapEmailHtml(`Histórico do Aluno (DO) — ${REF_DATE.toLocaleDateString('pt-BR')}`, bodyHtml),
+    htmlContent: bodyHtml,
     attachments: [
       { filename: 'historico_aluno_storz.xlsx', path: outputPath }
     ]
