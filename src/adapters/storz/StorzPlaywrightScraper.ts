@@ -168,6 +168,10 @@ export class StorzPlaywrightScraper {
             trainingCode = '99';
           }
 
+          const iniciadoDate = parseBrDate(course.iniciado);
+          const concluidoDate = parseBrDate(course.concluido);
+          const requestDate = iniciadoDate || concluidoDate || new Date();
+
           scrapedRequests.push({
             id: course.codMatricula || `DOSSIE-${collaboratorName}-${course.turma}`.slice(0, 60),
             collaboratorName,
@@ -175,8 +179,8 @@ export class StorzPlaywrightScraper {
             trainingCode,
             trainingName: course.turma,
             modality: course.turma.toUpperCase().includes('ONLINE') ? 'ONLINE' : 'PRESENCIAL',
-            requestDate: parseBrDate(course.iniciado) || new Date(),
-            completionDate: parseBrDate(course.concluido),
+            requestDate,
+            completionDate: concluidoDate,
             state: mapSituacaoToState(course.situacao),
             rawSituacao: course.situacao || undefined,
             progressPercent: course.progresso !== undefined ? parseInt(course.progresso, 10) : undefined,

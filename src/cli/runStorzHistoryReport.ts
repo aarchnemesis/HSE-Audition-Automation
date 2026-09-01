@@ -157,7 +157,7 @@ function buildRetestSheet(workbook: ExcelJS.Workbook, requests: StorzRequest[]):
       trainingCode: group.trainingCode,
       trainingName: docLabel(group.trainingCode, firstFailed.request.trainingName),
       totalAttempts: group.attempts.length,
-      failedDate: dateFmt(firstFailed.request.requestDate),
+      failedDate: dateFmt(firstFailed.request.completionDate || firstFailed.request.requestDate),
       rematriculado: group.rematriculado ? 'SIM' : 'NÃO',
       iniciado: group.iniciado ? 'SIM' : 'NÃO',
       progresso: group.latestProgressPercent !== undefined ? `${group.latestProgressPercent}%` : '',
