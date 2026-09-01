@@ -40,7 +40,7 @@ export interface StorzSelectors {
 //      Tipo: ...", "Situação do aluno:", "Cod. Matrícula:", "Iniciado:", "Concluído:" — exatamente
 //      o formato que dossieParser.ts espera (confirmado com resposta real da API).
 export const DEFAULT_STORZ_SELECTORS: StorzSelectors = {
-  url: process.env.STORZ_URL || 'https://storz.sistemaescudo.com.br/admin/main.php',
+  url: process.env.STORZ_URL || 'https://storz.sistemaescudo.com.br/admin/auth/index.php',
   loginUserSelector: '#ds_login',           // confirmado
   loginPassSelector: '#ds_senha',           // confirmado
   loginSubmitSelector: 'button.button-ndt', // confirmado — form usa action="javascript:void(0)", precisa clicar o botão
@@ -197,17 +197,26 @@ export class StorzPlaywrightScraper {
   }
 
   private async login(page: Page, user: string, pass: string, log: (msg: string) => void): Promise<void> {
-    log(`🔑 Passo 2: Acessando URL de login: ${this.selectors.url}`);
-    await page.goto(this.selectors.url, { waitUntil: 'domcontentloaded', timeout: 30000 });
+    let targetUrl = this.selectors.url;
+    if (targetUrl.endsWith('/admin/main.php')) {
+      targetUrl = targetUrl.replace('/admin/main.php', '/admin/auth/index.php');
+    }
+    log(`🔑 Passo 2: Acessando URL de login: ${targetUrl}`);
+    await page.goto(targetUrl, { waitUntil: 'domcontentloaded', timeout: 35000 });
 
     log('🔑 Preenchendo formulário de autenticação...');
-    await page.fill(this.selectors.loginUserSelector, user);
-    await page.fill(this.selectors.loginPassSelector, pass);
+    const userField = page.locator(`${this.selectors.loginUserSelector}, input[name="ds_login"]`).first();
+    await userField.waitFor({ state: 'visible', timeout: 30000 });
+    await userField.fill(user);
+
+    const passField = page.locator(`${this.selectors.loginPassSelector}, input[name="senha"]`).first();
+    await passField.fill(pass);
 
     // O form de login da Storz usa action="javascript:void(0)" (submit via AJAX/JS, sem
     // reload de página) — por isso aguardamos a tela de login sumir, em vez de esperar por
     // navegação tradicional.
-    await page.click(this.selectors.loginSubmitSelector);
+    const submitBtn = page.locator(`${this.selectors.loginSubmitSelector}, button[type="submit"], button:has-text("Entrar")`).first();
+    await submitBtn.click();
 
     await page.waitForSelector(this.selectors.loginUserSelector, { state: 'hidden', timeout: 15000 }).catch(() => {
       log('⚠️ Aviso: não detectei a tela de login sumir — pode ter falhado (credenciais inválidas?) ou a tela pós-login ainda não foi mapeada.');

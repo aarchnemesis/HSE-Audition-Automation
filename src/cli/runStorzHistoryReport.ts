@@ -13,6 +13,7 @@ import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGener
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
 import { IEmailService } from '../ports/IEmailService.js';
+import { wrapEmailHtml } from '../adapters/email/emailTemplates.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
 // Audiência diferente do EHS (Desenvolvimento Organizacional) — lista separada de propósito,
@@ -242,22 +243,39 @@ async function main() {
   const aguardando = groups.filter((g) => g.retestStage === 'AGUARDANDO_RETESTE').length;
   const emAndamento = groups.filter((g) => g.retestStage === 'RETESTE_EM_ANDAMENTO').length;
   const aprovado = groups.filter((g) => g.retestStage === 'RETESTE_APROVADO').length;
+  const dashboardUrl = process.env.HSE_DASHBOARD_URL || 'https://hse-audition-automation.vercel.app';
+
+  const ctaButtonHtml = `
+    <div style="text-align: center; margin: 20px 0 24px; padding: 18px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px;">
+      <p style="margin: 0 0 10px; font-size: 13px; font-weight: 600; color: #1E293B;">
+        Acompanhe a Matriz de Qualificação (Skill Matrix) e as matrículas da Storz ao vivo:
+      </p>
+      <a href="${dashboardUrl}" target="_blank" style="background-color: #00D2B4; color: #090D16; font-weight: 700; font-size: 13px; text-decoration: none; padding: 10px 20px; border-radius: 6px; display: inline-block; box-shadow: 0 2px 6px rgba(0,210,180,0.25);">
+        🚀 Acessar Portal de DO & Treinamentos ao Vivo
+      </a>
+      <div style="margin-top: 8px; font-size: 11px; color: #64748B;">
+        Não é necessário baixar arquivos HTML anexos.
+      </div>
+    </div>
+  `;
+
+  const bodyHtml = `
+    <p>Segue em anexo a planilha consolidada com o histórico completo de matrículas na Storz e o controle de retestes.</p>
+    ${ctaButtonHtml}
+    <p><strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
+    <ul>
+      <li><strong>${aguardando}</strong> aguardando reteste (sem rematrícula ativa)</li>
+      <li><strong>${emAndamento}</strong> com reteste em andamento agora</li>
+      <li><strong>${aprovado}</strong> já refizeram e foram aprovados</li>
+    </ul>
+  `;
+
   const emailRes = await emailService.sendEmail({
     to: DO_EMAIL_RECIPIENT,
-    subject: `Histórico do Aluno — ${REF_DATE.toLocaleDateString('pt-BR')}`,
-    htmlContent: `
-      <p>Segue em anexo o histórico completo de matrículas na Storz (Excel) e o dashboard interativo (HTML).</p>
-      <p><strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
-      <ul>
-        <li><strong>${aguardando}</strong> aguardando reteste (sem rematrícula ativa)</li>
-        <li><strong>${emAndamento}</strong> com reteste em andamento agora</li>
-        <li><strong>${aprovado}</strong> já refizeram e foram aprovados</li>
-      </ul>
-      <p>Esse é um teste inicial — qualquer ajuste que precisar, é só retornar.</p>
-    `,
+    subject: `Histórico do Aluno (DO) — ${REF_DATE.toLocaleDateString('pt-BR')}`,
+    htmlContent: wrapEmailHtml(`Histórico do Aluno (DO) — ${REF_DATE.toLocaleDateString('pt-BR')}`, bodyHtml),
     attachments: [
-      { filename: 'historico_aluno_storz.xlsx', path: outputPath },
-      { filename: 'do_dashboard.html', path: dashboardPath }
+      { filename: 'historico_aluno_storz.xlsx', path: outputPath }
     ]
   });
   console.log(`   ${emailRes.success ? 'Enviado' : 'Falhou'} para ${DO_EMAIL_RECIPIENT}\n`);
