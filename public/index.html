@@ -266,11 +266,14 @@
     /* KPIS ROW */
     .kpi-row {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 10px;
       margin-bottom: 4px;
       flex-shrink: 0;
     }
+    @media (max-width: 1200px) { .kpi-row { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 700px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+
     .kpi-box {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -412,6 +415,7 @@
     .badge.warn { background: var(--status-warn-bg); color: var(--status-warn); }
     .badge.danger { background: var(--status-crit-bg); color: var(--status-crit); }
     .badge.storz { background: var(--status-storz-bg); color: var(--status-storz); }
+    .badge.ausente { background: #F1F5F9; color: #475569; border: 1px dashed #CBD5E1; font-weight: 600; }
     .badge.na { background: var(--status-na-bg); color: var(--status-na); }
 
     .tab-view { display: none; height: 100%; flex: 1; min-height: 0; }
@@ -519,43 +523,49 @@
         <p>Acompanhamento de conformidade de NRs (NR-35, NR-10, NR-33), GWO BST, ASO e reciclagens por colaborador de campo</p>
       </div>
       <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted);">
-        STATUS: <span style="color: var(--brand-green); font-weight: 800;">AUDITADO EM 28/08/2026</span>
+        STATUS: <span style="color: var(--brand-green); font-weight: 800;">AUDITADO EM 01/09/2026</span>
       </div>
     </div>
 
     <!-- CONTENT BODY -->
     <div class="content-body">
       
-      <!-- 5 KPIS ROW -->
+      <!-- 6 KPIS ROW -->
       <div class="kpi-row">
         <div class="kpi-box" onclick="applyStatusFilter('ALL')">
-          <div class="label">Colaboradores de Campo</div>
+          <div class="label">Colaboradores</div>
           <div class="val mono" id="kpiTotalPeople">0</div>
-          <div class="sub">Universo total auditado</div>
+          <div class="sub">Universo auditado</div>
         </div>
 
         <div class="kpi-box" onclick="applyStatusFilter('CONFORME')">
-          <div class="label">Cursos em Conformidade</div>
+          <div class="label">Em Dia</div>
           <div class="val mono" style="color: var(--brand-green);" id="kpiOkCount">0</div>
-          <div class="sub" id="kpiComplianceRate">0% em dia</div>
+          <div class="sub" id="kpiComplianceRate">0% em conformidade</div>
         </div>
 
         <div class="kpi-box" onclick="applyStatusFilter('VENCE_30')">
-          <div class="label">Reciclagens (&lt;30 dias)</div>
+          <div class="label">Reciclagens (&lt;30d)</div>
           <div class="val mono" style="color: var(--brand-amber);" id="kpiWarnCount">0</div>
-          <div class="sub">Prioridade de turma DO</div>
+          <div class="sub">Prioridade de agendamento</div>
         </div>
 
         <div class="kpi-box" onclick="applyStatusFilter('VENCIDO')">
-          <div class="label">Cursos Vencidos</div>
+          <div class="label">Vencidos (no Drive)</div>
           <div class="val mono" style="color: var(--brand-coral);" id="kpiCritCount">0</div>
-          <div class="sub">Bloqueio de mobilização</div>
+          <div class="sub">Documento expirado</div>
+        </div>
+
+        <div class="kpi-box" onclick="applyStatusFilter('AUSENTE')">
+          <div class="label">Ausentes (sem Doc)</div>
+          <div class="val mono" style="color: #64748B;" id="kpiAusenteCount">0</div>
+          <div class="sub">Não encontrado no Drive</div>
         </div>
 
         <div class="kpi-box" onclick="applyStatusFilter('STORZ')">
-          <div class="label">Em Andamento na Storz</div>
+          <div class="label">Storz Ativas</div>
           <div class="val mono" style="color: var(--brand-purple);" id="kpiStorzCount">0</div>
-          <div class="sub">Matrículas ativas</div>
+          <div class="sub">Matrículas em andamento</div>
         </div>
       </div>
 
@@ -569,8 +579,9 @@
           <select id="statusFilter" class="select-filter" onchange="renderAll()">
             <option value="ALL">Todos os Status</option>
             <option value="CONFORME">🟢 Em Dia / Conforme</option>
-            <option value="VENCE_30">🟡 A Vencer em 30 Dias</option>
-            <option value="VENCIDO">🔴 Vencido / Ausente</option>
+            <option value="VENCE_30">🟡 A Vencer (&lt;30 dias)</option>
+            <option value="VENCIDO">🔴 Vencido (no Drive)</option>
+            <option value="AUSENTE">⚪ Ausente (não está no Drive)</option>
             <option value="STORZ">🟣 Em Andamento Storz</option>
           </select>
         </div>
@@ -697,7 +708,11 @@
     }
 
     function isVencido(st) {
-      return st === 'VENCIDO' || st === 'AUSENTE';
+      return st === 'VENCIDO';
+    }
+
+    function isAusente(st) {
+      return st === 'AUSENTE';
     }
 
     function isStorz(st) {
@@ -718,26 +733,32 @@
         return '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + r.detail + '">⚠️ &lt;7d</span>';
       } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
         return '<span class="badge storz" title="' + r.detail + '">🎓 Storz</span>';
-      } else {
+      } else if (r.statusEHS === 'AUSENTE') {
+        return '<span class="badge ausente" title="' + (r.detail || 'Não encontrado no Drive') + '">⚪ Ausente</span>';
+      } else if (r.statusEHS === 'VENCIDO') {
         return '<span class="badge danger" title="' + r.detail + '">✘ Vencido</span>';
+      } else {
+        return '<span class="badge na" title="' + r.detail + '">—</span>';
       }
     }
 
     const totalPeople = peopleMap.size;
-    let okCount = 0, warnCount = 0, critCount = 0, storzCount = 0;
+    let okCount = 0, warnCount = 0, critCount = 0, ausenteCount = 0, storzCount = 0;
 
     rawData.forEach(r => {
       if (isConforme(r.statusEHS)) okCount++;
       else if (isAVencer(r.statusEHS)) warnCount++;
       else if (isVencido(r.statusEHS)) critCount++;
+      else if (isAusente(r.statusEHS)) ausenteCount++;
       else if (isStorz(r.statusEHS)) storzCount++;
     });
 
     document.getElementById('kpiTotalPeople').innerText = totalPeople;
     document.getElementById('kpiOkCount').innerText = okCount;
-    document.getElementById('kpiComplianceRate').innerText = Math.round((okCount / (rawData.length || 1)) * 100) + '% dos cursos em conformidade';
+    document.getElementById('kpiComplianceRate').innerText = Math.round((okCount / (rawData.length || 1)) * 100) + '% em conformidade';
     document.getElementById('kpiWarnCount').innerText = warnCount;
     document.getElementById('kpiCritCount').innerText = critCount;
+    if (document.getElementById('kpiAusenteCount')) document.getElementById('kpiAusenteCount').innerText = ausenteCount;
     document.getElementById('kpiStorzCount').innerText = storzCount;
 
     function switchNav(viewKey) {
@@ -778,6 +799,7 @@
             if (st === 'CONFORME') return isConforme(r.statusEHS);
             if (st === 'VENCE_30') return isAVencer(r.statusEHS);
             if (st === 'VENCIDO') return isVencido(r.statusEHS);
+            if (st === 'AUSENTE') return isAusente(r.statusEHS);
             if (st === 'STORZ') return isStorz(r.statusEHS);
             return true;
           });
@@ -832,6 +854,7 @@
           if (st === 'CONFORME') matchStatus = isConforme(r.statusEHS);
           else if (st === 'VENCE_30') matchStatus = isAVencer(r.statusEHS);
           else if (st === 'VENCIDO') matchStatus = isVencido(r.statusEHS);
+          else if (st === 'AUSENTE') matchStatus = isAusente(r.statusEHS);
           else if (st === 'STORZ') matchStatus = isStorz(r.statusEHS);
 
           if (matchStatus) rowsToDisplay.push(r);

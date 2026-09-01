@@ -3,11 +3,25 @@ import { DigestInspectorGroup } from '../../ports/IEmailService.js';
 export const EMAIL_TITLE = 'Alerta EHS - Documentação';
 
 export function badgeClassFor(status: string): string {
-  if (status === 'VENCIDO' || status === 'AUSENTE') return 'badge-vencido';
+  if (status === 'AUSENTE') return 'badge-ausente';
+  if (status === 'VENCIDO') return 'badge-vencido';
   if (['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(status)) return 'badge-atenção';
   if (status === 'SOLICITADO_STORZ') return 'badge-storz';
   if (status === 'STORZ_EM_ANDAMENTO') return 'badge-storz-andamento';
   return 'badge-conforme';
+}
+
+export function statusLabelFor(status: string): string {
+  if (status === 'AUSENTE') return '⚪ Ausente';
+  if (status === 'VENCIDO') return '✘ Vencido';
+  if (status === 'VENCE_07') return '⚠️ <7d';
+  if (status === 'VENCE_15') return '⏳ <15d';
+  if (status === 'VENCE_30') return '⏳ <30d';
+  if (status === 'VENCE_60') return '⏳ <60d';
+  if (status === 'SOLICITADO_STORZ') return '🎓 Storz';
+  if (status === 'STORZ_EM_ANDAMENTO') return '🎓 Storz (Andamento)';
+  if (status === 'CONFORME') return '✔ Em Dia';
+  return status;
 }
 
 /**
@@ -34,6 +48,7 @@ export function wrapEmailHtml(subject: string, bodyHtml: string): string {
     .badge-conforme { background: #E4F3E9; color: #1E7A4C; }
     .badge-atenção { background: #FDF0E6; color: #B45A1E; }
     .badge-vencido { background: #FCE7E3; color: #C1401F; }
+    .badge-ausente { background: #F1F5F9; color: #475569; border: 1px dashed #CBD5E1; }
     .badge-storz { background: #E4EAF5; color: #25386B; }
     .badge-storz-andamento { background: #EDE9FE; color: #5B21B6; }
     table { width: 100%; border-collapse: collapse; margin-top: 15px; }
@@ -71,7 +86,7 @@ export function buildEHSAlertBodyHtml(inspectorName: string, parkName: string, a
     rowsHtml += `
       <tr>
         <td><strong>${item.code}</strong> - ${item.reqName}</td>
-        <td><span class="badge ${badgeClassFor(item.status)}">${item.status}</span></td>
+        <td><span class="badge ${badgeClassFor(item.status)}">${statusLabelFor(item.status)}</span></td>
         <td>${item.detail}</td>
       </tr>
     `;
@@ -128,7 +143,7 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
       rowsHtml += `
         <tr>
           <td><strong>${item.docCode}</strong> - ${item.docName}</td>
-          <td><span class="badge ${badgeClassFor(item.status)}">${item.status}</span></td>
+          <td><span class="badge ${badgeClassFor(item.status)}">${statusLabelFor(item.status)}</span></td>
           <td>${item.detail}</td>
         </tr>
       `;
