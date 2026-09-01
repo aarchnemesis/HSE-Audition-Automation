@@ -39,8 +39,10 @@ export interface StorzSelectors {
 //   6. O HTML retornado, convertido para texto (innerText), tem os blocos "CPF:", "Turma: ... /
 //      Tipo: ...", "Situação do aluno:", "Cod. Matrícula:", "Iniciado:", "Concluído:" — exatamente
 //      o formato que dossieParser.ts espera (confirmado com resposta real da API).
+export const DEFAULT_STORZ_ELC = '065fd9f15ab9f040d4617ff7b49667c8';
+
 export const DEFAULT_STORZ_SELECTORS: StorzSelectors = {
-  url: process.env.STORZ_URL || 'https://storz.sistemaescudo.com.br/admin/auth/index.php',
+  url: process.env.STORZ_URL || `https://storz.sistemaescudo.com.br/admin/main.php?elc=${DEFAULT_STORZ_ELC}`,
   loginUserSelector: '#ds_login',           // confirmado
   loginPassSelector: '#ds_senha',           // confirmado
   loginSubmitSelector: 'button.button-ndt', // confirmado — form usa action="javascript:void(0)", precisa clicar o botão
