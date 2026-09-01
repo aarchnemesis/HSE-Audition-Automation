@@ -16,9 +16,7 @@ import { IEmailService } from '../ports/IEmailService.js';
 import { wrapEmailHtml } from '../adapters/email/emailTemplates.js';
 
 const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
-// Audiência diferente do EHS (Desenvolvimento Organizacional) — lista separada de propósito,
-// nunca cai no HSE_EMAIL_TO. Fase de teste: só a Mayanna, confirmado pelo usuário em 26/08/2026.
-const DO_EMAIL_RECIPIENT = process.env.DO_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
+const DO_EMAIL_RECIPIENT = process.env.DO_EMAIL_TO || 'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br';
 
 /**
  * Gera um "Histórico do Aluno" — um registro por colaborador+curso, no molde do exemplo que a
