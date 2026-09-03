@@ -2,6 +2,10 @@ node_modules/
 dist/
 scratch/
 .env
-*.log
+.env.*
+!.env.example
+*.log*
+.DS_Store
+package-lock.json
 google_oauth_client.json
 google_oauth_token.json

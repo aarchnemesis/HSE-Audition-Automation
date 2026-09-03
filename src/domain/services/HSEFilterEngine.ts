@@ -1,67 +1,80 @@
-import ExcelJS from 'exceljs';
-import path from 'path';
-import { HSEDatabaseRepository, HSEDatabaseRecord } from './HSEDatabaseRepository.js';
-import { EHSStatus, TrainingModality } from '../models/Certificate.js';
+import path from 'path'
+import ExcelJS from 'exceljs'
+import { EHSStatus, TrainingModality } from '../models/Certificate.js'
+import {
+  HSEDatabaseRecord,
+  HSEDatabaseRepository,
+} from './HSEDatabaseRepository.js'
 
 export interface HSEFilterCriteria {
-  inspectorName?: string;
-  statusEHS?: EHSStatus[];
-  modality?: TrainingModality;
-  storzOnly?: boolean;
-  docCode?: string;
+  inspectorName?: string
+  statusEHS?: EHSStatus[]
+  modality?: TrainingModality
+  storzOnly?: boolean
+  docCode?: string
 }
 
 export class HSEFilterEngine {
-  private repo: HSEDatabaseRepository;
+  private repo: HSEDatabaseRepository
 
   constructor(repo?: HSEDatabaseRepository) {
-    this.repo = repo || new HSEDatabaseRepository();
+    this.repo = repo || new HSEDatabaseRepository()
   }
 
   /**
    * Executa filtros dinâmicos na base de dados do HSE
    */
   query(criteria: HSEFilterCriteria): HSEDatabaseRecord[] {
-    const all = this.repo.getAllRecords();
+    const all = this.repo.getAllRecords()
 
-    return all.filter((rec) => {
+    return all.filter(rec => {
       // Filtro por Nome do Inspetor
-      if (criteria.inspectorName && !rec.inspectorName.toUpperCase().includes(criteria.inspectorName.toUpperCase())) {
-        return false;
+      if (
+        criteria.inspectorName &&
+        !rec.inspectorName
+          .toUpperCase()
+          .includes(criteria.inspectorName.toUpperCase())
+      ) {
+        return false
       }
 
       // Filtro por Status EHS (ex: VENCE_30, VENCIDO, SOLICITADO_STORZ)
       if (criteria.statusEHS && criteria.statusEHS.length > 0) {
-        if (!criteria.statusEHS.includes(rec.statusEHS)) return false;
+        if (!criteria.statusEHS.includes(rec.statusEHS)) return false
       }
 
       // Filtro por Modalidade (Presencial / Online)
       if (criteria.modality && rec.modality !== criteria.modality) {
-        return false;
+        return false
       }
 
       // Filtro por Solicitações Abertas na Storz
       if (criteria.storzOnly && !rec.storzRequestId) {
-        return false;
+        return false
       }
 
       // Filtro por Código de Documento (ex: "21")
       if (criteria.docCode && rec.docCode !== criteria.docCode) {
-        return false;
+        return false
       }
 
-      return true;
-    });
+      return true
+    })
   }
 
   /**
    * Gera um relatório Excel (.xlsx) altamente formatado para a equipe do HSE
    */
-  async exportToExcel(records: HSEDatabaseRecord[], outputPath?: string): Promise<string> {
-    const filePath = outputPath || path.join(process.cwd(), 'scratch', 'hse_relatorio_consolidado.xlsx');
+  async exportToExcel(
+    records: HSEDatabaseRecord[],
+    outputPath?: string
+  ): Promise<string> {
+    const filePath =
+      outputPath ||
+      path.join(process.cwd(), 'scratch', 'hse_relatorio_consolidado.xlsx')
 
-    const workbook = new ExcelJS.Workbook();
-    const sheet = workbook.addWorksheet('Auditoria HSE & Storz');
+    const workbook = new ExcelJS.Workbook()
+    const sheet = workbook.addWorksheet('Auditoria HSE & Storz')
 
     // Estilo do Cabeçalho Excel
     sheet.columns = [
@@ -74,18 +87,20 @@ export class HSEFilterEngine {
       { header: 'Status EHS', key: 'statusEHS', width: 20 },
       { header: 'ID Storz', key: 'storzRequestId', width: 15 },
       { header: 'Status Storz', key: 'storzState', width: 18 },
-      { header: 'Detalhes da Auditoria', key: 'detail', width: 55 }
-    ];
+      { header: 'Progresso Storz (%)', key: 'storzProgress', width: 20 },
+      { header: 'Prazo Limite Storz', key: 'storzDeadline', width: 20 },
+      { header: 'Detalhes da Auditoria', key: 'detail', width: 55 },
+    ]
 
     // Formatar Cabeçalho (Azul Escuro com Texto Branco)
-    const headerRow = sheet.getRow(1);
-    headerRow.font = { bold: true, color: { argb: 'FFFFFF' }, size: 11 };
+    const headerRow = sheet.getRow(1)
+    headerRow.font = { bold: true, color: { argb: 'FFFFFF' }, size: 11 }
     headerRow.fill = {
       type: 'pattern',
       pattern: 'solid',
-      fgColor: { argb: '0F172A' }
-    };
-    headerRow.alignment = { vertical: 'middle', horizontal: 'center' };
+      fgColor: { argb: '0F172A' },
+    }
+    headerRow.alignment = { vertical: 'middle', horizontal: 'center' }
 
     // Adicionar Linhas e Formatação de Cores por Status
     for (const rec of records) {
@@ -99,32 +114,81 @@ export class HSEFilterEngine {
         statusEHS: rec.statusEHS,
         storzRequestId: rec.storzRequestId || 'N/A',
         storzState: rec.storzState || 'N/A',
-        detail: rec.detail
-      });
+        storzProgress:
+          rec.storzProgressPercent !== undefined
+            ? `${rec.storzProgressPercent}%`
+            : 'N/A',
+        storzDeadline: rec.storzDeadline || 'N/A',
+        detail: rec.detail,
+      })
 
       // Estilização condicional de células baseada no Status EHS
-      const statusCell = row.getCell('statusEHS');
+      const statusCell = row.getCell('statusEHS')
       if (rec.statusEHS === 'CONFORME') {
-        statusCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'DCFCE7' } };
-        statusCell.font = { color: { argb: '166534' }, bold: true };
-      } else if (['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(rec.statusEHS)) {
-        statusCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FEF9C3' } };
-        statusCell.font = { color: { argb: '854D0E' }, bold: true };
+        statusCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'DCFCE7' },
+        }
+        statusCell.font = { color: { argb: '166534' }, bold: true }
+      } else if (
+        ['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(rec.statusEHS)
+      ) {
+        statusCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FEF9C3' },
+        }
+        statusCell.font = { color: { argb: '854D0E' }, bold: true }
       } else if (rec.statusEHS === 'VENCIDO' || rec.statusEHS === 'AUSENTE') {
-        statusCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FEE2E2' } };
-        statusCell.font = { color: { argb: '991B1B' }, bold: true };
+        statusCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'FEE2E2' },
+        }
+        statusCell.font = { color: { argb: '991B1B' }, bold: true }
       } else if (rec.statusEHS === 'SOLICITADO_STORZ') {
-        statusCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'DBEAFE' } };
-        statusCell.font = { color: { argb: '1E40AF' }, bold: true };
+        statusCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'DBEAFE' },
+        }
+        statusCell.font = { color: { argb: '1E40AF' }, bold: true }
       } else if (rec.statusEHS === 'STORZ_EM_ANDAMENTO') {
-        statusCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'EDE9FE' } };
-        statusCell.font = { color: { argb: '5B21B6' }, bold: true };
+        statusCell.fill = {
+          type: 'pattern',
+          pattern: 'solid',
+          fgColor: { argb: 'EDE9FE' },
+        }
+        statusCell.font = { color: { argb: '5B21B6' }, bold: true }
+      }
+
+      // Estilização do Progresso da Storz
+      const progCell = row.getCell('storzProgress')
+      if (rec.storzProgressPercent !== undefined) {
+        if (rec.storzProgressPercent === 100) {
+          progCell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'DCFCE7' },
+          }
+          progCell.font = { color: { argb: '166534' }, bold: true }
+        } else if (rec.storzProgressPercent > 0) {
+          progCell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'EDE9FE' },
+          }
+          progCell.font = { color: { argb: '5B21B6' }, bold: true }
+        }
       }
     }
 
-    await workbook.xlsx.writeFile(filePath);
-    console.log(`[HSEFilterEngine] 📊 Relatório Excel exportado com sucesso para a equipe HSE: ${filePath}`);
+    await workbook.xlsx.writeFile(filePath)
+    console.log(
+      `[HSEFilterEngine] 📊 Relatório Excel exportado com sucesso para a equipe HSE: ${filePath}`
+    )
 
-    return filePath;
+    return filePath
   }
 }

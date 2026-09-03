@@ -1,37 +1,43 @@
-import ExcelJS from 'exceljs';
-import { IRPOExporter } from '../../ports/IRPOExporter.js';
-import { Inspector, Certificate } from '../../domain/models/Certificate.js';
-import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js';
+import ExcelJS from 'exceljs'
+import { Certificate, Inspector } from '../../domain/models/Certificate.js'
+import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
+import { IRPOExporter } from '../../ports/IRPOExporter.js'
 
 export class ExcelRPOAdapter implements IRPOExporter {
-  private refDate: Date;
+  private refDate: Date
 
   constructor(refDate: Date = new Date(2026, 7, 13)) {
-    this.refDate = refDate;
+    this.refDate = refDate
   }
 
   async readRPOData(filePath: string): Promise<Inspector[]> {
-    const workbook = new ExcelJS.Workbook();
-    await workbook.xlsx.readFile(filePath);
+    const workbook = new ExcelJS.Workbook()
+    await workbook.xlsx.readFile(filePath)
 
-    const sheet = workbook.getWorksheet('ATW_ADM_002 - RPO - EHS');
-    const inspectors: Inspector[] = [];
+    const sheet = workbook.getWorksheet('ATW_ADM_002 - RPO - EHS')
+    const inspectors: Inspector[] = []
 
     if (!sheet) {
-      console.warn('[ExcelRPOAdapter] Aba ATW_ADM_002 - RPO - EHS não encontrada.');
-      return inspectors;
+      console.warn(
+        '[ExcelRPOAdapter] Aba ATW_ADM_002 - RPO - EHS não encontrada.'
+      )
+      return inspectors
     }
 
     sheet.eachRow((row, rowNumber) => {
-      if (rowNumber < 12) return;
+      if (rowNumber < 12) return
 
-      const funcName = row.getCell(54).value?.toString();
-      const setor = row.getCell(53).value?.toString();
-      const winda = row.getCell(55).value?.toString();
-      const tipo = row.getCell(50).value?.toString();
+      const funcName = row.getCell(54).value?.toString()
+      const setor = row.getCell(53).value?.toString()
+      const winda = row.getCell(55).value?.toString()
+      const tipo = row.getCell(50).value?.toString()
 
-      if (funcName && !funcName.startsWith('DOCUMENTOS') && funcName !== 'FUNCIONARIO') {
-        const certificates = new Map<string, Certificate>();
+      if (
+        funcName &&
+        !funcName.startsWith('DOCUMENTOS') &&
+        funcName !== 'FUNCIONARIO'
+      ) {
+        const certificates = new Map<string, Certificate>()
 
         const dateColumns: Record<string, { col: number; name: string }> = {
           '01': { col: 63, name: 'ASO' },
@@ -50,29 +56,32 @@ export class ExcelRPOAdapter implements IRPOExporter {
           '21': { col: 81, name: 'NR-35' },
           '22': { col: 82, name: 'LOTO' },
           '25': { col: 83, name: 'SIT VESTAS' },
-          '26': { col: 84, name: 'ESO VESTAS' }
-        };
+          '26': { col: 84, name: 'ESO VESTAS' },
+        }
 
         for (const [code, meta] of Object.entries(dateColumns)) {
-          const rawCellVal = row.getCell(meta.col).value;
-          let expDate: Date | undefined = undefined;
+          const rawCellVal = row.getCell(meta.col).value
+          let expDate: Date | undefined = undefined
 
           if (rawCellVal instanceof Date) {
-            expDate = rawCellVal;
-          } else if (typeof rawCellVal === 'string' || typeof rawCellVal === 'number') {
-            const parsed = new Date(rawCellVal);
-            if (!isNaN(parsed.getTime())) expDate = parsed;
+            expDate = rawCellVal
+          } else if (
+            typeof rawCellVal === 'string' ||
+            typeof rawCellVal === 'number'
+          ) {
+            const parsed = new Date(rawCellVal)
+            if (!isNaN(parsed.getTime())) expDate = parsed
           }
 
           if (expDate) {
-            const evalResult = EHSEvaluator.evaluateDate(expDate, this.refDate);
+            const evalResult = EHSEvaluator.evaluateDate(expDate, this.refDate)
             certificates.set(code, {
               code,
               name: meta.name,
               expirationDate: expDate,
               statusEHS: evalResult.status,
-              statusDetail: evalResult.detail
-            });
+              statusDetail: evalResult.detail,
+            })
           }
         }
 
@@ -82,16 +91,21 @@ export class ExcelRPOAdapter implements IRPOExporter {
           role: tipo || 'INSPETOR',
           sector: setor,
           windaId: winda,
-          certificates
-        });
+          certificates,
+        })
       }
-    });
+    })
 
-    return inspectors;
+    return inspectors
   }
 
-  async updateRPOData(filePath: string, inspectors: Inspector[]): Promise<boolean> {
-    console.log(`[ExcelRPOAdapter] Sincronização e atualização agendada para: ${filePath}`);
-    return true;
+  async updateRPOData(
+    filePath: string,
+    inspectors: Inspector[]
+  ): Promise<boolean> {
+    console.log(
+      `[ExcelRPOAdapter] Sincronização e atualização agendada para: ${filePath}`
+    )
+    return true
   }
 }

@@ -1,12 +1,16 @@
-import { Inspector } from '../models/Certificate.js';
-import { classifyEmployeeProfile, getRequiredDocCodesForProfile, EmployeeProfile } from './EmployeeProfileClassifier.js';
-import { matchesInspector } from './InspectorMatcher.js';
+import { Inspector } from '../models/Certificate.js'
+import {
+  EmployeeProfile,
+  classifyEmployeeProfile,
+  getRequiredDocCodesForProfile,
+} from './EmployeeProfileClassifier.js'
+import { matchesInspector } from './InspectorMatcher.js'
 
 export interface RosterEntry {
-  inspector: Inspector;
-  profile: EmployeeProfile;
-  requiredDocCodes: string[];
-  hasDriveFolder: boolean;
+  inspector: Inspector
+  profile: EmployeeProfile
+  requiredDocCodes: string[]
+  hasDriveFolder: boolean
 }
 
 /**
@@ -16,19 +20,27 @@ export interface RosterEntry {
  * mais confiável que só uma data digitada na planilha) — a RPO preenche o que falta.
  * Desligados (perfil null) são excluídos do resultado.
  */
-export function buildRoster(rpoInspectors: Inspector[], driveInspectors: Inspector[]): RosterEntry[] {
-  const entries: RosterEntry[] = [];
+export function buildRoster(
+  rpoInspectors: Inspector[],
+  driveInspectors: Inspector[]
+): RosterEntry[] {
+  const entries: RosterEntry[] = []
 
   for (const rpoInspector of rpoInspectors) {
-    const profile = classifyEmployeeProfile(rpoInspector.role, rpoInspector.rpoBranch);
-    if (!profile) continue; // DE — desligado, fora do universo de auditoria
+    const profile = classifyEmployeeProfile(
+      rpoInspector.role,
+      rpoInspector.rpoBranch
+    )
+    if (!profile) continue // DE — desligado, fora do universo de auditoria
 
-    const driveMatch = driveInspectors.find((d) => matchesInspector(d, rpoInspector.name));
+    const driveMatch = driveInspectors.find(d =>
+      matchesInspector(d, rpoInspector.name)
+    )
 
-    const mergedCertificates = new Map(rpoInspector.certificates);
+    const mergedCertificates = new Map(rpoInspector.certificates)
     if (driveMatch) {
       for (const [code, cert] of driveMatch.certificates) {
-        mergedCertificates.set(code, cert);
+        mergedCertificates.set(code, cert)
       }
     }
 
@@ -37,24 +49,27 @@ export function buildRoster(rpoInspectors: Inspector[], driveInspectors: Inspect
     // contrato, e quando acaba o aditivo caso tenha o contrato e o aditivo". Mantém o código '40'
     // (é o que requiredDocCodes cobra) mas com a data/detalhe do aditivo, que é sempre a mais
     // recente/válida das duas.
-    const aditivo = mergedCertificates.get('40.1');
+    const aditivo = mergedCertificates.get('40.1')
     if (aditivo) {
-      mergedCertificates.set('40', { ...aditivo, code: '40' });
+      mergedCertificates.set('40', { ...aditivo, code: '40' })
     }
 
     const inspector: Inspector = {
       ...rpoInspector,
       location: driveMatch?.location,
-      certificates: mergedCertificates
-    };
+      certificates: mergedCertificates,
+    }
 
     entries.push({
       inspector,
       profile,
-      requiredDocCodes: getRequiredDocCodesForProfile(profile, rpoInspector.employmentType),
-      hasDriveFolder: !!driveMatch
-    });
+      requiredDocCodes: getRequiredDocCodesForProfile(
+        profile,
+        rpoInspector.employmentType
+      ),
+      hasDriveFolder: !!driveMatch,
+    })
   }
 
-  return entries;
+  return entries
 }

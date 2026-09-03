@@ -1,5 +1,5 @@
-import { StorzRequest } from '../../domain/models/StorzRequest.js';
-import { DOC_CATALOG_MAP } from '../../domain/services/ComplianceEngine.js';
+import { StorzRequest } from '../../domain/models/StorzRequest.js'
+import { DOC_CATALOG_MAP } from '../../domain/services/ComplianceEngine.js'
 
 /**
  * Dashboard separado do EHS, pensado pro time de Desenvolvimento Organizacional (analista de
@@ -9,7 +9,7 @@ import { DOC_CATALOG_MAP } from '../../domain/services/ComplianceEngine.js';
  * dashboard EHS (dados pessoais, repo privado sem Pages com acesso restrito).
  */
 export function buildDoDashboardHtml(requests: StorzRequest[]): string {
-  const dataJson = JSON.stringify(requests);
+  const dataJson = JSON.stringify(requests)
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -469,5 +469,5 @@ render();
 </script>
 </body>
 </html>
-`;
+`
 }

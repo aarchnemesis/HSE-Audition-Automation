@@ -1,26 +1,26 @@
-import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js';
+import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js'
 
-export type EmployeeProfile = 'CAMPO' | 'ADMINISTRATIVO' | 'COORDENADOR';
+export type EmployeeProfile = 'CAMPO' | 'ADMINISTRATIVO' | 'COORDENADOR'
 
 // Baseado nos valores reais da coluna FUNÇÃO na RPO (confirmado com o time de HSE em 21/08/2026):
 //   IQ = Inspetor de Qualidade, TO = Técnico de Operações, LO = Líder Operacional,
 //   IE = Inspetor de Equipamentos — todos perfil CAMPO (pacote completo de documentação).
 // CO (Coordenador) NÃO está mais aqui — ganhou perfil próprio em 25/08/2026, ver COORDENADOR_FUNCAO_CODES.
-const CAMPO_FUNCAO_CODES = new Set(['IQ', 'TO', 'LO', 'IE']);
+const CAMPO_FUNCAO_CODES = new Set(['IQ', 'TO', 'LO', 'IE'])
 
 // CO = Coordenador. Confirmado pelo usuário em 25/08/2026 (caso real: João Victor Costa Campos):
 // coordenador coordena, não faz a atividade de risco em si — não deveria ser cobrado o pacote
 // completo de campo igual IQ/TO/LO/IE. Só ASO é obrigatório (e só se CLT); o resto do catálogo de
 // treinamentos fica como MONITORAMENTO (aparece se a pessoa tiver, mas ausência não é pendência).
-const COORDENADOR_FUNCAO_CODES = new Set(['CO']);
+const COORDENADOR_FUNCAO_CODES = new Set(['CO'])
 
 // ADM = Administrativo, EHS = time de EHS, ENG = Engenharia, DO = Desenvolvimento
 // Organizacional, DS = Diretor de Serviços (cargo descontinuado) — perfil ADMINISTRATIVO
 // (documentação básica, ex.: ASO).
-const ADMINISTRATIVO_FUNCAO_CODES = new Set(['ADM', 'EHS', 'ENG', 'DO', 'DS']);
+const ADMINISTRATIVO_FUNCAO_CODES = new Set(['ADM', 'EHS', 'ENG', 'DO', 'DS'])
 
 // DE = Desligado — excluído da auditoria por completo, não é uma pessoa ativa.
-const DESLIGADO_FUNCAO_CODES = new Set(['DE']);
+const DESLIGADO_FUNCAO_CODES = new Set(['DE'])
 
 /**
  * Ramos da hierarquia da RPO (dentro de "RECURSOS HUMANOS") que são homogêneos o suficiente pra
@@ -36,8 +36,8 @@ const BRANCH_TO_PROFILE: Record<string, 'CAMPO' | 'ADMINISTRATIVO'> = {
   'LPS - SPDA': 'CAMPO',
   ENGENHARIA: 'ADMINISTRATIVO',
   ADMINISTRATIVO: 'ADMINISTRATIVO',
-  VISIBILIDADE: 'ADMINISTRATIVO'
-};
+  VISIBILIDADE: 'ADMINISTRATIVO',
+}
 
 /**
  * Escopo do relatório de EHS a partir de 27/08/2026 (pedido do usuário: "a questão de
@@ -51,8 +51,8 @@ export const EHS_TRAINING_SCOPE_BRANCHES = [
   'INSP. QUALIDADE & TÉC. OPERAÇÕES',
   'LÍDERES / EHS',
   'DRONE INSP. EQUIPAMENTO',
-  'LPS - SPDA'
-];
+  'LPS - SPDA',
+]
 
 /**
  * Classifica o perfil de exigência documental de um colaborador. Prioridade:
@@ -65,19 +65,22 @@ export const EHS_TRAINING_SCOPE_BRANCHES = [
  *      `rpoBranch` (inspetor que só existe no Drive). Desconhecido/em branco cai em ADMINISTRATIVO
  *      por padrão — mais seguro presumir o pacote básico do que o completo sem confirmação.
  */
-export function classifyEmployeeProfile(funcaoCode: string | undefined, rpoBranch?: string): EmployeeProfile | null {
-  const code = (funcaoCode || '').trim().toUpperCase();
+export function classifyEmployeeProfile(
+  funcaoCode: string | undefined,
+  rpoBranch?: string
+): EmployeeProfile | null {
+  const code = (funcaoCode || '').trim().toUpperCase()
 
-  if (DESLIGADO_FUNCAO_CODES.has(code)) return null;
-  if (COORDENADOR_FUNCAO_CODES.has(code)) return 'COORDENADOR';
+  if (DESLIGADO_FUNCAO_CODES.has(code)) return null
+  if (COORDENADOR_FUNCAO_CODES.has(code)) return 'COORDENADOR'
 
-  const branchProfile = rpoBranch ? BRANCH_TO_PROFILE[rpoBranch] : undefined;
-  if (branchProfile) return branchProfile;
+  const branchProfile = rpoBranch ? BRANCH_TO_PROFILE[rpoBranch] : undefined
+  if (branchProfile) return branchProfile
 
-  if (CAMPO_FUNCAO_CODES.has(code)) return 'CAMPO';
-  if (ADMINISTRATIVO_FUNCAO_CODES.has(code)) return 'ADMINISTRATIVO';
+  if (CAMPO_FUNCAO_CODES.has(code)) return 'CAMPO'
+  if (ADMINISTRATIVO_FUNCAO_CODES.has(code)) return 'ADMINISTRATIVO'
 
-  return 'ADMINISTRATIVO';
+  return 'ADMINISTRATIVO'
 }
 
 /**
@@ -97,14 +100,39 @@ export function classifyEmployeeProfile(funcaoCode: string | undefined, rpoBranc
 // aparecia nos relatórios — corrigido em 21/08/2026.
 // '31' (Elevador JASO) e '34' (CIPA) adicionados em 25/08/2026 como eletivos — exigência de
 // parque/comissão, não do perfil, mas quem tem precisa ter a validade monitorada.
-const CAMPO_REQUIRED_DOC_CODES = ['01', '08', '12', '13', '16', '17', '19', '21', '22', '25', '26', '30', '31', '32', '34'];
-const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01', '34'];
+const CAMPO_REQUIRED_DOC_CODES = [
+  '01',
+  '08',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+  '16',
+  '17',
+  '18',
+  '19',
+  '20',
+  '21',
+  '22',
+  '25',
+  '26',
+  '28',
+  '30',
+  '31',
+  '32',
+  '34',
+]
+const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01', '34']
 
 // Coordenador: só ASO é de fato exigido. O resto do pacote de campo (mesmos códigos do perfil
 // CAMPO, exceto ASO) entra como monitoramento — ver getElectiveDocCodesForProfile, que marca
 // todos esses códigos como eletivos pra esse perfil específico.
-const COORDENADOR_REQUIRED_DOC_CODES = CAMPO_REQUIRED_DOC_CODES;
-const COORDENADOR_MONITORED_ONLY_CODES = CAMPO_REQUIRED_DOC_CODES.filter((c) => c !== '01');
+const COORDENADOR_REQUIRED_DOC_CODES = CAMPO_REQUIRED_DOC_CODES
+const COORDENADOR_MONITORED_ONLY_CODES = CAMPO_REQUIRED_DOC_CODES.filter(
+  c => c !== '01'
+)
 
 /**
  * ASO não é sobre vínculo empregatício, é sobre EXPOSIÇÃO A RISCO. Confirmado com o time de HSE
@@ -117,15 +145,20 @@ const COORDENADOR_MONITORED_ONLY_CODES = CAMPO_REQUIRED_DOC_CODES.filter((c) => 
  * tem a mesma exposição a risco (coordena, não executa a atividade) — então PJ+COORDENADOR não
  * tem nenhum motivo pra ser cobrado nada, nem ASO.
  */
-export function getRequiredDocCodesForProfile(profile: EmployeeProfile, employmentType?: string): string[] {
-  const isPJ = (employmentType || '').trim().toUpperCase() === 'PJ';
+export function getRequiredDocCodesForProfile(
+  profile: EmployeeProfile,
+  employmentType?: string
+): string[] {
+  const isPJ = (employmentType || '').trim().toUpperCase() === 'PJ'
 
   // Contrato PJ (40) só se aplica a quem é PJ de verdade — CLT não tem esse documento. Confirmado
   // pelo usuário em 27/08/2026: quer saber quando termina o prazo do contrato/aditivo dos pilotos PJ.
-  if (profile === 'CAMPO') return isPJ ? [...CAMPO_REQUIRED_DOC_CODES, '40'] : CAMPO_REQUIRED_DOC_CODES;
-  if (profile === 'COORDENADOR') return isPJ ? [] : COORDENADOR_REQUIRED_DOC_CODES;
+  if (profile === 'CAMPO')
+    return isPJ ? [...CAMPO_REQUIRED_DOC_CODES, '40'] : CAMPO_REQUIRED_DOC_CODES
+  if (profile === 'COORDENADOR')
+    return isPJ ? [] : COORDENADOR_REQUIRED_DOC_CODES
 
-  return isPJ ? [] : ADMINISTRATIVO_REQUIRED_DOC_CODES;
+  return isPJ ? [] : ADMINISTRATIVO_REQUIRED_DOC_CODES
 }
 
 /**
@@ -135,7 +168,9 @@ export function getRequiredDocCodesForProfile(profile: EmployeeProfile, employme
  * (Vestas, Elevador, CIPA). COORDENADOR usa um conjunto próprio: todo o catálogo de treinamentos
  * de campo é monitoramento pra esse perfil, só ASO é de fato exigido.
  */
-export function getElectiveDocCodesForProfile(profile: EmployeeProfile): string[] {
-  if (profile === 'COORDENADOR') return COORDENADOR_MONITORED_ONLY_CODES;
-  return Array.from(ELECTIVE_DOC_CODES);
+export function getElectiveDocCodesForProfile(
+  profile: EmployeeProfile
+): string[] {
+  if (profile === 'COORDENADOR') return COORDENADOR_MONITORED_ONLY_CODES
+  return Array.from(ELECTIVE_DOC_CODES)
 }
