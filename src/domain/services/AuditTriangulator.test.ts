@@ -314,4 +314,98 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     const nr35Item = result.auditItems.find(i => i.code === '21')!
     expect(nr35Item.status).toBe('AUSENTE')
   })
+
+  it('quando o curso foi CONCLUIDO na Storz e não há documento no Drive, considera CONFORME com base na data de conclusão', () => {
+    const inspector = makeInspector([]) // sem certificado no Drive
+    const storzRequests: StorzRequest[] = [
+      {
+        id: 'REQ-CONCLUIDO-1',
+        collaboratorName: 'FULANO DE TAL',
+        trainingCode: '21',
+        trainingName: 'NR-35',
+        modality: 'PRESENCIAL',
+        requestDate: new Date(2026, 4, 10),
+        completionDate: new Date(2026, 4, 10), // concluído há 3 meses, válido por 2 anos (até 2028)
+        state: 'CONCLUIDO',
+      },
+    ]
+
+    const result = AuditTriangulator.performTripleAudit(
+      inspector,
+      PARK,
+      storzRequests,
+      REF_DATE
+    )
+
+    expect(result.auditItems[0].status).toBe('CONFORME')
+    expect(result.auditItems[0].detail).toContain(
+      'Curso concluído e aprovado na Storz'
+    )
+    expect(result.validDocsCount).toBe(1)
+    expect(result.missingDocsCount).toBe(0)
+    expect(result.overallStatus).toBe('APTO')
+  })
+
+  it('quando o documento no Drive está VENCIDO mas o colaborador RENOVOU na Storz (CONCLUIDO), considera a validade da Storz e fica CONFORME', () => {
+    const certVencido = makeCert('21', new Date(2026, 2, 1)) // vencido em março de 2026
+    const inspector = makeInspector([certVencido])
+    const storzRequests: StorzRequest[] = [
+      {
+        id: 'REQ-RENOVADO-1',
+        collaboratorName: 'FULANO DE TAL',
+        trainingCode: '21',
+        trainingName: 'NR-35',
+        modality: 'PRESENCIAL',
+        requestDate: new Date(2026, 4, 1),
+        completionDate: new Date(2026, 4, 1), // renovado em maio de 2026, válido até maio de 2028
+        state: 'CONCLUIDO',
+      },
+    ]
+
+    const result = AuditTriangulator.performTripleAudit(
+      inspector,
+      PARK,
+      storzRequests,
+      REF_DATE
+    )
+
+    expect(result.auditItems[0].status).toBe('CONFORME')
+    expect(result.auditItems[0].detail).toContain(
+      'Curso renovado e aprovado na Storz'
+    )
+    expect(result.validDocsCount).toBe(1)
+    expect(result.expiredDocsCount).toBe(0)
+    expect(result.overallStatus).toBe('APTO')
+  })
+
+  it('quando o curso na Storz está SOLICITADO ou EM ANDAMENTO, considera o prazo de vencimento do documento do Drive', () => {
+    const certVencendo = makeCert('21', NEAR_EXPIRY) // vence em 6 dias
+    const inspector = makeInspector([certVencendo])
+    const storzRequests: StorzRequest[] = [
+      {
+        id: 'REQ-EM-ANDAMENTO-1',
+        collaboratorName: 'FULANO DE TAL',
+        trainingCode: '21',
+        trainingName: 'NR-35',
+        modality: 'PRESENCIAL',
+        requestDate: new Date(2026, 7, 1),
+        state: 'EM_ANDAMENTO',
+      },
+    ]
+
+    const result = AuditTriangulator.performTripleAudit(
+      inspector,
+      PARK,
+      storzRequests,
+      REF_DATE
+    )
+
+    // Como ainda está em andamento (não concluído), o prazo que vale é o vencimento do documento
+    expect(result.auditItems[0].status).toBe('VENCE_07')
+    expect(result.auditItems[0].detail).toContain(
+      'o prazo que vale é o vencimento do documento'
+    )
+    expect(result.warningDocsCount).toBe(1)
+    expect(result.storzInProgressCount).toBe(1)
+  })
 })

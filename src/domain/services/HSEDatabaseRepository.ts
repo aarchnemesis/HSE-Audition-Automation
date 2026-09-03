@@ -76,7 +76,7 @@ export class HSEDatabaseRepository {
           docName: item.reqName,
           modality: (item.actualModality as TrainingModality) || 'PRESENCIAL',
           issueDate: undefined,
-          expirationDate: undefined,
+          expirationDate: item.expirationDate?.toISOString(),
           statusEHS: item.status,
           storzRequestId: item.storzRequestFound?.requestId,
           storzState: item.storzRequestFound?.state,
