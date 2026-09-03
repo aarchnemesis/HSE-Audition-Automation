@@ -378,7 +378,7 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.overallStatus).toBe('APTO')
   })
 
-  it('quando o curso na Storz está SOLICITADO ou EM ANDAMENTO, considera o prazo de vencimento do documento do Drive', () => {
+  it('quando o curso na Storz está EM ANDAMENTO, reporta progresso e alerta se o certificado vence antes dos 60 dias da Storz', () => {
     const certVencendo = makeCert('21', NEAR_EXPIRY) // vence em 6 dias
     const inspector = makeInspector([certVencendo])
     const storzRequests: StorzRequest[] = [
@@ -389,6 +389,9 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
         trainingName: 'NR-35',
         modality: 'PRESENCIAL',
         requestDate: new Date(2026, 7, 1),
+        progressPercent: 35,
+        courseDurationDays: 60,
+        rawSituacao: 'Em andamento',
         state: 'EM_ANDAMENTO',
       },
     ]
@@ -400,11 +403,13 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
       REF_DATE
     )
 
-    // Como ainda está em andamento (não concluído), o prazo que vale é o vencimento do documento
+    // O prazo que vale é o vencimento do documento (VENCE_07), alertando sobre o ritmo
     expect(result.auditItems[0].status).toBe('VENCE_07')
-    expect(result.auditItems[0].detail).toContain(
-      'o prazo que vale é o vencimento do documento'
-    )
+    expect(result.auditItems[0].storzProgressPercent).toBe(35)
+    expect(result.auditItems[0].storzDeadline).toBeDefined()
+    expect(result.auditItems[0].detail).toContain('Progresso: 35%')
+    expect(result.auditItems[0].detail).toContain('ATENÇÃO AO RITMO')
+    expect(result.auditItems[0].detail).toContain('ANTES do prazo da Storz')
     expect(result.warningDocsCount).toBe(1)
     expect(result.storzInProgressCount).toBe(1)
   })

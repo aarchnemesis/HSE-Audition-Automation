@@ -26,6 +26,8 @@ export interface HSEDatabaseRecord {
   statusEHS: EHSStatus
   storzRequestId?: string
   storzState?: string
+  storzProgressPercent?: number
+  storzDeadline?: string
   detail: string
   lastUpdated: string
 }
@@ -80,6 +82,10 @@ export class HSEDatabaseRepository {
           statusEHS: item.status,
           storzRequestId: item.storzRequestFound?.requestId,
           storzState: item.storzRequestFound?.state,
+          storzProgressPercent: item.storzProgressPercent,
+          storzDeadline: item.storzDeadline
+            ? item.storzDeadline.toLocaleDateString('pt-BR')
+            : undefined,
           detail: item.detail,
           lastUpdated: timestamp,
         })

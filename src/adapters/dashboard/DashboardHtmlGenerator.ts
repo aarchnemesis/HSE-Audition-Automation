@@ -636,6 +636,8 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
                   <th style="text-align:left;">Curso Solicitado</th>
                   <th>Storz ID</th>
                   <th>Status Matrícula</th>
+                  <th style="min-width:130px;">Progresso (%)</th>
+                  <th>Prazo Limite Storz</th>
                   <th style="text-align:left;">Detalhe Operacional</th>
                 </tr>
               </thead>
@@ -929,17 +931,32 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       });
 
       if (storzRecords.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="5" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma solicitação ativa na Storz.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma solicitação ativa na Storz.</td></tr>';
         return;
       }
 
       storzRecords.forEach(r => {
         const tr = document.createElement('tr');
+        const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : (r.storzState === 'CONCLUIDO' ? 100 : 0);
+        const progColor = prog === 100 ? '#10b981' : prog > 0 ? '#6366f1' : '#94a3b8';
+        const progHtml = '<div style="display:flex;align-items:center;gap:6px;min-width:100px;">' +
+          '<div style="flex:1;height:6px;background:var(--border-color);border-radius:3px;overflow:hidden;">' +
+          '<div style="width:' + prog + '%;height:100%;background:' + progColor + ';"></div>' +
+          '</div>' +
+          '<span style="font-weight:700;font-size:11px;">' + prog + '%</span>' +
+          '</div>';
+
+        const dlHtml = r.storzDeadline 
+          ? '<span style="font-size:11px;font-weight:600;">' + r.storzDeadline + '</span>'
+          : '<span style="color:var(--text-muted);font-size:11px;">—</span>';
+
         tr.innerHTML = 
           '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong><div style="font-size:10px;color:var(--text-muted);">' + (r.sector || 'Operações') + '</div></td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td><span class="mono" style="font-weight:700;color:var(--brand-purple);">' + (r.storzRequestId || '—') + '</span></td>' +
           '<td><span class="badge storz">' + (r.storzState || 'EM ANDAMENTO') + '</span></td>' +
+          '<td>' + progHtml + '</td>' +
+          '<td>' + dlHtml + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>';
         tbody.appendChild(tr);
       });
