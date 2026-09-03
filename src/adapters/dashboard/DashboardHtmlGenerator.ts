@@ -70,42 +70,38 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
 
     .mono { font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; }
 
-    /* SVG ICONS */
-    .ico {
-      width: 16px;
-      height: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      vertical-align: middle;
-    }
-    .ico svg {
-      width: 100%;
-      height: 100%;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .ico-sm { width: 14px; height: 14px; }
-    .ico-xs { width: 11px; height: 11px; }
-    .ico-inline { display: inline-flex; vertical-align: -2px; margin-right: 4px; }
-    .ico-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
+    /* SVG ICONS GLOBAL RESET & BASE STYLES */
+    svg.ico, .ico svg, svg.chip-svg, .badge svg, .storz-mini-tag svg, .group-header svg, .pill-opt svg {
+      stroke: currentColor !important;
+      fill: none !important;
+      stroke-width: 2.2 !important;
+      stroke-linecap: round !important;
+      stroke-linejoin: round !important;
       display: inline-block;
-      margin-right: 5px;
-      vertical-align: 1px;
+      vertical-align: -2px;
+      flex-shrink: 0;
     }
-    .ico-dot.ok { background: #10B981; }
-    .ico-dot.warn { background: #F59E0B; }
-    .ico-dot.crit { background: #EF4444; }
-    .ico-dot.ausente { background: #94A3B8; }
-    .ico-dot.storz { background: #8B5CF6; }
-    .ico-dot.req { background: #2563EB; }
+    svg.ico { width: 16px; height: 16px; }
+    .ico svg { width: 100%; height: 100%; }
+    .ico-sm, svg.ico-sm { width: 14px; height: 14px; }
+    .ico-xs, svg.ico-xs, .badge svg, .storz-mini-tag svg { width: 11px; height: 11px; margin-right: 3px; }
+    .ico-inline, svg.ico-inline { display: inline-flex; vertical-align: -2px; margin-right: 4px; }
+
+    /* CHIP ICONS */
+    svg.chip-svg {
+      width: 13px;
+      height: 13px;
+      margin-right: 2px;
+      vertical-align: -2px;
+    }
+
+    /* SPECIFIC ACCENT COLORS FOR ICONS */
+    .icon-crit { color: #EF4444 !important; stroke: #EF4444 !important; }
+    .icon-warn { color: #F59E0B !important; stroke: #F59E0B !important; }
+    .icon-ok { color: #10B981 !important; stroke: #10B981 !important; }
+    .icon-storz { color: #8B5CF6 !important; stroke: #8B5CF6 !important; }
+    .icon-req { color: #2563EB !important; stroke: #2563EB !important; }
+    .icon-gray { color: #64748B !important; stroke: #64748B !important; }
 
     /* LEFT SIDEBAR */
     .sidebar {
@@ -342,9 +338,12 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       color: var(--text-muted);
       font-size: 11px;
       font-weight: 600;
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 6px;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
       transition: all 0.15s;
     }
     .chip:hover { border-color: #94A3B8; color: var(--text-main); }
@@ -353,6 +352,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
     .chip.chip-warn.active { background: #F59E0B; color: #FFFFFF; border-color: #F59E0B; }
     .chip.chip-storz.active { background: #8B5CF6; color: #FFFFFF; border-color: #8B5CF6; }
     .chip.chip-ok.active { background: #10B981; color: #FFFFFF; border-color: #10B981; }
+    .chip.active svg { color: #FFFFFF !important; stroke: #FFFFFF !important; }
 
     /* STORZ SUMMARY ROW IN VIEW 3 */
     .storz-summary-row {
@@ -676,9 +676,9 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       <div class="topbar-filters">
         <div class="filter-group">
           <span class="filter-label">Visualização:</span>
-          <span class="pill-opt active" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
-          <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
-          <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
+          <span class="pill-opt active" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
+          <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
+          <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
         </div>
       </div>
     </div>
@@ -740,11 +740,26 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       <!-- QUICK CHIPS & SEARCH BAR -->
       <div class="quick-chips-row">
         <span class="quick-chips-label">Filtros Rápidos:</span>
-        <button class="chip active" id="chip-ALL" onclick="applyStatusFilter('ALL')">Todos (<span id="chipAllCount">0</span>)</button>
-        <button class="chip chip-crit" id="chip-VENCIDO" onclick="applyStatusFilter('VENCIDO')"><span class="ico-dot crit"></span>Com Vencidos</button>
-        <button class="chip chip-warn" id="chip-VENCE_30" onclick="applyStatusFilter('VENCE_30')"><span class="ico-dot warn"></span>A Vencer (&lt;30d)</button>
-        <button class="chip chip-storz" id="chip-STORZ" onclick="applyStatusFilter('STORZ')"><span class="ico-dot storz"></span>Com Storz Ativa (<span id="chipStorzCount">0</span>)</button>
-        <button class="chip chip-ok" id="chip-CONFORME" onclick="applyStatusFilter('CONFORME')"><span class="ico-dot ok"></span>100% Em Dia</button>
+        <button class="chip active" id="chip-ALL" onclick="applyStatusFilter('ALL')">
+          <svg class="chip-svg icon-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Todos (<span id="chipAllCount">0</span>)
+        </button>
+        <button class="chip chip-crit" id="chip-VENCIDO" onclick="applyStatusFilter('VENCIDO')">
+          <svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Com Vencidos
+        </button>
+        <button class="chip chip-warn" id="chip-VENCE_30" onclick="applyStatusFilter('VENCE_30')">
+          <svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          A Vencer (&lt;30d)
+        </button>
+        <button class="chip chip-storz" id="chip-STORZ" onclick="applyStatusFilter('STORZ')">
+          <svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          Com Storz Ativa (<span id="chipStorzCount">0</span>)
+        </button>
+        <button class="chip chip-ok" id="chip-CONFORME" onclick="applyStatusFilter('CONFORME')">
+          <svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          100% Em Dia
+        </button>
       </div>
 
       <!-- CONTROLS -->
@@ -773,10 +788,10 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
               <thead id="matrixHead">
                 <tr id="matrixGroupRow">
                   <th class="th-sticky group-collab">COLABORADOR / RAMO</th>
-                  <th colspan="4" class="group-header group-saude"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Saúde &amp; Integração</th>
-                  <th colspan="4" class="group-header group-eletrica"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Elétrica &amp; Máquinas</th>
-                  <th colspan="6" class="group-header group-altura"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Altura, Espaço &amp; CIPA</th>
-                  <th colspan="6" class="group-header group-gwo"><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Módulos GWO &amp; Específicos</th>
+                  <th colspan="4" class="group-header group-saude"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Saúde &amp; Integração</th>
+                  <th colspan="4" class="group-header group-eletrica"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Elétrica &amp; Máquinas</th>
+                  <th colspan="6" class="group-header group-altura"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Altura, Espaço &amp; CIPA</th>
+                  <th colspan="6" class="group-header group-gwo"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Módulos GWO &amp; Específicos</th>
                 </tr>
                 <tr id="matrixHeaderRow"></tr>
               </thead>
@@ -816,26 +831,26 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
           </div>
           <div class="storz-summary-card in-progress">
             <div class="storz-summary-val mono" id="storzSummaryInProgress" style="color:#7C3AED;">0</div>
-            <div class="storz-summary-label"><span class="ico-dot storz"></span>Em Andamento (Iniciados)</div>
+            <div class="storz-summary-label"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Em Andamento (Iniciados)</div>
           </div>
           <div class="storz-summary-card requested">
             <div class="storz-summary-val mono" id="storzSummaryRequested" style="color:#2563EB;">0</div>
-            <div class="storz-summary-label"><span class="ico-dot req"></span>Solicitados (Aguardando)</div>
+            <div class="storz-summary-label"><svg class="chip-svg icon-req" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Solicitados (Aguardando)</div>
           </div>
           <div class="storz-summary-card completed">
             <div class="storz-summary-val mono" id="storzSummaryCompleted" style="color:#10B981;">0</div>
-            <div class="storz-summary-label"><span class="ico-dot ok"></span>Concluídos Recentes</div>
+            <div class="storz-summary-label"><svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Concluídos Recentes</div>
           </div>
         </div>
 
         <div class="card">
           <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-            <h3><svg class="ico ico-sm ico-inline" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Painel de Gestão e Monitoramento de Treinamentos Storz</h3>
+            <h3><svg class="ico ico-sm ico-inline icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Painel de Gestão e Monitoramento de Treinamentos Storz</h3>
             <div style="display:flex; gap:6px;">
               <button class="chip active" id="storzSubTab-ALL" onclick="filterStorzSubTab('ALL')">Todas as Ativas</button>
-              <button class="chip" id="storzSubTab-EM_ANDAMENTO" onclick="filterStorzSubTab('EM_ANDAMENTO')"><span class="ico-dot storz"></span>Em Andamento</button>
-              <button class="chip" id="storzSubTab-SOLICITADO" onclick="filterStorzSubTab('SOLICITADO')"><span class="ico-dot req"></span>Solicitadas</button>
-              <button class="chip" id="storzSubTab-CONCLUIDO" onclick="filterStorzSubTab('CONCLUIDO')"><span class="ico-dot ok"></span>Concluídas</button>
+              <button class="chip" id="storzSubTab-EM_ANDAMENTO" onclick="filterStorzSubTab('EM_ANDAMENTO')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Em Andamento</button>
+              <button class="chip" id="storzSubTab-SOLICITADO" onclick="filterStorzSubTab('SOLICITADO')"><svg class="chip-svg icon-req" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Solicitadas</button>
+              <button class="chip" id="storzSubTab-CONCLUIDO" onclick="filterStorzSubTab('CONCLUIDO')"><svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Concluídas</button>
             </div>
           </div>
           <div class="table-container">
@@ -876,12 +891,12 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
     const rawData = ${dataJson};
 
     const SVG_ICONS = {
-      check: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
-      clock: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
-      alert: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
-      x: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
-      cap: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
-      minus: '<svg class="ico ico-xs ico-inline" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>'
+      check: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
+      clock: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><polyline points="12 7 12 12 15.5 14"/></svg>',
+      alert: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+      x: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
+      cap: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+      minus: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><line x1="8" y1="12" x2="16" y2="12"/></svg>'
     };
 
     const priorityDocCodes = [
