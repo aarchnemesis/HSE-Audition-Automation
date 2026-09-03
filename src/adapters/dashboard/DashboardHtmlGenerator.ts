@@ -663,20 +663,51 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
   <script>
     const rawData = ${dataJson};
 
-    const priorityDocCodes = ['01', '21', '12', '13', '16', '17', '19', '22', '08', '30', '32', '31'];
+    const priorityDocCodes = [
+      '01',
+      '08',
+      '10',
+      '11',
+      '12',
+      '13',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '28',
+      '30',
+      '31',
+      '32',
+      '34'
+    ];
     const docShortNames = {
       '01': 'ASO',
-      '21': 'NR-35 Altura',
+      '08': 'CNH',
+      '10': 'NR-01 Integ',
+      '11': 'NR-06 EPI',
       '12': 'NR-10 Básico',
       '13': 'NR-10 SEP',
+      '14': 'NR-11 Talha',
+      '15': 'NR-12 Máquinas',
       '16': 'GWO 1º Soc',
       '17': 'GWO Ergo',
+      '18': 'NR-18 Const',
       '19': 'GWO Fogo',
+      '20': 'NR-33 Vigia',
+      '21': 'NR-35 Altura',
       '22': 'LOTO',
-      '08': 'CNH',
+      '25': 'SIT Vestas',
+      '26': 'ESO Vestas',
+      '28': 'NR-33 Sup',
       '30': 'GWO WINDA',
+      '31': 'JASO Elevador',
       '32': 'GWO ART',
-      '31': 'JASO Elevador'
+      '34': 'CIPA (NR-05)'
     };
 
     const peopleMap = new Map();

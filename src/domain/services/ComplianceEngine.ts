@@ -118,6 +118,7 @@ export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
 export const ELECTIVE_DOC_CODES = new Set([
   '25', // SIT (Vestas)
   '26', // ESO (Vestas)
+  '28', // NR-33 Supervisor
   '31', // Elevador (JASO)
   '34', // CIPA (NR-05)
 ])

@@ -52,16 +52,36 @@ describe('calculateDocExpiration', () => {
     expect(calculateDocExpiration('01', future, REF_DATE)).toEqual(future)
   })
 
-  it('códigos anuais (ex. ASO) somam 1 ano à data de emissão passada', () => {
+  it('códigos anuais (ex. ASO, NR-33 Vigia, NR-33 Sup, CIPA) somam 1 ano à data de emissão passada', () => {
     const issued = new Date(2026, 0, 1) // passado em relação à REF_DATE
-    const exp = calculateDocExpiration('01', issued, REF_DATE)
-    expect(exp?.getFullYear()).toBe(2027)
+    expect(calculateDocExpiration('01', issued, REF_DATE)?.getFullYear()).toBe(
+      2027
+    )
+    expect(calculateDocExpiration('20', issued, REF_DATE)?.getFullYear()).toBe(
+      2027
+    )
+    expect(calculateDocExpiration('28', issued, REF_DATE)?.getFullYear()).toBe(
+      2027
+    )
+    expect(calculateDocExpiration('34', issued, REF_DATE)?.getFullYear()).toBe(
+      2027
+    )
   })
 
-  it('códigos padrão (ex. NR-35, código 21) somam 2 anos', () => {
+  it('códigos padrão (ex. NR-11, NR-12, NR-18, NR-35) somam 2 anos', () => {
     const issued = new Date(2026, 0, 1)
-    const exp = calculateDocExpiration('21', issued, REF_DATE)
-    expect(exp?.getFullYear()).toBe(2028)
+    expect(calculateDocExpiration('14', issued, REF_DATE)?.getFullYear()).toBe(
+      2028
+    )
+    expect(calculateDocExpiration('15', issued, REF_DATE)?.getFullYear()).toBe(
+      2028
+    )
+    expect(calculateDocExpiration('18', issued, REF_DATE)?.getFullYear()).toBe(
+      2028
+    )
+    expect(calculateDocExpiration('21', issued, REF_DATE)?.getFullYear()).toBe(
+      2028
+    )
   })
 
   it('NR-01 (código 10) e NR-06 (código 11) não têm validade fixa — tratados como válidos por muito tempo (50 anos)', () => {
