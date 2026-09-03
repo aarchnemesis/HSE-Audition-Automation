@@ -1,27 +1,28 @@
-import { DigestInspectorGroup } from '../../ports/IEmailService.js';
+import { DigestInspectorGroup } from '../../ports/IEmailService.js'
 
-export const EMAIL_TITLE = 'Alerta EHS - Documentação';
+export const EMAIL_TITLE = 'Alerta EHS - Documentação'
 
 export function badgeClassFor(status: string): string {
-  if (status === 'AUSENTE') return 'badge-ausente';
-  if (status === 'VENCIDO') return 'badge-vencido';
-  if (['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(status)) return 'badge-atenção';
-  if (status === 'SOLICITADO_STORZ') return 'badge-storz';
-  if (status === 'STORZ_EM_ANDAMENTO') return 'badge-storz-andamento';
-  return 'badge-conforme';
+  if (status === 'AUSENTE') return 'badge-ausente'
+  if (status === 'VENCIDO') return 'badge-vencido'
+  if (['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(status))
+    return 'badge-atenção'
+  if (status === 'SOLICITADO_STORZ') return 'badge-storz'
+  if (status === 'STORZ_EM_ANDAMENTO') return 'badge-storz-andamento'
+  return 'badge-conforme'
 }
 
 export function statusLabelFor(status: string): string {
-  if (status === 'AUSENTE') return '⚪ Ausente';
-  if (status === 'VENCIDO') return '✘ Vencido';
-  if (status === 'VENCE_07') return '⚠️ <7d';
-  if (status === 'VENCE_15') return '⏳ <15d';
-  if (status === 'VENCE_30') return '⏳ <30d';
-  if (status === 'VENCE_60') return '⏳ <60d';
-  if (status === 'SOLICITADO_STORZ') return '🎓 Storz';
-  if (status === 'STORZ_EM_ANDAMENTO') return '🎓 Storz (Andamento)';
-  if (status === 'CONFORME') return '✔ Em Dia';
-  return status;
+  if (status === 'AUSENTE') return '⚪ Ausente'
+  if (status === 'VENCIDO') return '✘ Vencido'
+  if (status === 'VENCE_07') return '⚠️ <7d'
+  if (status === 'VENCE_15') return '⏳ <15d'
+  if (status === 'VENCE_30') return '⏳ <30d'
+  if (status === 'VENCE_60') return '⏳ <60d'
+  if (status === 'SOLICITADO_STORZ') return '🎓 Storz'
+  if (status === 'STORZ_EM_ANDAMENTO') return '🎓 Storz (Andamento)'
+  if (status === 'CONFORME') return '✔ Em Dia'
+  return status
 }
 
 /**
@@ -77,11 +78,15 @@ export function wrapEmailHtml(subject: string, bodyHtml: string): string {
   </div>
 </body>
 </html>
-  `;
+  `
 }
 
-export function buildEHSAlertBodyHtml(inspectorName: string, parkName: string, auditItems: any[]): string {
-  let rowsHtml = '';
+export function buildEHSAlertBodyHtml(
+  inspectorName: string,
+  parkName: string,
+  auditItems: any[]
+): string {
+  let rowsHtml = ''
   for (const item of auditItems) {
     rowsHtml += `
       <tr>
@@ -89,7 +94,7 @@ export function buildEHSAlertBodyHtml(inspectorName: string, parkName: string, a
         <td><span class="badge ${badgeClassFor(item.status)}">${statusLabelFor(item.status)}</span></td>
         <td>${item.detail}</td>
       </tr>
-    `;
+    `
   }
 
   return `
@@ -108,12 +113,14 @@ export function buildEHSAlertBodyHtml(inspectorName: string, parkName: string, a
         ${rowsHtml}
       </tbody>
     </table>
-  `;
+  `
 }
 
 export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
-  const totalItems = groups.reduce((sum, g) => sum + g.items.length, 0);
-  const dashboardUrl = process.env.HSE_DASHBOARD_URL || 'https://hse-audition-automation.vercel.app';
+  const totalItems = groups.reduce((sum, g) => sum + g.items.length, 0)
+  const dashboardUrl =
+    process.env.HSE_DASHBOARD_URL ||
+    'https://hse-audition-automation.vercel.app'
 
   const ctaButtonHtml = `
     <div style="text-align: center; margin: 20px 0 24px; padding: 18px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px;">
@@ -127,18 +134,18 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
         Não é necessário baixar arquivos HTML anexos.
       </div>
     </div>
-  `;
+  `
 
   if (groups.length === 0) {
     return `
       <p style="font-size: 14px; color: #1E7A4C; font-weight: 600;">Nenhuma pendência encontrada — todo mundo está 100% em dia.</p>
       ${ctaButtonHtml}
-    `;
+    `
   }
 
-  let groupsHtml = '';
+  let groupsHtml = ''
   for (const group of groups) {
-    let rowsHtml = '';
+    let rowsHtml = ''
     for (const item of group.items) {
       rowsHtml += `
         <tr>
@@ -146,7 +153,7 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
           <td><span class="badge ${badgeClassFor(item.status)}">${statusLabelFor(item.status)}</span></td>
           <td>${item.detail}</td>
         </tr>
-      `;
+      `
     }
 
     groupsHtml += `
@@ -161,7 +168,7 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
           </tbody>
         </table>
       </div>
-    `;
+    `
   }
 
   return `
@@ -170,5 +177,5 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
       <strong style="color: #25386B;">${groups.length}</strong> pessoa(s) com pendência, <strong style="color: #25386B;">${totalItems}</strong> item(ns) no total.
     </p>
     ${groupsHtml}
-  `;
+  `
 }

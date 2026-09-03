@@ -1,33 +1,43 @@
-import { Inspector } from '../models/Certificate.js';
-import { StorzRequest } from '../models/StorzRequest.js';
-import { DOC_CATALOG_MAP, STORZ_SEARCHABLE_DOC_CODES } from './ComplianceEngine.js';
-import { matchesInspector, findInspectorMatch } from './InspectorMatcher.js';
-import { getValidityYearsForCode, EVENT_TRIGGERED_ONLY_CODES } from '../../adapters/drive/certificateFilenameParser.js';
-import { EHSEvaluator } from './EHSEvaluator.js';
+import {
+  EVENT_TRIGGERED_ONLY_CODES,
+  getValidityYearsForCode,
+} from '../../adapters/drive/certificateFilenameParser.js'
+import { Inspector } from '../models/Certificate.js'
+import { StorzRequest } from '../models/StorzRequest.js'
+import {
+  DOC_CATALOG_MAP,
+  STORZ_SEARCHABLE_DOC_CODES,
+} from './ComplianceEngine.js'
+import { EHSEvaluator } from './EHSEvaluator.js'
+import { findInspectorMatch, matchesInspector } from './InspectorMatcher.js'
 
-export type DriveRpoDivergenceKind = 'SOMENTE_DRIVE' | 'SOMENTE_STORZ' | 'SOMENTE_RPO' | 'DATA_DIVERGENTE';
-export type TrustedSource = 'DRIVE' | 'STORZ';
+export type DriveRpoDivergenceKind =
+  | 'SOMENTE_DRIVE'
+  | 'SOMENTE_STORZ'
+  | 'SOMENTE_RPO'
+  | 'DATA_DIVERGENTE'
+export type TrustedSource = 'DRIVE' | 'STORZ'
 
 export interface DriveRpoComparisonItem {
-  inspectorName: string;
-  docCode: string;
-  docName: string;
-  driveExpiration?: Date;
+  inspectorName: string
+  docCode: string
+  docName: string
+  driveExpiration?: Date
   /** Validade estimada a partir da conclusão do curso na Storz (data de conclusão + anos de
    *  validade do documento) — é uma aproximação, não a validade gravada num documento real. */
-  storzExpiration?: Date;
-  trustedSource?: TrustedSource;
-  rpoExpiration?: Date;
-  divergent: boolean;
-  divergenceKind?: DriveRpoDivergenceKind;
-  detail: string;
+  storzExpiration?: Date
+  trustedSource?: TrustedSource
+  rpoExpiration?: Date
+  divergent: boolean
+  divergenceKind?: DriveRpoDivergenceKind
+  detail: string
 }
 
-const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+const ONE_DAY_MS = 24 * 60 * 60 * 1000
 // Pequena tolerância pra não gerar ruído por diferença de 1 dia entre "data de emissão + validade
 // calculada" (Drive) e a data-limite gravada manualmente na RPO — divergências reais tendem a ser
 // de semanas/meses, não de 1-2 dias.
-const DATE_TOLERANCE_DAYS = 2;
+const DATE_TOLERANCE_DAYS = 2
 
 export class DriveRpoAuditor {
   /**
@@ -48,34 +58,41 @@ export class DriveRpoAuditor {
     docCodes?: string[],
     storzRequests: StorzRequest[] = []
   ): DriveRpoComparisonItem[] {
-    const items: DriveRpoComparisonItem[] = [];
+    const items: DriveRpoComparisonItem[] = []
 
     for (const driveInspector of driveInspectors) {
-      const rpoInspector = rpoInspectors.find((r) => matchesInspector(driveInspector, r.name));
+      const rpoInspector = rpoInspectors.find(r =>
+        matchesInspector(driveInspector, r.name)
+      )
       const inspectorStorzReqs = findInspectorMatch(
         driveInspector,
         storzRequests,
-        (r) => r.collaboratorName,
-        (r) => r.collaboratorCpf
-      );
+        r => r.collaboratorName,
+        r => r.collaboratorCpf
+      )
 
-      const codesToCheck = docCodes || this.unionOfCodes(driveInspector, rpoInspector);
+      const codesToCheck =
+        docCodes || this.unionOfCodes(driveInspector, rpoInspector)
 
       for (const code of codesToCheck) {
-        const driveCert = driveInspector.certificates.get(code);
-        const rpoCert = rpoInspector?.certificates.get(code);
-        const storzExpiration = this.estimateStorzExpiration(code, inspectorStorzReqs);
+        const driveCert = driveInspector.certificates.get(code)
+        const rpoCert = rpoInspector?.certificates.get(code)
+        const storzExpiration = this.estimateStorzExpiration(
+          code,
+          inspectorStorzReqs
+        )
 
-        const trustedExpiration = driveCert?.expirationDate ?? storzExpiration;
-        const trustedSource: TrustedSource | undefined = driveCert?.expirationDate
-          ? 'DRIVE'
-          : storzExpiration
-            ? 'STORZ'
-            : undefined;
+        const trustedExpiration = driveCert?.expirationDate ?? storzExpiration
+        const trustedSource: TrustedSource | undefined =
+          driveCert?.expirationDate
+            ? 'DRIVE'
+            : storzExpiration
+              ? 'STORZ'
+              : undefined
 
-        if (!trustedExpiration && !rpoCert?.expirationDate) continue;
+        if (!trustedExpiration && !rpoCert?.expirationDate) continue
 
-        const docName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`;
+        const docName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`
 
         if (trustedExpiration && !rpoCert?.expirationDate) {
           items.push({
@@ -86,10 +103,11 @@ export class DriveRpoAuditor {
             storzExpiration,
             trustedSource,
             divergent: true,
-            divergenceKind: trustedSource === 'STORZ' ? 'SOMENTE_STORZ' : 'SOMENTE_DRIVE',
-            detail: `Curso/certificado confirmado via ${trustedSource === 'STORZ' ? 'Storz (conclusão de curso)' : 'Drive'}, mas sem registro correspondente na planilha RPO (${rpoInspector ? 'pessoa encontrada na RPO' : 'pessoa não encontrada na RPO'}).`
-          });
-          continue;
+            divergenceKind:
+              trustedSource === 'STORZ' ? 'SOMENTE_STORZ' : 'SOMENTE_DRIVE',
+            detail: `Curso/certificado confirmado via ${trustedSource === 'STORZ' ? 'Storz (conclusão de curso)' : 'Drive'}, mas sem registro correspondente na planilha RPO (${rpoInspector ? 'pessoa encontrada na RPO' : 'pessoa não encontrada na RPO'}).`,
+          })
+          continue
         }
 
         if (!trustedExpiration && rpoCert?.expirationDate) {
@@ -100,9 +118,10 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert.expirationDate,
             divergent: true,
             divergenceKind: 'SOMENTE_RPO',
-            detail: 'Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.'
-          });
-          continue;
+            detail:
+              'Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.',
+          })
+          continue
         }
 
         // NR-01/NR-06 (event-triggered, sem periodicidade fixa) não têm data comparável entre as
@@ -120,13 +139,16 @@ export class DriveRpoAuditor {
             trustedSource,
             rpoExpiration: rpoCert!.expirationDate,
             divergent: false,
-            detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).`
-          });
-          continue;
+            detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).`,
+          })
+          continue
         }
 
         // As duas pontas têm data — compara com tolerância
-        const diffDays = Math.abs(trustedExpiration!.getTime() - rpoCert!.expirationDate!.getTime()) / ONE_DAY_MS;
+        const diffDays =
+          Math.abs(
+            trustedExpiration!.getTime() - rpoCert!.expirationDate!.getTime()
+          ) / ONE_DAY_MS
         if (diffDays > DATE_TOLERANCE_DAYS) {
           items.push({
             inspectorName: driveInspector.name,
@@ -138,9 +160,9 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert!.expirationDate,
             divergent: true,
             divergenceKind: 'DATA_DIVERGENTE',
-            detail: `Datas de validade divergem em ${Math.round(diffDays)} dia(s) entre ${trustedSource === 'STORZ' ? 'Storz (estimado pela conclusão do curso)' : 'Drive'} e RPO — provável erro de digitação na RPO.`
-          });
-          continue;
+            detail: `Datas de validade divergem em ${Math.round(diffDays)} dia(s) entre ${trustedSource === 'STORZ' ? 'Storz (estimado pela conclusão do curso)' : 'Drive'} e RPO — provável erro de digitação na RPO.`,
+          })
+          continue
         }
 
         items.push({
@@ -152,34 +174,46 @@ export class DriveRpoAuditor {
           trustedSource,
           rpoExpiration: rpoCert!.expirationDate,
           divergent: false,
-          detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO consistentes.`
-        });
+          detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO consistentes.`,
+        })
       }
     }
 
-    return items;
+    return items
   }
 
   /** Validade ESTIMADA a partir do curso concluído mais recente na Storz pra esse código de
    *  documento — data de conclusão + anos de validade do catálogo. Só se aplica a documentos que
    *  a Storz realmente administra (normativos); ver STORZ_SEARCHABLE_DOC_CODES. */
-  private static estimateStorzExpiration(code: string, storzReqs: StorzRequest[]): Date | undefined {
-    if (!STORZ_SEARCHABLE_DOC_CODES.has(code)) return undefined;
+  private static estimateStorzExpiration(
+    code: string,
+    storzReqs: StorzRequest[]
+  ): Date | undefined {
+    if (!STORZ_SEARCHABLE_DOC_CODES.has(code)) return undefined
 
     const completed = storzReqs
-      .filter((r) => r.trainingCode === code && r.state === 'CONCLUIDO' && r.completionDate)
-      .sort((a, b) => b.completionDate!.getTime() - a.completionDate!.getTime());
+      .filter(
+        r =>
+          r.trainingCode === code && r.state === 'CONCLUIDO' && r.completionDate
+      )
+      .sort((a, b) => b.completionDate!.getTime() - a.completionDate!.getTime())
 
-    if (!completed.length) return undefined;
+    if (!completed.length) return undefined
 
-    return EHSEvaluator.calculateExpirationFromIssue(completed[0].completionDate!, getValidityYearsForCode(code));
+    return EHSEvaluator.calculateExpirationFromIssue(
+      completed[0].completionDate!,
+      getValidityYearsForCode(code)
+    )
   }
 
-  private static unionOfCodes(driveInspector: Inspector, rpoInspector: Inspector | undefined): string[] {
-    const codes = new Set<string>(driveInspector.certificates.keys());
+  private static unionOfCodes(
+    driveInspector: Inspector,
+    rpoInspector: Inspector | undefined
+  ): string[] {
+    const codes = new Set<string>(driveInspector.certificates.keys())
     if (rpoInspector) {
-      for (const code of rpoInspector.certificates.keys()) codes.add(code);
+      for (const code of rpoInspector.certificates.keys()) codes.add(code)
     }
-    return Array.from(codes);
+    return Array.from(codes)
   }
 }

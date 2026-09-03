@@ -15,17 +15,25 @@ jobs:
     steps:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
+      - name: 📦 Instalar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
       - name: 🟢 Configurar Node.js (v22)
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
+          cache: 'pnpm'
+
       - name: 📦 Instalar Dependências do Projeto
-        run: npm ci
+        run: pnpm install --frozen-lockfile
+
       - name: 🔎 Type-check
-        run: npm run lint
+        run: pnpm typecheck
+
       - name: 🧪 Rodar Testes
-        run: npm test
+        run: pnpm test
 
   audit-and-notify:
     needs: test
@@ -35,17 +43,22 @@ jobs:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
 
+      - name: 📦 Instalar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
       - name: 🟢 Configurar Node.js (v22)
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: 📦 Instalar Dependências do Projeto
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: 🎭 Instalar Playwright Chromium
-        run: npx playwright install chromium --with-deps
+        run: pnpm exec playwright install chromium --with-deps
 
       - name: 🤖 Executar Auditoria Tripla & Gerar Relatório HSE
         env:
@@ -63,7 +76,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
-        run: npm run hse-report
+        run: pnpm run hse-report
 
       - name: 📊 Upload do Relatório Excel Consolidado
         uses: actions/upload-artifact@v4

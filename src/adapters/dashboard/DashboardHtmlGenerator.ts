@@ -1,7 +1,7 @@
-import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js';
+import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js'
 
 export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
-  const dataJson = JSON.stringify(records);
+  const dataJson = JSON.stringify(records)
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -943,5 +943,5 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
     renderAll();
   </script>
 </body>
-</html>`;
+</html>`
 }

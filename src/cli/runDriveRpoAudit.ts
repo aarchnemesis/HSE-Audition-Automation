@@ -1,28 +1,37 @@
-import 'dotenv/config';
-import fs from 'fs';
-import ExcelJS from 'exceljs';
-import path from 'path';
-import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js';
-import { SmartsheetRPOAdapter, RPO_TRACKED_DOC_CODES } from '../adapters/smartsheet/SmartsheetRPOAdapter.js';
-import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js';
-import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js';
-import { Inspector } from '../domain/models/Certificate.js';
-import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js';
-import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js';
-import { matchesInspector } from '../domain/services/InspectorMatcher.js';
-import { DummyEmailService } from '../adapters/email/DummyEmailService.js';
-import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js';
-import { IEmailService } from '../ports/IEmailService.js';
+import 'dotenv/config'
+import fs from 'fs'
+import path from 'path'
+import ExcelJS from 'exceljs'
+import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js'
+import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
+import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
+import {
+  RPO_TRACKED_DOC_CODES,
+  SmartsheetRPOAdapter,
+} from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
+import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js'
+import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js'
+import { Inspector } from '../domain/models/Certificate.js'
+import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js'
+import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js'
+import { matchesInspector } from '../domain/services/InspectorMatcher.js'
+import { IEmailService } from '../ports/IEmailService.js'
 
-const REF_DATE = process.env.HSE_REF_DATE ? new Date(process.env.HSE_REF_DATE) : new Date();
-const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br';
+const REF_DATE = process.env.HSE_REF_DATE
+  ? new Date(process.env.HSE_REF_DATE)
+  : new Date()
+const EMAIL_RECIPIENT =
+  process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br'
 
-async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, outputPath: string): Promise<void> {
-  const dir = path.dirname(outputPath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+async function exportToExcel(
+  items: ReturnType<typeof DriveRpoAuditor.compare>,
+  outputPath: string
+): Promise<void> {
+  const dir = path.dirname(outputPath)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
 
-  const workbook = new ExcelJS.Workbook();
-  const sheet = workbook.addWorksheet('Auditoria Drive x RPO');
+  const workbook = new ExcelJS.Workbook()
+  const sheet = workbook.addWorksheet('Auditoria Drive x RPO')
 
   sheet.columns = [
     { header: 'Colaborador', key: 'inspectorName', width: 35 },
@@ -34,15 +43,19 @@ async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, 
     { header: 'Fonte Confiável', key: 'trustedSource', width: 14 },
     { header: 'Divergente', key: 'divergent', width: 12 },
     { header: 'Tipo', key: 'divergenceKind', width: 18 },
-    { header: 'Detalhes', key: 'detail', width: 60 }
-  ];
+    { header: 'Detalhes', key: 'detail', width: 60 },
+  ]
 
-  const headerRow = sheet.getRow(1);
-  headerRow.font = { bold: true, color: { argb: 'FFFFFF' }, size: 11 };
-  headerRow.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: '0F172A' } };
-  headerRow.alignment = { vertical: 'middle', horizontal: 'center' };
+  const headerRow = sheet.getRow(1)
+  headerRow.font = { bold: true, color: { argb: 'FFFFFF' }, size: 11 }
+  headerRow.fill = {
+    type: 'pattern',
+    pattern: 'solid',
+    fgColor: { argb: '0F172A' },
+  }
+  headerRow.alignment = { vertical: 'middle', horizontal: 'center' }
 
-  const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '');
+  const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '')
 
   for (const item of items) {
     const row = sheet.addRow({
@@ -55,108 +68,157 @@ async function exportToExcel(items: ReturnType<typeof DriveRpoAuditor.compare>, 
       trustedSource: item.trustedSource || '',
       divergent: item.divergent ? 'SIM' : 'NÃO',
       divergenceKind: item.divergenceKind || '',
-      detail: item.detail
-    });
+      detail: item.detail,
+    })
 
     if (item.divergent) {
-      const cell = row.getCell('divergent');
-      cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FEE2E2' } };
-      cell.font = { color: { argb: '991B1B' }, bold: true };
+      const cell = row.getCell('divergent')
+      cell.fill = {
+        type: 'pattern',
+        pattern: 'solid',
+        fgColor: { argb: 'FEE2E2' },
+      }
+      cell.font = { color: { argb: '991B1B' }, bold: true }
     }
   }
 
-  await workbook.xlsx.writeFile(outputPath);
+  await workbook.xlsx.writeFile(outputPath)
 }
 
 async function main() {
-  console.log('================================================================================');
-  console.log('   HSE AUDIT AUTOMATION - AUDITORIA DRIVE x RPO (SOMENTE LEITURA)');
-  console.log(`   Data de Referência: ${REF_DATE.toLocaleDateString('pt-BR')}`);
-  console.log('================================================================================\n');
+  console.log(
+    '================================================================================'
+  )
+  console.log(
+    '   HSE AUDIT AUTOMATION - AUDITORIA DRIVE x RPO (SOMENTE LEITURA)'
+  )
+  console.log(`   Data de Referência: ${REF_DATE.toLocaleDateString('pt-BR')}`)
+  console.log(
+    '================================================================================\n'
+  )
 
-  const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE);
-  const driveAdapter = createDriveAdapter(REF_DATE);
+  const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE)
+  const driveAdapter = createDriveAdapter(REF_DATE)
 
-  console.log('📂 Lendo inspetores do Drive...');
-  const driveInspectorsRaw = await driveAdapter.getInspectors();
-  console.log(`   ${driveInspectorsRaw.length} inspetor(es) encontrado(s) no Drive.`);
+  console.log('📂 Lendo inspetores do Drive...')
+  const driveInspectorsRaw = await driveAdapter.getInspectors()
+  console.log(
+    `   ${driveInspectorsRaw.length} inspetor(es) encontrado(s) no Drive.`
+  )
 
-  let rpoInspectors: Inspector[] = [];
-  let driveInspectors = driveInspectorsRaw;
+  let rpoInspectors: Inspector[] = []
+  let driveInspectors = driveInspectorsRaw
 
   if (rpoAdapter) {
-    console.log('📊 Lendo planilha RPO via Smartsheet (somente leitura)...');
-    const rpoInspectorsRaw = await rpoAdapter.readRPOData();
-    console.log(`   ${rpoInspectorsRaw.length} linha(s) encontrada(s) na RPO.`);
+    console.log('📊 Lendo planilha RPO via Smartsheet (somente leitura)...')
+    const rpoInspectorsRaw = await rpoAdapter.readRPOData()
+    console.log(`   ${rpoInspectorsRaw.length} linha(s) encontrada(s) na RPO.`)
 
-    const desligadoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) === null);
-    rpoInspectors = rpoInspectorsRaw.filter((i) => classifyEmployeeProfile(i.role) !== null);
-    console.log(`   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`);
+    const desligadoInspectors = rpoInspectorsRaw.filter(
+      i => classifyEmployeeProfile(i.role) === null
+    )
+    rpoInspectors = rpoInspectorsRaw.filter(
+      i => classifyEmployeeProfile(i.role) !== null
+    )
+    console.log(
+      `   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`
+    )
 
     driveInspectors = driveInspectorsRaw.filter(
-      (d) => !desligadoInspectors.some((deslig) => matchesInspector(deslig, d.name, d.cpf))
-    );
-    console.log(`   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`);
+      d =>
+        !desligadoInspectors.some(deslig =>
+          matchesInspector(deslig, d.name, d.cpf)
+        )
+    )
+    console.log(
+      `   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`
+    )
   } else {
-    console.log('⚠️  SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados — executando comparação com base disponível.');
+    console.log(
+      '⚠️  SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados — executando comparação com base disponível.'
+    )
   }
 
-  console.log('🤖 Executando raspagem / auditoria na plataforma Storz...');
-  const storzScraper = new StorzPlaywrightScraper();
+  console.log('🤖 Executando raspagem / auditoria na plataforma Storz...')
+  const storzScraper = new StorzPlaywrightScraper()
   const storzResult = await storzScraper.runAuditScrape({
     headless: true,
-    targetCollaborators: rpoInspectors.map((i) => i.name)
-  });
-  let storzRequests = storzResult.requests;
+    targetCollaborators: rpoInspectors.map(i => i.name),
+  })
+  let storzRequests = storzResult.requests
   if (storzRequests.length === 0) {
-    const storzAdapter = new StorzPlaywrightAdapter();
-    storzRequests = await storzAdapter.getAllRequests();
+    const storzAdapter = new StorzPlaywrightAdapter()
+    storzRequests = await storzAdapter.getAllRequests()
   }
-  console.log(`   ${storzRequests.length} matrícula(s)/curso(s) carregada(s) da Storz.`);
+  console.log(
+    `   ${storzRequests.length} matrícula(s)/curso(s) carregada(s) da Storz.`
+  )
 
-  console.log('\n🔍 Comparando Drive + Storz (confiáveis) x RPO (digitada)...');
-  const items = DriveRpoAuditor.compare(driveInspectors, rpoInspectors, Array.from(RPO_TRACKED_DOC_CODES), storzRequests);
-  const divergences = items.filter((i) => i.divergent);
-  console.log(`   ${items.length} combinação(ões) comparada(s), ${divergences.length} divergência(s) encontrada(s).`);
+  console.log('\n🔍 Comparando Drive + Storz (confiáveis) x RPO (digitada)...')
+  const items = DriveRpoAuditor.compare(
+    driveInspectors,
+    rpoInspectors,
+    Array.from(RPO_TRACKED_DOC_CODES),
+    storzRequests
+  )
+  const divergences = items.filter(i => i.divergent)
+  console.log(
+    `   ${items.length} combinação(ões) comparada(s), ${divergences.length} divergência(s) encontrada(s).`
+  )
 
-  const byKind: Record<string, number> = {};
+  const byKind: Record<string, number> = {}
   for (const d of divergences) {
-    byKind[d.divergenceKind!] = (byKind[d.divergenceKind!] || 0) + 1;
+    byKind[d.divergenceKind!] = (byKind[d.divergenceKind!] || 0) + 1
   }
-  console.log('\n   Por tipo:');
+  console.log('\n   Por tipo:')
   for (const [kind, count] of Object.entries(byKind)) {
-    console.log(`   - ${kind}: ${count}`);
+    console.log(`   - ${kind}: ${count}`)
   }
 
-  const outputPath = path.join(process.cwd(), 'scratch', 'auditoria_drive_rpo.xlsx');
-  await exportToExcel(items, outputPath);
-  console.log(`\n✅ Relatório gerado em: ${outputPath}`);
-  console.log('   (Somente leitura — nada foi alterado na planilha RPO/Smartsheet.)\n');
+  const outputPath = path.join(
+    process.cwd(),
+    'scratch',
+    'auditoria_drive_rpo.xlsx'
+  )
+  await exportToExcel(items, outputPath)
+  console.log(`\n✅ Relatório gerado em: ${outputPath}`)
+  console.log(
+    '   (Somente leitura — nada foi alterado na planilha RPO/Smartsheet.)\n'
+  )
 
-  console.log('================================================================================');
-  console.log('   📧 ENVIANDO RESUMO DA AUDITORIA DRIVE+STORZ x RPO');
-  console.log('================================================================================');
-  const emailService: IEmailService = SmtpEmailService.fromEnv() || new DummyEmailService();
+  console.log(
+    '================================================================================'
+  )
+  console.log('   📧 ENVIANDO RESUMO DA AUDITORIA DRIVE+STORZ x RPO')
+  console.log(
+    '================================================================================'
+  )
+  const emailService: IEmailService =
+    SmtpEmailService.fromEnv() || new DummyEmailService()
   const emailRes = await emailService.sendEmail({
     to: EMAIL_RECIPIENT,
     subject: `Auditoria RPO — ${divergences.length} divergência(s) de digitação encontrada(s)`,
-    htmlContent: buildDivergenceSummaryHtml(divergences, REF_DATE)
-  });
-  console.log(`   Resumo ${emailRes.success ? 'enviado' : 'falhou'}\n`);
+    htmlContent: buildDivergenceSummaryHtml(divergences, REF_DATE),
+  })
+  console.log(`   Resumo ${emailRes.success ? 'enviado' : 'falhou'}\n`)
 }
 
-function buildDivergenceSummaryHtml(divergences: ReturnType<typeof DriveRpoAuditor.compare>, refDate: Date): string {
-  const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '—');
+function buildDivergenceSummaryHtml(
+  divergences: ReturnType<typeof DriveRpoAuditor.compare>,
+  refDate: Date
+): string {
+  const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '—')
   const kindLabel: Record<string, string> = {
     SOMENTE_DRIVE: 'Só existe no Drive',
     SOMENTE_STORZ: 'Só existe na Storz',
     SOMENTE_RPO: 'Só existe na RPO',
-    DATA_DIVERGENTE: 'Data divergente'
-  };
+    DATA_DIVERGENTE: 'Data divergente',
+  }
 
   const rows = divergences
     .slice(0, 200) // e-mail não é o relatório completo — o xlsx anexado ao artifact do workflow é
-    .map((d) => `
+    .map(
+      d => `
       <tr>
         <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${d.inspectorName}</td>
         <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${d.docName}</td>
@@ -164,8 +226,9 @@ function buildDivergenceSummaryHtml(divergences: ReturnType<typeof DriveRpoAudit
         <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.driveExpiration)}</td>
         <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.storzExpiration)}</td>
         <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${dateFmt(d.rpoExpiration)}</td>
-      </tr>`)
-    .join('');
+      </tr>`
+    )
+    .join('')
 
   return `
     <p>Auditoria semanal Drive + Storz (fontes confiáveis) x RPO (digitada à mão) — data de referência ${refDate.toLocaleDateString('pt-BR')}.</p>
@@ -184,10 +247,10 @@ function buildDivergenceSummaryHtml(divergences: ReturnType<typeof DriveRpoAudit
       <tbody>${rows}</tbody>
     </table>
     ${divergences.length > 200 ? `<p><em>Mostrando as primeiras 200 de ${divergences.length} — ver o Excel completo no artifact.</em></p>` : ''}
-  `;
+  `
 }
 
-main().catch((err) => {
-  console.error('Erro na auditoria Drive x RPO:', err);
-  process.exit(1);
-});
+main().catch(err => {
+  console.error('Erro na auditoria Drive x RPO:', err)
+  process.exit(1)
+})
