@@ -145,9 +145,17 @@ describe('getElectiveDocCodesForProfile', () => {
     expect(elective).not.toContain('01') // ASO continua obrigatório de verdade
   })
 
-  it('CAMPO usa o conjunto eletivo global (Vestas, Elevador, CIPA) — NR-35 continua obrigatório de verdade', () => {
+  it('CAMPO inclui todos os treinamentos de NR da RPO (NR-01, 06, 11, 12, 18, 33 vigia, 33 supervisor)', () => {
+    const codes = getRequiredDocCodesForProfile('CAMPO')
+    for (const nrCode of ['10', '11', '14', '15', '18', '20', '28']) {
+      expect(codes).toContain(nrCode)
+    }
+  })
+
+  it('CAMPO usa o conjunto eletivo global (Vestas, Elevador, CIPA, NR-33 Supervisor) — NR-35 continua obrigatório de verdade', () => {
     const elective = getElectiveDocCodesForProfile('CAMPO')
     expect(elective).toContain('25') // SIT Vestas
+    expect(elective).toContain('28') // NR-33 Supervisor (eletivo/monitorado)
     expect(elective).toContain('31') // Elevador
     expect(elective).toContain('34') // CIPA
     expect(elective).not.toContain('21') // NR-35 NÃO é eletivo pro perfil CAMPO

@@ -2,9 +2,14 @@ name: HSE Audit & Storz Automated Cron
 
 on:
   schedule:
-    # Segunda-feira às 09:15 UTC (06:15 BRT - Horário de Brasília)
-    - cron: '15 9 * * 1'
-  workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
+    # Toda segunda-feira às 07:00 UTC (04:00 BRT - Horário de Brasília)
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Disparar e-mail de alerta para a equipe HSE?'
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -76,6 +81,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
+          SKIP_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.send_email == false }}
         run: pnpm run hse-report
 
       - name: 📊 Upload do Relatório Excel Consolidado

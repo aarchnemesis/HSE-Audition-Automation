@@ -3,7 +3,7 @@ import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 // Baseado no "Guia de Treinamentos Normativos SST" (ARTH-Wind SSMA, v2.0, ago/2026).
 // '33' era código morto — não existe no nosso catálogo (o código interno da NR-33 é '20', não
 // '33'; alguém confundiu o número da NR com o código interno do documento).
-const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20']
+const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20', '28', '34']
 
 // NR-01 (Integração, código 10) e NR-06 (Uso de EPI, código 11) NÃO têm periodicidade fixa
 // segundo o guia — só são retreinados por gatilho (mudança de risco, acidente grave, troca de

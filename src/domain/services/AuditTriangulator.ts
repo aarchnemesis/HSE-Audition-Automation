@@ -1,5 +1,6 @@
+import { getValidityYearsForCode } from '../../adapters/drive/certificateFilenameParser.js'
 import { EHSStatus, Inspector, ParkRequirement } from '../models/Certificate.js'
-import { StorzRequest } from '../models/StorzRequest.js'
+import { StorzRequest, computeCourseDeadline } from '../models/StorzRequest.js'
 import {
   DOC_CATALOG_MAP,
   ELECTIVE_DOC_CODES,
@@ -28,11 +29,16 @@ export interface TripleAuditResult {
     actualModality?: string
     isModalityCompliant: boolean
     hasDriveDoc: boolean
+    expirationDate?: Date
+    storzProgressPercent?: number
+    storzDeadline?: Date
     storzRequestFound?: {
       requestId: string
       state: string
       requestDate: Date
       notes?: string
+      progressPercent?: number
+      deadline?: Date
     }
     detail: string
   }[]
@@ -85,51 +91,106 @@ export class AuditTriangulator {
       // A Storz é uma empresa de treinamentos normativos — não faz sentido buscar lá documentos
       // pessoais/médicos (ASO, CTPS, vacina), de trânsito (CNH) ou certificações de terceiros
       // (SIT/ESO Vestas, WINDA). Pra esses, nem tentamos casar com solicitação na Storz.
-      const storzReq = STORZ_SEARCHABLE_DOC_CODES.has(code)
-        ? inspectorStorzReqs.find(
+      const matchingStorzReqs = STORZ_SEARCHABLE_DOC_CODES.has(code)
+        ? inspectorStorzReqs.filter(
             sr => sr.trainingCode === code && sr.state !== 'CANCELADO'
           )
-        : undefined
+        : []
+
+      // Curso mais recente concluído e aprovado na Storz
+      const completedReq = matchingStorzReqs
+        .filter(sr => sr.state === 'CONCLUIDO')
+        .sort((a, b) => {
+          const timeA = a.completionDate?.getTime() ?? a.requestDate.getTime()
+          const timeB = b.completionDate?.getTime() ?? b.requestDate.getTime()
+          return timeB - timeA
+        })[0]
+
+      // Solicitação em andamento ou pendente mais recente
+      const activeReq = matchingStorzReqs
+        .filter(sr => sr.state === 'EM_ANDAMENTO' || sr.state === 'SOLICITADO')
+        .sort((a, b) => b.requestDate.getTime() - a.requestDate.getTime())[0]
+
+      let storzCompletionDate: Date | undefined
+      let storzExpDate: Date | undefined
+
+      if (completedReq) {
+        storzCompletionDate =
+          completedReq.completionDate || completedReq.requestDate
+        if (storzCompletionDate && !isNaN(storzCompletionDate.getTime())) {
+          storzExpDate = EHSEvaluator.calculateExpirationFromIssue(
+            storzCompletionDate,
+            getValidityYearsForCode(code)
+          )
+        }
+      }
 
       let status: EHSStatus = 'AUSENTE'
       let detail = ''
+      let effectiveExpiration: Date | undefined
 
-      if (!cert) {
-        // Documento ausente = não existe um prazo real conhecido pra comparar. A Storz é a
-        // única referência que temos, então aqui SIM ela vira o status principal.
-        if (storzReq) {
-          if (storzReq.state === 'EM_ANDAMENTO') {
-            storzInProgressCount++
-            status = 'STORZ_EM_ANDAMENTO'
-            detail = `Documento ausente no Drive, mas EM ANDAMENTO NA STORZ, curso iniciado mas ainda não concluído (${storzReq.id}).`
-          } else {
-            storzPendingCount++
-            status = 'SOLICITADO_STORZ'
-            detail = `Documento ausente no Drive, mas SOLICITADO NA STORZ (${storzReq.id} - Status: ${storzReq.state}).`
-          }
-        } else {
-          status = 'AUSENTE'
+      // Se o curso foi concluído e aprovado na Storz, consideramos a Storz quando não há documento no Drive
+      // ou quando a conclusão na Storz é mais recente que o documento existente no Drive (renovação).
+      const preferStorz =
+        Boolean(completedReq && storzExpDate) &&
+        (!cert ||
+          !cert.expirationDate ||
+          storzExpDate!.getTime() > cert.expirationDate.getTime())
 
-          if (electiveCodes.has(code)) {
-            // Eletivo/monitorado (ex.: SIT/ESO Vestas, ou todo o catálogo de treinamentos pro
-            // perfil COORDENADOR): não ter ainda não é uma pendência — não conta pra INAPTO.
-            // HSEDatabaseRepository.saveAuditSnapshot filtra esse item inteiro fora do
-            // banco/relatórios quando AUSENTE (revisado 25/08/2026 — antes aparecia "pra
-            // visibilidade", mas isso poluía os relatórios com gente que nunca vai precisar disso).
-            detail =
-              'Documento eletivo/monitorado não encontrado no Drive — não é cobrado como pendência.'
-          } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
-            detail =
-              'Documento obrigatório não encontrado no Drive nem solicitado na Storz.'
-            missingCount++
-          } else {
-            // Documentos que a Storz nunca administra (ASO, CNH etc.) — não faz sentido dizer
-            // "nem na Storz" já que ela nunca foi (nem seria) consultada pra esses.
-            detail = 'Documento obrigatório não encontrado no Drive.'
-            missingCount++
-          }
+      let storzProgressPercent: number | undefined
+      let storzDeadline: Date | undefined
+
+      if (completedReq) {
+        storzProgressPercent = 100
+      } else if (activeReq) {
+        storzProgressPercent = activeReq.progressPercent ?? 0
+        storzDeadline = computeCourseDeadline(activeReq)
+      }
+
+      const formatPaceNotice = (
+        active: StorzRequest,
+        certDate?: Date
+      ): string => {
+        const prog =
+          active.progressPercent !== undefined
+            ? `${active.progressPercent}%`
+            : '0%'
+        const dl = computeCourseDeadline(active)
+        const dlStr = dl ? dl.toLocaleDateString('pt-BR') : undefined
+        if (certDate && dl && certDate.getTime() < dl.getTime()) {
+          return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}]. ⚠️ ATENÇÃO AO RITMO: o certificado vence em ${certDate.toLocaleDateString('pt-BR')}, ANTES do prazo da Storz (${dlStr})!`
         }
-      } else {
+        if (dlStr) {
+          return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}] — o prazo que vale é o vencimento do documento.`
+        }
+        return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) — o prazo que vale é o vencimento do documento.`
+      }
+
+      if (preferStorz && storzExpDate) {
+        effectiveExpiration = storzExpDate
+        const evaluation = EHSEvaluator.evaluateDate(storzExpDate, refDate)
+        status = evaluation.status
+        const completionStr = storzCompletionDate?.toLocaleDateString('pt-BR')
+        const expStr = storzExpDate.toLocaleDateString('pt-BR')
+
+        if (status === 'CONFORME') {
+          validCount++
+          detail = cert
+            ? `🟢 Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+            : `🟢 Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+        } else if (status === 'VENCIDO') {
+          expiredCount++
+          detail = `${evaluation.detail} | Concluído na Storz (${completedReq!.id}) em ${completionStr} (aguardando upload no Drive).`
+        } else {
+          warningCount++
+          detail = `${evaluation.detail} | Concluído na Storz (${completedReq!.id}) em ${completionStr} (aguardando upload no Drive).`
+        }
+
+        if (activeReq) {
+          detail += ` | 🔵 Próxima reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+        }
+      } else if (cert) {
+        effectiveExpiration = cert.expirationDate
         const evaluation = EHSEvaluator.evaluateDate(
           cert.expirationDate,
           refDate
@@ -137,34 +198,72 @@ export class AuditTriangulator {
         status = evaluation.status
         detail = evaluation.detail
 
-        // O prazo real é sempre o do próprio documento (data de vencimento), NUNCA o prazo
-        // interno da Storz pra concluir o curso (ex.: Storz dá até 60 dias pro aluno concluir,
-        // mas se o documento já vence em 30, o prazo que importa é 30 — a Storz só informa "já
-        // está em andamento", não estende o vencimento). Por isso, quando o documento vence ou
-        // já venceu, mantemos o status de urgência real (VENCE_07/15/30/60/VENCIDO) mesmo que
-        // haja solicitação ativa na Storz — só anexamos a informação no detalhe e contamos à
-        // parte, sem esconder a urgência.
-        if (
-          ['VENCIDO', 'VENCE_07', 'VENCE_15', 'VENCE_30', 'VENCE_60'].includes(
-            status
-          )
-        ) {
-          if (status === 'VENCIDO') expiredCount++
-          else warningCount++
-
-          if (storzReq) {
-            if (storzReq.state === 'EM_ANDAMENTO') {
+        if (status === 'CONFORME') {
+          validCount++
+          if (activeReq) {
+            detail += ` | 🔵 Reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+          }
+        } else if (status === 'VENCIDO') {
+          expiredCount++
+          if (activeReq) {
+            if (activeReq.state === 'EM_ANDAMENTO') {
               storzInProgressCount++
-              detail += ` | 🟣 EM ANDAMENTO NA STORZ, curso iniciado mas ainda não concluído (${storzReq.id}) — o prazo que vale é o vencimento do documento, não o prazo interno da Storz para concluir o curso.`
+              detail += formatPaceNotice(activeReq, cert.expirationDate)
             } else {
               storzPendingCount++
-              detail += ` | 🔵 SOLICITADO NA STORZ (${storzReq.id} - Status: ${storzReq.state}) — o prazo que vale é o vencimento do documento, não o prazo interno da Storz para concluir o curso.`
+              detail += ` | 🔵 SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
             }
           }
         } else {
-          validCount++
+          warningCount++
+          if (activeReq) {
+            if (activeReq.state === 'EM_ANDAMENTO') {
+              storzInProgressCount++
+              detail += formatPaceNotice(activeReq, cert.expirationDate)
+            } else {
+              storzPendingCount++
+              detail += ` | 🔵 SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
+            }
+          }
+        }
+      } else {
+        if (activeReq) {
+          if (activeReq.state === 'EM_ANDAMENTO') {
+            storzInProgressCount++
+            status = 'STORZ_EM_ANDAMENTO'
+            const prog =
+              activeReq.progressPercent !== undefined
+                ? `${activeReq.progressPercent}%`
+                : '0%'
+            const dl = computeCourseDeadline(activeReq)
+            const dlStr = dl
+              ? ` [Prazo Storz: ${dl.toLocaleDateString('pt-BR')}]`
+              : ''
+            detail = `Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (${activeReq.id} - Progresso: ${prog})${dlStr}.`
+          } else {
+            storzPendingCount++
+            status = 'SOLICITADO_STORZ'
+            detail = `Documento ausente no Drive, mas SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso).`
+          }
+        } else {
+          status = 'AUSENTE'
+          if (electiveCodes.has(code)) {
+            detail =
+              'Documento eletivo/monitorado não encontrado no Drive — não é cobrado como pendência.'
+          } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
+            detail =
+              'Documento obrigatório não encontrado no Drive nem solicitado na Storz.'
+            missingCount++
+          } else {
+            detail = 'Documento obrigatório não encontrado no Drive.'
+            missingCount++
+          }
         }
       }
+
+      const primaryStorzReq = preferStorz
+        ? completedReq
+        : activeReq || completedReq
 
       if (!isModalityCompliant) {
         detail += ` ⚠️ ALERTA MODALIDADE: Requerido ${requiredModality}, mas certificado é ${actualModality}`
@@ -178,12 +277,17 @@ export class AuditTriangulator {
         actualModality,
         isModalityCompliant,
         hasDriveDoc: !!cert,
-        storzRequestFound: storzReq
+        expirationDate: effectiveExpiration,
+        storzProgressPercent,
+        storzDeadline,
+        storzRequestFound: primaryStorzReq
           ? {
-              requestId: storzReq.id,
-              state: storzReq.state,
-              requestDate: storzReq.requestDate,
-              notes: storzReq.notes,
+              requestId: primaryStorzReq.id,
+              state: primaryStorzReq.state,
+              requestDate: primaryStorzReq.requestDate,
+              notes: primaryStorzReq.notes,
+              progressPercent: storzProgressPercent,
+              deadline: storzDeadline,
             }
           : undefined,
         detail,

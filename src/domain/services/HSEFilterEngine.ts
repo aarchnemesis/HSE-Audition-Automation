@@ -87,6 +87,8 @@ export class HSEFilterEngine {
       { header: 'Status EHS', key: 'statusEHS', width: 20 },
       { header: 'ID Storz', key: 'storzRequestId', width: 15 },
       { header: 'Status Storz', key: 'storzState', width: 18 },
+      { header: 'Progresso Storz (%)', key: 'storzProgress', width: 20 },
+      { header: 'Prazo Limite Storz', key: 'storzDeadline', width: 20 },
       { header: 'Detalhes da Auditoria', key: 'detail', width: 55 },
     ]
 
@@ -112,6 +114,11 @@ export class HSEFilterEngine {
         statusEHS: rec.statusEHS,
         storzRequestId: rec.storzRequestId || 'N/A',
         storzState: rec.storzState || 'N/A',
+        storzProgress:
+          rec.storzProgressPercent !== undefined
+            ? `${rec.storzProgressPercent}%`
+            : 'N/A',
+        storzDeadline: rec.storzDeadline || 'N/A',
         detail: rec.detail,
       })
 
@@ -154,6 +161,26 @@ export class HSEFilterEngine {
           fgColor: { argb: 'EDE9FE' },
         }
         statusCell.font = { color: { argb: '5B21B6' }, bold: true }
+      }
+
+      // Estilização do Progresso da Storz
+      const progCell = row.getCell('storzProgress')
+      if (rec.storzProgressPercent !== undefined) {
+        if (rec.storzProgressPercent === 100) {
+          progCell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'DCFCE7' },
+          }
+          progCell.font = { color: { argb: '166534' }, bold: true }
+        } else if (rec.storzProgressPercent > 0) {
+          progCell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'EDE9FE' },
+          }
+          progCell.font = { color: { argb: '5B21B6' }, bold: true }
+        }
       }
     }
 
