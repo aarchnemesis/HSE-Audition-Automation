@@ -158,12 +158,12 @@ export class AuditTriangulator {
         const dl = computeCourseDeadline(active)
         const dlStr = dl ? dl.toLocaleDateString('pt-BR') : undefined
         if (certDate && dl && certDate.getTime() < dl.getTime()) {
-          return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}]. ⚠️ ATENÇÃO AO RITMO: o certificado vence em ${certDate.toLocaleDateString('pt-BR')}, ANTES do prazo da Storz (${dlStr})!`
+          return ` | EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}]. ATENÇÃO AO RITMO: o certificado vence em ${certDate.toLocaleDateString('pt-BR')}, ANTES do prazo da Storz (${dlStr})!`
         }
         if (dlStr) {
-          return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}] — o prazo que vale é o vencimento do documento.`
+          return ` | EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) [Prazo Storz: ${dlStr}] — o prazo que vale é o vencimento do documento.`
         }
-        return ` | 🟣 EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) — o prazo que vale é o vencimento do documento.`
+        return ` | EM ANDAMENTO NA STORZ (${active.id} - Progresso: ${prog}) — o prazo que vale é o vencimento do documento.`
       }
 
       if (preferStorz && storzExpDate) {
@@ -176,8 +176,8 @@ export class AuditTriangulator {
         if (status === 'CONFORME') {
           validCount++
           detail = cert
-            ? `🟢 Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
-            : `🟢 Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+            ? `Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+            : `Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
         } else if (status === 'VENCIDO') {
           expiredCount++
           detail = `${evaluation.detail} | Concluído na Storz (${completedReq!.id}) em ${completionStr} (aguardando upload no Drive).`
@@ -187,7 +187,7 @@ export class AuditTriangulator {
         }
 
         if (activeReq) {
-          detail += ` | 🔵 Próxima reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+          detail += ` | Próxima reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
         }
       } else if (cert) {
         effectiveExpiration = cert.expirationDate
@@ -201,7 +201,7 @@ export class AuditTriangulator {
         if (status === 'CONFORME') {
           validCount++
           if (activeReq) {
-            detail += ` | 🔵 Reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+            detail += ` | Reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
           }
         } else if (status === 'VENCIDO') {
           expiredCount++
@@ -211,7 +211,7 @@ export class AuditTriangulator {
               detail += formatPaceNotice(activeReq, cert.expirationDate)
             } else {
               storzPendingCount++
-              detail += ` | 🔵 SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
+              detail += ` | SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
             }
           }
         } else {
@@ -222,7 +222,7 @@ export class AuditTriangulator {
               detail += formatPaceNotice(activeReq, cert.expirationDate)
             } else {
               storzPendingCount++
-              detail += ` | 🔵 SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
+              detail += ` | SOLICITADO NA STORZ (${activeReq.id} - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.`
             }
           }
         }
@@ -266,7 +266,7 @@ export class AuditTriangulator {
         : activeReq || completedReq
 
       if (!isModalityCompliant) {
-        detail += ` ⚠️ ALERTA MODALIDADE: Requerido ${requiredModality}, mas certificado é ${actualModality}`
+        detail += ` ALERTA MODALIDADE: Requerido ${requiredModality}, mas certificado é ${actualModality}`
       }
 
       return {

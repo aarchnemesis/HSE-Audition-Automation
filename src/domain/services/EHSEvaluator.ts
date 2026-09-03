@@ -29,32 +29,32 @@ export class EHSEvaluator {
     if (daysLeft < 0) {
       return {
         status: 'VENCIDO',
-        detail: `⛔ VENCIDO há ${Math.abs(daysLeft)} dias (${formattedExpDate})`,
+        detail: `VENCIDO há ${Math.abs(daysLeft)} dias (${formattedExpDate})`,
       }
     } else if (daysLeft <= 7) {
       return {
         status: 'VENCE_07',
-        detail: `🔴 CRÍTICO: Vence em ${daysLeft} dia(s) (${formattedExpDate})`,
+        detail: `CRÍTICO: Vence em ${daysLeft} dia(s) (${formattedExpDate})`,
       }
     } else if (daysLeft <= 15) {
       return {
         status: 'VENCE_15',
-        detail: `🟠 ALERTA URGENTE: Vence em ${daysLeft} dias (${formattedExpDate})`,
+        detail: `ALERTA URGENTE: Vence em ${daysLeft} dias (${formattedExpDate})`,
       }
     } else if (daysLeft <= 30) {
       return {
         status: 'VENCE_30',
-        detail: `🟡 ALERTA MÉDIO: Vence em ${daysLeft} dias (${formattedExpDate})`,
+        detail: `ALERTA MÉDIO: Vence em ${daysLeft} dias (${formattedExpDate})`,
       }
     } else if (daysLeft <= 60) {
       return {
         status: 'VENCE_60',
-        detail: `🔵 ALERTA INICIAL: Vence em ${daysLeft} dias (${formattedExpDate})`,
+        detail: `ALERTA INICIAL: Vence em ${daysLeft} dias (${formattedExpDate})`,
       }
     } else {
       return {
         status: 'CONFORME',
-        detail: `🟢 Válido até ${formattedExpDate}`,
+        detail: `Válido até ${formattedExpDate}`,
       }
     }
   }
