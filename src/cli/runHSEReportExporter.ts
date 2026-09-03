@@ -27,6 +27,8 @@ const REF_DATE = process.env.HSE_REF_DATE
   : new Date()
 const EMAIL_RECIPIENT =
   process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br'
+const SKIP_EMAIL =
+  process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
 
 const MODALITY_REQUIREMENTS: ParkRequirement['requiredModalities'] =
   Object.fromEntries(
@@ -203,8 +205,18 @@ async function main() {
     `✅ Dashboard gerado em: ${dashboardPath} e ${publicDashboardPath}\n`
   )
 
-  // 8. Enviar o resumo diário — um único e-mail agrupando todo mundo com pendência, em vez de
-  //    um e-mail por inspetor. Frequência de disparo ainda não definida com o time de HSE.
+  // 8. Enviar o resumo diário (ignorado se --no-email ou SKIP_EMAIL=true)
+  if (SKIP_EMAIL) {
+    console.log(
+      '================================================================================'
+    )
+    console.log('   ℹ️  PULANDO ENVIO DE E-MAIL (--no-email ou SKIP_EMAIL=true)')
+    console.log(
+      '================================================================================\n'
+    )
+    return
+  }
+
   console.log(
     '================================================================================'
   )
