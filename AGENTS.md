@@ -27,6 +27,9 @@ This is the **single source of truth**; `CLAUDE.md` just imports it.
 7. **Senior-level code, minimal comments.** The code explains itself; comment only the non-obvious "why".
 8. **Before creating anything new, search for an existing one** (service, adapter, model, util) and reuse/extend it without breaking its current contract.
 9. **Resource management & Lifecycle:** Always clean up Playwright browser instances, file streams, HTTP connections, and child processes on unmount or process exit.
+10. **Design & UI Icons: NEVER use emojis, ALWAYS use SVG.**
+    - Never place emojis (e.g. 🎓, 📋, 🔴, ⚠️, ✔, 🔍) in dashboards, UI templates, HTML generators, or front-end components.
+    - Always use crisp, scalable inline SVGs or styled CSS indicators (`<span class="dot ..."></span>`). SVGs ensure a professional industrial aesthetic, uniform rendering across all OS/browsers, and full control over stroke/fill colors.
 
 ---
 
