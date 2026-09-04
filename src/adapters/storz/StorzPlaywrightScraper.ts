@@ -67,17 +67,16 @@ const MAX_PAGES_SAFETY_CAP = 50
 export class StorzPlaywrightScraper {
   private selectors: StorzSelectors
   private cacheFilePath: string
+  private isCustomCachePath: boolean
 
   constructor(
     selectors: StorzSelectors = DEFAULT_STORZ_SELECTORS,
-    cacheFilePath: string = path.join(
-      process.cwd(),
-      'scratch',
-      'storz_cache.json'
-    )
+    cacheFilePath?: string
   ) {
     this.selectors = selectors
-    this.cacheFilePath = cacheFilePath
+    this.isCustomCachePath = Boolean(cacheFilePath)
+    this.cacheFilePath =
+      cacheFilePath || path.join(process.cwd(), 'scratch', 'storz_cache.json')
   }
 
   /**
@@ -252,20 +251,52 @@ export class StorzPlaywrightScraper {
     log: (msg: string) => void
   ): Promise<void> {
     let targetUrl = this.selectors.url
-    if (targetUrl.endsWith('/admin/main.php')) {
-      targetUrl = targetUrl.replace('/admin/main.php', '/admin/auth/index.php')
+    if (targetUrl.includes('/admin/main.php')) {
+      targetUrl = targetUrl.replace(
+        /\/admin\/main\.php.*/,
+        '/admin/auth/index.php'
+      )
+    } else if (!targetUrl.includes('/admin/auth/index.php')) {
+      try {
+        const baseUrl = new URL(targetUrl).origin
+        targetUrl = `${baseUrl}/admin/auth/index.php`
+      } catch {
+        // mantém targetUrl
+      }
     }
     log(`🔑 Passo 2: Acessando URL de login: ${targetUrl}`)
     await page.goto(targetUrl, {
       waitUntil: 'domcontentloaded',
-      timeout: 35000,
+      timeout: 45000,
     })
 
-    log('🔑 Preenchendo formulário de autenticação...')
     const userField = page
       .locator(`${this.selectors.loginUserSelector}, input[name="ds_login"]`)
       .first()
-    await userField.waitFor({ state: 'visible', timeout: 30000 })
+    const adminNav = page
+      .locator(this.selectors.administracaoMenuSelector)
+      .first()
+
+    log('🔑 Verificando status de autenticação...')
+    await Promise.race([
+      userField.waitFor({ state: 'visible', timeout: 35000 }),
+      adminNav.waitFor({ state: 'visible', timeout: 35000 }),
+    ]).catch(() => {})
+
+    if (await adminNav.isVisible()) {
+      log('ℹ️ Sessão já autenticada na plataforma Storz.')
+      return
+    }
+
+    if (!(await userField.isVisible())) {
+      const currentUrl = page.url()
+      const title = await page.title()
+      throw new Error(
+        `Timeout aguardando campo de login na Storz após 35s. URL atual: ${currentUrl} - Título: ${title}`
+      )
+    }
+
+    log('🔑 Preenchendo formulário de autenticação...')
     await userField.fill(user)
 
     const passField = page
@@ -286,7 +317,7 @@ export class StorzPlaywrightScraper {
     await page
       .waitForSelector(this.selectors.loginUserSelector, {
         state: 'hidden',
-        timeout: 15000,
+        timeout: 20000,
       })
       .catch(() => {
         log(
@@ -299,7 +330,10 @@ export class StorzPlaywrightScraper {
     })
 
     const stillOnLoginPage = await page.$(this.selectors.loginUserSelector)
-    if (stillOnLoginPage) {
+    if (
+      stillOnLoginPage &&
+      (await page.locator(this.selectors.loginUserSelector).isVisible())
+    ) {
       throw new Error(
         'Login não confirmado: o campo de usuário ainda está visível após o submit. Verifique STORZ_USER/STORZ_PASS.'
       )
@@ -431,35 +465,57 @@ export class StorzPlaywrightScraper {
     }
   }
 
-  private loadCache(): StorzRequest[] {
-    if (fs.existsSync(this.cacheFilePath)) {
-      try {
-        const raw = fs.readFileSync(this.cacheFilePath, 'utf-8')
-        const data = JSON.parse(raw)
-        return data.map((item: any) => ({
-          ...item,
-          requestDate: new Date(item.requestDate),
-          scheduledDate: item.scheduledDate
-            ? new Date(item.scheduledDate)
-            : undefined,
-          completionDate: item.completionDate
-            ? new Date(item.completionDate)
-            : undefined,
-        }))
-      } catch (e) {
-        console.warn('[StorzPlaywrightScraper] Erro ao ler cache JSON.')
+  public loadCache(): StorzRequest[] {
+    const candidates = this.isCustomCachePath
+      ? [this.cacheFilePath]
+      : [
+          this.cacheFilePath,
+          path.join(process.cwd(), 'data', 'storz_cache.json'),
+          path.join(process.cwd(), 'scratch', 'storz_cache.json'),
+        ]
+
+    for (const p of candidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = fs.readFileSync(p, 'utf-8')
+          const data = JSON.parse(raw)
+          if (Array.isArray(data) && data.length > 0) {
+            return data.map((item: any) => ({
+              ...item,
+              requestDate: new Date(item.requestDate),
+              scheduledDate: item.scheduledDate
+                ? new Date(item.scheduledDate)
+                : undefined,
+              completionDate: item.completionDate
+                ? new Date(item.completionDate)
+                : undefined,
+            }))
+          }
+        } catch (e) {
+          console.warn(
+            `[StorzPlaywrightScraper] Erro ao ler cache JSON em ${p}:`,
+            e
+          )
+        }
       }
     }
     return []
   }
 
   private saveCache(requests: StorzRequest[]): void {
-    const dir = path.dirname(this.cacheFilePath)
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
-    fs.writeFileSync(
-      this.cacheFilePath,
-      JSON.stringify(requests, null, 2),
-      'utf-8'
-    )
+    if (!requests || requests.length === 0) return
+
+    const targets = this.isCustomCachePath
+      ? [this.cacheFilePath]
+      : [
+          this.cacheFilePath,
+          path.join(process.cwd(), 'data', 'storz_cache.json'),
+        ]
+
+    for (const target of targets) {
+      const dir = path.dirname(target)
+      if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+      fs.writeFileSync(target, JSON.stringify(requests, null, 2), 'utf-8')
+    }
   }
 }
