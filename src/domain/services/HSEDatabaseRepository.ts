@@ -34,11 +34,12 @@ export interface HSEDatabaseRecord {
 
 export class HSEDatabaseRepository {
   private dbPath: string
+  private isCustomPath: boolean
 
-  constructor(
-    dbPath: string = path.join(process.cwd(), 'scratch', 'hse_database.json')
-  ) {
-    this.dbPath = dbPath
+  constructor(dbPath?: string) {
+    this.isCustomPath = Boolean(dbPath)
+    this.dbPath =
+      dbPath || path.join(process.cwd(), 'scratch', 'hse_database.json')
     const dir = path.dirname(this.dbPath)
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true })
@@ -99,35 +100,61 @@ export class HSEDatabaseRepository {
     console.log(
       `[HSEDatabaseRepository] 💾 Banco de dados HSE atualizado com ${records.length} registro(s) em: ${this.dbPath}`
     )
+
+    // Salva cópia na pasta persistente data/ para suporte a CI/GitHub Actions apenas se não for caminho customizado de teste
+    if (!this.isCustomPath) {
+      try {
+        const dataDir = path.join(process.cwd(), 'data')
+        if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
+        const persistentPath = path.join(dataDir, 'hse_database.json')
+        fs.writeFileSync(
+          persistentPath,
+          JSON.stringify(records, null, 2),
+          'utf-8'
+        )
+      } catch (e) {
+        console.warn(
+          '[HSEDatabaseRepository] Aviso ao salvar cópia em data/:',
+          e
+        )
+      }
+    }
   }
 
   /**
    * Carrega todos os registros do banco de dados HSE
    */
   getAllRecords(): HSEDatabaseRecord[] {
-    if (!fs.existsSync(this.dbPath)) return []
-    try {
-      const raw = fs.readFileSync(this.dbPath, 'utf-8')
-      const parsed = JSON.parse(raw)
-      if (!Array.isArray(parsed)) {
-        console.error(
-          '[HSEDatabaseRepository] Banco de dados HSE em formato inesperado (esperado array). Ignorando.'
-        )
-        return []
+    const candidates = this.isCustomPath
+      ? [this.dbPath]
+      : [
+          this.dbPath,
+          path.join(process.cwd(), 'data', 'hse_database.json'),
+          path.join(process.cwd(), 'scratch', 'hse_database.json'),
+        ]
+
+    for (const p of candidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = fs.readFileSync(p, 'utf-8')
+          const parsed = JSON.parse(raw)
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            return parsed.filter(
+              r =>
+                typeof r === 'object' &&
+                r !== null &&
+                typeof r.inspectorName === 'string' &&
+                typeof r.docCode === 'string'
+            )
+          }
+        } catch (e) {
+          console.error(
+            `[HSEDatabaseRepository] Erro ao ler banco de dados HSE em ${p}:`,
+            e
+          )
+        }
       }
-      return parsed.filter(
-        r =>
-          typeof r === 'object' &&
-          r !== null &&
-          typeof r.inspectorName === 'string' &&
-          typeof r.docCode === 'string'
-      )
-    } catch (e) {
-      console.error(
-        '[HSEDatabaseRepository] Erro ao ler banco de dados HSE:',
-        e
-      )
-      return []
     }
+    return []
   }
 }
