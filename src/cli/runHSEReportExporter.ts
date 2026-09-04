@@ -108,6 +108,20 @@ async function main() {
     `[StorzScraper] Finalizado. Total de matrículas/cursos raspados: ${storzResult.requests.length}\n`
   )
 
+  let storzRequests = storzResult.requests
+  if (storzRequests.length === 0) {
+    console.warn(
+      '⚠️ [AVISO] Nenhuma matrícula obtida ao vivo da Storz (possível timeout ou falha de conexão).'
+    )
+    console.warn(
+      '🔄 Carregando fallback do cache persistente para não zerar matrículas do dashboard...'
+    )
+    storzRequests = storzScraper.loadCache()
+    console.log(
+      `✅ [Fallback Storz] ${storzRequests.length} matrícula(s) recuperada(s) do cache persistente.`
+    )
+  }
+
   // 4. Rodar a Auditoria Tripla — o pacote de documentos exigido varia por perfil (campo x
   //    administrativo), mas o cruzamento com Drive/Storz é o mesmo para todo mundo.
   const auditResults = roster.map(
@@ -124,7 +138,7 @@ async function main() {
       return AuditTriangulator.performTripleAudit(
         inspector,
         park,
-        storzResult.requests,
+        storzRequests,
         REF_DATE
       )
     }
