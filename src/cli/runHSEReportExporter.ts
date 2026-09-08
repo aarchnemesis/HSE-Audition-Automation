@@ -6,7 +6,7 @@ import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
-import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js'
+import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
 import { Inspector, ParkRequirement } from '../domain/models/Certificate.js'
 import { AuditTriangulator } from '../domain/services/AuditTriangulator.js'
 import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js'
@@ -43,7 +43,7 @@ async function main() {
     '================================================================================'
   )
   console.log(
-    `   HSE AUDIT AUTOMATION - CONSOLIDAÇÃO DE DADOS, STORZ PLAYWRIGHT & FILTROS`
+    `   HSE AUDIT AUTOMATION - CONSOLIDAÇÃO DE DADOS, STORZ HTTP API & FILTROS`
   )
   console.log(`   Data de Referência: ${REF_DATE.toLocaleDateString('pt-BR')}`)
   console.log(
@@ -53,7 +53,7 @@ async function main() {
   // 1. Instanciar Adaptadores e Repositórios
   const driveAdapter = createDriveAdapter(REF_DATE)
   const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE)
-  const storzScraper = new StorzPlaywrightScraper()
+  const storzScraper = new StorzHttpScraper()
   const dbRepo = new HSEDatabaseRepository()
   const filterEngine = new HSEFilterEngine(dbRepo)
 

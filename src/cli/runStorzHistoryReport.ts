@@ -7,8 +7,8 @@ import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
 import { wrapEmailHtml } from '../adapters/email/emailTemplates.js'
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
+import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
 import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js'
-import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js'
 import {
   StorzRequest,
   computeCourseDeadline,
@@ -27,6 +27,8 @@ const REF_DATE = process.env.HSE_REF_DATE
 const DO_EMAIL_RECIPIENT =
   process.env.DO_EMAIL_TO ||
   'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br'
+const SKIP_EMAIL =
+  process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
 
 /**
  * Gera um "Histórico do Aluno" — um registro por colaborador+curso, no molde do exemplo que a
@@ -301,7 +303,7 @@ async function main() {
   console.log(
     '🤖 Executando raspagem do histórico completo na plataforma Storz...'
   )
-  const storzScraper = new StorzPlaywrightScraper()
+  const storzScraper = new StorzHttpScraper()
   const storzResult = await storzScraper.runAuditScrape({
     headless: true,
     targetCollaborators,
@@ -326,6 +328,13 @@ async function main() {
   const dashboardPath = path.join(process.cwd(), 'scratch', 'do_dashboard.html')
   fs.writeFileSync(dashboardPath, buildDoDashboardHtml(storzResult.requests))
   console.log(`✅ Dashboard DO gerado em: ${dashboardPath}\n`)
+
+  if (SKIP_EMAIL) {
+    console.log(
+      'ℹ️  --no-email informado ou SKIP_EMAIL=true — pulando envio de e-mail (arquivos gerados com sucesso).\n'
+    )
+    return
+  }
 
   if (!DO_EMAIL_RECIPIENT) {
     console.log(

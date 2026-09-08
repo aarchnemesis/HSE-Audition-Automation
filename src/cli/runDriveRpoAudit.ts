@@ -9,8 +9,8 @@ import {
   RPO_TRACKED_DOC_CODES,
   SmartsheetRPOAdapter,
 } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
+import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
 import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js'
-import { StorzPlaywrightScraper } from '../adapters/storz/StorzPlaywrightScraper.js'
 import { Inspector } from '../domain/models/Certificate.js'
 import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js'
 import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js'
@@ -140,7 +140,7 @@ async function main() {
   }
 
   console.log('🤖 Executando raspagem / auditoria na plataforma Storz...')
-  const storzScraper = new StorzPlaywrightScraper()
+  const storzScraper = new StorzHttpScraper()
   const storzResult = await storzScraper.runAuditScrape({
     headless: true,
     targetCollaborators: rpoInspectors.map(i => i.name),
