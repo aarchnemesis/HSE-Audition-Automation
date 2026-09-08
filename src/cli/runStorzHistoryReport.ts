@@ -24,7 +24,9 @@ import { IEmailService } from '../ports/IEmailService.js'
 const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
   : new Date()
+const toArg = process.argv.find(a => a.startsWith('--to='))?.split('=')[1]
 const DO_EMAIL_RECIPIENT =
+  toArg ||
   process.env.DO_EMAIL_TO ||
   'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br'
 const SKIP_EMAIL =
@@ -383,7 +385,7 @@ async function main() {
         Acompanhe a Matriz de Qualificação (Skill Matrix) e as matrículas da Storz ao vivo:
       </p>
       <a href="${dashboardUrl}" target="_blank" style="background-color: #00D2B4; color: #090D16; font-weight: 700; font-size: 13px; text-decoration: none; padding: 10px 20px; border-radius: 6px; display: inline-block; box-shadow: 0 2px 6px rgba(0,210,180,0.25);">
-        🚀 Acessar Portal de DO & Treinamentos ao Vivo
+        Acessar Portal de DO & Treinamentos ao Vivo
       </a>
       <div style="margin-top: 8px; font-size: 11px; color: #64748B;">
         Não é necessário baixar arquivos HTML anexos.
