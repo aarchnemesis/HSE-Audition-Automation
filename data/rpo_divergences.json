@@ -1231,11 +1231,12 @@
     "docName": "NR-10 Básico",
     "driveExpiration": "2027-11-25T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-11-25T03:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-09-03T03:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 283,
+    "detail": "Datas de validade divergem em 283 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 25/11/2027"
   },
   {
     "inspectorName": "FRANCISCO KELVIO TORRES ASSUNÇÃO",
@@ -8976,11 +8977,12 @@
     "docName": "NR-10 Básico",
     "driveExpiration": "2027-10-30T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-10-30T03:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-10-30T03:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 366,
+    "detail": "Datas de validade divergem em 366 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 30/10/2027"
   },
   {
     "inspectorName": "FRANCISCO GEORGE MARTINS SILVA",
@@ -9469,14 +9471,14 @@
     "inspectorName": "FRANCISCO FABRICIO FREIRE BARBOSA",
     "docCode": "12",
     "docName": "NR-10 Básico",
-    "driveExpiration": "2026-10-19T03:00:00.000Z",
     "storzExpiration": "2028-09-03T03:00:00.000Z",
-    "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-10-19T03:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "trustedSource": "STORZ",
+    "rpoExpiration": "2028-03-09T03:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 178,
+    "detail": "Datas de validade divergem em 178 dia(s) entre Storz (estimado pela conclusão do curso) e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 03/09/2028"
   },
   {
     "inspectorName": "FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -9967,11 +9969,12 @@
     "docName": "NR-10 Básico",
     "driveExpiration": "2027-02-03T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-03T03:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-09-03T03:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 578,
+    "detail": "Datas de validade divergem em 578 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 03/02/2027"
   },
   {
     "inspectorName": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
