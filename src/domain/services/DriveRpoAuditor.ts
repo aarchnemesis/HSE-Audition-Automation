@@ -31,6 +31,8 @@ export interface DriveRpoComparisonItem {
   divergent: boolean
   divergenceKind?: DriveRpoDivergenceKind
   detail: string
+  diffDays?: number
+  recommendedAction?: string
 }
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
@@ -106,6 +108,10 @@ export class DriveRpoAuditor {
             divergenceKind:
               trustedSource === 'STORZ' ? 'SOMENTE_STORZ' : 'SOMENTE_DRIVE',
             detail: `Curso/certificado confirmado via ${trustedSource === 'STORZ' ? 'Storz (conclusão de curso)' : 'Drive'}, mas sem registro correspondente na planilha RPO (${rpoInspector ? 'pessoa encontrada na RPO' : 'pessoa não encontrada na RPO'}).`,
+            recommendedAction:
+              trustedSource === 'STORZ'
+                ? 'Incluir na RPO com base na Storz'
+                : 'Incluir na RPO com base no Drive',
           })
           continue
         }
@@ -120,6 +126,7 @@ export class DriveRpoAuditor {
             divergenceKind: 'SOMENTE_RPO',
             detail:
               'Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.',
+            recommendedAction: 'Verificar ausência no Drive / Storz',
           })
           continue
         }
@@ -140,6 +147,7 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert!.expirationDate,
             divergent: false,
             detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).`,
+            recommendedAction: 'Nenhuma ação necessária (Consistente)',
           })
           continue
         }
@@ -149,6 +157,7 @@ export class DriveRpoAuditor {
           Math.abs(
             trustedExpiration!.getTime() - rpoCert!.expirationDate!.getTime()
           ) / ONE_DAY_MS
+        const roundedDiff = Math.round(diffDays)
         if (diffDays > DATE_TOLERANCE_DAYS) {
           items.push({
             inspectorName: driveInspector.name,
@@ -160,7 +169,9 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert!.expirationDate,
             divergent: true,
             divergenceKind: 'DATA_DIVERGENTE',
-            detail: `Datas de validade divergem em ${Math.round(diffDays)} dia(s) entre ${trustedSource === 'STORZ' ? 'Storz (estimado pela conclusão do curso)' : 'Drive'} e RPO — provável erro de digitação na RPO.`,
+            diffDays: roundedDiff,
+            detail: `Datas de validade divergem em ${roundedDiff} dia(s) entre ${trustedSource === 'STORZ' ? 'Storz (estimado pela conclusão do curso)' : 'Drive'} e RPO — provável erro de digitação na RPO.`,
+            recommendedAction: `Corrigir data na RPO para ${this.formatDate(trustedExpiration!)}`,
           })
           continue
         }
@@ -174,12 +185,22 @@ export class DriveRpoAuditor {
           trustedSource,
           rpoExpiration: rpoCert!.expirationDate,
           divergent: false,
+          diffDays: roundedDiff,
           detail: `${trustedSource === 'STORZ' ? 'Storz' : 'Drive'} e RPO consistentes.`,
+          recommendedAction: 'Nenhuma ação necessária (Consistente)',
         })
       }
     }
 
     return items
+  }
+
+  private static formatDate(d?: Date): string {
+    if (!d) return ''
+    const day = String(d.getDate()).padStart(2, '0')
+    const month = String(d.getMonth() + 1).padStart(2, '0')
+    const year = d.getFullYear()
+    return `${day}/${month}/${year}`
   }
 
   /** Validade ESTIMADA a partir do curso concluído mais recente na Storz pra esse código de
