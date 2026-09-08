@@ -193,4 +193,5 @@ async function main() {
 
 main().catch(err => {
   console.error('Erro na auditoria Storz:', err)
+  process.exit(1)
 })
