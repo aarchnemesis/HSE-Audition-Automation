@@ -259,4 +259,5 @@ async function main() {
 
 main().catch(err => {
   console.error('Erro na execução do relatório HSE:', err)
+  process.exit(1)
 })
