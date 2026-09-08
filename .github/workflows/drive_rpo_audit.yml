@@ -33,9 +33,6 @@ jobs:
       - name: 📦 Instalar Dependências do Projeto
         run: pnpm install --frozen-lockfile
 
-      - name: 🎭 Instalar Playwright Chromium
-        run: pnpm exec playwright install chromium --with-deps
-
       - name: 🔍 Comparar Drive + Storz (confiáveis) x RPO (digitada)
         env:
           STORZ_URL: ${{ secrets.STORZ_URL }}

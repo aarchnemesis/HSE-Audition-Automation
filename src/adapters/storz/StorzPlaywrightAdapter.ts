@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { StorzRequest } from '../../domain/models/StorzRequest.js'
 import { IStorzProvider } from '../../ports/IStorzProvider.js'
+import { StorzHttpScraper } from './StorzHttpScraper.js'
 import { StorzPlaywrightScraper } from './StorzPlaywrightScraper.js'
 
 interface CachedStorzRequest
@@ -14,14 +15,25 @@ interface CachedStorzRequest
   completionDate?: string
 }
 
+export interface IStorzScraperEngine {
+  runAuditScrape(options?: {
+    username?: string
+    password?: string
+    targetCollaborators?: string[]
+    headless?: boolean
+    maxRetries?: number
+  }): Promise<{ success: boolean; requests: StorzRequest[]; log: string[] }>
+  loadCache(): StorzRequest[]
+}
+
 /**
- * Adaptador de leitura (cache local) + sincronização com a Storz.
- * A raspagem em si é delegada ao StorzPlaywrightScraper para não duplicar a lógica de
- * login/navegação/seletores em dois lugares — ver StorzPlaywrightScraper.ts para os seletores.
+ * Reading adapter (local cache) + synchronization with Storz.
+ * Scraping execution is delegated to StorzHttpScraper (high-speed REST/HTTP)
+ * with backward compatibility for StorzPlaywrightScraper if explicitly provided.
  */
 export class StorzPlaywrightAdapter implements IStorzProvider {
   private cacheFilePath: string
-  private scraper: StorzPlaywrightScraper
+  private scraper: IStorzScraperEngine
 
   constructor(
     cacheFilePath: string = path.join(
@@ -29,7 +41,7 @@ export class StorzPlaywrightAdapter implements IStorzProvider {
       'scratch',
       'storz_cache.json'
     ),
-    scraper: StorzPlaywrightScraper = new StorzPlaywrightScraper()
+    scraper: IStorzScraperEngine = new StorzHttpScraper(cacheFilePath)
   ) {
     this.cacheFilePath = cacheFilePath
     this.scraper = scraper

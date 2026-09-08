@@ -57,9 +57,6 @@ jobs:
       - name: 📦 Instalar Dependências do Projeto
         run: pnpm install --frozen-lockfile
 
-      - name: 🎭 Instalar Playwright Chromium
-        run: pnpm exec playwright install chromium --with-deps
-
       - name: 🎓 Gerar Histórico do Aluno & Enviar por E-mail
         env:
           STORZ_URL: ${{ secrets.STORZ_URL }}
