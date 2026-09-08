@@ -1,15 +1,22 @@
 import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
-import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
+import {
+  DashboardSourceHealth,
+  buildDashboardHtml,
+} from '../adapters/dashboard/DashboardHtmlGenerator.js'
 import { createDriveAdapter } from '../adapters/drive/driveAdapterFactory.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
-import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
+import {
+  RPO_TRACKED_DOC_CODES,
+  SmartsheetRPOAdapter,
+} from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
 import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
 import { Inspector, ParkRequirement } from '../domain/models/Certificate.js'
 import { AuditTriangulator } from '../domain/services/AuditTriangulator.js'
 import { PRESENCIAL_REQUIRED_DOC_CODES } from '../domain/services/ComplianceEngine.js'
+import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js'
 import {
   EHS_TRAINING_SCOPE_BRANCHES,
   EmployeeProfile,
@@ -71,8 +78,10 @@ async function main() {
     profile: EmployeeProfile
     hasDriveFolder: boolean
   }[]
+  let rpoInspectors: Inspector[] = []
   if (rpoAdapter) {
-    const rpoInspectors = await rpoAdapter.readRPOData()
+    const rpoInspectorsRaw = await rpoAdapter.readRPOData()
+    rpoInspectors = rpoInspectorsRaw
     console.log(
       `[SmartsheetRPOAdapter] Pessoas lidas da RPO: ${rpoInspectors.length}`
     )
@@ -120,6 +129,96 @@ async function main() {
     console.log(
       `✅ [Fallback Storz] ${storzRequests.length} matrícula(s) recuperada(s) do cache persistente.`
     )
+  }
+
+  // 3b. Auditoria RPO (cruzamento Drive + Storz x RPO)
+  console.log('🔍 Executando auditoria Drive + Storz x RPO...')
+  let rpoDivergences: ReturnType<typeof DriveRpoAuditor.compare> = []
+  if (rpoInspectors.length > 0) {
+    rpoDivergences = DriveRpoAuditor.compare(
+      driveInspectors,
+      rpoInspectors,
+      Array.from(RPO_TRACKED_DOC_CODES),
+      storzRequests
+    )
+    console.log(
+      `[DriveRpoAuditor] ${rpoDivergences.length} combinação(ões) comparada(s), ${rpoDivergences.filter(d => d.divergent).length} divergência(s) encontrada(s).`
+    )
+
+    // Salvar snapshot em data/rpo_divergences.json e scratch/rpo_divergences.json
+    try {
+      const dataDir = path.join(process.cwd(), 'data')
+      if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
+      fs.writeFileSync(
+        path.join(dataDir, 'rpo_divergences.json'),
+        JSON.stringify(rpoDivergences, null, 2),
+        'utf-8'
+      )
+      const scratchDir = path.join(process.cwd(), 'scratch')
+      if (!fs.existsSync(scratchDir))
+        fs.mkdirSync(scratchDir, { recursive: true })
+      fs.writeFileSync(
+        path.join(scratchDir, 'rpo_divergences.json'),
+        JSON.stringify(rpoDivergences, null, 2),
+        'utf-8'
+      )
+    } catch (e) {
+      console.warn('[DriveRpoAuditor] Aviso ao salvar rpo_divergences.json:', e)
+    }
+  } else {
+    // Tenta carregar snapshot persistente se existir
+    const persistentRpoPath = path.join(
+      process.cwd(),
+      'data',
+      'rpo_divergences.json'
+    )
+    if (fs.existsSync(persistentRpoPath)) {
+      try {
+        rpoDivergences = JSON.parse(fs.readFileSync(persistentRpoPath, 'utf-8'))
+        console.log(
+          `[DriveRpoAuditor] Snapshot persistente de divergências RPO carregado (${rpoDivergences.length} itens).`
+        )
+      } catch (e) {
+        console.warn(
+          '[DriveRpoAuditor] Falha ao ler data/rpo_divergences.json:',
+          e
+        )
+      }
+    }
+  }
+
+  // 3c. Montar telemetria de integridade / saúde das fontes
+  const sourceHealth: DashboardSourceHealth = {
+    drive: {
+      status: driveInspectors.length > 0 ? 'ONLINE' : 'WARNING',
+      message: `${driveInspectors.length} pastas no Drive`,
+      detail: `Sincronização com Google Drive via OAuth (${driveInspectors.length} pastas de colaboradores lidas)`,
+      lastSync: REF_DATE.toLocaleDateString('pt-BR'),
+    },
+    smartsheet: {
+      status: rpoInspectors.length > 0 ? 'ONLINE' : 'WARNING',
+      message:
+        rpoInspectors.length > 0
+          ? `${rpoInspectors.length} pessoas na RPO`
+          : 'RPO Offline / Não Configurada',
+      detail:
+        rpoInspectors.length > 0
+          ? `Sincronização OK com a planilha RPO via Smartsheet API (${rpoInspectors.length} linhas)`
+          : 'Variáveis SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configuradas',
+      lastSync: REF_DATE.toLocaleDateString('pt-BR'),
+    },
+    storz: {
+      status: storzResult.requests.length > 0 ? 'ONLINE' : 'CACHE',
+      message:
+        storzResult.requests.length > 0
+          ? `Ao Vivo via REST API (${storzRequests.length} matrículas)`
+          : `Cache Persistente (${storzRequests.length} matrículas)`,
+      detail:
+        storzResult.requests.length > 0
+          ? `Raspagem direta via Storz REST API efetuada com sucesso (${storzResult.requests.length} matrículas extraídas)`
+          : `Fallback seguro ativado do cache local persistente (${storzRequests.length} matrículas)`,
+      lastSync: REF_DATE.toLocaleDateString('pt-BR'),
+    },
   }
 
   // 4. Rodar a Auditoria Tripla — o pacote de documentos exigido varia por perfil (campo x
@@ -212,7 +311,11 @@ async function main() {
   const publicDir = path.join(process.cwd(), 'public')
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
   const publicDashboardPath = path.join(publicDir, 'index.html')
-  const dashboardHtml = buildDashboardHtml(dbRepo.getAllRecords())
+  const dashboardHtml = buildDashboardHtml(dbRepo.getAllRecords(), {
+    rpoDivergences,
+    storzHistory: storzRequests,
+    sourceHealth,
+  })
   fs.writeFileSync(dashboardPath, dashboardHtml)
   fs.writeFileSync(publicDashboardPath, dashboardHtml)
   console.log(

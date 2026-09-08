@@ -41,6 +41,10 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergent).toBe(false)
+    expect(result[0].diffDays).toBe(1)
+    expect(result[0].recommendedAction).toBe(
+      'Nenhuma ação necessária (Consistente)'
+    )
   })
 
   it('marca SOMENTE_DRIVE quando o certificado só existe no Drive', () => {
@@ -52,6 +56,7 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('SOMENTE_DRIVE')
+    expect(result[0].recommendedAction).toBe('Incluir na RPO com base no Drive')
   })
 
   it('marca SOMENTE_RPO quando o certificado só existe na planilha', () => {
@@ -63,6 +68,9 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('SOMENTE_RPO')
+    expect(result[0].recommendedAction).toBe(
+      'Verificar ausência no Drive / Storz'
+    )
   })
 
   it('marca DATA_DIVERGENTE quando as datas diferem além da tolerância', () => {
@@ -76,6 +84,10 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
+    expect(result[0].diffDays).toBeGreaterThan(50)
+    expect(result[0].recommendedAction).toContain(
+      'Corrigir data na RPO para 10/01/2027'
+    )
   })
 
   it('não gera item quando o documento está ausente nas duas fontes', () => {

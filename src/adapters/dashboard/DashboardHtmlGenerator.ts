@@ -1,7 +1,34 @@
+import { StorzRequest } from '../../domain/models/StorzRequest.js'
+import { DriveRpoComparisonItem } from '../../domain/services/DriveRpoAuditor.js'
 import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js'
 
-export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
+export interface SourceHealthInfo {
+  status: 'ONLINE' | 'CACHE' | 'WARNING' | 'OFFLINE'
+  message: string
+  detail?: string
+  lastSync?: string
+}
+
+export interface DashboardSourceHealth {
+  drive?: SourceHealthInfo
+  smartsheet?: SourceHealthInfo
+  storz?: SourceHealthInfo
+}
+
+export interface DashboardExtraData {
+  rpoDivergences?: DriveRpoComparisonItem[]
+  storzHistory?: StorzRequest[]
+  sourceHealth?: DashboardSourceHealth
+}
+
+export function buildDashboardHtml(
+  records: HSEDatabaseRecord[],
+  extraData: DashboardExtraData = {}
+): string {
   const dataJson = JSON.stringify(records)
+  const rpoDivergencesJson = JSON.stringify(extraData.rpoDivergences || [])
+  const storzHistoryJson = JSON.stringify(extraData.storzHistory || [])
+  const sourceHealthJson = JSON.stringify(extraData.sourceHealth || {})
   const auditDateStr = new Date().toLocaleDateString('pt-BR')
 
   return `<!DOCTYPE html>
@@ -467,12 +494,204 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       box-sizing: border-box;
     }
     .chip:hover { border-color: #94A3B8; color: var(--text-main); }
-    .chip.active { background: var(--text-main); color: #FFFFFF; border-color: var(--text-main); font-weight: 700; }
-    .chip.chip-crit.active { background: #EF4444; color: #FFFFFF; border-color: #EF4444; }
-    .chip.chip-warn.active { background: #F59E0B; color: #FFFFFF; border-color: #F59E0B; }
-    .chip.chip-storz.active { background: #8B5CF6; color: #FFFFFF; border-color: #8B5CF6; }
-    .chip.chip-ok.active { background: #10B981; color: #FFFFFF; border-color: #10B981; }
-    .chip.active svg { color: #FFFFFF !important; stroke: #FFFFFF !important; }
+    .chip.chip-action {
+      background: #FEF2F2;
+      border: 1px solid #FCA5A5;
+      color: #DC2626;
+      font-weight: 700;
+    }
+    .chip.chip-action:hover {
+      background: #FEE2E2;
+      border-color: #EF4444;
+      color: #991B1B;
+    }
+    .chip.chip-action.active {
+      background: #DC2626;
+      color: #FFFFFF;
+      border-color: #DC2626;
+    }
+
+    /* FRESHNESS BAR (SOURCE HEALTH) */
+    .freshness-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 7px 24px;
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--card-border);
+      flex-shrink: 0;
+      font-size: 11px;
+    }
+    .freshness-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .freshness-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .source-pills-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .source-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #F8FAFC;
+      border: 1px solid var(--card-border);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: help;
+      transition: all 0.15s;
+    }
+    .source-pill:hover {
+      border-color: #94A3B8;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    }
+    .source-pill.ok {
+      background: #F0FDF4;
+      border-color: #BBF7D0;
+      color: #166534;
+    }
+    .source-pill.cache {
+      background: #FFFBEB;
+      border-color: #FDE68A;
+      color: #92400E;
+    }
+    .source-pill.warn {
+      background: #FFFBEB;
+      border-color: #FDE68A;
+      color: #B45309;
+    }
+    .source-pill.crit {
+      background: #FEF2F2;
+      border-color: #FECACA;
+      color: #991B1B;
+    }
+    .source-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .source-dot.ok { background: #10B981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
+    .source-dot.cache { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
+    .source-dot.warn { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
+    .source-dot.crit { background: #EF4444; box-shadow: 0 0 6px rgba(239, 68, 68, 0.6); }
+    .source-name {
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .source-status {
+      font-weight: 700;
+    }
+
+    /* RPO AUDIT SUMMARY & BADGES */
+    .rpo-summary-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-shrink: 0;
+    }
+    .rpo-summary-card {
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-left: 4px solid var(--text-muted);
+    }
+    .rpo-summary-card.total { border-left-color: var(--brand-blue); background: #F8FAFC; }
+    .rpo-summary-card.crit { border-left-color: #EF4444; background: #FEF2F2; }
+    .rpo-summary-card.warn { border-left-color: #F59E0B; background: #FFFBEB; }
+    .rpo-summary-card.drive { border-left-color: #2563EB; background: #EFF6FF; }
+    .rpo-summary-card.rpo { border-left-color: #8B5CF6; background: #FAF5FF; }
+    .rpo-summary-val { font-size: 22px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+    .rpo-summary-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .diff-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .diff-badge.somente-drive { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .diff-badge.somente-storz { background: #FAF5FF; color: #7C3AED; border: 1px solid #E9D5FF; }
+    .diff-badge.somente-rpo { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+    .diff-badge.data-divergente { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; }
+    .diff-badge.consistente { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
+
+    .action-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      background: #F1F5F9;
+      color: #334155;
+      border: 1px solid #E2E8F0;
+    }
+    .action-pill.action-rpo {
+      background: #FEF2F2;
+      color: #991B1B;
+      border-color: #FCA5A5;
+      font-weight: 700;
+    }
+    .action-pill.action-ok {
+      background: #F0FDF4;
+      color: #166534;
+      border-color: #BBF7D0;
+    }
+
+    /* STORZ SUB-FILTERS GROUP */
+    .storz-filter-strip {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .storz-filter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .storz-filter-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
 
     /* STORZ SUMMARY ROW IN VIEW 3 */
     .storz-summary-row {
@@ -776,6 +995,14 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
         </div>
       </div>
 
+      <div class="nav-item" onclick="switchNav('rpo')" title="Auditoria RPO (Smartsheet x Confiáveis)">
+        <div class="nav-item-title">
+          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+          <span>Auditoria RPO</span>
+        </div>
+        <span class="storz-badge-pill" id="rpoBadgeSidebar" style="background:#EF4444;display:none;">0</span>
+      </div>
+
       <div class="nav-item" onclick="switchNav('storz')" title="Storz Matrículas">
         <div class="nav-item-title">
           <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
@@ -802,8 +1029,46 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
           <span class="filter-label">Visualização:</span>
           <span class="pill-opt active" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
           <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
+          <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#EF4444;display:none;">0</span></span>
           <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
         </div>
+      </div>
+    </div>
+
+    <!-- FRESHNESS / SOURCE HEALTH BAR -->
+    <div class="freshness-bar" id="freshnessBar">
+      <div class="freshness-left">
+        <span class="freshness-title">
+          <svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          Saúde das Fontes:
+        </span>
+        <div class="source-pills-wrap" id="sourcePillsWrap">
+          <!-- Drive Pill -->
+          <div class="source-pill ok" id="sourcePillDrive" title="Google Drive: Arquivos e pastas de certificados">
+            <span class="source-dot ok" id="sourceDotDrive"></span>
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            <span class="source-name">Drive</span>
+            <span class="source-status" id="sourceStatusDrive">Conectado</span>
+          </div>
+          <!-- Smartsheet Pill -->
+          <div class="source-pill ok" id="sourcePillSmartsheet" title="Smartsheet RPO: Planilha operacional">
+            <span class="source-dot ok" id="sourceDotSmartsheet"></span>
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span class="source-name">Smartsheet RPO</span>
+            <span class="source-status" id="sourceStatusSmartsheet">Conectado</span>
+          </div>
+          <!-- Storz Pill -->
+          <div class="source-pill ok" id="sourcePillStorz" title="Storz LMS: Plataforma de treinamentos online e presencial">
+            <span class="source-dot ok" id="sourceDotStorz"></span>
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span class="source-name">Storz LMS</span>
+            <span class="source-status" id="sourceStatusStorz">Ao Vivo (REST API)</span>
+          </div>
+        </div>
+      </div>
+      <div class="mono" style="font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+        <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Ref: <span id="freshnessTimestamp">${auditDateStr}</span></span>
       </div>
     </div>
 
@@ -865,6 +1130,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       <div class="quick-chips-row">
         <span class="quick-chips-label">Filtros Rápidos:</span>
         <button class="chip active" id="chip-ALL" onclick="applyStatusFilter('ALL')"><svg class="chip-svg icon-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Todos (<span id="chipAllCount">0</span>)</button>
+        <button class="chip chip-action" id="chip-ACTION" onclick="applyStatusFilter('ACTION')" title="Filtrar pendências que demandam intervenção humana imediata"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Ação Necessária (<span id="chipActionCount">0</span>)</button>
         <button class="chip chip-crit" id="chip-VENCIDO" onclick="applyStatusFilter('VENCIDO')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Com Vencidos</button>
         <button class="chip chip-warn" id="chip-VENCE_30" onclick="applyStatusFilter('VENCE_30')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>A Vencer (&lt;30d)</button>
         <button class="chip chip-storz" id="chip-STORZ" onclick="applyStatusFilter('STORZ')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Com Storz Ativa (<span id="chipStorzCount">0</span>)</button>
@@ -880,6 +1146,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
           </select>
           <select id="statusFilter" class="select-filter" onchange="onSelectStatusFilter(this.value)">
             <option value="ALL">Todos os Status</option>
+            <option value="ACTION">Ação Necessária (Intervenção Humana)</option>
             <option value="CONFORME">Em Dia / Conforme</option>
             <option value="VENCE_30">A Vencer (&lt;30 dias)</option>
             <option value="VENCIDO">Vencido (no Drive)</option>
@@ -931,7 +1198,64 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
         </div>
       </div>
 
-      <!-- VIEW 3: STORZ -->
+      <!-- VIEW 3: AUDITORIA RPO -->
+      <div id="view-rpo" class="tab-view">
+        <div class="rpo-summary-row">
+          <div class="rpo-summary-card total" onclick="filterRpoSubTab('ALL')" style="cursor:pointer;" title="Ver todos os registros comparados">
+            <div class="rpo-summary-val mono" id="rpoKpiTotal" style="color:var(--brand-blue);">0</div>
+            <div class="rpo-summary-label">Total Comparados</div>
+          </div>
+          <div class="rpo-summary-card crit" onclick="filterRpoSubTab('ALL_DIV')" style="cursor:pointer;" title="Filtrar todas as divergências ativas">
+            <div class="rpo-summary-val mono" id="rpoKpiDivergences" style="color:#EF4444;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências Ativas</div>
+          </div>
+          <div class="rpo-summary-card warn" onclick="filterRpoSubTab('DATA_DIVERGENTE')" style="cursor:pointer;" title="Filtrar apenas datas divergentes (erros de digitação)">
+            <div class="rpo-summary-val mono" id="rpoKpiDataDivergente" style="color:#F59E0B;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Datas Divergentes</div>
+          </div>
+          <div class="rpo-summary-card drive" onclick="filterRpoSubTab('SOMENTE_DRIVE')" style="cursor:pointer;" title="Filtrar registros presentes apenas no Drive">
+            <div class="rpo-summary-val mono" id="rpoKpiSomenteDrive" style="color:#2563EB;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Só no Drive / Storz</div>
+          </div>
+          <div class="rpo-summary-card rpo" onclick="filterRpoSubTab('SOMENTE_RPO')" style="cursor:pointer;" title="Filtrar registros que constam na RPO mas não têm documento">
+            <div class="rpo-summary-val mono" id="rpoKpiSomenteRpo" style="color:#8B5CF6;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Só na RPO (Sem Doc)</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+            <h3><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria de Digitação: Fontes Confiáveis (Drive + Storz) vs Planilha RPO</h3>
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button class="chip active" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Só Divergências (<span id="rpoChipDivCount">0</span>)</button>
+              <button class="chip chip-crit" id="rpoChip-DATA_DIVERGENTE" onclick="filterRpoSubTab('DATA_DIVERGENTE')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Datas Divergentes</button>
+              <button class="chip" id="rpoChip-SOMENTE_DRIVE" onclick="filterRpoSubTab('SOMENTE_DRIVE')"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Só Drive</button>
+              <button class="chip" id="rpoChip-SOMENTE_STORZ" onclick="filterRpoSubTab('SOMENTE_STORZ')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>Só Storz</button>
+              <button class="chip" id="rpoChip-SOMENTE_RPO" onclick="filterRpoSubTab('SOMENTE_RPO')"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Só RPO</button>
+              <button class="chip chip-warn" id="rpoChip-DIFF_30" onclick="filterRpoSubTab('DIFF_30')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Diferença &gt; 30d</button>
+              <button class="chip" id="rpoChip-ALL" onclick="filterRpoSubTab('ALL')">Todos os Registros</button>
+            </div>
+          </div>
+          <div class="table-container">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th style="text-align:left;">Colaborador</th>
+                  <th style="text-align:left;">Documento / Treinamento</th>
+                  <th>Tipo de Divergência</th>
+                  <th>Validade Confiável</th>
+                  <th>Validade RPO</th>
+                  <th>Diferença</th>
+                  <th style="text-align:left;">Ação Recomendada</th>
+                </tr>
+              </thead>
+              <tbody id="rpoTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 4: STORZ -->
       <div id="view-storz" class="tab-view">
         <div class="storz-summary-row">
           <div class="storz-summary-card">
@@ -953,13 +1277,25 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
         </div>
 
         <div class="card">
-          <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+          <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; flex-wrap:wrap; gap:8px;">
             <h3><svg class="ico ico-sm ico-inline icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Painel de Gestão e Monitoramento de Treinamentos Storz</h3>
-            <div style="display:flex; gap:6px;">
+            <div style="display:flex; gap:6px; flex-wrap:wrap;">
               <button class="chip active" id="storzSubTab-ALL" onclick="filterStorzSubTab('ALL')">Todas as Ativas</button>
-              <button class="chip" id="storzSubTab-EM_ANDAMENTO" onclick="filterStorzSubTab('EM_ANDAMENTO')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Em Andamento</button>
+              <button class="chip chip-storz" id="storzSubTab-EM_ANDAMENTO" onclick="filterStorzSubTab('EM_ANDAMENTO')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Em Andamento</button>
               <button class="chip" id="storzSubTab-SOLICITADO" onclick="filterStorzSubTab('SOLICITADO')"><svg class="chip-svg icon-req" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>Solicitadas</button>
-              <button class="chip" id="storzSubTab-CONCLUIDO" onclick="filterStorzSubTab('CONCLUIDO')"><svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Concluídas</button>
+              <button class="chip chip-crit" id="storzSubTab-REPROVADO" onclick="filterStorzSubTab('REPROVADO')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Reprovados (Reteste)</button>
+              <button class="chip chip-ok" id="storzSubTab-CONCLUIDO" onclick="filterStorzSubTab('CONCLUIDO')"><svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Concluídas / Aprovados</button>
+            </div>
+          </div>
+          <!-- PROGRESS BRACKET FILTER STRIP -->
+          <div class="storz-filter-strip">
+            <div class="storz-filter-group">
+              <span class="storz-filter-label">Faixa de Progresso:</span>
+              <button class="chip active" id="storzProg-ALL" onclick="filterStorzProg('ALL')">Todos</button>
+              <button class="chip" id="storzProg-0" onclick="filterStorzProg('0')">0% (Não iniciado)</button>
+              <button class="chip" id="storzProg-1_49" onclick="filterStorzProg('1_49')">1% a 49%</button>
+              <button class="chip" id="storzProg-50_99" onclick="filterStorzProg('50_99')">50% a 99%</button>
+              <button class="chip chip-ok" id="storzProg-100" onclick="filterStorzProg('100')">100% (Concluído)</button>
             </div>
           </div>
           <div class="table-container">
@@ -969,7 +1305,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
                   <th style="text-align:left;">Colaborador</th>
                   <th style="text-align:left;">Curso Solicitado</th>
                   <th>Storz ID</th>
-                  <th>Status Matrícula</th>
+                  <th>Status / Situação</th>
                   <th style="min-width:130px;">Progresso (%)</th>
                   <th>Prazo Limite Storz</th>
                   <th style="text-align:left;">Detalhe Operacional &amp; Ritmo</th>
@@ -998,6 +1334,9 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
 
   <script>
     const rawData = ${dataJson};
+    const rawRpoDivergences = ${rpoDivergencesJson};
+    const rawStorzHistory = ${storzHistoryJson};
+    const sourceHealth = ${sourceHealthJson};
 
     const SVG_ICONS = {
       check: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
@@ -1136,6 +1475,14 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       return mainBadge;
     }
 
+    function needsAction(r) {
+      if (!r) return false;
+      if (isVencido(r.statusEHS)) return true;
+      if (isAVencer(r.statusEHS)) return true;
+      if (isAusente(r.statusEHS) && !isStorzActive(r)) return true;
+      return false;
+    }
+
     const totalPeople = peopleMap.size;
     let okCount = 0, warnCount = 0, critCount = 0, ausenteCount = 0;
     let storzTotalActive = 0, storzInProgress = 0, storzRequested = 0, storzCompleted = 0;
@@ -1156,6 +1503,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
     });
 
     const peopleWithStorzCount = Array.from(peopleMap.values()).filter(p => p.records.some(isStorzActive)).length;
+    const peopleNeedingActionCount = Array.from(peopleMap.values()).filter(p => p.records.some(needsAction)).length;
 
     document.getElementById('kpiTotalPeople').innerText = totalPeople;
     document.getElementById('kpiOkCount').innerText = okCount;
@@ -1169,11 +1517,88 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
     }
     if (document.getElementById('storzBadgeTab')) document.getElementById('storzBadgeTab').innerText = storzTotalActive;
     if (document.getElementById('chipAllCount')) document.getElementById('chipAllCount').innerText = totalPeople;
+    if (document.getElementById('chipActionCount')) document.getElementById('chipActionCount').innerText = peopleNeedingActionCount;
     if (document.getElementById('chipStorzCount')) document.getElementById('chipStorzCount').innerText = peopleWithStorzCount;
     if (document.getElementById('storzSummaryTotal')) document.getElementById('storzSummaryTotal').innerText = storzTotalActive;
     if (document.getElementById('storzSummaryInProgress')) document.getElementById('storzSummaryInProgress').innerText = storzInProgress;
     if (document.getElementById('storzSummaryRequested')) document.getElementById('storzSummaryRequested').innerText = storzRequested;
     if (document.getElementById('storzSummaryCompleted')) document.getElementById('storzSummaryCompleted').innerText = storzCompleted;
+
+    // RPO AUDIT KPIS & BADGES
+    const rpoDivergentCount = rawRpoDivergences.filter(d => d.divergent).length;
+    let rpoDataDivergenteCount = 0, rpoSomenteDriveCount = 0, rpoSomenteStorzCount = 0, rpoSomenteRpoCount = 0;
+    rawRpoDivergences.forEach(d => {
+      if (!d.divergent) return;
+      if (d.divergenceKind === 'DATA_DIVERGENTE') rpoDataDivergenteCount++;
+      else if (d.divergenceKind === 'SOMENTE_DRIVE') rpoSomenteDriveCount++;
+      else if (d.divergenceKind === 'SOMENTE_STORZ') rpoSomenteStorzCount++;
+      else if (d.divergenceKind === 'SOMENTE_RPO') rpoSomenteRpoCount++;
+    });
+
+    if (document.getElementById('rpoBadgeSidebar')) {
+      const badge = document.getElementById('rpoBadgeSidebar');
+      badge.innerText = rpoDivergentCount;
+      badge.style.display = rpoDivergentCount > 0 ? 'inline-block' : 'none';
+    }
+    if (document.getElementById('rpoBadgeTab')) {
+      const badge = document.getElementById('rpoBadgeTab');
+      badge.innerText = rpoDivergentCount;
+      badge.style.display = rpoDivergentCount > 0 ? 'inline-block' : 'none';
+    }
+    if (document.getElementById('rpoKpiTotal')) document.getElementById('rpoKpiTotal').innerText = rawRpoDivergences.length;
+    if (document.getElementById('rpoKpiDivergences')) document.getElementById('rpoKpiDivergences').innerText = rpoDivergentCount;
+    if (document.getElementById('rpoKpiDataDivergente')) document.getElementById('rpoKpiDataDivergente').innerText = rpoDataDivergenteCount;
+    if (document.getElementById('rpoKpiSomenteDrive')) document.getElementById('rpoKpiSomenteDrive').innerText = rpoSomenteDriveCount + rpoSomenteStorzCount;
+    if (document.getElementById('rpoKpiSomenteRpo')) document.getElementById('rpoKpiSomenteRpo').innerText = rpoSomenteRpoCount;
+    if (document.getElementById('rpoChipDivCount')) document.getElementById('rpoChipDivCount').innerText = rpoDivergentCount;
+
+    // RENDER FRESHNESS BAR
+    function renderFreshnessBar() {
+      if (!sourceHealth || Object.keys(sourceHealth).length === 0) return;
+
+      const driveInfo = sourceHealth.drive;
+      if (driveInfo) {
+        const dot = document.getElementById('sourceDotDrive');
+        const pill = document.getElementById('sourcePillDrive');
+        const status = document.getElementById('sourceStatusDrive');
+        if (dot && pill && status) {
+          const isOk = driveInfo.status === 'ONLINE';
+          dot.className = 'source-dot ' + (isOk ? 'ok' : 'warn');
+          pill.className = 'source-pill ' + (isOk ? 'ok' : 'warn');
+          status.innerText = driveInfo.message || (isOk ? 'Conectado' : 'Aviso');
+          if (driveInfo.detail) pill.title = driveInfo.detail;
+        }
+      }
+
+      const smartInfo = sourceHealth.smartsheet;
+      if (smartInfo) {
+        const dot = document.getElementById('sourceDotSmartsheet');
+        const pill = document.getElementById('sourcePillSmartsheet');
+        const status = document.getElementById('sourceStatusSmartsheet');
+        if (dot && pill && status) {
+          const isOk = smartInfo.status === 'ONLINE';
+          dot.className = 'source-dot ' + (isOk ? 'ok' : 'warn');
+          pill.className = 'source-pill ' + (isOk ? 'ok' : 'warn');
+          status.innerText = smartInfo.message || (isOk ? 'Conectado' : 'Offline');
+          if (smartInfo.detail) pill.title = smartInfo.detail;
+        }
+      }
+
+      const storzInfo = sourceHealth.storz;
+      if (storzInfo) {
+        const dot = document.getElementById('sourceDotStorz');
+        const pill = document.getElementById('sourcePillStorz');
+        const status = document.getElementById('sourceStatusStorz');
+        if (dot && pill && status) {
+          const isLive = storzInfo.status === 'ONLINE';
+          dot.className = 'source-dot ' + (isLive ? 'ok' : 'cache');
+          pill.className = 'source-pill ' + (isLive ? 'ok' : 'cache');
+          status.innerText = storzInfo.message || (isLive ? 'Ao Vivo (REST API)' : 'Cache Persistente');
+          if (storzInfo.detail) pill.title = storzInfo.detail;
+        }
+      }
+    }
+    renderFreshnessBar();
 
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
@@ -1199,7 +1624,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       document.querySelectorAll('.topbar .pill-opt').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
 
-      const views = ['matrix', 'table', 'storz'];
+      const views = ['matrix', 'table', 'rpo', 'storz'];
       const idx = views.indexOf(viewKey);
 
       const navs = document.querySelectorAll('.sidebar .nav-item');
@@ -1210,6 +1635,16 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
 
       const view = document.getElementById('view-' + viewKey);
       if (view) view.classList.add('active');
+
+      const heading = document.getElementById('pageHeading');
+      if (heading) {
+        if (viewKey === 'matrix') heading.innerText = 'Matriz de Qualificação & Treinamentos Normativos (DO)';
+        else if (viewKey === 'table') heading.innerText = 'Gestão Analítica de Pendências & Conformidade EHS';
+        else if (viewKey === 'rpo') heading.innerText = 'Auditoria RPO: Fontes Confiáveis (Drive + Storz) vs Smartsheet';
+        else if (viewKey === 'storz') heading.innerText = 'Painel de Gestão e Monitoramento de Treinamentos Storz';
+      }
+
+      if (viewKey === 'rpo') renderRpoTable();
     }
 
     function onSelectStatusFilter(st) {
@@ -1226,7 +1661,8 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       const chip = document.getElementById('chip-' + st);
       if (chip) chip.classList.add('active');
 
-      document.getElementById('statusFilter').value = st;
+      const statusSelect = document.getElementById('statusFilter');
+      if (statusSelect) statusSelect.value = st;
       renderAll();
     }
 
@@ -1242,6 +1678,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
         let matchesStatus = true;
         if (st !== 'ALL') {
           matchesStatus = p.records.some(r => {
+            if (st === 'ACTION') return needsAction(r);
             if (st === 'CONFORME') return isConforme(r.statusEHS);
             if (st === 'VENCE_30') return isAVencer(r.statusEHS);
             if (st === 'VENCIDO') return isVencido(r.statusEHS);
@@ -1255,6 +1692,7 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
 
       renderMatrix(filteredPeople);
       renderTable(filteredPeople, q, st);
+      renderRpoTable();
       renderStorz(filteredPeople);
     }
 
@@ -1306,7 +1744,8 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       peopleList.forEach(p => {
         p.records.forEach(r => {
           let matchStatus = true;
-          if (st === 'CONFORME') matchStatus = isConforme(r.statusEHS);
+          if (st === 'ACTION') matchStatus = needsAction(r);
+          else if (st === 'CONFORME') matchStatus = isConforme(r.statusEHS);
           else if (st === 'VENCE_30') matchStatus = isAVencer(r.statusEHS);
           else if (st === 'VENCIDO') matchStatus = isVencido(r.statusEHS);
           else if (st === 'AUSENTE') matchStatus = isAusente(r.statusEHS);
@@ -1334,6 +1773,100 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       });
     }
 
+    let rpoSubTab = 'ALL_DIV';
+    function filterRpoSubTab(sub) {
+      rpoSubTab = sub;
+      document.querySelectorAll('[id^="rpoChip-"]').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById('rpoChip-' + sub);
+      if (activeBtn) activeBtn.classList.add('active');
+      renderRpoTable();
+    }
+
+    function renderRpoTable() {
+      const tbody = document.getElementById('rpoTableBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+
+      const items = rawRpoDivergences || [];
+      const filtered = items.filter(item => {
+        const matchQ = !q ||
+          item.inspectorName.toLowerCase().includes(q) ||
+          item.docName.toLowerCase().includes(q) ||
+          item.docCode.toLowerCase().includes(q) ||
+          (item.recommendedAction && item.recommendedAction.toLowerCase().includes(q));
+        if (!matchQ) return false;
+
+        if (rpoSubTab === 'ALL_DIV') return item.divergent;
+        if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && item.divergenceKind === 'DATA_DIVERGENTE';
+        if (rpoSubTab === 'SOMENTE_DRIVE') return item.divergent && item.divergenceKind === 'SOMENTE_DRIVE';
+        if (rpoSubTab === 'SOMENTE_STORZ') return item.divergent && item.divergenceKind === 'SOMENTE_STORZ';
+        if (rpoSubTab === 'SOMENTE_RPO') return item.divergent && item.divergenceKind === 'SOMENTE_RPO';
+        if (rpoSubTab === 'DIFF_30') return item.divergent && (item.diffDays !== undefined && item.diffDays > 30);
+        if (rpoSubTab === 'ALL') return true;
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum registro de auditoria encontrado com os filtros atuais.</td></tr>';
+        return;
+      }
+
+      const formatDate = (isoOrStr) => {
+        if (!isoOrStr) return '—';
+        const d = new Date(isoOrStr);
+        if (isNaN(d.getTime())) return '—';
+        return d.toLocaleDateString('pt-BR');
+      };
+
+      filtered.slice(0, 200).forEach(item => {
+        const tr = document.createElement('tr');
+        
+        let badgeHtml = '';
+        if (!item.divergent) {
+          badgeHtml = '<span class="diff-badge consistente">' + SVG_ICONS.check + 'Consistente</span>';
+        } else if (item.divergenceKind === 'SOMENTE_DRIVE') {
+          badgeHtml = '<span class="diff-badge somente-drive">' + SVG_ICONS.alert + 'Só Drive</span>';
+        } else if (item.divergenceKind === 'SOMENTE_STORZ') {
+          badgeHtml = '<span class="diff-badge somente-storz">' + SVG_ICONS.cap + 'Só Storz</span>';
+        } else if (item.divergenceKind === 'SOMENTE_RPO') {
+          badgeHtml = '<span class="diff-badge somente-rpo">' + SVG_ICONS.alert + 'Só na RPO</span>';
+        } else if (item.divergenceKind === 'DATA_DIVERGENTE') {
+          badgeHtml = '<span class="diff-badge data-divergente">' + SVG_ICONS.x + 'Data Divergente</span>';
+        } else {
+          badgeHtml = '<span class="diff-badge data-divergente">' + (item.divergenceKind || 'Divergente') + '</span>';
+        }
+
+        const driveExp = formatDate(item.driveExpiration);
+        const storzExp = formatDate(item.storzExpiration);
+        const trustedExp = item.trustedSource === 'STORZ' ? storzExp : driveExp;
+        const trustedSourceBadge = item.trustedSource 
+          ? '<div style="font-size:10px;color:var(--text-muted);font-weight:600;">(' + item.trustedSource + ')</div>' 
+          : '';
+
+        const rpoExp = formatDate(item.rpoExpiration);
+        const diffText = item.diffDays !== undefined 
+          ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#EF4444;' : 'color:#F59E0B;') + '">' + item.diffDays + ' d</span>'
+          : '<span style="color:var(--text-muted);">—</span>';
+
+        const actionHtml = item.divergent 
+          ? '<span class="action-pill action-rpo"><svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>' + (item.recommendedAction || 'Verificar divergência') + '</span>'
+          : '<span class="action-pill action-ok">' + SVG_ICONS.check + 'Consistente</span>';
+
+        tr.innerHTML = 
+          '<td style="text-align:left;"><strong>' + item.inspectorName + '</strong></td>' +
+          '<td style="text-align:left;"><strong>' + item.docName + '</strong> <span style="font-size:10px;color:var(--text-muted);">(Cód ' + item.docCode + ')</span></td>' +
+          '<td>' + badgeHtml + '</td>' +
+          '<td><span class="mono">' + trustedExp + '</span>' + trustedSourceBadge + '</td>' +
+          '<td><span class="mono">' + rpoExp + '</span></td>' +
+          '<td>' + diffText + '</td>' +
+          '<td style="text-align:left;">' + actionHtml + '<div style="font-size:10px;color:var(--text-muted);margin-top:2px;">' + item.detail + '</div></td>';
+
+        tbody.appendChild(tr);
+      });
+    }
+
     let storzSubTab = 'ALL';
     function filterStorzSubTab(sub) {
       storzSubTab = sub;
@@ -1343,32 +1876,84 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
       renderAll();
     }
 
+    let storzProgFilter = 'ALL';
+    function filterStorzProg(prog) {
+      storzProgFilter = prog;
+      document.querySelectorAll('[id^="storzProg-"]').forEach(b => b.classList.remove('active'));
+      const btn = document.getElementById('storzProg-' + prog);
+      if (btn) btn.classList.add('active');
+      renderAll();
+    }
+
     function renderStorz(peopleList) {
       const tbody = document.getElementById('storzTableBody');
+      if (!tbody) return;
       tbody.innerHTML = '';
 
-      const storzRecords = [];
-      peopleList.forEach(p => {
-        p.records.forEach(r => {
-          if (!r.storzRequestId) return;
-          if (storzSubTab === 'ALL') {
-            if (isStorzActive(r)) storzRecords.push(r);
-          } else if (storzSubTab === 'EM_ANDAMENTO') {
-            if (r.storzState === 'EM_ANDAMENTO') storzRecords.push(r);
-          } else if (storzSubTab === 'SOLICITADO') {
-            if (r.storzState === 'SOLICITADO' || r.statusEHS === 'SOLICITADO_STORZ') storzRecords.push(r);
-          } else if (storzSubTab === 'CONCLUIDO') {
-            if (r.storzState === 'CONCLUIDO') storzRecords.push(r);
-          }
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const sec = document.getElementById('sectorFilter').value;
+
+      let sourceItems = [];
+      if (rawStorzHistory && rawStorzHistory.length > 0) {
+        sourceItems = rawStorzHistory.map(req => {
+          const person = peopleMap.get(req.collaboratorName);
+          const rawSit = req.rawSituacao || req.state || '';
+          return {
+            inspectorName: req.collaboratorName,
+            sector: person ? person.sector : 'Operações',
+            role: person ? person.role : 'Técnico',
+            docName: req.trainingName,
+            storzRequestId: req.id,
+            storzState: req.state,
+            rawSituacao: rawSit,
+            storzProgressPercent: req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0),
+            storzDeadline: req.deadline ? new Date(req.deadline).toLocaleDateString('pt-BR') : (req.courseDurationDays ? req.courseDurationDays + ' dias' : ''),
+            detail: req.notes || (rawSit ? 'Situação do Aluno: ' + rawSit : '')
+          };
         });
+      } else {
+        peopleList.forEach(p => {
+          p.records.forEach(r => {
+            if (r.storzRequestId) sourceItems.push(r);
+          });
+        });
+      }
+
+      const storzRecords = [];
+      sourceItems.forEach(r => {
+        const matchQuery = !q || (r.inspectorName.toLowerCase().includes(q) || r.docName.toLowerCase().includes(q));
+        const matchSec = sec === 'ALL' || r.sector === sec;
+        if (!matchQuery || !matchSec) return;
+
+        const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
+        const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : (r.storzState === 'CONCLUIDO' ? 100 : 0);
+
+        if (storzSubTab === 'ALL') {
+          // Show all items
+        } else if (storzSubTab === 'EM_ANDAMENTO') {
+          if (r.storzState !== 'EM_ANDAMENTO' && !situacaoUpper.includes('ANDAMENTO')) return;
+        } else if (storzSubTab === 'SOLICITADO') {
+          if (r.storzState !== 'SOLICITADO' && !situacaoUpper.includes('NÃO INICIADO') && !situacaoUpper.includes('NAO INICIADO') && r.statusEHS !== 'SOLICITADO_STORZ') return;
+        } else if (storzSubTab === 'REPROVADO') {
+          if (!situacaoUpper.includes('REPROV')) return;
+        } else if (storzSubTab === 'CONCLUIDO') {
+          if (r.storzState !== 'CONCLUIDO' && !situacaoUpper.includes('APROV') && !situacaoUpper.includes('CONCLU')) return;
+        }
+
+        if (storzProgFilter === '0' && prog !== 0) return;
+        if (storzProgFilter === '1_49' && (prog < 1 || prog > 49)) return;
+        if (storzProgFilter === '50_99' && (prog < 50 || prog > 99)) return;
+        if (storzProgFilter === '100' && prog !== 100) return;
+
+        storzRecords.push(r);
       });
 
       if (storzRecords.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada neste filtro.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada com os filtros atuais.</td></tr>';
         return;
       }
 
-      storzRecords.forEach(r => {
+      storzRecords.slice(0, 200).forEach(r => {
         const tr = document.createElement('tr');
         const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : (r.storzState === 'CONCLUIDO' ? 100 : 0);
         const progColor = prog === 100 ? '#10b981' : prog > 0 ? '#6366f1' : '#94a3b8';
@@ -1383,11 +1968,17 @@ export function buildDashboardHtml(records: HSEDatabaseRecord[]): string {
           ? '<span style="font-size:11px;font-weight:600;font-family:\\'JetBrains Mono\\', monospace;">' + r.storzDeadline + '</span>'
           : '<span style="color:var(--text-muted);font-size:11px;">—</span>';
 
-        const stateBadge = r.storzState === 'CONCLUIDO'
-          ? '<span class="badge ok">CONCLUÍDO</span>'
-          : r.storzState === 'EM_ANDAMENTO'
-          ? '<span class="badge storz">EM ANDAMENTO</span>'
-          : '<span class="badge" style="background:#EFF6FF;color:#1D4ED8;">SOLICITADO</span>';
+        const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
+        let stateBadge = '';
+        if (situacaoUpper.includes('REPROV')) {
+          stateBadge = '<span class="badge danger" title="Reprovado - Necessita Reteste">' + SVG_ICONS.x + 'Reprovado (Reteste)</span>';
+        } else if (r.storzState === 'CONCLUIDO' || situacaoUpper.includes('APROV')) {
+          stateBadge = '<span class="badge ok">' + SVG_ICONS.check + 'Aprovado</span>';
+        } else if (r.storzState === 'EM_ANDAMENTO' || situacaoUpper.includes('ANDAMENTO')) {
+          stateBadge = '<span class="badge storz">' + SVG_ICONS.clock + 'Em Andamento</span>';
+        } else {
+          stateBadge = '<span class="badge" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #DBEAFE;">' + SVG_ICONS.clock + 'Aguardando Início</span>';
+        }
 
         tr.innerHTML = 
           '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong><div style="font-size:10px;color:var(--text-muted);">' + (r.sector || 'Operações') + '</div></td>' +
