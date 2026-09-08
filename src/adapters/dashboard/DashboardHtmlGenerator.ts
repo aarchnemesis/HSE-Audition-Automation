@@ -604,6 +604,211 @@ export function buildDashboardHtml(
       font-weight: 700;
     }
 
+    /* ACTION EXPORT BUTTONS & CONTROLS */
+    .btn-action-export {
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      white-space: nowrap;
+    }
+    .btn-action-export:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      color: var(--brand-blue);
+    }
+    .btn-action-export:active {
+      transform: scale(0.98);
+    }
+
+    /* RANKINGS TOGGLE & PANEL */
+    .btn-rankings-toggle {
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      white-space: nowrap;
+    }
+    .btn-rankings-toggle:hover, .btn-rankings-toggle.active {
+      background: #EFF6FF;
+      border-color: #BFDBFE;
+      color: #1D4ED8;
+    }
+
+    .rankings-panel {
+      display: none;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      animation: fadeIn 0.2s ease-out;
+      flex-shrink: 0;
+    }
+    .rankings-panel.show {
+      display: block;
+    }
+    .rankings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 900px) {
+      .rankings-grid { grid-template-columns: 1fr; }
+    }
+    .ranking-card {
+      background: #F8FAFC;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ranking-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--text-main);
+      border-bottom: 1px solid #E2E8F0;
+      padding-bottom: 6px;
+    }
+    .ranking-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .ranking-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      padding: 3px 0;
+    }
+    .ranking-item-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      min-width: 0;
+    }
+    .ranking-item-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 170px;
+      font-weight: 600;
+    }
+    .ranking-pos {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #E2E8F0;
+      color: #475569;
+      font-size: 9px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .ranking-pos.top-1 { background: #FEE2E2; color: #DC2626; }
+    .ranking-pos.top-2 { background: #FEF3C7; color: #D97706; }
+    .ranking-pos.top-3 { background: #FEF9C3; color: #CA8A04; }
+
+    /* SMART PRESETS ROW */
+    .smart-presets-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+      flex-shrink: 0;
+    }
+    .smart-presets-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .preset-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.15s;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+    .preset-chip:hover {
+      border-color: var(--brand-blue);
+      background: #EFF6FF;
+      color: #1D4ED8;
+      transform: translateY(-1px);
+    }
+    .preset-chip.active {
+      background: #1E293B;
+      border-color: #1E293B;
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      font-size: 12px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 2000;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .toast-notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     /* RPO AUDIT SUMMARY & BADGES */
     .rpo-summary-row {
       display: grid;
@@ -1078,9 +1283,15 @@ export function buildDashboardHtml(
         <h2 id="pageHeading">Matriz de Qualificação &amp; Treinamentos Normativos (DO)</h2>
         <p>Acompanhamento executivo de conformidade legal de NRs, GWO BST, ASO e reciclagens por colaborador de campo</p>
       </div>
-      <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
-        <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; display: inline-block;"></span>
-        STATUS: <span style="color: var(--brand-green); font-weight: 800;" id="liveAuditDate">AUDITADO EM ${auditDateStr}</span>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <button class="btn-rankings-toggle" id="rankingsToggleBtn" onclick="toggleRankingsPanel()" title="Alternar visualização dos rankings executivos e gargalos operacionais">
+          <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Rankings &amp; Gargalos
+        </button>
+        <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+          <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; display: inline-block;"></span>
+          STATUS: <span style="color: var(--brand-green); font-weight: 800;" id="liveAuditDate">AUDITADO EM ${auditDateStr}</span>
+        </div>
       </div>
     </div>
 
@@ -1126,6 +1337,44 @@ export function buildDashboardHtml(
         </div>
       </div>
 
+      <!-- EXECUTIVE RANKINGS PANEL (COLLAPSIBLE) -->
+      <div class="rankings-panel" id="rankingsPanel">
+        <div class="rankings-grid">
+          <div class="ranking-card">
+            <div class="ranking-header">
+              <span style="display:flex;align-items:center;gap:5px;">
+                <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Top Colaboradores Críticos
+              </span>
+              <span class="mono" style="font-size:10px;color:var(--text-muted);">Vencidos + Ausentes</span>
+            </div>
+            <div class="ranking-list" id="rankingTopCrit"></div>
+          </div>
+
+          <div class="ranking-card">
+            <div class="ranking-header">
+              <span style="display:flex;align-items:center;gap:5px;">
+                <svg class="ico ico-xs icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Gargalos de Reteste (Storz)
+              </span>
+              <span class="mono" style="font-size:10px;color:var(--text-muted);">Mais Reprovações</span>
+            </div>
+            <div class="ranking-list" id="rankingTopRetest"></div>
+          </div>
+
+          <div class="ranking-card">
+            <div class="ranking-header">
+              <span style="display:flex;align-items:center;gap:5px;">
+                <svg class="ico ico-xs icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Alerta de Inércia Storz
+              </span>
+              <span class="mono" style="font-size:10px;color:var(--text-muted);">Parados em 0%</span>
+            </div>
+            <div class="ranking-list" id="rankingTopInertia"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- QUICK CHIPS & SEARCH BAR -->
       <div class="quick-chips-row">
         <span class="quick-chips-label">Filtros Rápidos:</span>
@@ -1137,12 +1386,44 @@ export function buildDashboardHtml(
         <button class="chip chip-ok" id="chip-CONFORME" onclick="applyStatusFilter('CONFORME')"><svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>100% Em Dia</button>
       </div>
 
+      <!-- SMART PRESETS ROW -->
+      <div class="smart-presets-row" id="smartPresetsRow">
+        <span class="smart-presets-label">
+          <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Presets Rápidos:
+        </span>
+        <div id="presetsContainer" style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;"></div>
+      </div>
+
       <!-- CONTROLS -->
       <div class="controls-strip">
         <input type="search" id="searchInput" class="search-input" placeholder="Buscar colaborador, cargo ou setor..." oninput="renderAll()">
-        <div style="display:flex; gap:8px;">
+        <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
           <select id="sectorFilter" class="select-filter" onchange="renderAll()">
             <option value="ALL">Todos os Ramos / Setores</option>
+          </select>
+          <select id="documentFilter" class="select-filter" onchange="renderAll()">
+            <option value="ALL">Todos os Documentos / Normas</option>
+            <option value="01">ASO (Atestado Saúde)</option>
+            <option value="08">CNH</option>
+            <option value="10">NR-01 (Integração EHS)</option>
+            <option value="11">NR-06 (Uso de EPI)</option>
+            <option value="12">NR-10 (Básico Eletricidade)</option>
+            <option value="13">NR-10 (SEP Potência)</option>
+            <option value="14">NR-11 (Talha / Carga)</option>
+            <option value="15">NR-12 (Máquinas)</option>
+            <option value="18">NR-18 (Construção)</option>
+            <option value="20">NR-33 (Vigia Espaço Confinado)</option>
+            <option value="28">NR-33 (Supervisor)</option>
+            <option value="21">NR-35 (Trabalho em Altura)</option>
+            <option value="22">LOTO (Bloqueio de Energia)</option>
+            <option value="34">CIPA (Comissão Prevenção)</option>
+            <option value="16">GWO (Primeiros Socorros)</option>
+            <option value="17">GWO (Manual Handling/Ergo)</option>
+            <option value="19">GWO (Fire Awareness)</option>
+            <option value="30">GWO (WINDA)</option>
+            <option value="31">JASO Elevador</option>
+            <option value="32">GWO ART</option>
           </select>
           <select id="statusFilter" class="select-filter" onchange="onSelectStatusFilter(this.value)">
             <option value="ALL">Todos os Status</option>
@@ -1153,6 +1434,14 @@ export function buildDashboardHtml(
             <option value="AUSENTE">Ausente (não está no Drive)</option>
             <option value="STORZ">Com Matrícula Ativa Storz</option>
           </select>
+          <button class="btn-action-export" onclick="exportCurrentViewCsv()" title="Exportar visão atual para CSV compatível com Excel">
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Exportar CSV
+          </button>
+          <button class="btn-action-export" onclick="copyCurrentSummary()" title="Copiar resumo executivo com pendências para WhatsApp ou E-mail">
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copiar Resumo
+          </button>
         </div>
       </div>
 
@@ -1317,6 +1606,12 @@ export function buildDashboardHtml(
         </div>
       </div>
 
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-notification" id="toastNotification">
+      <svg class="ico ico-xs" fill="none" stroke="#10B981" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span id="toastMessage">Resumo copiado com sucesso!</span>
     </div>
 
   </main>
@@ -1619,7 +1914,282 @@ export function buildDashboardHtml(
       }
     });
 
+    let currentViewKey = 'matrix';
+    let activePresetId = null;
+
+    const PRESETS = {
+      HSE: [
+        {
+          id: 'PRIORITY_WEEK',
+          label: 'Prioridade da Semana',
+          svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+          apply: () => {
+            applyStatusFilter('ACTION');
+            const docSelect = document.getElementById('documentFilter');
+            if (docSelect) docSelect.value = 'ALL';
+            renderAll();
+          }
+        },
+        {
+          id: 'VENCE_30',
+          label: 'Vencendo em 30 dias',
+          svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+          apply: () => {
+            applyStatusFilter('VENCE_30');
+          }
+        },
+        {
+          id: 'AUSENTES_CRITICOS',
+          label: 'Ausentes Críticos',
+          svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+          apply: () => {
+            applyStatusFilter('AUSENTE');
+          }
+        },
+        {
+          id: 'STORZ_EM_RISCO',
+          label: 'Storz Ativa',
+          svg: '<svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+          apply: () => {
+            applyStatusFilter('STORZ');
+          }
+        }
+      ],
+      RPO: [
+        {
+          id: 'CORRIGIR_DIGITACAO',
+          label: 'Corrigir Digitação',
+          svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
+          apply: () => {
+            filterRpoSubTab('DATA_DIVERGENTE');
+          }
+        },
+        {
+          id: 'DIFF_30',
+          label: 'Divergência > 30d',
+          svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+          apply: () => {
+            filterRpoSubTab('DIFF_30');
+          }
+        },
+        {
+          id: 'ONLY_RPO',
+          label: 'Só na RPO (Sem Doc)',
+          svg: '<svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>',
+          apply: () => {
+            filterRpoSubTab('SOMENTE_RPO');
+          }
+        },
+        {
+          id: 'ONLY_DRIVE',
+          label: 'Só no Drive / Storz',
+          svg: '<svg class="chip-svg icon-req" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>',
+          apply: () => {
+            filterRpoSubTab('SOMENTE_DRIVE');
+          }
+        }
+      ],
+      STORZ: [
+        {
+          id: 'STORZ_REPROVADOS',
+          label: 'Retestes Pendentes',
+          svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>',
+          apply: () => {
+            filterStorzSubTab('REPROVADO');
+            filterStorzProg('ALL');
+          }
+        },
+        {
+          id: 'STORZ_INERTIA',
+          label: 'Parados em 0%',
+          svg: '<svg class="chip-svg icon-gray" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="10" y1="15" x2="10" y2="9"/><line x1="14" y1="15" x2="14" y2="9"/></svg>',
+          apply: () => {
+            filterStorzSubTab('ALL');
+            filterStorzProg('0');
+          }
+        },
+        {
+          id: 'STORZ_LOW_PROG',
+          label: 'Baixo Progresso (<50%)',
+          svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
+          apply: () => {
+            filterStorzSubTab('EM_ANDAMENTO');
+            filterStorzProg('1_49');
+          }
+        },
+        {
+          id: 'STORZ_CONCLUIDOS',
+          label: 'Concluídas / Aprovados',
+          svg: '<svg class="chip-svg icon-ok" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+          apply: () => {
+            filterStorzSubTab('CONCLUIDO');
+            filterStorzProg('100');
+          }
+        }
+      ]
+    };
+
+    function renderPresets(viewKey) {
+      const container = document.getElementById('presetsContainer');
+      if (!container) return;
+      container.innerHTML = '';
+
+      let group = 'HSE';
+      if (viewKey === 'rpo') group = 'RPO';
+      else if (viewKey === 'storz') group = 'STORZ';
+
+      const list = PRESETS[group] || [];
+      list.forEach(p => {
+        const btn = document.createElement('button');
+        btn.className = 'preset-chip' + (activePresetId === p.id ? ' active' : '');
+        btn.id = 'presetBtn-' + p.id;
+        btn.innerHTML = p.svg + p.label;
+        btn.onclick = () => {
+          if (activePresetId === p.id) {
+            activePresetId = null;
+            document.querySelectorAll('.preset-chip').forEach(b => b.classList.remove('active'));
+            if (group === 'HSE') applyStatusFilter('ALL');
+            else if (group === 'RPO') filterRpoSubTab('ALL_DIV');
+            else if (group === 'STORZ') { filterStorzSubTab('ALL'); filterStorzProg('ALL'); }
+          } else {
+            activePresetId = p.id;
+            document.querySelectorAll('.preset-chip').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            p.apply();
+          }
+        };
+        container.appendChild(btn);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotification');
+      const msgEl = document.getElementById('toastMessage');
+      if (!toast || !msgEl) return;
+      msgEl.innerText = msg;
+      toast.classList.add('show');
+      clearTimeout(window._toastTimeout);
+      window._toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3500);
+    }
+
+    function toggleRankingsPanel() {
+      const panel = document.getElementById('rankingsPanel');
+      const btn = document.getElementById('rankingsToggleBtn');
+      if (!panel) return;
+      const isShown = panel.classList.toggle('show');
+      if (btn) btn.classList.toggle('active', isShown);
+      if (isShown) {
+        computeRankings();
+      }
+    }
+
+    function computeRankings() {
+      // 1. Top Colaboradores Críticos
+      const collabScores = [];
+      peopleMap.forEach(p => {
+        let critCount = 0;
+        p.records.forEach(r => {
+          if (isVencido(r.statusEHS) || isAusente(r.statusEHS)) {
+            critCount++;
+          }
+        });
+        if (critCount > 0) {
+          collabScores.push({ name: p.name, role: p.role, sector: p.sector, count: critCount });
+        }
+      });
+      collabScores.sort((a, b) => b.count - a.count);
+      const topCrit = collabScores.slice(0, 5);
+
+      const critEl = document.getElementById('rankingTopCrit');
+      if (critEl) {
+        if (topCrit.length === 0) {
+          critEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência crítica.</div>';
+        } else {
+          critEl.innerHTML = topCrit.map((c, idx) => {
+            const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
+            return '<div class="ranking-item">' +
+              '<div class="ranking-item-left">' +
+              '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
+              '<span class="ranking-item-name" title="' + c.name + ' (' + c.role + ')">' + c.name + '</span>' +
+              '</div>' +
+              '<span class="badge danger mono">' + c.count + ' pendências</span>' +
+              '</div>';
+          }).join('');
+        }
+      }
+
+      // 2. Gargalos de Reteste / Reprovação Storz
+      const retestCounts = {};
+      if (rawStorzHistory && rawStorzHistory.length > 0) {
+        rawStorzHistory.forEach(req => {
+          const sit = (req.rawSituacao || req.state || '').toUpperCase();
+          if (sit.includes('REPROV')) {
+            retestCounts[req.trainingName] = (retestCounts[req.trainingName] || 0) + 1;
+          }
+        });
+      }
+      const topRetests = Object.entries(retestCounts).map(([name, count]) => ({ name, count }));
+      topRetests.sort((a, b) => b.count - a.count);
+
+      const retestEl = document.getElementById('rankingTopRetest');
+      if (retestEl) {
+        if (topRetests.length === 0) {
+          retestEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhuma reprovação registrada no momento.</div>';
+        } else {
+          retestEl.innerHTML = topRetests.slice(0, 5).map((c, idx) => {
+            const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
+            return '<div class="ranking-item">' +
+              '<div class="ranking-item-left">' +
+              '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
+              '<span class="ranking-item-name" title="' + c.name + '">' + c.name + '</span>' +
+              '</div>' +
+              '<span class="badge storz mono" style="background:#EDE9FE;color:#6D28D9;border:1px solid #DDD6FE;">' + c.count + ' retestes</span>' +
+              '</div>';
+          }).join('');
+        }
+      }
+
+      // 3. Alerta de Inércia Storz (0% de progresso)
+      const inertiaList = [];
+      if (rawStorzHistory && rawStorzHistory.length > 0) {
+        rawStorzHistory.forEach(req => {
+          const sit = (req.rawSituacao || req.state || '').toUpperCase();
+          const prog = req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0);
+          if (prog === 0 && !sit.includes('CONCLU') && !sit.includes('APROV') && !sit.includes('CANCEL')) {
+            inertiaList.push({ name: req.collaboratorName, training: req.trainingName });
+          }
+        });
+      }
+      const collabInertia = {};
+      inertiaList.forEach(item => {
+        collabInertia[item.name] = (collabInertia[item.name] || 0) + 1;
+      });
+      const topInertia = Object.entries(collabInertia).map(([name, count]) => ({ name, count }));
+      topInertia.sort((a, b) => b.count - a.count);
+
+      const inertiaEl = document.getElementById('rankingTopInertia');
+      if (inertiaEl) {
+        if (topInertia.length === 0) {
+          inertiaEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum aluno estagnado em 0%.</div>';
+        } else {
+          inertiaEl.innerHTML = topInertia.slice(0, 5).map((c, idx) => {
+            const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
+            return '<div class="ranking-item">' +
+              '<div class="ranking-item-left">' +
+              '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
+              '<span class="ranking-item-name" title="' + c.name + '">' + c.name + '</span>' +
+              '</div>' +
+              '<span class="badge warn mono">' + c.count + ' cursos (0%)</span>' +
+              '</div>';
+          }).join('');
+        }
+      }
+    }
+
     function switchNav(viewKey) {
+      currentViewKey = viewKey;
       document.querySelectorAll('.sidebar .nav-item').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.topbar .pill-opt').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
@@ -1644,7 +2214,10 @@ export function buildDashboardHtml(
         else if (viewKey === 'storz') heading.innerText = 'Painel de Gestão e Monitoramento de Treinamentos Storz';
       }
 
+      renderPresets(viewKey);
+
       if (viewKey === 'rpo') renderRpoTable();
+      else renderAll();
     }
 
     function onSelectStatusFilter(st) {
@@ -1652,6 +2225,9 @@ export function buildDashboardHtml(
     }
 
     function applyStatusFilter(st) {
+      activePresetId = null;
+      document.querySelectorAll('.preset-chip').forEach(b => b.classList.remove('active'));
+
       document.querySelectorAll('.kpi-box').forEach(b => b.classList.remove('active'));
       document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
 
@@ -1666,18 +2242,26 @@ export function buildDashboardHtml(
       renderAll();
     }
 
+    let lastFilteredPeople = [];
+    let lastFilteredTableRows = [];
+    let lastFilteredRpoRows = [];
+    let lastFilteredStorzRows = [];
+
     function renderAll() {
       const q = document.getElementById('searchInput').value.toLowerCase().trim();
       const sec = document.getElementById('sectorFilter').value;
       const st = document.getElementById('statusFilter').value;
+      const docF = (document.getElementById('documentFilter')?.value || 'ALL');
 
       const filteredPeople = Array.from(peopleMap.values()).filter(p => {
         const matchesQuery = p.name.toLowerCase().includes(q) || p.sector.toLowerCase().includes(q) || p.role.toLowerCase().includes(q);
         const matchesSec = sec === 'ALL' || p.sector === sec;
+        const matchesDoc = docF === 'ALL' || p.records.some(r => r.docCode === docF);
         
         let matchesStatus = true;
         if (st !== 'ALL') {
           matchesStatus = p.records.some(r => {
+            if (docF !== 'ALL' && r.docCode !== docF) return false;
             if (st === 'ACTION') return needsAction(r);
             if (st === 'CONFORME') return isConforme(r.statusEHS);
             if (st === 'VENCE_30') return isAVencer(r.statusEHS);
@@ -1687,25 +2271,33 @@ export function buildDashboardHtml(
             return true;
           });
         }
-        return matchesQuery && matchesSec && matchesStatus;
+        return matchesQuery && matchesSec && matchesStatus && matchesDoc;
       });
 
-      renderMatrix(filteredPeople);
-      renderTable(filteredPeople, q, st);
+      lastFilteredPeople = filteredPeople;
+
+      renderMatrix(filteredPeople, docF);
+      renderTable(filteredPeople, q, st, docF);
       renderRpoTable();
       renderStorz(filteredPeople);
     }
 
-    function renderMatrix(peopleList) {
+    function renderMatrix(peopleList, docF = 'ALL') {
+      const activeCols = docF === 'ALL' ? priorityDocCodes : [docF];
+      const groupRow = document.getElementById('matrixGroupRow');
+      if (groupRow) {
+        groupRow.style.display = docF === 'ALL' ? '' : 'none';
+      }
+
       const headerRow = document.getElementById('matrixHeaderRow');
       headerRow.innerHTML = '<th class="th-sticky group-collab" style="font-size:10px;">NOME &amp; CARGO</th>' + 
-        priorityDocCodes.map(c => '<th>' + (docShortNames[c] || 'Doc ' + c) + '</th>').join('');
+        activeCols.map(c => '<th>' + (docShortNames[c] || 'Doc ' + c) + '</th>').join('');
 
       const tbody = document.getElementById('matrixBody');
       tbody.innerHTML = '';
 
       if (peopleList.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="' + (priorityDocCodes.length + 1) + '" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum colaborador encontrado neste filtro.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="' + (activeCols.length + 1) + '" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum colaborador encontrado neste filtro.</td></tr>';
         return;
       }
 
@@ -1726,7 +2318,7 @@ export function buildDashboardHtml(
           '<div style="font-size:10px;font-weight:500;color:var(--text-muted);">' + p.role + ' · ' + p.sector + '</div>' +
           '</div></div></td>';
 
-        priorityDocCodes.forEach(code => {
+        activeCols.forEach(code => {
           const r = p.records.find(rec => rec.docCode === code);
           html += '<td>' + renderBadge(r) + '</td>';
         });
@@ -1736,13 +2328,15 @@ export function buildDashboardHtml(
       });
     }
 
-    function renderTable(peopleList, q, st) {
+    function renderTable(peopleList, q, st, docF = 'ALL') {
       const tbody = document.getElementById('dataTableBody');
       tbody.innerHTML = '';
 
       const rowsToDisplay = [];
       peopleList.forEach(p => {
         p.records.forEach(r => {
+          if (docF !== 'ALL' && r.docCode !== docF) return;
+
           let matchStatus = true;
           if (st === 'ACTION') matchStatus = needsAction(r);
           else if (st === 'CONFORME') matchStatus = isConforme(r.statusEHS);
@@ -1754,6 +2348,8 @@ export function buildDashboardHtml(
           if (matchStatus) rowsToDisplay.push(r);
         });
       });
+
+      lastFilteredTableRows = rowsToDisplay;
 
       if (rowsToDisplay.length === 0) {
         tbody.innerHTML = '<tr><td colspan="6" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum registro encontrado.</td></tr>';
@@ -1892,6 +2488,7 @@ export function buildDashboardHtml(
 
       const q = document.getElementById('searchInput').value.toLowerCase().trim();
       const sec = document.getElementById('sectorFilter').value;
+      const docF = (document.getElementById('documentFilter')?.value || 'ALL');
 
       let sourceItems = [];
       if (rawStorzHistory && rawStorzHistory.length > 0) {
@@ -1925,6 +2522,32 @@ export function buildDashboardHtml(
         const matchSec = sec === 'ALL' || r.sector === sec;
         if (!matchQuery || !matchSec) return;
 
+        if (docF !== 'ALL') {
+          const shortName = (docShortNames[docF] || '').toLowerCase();
+          const docNameLower = r.docName.toLowerCase();
+          const matchesDoc = docNameLower.includes(shortName) || 
+            (docF === '01' && docNameLower.includes('aso')) ||
+            (docF === '10' && (docNameLower.includes('nr-01') || docNameLower.includes('nr 01') || docNameLower.includes('nr1') || docNameLower.includes('integra'))) ||
+            (docF === '11' && (docNameLower.includes('nr-06') || docNameLower.includes('nr 06') || docNameLower.includes('nr6') || docNameLower.includes('epi'))) ||
+            (docF === '12' && (docNameLower.includes('nr-10') || docNameLower.includes('nr 10') || docNameLower.includes('nr10'))) ||
+            (docF === '13' && (docNameLower.includes('sep') || docNameLower.includes('potência') || docNameLower.includes('potencia'))) ||
+            (docF === '14' && (docNameLower.includes('nr-11') || docNameLower.includes('nr 11') || docNameLower.includes('talha'))) ||
+            (docF === '15' && (docNameLower.includes('nr-12') || docNameLower.includes('nr 12') || docNameLower.includes('máquina') || docNameLower.includes('maquina'))) ||
+            (docF === '18' && (docNameLower.includes('nr-18') || docNameLower.includes('nr 18') || docNameLower.includes('construção') || docNameLower.includes('construcao'))) ||
+            (docF === '20' && (docNameLower.includes('nr-33') || docNameLower.includes('nr 33') || docNameLower.includes('vigia') || docNameLower.includes('espaço confinado') || docNameLower.includes('espaco confinado'))) ||
+            (docF === '28' && (docNameLower.includes('supervisor') && (docNameLower.includes('nr-33') || docNameLower.includes('nr 33')))) ||
+            (docF === '21' && (docNameLower.includes('nr-35') || docNameLower.includes('nr 35') || docNameLower.includes('altura'))) ||
+            (docF === '22' && (docNameLower.includes('loto') || docNameLower.includes('bloqueio'))) ||
+            (docF === '34' && (docNameLower.includes('cipa') || docNameLower.includes('nr-05') || docNameLower.includes('nr 05'))) ||
+            (docF === '16' && (docNameLower.includes('primeiros socorros') || docNameLower.includes('first aid'))) ||
+            (docF === '17' && (docNameLower.includes('ergo') || docNameLower.includes('manual handling'))) ||
+            (docF === '19' && (docNameLower.includes('fire') || docNameLower.includes('incêndio') || docNameLower.includes('incendio') || docNameLower.includes('fogo'))) ||
+            (docF === '30' && docNameLower.includes('winda')) ||
+            (docF === '31' && docNameLower.includes('elevador')) ||
+            (docF === '32' && docNameLower.includes('art'));
+          if (!matchesDoc) return;
+        }
+
         const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
         const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : (r.storzState === 'CONCLUIDO' ? 100 : 0);
 
@@ -1947,6 +2570,8 @@ export function buildDashboardHtml(
 
         storzRecords.push(r);
       });
+
+      lastFilteredStorzRows = storzRecords;
 
       if (storzRecords.length === 0) {
         tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada com os filtros atuais.</td></tr>';
@@ -1992,6 +2617,152 @@ export function buildDashboardHtml(
       });
     }
 
+    function exportCurrentViewCsv() {
+      let csvContent = '';
+      const dateStr = new Date().toISOString().slice(0, 10);
+      let filename = 'arthwind_' + currentViewKey + '_' + dateStr + '.csv';
+
+      const escapeCsv = (val) => {
+        if (val === null || val === undefined) return '""';
+        const str = String(val).replace(/"/g, '""');
+        return '"' + str + '"';
+      };
+
+      const nl = String.fromCharCode(10);
+
+      if (currentViewKey === 'rpo') {
+        const headers = ['Colaborador', 'Documento', 'Codigo', 'Tipo Divergencia', 'Validade Confiavel', 'Fonte Confiavel', 'Validade RPO', 'Diferenca Dias', 'Acao Recomendada', 'Detalhe'];
+        const rows = (lastFilteredRpoRows || []).map(item => [
+          escapeCsv(item.inspectorName),
+          escapeCsv(item.docName),
+          escapeCsv(item.docCode),
+          escapeCsv(item.divergenceKind),
+          escapeCsv(item.trustedSource === 'STORZ' ? item.storzExpiration : item.driveExpiration),
+          escapeCsv(item.trustedSource || ''),
+          escapeCsv(item.rpoExpiration),
+          escapeCsv(item.diffDays !== undefined ? item.diffDays : ''),
+          escapeCsv(item.recommendedAction || ''),
+          escapeCsv(item.detail || '')
+        ].join(';'));
+        csvContent = [headers.join(';'), ...rows].join(nl);
+      } else if (currentViewKey === 'storz') {
+        const headers = ['Colaborador', 'Setor', 'Curso Solicitado', 'Storz ID', 'Situacao', 'Progresso (%)', 'Prazo Limite Storz', 'Detalhe'];
+        const rows = (lastFilteredStorzRows || []).map(r => [
+          escapeCsv(r.inspectorName),
+          escapeCsv(r.sector),
+          escapeCsv(r.docName),
+          escapeCsv(r.storzRequestId || ''),
+          escapeCsv(r.rawSituacao || r.storzState || ''),
+          escapeCsv(r.storzProgressPercent !== undefined ? r.storzProgressPercent : ''),
+          escapeCsv(r.storzDeadline || ''),
+          escapeCsv(r.detail || '')
+        ].join(';'));
+        csvContent = [headers.join(';'), ...rows].join(nl);
+      } else {
+        const headers = ['Colaborador', 'Ramo / Setor', 'Cargo', 'Documento / Treinamento', 'Codigo', 'Modalidade', 'Status DO/EHS', 'Validade / Detalhes'];
+        const rows = (lastFilteredTableRows || []).map(r => [
+          escapeCsv(r.inspectorName),
+          escapeCsv(r.sector),
+          escapeCsv(r.role),
+          escapeCsv(r.docName),
+          escapeCsv(r.docCode),
+          escapeCsv(r.modality || 'PRESENCIAL'),
+          escapeCsv(r.statusEHS),
+          escapeCsv(r.detail || '')
+        ].join(';'));
+        csvContent = [headers.join(';'), ...rows].join(nl);
+      }
+
+      const blob = new Blob(['\uFEFF' + csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('CSV exportado com sucesso (' + filename + ')!');
+    }
+
+    function copyCurrentSummary() {
+      const todayStr = new Date().toLocaleDateString('pt-BR');
+      const lines = [];
+      lines.push('ARTHWIND | RESUMO EXECUTIVO EHS & DO (' + todayStr + ')');
+      lines.push('==================================================');
+
+      if (currentViewKey === 'rpo') {
+        lines.push('Modo: Auditoria RPO (Fontes Confiáveis vs Smartsheet)');
+        lines.push('Filtro Ativo: ' + rpoSubTab);
+        lines.push('Total de Divergências: ' + (lastFilteredRpoRows ? lastFilteredRpoRows.length : 0));
+        lines.push('');
+        lines.push('Principais Apontamentos:');
+        const sample = (lastFilteredRpoRows || []).slice(0, 8);
+        sample.forEach(item => {
+          lines.push('• ' + item.inspectorName + ' - ' + item.docName + ' (' + (item.divergenceKind || 'Divergente') + '): ' + (item.recommendedAction || item.detail));
+        });
+      } else if (currentViewKey === 'storz') {
+        lines.push('Modo: Gestão de Treinamentos Storz LMS');
+        lines.push('Filtro Ativo: ' + storzSubTab + ' | Progresso: ' + storzProgFilter);
+        lines.push('Total de Matrículas: ' + (lastFilteredStorzRows ? lastFilteredStorzRows.length : 0));
+        lines.push('');
+        lines.push('Destaque Operacional:');
+        const sample = (lastFilteredStorzRows || []).slice(0, 8);
+        sample.forEach(r => {
+          lines.push('• ' + r.inspectorName + ' - ' + r.docName + ' (' + (r.rawSituacao || r.storzState) + ' | Progresso: ' + r.storzProgressPercent + '%)');
+        });
+      } else {
+        const sec = document.getElementById('sectorFilter')?.value || 'ALL';
+        const st = document.getElementById('statusFilter')?.value || 'ALL';
+        const docF = document.getElementById('documentFilter')?.value || 'ALL';
+        lines.push('Modo: Conformidade Documental & Skill Matrix (EHS)');
+        lines.push('Filtros: Status=' + st + ' | Setor=' + sec + ' | Norma=' + docF);
+        lines.push('Colaboradores Filtrados: ' + (lastFilteredPeople ? lastFilteredPeople.length : 0));
+        lines.push('Registros Auditados: ' + (lastFilteredTableRows ? lastFilteredTableRows.length : 0));
+        lines.push('');
+        lines.push('Casos Críticos / Ação Necessária:');
+        const sample = (lastFilteredTableRows || []).filter(r => needsAction(r)).slice(0, 8);
+        if (sample.length === 0) {
+          lines.push('• Nenhum caso crítico no filtro selecionado.');
+        } else {
+          sample.forEach(r => {
+            lines.push('• ' + r.inspectorName + ' - ' + r.docName + ': ' + r.statusEHS + ' (' + r.detail + ')');
+          });
+        }
+      }
+
+      lines.push('==================================================');
+      lines.push('Painel ao vivo: https://hse-audition-automation.vercel.app/');
+
+      const text = lines.join(String.fromCharCode(10));
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast('Resumo executivo copiado para a área de transferência!');
+        }).catch(() => {
+          promptCopyFallback(text);
+        });
+      } else {
+        promptCopyFallback(text);
+      }
+    }
+
+    function promptCopyFallback(text) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast('Resumo executivo copiado para a área de transferência!');
+      } catch (err) {
+        showToast('Não foi possível copiar automaticamente.');
+      }
+      document.body.removeChild(textarea);
+    }
+
     function openCollabModal(name) {
       const p = peopleMap.get(name);
       if (!p) return;
@@ -2018,6 +2789,8 @@ export function buildDashboardHtml(
       document.getElementById('collabModal').classList.remove('show');
     }
 
+    renderPresets('matrix');
+    computeRankings();
     renderAll();
   </script>
 </body>
