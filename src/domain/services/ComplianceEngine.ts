@@ -128,6 +128,93 @@ export function getTrainingModality(
 }
 
 /**
+ * Carga horária regulamentar e prática em horas (baseado no Guia de Treinamentos SST da ArthWind,
+ * Normas Regulamentadoras MTP e padrões GWO).
+ */
+export const COURSE_WORKLOAD_HOURS: Record<string, number> = {
+  '09': 8, // Direção Defensiva
+  '10': 4, // NR-01 Integração EHS / GRO
+  '11': 4, // NR-06 Uso de EPI / EPC
+  '12': 40, // NR-10 Básico Eletricidade
+  '12.1': 4, // Carta NR-10
+  '13': 40, // NR-10 SEP Complementar
+  '14': 8, // NR-11 Uso de Talha / Paleteira
+  '15': 8, // NR-12 Máquinas e Equipamentos
+  '16': 14, // GWO Primeiros Socorros (Reciclagem: 7h)
+  '17': 4, // GWO NR-17 Ergonomia / Carga Manual
+  '18': 4, // NR-18 Básico Construção
+  '19': 4, // GWO NR-23 Combate a Incêndio
+  '20': 16, // NR-33 Espaço Confinado (Vigia / Trabalhador)
+  '21': 16, // NR-35 / GWO Working at Heights
+  '22': 4, // LOTO Bloqueio e Etiquetagem
+  '27': 8, // NR-07 Primeiros Socorros
+  '28': 40, // NR-33 Supervisor
+  '29': 4, // ATW Integração
+  '31': 8, // Elevador JASO
+  '32': 21, // GWO ART (Advanced Rescue Training)
+  '34': 16, // CIPA NR-05 (Grau de Risco 3)
+}
+
+/**
+ * Retorna a carga horária em horas considerando se a turma é de iniciação/formação ou reciclagem/periódica.
+ */
+export function getCourseWorkloadHours(
+  docCode: string,
+  docName?: string
+): number {
+  const upper = (docName || '').toUpperCase()
+  if (
+    docCode === '20' &&
+    (upper.includes('PERIÓDICO') ||
+      upper.includes('PERIODICO') ||
+      upper.includes('RECICLAGEM'))
+  ) {
+    return 8 // NR-33 Vigia periódico é 8h
+  }
+  if (
+    docCode === '28' &&
+    (upper.includes('PERIÓDICO') ||
+      upper.includes('PERIODICO') ||
+      upper.includes('RECICLAGEM'))
+  ) {
+    return 8 // NR-33 Supervisor periódico é 8h
+  }
+  if (
+    docCode === '12' &&
+    (upper.includes('PERIÓDICO') ||
+      upper.includes('PERIODICO') ||
+      upper.includes('RECICLAGEM'))
+  ) {
+    return 16 // NR-10 Básico periódico é 8-16h
+  }
+  if (
+    docCode === '13' &&
+    (upper.includes('PERIÓDICO') ||
+      upper.includes('PERIODICO') ||
+      upper.includes('RECICLAGEM'))
+  ) {
+    return 16 // NR-10 SEP periódico é 8-16h
+  }
+  if (
+    docCode === '16' &&
+    (upper.includes('REFRESHER') || upper.includes('RECICLAGEM'))
+  ) {
+    return 7 // GWO First Aid Refresher
+  }
+  if (
+    docCode === '21' &&
+    (upper.includes('PERIÓDICO') ||
+      upper.includes('PERIODICO') ||
+      upper.includes('RECICLAGEM') ||
+      upper.includes('NR-35') ||
+      upper.includes('NR 35'))
+  ) {
+    return 8 // NR-35 periódico ou padrão 8h
+  }
+  return COURSE_WORKLOAD_HOURS[docCode] || 8
+}
+
+/**
  * Documentos ELETIVOS: não são pra todo mundo, mas quem TEM precisa ter a validade monitorada
  * (reciclagem/vencimento) igual qualquer outro documento. Quem NÃO tem NÃO aparece em lugar
  * nenhum (Excel, dashboard, e-mail) — não é uma pendência, é "não se aplica a essa pessoa".

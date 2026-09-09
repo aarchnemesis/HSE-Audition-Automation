@@ -1881,8 +1881,9 @@ export function buildDashboardHtml(
           <!-- PROGRESS BRACKET FILTER STRIP -->
           <div class="storz-filter-strip">
             <div class="storz-filter-group">
-              <span class="storz-filter-label">Faixa de Progresso:</span>
+              <span class="storz-filter-label">Faixa de Progresso &amp; Ritmo:</span>
               <button class="chip active" id="storzProg-ALL" onclick="filterStorzProg('ALL')">Todos</button>
+              <button class="chip chip-crit" id="storzProg-SLA_RISK" onclick="filterStorzProg('SLA_RISK')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Fora do SLA / Risco</button>
               <button class="chip" id="storzProg-0" onclick="filterStorzProg('0')">0% (Não iniciado)</button>
               <button class="chip" id="storzProg-1_49" onclick="filterStorzProg('1_49')">1% a 49%</button>
               <button class="chip" id="storzProg-50_99" onclick="filterStorzProg('50_99')">50% a 99%</button>
@@ -1895,6 +1896,7 @@ export function buildDashboardHtml(
                 <tr>
                   <th style="text-align:left;">Colaborador</th>
                   <th style="text-align:left;">Curso Solicitado</th>
+                  <th style="text-align:center;">Carga &amp; SLA</th>
                   <th>Storz ID</th>
                   <th>Status / Situação</th>
                   <th style="min-width:130px;">Progresso (%)</th>
@@ -1978,6 +1980,24 @@ export function buildDashboardHtml(
       '32': 'GWO ART',
       '34': 'CIPA (NR-05)'
     };
+
+    const COURSE_WORKLOAD_HOURS = {
+      '09': 8, '10': 4, '11': 4, '12': 40, '12.1': 4, '13': 40,
+      '14': 8, '15': 8, '16': 14, '17': 4, '18': 4, '19': 4,
+      '20': 16, '21': 16, '22': 4, '27': 8, '28': 40, '29': 4,
+      '31': 8, '32': 21, '34': 16
+    };
+
+    function getCourseWorkloadHours(docCode, docName) {
+      const upper = (docName || '').toUpperCase();
+      if (docCode === '20' && (upper.includes('PERIÓDICO') || upper.includes('PERIODICO') || upper.includes('RECICLAGEM'))) return 8;
+      if (docCode === '28' && (upper.includes('PERIÓDICO') || upper.includes('PERIODICO') || upper.includes('RECICLAGEM'))) return 8;
+      if (docCode === '12' && (upper.includes('PERIÓDICO') || upper.includes('PERIODICO') || upper.includes('RECICLAGEM'))) return 16;
+      if (docCode === '13' && (upper.includes('PERIÓDICO') || upper.includes('PERIODICO') || upper.includes('RECICLAGEM'))) return 16;
+      if (docCode === '16' && (upper.includes('REFRESHER') || upper.includes('RECICLAGEM'))) return 7;
+      if (docCode === '21' && (upper.includes('PERIÓDICO') || upper.includes('PERIODICO') || upper.includes('RECICLAGEM') || upper.includes('NR-35') || upper.includes('NR 35'))) return 8;
+      return COURSE_WORKLOAD_HOURS[docCode] || 8;
+    }
 
     const peopleMap = new Map();
     const sectorsSet = new Set();
@@ -2914,7 +2934,7 @@ export function buildDashboardHtml(
       return '<span style="font-weight:600;">' + dlStr + '</span> <span style="color:var(--text-muted);font-size:10px;">(' + diffDays + 'd)</span>';
     }
 
-    function formatStorzPaceAndDetail(req, person) {
+    function formatStorzPaceAndDetail(req, person, workloadHours, idealSlaDays) {
       const rawSit = req.rawSituacao || req.state || '';
       const situacaoUpper = rawSit.toUpperCase();
       const prog = req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0);
@@ -2949,27 +2969,43 @@ export function buildDashboardHtml(
       }
 
       let detail = '';
+      let isOutSideSla = false;
+
+      const duration = Number(req.courseDurationDays) || 60;
+      const remainingHours = workloadHours * (1 - prog / 100);
 
       if (situacaoUpper.includes('ANDAMENTO')) {
-        const duration = Number(req.courseDurationDays) || 60;
         const dlDate = reqDate ? new Date(reqDate.getTime() + (duration * 24 * 60 * 60 * 1000)) : null;
         const dlStr = dlDate ? dlDate.toLocaleDateString('pt-BR') : '';
         const diasRestantes = dlDate ? Math.ceil((dlDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)) : null;
+        const hoursPerDayNeeded = (diasRestantes !== null && diasRestantes > 0 && prog < 100)
+          ? Math.round((remainingHours / diasRestantes) * 10) / 10
+          : null;
 
         if (diasRestantes !== null && diasRestantes < 0) {
+          isOutSideSla = true;
           detail = '<strong style="color:#DC2626;">Prazo Storz expirado</strong> há ' + Math.abs(diasRestantes) + ' dias (' + prog + '% concluído) • Prazo era ' + dlStr + '.';
+        } else if (hoursPerDayNeeded !== null && hoursPerDayNeeded > 8) {
+          isOutSideSla = true;
+          detail = '<strong style="color:#DC2626;">Risco iminente de reprovação:</strong> Restam ' + diasRestantes + ' dias para ' + Math.round(remainingHours) + 'h de curso (necessário <span style="text-decoration:underline;">' + hoursPerDayNeeded + 'h/dia</span> até ' + dlStr + ').';
         } else if (prog === 0) {
-          detail = '<strong style="color:#D97706;">Inércia:</strong> 0% de progresso após ' + diasDesdeMatricula + ' dias de início (restam ' + diasRestantes + ' dias até ' + dlStr + ').';
-        } else if (prog < 25 && (diasDesdeMatricula || 0) > 20) {
-          detail = '<strong style="color:#D97706;">Ritmo lento:</strong> ' + prog + '% concluído em ' + diasDesdeMatricula + ' dias • Restam ' + diasRestantes + ' dias (prazo: ' + dlStr + ').';
+          isOutSideSla = true;
+          detail = '<strong style="color:#D97706;">Inércia de execução:</strong> 0% de progresso após ' + diasDesdeMatricula + ' dias de início (restam ' + diasRestantes + ' dias até ' + dlStr + ').';
+        } else if ((diasDesdeMatricula || 0) > idealSlaDays * 2) {
+          isOutSideSla = true;
+          detail = '<strong style="color:#D97706;">Ritmo lento:</strong> ' + prog + '% concluído em ' + diasDesdeMatricula + ' dias (Meta SLA: ' + idealSlaDays + 'd para ' + workloadHours + 'h • Restam ' + diasRestantes + ' dias).';
         } else {
-          detail = 'Iniciado em ' + reqDateStr + ' (' + diasDesdeMatricula + 'd atrás) • ' + prog + '% concluído • Restam ' + diasRestantes + ' dias (prazo: ' + dlStr + ').';
+          detail = 'Iniciado em ' + reqDateStr + ' (' + diasDesdeMatricula + 'd atrás) • ' + prog + '% concluído • Restam ' + diasRestantes + ' dias (Meta SLA: ' + idealSlaDays + 'd).';
         }
       } else if (situacaoUpper.includes('NÃO INICIADO') || situacaoUpper.includes('NAO INICIADO') || req.state === 'SOLICITADO') {
-        if (diasDesdeMatricula !== null && diasDesdeMatricula <= 1) {
-          detail = 'Matriculado recentemente em ' + reqDateStr + ' • Aguardando primeiro acesso do aluno.';
+        if (diasDesdeMatricula !== null && diasDesdeMatricula <= 2) {
+          detail = 'Matriculado recentemente em ' + reqDateStr + ' • Aguardando primeiro acesso (Carga: ' + workloadHours + 'h • Meta SLA: ' + idealSlaDays + 'd).';
+        } else if (diasDesdeMatricula !== null && diasDesdeMatricula <= 4) {
+          isOutSideSla = true;
+          detail = '<strong style="color:#D97706;">Inércia de ' + diasDesdeMatricula + ' dias:</strong> Matriculado em ' + reqDateStr + ' sem primeiro acesso (Carga: ' + workloadHours + 'h • Meta SLA: ' + idealSlaDays + 'd).';
         } else {
-          detail = '<strong style="color:#D97706;">Inércia de ' + diasDesdeMatricula + ' dias:</strong> Matriculado em ' + reqDateStr + ' e ainda não iniciou o curso (0%).';
+          isOutSideSla = true;
+          detail = '<strong style="color:#DC2626;">Alta inércia (' + diasDesdeMatricula + ' dias):</strong> Matriculado em ' + reqDateStr + ' e ainda não iniciou o curso (0% • Meta SLA: ' + idealSlaDays + 'd).';
         }
       } else if (situacaoUpper.includes('APROV') || situacaoUpper.includes('CONCLU') || req.state === 'CONCLUIDO') {
         const complDate = req.completionDate ? new Date(req.completionDate) : null;
@@ -2977,11 +3013,18 @@ export function buildDashboardHtml(
         let duracaoStr = '';
         if (complDate && reqDate) {
           const dur = Math.max(0, Math.round((complDate.getTime() - reqDate.getTime()) / (1000 * 60 * 60 * 24)));
-          duracaoStr = dur === 0 ? ' • Concluído no mesmo dia' : ' • Concluído em ' + dur + ' dias de curso';
+          duracaoStr = dur === 0 ? ' • Concluído no mesmo dia' : ' • Concluído em ' + dur + ' dias (Meta SLA: ' + idealSlaDays + 'd)';
         }
         detail = 'Aprovado com 100% em ' + complDateStr + duracaoStr + '.';
       } else if (situacaoUpper.includes('REPROV')) {
-        detail = '<strong style="color:#DC2626;">Reprovado no exame final:</strong> Necessita de rematrícula para reteste pelo time de DO.';
+        const complDate = req.completionDate ? new Date(req.completionDate) : null;
+        const complDateStr = complDate ? complDate.toLocaleDateString('pt-BR') : 'data final';
+        isOutSideSla = true;
+        if (prog === 0) {
+          detail = '<strong style="color:#DC2626;">Reprovado por expiração de prazo (sem acesso):</strong> Matrícula expirou em ' + complDateStr + ' após ' + duration + ' dias sem início do curso. Necessita de rematrícula pelo time de DO.';
+        } else {
+          detail = '<strong style="color:#DC2626;">Reprovado na avaliação final (' + prog + '%):</strong> Concluiu a grade de ' + workloadHours + 'h mas não atingiu a nota mínima em ' + complDateStr + '. Necessita de rematrícula para reteste.';
+        }
       } else if (situacaoUpper.includes('CANCEL')) {
         detail = 'Matrícula cancelada no portal Storz.';
       } else {
@@ -2992,7 +3035,10 @@ export function buildDashboardHtml(
         detail += ' <span style="font-style:italic;">[Obs: ' + req.notes + ']</span>';
       }
 
-      return detail + certAlertHtml;
+      return {
+        html: detail + certAlertHtml,
+        isOutSideSla
+      };
     }
 
     function renderStorz(peopleList) {
@@ -3009,24 +3055,40 @@ export function buildDashboardHtml(
         sourceItems = rawStorzHistory.map(req => {
           const person = peopleMap.get(req.collaboratorName);
           const rawSit = req.rawSituacao || req.state || '';
+          const workloadHours = req.workloadHours || getCourseWorkloadHours(req.trainingCode, req.trainingName);
+          const idealSlaDays = req.idealSlaDays || Math.max(1, Math.ceil(workloadHours / 8));
+          const pace = formatStorzPaceAndDetail(req, person, workloadHours, idealSlaDays);
           return {
             inspectorName: req.collaboratorName,
             sector: person ? person.sector : 'Operações',
             role: person ? person.role : 'Técnico',
             docName: req.trainingName,
             trainingCode: req.trainingCode,
+            workloadHours: workloadHours,
+            idealSlaDays: idealSlaDays,
             storzRequestId: req.id,
             storzState: req.state,
             rawSituacao: rawSit,
             storzProgressPercent: req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0),
             storzDeadline: computeStorzDeadline(req),
-            detail: formatStorzPaceAndDetail(req, person)
+            detail: pace.html,
+            isOutSideSla: pace.isOutSideSla
           };
         });
       } else {
         peopleList.forEach(p => {
           p.records.forEach(r => {
-            if (r.storzRequestId) sourceItems.push(r);
+            if (r.storzRequestId) {
+              const workloadHours = r.workloadHours || getCourseWorkloadHours(r.docCode, r.docName);
+              const idealSlaDays = r.idealSlaDays || Math.max(1, Math.ceil(workloadHours / 8));
+              sourceItems.push({
+                ...r,
+                trainingCode: r.docCode,
+                workloadHours: workloadHours,
+                idealSlaDays: idealSlaDays,
+                isOutSideSla: false
+              });
+            }
           });
         });
       }
@@ -3078,6 +3140,7 @@ export function buildDashboardHtml(
           if (r.storzState !== 'CONCLUIDO' && !situacaoUpper.includes('APROV') && !situacaoUpper.includes('CONCLU')) return;
         }
 
+        if (storzProgFilter === 'SLA_RISK' && !r.isOutSideSla) return;
         if (storzProgFilter === '0' && prog !== 0) return;
         if (storzProgFilter === '1_49' && (prog < 1 || prog > 49)) return;
         if (storzProgFilter === '50_99' && (prog < 50 || prog > 99)) return;
@@ -3089,7 +3152,7 @@ export function buildDashboardHtml(
       lastFilteredStorzRows = storzRecords;
 
       if (storzRecords.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada com os filtros atuais.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="8" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada com os filtros atuais.</td></tr>';
         return;
       }
 
@@ -3105,7 +3168,7 @@ export function buildDashboardHtml(
           '</div>';
 
         const dlHtml = r.storzDeadline 
-          ? '<span style="font-size:11px;font-weight:600;font-family:\\'JetBrains Mono\\', monospace;">' + r.storzDeadline + '</span>'
+          ? '<span style="font-size:11px;font-weight:600;font-family:\'JetBrains Mono\', monospace;">' + r.storzDeadline + '</span>'
           : '<span style="color:var(--text-muted);font-size:11px;">—</span>';
 
         const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
@@ -3120,9 +3183,15 @@ export function buildDashboardHtml(
           stateBadge = '<span class="badge" style="background:#EFF6FF;color:#1D4ED8;border:1px solid #DBEAFE;">' + SVG_ICONS.clock + 'Aguardando Início</span>';
         }
 
+        const slaBadge = '<div style="display:inline-flex;flex-direction:column;align-items:center;gap:2px;">' +
+          '<span style="font-weight:700;font-size:11px;color:var(--text-main);">' + (r.workloadHours || 8) + 'h</span>' +
+          '<span style="font-size:10px;color:var(--text-muted);background:var(--bg-surface);padding:1px 5px;border-radius:4px;border:1px solid var(--border-color);">SLA ' + (r.idealSlaDays || 1) + 'd</span>' +
+          '</div>';
+
         tr.innerHTML = 
           '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong><div style="font-size:10px;color:var(--text-muted);">' + (r.sector || 'Operações') + '</div></td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
+          '<td style="text-align:center;">' + slaBadge + '</td>' +
           '<td><span class="mono" style="font-weight:700;color:var(--brand-purple);">' + (r.storzRequestId || '—') + '</span></td>' +
           '<td>' + stateBadge + '</td>' +
           '<td>' + progHtml + '</td>' +
@@ -3161,11 +3230,13 @@ export function buildDashboardHtml(
         ].join(';'));
         csvContent = [headers.join(';'), ...rows].join(nl);
       } else if (currentViewKey === 'storz') {
-        const headers = ['Colaborador', 'Setor', 'Curso Solicitado', 'Storz ID', 'Situacao', 'Progresso (%)', 'Prazo Limite Storz', 'Detalhe'];
+        const headers = ['Colaborador', 'Setor', 'Curso Solicitado', 'Carga Horaria (h)', 'SLA Ideal (dias)', 'Storz ID', 'Situacao', 'Progresso (%)', 'Prazo Limite Storz', 'Detalhe'];
         const rows = (lastFilteredStorzRows || []).map(r => [
           escapeCsv(r.inspectorName),
           escapeCsv(r.sector),
           escapeCsv(r.docName),
+          escapeCsv(r.workloadHours || ''),
+          escapeCsv(r.idealSlaDays || ''),
           escapeCsv(r.storzRequestId || ''),
           escapeCsv(r.rawSituacao || r.storzState || ''),
           escapeCsv(r.storzProgressPercent !== undefined ? r.storzProgressPercent : ''),

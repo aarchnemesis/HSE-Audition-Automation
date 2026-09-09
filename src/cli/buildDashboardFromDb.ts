@@ -48,7 +48,9 @@ async function main() {
     path.join(process.cwd(), 'scratch', 'hse_dashboard.html'),
     html
   )
-  console.log(`✅ Dashboard gerado com sucesso! Tamanho: ${html.length} bytes`)
+  console.log(
+    `[buildDashboardFromDb] Dashboard gerado com sucesso! Tamanho: ${html.length} bytes`
+  )
 }
 
 main().catch(err => {

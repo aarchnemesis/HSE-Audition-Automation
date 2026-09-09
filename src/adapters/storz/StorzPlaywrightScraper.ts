@@ -2,6 +2,8 @@ import fs from 'fs'
 import path from 'path'
 import { Browser, Frame, Page, chromium } from 'playwright'
 import { StorzRequest } from '../../domain/models/StorzRequest.js'
+import { getCourseWorkloadHours } from '../../domain/services/ComplianceEngine.js'
+import { calculateIdealSlaDays } from '../../domain/services/TrainingPaceCalculator.js'
 import {
   ParsedDossie,
   classifyTrainingCode,
@@ -209,10 +211,30 @@ export class StorzPlaywrightScraper {
           const iniciadoDate = parseBrDate(course.iniciado)
           const concluidoDate = parseBrDate(course.concluido)
 
+          const durationDays =
+            course.tempoCursoDias !== undefined
+              ? Number.parseInt(course.tempoCursoDias, 10)
+              : 60
+          const prog =
+            course.progresso !== undefined
+              ? Number.parseInt(course.progresso, 10)
+              : undefined
+          const state = mapSituacaoToState(course.situacao)
+          const isReprovadoWithoutAccess =
+            (state === 'CANCELADO' ||
+              (course.situacao || '').toUpperCase().includes('REPROV')) &&
+            (!prog || prog === 0) &&
+            !iniciadoDate
+
           const existing = previousMap.get(matriculaId)
           let requestDate: Date
           if (iniciadoDate) {
             requestDate = iniciadoDate
+          } else if (concluidoDate && isReprovadoWithoutAccess) {
+            // Retroage o prazo regulamentar para estimar a data real da matrícula que expirou nesta data
+            requestDate = new Date(
+              concluidoDate.getTime() - durationDays * 24 * 60 * 60 * 1000
+            )
           } else if (concluidoDate) {
             requestDate = concluidoDate
           } else if (existing?.requestDate) {
@@ -220,6 +242,12 @@ export class StorzPlaywrightScraper {
           } else {
             requestDate = new Date()
           }
+
+          const workloadHours = getCourseWorkloadHours(
+            trainingCode,
+            course.turma
+          )
+          const idealSlaDays = calculateIdealSlaDays(workloadHours)
 
           scrapedRequests.push({
             id: matriculaId,
@@ -232,16 +260,12 @@ export class StorzPlaywrightScraper {
               : 'PRESENCIAL',
             requestDate,
             completionDate: concluidoDate,
-            state: mapSituacaoToState(course.situacao),
+            state,
             rawSituacao: course.situacao || undefined,
-            progressPercent:
-              course.progresso !== undefined
-                ? parseInt(course.progresso, 10)
-                : undefined,
-            courseDurationDays:
-              course.tempoCursoDias !== undefined
-                ? parseInt(course.tempoCursoDias, 10)
-                : undefined,
+            progressPercent: prog,
+            courseDurationDays: durationDays,
+            workloadHours,
+            idealSlaDays,
             notes: undefined,
           })
         }
@@ -497,16 +521,25 @@ export class StorzPlaywrightScraper {
           const raw = fs.readFileSync(p, 'utf-8')
           const data = JSON.parse(raw)
           if (Array.isArray(data) && data.length > 0) {
-            return data.map((item: any) => ({
-              ...item,
-              requestDate: new Date(item.requestDate),
-              scheduledDate: item.scheduledDate
-                ? new Date(item.scheduledDate)
-                : undefined,
-              completionDate: item.completionDate
-                ? new Date(item.completionDate)
-                : undefined,
-            }))
+            return data.map((item: any) => {
+              const workloadHours =
+                item.workloadHours ||
+                getCourseWorkloadHours(item.trainingCode, item.trainingName)
+              const idealSlaDays =
+                item.idealSlaDays || calculateIdealSlaDays(workloadHours)
+              return {
+                ...item,
+                workloadHours,
+                idealSlaDays,
+                requestDate: new Date(item.requestDate),
+                scheduledDate: item.scheduledDate
+                  ? new Date(item.scheduledDate)
+                  : undefined,
+                completionDate: item.completionDate
+                  ? new Date(item.completionDate)
+                  : undefined,
+              }
+            })
           }
         } catch (e) {
           console.warn(
