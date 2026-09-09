@@ -146,6 +146,10 @@ export class StorzPlaywrightScraper {
       `🌐 Passo 1: Iniciando navegador Chromium (Headless: ${options?.headless ?? true})...`
     )
     let browser: Browser | null = null
+    const existingCache = this.loadCache()
+    const previousMap = new Map<string, StorzRequest>(
+      existingCache.map(r => [r.id, r])
+    )
     const scrapedRequests: StorzRequest[] = []
 
     try {
@@ -198,14 +202,27 @@ export class StorzPlaywrightScraper {
             trainingCode = '99'
           }
 
+          const matriculaId =
+            course.codMatricula ||
+            `DOSSIE-${collaboratorName}-${course.turma}`.slice(0, 60)
+
           const iniciadoDate = parseBrDate(course.iniciado)
           const concluidoDate = parseBrDate(course.concluido)
-          const requestDate = iniciadoDate || concluidoDate || new Date()
+
+          const existing = previousMap.get(matriculaId)
+          let requestDate: Date
+          if (iniciadoDate) {
+            requestDate = iniciadoDate
+          } else if (concluidoDate) {
+            requestDate = concluidoDate
+          } else if (existing?.requestDate) {
+            requestDate = new Date(existing.requestDate)
+          } else {
+            requestDate = new Date()
+          }
 
           scrapedRequests.push({
-            id:
-              course.codMatricula ||
-              `DOSSIE-${collaboratorName}-${course.turma}`.slice(0, 60),
+            id: matriculaId,
             collaboratorName,
             collaboratorCpf: dossie.cpf,
             trainingCode,

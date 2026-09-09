@@ -108,6 +108,10 @@ export class StorzHttpScraper {
       return []
     }
 
+    const existingCache = this.loadCache()
+    const previousMap = new Map<string, StorzRequest>(
+      existingCache.map(r => [r.id, r])
+    )
     const scrapedRequests: StorzRequest[] = []
 
     for (const collaboratorName of targets) {
@@ -142,14 +146,32 @@ export class StorzHttpScraper {
           trainingCode = '99'
         }
 
+        const matriculaId =
+          course.codMatricula ||
+          `DOSSIE-${collaboratorName}-${course.turma}`.slice(0, 60)
+
         const iniciadoDate = parseBrDate(course.iniciado)
         const concluidoDate = parseBrDate(course.concluido)
-        const requestDate = iniciadoDate || concluidoDate || new Date()
+
+        // Se o curso já tem data oficial de início ou conclusão na Storz, usamos a data real.
+        // Se a situação for "Não iniciado" (sem data explícita de início):
+        // - Se a matrícula já existia em raspagens anteriores, PRESERVAMOS a data em que foi
+        //   detectada pela primeira vez para não mascarar a inércia real a cada execução.
+        // - Se for uma matrícula inédita, registramos a data/hora atual (momento da primeira detecção).
+        const existing = previousMap.get(matriculaId)
+        let requestDate: Date
+        if (iniciadoDate) {
+          requestDate = iniciadoDate
+        } else if (concluidoDate) {
+          requestDate = concluidoDate
+        } else if (existing?.requestDate) {
+          requestDate = new Date(existing.requestDate)
+        } else {
+          requestDate = new Date()
+        }
 
         scrapedRequests.push({
-          id:
-            course.codMatricula ||
-            `DOSSIE-${collaboratorName}-${course.turma}`.slice(0, 60),
+          id: matriculaId,
           collaboratorName,
           collaboratorCpf: dossie.cpf,
           trainingCode,
