@@ -397,45 +397,58 @@
     .kpi-row {
       display: flex;
       align-items: stretch;
-      background: #FFFFFF;
-      border: 1px solid var(--card-border);
-      border-radius: 8px;
-      padding: 3px 6px;
-      margin-bottom: 6px;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      margin-bottom: 8px;
       flex-shrink: 0;
-      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
       overflow-x: auto;
-      gap: 2px;
+      gap: 10px;
     }
     .kpi-box {
       flex: 1;
-      min-width: 130px;
-      background: transparent;
-      border: 1px solid transparent;
-      border-radius: 6px;
-      padding: 5px 10px;
+      min-width: 152px;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 11px 14px 10px 14px;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
       position: relative;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      border-top: 3px solid var(--kpi-accent, var(--card-border));
+      overflow: hidden;
     }
-    .kpi-box:not(:last-child)::after {
+    .kpi-box::after {
       content: '';
       position: absolute;
-      right: 0;
-      top: 20%;
-      height: 60%;
-      width: 1px;
-      background: var(--card-border);
+      right: -24px;
+      top: -24px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--kpi-accent, transparent) 16%, transparent) 0%, transparent 70%);
+      pointer-events: none;
     }
     .kpi-box:hover {
-      background: #F8FAFC;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      border-color: var(--kpi-accent, #CBD5E1);
     }
     .kpi-box.active {
-      background: #F1F5F9;
-      border-color: #CBD5E1;
+      background: #F8FAFC;
+      border-color: var(--kpi-accent, #CBD5E1);
+      box-shadow: 0 0 0 2px color-mix(in srgb, var(--kpi-accent, #94A3B8) 25%, transparent);
+    }
+    .kpi-box .kpi-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
     }
     .kpi-box .label {
       font-size: 10px;
@@ -443,36 +456,69 @@
       text-transform: uppercase;
       color: var(--text-muted);
       letter-spacing: 0.4px;
-      margin-bottom: 2px;
       display: flex;
       align-items: center;
       gap: 4px;
     }
+    .kpi-icon-badge {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: color-mix(in srgb, var(--kpi-accent, #94A3B8) 12%, transparent);
+      border: 1px solid color-mix(in srgb, var(--kpi-accent, #94A3B8) 22%, transparent);
+      flex-shrink: 0;
+    }
+    .kpi-icon-badge svg {
+      width: 14px !important;
+      height: 14px !important;
+      max-width: 14px !important;
+      max-height: 14px !important;
+      stroke: var(--kpi-accent, #64748B) !important;
+    }
     .kpi-box .val {
-      font-size: 18px;
+      font-size: 25px;
       font-weight: 800;
       color: var(--text-main);
-      line-height: 1.1;
-      margin-bottom: 2px;
+      line-height: 1;
+      margin-bottom: 3px;
+      letter-spacing: -0.5px;
     }
     .kpi-box .sub {
-      font-size: 10px;
+      font-size: 10.5px;
       color: var(--text-sub);
       white-space: nowrap;
     }
     .kpi-compliance-bar {
-      width: 52px;
-      height: 4px;
+      width: 100%;
+      height: 5px;
       background: #E2E8F0;
-      border-radius: 2px;
+      border-radius: 3px;
       overflow: hidden;
-      margin-top: 3px;
+      margin-top: 6px;
     }
     .kpi-compliance-fill {
       height: 100%;
       background: #10B981;
-      border-radius: 2px;
+      border-radius: 3px;
       transition: width 0.3s ease;
+    }
+    .kpi-ring-wrap { position: relative; width: 40px; height: 40px; flex-shrink: 0; }
+    .kpi-ring-wrap svg { transform: rotate(-90deg); width: 40px; height: 40px; }
+    .kpi-ring-bg { fill: none; stroke: #E2E8F0; stroke-width: 4; }
+    .kpi-ring-fill { fill: none; stroke: var(--brand-green); stroke-width: 4; stroke-linecap: round; transition: stroke-dasharray 0.4s ease; }
+    .kpi-ring-label {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--brand-green);
+      font-family: 'JetBrains Mono', monospace;
     }
 
     /* QUICK CHIPS (LEGACY & ACCESSIBILITY) */
@@ -725,40 +771,58 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.12s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .ranking-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: var(--w, 0%);
+      background: var(--bar-color, #94A3B8);
+      opacity: 0.16;
+      z-index: -1;
+      border-radius: 5px;
+      transition: width 0.3s ease;
     }
     .ranking-item:hover {
-      background: #EFF6FF;
+      background: #F1F5F9;
+      transform: translateX(2px);
     }
     .ranking-item-left {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 7px;
       min-width: 0;
     }
     .ranking-item-name {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      max-width: 190px;
+      max-width: 215px;
       font-weight: 600;
       color: var(--text-main);
     }
     .ranking-pos {
-      width: 18px;
-      height: 18px;
+      width: 19px;
+      height: 19px;
       border-radius: 50%;
-      background: #E2E8F0;
-      color: #475569;
-      font-size: 9px;
+      background: #F1F5F9;
+      color: #64748B;
+      font-size: 9.5px;
       font-weight: 800;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
+      border: 1px solid #E2E8F0;
     }
-    .ranking-pos.top-1 { background: #FEE2E2; color: #DC2626; }
-    .ranking-pos.top-2 { background: #FEF3C7; color: #D97706; }
-    .ranking-pos.top-3 { background: #FEF9C3; color: #CA8A04; }
+    .ranking-pos.top-1 { background: #FEF3C7; color: #B45309; border-color: #FDE68A; }
+    .ranking-pos.top-2 { background: #F1F5F9; color: #334155; border-color: #CBD5E1; }
+    .ranking-pos.top-3 { background: #FFEDD5; color: #C2410C; border-color: #FED7AA; }
 
     /* OMNI-COMMAND BAR */
     .omni-bar {
@@ -963,19 +1027,22 @@
     .rpo-summary-card {
       background: #FFFFFF;
       border: 1px solid var(--card-border);
-      border-radius: 8px;
-      padding: 10px 14px;
+      border-radius: 10px;
+      padding: 12px 16px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
       border-left: 4px solid var(--text-muted);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
+    .rpo-summary-card:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08); }
     .rpo-summary-card.total { border-left-color: var(--brand-blue); background: #F8FAFC; }
     .rpo-summary-card.crit { border-left-color: #EF4444; background: #FEF2F2; }
     .rpo-summary-card.warn { border-left-color: #F59E0B; background: #FFFBEB; }
     .rpo-summary-card.drive { border-left-color: #2563EB; background: #EFF6FF; }
     .rpo-summary-card.rpo { border-left-color: #8B5CF6; background: #FAF5FF; }
-    .rpo-summary-val { font-size: 22px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+    .rpo-summary-val { font-size: 26px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; letter-spacing: -0.5px; }
     .rpo-summary-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
 
     .diff-badge {
@@ -1052,17 +1119,20 @@
     .storz-summary-card {
       background: #FFFFFF;
       border: 1px solid var(--card-border);
-      border-radius: 8px;
-      padding: 10px 14px;
+      border-radius: 10px;
+      padding: 12px 16px;
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 3px;
       border-left: 4px solid var(--text-muted);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
+    .storz-summary-card:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08); }
     .storz-summary-card.in-progress { border-left-color: #8B5CF6; background: #FAF5FF; }
     .storz-summary-card.requested { border-left-color: #3B82F6; background: #F0F9FF; }
     .storz-summary-card.completed { border-left-color: #10B981; background: #F0FDF4; }
-    .storz-summary-val { font-size: 22px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; }
+    .storz-summary-val { font-size: 26px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; letter-spacing: -0.5px; }
     .storz-summary-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
 
     /* SUPER-HEADER GROUPS IN MATRIX */
@@ -1211,16 +1281,17 @@
     .matrix-table th {
       background: #F8FAFC;
       color: var(--text-muted);
-      padding: 8px 6px;
+      padding: 10px 8px;
       font-weight: 700;
       font-size: 10px;
       text-transform: uppercase;
+      letter-spacing: 0.3px;
       text-align: center;
       white-space: nowrap;
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 2px solid var(--card-border);
     }
     .matrix-table th.th-sticky {
       position: sticky;
@@ -1229,16 +1300,20 @@
       text-align: left;
       min-width: 200px;
       background: #F8FAFC;
+      border-right: 2px solid var(--card-border);
+      box-shadow: 4px 0 10px rgba(15, 23, 42, 0.05);
     }
     .matrix-table td {
-      padding: 7px 6px;
+      padding: 9px 8px;
       border-bottom: 1px solid #F1F5F9;
       border-right: 1px solid #F8FAFC;
       text-align: center;
       vertical-align: middle;
       background: #FFFFFF;
     }
-    .matrix-table tr:hover td { background: #F8FAFC; }
+    .matrix-table tbody tr:nth-child(even) td { background: #FAFBFD; }
+    .matrix-table tbody tr:nth-child(even) td.td-sticky { background: #F7F9FC; }
+    .matrix-table tr:hover td { background: #EFF6FF; }
     .matrix-table td.td-sticky {
       position: sticky;
       left: 0;
@@ -1248,9 +1323,15 @@
       color: var(--text-main);
       background: #FFFFFF;
       border-right: 2px solid var(--card-border);
+      box-shadow: 4px 0 10px rgba(15, 23, 42, 0.05);
       cursor: pointer;
     }
     .matrix-table tr:hover td.td-sticky { background: #EDF2F7; color: var(--brand-blue); }
+    .matrix-table th:nth-child(5), .matrix-table td:nth-child(5),
+    .matrix-table th:nth-child(10), .matrix-table td:nth-child(10),
+    .matrix-table th:nth-child(15), .matrix-table td:nth-child(15) {
+      border-right: 2px solid #CBD5E1 !important;
+    }
 
     /* STATUS CELL BADGES - QUIET CONFORMITY ARCHITECTURE */
     .badge {
@@ -1504,58 +1585,61 @@
       
       <!-- METRIC RIBBON (EXECUTIVE KPIS) -->
       <div class="kpi-row">
-        <div class="kpi-box" id="kpiBox-ALL" onclick="applyStatusFilter('ALL')" title="Ver todos os colaboradores">
-          <div class="label">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            Colaboradores
+        <div class="kpi-box" id="kpiBox-ALL" onclick="applyStatusFilter('ALL')" title="Ver todos os colaboradores" style="--kpi-accent:#2563EB;">
+          <div class="kpi-top">
+            <div class="label">Colaboradores</div>
+            <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
           </div>
           <div class="val mono" id="kpiTotalPeople">0</div>
           <div class="sub">Universo auditado</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-CONFORME" onclick="applyStatusFilter('CONFORME')" title="Ver apenas colaboradores 100% conformes">
-          <div class="label" style="color:var(--brand-green);">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            Em Dia
+        <div class="kpi-box" id="kpiBox-CONFORME" onclick="applyStatusFilter('CONFORME')" title="Ver apenas colaboradores 100% conformes" style="--kpi-accent:#10B981;">
+          <div class="kpi-top">
+            <div class="label" style="color:var(--brand-green);">Em Dia</div>
+            <div class="kpi-ring-wrap">
+              <svg viewBox="0 0 40 40">
+                <circle class="kpi-ring-bg" cx="20" cy="20" r="16"></circle>
+                <circle class="kpi-ring-fill" id="kpiComplianceRing" cx="20" cy="20" r="16" stroke-dasharray="0 100.5"></circle>
+              </svg>
+              <span class="kpi-ring-label" id="kpiComplianceRate">0%</span>
+            </div>
           </div>
           <div class="val mono" style="color:var(--brand-green);" id="kpiOkCount">0</div>
-          <div style="display:flex;align-items:center;gap:6px;">
-            <div class="sub" id="kpiComplianceRate">0% conforme</div>
-            <div class="kpi-compliance-bar"><div class="kpi-compliance-fill" id="kpiComplianceFill" style="width:0%;"></div></div>
-          </div>
+          <div class="sub">documentos em conformidade</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-VENCE_30" onclick="applyStatusFilter('VENCE_30')" title="Filtrar reciclagens em até 30 dias">
-          <div class="label" style="color:var(--brand-amber);">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Reciclagens (&lt;30d)
+        <div class="kpi-box" id="kpiBox-VENCE_30" onclick="applyStatusFilter('VENCE_30')" title="Filtrar reciclagens em até 30 dias" style="--kpi-accent:#F59E0B;">
+          <div class="kpi-top">
+            <div class="label" style="color:var(--brand-amber);">Reciclagens (&lt;30d)</div>
+            <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-amber);" id="kpiWarnCount">0</div>
           <div class="sub">Prioridade agendamento</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-VENCIDO" onclick="applyStatusFilter('VENCIDO')" title="Filtrar colaboradores com documentos vencidos no Drive">
-          <div class="label" style="color:var(--brand-coral);">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-            Vencidos (Drive)
+        <div class="kpi-box" id="kpiBox-VENCIDO" onclick="applyStatusFilter('VENCIDO')" title="Filtrar colaboradores com documentos vencidos no Drive" style="--kpi-accent:#F43F5E;">
+          <div class="kpi-top">
+            <div class="label" style="color:var(--brand-coral);">Vencidos (Drive)</div>
+            <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-coral);" id="kpiCritCount">0</div>
           <div class="sub">Documento expirado</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-AUSENTE" onclick="applyStatusFilter('AUSENTE')" title="Filtrar documentos ausentes sem certificado no Drive">
-          <div class="label" style="color:#64748B;">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Ausentes (sem Doc)
+        <div class="kpi-box" id="kpiBox-AUSENTE" onclick="applyStatusFilter('AUSENTE')" title="Filtrar documentos ausentes sem certificado no Drive" style="--kpi-accent:#64748B;">
+          <div class="kpi-top">
+            <div class="label" style="color:#64748B;">Ausentes (sem Doc)</div>
+            <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
           </div>
           <div class="val mono" style="color:#64748B;" id="kpiAusenteCount">0</div>
           <div class="sub">Não localizado</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-STORZ" onclick="applyStatusFilter('STORZ')" title="Filtrar matrículas ativas ou solicitadas na plataforma Storz">
-          <div class="label" style="color:var(--brand-purple);">
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Storz Ativas
+        <div class="kpi-box" id="kpiBox-STORZ" onclick="applyStatusFilter('STORZ')" title="Filtrar matrículas ativas ou solicitadas na plataforma Storz" style="--kpi-accent:#7C3AED;">
+          <div class="kpi-top">
+            <div class="label" style="color:var(--brand-purple);">Storz Ativas</div>
+            <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-purple);" id="kpiStorzCount">0</div>
           <div class="sub" id="kpiStorzSub">Matrículas em curso</div>
@@ -1703,6 +1787,10 @@
 
         <!-- Action Buttons -->
         <div class="omni-actions-group">
+          <button class="btn-omni-action" id="btnClearFilters" onclick="resetAllFilters()" title="Limpar todos os filtros e buscas" style="display:none;background:#FEE2E2;color:#DC2626;border-color:#FECACA;">
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            <span>Limpar Filtros</span>
+          </button>
           <button class="btn-omni-action" onclick="exportCurrentViewCsv()" title="Exportar visão atual para CSV compatível com Excel">
             <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span>CSV</span>
@@ -2091,9 +2179,15 @@
 
     document.getElementById('kpiTotalPeople').innerText = totalPeople;
     document.getElementById('kpiOkCount').innerText = okCount;
-    document.getElementById('kpiComplianceRate').innerText = Math.round((okCount / (rawData.length || 1)) * 100) + '% em conformidade';
+    const compliancePct = Math.round((okCount / (rawData.length || 1)) * 100)
+    document.getElementById('kpiComplianceRate').innerText = compliancePct + '%'
+    const complianceRing = document.getElementById('kpiComplianceRing')
+    if (complianceRing) {
+      const ringCirc = 2 * Math.PI * 16
+      complianceRing.setAttribute('stroke-dasharray', (ringCirc * compliancePct / 100).toFixed(1) + ' ' + ringCirc.toFixed(1))
+    }
     if (document.getElementById('kpiComplianceFill')) {
-      document.getElementById('kpiComplianceFill').style.width = Math.round((okCount / (rawData.length || 1)) * 100) + '%';
+      document.getElementById('kpiComplianceFill').style.width = compliancePct + '%';
     }
     document.getElementById('kpiWarnCount').innerText = warnCount;
     document.getElementById('kpiCritCount').innerText = critCount;
@@ -2453,10 +2547,12 @@
         if (topCrit.length === 0) {
           critEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência crítica.</div>';
         } else {
+          const maxCrit = topCrit[0].count || 1;
           critEl.innerHTML = topCrit.map((c, idx) => {
             const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
             const escName = (c.name || '').replace(/"/g, '&quot;');
-            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;" title="Filtrar colaborador ' + escName + '">' +
+            const barW = Math.max(8, Math.round((c.count / maxCrit) * 100));
+            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#EF4444;" title="Filtrar colaborador ' + escName + '">' +
               '<div class="ranking-item-left">' +
               '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
               '<span class="ranking-item-name" title="' + c.name + ' (' + c.role + ')">' + c.name + '</span>' +
@@ -2488,10 +2584,12 @@
         if (topPresencial.length === 0) {
           presEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência presencial crítica.</div>';
         } else {
+          const maxPres = topPresencial[0].count || 1;
           presEl.innerHTML = topPresencial.map((c, idx) => {
             const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
             const escName = (c.name || '').replace(/"/g, '&quot;');
-            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;" title="Filtrar colaborador ' + escName + '">' +
+            const barW = Math.max(8, Math.round((c.count / maxPres) * 100));
+            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#DC2626;" title="Filtrar colaborador ' + escName + '">' +
               '<div class="ranking-item-left">' +
               '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
               '<span class="ranking-item-name" title="' + c.name + ' (' + c.role + ')">' + c.name + '</span>' +
@@ -2520,10 +2618,13 @@
         if (topRetests.length === 0) {
           retestEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhuma reprovação registrada no momento.</div>';
         } else {
-          retestEl.innerHTML = topRetests.slice(0, 5).map((c, idx) => {
+          const top5Retests = topRetests.slice(0, 5);
+          const maxRetest = top5Retests[0].count || 1;
+          retestEl.innerHTML = top5Retests.map((c, idx) => {
             const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
             const escName = (c.name || '').replace(/"/g, '&quot;');
-            return '<div class="ranking-item" onclick="filterByTraining(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;" title="Filtrar curso ' + escName + '">' +
+            const barW = Math.max(8, Math.round((c.count / maxRetest) * 100));
+            return '<div class="ranking-item" onclick="filterByTraining(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#7C3AED;" title="Filtrar curso ' + escName + '">' +
               '<div class="ranking-item-left">' +
               '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
               '<span class="ranking-item-name" title="' + c.name + '">' + c.name + '</span>' +
@@ -2557,10 +2658,13 @@
         if (topInertia.length === 0) {
           inertiaEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum aluno estagnado em 0%.</div>';
         } else {
-          inertiaEl.innerHTML = topInertia.slice(0, 5).map((c, idx) => {
+          const top5Inertia = topInertia.slice(0, 5);
+          const maxInertia = top5Inertia[0].count || 1;
+          inertiaEl.innerHTML = top5Inertia.map((c, idx) => {
             const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
             const escName = (c.name || '').replace(/"/g, '&quot;');
-            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;" title="Filtrar aluno ' + escName + '">' +
+            const barW = Math.max(8, Math.round((c.count / maxInertia) * 100));
+            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#F59E0B;" title="Filtrar aluno ' + escName + '">' +
               '<div class="ranking-item-left">' +
               '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
               '<span class="ranking-item-name" title="' + c.name + '">' + c.name + '</span>' +
@@ -2626,6 +2730,24 @@
       renderAll();
     }
 
+    function resetAllFilters() {
+      const search = document.getElementById('searchInput');
+      if (search) search.value = '';
+      const sec = document.getElementById('sectorFilter');
+      if (sec) sec.value = 'ALL';
+      const doc = document.getElementById('documentFilter');
+      if (doc) doc.value = 'ALL';
+      const st = document.getElementById('statusFilter');
+      if (st) st.value = 'ALL';
+      const mod = document.getElementById('modalityFilter');
+      if (mod) mod.value = 'ALL';
+      activePresetId = null;
+      document.querySelectorAll('.preset-chip').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.kpi-box').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      renderAll();
+    }
+
     const norm = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
     let lastFilteredPeople = [];
@@ -2640,6 +2762,10 @@
       const st = document.getElementById('statusFilter').value;
       const docF = (document.getElementById('documentFilter')?.value || 'ALL');
       const modF = (document.getElementById('modalityFilter')?.value || 'ALL');
+
+      const isFiltered = !!qNorm || sec !== 'ALL' || st !== 'ALL' || docF !== 'ALL' || modF !== 'ALL' || !!activePresetId;
+      const btnClear = document.getElementById('btnClearFilters');
+      if (btnClear) btnClear.style.display = isFiltered ? 'inline-flex' : 'none';
 
       const filteredPeople = Array.from(peopleMap.values()).filter(p => {
         const matchesQuery = !qNorm || norm(p.name).includes(qNorm) || norm(p.sector).includes(qNorm) || norm(p.role).includes(qNorm);
