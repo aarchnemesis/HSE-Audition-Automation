@@ -59,4 +59,19 @@ describe('getTrainingModality', () => {
     expect(getTrainingModality('28')).toBe('ONLINE')
     expect(getTrainingModality('22')).toBe('ONLINE')
   })
+
+  it('classifica treinamentos Vestas e de Elevador estritamente como ONLINE/remotos', () => {
+    expect(getTrainingModality('25')).toBe('ONLINE') // SIT (Vestas)
+    expect(getTrainingModality('26')).toBe('ONLINE') // ESO (Vestas)
+    expect(getTrainingModality('31')).toBe('ONLINE') // Elevador (JASO)
+    expect(getTrainingModality('99', 'Treinamento SIT Vestas')).toBe('ONLINE')
+    expect(getTrainingModality('99', 'Treinamento ESO Vestas')).toBe('ONLINE')
+    expect(getTrainingModality('99', 'Elevador (JASO)')).toBe('ONLINE')
+    expect(getTrainingModality('99', 'Operador de Elevador Cremalheira')).toBe(
+      'ONLINE'
+    )
+    expect(getTrainingModality('99', 'Operador de Elevador JASO')).toBe(
+      'ONLINE'
+    )
+  })
 })

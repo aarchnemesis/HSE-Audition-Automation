@@ -82,8 +82,11 @@ export class AuditTriangulator {
       const requiredModality = park.requiredModalities
         ? park.requiredModalities[code]
         : undefined
+      const derivedModality = getTrainingModality(code, reqName)
       const actualModality =
-        cert?.modality || getTrainingModality(code, reqName)
+        code === '25' || code === '26' || code === '31'
+          ? 'ONLINE'
+          : cert?.modality || derivedModality
 
       let isModalityCompliant = true
       if (requiredModality && requiredModality !== actualModality) {

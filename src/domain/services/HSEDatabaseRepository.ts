@@ -130,8 +130,8 @@ export class HSEDatabaseRepository {
     const candidates = this.isCustomPath
       ? [this.dbPath]
       : [
-          this.dbPath,
           path.join(process.cwd(), 'data', 'hse_database.json'),
+          this.dbPath,
           path.join(process.cwd(), 'scratch', 'hse_database.json'),
         ]
 
@@ -141,13 +141,20 @@ export class HSEDatabaseRepository {
           const raw = fs.readFileSync(p, 'utf-8')
           const parsed = JSON.parse(raw)
           if (Array.isArray(parsed) && parsed.length > 0) {
-            return parsed.filter(
+            const valid = parsed.filter(
               r =>
                 typeof r === 'object' &&
                 r !== null &&
                 typeof r.inspectorName === 'string' &&
                 typeof r.docCode === 'string'
             )
+            return valid.map(r => ({
+              ...r,
+              modality:
+                r.docCode === '25' || r.docCode === '26' || r.docCode === '31'
+                  ? ('ONLINE' as const)
+                  : r.modality || getTrainingModality(r.docCode, r.docName),
+            }))
           }
         } catch (e) {
           console.error(
