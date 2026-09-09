@@ -191,7 +191,7 @@ export class StorzHttpScraper {
             course.tempoCursoDias !== undefined
               ? Number.parseInt(course.tempoCursoDias, 10)
               : undefined,
-          notes: `Extracted via Storz HTTP API in ${new Date().toLocaleString('pt-BR')} — Original situation: "${course.situacao}"`,
+          notes: undefined,
         })
       }
     }
