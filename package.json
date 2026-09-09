@@ -9,6 +9,7 @@
     "storz-audit": "tsx src/cli/runStorzAudit.ts",
     "hse-report": "tsx src/cli/runHSEReportExporter.ts",
     "hse-dash": "tsx src/cli/runHSEReportExporter.ts --no-email",
+    "build-dash": "tsx src/cli/buildDashboardFromDb.ts",
     "test-gdrive": "tsx src/cli/testGoogleDriveApi.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",

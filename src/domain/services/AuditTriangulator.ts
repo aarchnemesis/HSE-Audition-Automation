@@ -5,6 +5,7 @@ import {
   DOC_CATALOG_MAP,
   ELECTIVE_DOC_CODES,
   STORZ_SEARCHABLE_DOC_CODES,
+  getTrainingModality,
 } from './ComplianceEngine.js'
 import { EHSEvaluator } from './EHSEvaluator.js'
 import { findInspectorMatch } from './InspectorMatcher.js'
@@ -81,7 +82,8 @@ export class AuditTriangulator {
       const requiredModality = park.requiredModalities
         ? park.requiredModalities[code]
         : undefined
-      const actualModality = cert?.modality || 'PRESENCIAL'
+      const actualModality =
+        cert?.modality || getTrainingModality(code, reqName)
 
       let isModalityCompliant = true
       if (requiredModality && requiredModality !== actualModality) {
