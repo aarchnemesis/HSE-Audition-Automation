@@ -2626,20 +2626,23 @@
       renderAll();
     }
 
+    const norm = s => (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+
     let lastFilteredPeople = [];
     let lastFilteredTableRows = [];
     let lastFilteredRpoRows = [];
     let lastFilteredStorzRows = [];
 
     function renderAll() {
-      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const q = document.getElementById('searchInput').value.trim();
+      const qNorm = norm(q);
       const sec = document.getElementById('sectorFilter').value;
       const st = document.getElementById('statusFilter').value;
       const docF = (document.getElementById('documentFilter')?.value || 'ALL');
       const modF = (document.getElementById('modalityFilter')?.value || 'ALL');
 
       const filteredPeople = Array.from(peopleMap.values()).filter(p => {
-        const matchesQuery = p.name.toLowerCase().includes(q) || p.sector.toLowerCase().includes(q) || p.role.toLowerCase().includes(q);
+        const matchesQuery = !qNorm || norm(p.name).includes(qNorm) || norm(p.sector).includes(qNorm) || norm(p.role).includes(qNorm);
         const matchesSec = sec === 'ALL' || p.sector === sec;
         const matchesDoc = docF === 'ALL' || p.records.some(r => r.docCode === docF);
         const matchesMod = modF === 'ALL' || p.records.some(r => (r.modality || 'ONLINE') === modF && (docF === 'ALL' || r.docCode === docF));
@@ -2776,15 +2779,16 @@
       if (!tbody) return;
       tbody.innerHTML = '';
 
-      const q = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+      const q = (document.getElementById('searchInput')?.value || '').trim();
+      const qNorm = norm(q);
 
       const items = rawRpoDivergences || [];
       const filtered = items.filter(item => {
-        const matchQ = !q ||
-          item.inspectorName.toLowerCase().includes(q) ||
-          item.docName.toLowerCase().includes(q) ||
-          item.docCode.toLowerCase().includes(q) ||
-          (item.recommendedAction && item.recommendedAction.toLowerCase().includes(q));
+        const matchQ = !qNorm ||
+          norm(item.inspectorName).includes(qNorm) ||
+          norm(item.docName).includes(qNorm) ||
+          norm(item.docCode).includes(qNorm) ||
+          norm(item.recommendedAction).includes(qNorm);
         if (!matchQ) return false;
 
         if (rpoSubTab === 'ALL_DIV') return item.divergent;
@@ -3013,7 +3017,8 @@
       if (!tbody) return;
       tbody.innerHTML = '';
 
-      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const q = document.getElementById('searchInput').value.trim();
+      const qNorm = norm(q);
       const sec = document.getElementById('sectorFilter').value;
       const docF = (document.getElementById('documentFilter')?.value || 'ALL');
 
@@ -3062,7 +3067,7 @@
 
       const storzRecords = [];
       sourceItems.forEach(r => {
-        const matchQuery = !q || (r.inspectorName.toLowerCase().includes(q) || r.docName.toLowerCase().includes(q));
+        const matchQuery = !qNorm || (norm(r.inspectorName).includes(qNorm) || norm(r.docName).includes(qNorm));
         const matchSec = sec === 'ALL' || r.sector === sec;
         if (!matchQuery || !matchSec) return;
 
@@ -3135,7 +3140,7 @@
           '</div>';
 
         const dlHtml = r.storzDeadline 
-          ? '<span style="font-size:11px;font-weight:600;font-family:'JetBrains Mono', monospace;">' + r.storzDeadline + '</span>'
+          ? '<span class="mono" style="font-size:11px;font-weight:600;">' + r.storzDeadline + '</span>'
           : '<span style="color:var(--text-muted);font-size:11px;">—</span>';
 
         const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
