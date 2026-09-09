@@ -20,8 +20,9 @@ import { IEmailService } from '../ports/IEmailService.js'
 const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
   : new Date()
-const EMAIL_RECIPIENT =
-  process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br'
+const DEFAULT_HSE_EMAIL_RECIPIENTS =
+  'massude.afonso@arthwind.com.br,marcelo.freitas@arthwind.com.br,darliane.caetano@arthwind.com.br,joao.oliveira@arthwind.com.br'
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
 
 async function exportToExcel(
   items: ReturnType<typeof DriveRpoAuditor.compare>,

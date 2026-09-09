@@ -25,10 +25,10 @@ const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
   : new Date()
 const toArg = process.argv.find(a => a.startsWith('--to='))?.split('=')[1]
-const DO_EMAIL_RECIPIENT =
-  toArg ||
-  process.env.DO_EMAIL_TO ||
+const DEFAULT_DO_EMAIL_RECIPIENTS =
   'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br'
+const DO_EMAIL_RECIPIENT =
+  toArg || process.env.DO_EMAIL_TO || DEFAULT_DO_EMAIL_RECIPIENTS
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
 
@@ -329,25 +329,25 @@ async function main() {
   // aba dentro do dashboard de EHS. Ver DoDashboardHtmlGenerator.ts.
   const dashboardPath = path.join(process.cwd(), 'scratch', 'do_dashboard.html')
   fs.writeFileSync(dashboardPath, buildDoDashboardHtml(storzResult.requests))
-  console.log(`✅ Dashboard DO gerado em: ${dashboardPath}\n`)
+  console.log(`[INFO] Dashboard DO gerado em: ${dashboardPath}\n`)
 
   if (SKIP_EMAIL) {
     console.log(
-      'ℹ️  --no-email informado ou SKIP_EMAIL=true — pulando envio de e-mail (arquivos gerados com sucesso).\n'
+      '[INFO] --no-email informado ou SKIP_EMAIL=true — pulando envio de e-mail (arquivos gerados com sucesso).\n'
     )
     return
   }
 
   if (!DO_EMAIL_RECIPIENT) {
     console.log(
-      'ℹ️  DO_EMAIL_TO não configurado — pulando envio de e-mail (só gerou os arquivos).\n'
+      '[INFO] DO_EMAIL_TO não configurado — pulando envio de e-mail (só gerou os arquivos).\n'
     )
     return
   }
 
   if (storzResult.requests.length === 0) {
     console.warn(
-      '⚠️ Nenhuma matrícula/curso carregada da Storz — cancelando envio de e-mail vazio para não notificar com dados zerados.\n'
+      '[WARN] Nenhuma matrícula/curso carregada da Storz — cancelando envio de e-mail vazio para não notificar com dados zerados.\n'
     )
     return
   }
@@ -355,9 +355,7 @@ async function main() {
   console.log(
     '================================================================================'
   )
-  console.log(
-    '   📧 ENVIANDO HISTÓRICO DO ALUNO (DESENVOLVIMENTO ORGANIZACIONAL)'
-  )
+  console.log('   ENVIANDO HISTÓRICO DO ALUNO (DESENVOLVIMENTO ORGANIZACIONAL)')
   console.log(
     '================================================================================'
   )
