@@ -8,8 +8,9 @@ import { AuditTriangulator } from '../domain/services/AuditTriangulator.js'
 import { getRequiredDocCodesForProfile } from '../domain/services/EmployeeProfileClassifier.js'
 import { IEmailService } from '../ports/IEmailService.js'
 
-const EMAIL_RECIPIENT =
-  process.env.HSE_EMAIL_TO || 'joao.oliveira@arthwind.com.br'
+const DEFAULT_HSE_EMAIL_RECIPIENTS =
+  'massude.afonso@arthwind.com.br,marcelo.freitas@arthwind.com.br,darliane.caetano@arthwind.com.br,joao.oliveira@arthwind.com.br'
+const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
 
 const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
