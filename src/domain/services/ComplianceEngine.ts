@@ -92,8 +92,8 @@ export const STORZ_SEARCHABLE_DOC_CODES = new Set([
  *    - 32: GWO ART (Advanced Rescue Training)
  *
  * Todo o restante do catálogo (NR-01, NR-06, NR-10 Básico, NR-10 SEP, NR-11, NR-12, NR-18,
- * NR-33 Vigia, NR-33 Supervisor, LOTO, CIPA, etc.) é considerado REMOTO (EAD / LMS Storz),
- * podendo ser reciclado online de qualquer lugar (inclusive fora do país).
+ * NR-33 Vigia, NR-33 Supervisor, LOTO, CIPA, Treinamentos Vestas e Elevadores/JASO, etc.)
+ * é considerado REMOTO (EAD / LMS Storz / Plataforma Online), podendo ser realizado remotamente.
  */
 export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
   '01', // ASO (Saúde Ocupacional - Exame Clínico Presencial)
@@ -110,10 +110,25 @@ export function getTrainingModality(
   docCode: string,
   docName?: string
 ): 'PRESENCIAL' | 'ONLINE' {
+  const upper = (docName || '').toUpperCase()
+
+  // Treinamentos Vestas (25, 26) e de Elevador (31, JASO, Cremalheira) são estritamente REMOTOS (ONLINE)
+  if (
+    docCode === '25' ||
+    docCode === '26' ||
+    docCode === '31' ||
+    upper.includes('VESTAS') ||
+    upper.includes('ELEVADOR') ||
+    upper.includes('JASO') ||
+    upper.includes('CREMALHEIRA')
+  ) {
+    return 'ONLINE'
+  }
+
   if (PRESENCIAL_REQUIRED_DOC_CODES.has(docCode)) {
     return 'PRESENCIAL'
   }
-  const upper = (docName || '').toUpperCase()
+
   if (
     upper.includes('GWO') ||
     upper.includes('NR-35') ||
