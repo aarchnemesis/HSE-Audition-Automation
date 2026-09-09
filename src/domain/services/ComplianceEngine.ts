@@ -80,25 +80,52 @@ export const STORZ_SEARCHABLE_DOC_CODES = new Set([
 ])
 
 /**
- * Documentos que exigem modalidade PRESENCIAL, confirmado com o time de HSE em 21/08/2026 e
- * revalidado em 25/08/2026 (incluindo o NR-33 Supervisor, código 28): NR-35 (código 21, que
- * também cobre "GWO Working at Heights"), ASO (código 01), NR-33 Supervisor e qualquer variação
- * de treinamento GWO (Primeiros Socorros, NR-17, NR-23, WINDA ID, ART — "GWO geral"). Confirmado
- * que o restante do catálogo pode ser feito online — essa lista é a exceção, não a regra.
- * Isso é sobre o que é EXIGIDO, não sobre a modalidade real do certificado da pessoa — a
- * detecção da modalidade real de cada certificado ainda depende de uma fonte de dados que o
- * time de HSE vai levantar (ver EmployeeProfileClassifier.ts e conversa de 20-21/08/2026).
+ * Documentos/Treinamentos que exigem modalidade PRESENCIAL:
+ * 1. Saúde Ocupacional: ASO (código 01) — exame médico clínico presencial (PCMSO/NR-07).
+ * 2. Documentação Oficial: CNH (código 08) — documento oficial de habilitação com renovação presencial.
+ * 3. Treinamento Prático em Altura: NR-35 (código 21 / GWO Working at Heights).
+ * 4. Treinamentos Práticos GWO BST & ART:
+ *    - 16: GWO Primeiros Socorros (First Aid / NR-07 / NR-01)
+ *    - 17: GWO NR-17 Ergonomia / Carga Manual (Manual Handling / NR-17)
+ *    - 19: GWO NR-23 Combate a Incêndio (Fire Awareness / NR-23)
+ *    - 30: GWO WINDA ID
+ *    - 32: GWO ART (Advanced Rescue Training)
+ *
+ * Todo o restante do catálogo (NR-01, NR-06, NR-10 Básico, NR-10 SEP, NR-11, NR-12, NR-18,
+ * NR-33 Vigia, NR-33 Supervisor, LOTO, CIPA, etc.) é considerado REMOTO (EAD / LMS Storz),
+ * podendo ser reciclado online de qualquer lugar (inclusive fora do país).
  */
 export const PRESENCIAL_REQUIRED_DOC_CODES = new Set([
-  '01', // ASO
+  '01', // ASO (Saúde Ocupacional - Exame Clínico Presencial)
+  '08', // CNH (Documentação Oficial Presencial)
   '21', // NR-35 / GWO Working at Heights
   '16', // GWO Primeiros Socorros
   '17', // GWO NR-17 Ergonomia / Carga Manual
   '19', // GWO NR-23 Combate a Incêndio
-  '28', // NR-33 Supervisor
   '30', // GWO WINDA ID
   '32', // GWO ART
 ])
+
+export function getTrainingModality(
+  docCode: string,
+  docName?: string
+): 'PRESENCIAL' | 'ONLINE' {
+  if (PRESENCIAL_REQUIRED_DOC_CODES.has(docCode)) {
+    return 'PRESENCIAL'
+  }
+  const upper = (docName || '').toUpperCase()
+  if (
+    upper.includes('GWO') ||
+    upper.includes('NR-35') ||
+    upper.includes('NR 35') ||
+    upper.includes('NR35') ||
+    upper.includes('ASO') ||
+    upper.includes('CNH')
+  ) {
+    return 'PRESENCIAL'
+  }
+  return 'ONLINE'
+}
 
 /**
  * Documentos ELETIVOS: não são pra todo mundo, mas quem TEM precisa ter a validade monitorada

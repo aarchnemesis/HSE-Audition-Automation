@@ -5,6 +5,7 @@ export interface PendencyItem {
   docCode: string
   docName: string
   status: string
+  modality?: string
   detail: string
 }
 
@@ -48,6 +49,7 @@ export function buildPendencyDigest(
       docCode: rec.docCode,
       docName: rec.docName,
       status: rec.statusEHS,
+      modality: rec.modality,
       detail: rec.detail,
     })
   }

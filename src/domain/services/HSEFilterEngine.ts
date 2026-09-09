@@ -110,7 +110,7 @@ export class HSEFilterEngine {
         inspectorName: rec.inspectorName,
         role: rec.role,
         sector: rec.sector || 'OPERAÇÕES',
-        modality: rec.modality,
+        modality: rec.modality === 'PRESENCIAL' ? 'Presencial' : 'Remoto',
         statusEHS: rec.statusEHS,
         storzRequestId: rec.storzRequestId || 'N/A',
         storzState: rec.storzState || 'N/A',
@@ -121,6 +121,30 @@ export class HSEFilterEngine {
         storzDeadline: rec.storzDeadline || 'N/A',
         detail: rec.detail,
       })
+
+      // Estilização da célula de Modalidade
+      const modCell = row.getCell('modality')
+      if (rec.modality === 'PRESENCIAL') {
+        const isPresencialAlert = [
+          'VENCIDO',
+          'AUSENTE',
+          'VENCE_07',
+          'VENCE_15',
+          'VENCE_30',
+        ].includes(rec.statusEHS)
+        if (isPresencialAlert) {
+          modCell.fill = {
+            type: 'pattern',
+            pattern: 'solid',
+            fgColor: { argb: 'FFEDD5' }, // Laranja suave
+          }
+          modCell.font = { color: { argb: '9A3412' }, bold: true }
+        } else {
+          modCell.font = { color: { argb: '475569' }, bold: true }
+        }
+      } else {
+        modCell.font = { color: { argb: '64748B' } }
+      }
 
       // Estilização condicional de células baseada no Status EHS
       const statusCell = row.getCell('statusEHS')

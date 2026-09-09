@@ -1343,6 +1343,29 @@ export function buildDashboardHtml(
       border-color: transparent;
     }
 
+    /* MODALITY BADGES */
+    .badge-modality {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .badge-modality.presencial {
+      background: rgba(245, 158, 11, 0.12);
+      color: #B45309;
+      border: 1px solid rgba(245, 158, 11, 0.28);
+    }
+    .badge-modality.remoto {
+      background: rgba(59, 130, 246, 0.08);
+      color: #1D4ED8;
+      border: 1px solid rgba(59, 130, 246, 0.22);
+    }
+
     .tab-view { display: none; height: 100%; flex: 1; min-height: 0; }
     .tab-view.active { display: flex; flex-direction: column; animation: fadeIn 0.2s ease-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
@@ -1605,6 +1628,17 @@ export function buildDashboardHtml(
           <div class="ranking-card">
             <div class="ranking-header">
               <span style="display:flex;align-items:center;gap:5px;">
+                <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Gargalos Presenciais (Mobilização)
+              </span>
+              <span class="mono" style="font-size:10px;color:var(--text-muted);">GWO, NR-35, ASO, CNH</span>
+            </div>
+            <div class="ranking-list" id="rankingTopPresencial"></div>
+          </div>
+
+          <div class="ranking-card">
+            <div class="ranking-header">
+              <span style="display:flex;align-items:center;gap:5px;">
                 <svg class="ico ico-xs icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 Gargalos de Reteste (Storz)
               </span>
@@ -1690,6 +1724,11 @@ export function buildDashboardHtml(
             <option value="VENCIDO">Vencido (no Drive)</option>
             <option value="AUSENTE">Ausente (não está no Drive)</option>
             <option value="STORZ">Com Matrícula Ativa Storz</option>
+          </select>
+          <select id="modalityFilter" class="omni-select" onchange="renderAll()" title="Filtrar por Modalidade de Reciclagem">
+            <option value="ALL">Todas as Modalidades</option>
+            <option value="PRESENCIAL">Presencial (GWO, NR-35, ASO, CNH)</option>
+            <option value="ONLINE">Remoto (LMS Storz / EAD)</option>
           </select>
         </div>
 
@@ -2203,6 +2242,21 @@ export function buildDashboardHtml(
           label: 'Prioridade da Semana',
           svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
           apply: () => {
+            const modSelect = document.getElementById('modalityFilter');
+            if (modSelect) modSelect.value = 'ALL';
+            applyStatusFilter('ACTION');
+            const docSelect = document.getElementById('documentFilter');
+            if (docSelect) docSelect.value = 'ALL';
+            renderAll();
+          }
+        },
+        {
+          id: 'PRESENCIAL_RISK',
+          label: 'Presenciais em Risco',
+          svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+          apply: () => {
+            const modSelect = document.getElementById('modalityFilter');
+            if (modSelect) modSelect.value = 'PRESENCIAL';
             applyStatusFilter('ACTION');
             const docSelect = document.getElementById('documentFilter');
             if (docSelect) docSelect.value = 'ALL';
@@ -2214,6 +2268,8 @@ export function buildDashboardHtml(
           label: 'Vencendo em 30 dias',
           svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
           apply: () => {
+            const modSelect = document.getElementById('modalityFilter');
+            if (modSelect) modSelect.value = 'ALL';
             applyStatusFilter('VENCE_30');
           }
         },
@@ -2222,6 +2278,8 @@ export function buildDashboardHtml(
           label: 'Ausentes Críticos',
           svg: '<svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
           apply: () => {
+            const modSelect = document.getElementById('modalityFilter');
+            if (modSelect) modSelect.value = 'ALL';
             applyStatusFilter('AUSENTE');
           }
         },
@@ -2230,6 +2288,8 @@ export function buildDashboardHtml(
           label: 'Storz Ativa',
           svg: '<svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
           apply: () => {
+            const modSelect = document.getElementById('modalityFilter');
+            if (modSelect) modSelect.value = 'ALL';
             applyStatusFilter('STORZ');
           }
         }
@@ -2420,7 +2480,42 @@ export function buildDashboardHtml(
         }
       }
 
-      // 2. Gargalos de Reteste / Reprovação Storz
+      // 2. Gargalos Presenciais (Mobilização: GWO, NR-35, ASO, CNH)
+      const presencialScores = [];
+      peopleMap.forEach(p => {
+        let presCritCount = 0;
+        p.records.forEach(r => {
+          if ((r.modality || 'ONLINE') === 'PRESENCIAL' && (isVencido(r.statusEHS) || isAusente(r.statusEHS))) {
+            presCritCount++;
+          }
+        });
+        if (presCritCount > 0) {
+          presencialScores.push({ name: p.name, role: p.role, sector: p.sector, count: presCritCount });
+        }
+      });
+      presencialScores.sort((a, b) => b.count - a.count);
+      const topPresencial = presencialScores.slice(0, 5);
+
+      const presEl = document.getElementById('rankingTopPresencial');
+      if (presEl) {
+        if (topPresencial.length === 0) {
+          presEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência presencial crítica.</div>';
+        } else {
+          presEl.innerHTML = topPresencial.map((c, idx) => {
+            const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
+            const escName = (c.name || '').replace(/"/g, '&quot;');
+            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;" title="Filtrar colaborador ' + escName + '">' +
+              '<div class="ranking-item-left">' +
+              '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
+              '<span class="ranking-item-name" title="' + c.name + ' (' + c.role + ')">' + c.name + '</span>' +
+              '</div>' +
+              '<span class="badge danger mono" style="background:#FEF2F2;color:#991B1B;border:1px solid #FCA5A5;">' + c.count + ' presenciais</span>' +
+              '</div>';
+          }).join('');
+        }
+      }
+
+      // 3. Gargalos de Reteste / Reprovação Storz
       const retestCounts = {};
       if (rawStorzHistory && rawStorzHistory.length > 0) {
         rawStorzHistory.forEach(req => {
@@ -2554,16 +2649,19 @@ export function buildDashboardHtml(
       const sec = document.getElementById('sectorFilter').value;
       const st = document.getElementById('statusFilter').value;
       const docF = (document.getElementById('documentFilter')?.value || 'ALL');
+      const modF = (document.getElementById('modalityFilter')?.value || 'ALL');
 
       const filteredPeople = Array.from(peopleMap.values()).filter(p => {
         const matchesQuery = p.name.toLowerCase().includes(q) || p.sector.toLowerCase().includes(q) || p.role.toLowerCase().includes(q);
         const matchesSec = sec === 'ALL' || p.sector === sec;
         const matchesDoc = docF === 'ALL' || p.records.some(r => r.docCode === docF);
+        const matchesMod = modF === 'ALL' || p.records.some(r => (r.modality || 'ONLINE') === modF && (docF === 'ALL' || r.docCode === docF));
         
         let matchesStatus = true;
         if (st !== 'ALL') {
           matchesStatus = p.records.some(r => {
             if (docF !== 'ALL' && r.docCode !== docF) return false;
+            if (modF !== 'ALL' && (r.modality || 'ONLINE') !== modF) return false;
             if (st === 'ACTION') return needsAction(r);
             if (st === 'CONFORME') return isConforme(r.statusEHS);
             if (st === 'VENCE_30') return isAVencer(r.statusEHS);
@@ -2573,13 +2671,13 @@ export function buildDashboardHtml(
             return true;
           });
         }
-        return matchesQuery && matchesSec && matchesStatus && matchesDoc;
+        return matchesQuery && matchesSec && matchesStatus && matchesDoc && matchesMod;
       });
 
       lastFilteredPeople = filteredPeople;
 
       renderMatrix(filteredPeople, docF);
-      renderTable(filteredPeople, q, st, docF);
+      renderTable(filteredPeople, q, st, docF, modF);
       renderRpoTable();
       renderStorz(filteredPeople);
     }
@@ -2612,7 +2710,7 @@ export function buildDashboardHtml(
           : '';
 
         const initials = p.name.split(' ').filter(Boolean).slice(0, 2).map(n => n[0]).join('');
-        let html = '<td class="td-sticky" onclick="openCollabModal(\\'' + p.name.replace(/'/g, "\\\\'") + '\\')">' +
+        let html = '<td class="td-sticky" data-collab-name="' + p.name.replace(/"/g, '&quot;') + '" onclick="openCollabModal(this.dataset.collabName)">' +
           '<div style="display:flex;align-items:center;gap:8px;">' +
           '<div class="collab-avatar">' + initials + '</div>' +
           '<div style="min-width:0;flex:1;">' +
@@ -2630,7 +2728,7 @@ export function buildDashboardHtml(
       });
     }
 
-    function renderTable(peopleList, q, st, docF = 'ALL') {
+    function renderTable(peopleList, q, st, docF = 'ALL', modF = 'ALL') {
       const tbody = document.getElementById('dataTableBody');
       tbody.innerHTML = '';
 
@@ -2638,6 +2736,7 @@ export function buildDashboardHtml(
       peopleList.forEach(p => {
         p.records.forEach(r => {
           if (docF !== 'ALL' && r.docCode !== docF) return;
+          if (modF !== 'ALL' && (r.modality || 'ONLINE') !== modF) return;
 
           let matchStatus = true;
           if (st === 'ACTION') matchStatus = needsAction(r);
@@ -2660,11 +2759,16 @@ export function buildDashboardHtml(
 
       rowsToDisplay.slice(0, 150).forEach(r => {
         const tr = document.createElement('tr');
+        const isPres = (r.modality || 'ONLINE') === 'PRESENCIAL';
+        const modBadge = isPres
+          ? '<span class="badge-modality presencial" title="Treinamento Prático / Exame Presencial — Exige Centro de Treinamento ou Clínica"><svg class="ico ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:11px;height:11px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Presencial</span>'
+          : '<span class="badge-modality remoto" title="Treinamento Remoto — Cursado online via LMS Storz / EAD"><svg class="ico ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:11px;height:11px;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remoto</span>';
+
         tr.innerHTML = 
           '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong></td>' +
           '<td style="text-align:left;color:var(--text-muted);">' + (r.role || 'Técnico') + ' · ' + (r.sector || 'Operações') + '</td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
-          '<td><span style="font-size:10px;background:var(--pill-bg);padding:2px 6px;border-radius:4px;">' + (r.modality || 'PRESENCIAL') + '</span></td>' +
+          '<td>' + modBadge + '</td>' +
           '<td>' + renderBadge(r) + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>';
         tbody.appendChild(tr);
@@ -2968,7 +3072,7 @@ export function buildDashboardHtml(
           escapeCsv(r.role),
           escapeCsv(r.docName),
           escapeCsv(r.docCode),
-          escapeCsv(r.modality || 'PRESENCIAL'),
+          escapeCsv((r.modality || 'ONLINE') === 'PRESENCIAL' ? 'Presencial' : 'Remoto'),
           escapeCsv(r.statusEHS),
           escapeCsv(r.detail || '')
         ].join(';'));
@@ -3017,19 +3121,40 @@ export function buildDashboardHtml(
         const sec = document.getElementById('sectorFilter')?.value || 'ALL';
         const st = document.getElementById('statusFilter')?.value || 'ALL';
         const docF = document.getElementById('documentFilter')?.value || 'ALL';
+        const modF = document.getElementById('modalityFilter')?.value || 'ALL';
         lines.push('Modo: Conformidade Documental & Skill Matrix (EHS)');
-        lines.push('Filtros: Status=' + st + ' | Setor=' + sec + ' | Norma=' + docF);
+        lines.push('Filtros: Status=' + st + ' | Setor=' + sec + ' | Norma=' + docF + ' | Modalidade=' + modF);
         lines.push('Colaboradores Filtrados: ' + (lastFilteredPeople ? lastFilteredPeople.length : 0));
         lines.push('Registros Auditados: ' + (lastFilteredTableRows ? lastFilteredTableRows.length : 0));
         lines.push('');
-        lines.push('Casos Críticos / Ação Necessária:');
-        const sample = (lastFilteredTableRows || []).filter(r => needsAction(r)).slice(0, 8);
-        if (sample.length === 0) {
-          lines.push('• Nenhum caso crítico no filtro selecionado.');
-        } else {
-          sample.forEach(r => {
-            lines.push('• ' + r.inspectorName + ' - ' + r.docName + ': ' + r.statusEHS + ' (' + r.detail + ')');
+
+        const actionRows = (lastFilteredTableRows || []).filter(r => needsAction(r));
+        const presencialActions = actionRows.filter(r => (r.modality || 'ONLINE') === 'PRESENCIAL');
+        const remoteActions = actionRows.filter(r => (r.modality || 'ONLINE') !== 'PRESENCIAL');
+
+        lines.push('[ATENCAO LOGISTICA] Pendencias Presenciais (GWO / NR-35 / ASO / CNH): ' + presencialActions.length);
+        if (presencialActions.length > 0) {
+          presencialActions.slice(0, 6).forEach(r => {
+            lines.push('  • ' + r.inspectorName + ' - ' + r.docName + ' [PRESENCIAL]: ' + r.statusEHS + ' (' + r.detail + ')');
           });
+          if (presencialActions.length > 6) {
+            lines.push('  • ... e mais ' + (presencialActions.length - 6) + ' pendencia(s) presenciais.');
+          }
+        } else {
+          lines.push('  • Nenhuma pendencia presencial no filtro.');
+        }
+        lines.push('');
+
+        lines.push('[CURSO ONLINE] Pendencias Remotas (LMS Storz / EAD): ' + remoteActions.length);
+        if (remoteActions.length > 0) {
+          remoteActions.slice(0, 6).forEach(r => {
+            lines.push('  • ' + r.inspectorName + ' - ' + r.docName + ' [REMOTO]: ' + r.statusEHS + ' (' + r.detail + ')');
+          });
+          if (remoteActions.length > 6) {
+            lines.push('  • ... e mais ' + (remoteActions.length - 6) + ' pendencia(s) remotas.');
+          }
+        } else {
+          lines.push('  • Nenhuma pendencia remota no filtro.');
         }
       }
 
@@ -3072,11 +3197,17 @@ export function buildDashboardHtml(
       document.getElementById('modalCollabName').innerText = p.name + ' (' + p.role + ' - ' + p.sector + ')';
       
       let html = '<table class="matrix-table" style="font-size:12px;">' +
-        '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Status</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
+        '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
 
       p.records.forEach(r => {
+        const isPres = (r.modality || 'ONLINE') === 'PRESENCIAL';
+        const modBadge = isPres
+          ? '<span class="badge-modality presencial" title="Presencial">Presencial</span>'
+          : '<span class="badge-modality remoto" title="Remoto">Remoto</span>';
+
         html += '<tr>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
+          '<td>' + modBadge + '</td>' +
           '<td>' + renderBadge(r) + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>' +
           '</tr>';
