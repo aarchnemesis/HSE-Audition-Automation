@@ -8,7 +8,7 @@ import {
 } from '../models/Certificate.js'
 import { StorzRequest } from '../models/StorzRequest.js'
 import { TripleAuditResult } from './AuditTriangulator.js'
-import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js'
+import { ELECTIVE_DOC_CODES, getTrainingModality } from './ComplianceEngine.js'
 import { matchesInspector } from './InspectorMatcher.js'
 
 export interface HSEDatabaseRecord {
@@ -77,7 +77,9 @@ export class HSEDatabaseRepository {
           state: inspector?.location?.state,
           docCode: item.code,
           docName: item.reqName,
-          modality: (item.actualModality as TrainingModality) || 'PRESENCIAL',
+          modality:
+            (item.actualModality as TrainingModality) ||
+            getTrainingModality(item.code, item.reqName),
           issueDate: undefined,
           expirationDate: item.expirationDate?.toISOString(),
           statusEHS: item.status,
