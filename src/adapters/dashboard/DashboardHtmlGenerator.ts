@@ -1812,7 +1812,7 @@ export function buildDashboardHtml(
           <select id="modalityFilter" class="omni-select" onchange="renderAll()" title="Filtrar por Modalidade de Reciclagem">
             <option value="ALL">Todas as Modalidades</option>
             <option value="PRESENCIAL">Presencial (GWO, NR-35, ASO, CNH)</option>
-            <option value="ONLINE">Remoto (LMS Storz / EAD)</option>
+            <option value="ONLINE">Remoto (LMS Storz, Vestas, Elevador)</option>
           </select>
         </div>
 
