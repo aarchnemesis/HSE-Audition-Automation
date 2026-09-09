@@ -2887,6 +2887,114 @@ export function buildDashboardHtml(
       renderAll();
     }
 
+    function stripHtml(html) {
+      if (!html) return '';
+      return String(html).replace(/<[^>]+>/g, '').trim();
+    }
+
+    function computeStorzDeadline(req) {
+      if (req.completionDate) {
+        return new Date(req.completionDate).toLocaleDateString('pt-BR');
+      }
+      if (!req.requestDate || !req.courseDurationDays) {
+        return req.courseDurationDays ? req.courseDurationDays + ' dias' : '—';
+      }
+      const rawSit = (req.rawSituacao || req.state || '').toUpperCase();
+      if (rawSit.includes('NÃO INICIADO') || rawSit.includes('NAO INICIADO')) {
+        return req.courseDurationDays + ' dias após início';
+      }
+      const reqDate = new Date(req.requestDate);
+      const dlDate = new Date(reqDate.getTime() + (Number(req.courseDurationDays) * 24 * 60 * 60 * 1000));
+      const dlStr = dlDate.toLocaleDateString('pt-BR');
+      const now = new Date();
+      const diffDays = Math.ceil((dlDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (diffDays < 0) {
+        return '<span style="color:#DC2626;font-weight:700;">' + dlStr + '</span> <span style="color:#DC2626;font-size:10px;">(Expirado)</span>';
+      }
+      return '<span style="font-weight:600;">' + dlStr + '</span> <span style="color:var(--text-muted);font-size:10px;">(' + diffDays + 'd)</span>';
+    }
+
+    function formatStorzPaceAndDetail(req, person) {
+      const rawSit = req.rawSituacao || req.state || '';
+      const situacaoUpper = rawSit.toUpperCase();
+      const prog = req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0);
+      const reqDate = req.requestDate ? new Date(req.requestDate) : null;
+      const reqDateStr = reqDate ? reqDate.toLocaleDateString('pt-BR') : '';
+      const now = new Date();
+      const diasDesdeMatricula = reqDate ? Math.max(0, Math.floor((now.getTime() - reqDate.getTime()) / (1000 * 60 * 60 * 24))) : null;
+
+      // Buscar se existe certificado correspondente no dossiê de EHS do colaborador
+      let cert = null;
+      if (person && person.records) {
+        const docNameLower = (req.trainingName || '').toLowerCase();
+        cert = person.records.find(r => {
+          if (r.trainingCode && req.trainingCode && String(r.trainingCode) === String(req.trainingCode)) return true;
+          const rName = (r.docName || '').toLowerCase();
+          return rName && (docNameLower.includes(rName) || rName.includes(docNameLower));
+        });
+      }
+
+      let certAlertHtml = '';
+      if (cert && cert.expirationDate) {
+        const certDate = new Date(cert.expirationDate);
+        const certDateStr = certDate.toLocaleDateString('pt-BR');
+        if (certDate < now) {
+          certAlertHtml = '<div style="margin-top:3px;color:#DC2626;font-weight:600;font-size:11px;">Alerta de ritmo: Certificado de campo já venceu em ' + certDateStr + '! Aluno com ' + prog + '% na Storz.</div>';
+        } else if (reqDate && req.courseDurationDays) {
+          const dlDate = new Date(reqDate.getTime() + (Number(req.courseDurationDays) * 24 * 60 * 60 * 1000));
+          if (certDate < dlDate) {
+            certAlertHtml = '<div style="margin-top:3px;color:#D97706;font-weight:600;font-size:11px;">Alerta de ritmo: Certificado de campo vence em ' + certDateStr + ', antes do prazo Storz (' + dlDate.toLocaleDateString('pt-BR') + ').</div>';
+          }
+        }
+      }
+
+      let detail = '';
+
+      if (situacaoUpper.includes('ANDAMENTO')) {
+        const duration = Number(req.courseDurationDays) || 60;
+        const dlDate = reqDate ? new Date(reqDate.getTime() + (duration * 24 * 60 * 60 * 1000)) : null;
+        const dlStr = dlDate ? dlDate.toLocaleDateString('pt-BR') : '';
+        const diasRestantes = dlDate ? Math.ceil((dlDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)) : null;
+
+        if (diasRestantes !== null && diasRestantes < 0) {
+          detail = '<strong style="color:#DC2626;">Prazo Storz expirado</strong> há ' + Math.abs(diasRestantes) + ' dias (' + prog + '% concluído) • Prazo era ' + dlStr + '.';
+        } else if (prog === 0) {
+          detail = '<strong style="color:#D97706;">Inércia:</strong> 0% de progresso após ' + diasDesdeMatricula + ' dias de início (restam ' + diasRestantes + ' dias até ' + dlStr + ').';
+        } else if (prog < 25 && (diasDesdeMatricula || 0) > 20) {
+          detail = '<strong style="color:#D97706;">Ritmo lento:</strong> ' + prog + '% concluído em ' + diasDesdeMatricula + ' dias • Restam ' + diasRestantes + ' dias (prazo: ' + dlStr + ').';
+        } else {
+          detail = 'Iniciado em ' + reqDateStr + ' (' + diasDesdeMatricula + 'd atrás) • ' + prog + '% concluído • Restam ' + diasRestantes + ' dias (prazo: ' + dlStr + ').';
+        }
+      } else if (situacaoUpper.includes('NÃO INICIADO') || situacaoUpper.includes('NAO INICIADO') || req.state === 'SOLICITADO') {
+        if (diasDesdeMatricula !== null && diasDesdeMatricula <= 1) {
+          detail = 'Matriculado recentemente em ' + reqDateStr + ' • Aguardando primeiro acesso do aluno.';
+        } else {
+          detail = '<strong style="color:#D97706;">Inércia de ' + diasDesdeMatricula + ' dias:</strong> Matriculado em ' + reqDateStr + ' e ainda não iniciou o curso (0%).';
+        }
+      } else if (situacaoUpper.includes('APROV') || situacaoUpper.includes('CONCLU') || req.state === 'CONCLUIDO') {
+        const complDate = req.completionDate ? new Date(req.completionDate) : null;
+        const complDateStr = complDate ? complDate.toLocaleDateString('pt-BR') : reqDateStr;
+        let duracaoStr = '';
+        if (complDate && reqDate) {
+          const dur = Math.max(0, Math.round((complDate.getTime() - reqDate.getTime()) / (1000 * 60 * 60 * 24)));
+          duracaoStr = dur === 0 ? ' • Concluído no mesmo dia' : ' • Concluído em ' + dur + ' dias de curso';
+        }
+        detail = 'Aprovado com 100% em ' + complDateStr + duracaoStr + '.';
+      } else if (situacaoUpper.includes('REPROV')) {
+        detail = '<strong style="color:#DC2626;">Reprovado no exame final:</strong> Necessita de rematrícula para reteste pelo time de DO.';
+      } else if (situacaoUpper.includes('CANCEL')) {
+        detail = 'Matrícula cancelada no portal Storz.';
+      } else {
+        detail = 'Situação: ' + rawSit + (reqDateStr ? ' (Matrícula: ' + reqDateStr + ')' : '');
+      }
+
+      if (req.notes && !req.notes.includes('Extracted via') && !req.notes.includes('Raspado via')) {
+        detail += ' <span style="font-style:italic;">[Obs: ' + req.notes + ']</span>';
+      }
+
+      return detail + certAlertHtml;
+    }
+
     function renderStorz(peopleList) {
       const tbody = document.getElementById('storzTableBody');
       if (!tbody) return;
@@ -2906,12 +3014,13 @@ export function buildDashboardHtml(
             sector: person ? person.sector : 'Operações',
             role: person ? person.role : 'Técnico',
             docName: req.trainingName,
+            trainingCode: req.trainingCode,
             storzRequestId: req.id,
             storzState: req.state,
             rawSituacao: rawSit,
             storzProgressPercent: req.progressPercent !== undefined ? req.progressPercent : (req.state === 'CONCLUIDO' ? 100 : 0),
-            storzDeadline: req.deadline ? new Date(req.deadline).toLocaleDateString('pt-BR') : (req.courseDurationDays ? req.courseDurationDays + ' dias' : ''),
-            detail: req.notes || (rawSit ? 'Situação do Aluno: ' + rawSit : '')
+            storzDeadline: computeStorzDeadline(req),
+            detail: formatStorzPaceAndDetail(req, person)
           };
         });
       } else {
@@ -3060,8 +3169,8 @@ export function buildDashboardHtml(
           escapeCsv(r.storzRequestId || ''),
           escapeCsv(r.rawSituacao || r.storzState || ''),
           escapeCsv(r.storzProgressPercent !== undefined ? r.storzProgressPercent : ''),
-          escapeCsv(r.storzDeadline || ''),
-          escapeCsv(r.detail || '')
+          escapeCsv(stripHtml(r.storzDeadline || '')),
+          escapeCsv(stripHtml(r.detail || ''))
         ].join(';'));
         csvContent = [headers.join(';'), ...rows].join(nl);
       } else {
