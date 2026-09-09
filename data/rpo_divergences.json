@@ -5,11 +5,10 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2026-12-17T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-12-17T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -17,11 +16,10 @@
     "docName": "CNH - Carteira de Habilitação",
     "driveExpiration": "2031-05-25T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2031-05-25T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -29,21 +27,10 @@
     "docName": "GWO Primeiros Socorros",
     "driveExpiration": "2027-12-22T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-22T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
-  },
-  {
-    "inspectorName": "FRANCISCO THIAGO DE ABREU",
-    "docCode": "32",
-    "docName": "GWO ART",
-    "rpoExpiration": "2028-01-06T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Verificar ausência no Drive / Storz"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -51,11 +38,10 @@
     "docName": "Direção Defensiva",
     "driveExpiration": "2027-12-19T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-19T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -63,10 +49,10 @@
     "docName": "NR-01 Integração EHS",
     "driveExpiration": "2075-12-18T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-18T00:00:00.000Z",
-    "divergent": false,
-    "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -74,20 +60,10 @@
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2075-12-18T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-18T00:00:00.000Z",
-    "divergent": false,
-    "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
-  },
-  {
-    "inspectorName": "FRANCISCO THIAGO DE ABREU",
-    "docCode": "27",
-    "docName": "NR-07 Primeiros Socorros",
-    "rpoExpiration": "2027-12-22T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Verificar ausência no Drive / Storz"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -95,11 +71,10 @@
     "docName": "NR-10 Básico",
     "driveExpiration": "2027-12-11T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-11T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -107,11 +82,10 @@
     "docName": "NR-10 SEP",
     "driveExpiration": "2027-12-15T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-15T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -119,11 +93,10 @@
     "docName": "NR-11 Uso de Talha",
     "driveExpiration": "2027-12-17T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-17T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -131,11 +104,10 @@
     "docName": "NR-12 Segurança em Máquinas",
     "driveExpiration": "2027-12-20T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-20T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -143,12 +115,10 @@
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "driveExpiration": "2027-12-26T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-22T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 4,
-    "detail": "Datas de validade divergem em 4 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 26/12/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -156,11 +126,10 @@
     "docName": "NR-18 Integração EHS",
     "driveExpiration": "2027-12-18T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-18T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -168,12 +137,10 @@
     "docName": "GWO NR-23 Combate a Incêndio",
     "driveExpiration": "2027-12-26T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-22T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 4,
-    "detail": "Datas de validade divergem em 4 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 26/12/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -181,22 +148,10 @@
     "docName": "NR-33 Espaço Confinado",
     "driveExpiration": "2026-12-30T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-12-25T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 5,
-    "detail": "Datas de validade divergem em 5 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 30/12/2026"
-  },
-  {
-    "inspectorName": "FRANCISCO THIAGO DE ABREU",
-    "docCode": "28",
-    "docName": "NR-33 Supervisor",
-    "rpoExpiration": "2026-12-30T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Verificar ausência no Drive / Storz"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -204,12 +159,10 @@
     "docName": "NR-35 / GWO Working at Heights",
     "driveExpiration": "2027-12-27T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-22T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 5,
-    "detail": "Datas de validade divergem em 5 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 27/12/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -217,11 +170,10 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "driveExpiration": "2027-12-16T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-16T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -229,11 +181,10 @@
     "docName": "SIT (Vestas)",
     "driveExpiration": "2028-01-05T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2028-01-05T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO THIAGO DE ABREU",
@@ -241,11 +192,10 @@
     "docName": "ESO (Vestas)",
     "driveExpiration": "2027-12-30T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-12-30T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "JOSE ORLANDO BARROS DA SILVA FILHO",
@@ -4525,13 +4475,14 @@
     "inspectorName": "VALDERSON DO NASCIMENTO FERREIRA",
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
-    "driveExpiration": "2026-10-19T00:00:00.000Z",
+    "driveExpiration": "2027-08-25T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2026-10-19T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 310,
+    "detail": "Datas de validade divergem em 310 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 25/08/2027"
   },
   {
     "inspectorName": "VALDERSON DO NASCIMENTO FERREIRA",
@@ -4539,12 +4490,11 @@
     "docName": "NR-33 Supervisor",
     "storzExpiration": "2027-08-25T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "rpoExpiration": "2026-10-08T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 321,
-    "detail": "Datas de validade divergem em 321 dia(s) entre Storz (estimado pela conclusão do curso) e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 25/08/2027"
+    "rpoExpiration": "2027-08-25T00:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "VALDERSON DO NASCIMENTO FERREIRA",
@@ -5135,7 +5085,7 @@
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
-    "driveExpiration": "2076-08-31T14:36:48.914Z",
+    "driveExpiration": "2074-12-20T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2026-12-20T00:00:00.000Z",
     "divergent": false,
@@ -5204,14 +5154,13 @@
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
-    "driveExpiration": "2026-09-25T00:00:00.000Z",
+    "driveExpiration": "2028-08-11T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-11T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 686,
-    "detail": "Datas de validade divergem em 686 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 25/09/2026"
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
@@ -5264,14 +5213,13 @@
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
-    "driveExpiration": "2026-09-23T00:00:00.000Z",
+    "driveExpiration": "2028-08-13T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-13T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 690,
-    "detail": "Datas de validade divergem em 690 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 23/09/2026"
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
@@ -13153,11 +13101,12 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2026-09-03T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-03T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2027-09-03T00:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 365,
+    "detail": "Datas de validade divergem em 365 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 03/09/2026"
   },
   {
     "inspectorName": "EDWARD THIAGO HERCULANO RIBEIRO",
@@ -14103,12 +14052,11 @@
     "docName": "NR-35 / GWO Working at Heights",
     "driveExpiration": "2028-08-18T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-11-16T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 276,
-    "detail": "Datas de validade divergem em 276 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 18/08/2028"
+    "rpoExpiration": "2028-08-18T00:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "DAVID KELSON DE SOUZA LOYOLA",
@@ -14718,11 +14666,14 @@
     "inspectorName": "CAIO FELIPE RIBEIRO RODRIGUES",
     "docCode": "12",
     "docName": "NR-10 Básico",
+    "driveExpiration": "2028-09-03T00:00:00.000Z",
+    "trustedSource": "DRIVE",
     "rpoExpiration": "2027-08-23T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Verificar ausência no Drive / Storz"
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 377,
+    "detail": "Datas de validade divergem em 377 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 03/09/2028"
   },
   {
     "inspectorName": "CAIO FELIPE RIBEIRO RODRIGUES",
@@ -15297,15 +15248,14 @@
     "inspectorName": "ANTONIO RAFAEL DOS SANTOS",
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
-    "driveExpiration": "2027-04-25T00:00:00.000Z",
+    "driveExpiration": "2027-09-09T14:39:28.089Z",
     "storzExpiration": "2027-09-08T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-12-14T00:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 132,
-    "detail": "Datas de validade divergem em 132 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 25/04/2027"
+    "rpoExpiration": "2027-09-08T00:00:00.000Z",
+    "divergent": false,
+    "diffDays": 2,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "ANTONIO RAFAEL DOS SANTOS",
@@ -15609,13 +15559,14 @@
     "inspectorName": "ADRIANO CIRILO GARCIA LIMA",
     "docCode": "09",
     "docName": "Direção Defensiva",
-    "driveExpiration": "2026-10-25T00:00:00.000Z",
+    "driveExpiration": "2028-09-09T17:50:17.703Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2026-10-25T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "diffDays": 686,
+    "detail": "Datas de validade divergem em 686 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
+    "recommendedAction": "Corrigir data na RPO para 09/09/2028"
   },
   {
     "inspectorName": "ADRIANO CIRILO GARCIA LIMA",
@@ -15689,13 +15640,11 @@
     "inspectorName": "ADRIANO CIRILO GARCIA LIMA",
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
-    "driveExpiration": "2026-09-02T00:00:00.000Z",
-    "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-02T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-09-09T00:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Verificar ausência no Drive / Storz"
   },
   {
     "inspectorName": "ADRIANO CIRILO GARCIA LIMA",
@@ -15775,13 +15724,12 @@
     "inspectorName": "ADRIANO CIRILO GARCIA LIMA",
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
-    "driveExpiration": "2026-09-09T00:00:00.000Z",
     "storzExpiration": "2028-09-08T03:00:00.000Z",
-    "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-09T00:00:00.000Z",
+    "trustedSource": "STORZ",
+    "rpoExpiration": "2028-09-08T00:00:00.000Z",
     "divergent": false,
     "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
+    "detail": "Storz e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
@@ -16067,24 +16015,21 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2026-12-22T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-12-22T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
-    "driveExpiration": "2028-08-27T00:00:00.000Z",
+    "driveExpiration": "2034-08-28T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-08-27T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 731,
-    "detail": "Datas de validade divergem em 731 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 27/08/2028"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16092,12 +16037,10 @@
     "docName": "GWO Primeiros Socorros",
     "driveExpiration": "2027-02-04T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-08T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 4,
-    "detail": "Datas de validade divergem em 4 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 04/02/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16105,11 +16048,10 @@
     "docName": "Direção Defensiva",
     "driveExpiration": "2026-10-25T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-10-25T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16117,10 +16059,10 @@
     "docName": "NR-01 Integração EHS",
     "driveExpiration": "2075-09-28T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-09-28T00:00:00.000Z",
-    "divergent": false,
-    "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16128,10 +16070,10 @@
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2074-12-03T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-12-03T00:00:00.000Z",
-    "divergent": false,
-    "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16139,12 +16081,10 @@
     "docName": "NR-07 Primeiros Socorros",
     "driveExpiration": "2027-05-12T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-08T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 93,
-    "detail": "Datas de validade divergem em 93 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 12/05/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16152,11 +16092,10 @@
     "docName": "NR-10 Básico",
     "driveExpiration": "2027-01-22T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-22T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16164,12 +16103,10 @@
     "docName": "NR-10 SEP",
     "driveExpiration": "2027-04-03T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-03-10T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 24,
-    "detail": "Datas de validade divergem em 24 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 03/04/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16177,11 +16114,10 @@
     "docName": "NR-11 Uso de Talha",
     "driveExpiration": "2027-04-14T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-04-14T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16189,11 +16125,10 @@
     "docName": "NR-12 Segurança em Máquinas",
     "driveExpiration": "2027-01-31T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-31T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16201,12 +16136,10 @@
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "driveExpiration": "2027-02-05T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-08T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 3,
-    "detail": "Datas de validade divergem em 3 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 05/02/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16214,12 +16147,10 @@
     "docName": "NR-18 Integração EHS",
     "driveExpiration": "2027-01-28T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-18T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 10,
-    "detail": "Datas de validade divergem em 10 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 28/01/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16227,12 +16158,10 @@
     "docName": "GWO NR-23 Combate a Incêndio",
     "driveExpiration": "2027-02-05T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-08T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 3,
-    "detail": "Datas de validade divergem em 3 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 05/02/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16240,21 +16169,10 @@
     "docName": "NR-33 Espaço Confinado",
     "driveExpiration": "2026-11-20T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-11-20T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
-  },
-  {
-    "inspectorName": "EZEQUIEL CRUZ VIEIRA",
-    "docCode": "28",
-    "docName": "NR-33 Supervisor",
-    "rpoExpiration": "2027-01-18T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "detail": "Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Verificar ausência no Drive / Storz"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16262,12 +16180,10 @@
     "docName": "NR-35 / GWO Working at Heights",
     "driveExpiration": "2027-01-23T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-08T00:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "diffDays": 16,
-    "detail": "Datas de validade divergem em 16 dia(s) entre Drive e RPO — provável erro de digitação na RPO.",
-    "recommendedAction": "Corrigir data na RPO para 23/01/2027"
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16275,11 +16191,10 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "driveExpiration": "2027-03-04T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-03-04T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16287,11 +16202,10 @@
     "docName": "SIT (Vestas)",
     "driveExpiration": "2027-10-27T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-10-27T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EZEQUIEL CRUZ VIEIRA",
@@ -16299,11 +16213,10 @@
     "docName": "ESO (Vestas)",
     "driveExpiration": "2027-08-04T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-08-04T00:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa não encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "INOCENCIO ROCHA DE MOURA",
