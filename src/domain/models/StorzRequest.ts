@@ -25,6 +25,10 @@ export interface StorzRequest {
   /** Prazo em dias, a partir de `requestDate` (Iniciado), pra concluir o curso — direto do
    *  "Tempo de Curso: X Dias" da Storz. Junto com requestDate dá o prazo real (deadline). */
   courseDurationDays?: number
+  /** Carga horária regulamentar ou contratual do curso em horas (ex.: 4h, 8h, 16h, 40h). */
+  workloadHours?: number
+  /** SLA ideal estimado em dias úteis com base em 8 horas líquidas de estudo por dia (mínimo 1 dia). */
+  idealSlaDays?: number
   notes?: string // Observações (ex: "Agendado via e-mail")
 }
 
