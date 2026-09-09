@@ -242,7 +242,7 @@ export class StorzPlaywrightScraper {
               course.tempoCursoDias !== undefined
                 ? parseInt(course.tempoCursoDias, 10)
                 : undefined,
-            notes: `Raspado via Dossiê do Aluno em ${new Date().toLocaleString('pt-BR')} — Situação original: "${course.situacao}"`,
+            notes: undefined,
           })
         }
       }
