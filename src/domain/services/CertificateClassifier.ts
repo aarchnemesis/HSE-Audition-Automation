@@ -15,6 +15,7 @@ function normalizeText(text: string): string {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .toUpperCase()
+    .replace(/[–—]/g, '-')
     .replace(/_/g, ' ')
 }
 
@@ -56,68 +57,68 @@ const SEMANTIC_RULES: Array<{
   // NR-10 SEP (Sistema Elétrico de Potência) - deve vir antes de NR-10 Básico
   {
     regex:
-      /\b(?:NR-?10\s*[-_]?\s*SEP|SEP\b|SISTEMA\s+ELETRICO\s+DE\s+POTENCIA|SISTORZA\s+ELETRICO\s+DE\s+POTENCIA)\b/i,
+      /\b(?:NR\s*[-_]?\s*10\s*[-_]?\s*SEP|SEP\b|SISTEMA\s+ELETRICO\s+DE\s+POTENCIA|SISTORZA\s+ELETRICO\s+DE\s+POTENCIA)\b/i,
     code: '13',
     matchedTerm: 'NR-10 SEP',
   },
   // Carta NR-10
   {
-    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR-?10\b/i,
+    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR\s*[-_]?\s*10\b/i,
     code: '12.1',
     matchedTerm: 'Carta NR-10',
   },
   // NR-10 Básico
   {
     regex:
-      /\b(?:NR-?10\b|SEGURANCA\s+EM\s+INSTALACOES\s+(?:E\s+SERVICOS\s+EM\s+)?ELETRICIDADE|ELETRICA\s+BASICO)\b/i,
+      /\b(?:NR\s*[-_]?\s*10\b|SEGURANCA\s+EM\s+INSTALACOES\s+(?:E\s+SERVICOS\s+EM\s+)?ELETRICIDADE|ELETRICA\s+BASICO)\b/i,
     code: '12',
     matchedTerm: 'NR-10 Básico',
   },
   // Carta NR-35
   {
-    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR-?35\b/i,
+    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR\s*[-_]?\s*35\b/i,
     code: '21.1',
     matchedTerm: 'Carta NR-35',
   },
   // NR-35 / GWO Working at Heights
   {
     regex:
-      /\b(?:NR-?35\b|TRABALHO\s+EM\s+ALTURA|WORKING\s+AT\s+HEIGHTS|WAH\b)\b/i,
+      /\b(?:NR\s*[-_]?\s*35\b|TRABALHO\s+EM\s+ALTURA|WORKING\s+AT\s+HEIGHTS|WAH\b)\b/i,
     code: '21',
     matchedTerm: 'NR-35',
   },
   // NR-33 Supervisor - deve vir antes de NR-33 Vigia/Trabalhador
   {
     regex:
-      /\b(?:NR-?33\s*(?:[-_]|DE)?\s*SUPERVISOR|SUPERVISOR\s+DE\s+ESPACO\s+CONFINADO)\b/i,
+      /(?:NR\s*[-_]?\s*33[^\n]*\bSUPERVISOR\b|\bSUPERVISOR\b[^\n]*NR\s*[-_]?\s*33|\bSUPERVISOR\s*(?:DE\s+)?(?:ESPACO\s+CONFINADO|ENTRADA)\b)/i,
     code: '28',
     matchedTerm: 'NR-33 Supervisor',
   },
   // NR-33 Espaço Confinado (Vigia / Trabalhador)
   {
     regex:
-      /\b(?:NR-?33\b|ESPACO\s+CONFINADO|TRABALHADOR\s+E\s+VIGIA|TRABALHADOR\s+AUTORIZADO)\b/i,
+      /(?:NR\s*[-_]?\s*33\b|ESPACO\s+CONFINADO|TRABALHADOR\s+E\s+VIGIA|TRABALHADOR\s+AUTORIZADO|\bVIGIA\b)/i,
     code: '20',
     matchedTerm: 'NR-33',
   },
   // NR-11 Uso de Talha / Ponte Rolante / Paleteira
   {
     regex:
-      /\b(?:NR-?11\b|TALHA|PALETEIRA|PONTE\s+ROLANTE|MOVIMENTACAO\s+DE\s+CARGA)\b/i,
+      /\b(?:NR\s*[-_]?\s*11\b|TALHA|PALETEIRA|PONTE\s+ROLANTE|MOVIMENTACAO\s+DE\s+CARGA)\b/i,
     code: '14',
     matchedTerm: 'NR-11',
   },
   // NR-12 Máquinas e Equipamentos
   {
     regex:
-      /\b(?:NR-?12\b|MAQUINAS\s+E\s+EQUIPAMENTOS|SEGURANCA\s+NO\s+TRABALHO\s+EM\s+MAQUINAS)\b/i,
+      /\b(?:NR\s*[-_]?\s*12\b|MAQUINAS\s+E\s+EQUIPAMENTOS|SEGURANCA\s+NO\s+TRABALHO\s+EM\s+MAQUINAS)\b/i,
     code: '15',
     matchedTerm: 'NR-12',
   },
   // GWO NR-17 / Ergonomia / Carga Manual
   {
     regex:
-      /\b(?:NR-?17\b|ERGONOMIA|MANUSEIO\s+MANUAL\s+DE\s+CARGAS?|CARGA\s+MANUAL|MANUAL\s+HANDLING)\b/i,
+      /\b(?:NR\s*[-_]?\s*17\b|ERGONOMIA|MANUSEIO\s+MANUAL\s+DE\s+CARGAS?|CARGA\s+MANUAL|MANUAL\s+HANDLING)\b/i,
     code: '17',
     matchedTerm: 'GWO NR-17',
   },
@@ -129,41 +130,42 @@ const SEMANTIC_RULES: Array<{
   },
   // NR-07 Primeiros Socorros
   {
-    regex: /\b(?:NR-?0?7\b|PRIMEIROS\s+SOCORROS)\b/i,
+    regex: /\b(?:NR\s*[-_]?\s*0?7\b|PRIMEIROS\s+SOCORROS)\b/i,
     code: '27',
     matchedTerm: 'NR-07 Primeiros Socorros',
   },
   // GWO NR-23 / Combate a Incêndio
   {
     regex:
-      /\b(?:NR-?23\b|COMBATE\s+A\s+INCENDIO|PREVENCAO\s+E\s+COMBATE\s+A\s+INCENDIO|FIRE\s+AWARENESS)\b/i,
+      /\b(?:NR\s*[-_]?\s*23\b|COMBATE\s+A\s+INCENDIO|PREVENCAO\s+E\s+COMBATE\s+A\s+INCENDIO|FIRE\s+AWARENESS)\b/i,
     code: '19',
     matchedTerm: 'GWO NR-23',
   },
   // NR-18 Construção
   {
     regex:
-      /\b(?:NR-?18\b|CONSTRUCAO\s+CIVIL|CONDICOES\s+E\s+MEIO\s+AMBIENTE\s+NA\s+INDUSTRIA\s+DA\s+CONSTRUCAO)\b/i,
+      /\b(?:NR\s*[-_]?\s*18\b|CONSTRUCAO\s+CIVIL|CONDICOES\s+E\s+MEIO\s+AMBIENTE\s+NA\s+INDUSTRIA\s+DA\s+CONSTRUCAO)\b/i,
     code: '18',
     matchedTerm: 'NR-18',
   },
   // NR-06 Uso de EPI
   {
     regex:
-      /\b(?:NR-?0?6\b|USO\s+DE\s+EPI|EQUIPAMENTO\s+DE\s+PROTECAO\s+INDIVIDUAL)\b/i,
+      /\b(?:NR\s*[-_]?\s*0?6\b|USO\s+DE\s+EPI|EQUIPAMENTO\s+DE\s+PROTECAO\s+INDIVIDUAL)\b/i,
     code: '11',
     matchedTerm: 'NR-06',
   },
   // NR-01 Integração EHS / GRO / PGR
   {
     regex:
-      /\b(?:NR-?0?1\b|DISPOSICOES\s+GERAIS|GERENCIAMENTO\s+DE\s+RISCOS\s+OCUPACIONAIS|GRO\b|PGR\b|INTEGRACAO\s+EHS|INTEGRACAO\s+GRO)\b/i,
+      /\b(?:NR\s*[-_]?\s*0?1\b|DISPOSICOES\s+GERAIS|GERENCIAMENTO\s+DE\s+RISCOS\s+OCUPACIONAIS|GRO\b|PGR\b|INTEGRACAO\s+EHS|INTEGRACAO\s+GRO)\b/i,
     code: '10',
     matchedTerm: 'NR-01',
   },
   // CIPA (NR-05)
   {
-    regex: /\b(?:NR-?0?5\b|CIPA\b|COMISSAO\s+INTERNA\s+DE\s+PREVENCAO)\b/i,
+    regex:
+      /\b(?:NR\s*[-_]?\s*0?5\b|CIPA\b|COMISSAO\s+INTERNA\s+DE\s+PREVENCAO)\b/i,
     code: '34',
     matchedTerm: 'CIPA (NR-05)',
   },

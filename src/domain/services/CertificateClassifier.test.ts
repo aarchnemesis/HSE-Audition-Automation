@@ -51,6 +51,35 @@ describe('CertificateClassifier.classify', () => {
     expect(result.confidence).toBe('HIGH')
   })
 
+  it('classifica NR-33 Supervisor mesmo quando o arquivo físico tem prefixo de pasta 20', () => {
+    const files = [
+      '20 – NR – 33 (Supervisor F) – 03.11.2025 - Joao Elienai Ribeiro - Clicksign.pdf',
+      '20 – NR – 33 (Supervisor F+R) – 10.09.2025 - Eraldo Antonio de Moura.pdf',
+      '20 – NR – 33 (Supervisor Rec) - 06.02.2026 - Michel Platini Soares de Barros - Clicksign.pdf',
+      '20 – NR – 33 (Supervisor) –  25.05.26 - Diego Patrick Sanches Campos.pdf',
+      '26-07-2026_Antonio_Carvalho_Júnior_[STORZ]_-_NR33_SUPERVISOR_(PERIóDICO).pdf',
+    ]
+
+    for (const fn of files) {
+      const result = CertificateClassifier.classify(fn)
+      expect(result.code).toBe('28')
+      expect(result.source).toBe('SEMANTIC')
+    }
+  })
+
+  it('classifica NR-33 Vigia mantendo código 20 quando não há menção a Supervisor', () => {
+    const files = [
+      '20 – NR – 33 (Vigia F+R) –  28.12.2025 - Erika Naiane de Oliveira Honorato.pdf',
+      '20 - NR 33 - 08-09-2026_Antonio_Rafael_Dos_Santos_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA_(PERIóDICO) .pdf',
+      '20 – NR – 33 (Trabalhador e Vigia) - Fulano.pdf',
+    ]
+
+    for (const fn of files) {
+      const result = CertificateClassifier.classify(fn)
+      expect(result.code).toBe('20')
+    }
+  })
+
   it('classifica NR-10 SEP com data e underscores sem confundir com Cód 27', () => {
     const fn =
       '27-08-2026_Emerson_Pallotta_Ribeiro_[STORZ]_-_NR10_-_CURSO_COMPLEMENTAR_-_SEGURANçA_NO_SISTORZA_ELéTRICO_DE_POTêNCIA_(SEP) (1).pdf'
