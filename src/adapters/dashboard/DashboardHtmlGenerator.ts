@@ -1092,6 +1092,8 @@ export function buildDashboardHtml(
     .diff-badge.somente-storz { background: #FAF5FF; color: #7C3AED; border: 1px solid #E9D5FF; }
     .diff-badge.somente-rpo { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
     .diff-badge.data-divergente { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; }
+    .diff-badge.rpo-mais-recente { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
+    .diff-badge.drive-mais-recente { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
     .diff-badge.consistente { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
 
     .action-pill {
@@ -1110,6 +1112,12 @@ export function buildDashboardHtml(
       background: #FEF2F2;
       color: #991B1B;
       border-color: #FCA5A5;
+      font-weight: 700;
+    }
+    .action-pill.action-drive {
+      background: #EFF6FF;
+      color: #1E40AF;
+      border-color: #BFDBFE;
       font-weight: 700;
     }
     .action-pill.action-ok {
@@ -1888,13 +1896,13 @@ export function buildDashboardHtml(
             <div class="rpo-summary-val mono" id="rpoKpiDivergences" style="color:#EF4444;">0</div>
             <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências Ativas</div>
           </div>
-          <div class="rpo-summary-card warn" onclick="filterRpoSubTab('DATA_DIVERGENTE')" style="cursor:pointer;" title="Filtrar apenas datas divergentes (erros de digitação)">
-            <div class="rpo-summary-val mono" id="rpoKpiDataDivergente" style="color:#F59E0B;">0</div>
-            <div class="rpo-summary-label"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Datas Divergentes</div>
+          <div class="rpo-summary-card drive" onclick="filterRpoSubTab('RPO_NEWER')" style="cursor:pointer;" title="RPO mais recente que Drive/Storz: Checar documento físico e atualizar backup no Drive">
+            <div class="rpo-summary-val mono" id="rpoKpiRpoNewer" style="color:#2563EB;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (Falta Backup Drive)</div>
           </div>
-          <div class="rpo-summary-card drive" onclick="filterRpoSubTab('SOMENTE_DRIVE')" style="cursor:pointer;" title="Filtrar registros presentes apenas no Drive">
-            <div class="rpo-summary-val mono" id="rpoKpiSomenteDrive" style="color:#2563EB;">0</div>
-            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Só no Drive / Storz</div>
+          <div class="rpo-summary-card warn" onclick="filterRpoSubTab('DRIVE_NEWER')" style="cursor:pointer;" title="Drive mais recente que RPO: Atualizar data na planilha RPO">
+            <div class="rpo-summary-val mono" id="rpoKpiDriveNewer" style="color:#DC2626;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Drive Mais Recente (Atualizar RPO)</div>
           </div>
           <div class="rpo-summary-card rpo" onclick="filterRpoSubTab('SOMENTE_RPO')" style="cursor:pointer;" title="Filtrar registros que constam na RPO mas não têm documento">
             <div class="rpo-summary-val mono" id="rpoKpiSomenteRpo" style="color:#8B5CF6;">0</div>
@@ -1907,11 +1915,13 @@ export function buildDashboardHtml(
             <h3><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria de Digitação: Fontes Confiáveis (Drive + Storz) vs Planilha RPO</h3>
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
               <button class="chip active" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Só Divergências (<span id="rpoChipDivCount">0</span>)</button>
-              <button class="chip chip-crit" id="rpoChip-DATA_DIVERGENTE" onclick="filterRpoSubTab('DATA_DIVERGENTE')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Datas Divergentes</button>
+              <button class="chip" id="rpoChip-RPO_NEWER" onclick="filterRpoSubTab('RPO_NEWER')" style="color:#1D4ED8;border-color:#BFDBFE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (<span id="rpoChipRpoNewerCount">0</span>)</button>
+              <button class="chip chip-crit" id="rpoChip-DRIVE_NEWER" onclick="filterRpoSubTab('DRIVE_NEWER')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Drive Mais Recente (<span id="rpoChipDriveNewerCount">0</span>)</button>
+              <button class="chip" id="rpoChip-DATA_DIVERGENTE" onclick="filterRpoSubTab('DATA_DIVERGENTE')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Todas Datas Div.</button>
               <button class="chip" id="rpoChip-SOMENTE_DRIVE" onclick="filterRpoSubTab('SOMENTE_DRIVE')"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Só Drive</button>
               <button class="chip" id="rpoChip-SOMENTE_STORZ" onclick="filterRpoSubTab('SOMENTE_STORZ')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>Só Storz</button>
               <button class="chip" id="rpoChip-SOMENTE_RPO" onclick="filterRpoSubTab('SOMENTE_RPO')"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Só RPO</button>
-              <button class="chip chip-warn" id="rpoChip-DIFF_30" onclick="filterRpoSubTab('DIFF_30')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Diferença &gt; 30d</button>
+              <button class="chip chip-warn" id="rpoChip-DIFF_30" onclick="filterRpoSubTab('DIFF_30')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Diff &gt; 30d</button>
               <button class="chip" id="rpoChip-ALL" onclick="filterRpoSubTab('ALL')">Todos os Registros</button>
             </div>
           </div>
@@ -2241,12 +2251,21 @@ export function buildDashboardHtml(
     // RPO AUDIT KPIS & BADGES
     const rpoDivergentCount = rawRpoDivergences.filter(d => d.divergent).length;
     let rpoDataDivergenteCount = 0, rpoSomenteDriveCount = 0, rpoSomenteStorzCount = 0, rpoSomenteRpoCount = 0;
+    let rpoNewerCount = 0, driveNewerCount = 0;
     rawRpoDivergences.forEach(d => {
       if (!d.divergent) return;
-      if (d.divergenceKind === 'DATA_DIVERGENTE') rpoDataDivergenteCount++;
-      else if (d.divergenceKind === 'SOMENTE_DRIVE') rpoSomenteDriveCount++;
-      else if (d.divergenceKind === 'SOMENTE_STORZ') rpoSomenteStorzCount++;
-      else if (d.divergenceKind === 'SOMENTE_RPO') rpoSomenteRpoCount++;
+      if (d.divergenceKind === 'DATA_DIVERGENTE') {
+        rpoDataDivergenteCount++;
+        if (d.direction === 'RPO_NEWER') rpoNewerCount++;
+        else if (d.direction === 'DRIVE_NEWER') driveNewerCount++;
+      } else if (d.divergenceKind === 'SOMENTE_DRIVE') {
+        rpoSomenteDriveCount++;
+      } else if (d.divergenceKind === 'SOMENTE_STORZ') {
+        rpoSomenteStorzCount++;
+      } else if (d.divergenceKind === 'SOMENTE_RPO') {
+        rpoSomenteRpoCount++;
+        rpoNewerCount++;
+      }
     });
 
     if (document.getElementById('rpoBadgeSidebar')) {
@@ -2261,10 +2280,12 @@ export function buildDashboardHtml(
     }
     if (document.getElementById('rpoKpiTotal')) document.getElementById('rpoKpiTotal').innerText = rawRpoDivergences.length;
     if (document.getElementById('rpoKpiDivergences')) document.getElementById('rpoKpiDivergences').innerText = rpoDivergentCount;
-    if (document.getElementById('rpoKpiDataDivergente')) document.getElementById('rpoKpiDataDivergente').innerText = rpoDataDivergenteCount;
-    if (document.getElementById('rpoKpiSomenteDrive')) document.getElementById('rpoKpiSomenteDrive').innerText = rpoSomenteDriveCount + rpoSomenteStorzCount;
+    if (document.getElementById('rpoKpiRpoNewer')) document.getElementById('rpoKpiRpoNewer').innerText = rpoNewerCount;
+    if (document.getElementById('rpoKpiDriveNewer')) document.getElementById('rpoKpiDriveNewer').innerText = driveNewerCount;
     if (document.getElementById('rpoKpiSomenteRpo')) document.getElementById('rpoKpiSomenteRpo').innerText = rpoSomenteRpoCount;
     if (document.getElementById('rpoChipDivCount')) document.getElementById('rpoChipDivCount').innerText = rpoDivergentCount;
+    if (document.getElementById('rpoChipRpoNewerCount')) document.getElementById('rpoChipRpoNewerCount').innerText = rpoNewerCount;
+    if (document.getElementById('rpoChipDriveNewerCount')) document.getElementById('rpoChipDriveNewerCount').innerText = driveNewerCount;
 
     // RENDER FRESHNESS BAR
     function renderFreshnessBar() {
@@ -2951,6 +2972,8 @@ export function buildDashboardHtml(
         if (!matchQ) return false;
 
         if (rpoSubTab === 'ALL_DIV') return item.divergent;
+        if (rpoSubTab === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO');
+        if (rpoSubTab === 'DRIVE_NEWER') return item.divergent && item.direction === 'DRIVE_NEWER';
         if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && item.divergenceKind === 'DATA_DIVERGENTE';
         if (rpoSubTab === 'SOMENTE_DRIVE') return item.divergent && item.divergenceKind === 'SOMENTE_DRIVE';
         if (rpoSubTab === 'SOMENTE_STORZ') return item.divergent && item.divergenceKind === 'SOMENTE_STORZ';
@@ -2987,7 +3010,13 @@ export function buildDashboardHtml(
         } else if (item.divergenceKind === 'SOMENTE_RPO') {
           badgeHtml = '<span class="diff-badge somente-rpo">' + SVG_ICONS.alert + 'Só na RPO</span>';
         } else if (item.divergenceKind === 'DATA_DIVERGENTE') {
-          badgeHtml = '<span class="diff-badge data-divergente">' + SVG_ICONS.x + 'Data Divergente</span>';
+          if (item.direction === 'RPO_NEWER') {
+            badgeHtml = '<span class="diff-badge rpo-mais-recente">' + SVG_ICONS.alert + 'RPO Mais Recente</span>';
+          } else if (item.direction === 'DRIVE_NEWER') {
+            badgeHtml = '<span class="diff-badge drive-mais-recente">' + SVG_ICONS.x + 'Drive Mais Recente</span>';
+          } else {
+            badgeHtml = '<span class="diff-badge data-divergente">' + SVG_ICONS.x + 'Data Divergente</span>';
+          }
         } else {
           badgeHtml = '<span class="diff-badge data-divergente">' + (item.divergenceKind || 'Divergente') + '</span>';
         }
@@ -3004,8 +3033,16 @@ export function buildDashboardHtml(
           ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#EF4444;' : 'color:#F59E0B;') + '">' + item.diffDays + ' d</span>'
           : '<span style="color:var(--text-muted);">—</span>';
 
+        let actionClass = 'action-rpo';
+        let actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
+
+        if (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO') {
+          actionClass = 'action-drive';
+          actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>';
+        }
+
         const actionHtml = item.divergent 
-          ? '<span class="action-pill action-rpo"><svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>' + (item.recommendedAction || 'Verificar divergência') + '</span>'
+          ? '<span class="action-pill ' + actionClass + '">' + actionIcon + (item.recommendedAction || 'Verificar divergência') + '</span>'
           : '<span class="action-pill action-ok">' + SVG_ICONS.check + 'Consistente</span>';
 
         tr.innerHTML = 
