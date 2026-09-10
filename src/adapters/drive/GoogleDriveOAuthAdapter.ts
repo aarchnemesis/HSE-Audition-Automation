@@ -1,6 +1,7 @@
 import { drive_v3, google } from 'googleapis'
 import type { OAuth2Client } from 'googleapis-common'
 import { Certificate, Inspector } from '../../domain/models/Certificate.js'
+import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
 import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
 import {
@@ -116,6 +117,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         if (entry.mimeType !== FOLDER_MIME || !entry.id || !entry.name) continue
 
         const folderName = entry.name
+        if (folderName.toLowerCase().includes('obsoleto')) continue
         if (filterNames && filterNames.length > 0) {
           const matchesFilter = filterNames.some(fname =>
             folderName.toUpperCase().includes(fname.toUpperCase())
@@ -169,9 +171,16 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       }
 
       const filename = entry.name
-      let code = parseDocCode(filename)
+      const classification = CertificateClassifier.classify(filename)
+      let code = classification.code
       if (!code) continue
-      if (codeRemap && codeRemap[code]) code = codeRemap[code]
+      if (
+        classification.source !== 'SEMANTIC' &&
+        codeRemap &&
+        codeRemap[code]
+      ) {
+        code = codeRemap[code]
+      }
 
       // Extrai data estritamente do nome do arquivo (ou conteúdo). NUNCA usa createdTime do Drive
       // como fallback de data de emissão — createdTime é a data de upload no Drive e somar anos de
