@@ -2980,6 +2980,8 @@ export function buildDashboardHtml(
           badgeHtml = '<span class="diff-badge consistente">' + SVG_ICONS.check + 'Consistente</span>';
         } else if (item.divergenceKind === 'SOMENTE_DRIVE') {
           badgeHtml = '<span class="diff-badge somente-drive">' + SVG_ICONS.alert + 'Só Drive</span>';
+        } else if (item.divergenceKind === 'DRIVE_SEM_DATA') {
+          badgeHtml = '<span class="diff-badge drive-sem-data" style="background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;">' + SVG_ICONS.alert + 'Drive Sem Data</span>';
         } else if (item.divergenceKind === 'SOMENTE_STORZ') {
           badgeHtml = '<span class="diff-badge somente-storz">' + SVG_ICONS.cap + 'Só Storz</span>';
         } else if (item.divergenceKind === 'SOMENTE_RPO') {

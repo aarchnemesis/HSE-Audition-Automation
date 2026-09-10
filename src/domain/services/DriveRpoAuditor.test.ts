@@ -90,6 +90,60 @@ describe('DriveRpoAuditor.compare', () => {
     )
   })
 
+  it('tolera até 5 dias de diferença entre Drive e RPO (ex.: turmas modulares e assinaturas Clicksign de 3 dias)', () => {
+    const drive = [
+      makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 30))]),
+    ]
+    const rpo = [
+      makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 27))]),
+    ] // 3 dias de diferença
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['17'])
+    expect(result).toHaveLength(1)
+    expect(result[0].divergent).toBe(false)
+    expect(result[0].diffDays).toBe(3)
+    expect(result[0].recommendedAction).toBe(
+      'Nenhuma ação necessária (Consistente)'
+    )
+  })
+
+  it('marca DATA_DIVERGENTE quando a diferença for maior que 5 dias (ex.: 6 dias)', () => {
+    const drive = [
+      makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 30))]),
+    ]
+    const rpo = [
+      makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 24))]),
+    ] // 6 dias de diferença
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['17'])
+    expect(result).toHaveLength(1)
+    expect(result[0].divergent).toBe(true)
+    expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
+    expect(result[0].diffDays).toBe(6)
+  })
+
+  it('marca DRIVE_SEM_DATA quando certificado existe no Drive sem data identificada, sem alegar falsamente ausência de certificado', () => {
+    const certSemData: Certificate = {
+      code: '17',
+      name: 'Doc 17',
+      filename: '17 - GWO NR-17 Carga Manual.pdf',
+      statusEHS: 'INDETERMINADO',
+    }
+    const drive = [makeInspector('LUCAS FRANKLIN', [certSemData])]
+    const rpo = [
+      makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 27))]),
+    ]
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['17'])
+    expect(result).toHaveLength(1)
+    expect(result[0].divergent).toBe(true)
+    expect(result[0].divergenceKind).toBe('DRIVE_SEM_DATA')
+    expect(result[0].detail).toContain('Certificado presente no Drive')
+    expect(result[0].recommendedAction).toBe(
+      'Conferir data no documento físico anexado'
+    )
+  })
+
   it('não gera item quando o documento está ausente nas duas fontes', () => {
     const drive = [makeInspector('FULANO', [])]
     const rpo = [makeInspector('FULANO', [])]
