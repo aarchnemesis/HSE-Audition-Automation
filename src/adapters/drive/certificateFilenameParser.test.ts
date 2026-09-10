@@ -29,6 +29,19 @@ describe('parseDocCode', () => {
       parseDocCode('04 - Contrato (Piloto Drone)– 06.03.23 – Fulano.pdf')
     ).toBe('04')
   })
+
+  it('classifica corretamente arquivos que começam com data (não confunde dia com código)', () => {
+    expect(
+      parseDocCode(
+        '27 08 2026 Curso GWO (Global Wind Organisation) – ART-HR – Módulo Hub.pdf'
+      )
+    ).toBe('32')
+    expect(
+      parseDocCode(
+        '30-08-2026_FRANCISCO_GEORGE_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA.pdf'
+      )
+    ).toBe('20')
+  })
 })
 
 describe('parseDateFromFilename', () => {
@@ -37,6 +50,31 @@ describe('parseDateFromFilename', () => {
     expect(date?.getFullYear()).toBe(2026)
     expect(date?.getMonth()).toBe(4)
     expect(date?.getDate()).toBe(29)
+  })
+
+  it('parseia data com espaços como separadores (dd mm yyyy)', () => {
+    const date = parseDateFromFilename(
+      '27 08 2026 Curso GWO ART Lucas Franklin.pdf'
+    )
+    expect(date?.getFullYear()).toBe(2026)
+    expect(date?.getMonth()).toBe(7)
+    expect(date?.getDate()).toBe(27)
+  })
+
+  it('parseia data antes de underscore (ex.: 30-08-2026_NOME)', () => {
+    const date = parseDateFromFilename(
+      '30-08-2026_FRANCISCO_GEORGE_MARTINS_SILVA.pdf'
+    )
+    expect(date?.getFullYear()).toBe(2026)
+    expect(date?.getMonth()).toBe(7)
+    expect(date?.getDate()).toBe(30)
+  })
+
+  it('parseia data em formato ISO (yyyy-mm-dd)', () => {
+    const date = parseDateFromFilename('2026-08-27 - Curso GWO.pdf')
+    expect(date?.getFullYear()).toBe(2026)
+    expect(date?.getMonth()).toBe(7)
+    expect(date?.getDate()).toBe(27)
   })
 
   it('retorna null quando não há data no nome', () => {

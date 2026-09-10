@@ -16,6 +16,7 @@ export type DriveRpoDivergenceKind =
   | 'SOMENTE_STORZ'
   | 'SOMENTE_RPO'
   | 'DATA_DIVERGENTE'
+  | 'DRIVE_SEM_DATA'
 export type TrustedSource = 'DRIVE' | 'STORZ'
 
 export interface DriveRpoComparisonItem {
@@ -36,10 +37,9 @@ export interface DriveRpoComparisonItem {
 }
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
-// Pequena tolerância pra não gerar ruído por diferença de 1 dia entre "data de emissão + validade
-// calculada" (Drive) e a data-limite gravada manualmente na RPO — divergências reais tendem a ser
-// de semanas/meses, não de 1-2 dias.
-const DATE_TOLERANCE_DAYS = 2
+// Tolerância para acomodar variações operacionais legítimas (ex.: turmas modulares de 3 a 5 dias,
+// assinaturas digitais via Clicksign feitas poucos dias após o curso, e anos bissextos)
+const DATE_TOLERANCE_DAYS = 5
 
 export class DriveRpoAuditor {
   /**
@@ -85,17 +85,17 @@ export class DriveRpoAuditor {
         )
 
         const trustedExpiration = driveCert?.expirationDate ?? storzExpiration
-        const trustedSource: TrustedSource | undefined =
-          driveCert?.expirationDate
-            ? 'DRIVE'
-            : storzExpiration
-              ? 'STORZ'
-              : undefined
+        const trustedSource: TrustedSource | undefined = driveCert
+          ? 'DRIVE'
+          : storzExpiration
+            ? 'STORZ'
+            : undefined
 
-        if (!trustedExpiration && !rpoCert?.expirationDate) continue
+        if (!driveCert && !storzExpiration && !rpoCert?.expirationDate) continue
 
         const docName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`
 
+        // Caso 1: Drive ou Storz tem data, mas RPO não tem nada registrado
         if (trustedExpiration && !rpoCert?.expirationDate) {
           items.push({
             inspectorName: driveInspector.name,
@@ -116,6 +116,38 @@ export class DriveRpoAuditor {
           continue
         }
 
+        // Caso 2: Certificado físico existe no Drive, mas SEM data de validade identificada
+        if (driveCert && !driveCert.expirationDate && !storzExpiration) {
+          if (rpoCert?.expirationDate) {
+            items.push({
+              inspectorName: driveInspector.name,
+              docCode: code,
+              docName,
+              driveExpiration: undefined,
+              trustedSource: 'DRIVE',
+              rpoExpiration: rpoCert.expirationDate,
+              divergent: true,
+              divergenceKind: 'DRIVE_SEM_DATA',
+              detail: `Certificado presente no Drive (${driveCert.filename || 'anexo'}), porém data de validade não identificada no arquivo. RPO registra ${this.formatDate(rpoCert.expirationDate)}.`,
+              recommendedAction: 'Conferir data no documento físico anexado',
+            })
+          } else {
+            items.push({
+              inspectorName: driveInspector.name,
+              docCode: code,
+              docName,
+              driveExpiration: undefined,
+              trustedSource: 'DRIVE',
+              divergent: true,
+              divergenceKind: 'SOMENTE_DRIVE',
+              detail: `Certificado presente no Drive (${driveCert.filename || 'anexo'}), porém sem data identificada e sem registro na RPO.`,
+              recommendedAction: 'Conferir data e incluir na RPO',
+            })
+          }
+          continue
+        }
+
+        // Caso 3: RPO tem registro, mas NENHUM certificado no Drive nem curso na Storz encontrado
         if (!trustedExpiration && rpoCert?.expirationDate) {
           items.push({
             inspectorName: driveInspector.name,
