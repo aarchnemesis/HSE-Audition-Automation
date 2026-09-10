@@ -31,6 +31,8 @@ export interface DriveRpoComparisonItem {
   rpoExpiration?: Date
   divergent: boolean
   divergenceKind?: DriveRpoDivergenceKind
+  /** Indica qual ponta tem a data mais recente quando há divergência */
+  direction?: 'RPO_NEWER' | 'DRIVE_NEWER'
   detail: string
   diffDays?: number
   recommendedAction?: string
@@ -156,9 +158,10 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert.expirationDate,
             divergent: true,
             divergenceKind: 'SOMENTE_RPO',
-            detail:
-              'Registro presente na planilha RPO, mas nenhum certificado no Drive nem curso concluído na Storz encontrado.',
-            recommendedAction: 'Verificar ausência no Drive / Storz',
+            direction: 'RPO_NEWER',
+            detail: `Registro presente na planilha RPO (${this.formatDate(rpoCert.expirationDate)}), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.`,
+            recommendedAction:
+              'Checar documento físico e fazer upload do backup no Drive',
           })
           continue
         }
@@ -191,6 +194,25 @@ export class DriveRpoAuditor {
           ) / ONE_DAY_MS
         const roundedDiff = Math.round(diffDays)
         if (diffDays > DATE_TOLERANCE_DAYS) {
+          const isRpoNewer =
+            rpoCert!.expirationDate!.getTime() > trustedExpiration!.getTime()
+          const sourceName = trustedSource === 'STORZ' ? 'Storz' : 'Drive'
+          const direction: 'RPO_NEWER' | 'DRIVE_NEWER' = isRpoNewer
+            ? 'RPO_NEWER'
+            : 'DRIVE_NEWER'
+
+          let detail: string
+          let recommendedAction: string
+
+          if (isRpoNewer) {
+            detail = `RPO mais recente que o ${sourceName} em ${roundedDiff} dia(s) (${this.formatDate(rpoCert!.expirationDate!)} na RPO vs ${this.formatDate(trustedExpiration!)} no ${sourceName}) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.`
+            recommendedAction =
+              'Checar documento físico e atualizar backup no Drive'
+          } else {
+            detail = `${sourceName} mais recente que a RPO em ${roundedDiff} dia(s) (${this.formatDate(trustedExpiration!)} no ${sourceName} vs ${this.formatDate(rpoCert!.expirationDate!)} na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.`
+            recommendedAction = `Atualizar data na RPO para ${this.formatDate(trustedExpiration!)}`
+          }
+
           items.push({
             inspectorName: driveInspector.name,
             docCode: code,
@@ -201,9 +223,10 @@ export class DriveRpoAuditor {
             rpoExpiration: rpoCert!.expirationDate,
             divergent: true,
             divergenceKind: 'DATA_DIVERGENTE',
+            direction,
             diffDays: roundedDiff,
-            detail: `Datas de validade divergem em ${roundedDiff} dia(s) entre ${trustedSource === 'STORZ' ? 'Storz (estimado pela conclusão do curso)' : 'Drive'} e RPO — provável erro de digitação na RPO.`,
-            recommendedAction: `Corrigir data na RPO para ${this.formatDate(trustedExpiration!)}`,
+            detail,
+            recommendedAction,
           })
           continue
         }
