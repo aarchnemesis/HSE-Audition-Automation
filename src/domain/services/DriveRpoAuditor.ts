@@ -33,6 +33,8 @@ export interface DriveRpoComparisonItem {
   divergenceKind?: DriveRpoDivergenceKind
   /** Indica qual ponta tem a data mais recente quando há divergência */
   direction?: 'RPO_NEWER' | 'DRIVE_NEWER'
+  /** Indica se a divergência decorre de provável inversão de dia/mês (DD/MM vs MM/DD) */
+  isSwappedDayMonth?: boolean
   detail: string
   diffDays?: number
   recommendedAction?: string
@@ -201,10 +203,24 @@ export class DriveRpoAuditor {
             ? 'RPO_NEWER'
             : 'DRIVE_NEWER'
 
+          // Verificar se a divergência decorre de provável inversão de dia/mês (DD/MM vs MM/DD)
+          // comum ao preencher Smartsheet com locale em inglês (ex.: 04/09 vs 09/04)
+          const tParts = this.extractCalendarParts(trustedExpiration!)
+          const rParts = this.extractCalendarParts(rpoCert!.expirationDate!)
+
+          const isSwappedDayMonth =
+            tParts.year === rParts.year &&
+            tParts.day === rParts.month &&
+            tParts.month === rParts.day &&
+            tParts.day !== tParts.month
+
           let detail: string
           let recommendedAction: string
 
-          if (isRpoNewer) {
+          if (isSwappedDayMonth) {
+            detail = `Provável inversão de dia/mês (DD/MM vs MM/DD) ao preencher a planilha RPO: ${this.formatDate(trustedExpiration!)} no ${sourceName} vs ${this.formatDate(rpoCert!.expirationDate!)} na RPO.`
+            recommendedAction = `Corrigir inversão de dia/mês na RPO para ${this.formatDate(trustedExpiration!)}`
+          } else if (isRpoNewer) {
             detail = `RPO mais recente que o ${sourceName} em ${roundedDiff} dia(s) (${this.formatDate(rpoCert!.expirationDate!)} na RPO vs ${this.formatDate(trustedExpiration!)} no ${sourceName}) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.`
             recommendedAction =
               'Checar documento físico e atualizar backup no Drive'
@@ -224,6 +240,7 @@ export class DriveRpoAuditor {
             divergent: true,
             divergenceKind: 'DATA_DIVERGENTE',
             direction,
+            isSwappedDayMonth,
             diffDays: roundedDiff,
             detail,
             recommendedAction,
@@ -250,12 +267,31 @@ export class DriveRpoAuditor {
     return items
   }
 
+  private static extractCalendarParts(d: Date): {
+    day: number
+    month: number
+    year: number
+  } {
+    // Se foi criada como UTC (horas 12 ou 0), getUTCDate() preserva o dia intencional.
+    // Se foi criada como horário local meia-noite (horas 0 local), getDate() preserva o dia intencional.
+    if (d.getUTCHours() === 12 || d.toISOString().endsWith('T00:00:00.000Z')) {
+      return {
+        day: d.getUTCDate(),
+        month: d.getUTCMonth() + 1,
+        year: d.getUTCFullYear(),
+      }
+    }
+    return {
+      day: d.getDate(),
+      month: d.getMonth() + 1,
+      year: d.getFullYear(),
+    }
+  }
+
   private static formatDate(d?: Date): string {
     if (!d) return ''
-    const day = String(d.getDate()).padStart(2, '0')
-    const month = String(d.getMonth() + 1).padStart(2, '0')
-    const year = d.getFullYear()
-    return `${day}/${month}/${year}`
+    const { day, month, year } = this.extractCalendarParts(d)
+    return `${String(day).padStart(2, '0')}/${String(month).padStart(2, '0')}/${year}`
   }
 
   /** Validade ESTIMADA a partir do curso concluído mais recente na Storz pra esse código de
