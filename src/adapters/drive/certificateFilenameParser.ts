@@ -1,3 +1,4 @@
+import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
 import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 
 // Baseado no "Guia de Treinamentos Normativos SST" (ARTH-Wind SSMA, v2.0, ago/2026).
@@ -24,32 +25,59 @@ const EVENT_TRIGGERED_VALIDITY_YEARS = 50
 const DIRECT_EXPIRATION_CODES = ['40', '40.1']
 
 export function parseDateFromFilename(filename: string): Date | null {
-  const dates = filename.match(/\b(\d{2})[\.\/-](\d{2})[\.\/-](\d{2,4})\b/)
-  if (!dates) return null
+  // Normaliza underscores para espaços para evitar quebra de boundary antes de nomes
+  const normalized = filename.replace(/_/g, ' ')
 
-  const day = parseInt(dates[1], 10)
-  const month = parseInt(dates[2], 10) - 1
-  let year = parseInt(dates[3], 10)
+  // 1. Padrão DMY: DD.MM.YYYY, DD/MM/YYYY, DD-MM-YYYY ou DD MM YYYY
+  const dmyMatch = normalized.match(
+    /(?:^|\D)(\d{2})[\s\.\/-](\d{2})[\s\.\/-](\d{2,4})(?:\D|$)/
+  )
+  if (dmyMatch) {
+    const day = parseInt(dmyMatch[1], 10)
+    const month = parseInt(dmyMatch[2], 10) - 1
+    let year = parseInt(dmyMatch[3], 10)
+    if (year < 100) year += 2000
 
-  if (year < 100) {
-    year += 2000
+    if (
+      month >= 0 &&
+      month <= 11 &&
+      day >= 1 &&
+      day <= 31 &&
+      year >= 1990 &&
+      year <= 2050
+    ) {
+      const d = new Date(year, month, day)
+      if (!isNaN(d.getTime())) return d
+    }
   }
 
-  const d = new Date(year, month, day)
-  return isNaN(d.getTime()) ? null : d
+  // 2. Padrão ISO: YYYY-MM-DD
+  const isoMatch = normalized.match(
+    /(?:^|\D)(\d{4})[\.\/-](\d{2})[\.\/-](\d{2})(?:\D|$)/
+  )
+  if (isoMatch) {
+    const year = parseInt(isoMatch[1], 10)
+    const month = parseInt(isoMatch[2], 10) - 1
+    const day = parseInt(isoMatch[3], 10)
+
+    if (
+      month >= 0 &&
+      month <= 11 &&
+      day >= 1 &&
+      day <= 31 &&
+      year >= 1990 &&
+      year <= 2050
+    ) {
+      const d = new Date(year, month, day)
+      if (!isNaN(d.getTime())) return d
+    }
+  }
+
+  return null
 }
 
 export function parseDocCode(filename: string): string | null {
-  if (filename.toLowerCase() === 'desktop.ini') return null
-
-  const match = filename.match(/^(\d{1,2}(\.\d+)?|\d{2})/)
-  if (!match) return null
-
-  let rawCode = match[1]
-  if (rawCode.length === 1) {
-    rawCode = `0${rawCode}`
-  }
-  return rawCode
+  return CertificateClassifier.classify(filename).code
 }
 
 /** Anos de validade por código de documento — mesma regra usada pro Drive, reaproveitada por

@@ -173,11 +173,10 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       if (!code) continue
       if (codeRemap && codeRemap[code]) code = codeRemap[code]
 
-      // Prioriza a data no nome do arquivo; se ausente, usa createdTime do Drive como fallback
-      // (metadado real, mais confiável do que tentar adivinhar pelo nome).
-      const parsedDate =
-        parseDateFromFilename(filename) ||
-        (entry.createdTime ? new Date(entry.createdTime) : null)
+      // Extrai data estritamente do nome do arquivo (ou conteúdo). NUNCA usa createdTime do Drive
+      // como fallback de data de emissão — createdTime é a data de upload no Drive e somar anos de
+      // validade nela fabrica dados de expiração artificiais (ex.: caso Lucas Franklin 31/08/2028).
+      const parsedDate = parseDateFromFilename(filename)
       const expirationDate = calculateDocExpiration(
         code,
         parsedDate,
