@@ -1094,6 +1094,7 @@ export function buildDashboardHtml(
     .diff-badge.data-divergente { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; }
     .diff-badge.rpo-mais-recente { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
     .diff-badge.drive-mais-recente { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+    .diff-badge.inversao-dia-mes { background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D; }
     .diff-badge.consistente { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
 
     .action-pill {
@@ -1118,6 +1119,12 @@ export function buildDashboardHtml(
       background: #EFF6FF;
       color: #1E40AF;
       border-color: #BFDBFE;
+      font-weight: 700;
+    }
+    .action-pill.action-swap {
+      background: #FEF3C7;
+      color: #92400E;
+      border-color: #FCD34D;
       font-weight: 700;
     }
     .action-pill.action-ok {
@@ -1917,6 +1924,7 @@ export function buildDashboardHtml(
               <button class="chip active" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Só Divergências (<span id="rpoChipDivCount">0</span>)</button>
               <button class="chip" id="rpoChip-RPO_NEWER" onclick="filterRpoSubTab('RPO_NEWER')" style="color:#1D4ED8;border-color:#BFDBFE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (<span id="rpoChipRpoNewerCount">0</span>)</button>
               <button class="chip chip-crit" id="rpoChip-DRIVE_NEWER" onclick="filterRpoSubTab('DRIVE_NEWER')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Drive Mais Recente (<span id="rpoChipDriveNewerCount">0</span>)</button>
+              <button class="chip chip-warn" id="rpoChip-SWAP" onclick="filterRpoSubTab('SWAP')" style="color:#92400E;background:#FEF3C7;border-color:#FCD34D;"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>Inversão DD/MM (<span id="rpoChipSwapCount">0</span>)</button>
               <button class="chip" id="rpoChip-DATA_DIVERGENTE" onclick="filterRpoSubTab('DATA_DIVERGENTE')"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Todas Datas Div.</button>
               <button class="chip" id="rpoChip-SOMENTE_DRIVE" onclick="filterRpoSubTab('SOMENTE_DRIVE')"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Só Drive</button>
               <button class="chip" id="rpoChip-SOMENTE_STORZ" onclick="filterRpoSubTab('SOMENTE_STORZ')"><svg class="chip-svg icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>Só Storz</button>
@@ -2251,9 +2259,10 @@ export function buildDashboardHtml(
     // RPO AUDIT KPIS & BADGES
     const rpoDivergentCount = rawRpoDivergences.filter(d => d.divergent).length;
     let rpoDataDivergenteCount = 0, rpoSomenteDriveCount = 0, rpoSomenteStorzCount = 0, rpoSomenteRpoCount = 0;
-    let rpoNewerCount = 0, driveNewerCount = 0;
+    let rpoNewerCount = 0, driveNewerCount = 0, rpoSwapCount = 0;
     rawRpoDivergences.forEach(d => {
       if (!d.divergent) return;
+      if (d.isSwappedDayMonth) rpoSwapCount++;
       if (d.divergenceKind === 'DATA_DIVERGENTE') {
         rpoDataDivergenteCount++;
         if (d.direction === 'RPO_NEWER') rpoNewerCount++;
@@ -2286,6 +2295,7 @@ export function buildDashboardHtml(
     if (document.getElementById('rpoChipDivCount')) document.getElementById('rpoChipDivCount').innerText = rpoDivergentCount;
     if (document.getElementById('rpoChipRpoNewerCount')) document.getElementById('rpoChipRpoNewerCount').innerText = rpoNewerCount;
     if (document.getElementById('rpoChipDriveNewerCount')) document.getElementById('rpoChipDriveNewerCount').innerText = driveNewerCount;
+    if (document.getElementById('rpoChipSwapCount')) document.getElementById('rpoChipSwapCount').innerText = rpoSwapCount;
 
     // RENDER FRESHNESS BAR
     function renderFreshnessBar() {
@@ -2972,6 +2982,7 @@ export function buildDashboardHtml(
         if (!matchQ) return false;
 
         if (rpoSubTab === 'ALL_DIV') return item.divergent;
+        if (rpoSubTab === 'SWAP') return item.divergent && item.isSwappedDayMonth;
         if (rpoSubTab === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO');
         if (rpoSubTab === 'DRIVE_NEWER') return item.divergent && item.direction === 'DRIVE_NEWER';
         if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && item.divergenceKind === 'DATA_DIVERGENTE';
@@ -2990,9 +3001,16 @@ export function buildDashboardHtml(
 
       const formatDate = (isoOrStr) => {
         if (!isoOrStr) return '—';
+        if (typeof isoOrStr === 'string' && /^\d{4}-\d{2}-\d{2}/.test(isoOrStr)) {
+          const [y, m, d] = isoOrStr.substring(0, 10).split('-');
+          return d + '/' + m + '/' + y;
+        }
         const d = new Date(isoOrStr);
         if (isNaN(d.getTime())) return '—';
-        return d.toLocaleDateString('pt-BR');
+        const day = String(d.getUTCDate()).padStart(2, '0');
+        const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+        const year = d.getUTCFullYear();
+        return day + '/' + month + '/' + year;
       };
 
       filtered.slice(0, 200).forEach(item => {
@@ -3010,7 +3028,9 @@ export function buildDashboardHtml(
         } else if (item.divergenceKind === 'SOMENTE_RPO') {
           badgeHtml = '<span class="diff-badge somente-rpo">' + SVG_ICONS.alert + 'Só na RPO</span>';
         } else if (item.divergenceKind === 'DATA_DIVERGENTE') {
-          if (item.direction === 'RPO_NEWER') {
+          if (item.isSwappedDayMonth) {
+            badgeHtml = '<span class="diff-badge inversao-dia-mes">' + SVG_ICONS.alert + 'Inversão DD/MM</span>';
+          } else if (item.direction === 'RPO_NEWER') {
             badgeHtml = '<span class="diff-badge rpo-mais-recente">' + SVG_ICONS.alert + 'RPO Mais Recente</span>';
           } else if (item.direction === 'DRIVE_NEWER') {
             badgeHtml = '<span class="diff-badge drive-mais-recente">' + SVG_ICONS.x + 'Drive Mais Recente</span>';
@@ -3036,7 +3056,10 @@ export function buildDashboardHtml(
         let actionClass = 'action-rpo';
         let actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>';
 
-        if (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO') {
+        if (item.isSwappedDayMonth) {
+          actionClass = 'action-swap';
+          actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>';
+        } else if (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO') {
           actionClass = 'action-drive';
           actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>';
         }

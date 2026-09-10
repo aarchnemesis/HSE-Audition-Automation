@@ -115,6 +115,34 @@ describe('DriveRpoAuditor.compare', () => {
     expect(result[0].detail).toContain('Drive mais recente que a RPO')
   })
 
+  it('detecta inversão de dia/mês (DD/MM vs MM/DD) quando o formato regional do Smartsheet inverte os campos (ex.: 04/09 vs 09/04)', () => {
+    const drive = [
+      makeInspector('RAFAEL ANDRADE BARBOSA', [
+        makeCert('09', new Date(Date.UTC(2028, 8, 4, 12, 0, 0))), // 04/09/2028
+      ]),
+    ]
+    const rpo = [
+      makeInspector('RAFAEL ANDRADE BARBOSA', [
+        makeCert('09', new Date(Date.UTC(2028, 3, 9, 12, 0, 0))), // 09/04/2028
+      ]),
+    ]
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['09'])
+    expect(result).toHaveLength(1)
+    expect(result[0].divergent).toBe(true)
+    expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
+    expect(result[0].isSwappedDayMonth).toBe(true)
+    expect(result[0].detail).toContain(
+      'Provável inversão de dia/mês (DD/MM vs MM/DD)'
+    )
+    expect(result[0].detail).toContain(
+      '04/09/2028 no Drive vs 09/04/2028 na RPO'
+    )
+    expect(result[0].recommendedAction).toBe(
+      'Corrigir inversão de dia/mês na RPO para 04/09/2028'
+    )
+  })
+
   it('tolera até 5 dias de diferença entre Drive e RPO (ex.: turmas modulares e assinaturas Clicksign de 3 dias)', () => {
     const drive = [
       makeInspector('LUCAS FRANKLIN', [makeCert('17', new Date(2027, 9, 30))]),
