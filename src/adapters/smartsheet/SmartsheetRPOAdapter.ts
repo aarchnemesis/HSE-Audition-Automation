@@ -3,18 +3,23 @@ import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 import { IRPOExporter } from '../../ports/IRPOExporter.js'
 
 /**
- * O Smartsheet devolve datas como string "YYYY-MM-DD". `new Date(string)` interpreta isso como
- * UTC meia-noite, o que em fusos negativos (Brasil, UTC-3) pode exibir/comparar como o dia
- * ANTERIOR. Construímos a data explicitamente em horário local para evitar esse off-by-one.
+ * O Smartsheet devolve datas como string "YYYY-MM-DD". Usamos meio-dia UTC (12:00:00Z) para que
+ * a data permaneça inalterada em qualquer fuso horário entre UTC-11 e UTC+14 (ex.: Brasil UTC-3 e UTC-4
+ * nunca recuam para as 21h do dia anterior).
  */
 function parseIsoDateLocal(value: string): Date | null {
   const match = value.match(/^(\d{4})-(\d{2})-(\d{2})/)
   if (!match) return null
   const [, year, month, day] = match
   const date = new Date(
-    parseInt(year, 10),
-    parseInt(month, 10) - 1,
-    parseInt(day, 10)
+    Date.UTC(
+      parseInt(year, 10),
+      parseInt(month, 10) - 1,
+      parseInt(day, 10),
+      12,
+      0,
+      0
+    )
   )
   return isNaN(date.getTime()) ? null : date
 }
