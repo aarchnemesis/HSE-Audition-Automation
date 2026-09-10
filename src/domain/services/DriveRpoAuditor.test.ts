@@ -68,26 +68,51 @@ describe('DriveRpoAuditor.compare', () => {
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('SOMENTE_RPO')
+    expect(result[0].direction).toBe('RPO_NEWER')
     expect(result[0].recommendedAction).toBe(
-      'Verificar ausência no Drive / Storz'
+      'Checar documento físico e fazer upload do backup no Drive'
     )
   })
 
-  it('marca DATA_DIVERGENTE quando as datas diferem além da tolerância', () => {
+  it('marca DATA_DIVERGENTE com RPO_NEWER quando RPO tem data mais recente que o Drive (provável renovação sem backup no Drive)', () => {
     const drive = [
-      makeInspector('FULANO', [makeCert('01', new Date(2027, 0, 10))]),
+      makeInspector('GABRIEL FEITOSA', [makeCert('01', new Date(2026, 0, 10))]),
     ]
     const rpo = [
-      makeInspector('FULANO', [makeCert('01', new Date(2027, 2, 10))]),
-    ] // ~2 meses de diferença
+      makeInspector('GABRIEL FEITOSA', [makeCert('01', new Date(2027, 0, 10))]),
+    ] // RPO renovado para 2027, Drive ainda em 2026
 
     const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
-    expect(result[0].diffDays).toBeGreaterThan(50)
-    expect(result[0].recommendedAction).toContain(
-      'Corrigir data na RPO para 10/01/2027'
+    expect(result[0].direction).toBe('RPO_NEWER')
+    expect(result[0].diffDays).toBeGreaterThan(300)
+    expect(result[0].recommendedAction).toBe(
+      'Checar documento físico e atualizar backup no Drive'
     )
+    expect(result[0].detail).toContain('RPO mais recente que o Drive')
+    expect(result[0].detail).toContain(
+      'upload do novo documento de backup no Drive'
+    )
+  })
+
+  it('marca DATA_DIVERGENTE com DRIVE_NEWER quando Drive tem data mais recente que a RPO (Drive atualizado, RPO desatualizada)', () => {
+    const drive = [
+      makeInspector('FULANO', [makeCert('01', new Date(2027, 5, 10))]),
+    ]
+    const rpo = [
+      makeInspector('FULANO', [makeCert('01', new Date(2027, 0, 10))]),
+    ] // Drive mais novo que RPO
+
+    const result = DriveRpoAuditor.compare(drive, rpo, ['01'])
+    expect(result).toHaveLength(1)
+    expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
+    expect(result[0].direction).toBe('DRIVE_NEWER')
+    expect(result[0].diffDays).toBeGreaterThan(140)
+    expect(result[0].recommendedAction).toContain(
+      'Atualizar data na RPO para 10/06/2027'
+    )
+    expect(result[0].detail).toContain('Drive mais recente que a RPO')
   })
 
   it('tolera até 5 dias de diferença entre Drive e RPO (ex.: turmas modulares e assinaturas Clicksign de 3 dias)', () => {
