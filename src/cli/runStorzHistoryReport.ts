@@ -5,7 +5,6 @@ import ExcelJS from 'exceljs'
 import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
-import { wrapEmailHtml } from '../adapters/email/emailTemplates.js'
 import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
 import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
 import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js'
@@ -412,7 +411,6 @@ async function main() {
   `
 
   const subject = `Relatório de Treinamentos & Auditoria RPO — ${REF_DATE.toLocaleDateString('pt-BR')}`
-  const wrappedHtml = wrapEmailHtml(subject, bodyHtml)
 
   const auditPath = path.join(
     process.cwd(),
@@ -429,7 +427,7 @@ async function main() {
   const emailRes = await emailService.sendEmail({
     to: DO_EMAIL_RECIPIENT,
     subject,
-    htmlContent: wrappedHtml,
+    htmlContent: bodyHtml,
     attachments,
   })
   console.log(

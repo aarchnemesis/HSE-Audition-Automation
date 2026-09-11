@@ -32,6 +32,14 @@ export function statusLabelFor(status: string): string {
  * independente de como o e-mail é entregue.
  */
 export function wrapEmailHtml(subject: string, bodyHtml: string): string {
+  // Previne duplo cabeçalho caso o HTML já tenha sido envelopado no template ArthWind
+  if (
+    bodyHtml.includes('class="container"') ||
+    bodyHtml.includes('<!DOCTYPE html>')
+  ) {
+    return bodyHtml
+  }
+
   return `
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -128,7 +136,7 @@ export function buildDigestBodyHtml(groups: DigestInspectorGroup[]): string {
         Visualize a Matriz de Qualificação (Skill Matrix) e o Dossiê completo:
       </p>
       <a href="${dashboardUrl}" target="_blank" style="background-color: #00D2B4; color: #090D16; font-weight: 700; font-size: 13px; text-decoration: none; padding: 10px 20px; border-radius: 6px; display: inline-block; box-shadow: 0 2px 6px rgba(0,210,180,0.25);">
-        🚀 Acessar Portal de DO & Treinamentos ao Vivo
+        Acessar Portal de DO & Treinamentos ao Vivo
       </a>
       <div style="margin-top: 8px; font-size: 11px; color: #64748B;">
         Não é necessário baixar arquivos HTML anexos.
