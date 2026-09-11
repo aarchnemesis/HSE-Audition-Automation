@@ -23,19 +23,19 @@ async function main() {
         status: 'ONLINE',
         message: '97 pastas no Drive',
         detail: 'Sincronização com Google Drive via OAuth',
-        lastSync: '09/09/2026',
+        lastSync: new Date().toLocaleDateString('pt-BR'),
       },
       smartsheet: {
         status: 'ONLINE',
         message: '359 pessoas na RPO',
         detail: 'Sincronização OK com a planilha RPO via Smartsheet API',
-        lastSync: '09/09/2026',
+        lastSync: new Date().toLocaleDateString('pt-BR'),
       },
       storz: {
         status: 'ONLINE',
-        message: 'Ao Vivo via REST API (330 matrículas)',
+        message: `Ao Vivo via REST API (${storzHistory.length} matrículas)`,
         detail: 'Raspagem direta via Storz REST API efetuada com sucesso',
-        lastSync: '09/09/2026',
+        lastSync: new Date().toLocaleDateString('pt-BR'),
       },
     },
   })

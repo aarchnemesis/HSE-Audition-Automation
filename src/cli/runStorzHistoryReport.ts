@@ -396,9 +396,14 @@ async function main() {
   `
 
   const bodyHtml = `
-    <p>Segue em anexo a planilha consolidada com o histórico completo de matrículas na Storz e o controle de retestes.</p>
+    <p>Olá Mayana,</p>
+    <p>Seguem em anexo as planilhas consolidadas e atualizadas sobre os treinamentos e a auditoria de conformidade:</p>
+    <ol>
+      <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com controle de retestes (${storzResult.requests.length} matrículas rastreadas).</li>
+      <li><strong>auditoria_drive_rpo.xlsx:</strong> Relatório atualizado da Auditoria Drive x RPO (com as correções de classificação semântica, separação de NR-33 Supervisor e Vigia, e eliminação de falsos positivos).</li>
+    </ol>
     ${ctaButtonHtml}
-    <p><strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
+    <p><strong>Resumo do Histórico Storz:</strong> <strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
     <ul>
       <li><strong>${aguardando}</strong> aguardando reteste (sem rematrícula ativa)</li>
       <li><strong>${emAndamento}</strong> com reteste em andamento agora</li>
@@ -406,11 +411,26 @@ async function main() {
     </ul>
   `
 
+  const subject = `Relatório de Treinamentos & Auditoria RPO — ${REF_DATE.toLocaleDateString('pt-BR')}`
+  const wrappedHtml = wrapEmailHtml(subject, bodyHtml)
+
+  const auditPath = path.join(
+    process.cwd(),
+    'scratch',
+    'auditoria_drive_rpo.xlsx'
+  )
+  const attachments = [
+    { filename: 'historico_aluno_storz.xlsx', path: outputPath },
+  ]
+  if (fs.existsSync(auditPath)) {
+    attachments.push({ filename: 'auditoria_drive_rpo.xlsx', path: auditPath })
+  }
+
   const emailRes = await emailService.sendEmail({
     to: DO_EMAIL_RECIPIENT,
-    subject: `Histórico do Aluno (DO) — ${REF_DATE.toLocaleDateString('pt-BR')}`,
-    htmlContent: bodyHtml,
-    attachments: [{ filename: 'historico_aluno_storz.xlsx', path: outputPath }],
+    subject,
+    htmlContent: wrappedHtml,
+    attachments,
   })
   console.log(
     `   ${emailRes.success ? 'Enviado' : 'Falhou'} para ${DO_EMAIL_RECIPIENT}\n`
