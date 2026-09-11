@@ -20,11 +20,13 @@ import { DriveRpoAuditor } from '../domain/services/DriveRpoAuditor.js'
 import {
   EHS_TRAINING_SCOPE_BRANCHES,
   EmployeeProfile,
+  classifyEmployeeProfile,
   getElectiveDocCodesForProfile,
   getRequiredDocCodesForProfile,
 } from '../domain/services/EmployeeProfileClassifier.js'
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js'
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js'
+import { matchesInspector } from '../domain/services/InspectorMatcher.js'
 import { buildRoster } from '../domain/services/InspectorRosterBuilder.js'
 import { buildPendencyDigest } from '../domain/services/PendencyDigestBuilder.js'
 import { IEmailService } from '../ports/IEmailService.js'
@@ -136,9 +138,15 @@ async function main() {
   console.log('🔍 Executando auditoria Drive + Storz x RPO...')
   let rpoDivergences: ReturnType<typeof DriveRpoAuditor.compare> = []
   if (rpoInspectors.length > 0) {
+    const activeRpoInspectors = rpoInspectors.filter(
+      i => classifyEmployeeProfile(i.role) !== null
+    )
+    const activeDriveInspectors = driveInspectors.filter((d: Inspector) =>
+      activeRpoInspectors.some(r => matchesInspector(d, r.name, r.cpf))
+    )
     rpoDivergences = DriveRpoAuditor.compare(
-      driveInspectors,
-      rpoInspectors,
+      activeDriveInspectors,
+      activeRpoInspectors,
       Array.from(RPO_TRACKED_DOC_CODES),
       storzRequests
     )
