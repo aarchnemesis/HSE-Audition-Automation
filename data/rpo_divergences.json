@@ -4213,16 +4213,16 @@
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
-    "driveExpiration": "2026-09-24T00:00:00.000Z",
+    "driveExpiration": "2028-09-12T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-12T12:00:00.000Z",
     "divergent": true,
     "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "RPO_NEWER",
+    "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
-    "diffDays": 689,
-    "detail": "RPO mais recente que o Drive em 689 dia(s) (12/08/2028 na RPO vs 24/09/2026 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
-    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
+    "diffDays": 31,
+    "detail": "Drive mais recente que a RPO em 31 dia(s) (12/09/2028 no Drive vs 12/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "recommendedAction": "Atualizar data na RPO para 12/09/2028"
   },
   {
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
