@@ -8,7 +8,12 @@ on:
   schedule:
     # Duas vezes ao dia: 10:00 UTC (07:00 BRT) e 21:00 UTC (18:00 BRT)
     - cron: '0 10,21 * * *'
-  workflow_dispatch: # Permite atualização manual a qualquer momento sem enviar e-mail
+  workflow_dispatch:
+    inputs:
+      send_email:
+        description: 'Disparar e-mail de alerta para a equipe HSE?'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -20,6 +25,8 @@ jobs:
     steps:
       - name: 📥 Checkout do Repositório
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: 📦 Instalar pnpm
         uses: pnpm/action-setup@v4
@@ -35,7 +42,7 @@ jobs:
       - name: 📦 Instalar Dependências do Projeto
         run: pnpm install --frozen-lockfile
 
-      - name: 🤖 Atualizar Dados & Gerar Dashboard HSE (Sem E-mail)
+      - name: 🤖 Atualizar Dados & Gerar Dashboard HSE
         env:
           STORZ_URL: ${{ secrets.STORZ_URL }}
           STORZ_USER: ${{ secrets.STORZ_USER }}
@@ -46,7 +53,13 @@ jobs:
           GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
           SMARTSHEET_API_TOKEN: ${{ secrets.SMARTSHEET_API_TOKEN }}
           SMARTSHEET_RPO_SHEET_ID: ${{ secrets.SMARTSHEET_RPO_SHEET_ID }}
-        run: pnpm run hse-dash
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
+          SKIP_EMAIL: ${{ github.event_name != 'workflow_dispatch' || inputs.send_email == false }}
+        run: pnpm run hse-report
 
       - name: 💾 Commit & Push do Dashboard para a Vercel
         run: |
@@ -56,6 +69,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "Nenhuma alteração no dashboard HSE."
           else
-            git commit -m "chore(data): auto-update HSE dashboard [skip ci]"
-            git push origin main
+            git commit -m "chore(data): auto-update HSE dashboard"
+            git pull origin main --rebase
+            git push origin HEAD:main
           fi
