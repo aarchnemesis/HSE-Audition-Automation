@@ -125,14 +125,11 @@ async function main() {
       `   ${rpoInspectors.length} pessoa(s) ativa(s) após excluir ${desligadoInspectors.length} desligado(s).`
     )
 
-    driveInspectors = driveInspectorsRaw.filter(
-      d =>
-        !desligadoInspectors.some(deslig =>
-          matchesInspector(deslig, d.name, d.cpf)
-        )
+    driveInspectors = driveInspectorsRaw.filter(d =>
+      rpoInspectors.some(r => matchesInspector(d, r.name, r.cpf))
     )
     console.log(
-      `   ${driveInspectors.length} pasta(s) do Drive após excluir desligados (de ${driveInspectorsRaw.length}).`
+      `   ${driveInspectors.length} pasta(s) do Drive após filtrar ativos correspondentes na RPO (de ${driveInspectorsRaw.length}).`
     )
   } else {
     console.log(
