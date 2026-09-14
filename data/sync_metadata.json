@@ -1,0 +1,19 @@
+{
+  "syncTimestamp": "2026-09-14T11:57:22.043Z",
+  "refDate": "2026-09-14T00:00:00.000Z",
+  "driveFoldersCount": 96,
+  "rpoActiveCount": 357,
+  "rpoTotalCount": 420,
+  "ehsRosterCount": 96,
+  "storzRequestsCount": 372,
+  "storzSource": "LIVE",
+  "divergencesCount": 367,
+  "divergencesByKind": {
+    "DATA_DIVERGENTE": 214,
+    "SOMENTE_RPO": 70,
+    "DRIVE_SEM_DATA": 26,
+    "SOMENTE_DRIVE": 55,
+    "SOMENTE_STORZ": 2
+  },
+  "complianceTotalRecords": 1500
+}

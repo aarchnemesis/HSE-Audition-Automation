@@ -1,43 +1,23 @@
 import fs from 'fs'
 import path from 'path'
 import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
-import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js'
+import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 
 async function main() {
-  const dbRepo = new HSEDatabaseRepository()
-  const rpoPath = path.join(process.cwd(), 'data', 'rpo_divergences.json')
-  const storzPath = path.join(process.cwd(), 'data', 'storz_cache.json')
+  const pipeline = new HSEDataPipeline()
+  const snapshot = pipeline.loadExistingSnapshot()
 
-  const rpoDivergences = fs.existsSync(rpoPath)
-    ? JSON.parse(fs.readFileSync(rpoPath, 'utf8'))
-    : []
-  const storzHistory = fs.existsSync(storzPath)
-    ? JSON.parse(fs.readFileSync(storzPath, 'utf8'))
-    : []
+  if (!snapshot) {
+    console.error(
+      '[buildDashboardFromDb] Nenhum dado consolidado encontrado em data/ ou scratch/.'
+    )
+    process.exit(1)
+  }
 
-  const html = buildDashboardHtml(dbRepo.getAllRecords(), {
-    rpoDivergences,
-    storzHistory,
-    sourceHealth: {
-      drive: {
-        status: 'ONLINE',
-        message: '97 pastas no Drive',
-        detail: 'Sincronização com Google Drive via OAuth',
-        lastSync: new Date().toLocaleDateString('pt-BR'),
-      },
-      smartsheet: {
-        status: 'ONLINE',
-        message: '359 pessoas na RPO',
-        detail: 'Sincronização OK com a planilha RPO via Smartsheet API',
-        lastSync: new Date().toLocaleDateString('pt-BR'),
-      },
-      storz: {
-        status: 'ONLINE',
-        message: `Ao Vivo via REST API (${storzHistory.length} matrículas)`,
-        detail: 'Raspagem direta via Storz REST API efetuada com sucesso',
-        lastSync: new Date().toLocaleDateString('pt-BR'),
-      },
-    },
+  const html = buildDashboardHtml(snapshot.records, {
+    rpoDivergences: snapshot.rpoDivergences,
+    storzHistory: snapshot.storzRequests,
+    sourceHealth: snapshot.sourceHealth,
   })
 
   const publicDir = path.join(process.cwd(), 'public')
@@ -49,11 +29,11 @@ async function main() {
     html
   )
   console.log(
-    `[buildDashboardFromDb] Dashboard gerado com sucesso! Tamanho: ${html.length} bytes`
+    `[buildDashboardFromDb] Dashboard gerado com sucesso via SSOT! Tamanho: ${html.length} bytes`
   )
 }
 
 main().catch(err => {
-  console.error(err)
+  console.error('[buildDashboardFromDb] Erro:', err)
   process.exit(1)
 })

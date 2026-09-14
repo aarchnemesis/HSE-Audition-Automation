@@ -5,24 +5,27 @@ import ExcelJS from 'exceljs'
 import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
-import { SmartsheetRPOAdapter } from '../adapters/smartsheet/SmartsheetRPOAdapter.js'
-import { StorzHttpScraper } from '../adapters/storz/StorzHttpScraper.js'
-import { StorzPlaywrightAdapter } from '../adapters/storz/StorzPlaywrightAdapter.js'
 import {
   StorzRequest,
   computeCourseDeadline,
 } from '../domain/models/StorzRequest.js'
 import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js'
-import { classifyEmployeeProfile } from '../domain/services/EmployeeProfileClassifier.js'
+import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 import {
   RetestAttempt,
   groupRetests,
 } from '../domain/services/RetestTracker.js'
 import { IEmailService } from '../ports/IEmailService.js'
 
-const REF_DATE = process.env.HSE_REF_DATE
-  ? new Date(process.env.HSE_REF_DATE)
-  : new Date()
+const refDateArg = process.argv
+  .find(a => a.startsWith('--ref-date='))
+  ?.split('=')[1]
+const REF_DATE = refDateArg
+  ? new Date(refDateArg)
+  : process.env.HSE_REF_DATE
+    ? new Date(process.env.HSE_REF_DATE)
+    : new Date()
+
 const toArg = process.argv.find(a => a.startsWith('--to='))?.split('=')[1]
 const DEFAULT_DO_EMAIL_RECIPIENTS =
   'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br'
@@ -30,14 +33,17 @@ const DO_EMAIL_RECIPIENT =
   toArg || process.env.DO_EMAIL_TO || DEFAULT_DO_EMAIL_RECIPIENTS
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
+const FORCE_SYNC =
+  process.argv.includes('--force-sync') || process.argv.includes('--sync')
 
-/**
- * Gera um "Histórico do Aluno" — um registro por colaborador+curso, no molde do exemplo que a
- * analista de treinamentos mandou (extrato tipo transcript, não status de conformidade). Fonte é
- * só a Storz (é lá que mora o histórico de matrícula/conclusão de curso). Não tem carga horária
- * porque o Dossiê do Aluno na Storz não expõe esse dado — omitido em vez de inventado.
- */
-const dateFmt = (d?: Date) => (d ? d.toLocaleDateString('pt-BR') : '')
+const dateFmt = (d?: Date | string) => {
+  if (!d) return ''
+  const dateObj = d instanceof Date ? d : new Date(d)
+  return Number.isNaN(dateObj.getTime())
+    ? ''
+    : dateObj.toLocaleDateString('pt-BR')
+}
+
 const situacaoColors: Record<string, string> = {
   APROVADO: 'DCFCE7',
   CONCLUIDO: 'DCFCE7',
@@ -45,6 +51,7 @@ const situacaoColors: Record<string, string> = {
   CANCELADO: 'FEE2E2',
   'EM ANDAMENTO': 'FEF9C3',
 }
+
 const docLabel = (code: string, name: string) =>
   DOC_CATALOG_MAP[code] ? `${name} (${DOC_CATALOG_MAP[code]})` : name
 
@@ -55,15 +62,10 @@ function styleHeader(sheet: ExcelJS.Worksheet): void {
     type: 'pattern',
     pattern: 'solid',
     fgColor: { argb: '25386B' },
-  } // navy ArthWind
+  }
   headerRow.alignment = { vertical: 'middle', horizontal: 'center' }
 }
 
-/**
- * Aba principal: um registro por matrícula, no molde do exemplo da analista de treinamentos —
- * mas com colunas extras de tentativa (Nº da tentativa / total) pra já mostrar reteste aqui
- * também, sem precisar ir na outra aba pra correlacionar.
- */
 function buildHistorySheet(
   workbook: ExcelJS.Workbook,
   requests: StorzRequest[]
@@ -170,13 +172,6 @@ const RETEST_STAGE_ORDER = [
   'RETESTE_APROVADO',
 ]
 
-/**
- * Aba dedicada — controle de reteste: só quem já reprovou pelo menos uma vez em algum curso.
- * 3 etapas (pedido do usuário em 26/08/2026, não é só "aprovou depois ou não"):
- *   1. Aguardando reteste — reprovou, sem rematrícula ativa ainda
- *   2. Reteste em andamento — reprovou e já está fazendo o mesmo curso de novo agora
- *   3. Reteste aprovado — reprovou, refez e passou
- */
 function buildRetestSheet(
   workbook: ExcelJS.Workbook,
   requests: StorzRequest[]
@@ -273,84 +268,68 @@ async function main() {
   console.log(
     '================================================================================'
   )
-  console.log('   HSE AUDIT AUTOMATION - HISTÓRICO DO ALUNO (STORZ)')
+  console.log(
+    '   HSE AUDIT AUTOMATION - HISTÓRICO DO ALUNO (DESENVOLVIMENTO ORGANIZACIONAL - SSOT)'
+  )
   console.log(`   Data de Referência: ${REF_DATE.toLocaleDateString('pt-BR')}`)
   console.log(
     '================================================================================\n'
   )
 
-  // Diferente do runHSEReportExporter.ts, esse CLI não instancia HSEDatabaseRepository (que cria
-  // scratch/ como efeito colateral) — sem isso, num checkout limpo (ex.: CI), o writeFile do
-  // Excel/dashboard falha com ENOENT porque a pasta nunca existiu.
   const scratchDir = path.join(process.cwd(), 'scratch')
   if (!fs.existsSync(scratchDir)) fs.mkdirSync(scratchDir, { recursive: true })
 
-  const rpoAdapter = SmartsheetRPOAdapter.fromEnv(REF_DATE)
-  let targetCollaborators: string[] | undefined
-  if (rpoAdapter) {
-    console.log(
-      '📊 Lendo planilha RPO via Smartsheet (só pra saber quem auditar — não editamos nada)...'
-    )
-    const rpoInspectorsRaw = await rpoAdapter.readRPOData()
-    const rpoInspectors = rpoInspectorsRaw.filter(
-      i => classifyEmployeeProfile(i.role) !== null
-    )
-    console.log(
-      `   ${rpoInspectors.length} pessoa(s) ativa(s) (de ${rpoInspectorsRaw.length} linhas na RPO).`
-    )
-    targetCollaborators = rpoInspectors.map(i => i.name)
-  } else {
-    console.log(
-      '⚠️  SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID não configurados no .env — buscando solicitações disponíveis na Storz/cache.'
-    )
-  }
+  // 1. Obter dados da base unica consolidada (SSOT)
+  const pipeline = new HSEDataPipeline()
+  const syncResult = await pipeline.getOrSync({
+    refDate: REF_DATE,
+    preferSnapshot: !FORCE_SYNC,
+  })
 
   console.log(
-    '🤖 Executando raspagem do histórico completo na plataforma Storz...'
+    `[StorzHistoryReport] ${syncResult.storzRequests.length} matrícula(s)/curso(s) carregada(s) da Storz (${syncResult.metadata.storzSource}).`
   )
-  const storzScraper = new StorzHttpScraper()
-  const storzResult = await storzScraper.runAuditScrape({
-    headless: true,
-    targetCollaborators,
-  })
-  let requests = storzResult.requests
-  if (requests.length === 0) {
-    const storzAdapter = new StorzPlaywrightAdapter()
-    requests = await storzAdapter.getAllRequests()
-  }
-  console.log(`   ${requests.length} matrícula(s)/curso(s) carregada(s).`)
 
-  const outputPath = path.join(
-    process.cwd(),
-    'scratch',
-    'historico_aluno_storz.xlsx'
+  // 2. Gerar Relatorio Excel de Historico do Aluno
+  const outputPath = path.join(scratchDir, 'historico_aluno_storz.xlsx')
+  await exportToExcel(syncResult.storzRequests, outputPath)
+  console.log(`[StorzHistoryReport] Relatório gerado em: ${outputPath}\n`)
+
+  // 3. Garantir geracao da Auditoria Drive x RPO correspondente
+  const auditPath = path.join(scratchDir, 'auditoria_drive_rpo.xlsx')
+  await HSEDataPipeline.exportDivergencesToExcel(
+    syncResult.rpoDivergences,
+    auditPath
   )
-  await exportToExcel(requests, outputPath)
-  console.log(`\n✅ Relatório gerado em: ${outputPath}\n`)
+  console.log(
+    `[StorzHistoryReport] Relatório de divergências RPO gerado em: ${auditPath}`
+  )
 
-  // Dashboard separado do EHS — público diferente (Desenvolvimento Organizacional), não é uma
-  // aba dentro do dashboard de EHS. Ver DoDashboardHtmlGenerator.ts.
-  const dashboardPath = path.join(process.cwd(), 'scratch', 'do_dashboard.html')
-  fs.writeFileSync(dashboardPath, buildDoDashboardHtml(storzResult.requests))
-  console.log(`[INFO] Dashboard DO gerado em: ${dashboardPath}\n`)
+  // 4. Gerar Dashboard DO
+  const dashboardPath = path.join(scratchDir, 'do_dashboard.html')
+  fs.writeFileSync(
+    dashboardPath,
+    buildDoDashboardHtml(syncResult.storzRequests)
+  )
+  console.log(`[StorzHistoryReport] Dashboard DO gerado em: ${dashboardPath}\n`)
 
   if (SKIP_EMAIL) {
     console.log(
-      '[INFO] --no-email informado ou SKIP_EMAIL=true — pulando envio de e-mail (arquivos gerados com sucesso).\n'
+      '[StorzHistoryReport] --no-email informado ou SKIP_EMAIL=true — pulando envio de e-mail (arquivos gerados com sucesso).\n'
     )
     return
   }
 
   if (!DO_EMAIL_RECIPIENT) {
     console.log(
-      '[INFO] DO_EMAIL_TO não configurado — pulando envio de e-mail (só gerou os arquivos).\n'
+      '[StorzHistoryReport] DO_EMAIL_TO não configurado — pulando envio de e-mail.\n'
     )
     return
   }
 
-  if (storzResult.requests.length === 0) {
+  if (syncResult.storzRequests.length === 0) {
     console.warn(
-      '[WARN] Nenhuma matrícula/curso carregada da Storz — cancelando envio de e-mail vazio para não notificar com dados zerados.\n'
+      '[StorzHistoryReport] Nenhuma matrícula encontrada — cancelando envio para não notificar com dados zerados.\n'
     )
     return
   }
@@ -364,7 +343,7 @@ async function main() {
   )
   const emailService: IEmailService =
     SmtpEmailService.fromEnv() || new DummyEmailService()
-  const groups = groupRetests(storzResult.requests).filter(
+  const groups = groupRetests(syncResult.storzRequests).filter(
     g => g.hasFailedAttempt
   )
   const aguardando = groups.filter(
@@ -394,15 +373,19 @@ async function main() {
     </div>
   `
 
+  const divergencesCount = syncResult.rpoDivergences.filter(
+    d => d.divergent
+  ).length
+
   const bodyHtml = `
     <p>Olá Mayana,</p>
-    <p>Seguem em anexo as planilhas consolidadas e atualizadas sobre os treinamentos e a auditoria de conformidade:</p>
+    <p>Seguem em anexo as planilhas consolidadas e atualizadas sobre os treinamentos e a auditoria de conformidade (Fonte Única da Verdade — SSOT):</p>
     <ol>
-      <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com controle de retestes (${storzResult.requests.length} matrículas rastreadas).</li>
-      <li><strong>auditoria_drive_rpo.xlsx:</strong> Relatório atualizado da Auditoria Drive x RPO (com as correções de classificação semântica, separação de NR-33 Supervisor e Vigia, e eliminação de falsos positivos).</li>
+      <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com controle de retestes (${syncResult.storzRequests.length} matrículas rastreadas).</li>
+      <li><strong>auditoria_drive_rpo.xlsx:</strong> Relatório consolidado da Auditoria Drive x RPO (${divergencesCount} divergências identificadas, 100% alinhado com o Dashboard).</li>
     </ol>
     ${ctaButtonHtml}
-    <p><strong>Resumo do Histórico Storz:</strong> <strong>${storzResult.requests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
+    <p><strong>Resumo do Histórico Storz:</strong> <strong>${syncResult.storzRequests.length}</strong> matrícula(s)/curso(s) no total. <strong>${groups.length}</strong> pessoa(s) com reprovação em algum momento:</p>
     <ul>
       <li><strong>${aguardando}</strong> aguardando reteste (sem rematrícula ativa)</li>
       <li><strong>${emAndamento}</strong> com reteste em andamento agora</li>
@@ -412,17 +395,10 @@ async function main() {
 
   const subject = `Relatório de Treinamentos & Auditoria RPO — ${REF_DATE.toLocaleDateString('pt-BR')}`
 
-  const auditPath = path.join(
-    process.cwd(),
-    'scratch',
-    'auditoria_drive_rpo.xlsx'
-  )
   const attachments = [
     { filename: 'historico_aluno_storz.xlsx', path: outputPath },
+    { filename: 'auditoria_drive_rpo.xlsx', path: auditPath },
   ]
-  if (fs.existsSync(auditPath)) {
-    attachments.push({ filename: 'auditoria_drive_rpo.xlsx', path: auditPath })
-  }
 
   const emailRes = await emailService.sendEmail({
     to: DO_EMAIL_RECIPIENT,
@@ -436,6 +412,6 @@ async function main() {
 }
 
 main().catch(err => {
-  console.error('Erro ao gerar Histórico do Aluno:', err)
+  console.error('[StorzHistoryReport] Erro ao gerar Histórico do Aluno:', err)
   process.exit(1)
 })

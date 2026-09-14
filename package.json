@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "type": "commonjs",
   "scripts": {
+    "sync": "tsx src/cli/runSyncPipeline.ts",
     "triangulate": "tsx src/cli/runTriangulation.ts",
     "storz-audit": "tsx src/cli/runStorzAudit.ts",
     "hse-report": "tsx src/cli/runHSEReportExporter.ts",
