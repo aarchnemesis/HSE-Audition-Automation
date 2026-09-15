@@ -1,13 +1,13 @@
 name: Atualização Diária do Dashboard HSE (Vercel)
 
-# Executa duas vezes ao dia (início da manhã às 07:00 BRT e fim do expediente às 18:00 BRT)
+# Executa duas vezes ao dia (início da manhã às 06:45 BRT e fim do expediente às 17:45 BRT)
 # para manter os dados do dashboard online 100% atualizados na Vercel e capturar matrículas
 # no mesmo dia em que são criadas, SEM disparar e-mails para a equipe.
 
 on:
   schedule:
-    # Duas vezes ao dia: 10:00 UTC (07:00 BRT) e 21:00 UTC (18:00 BRT)
-    - cron: '0 10,21 * * *'
+    # Duas vezes ao dia: 09:45 UTC (06:45 BRT) e 20:45 UTC (17:45 BRT) — minuto 45 para evitar fila de minuto cheio do GitHub Actions
+    - cron: '45 9,20 * * *'
   workflow_dispatch:
     inputs:
       send_email:

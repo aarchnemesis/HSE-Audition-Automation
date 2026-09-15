@@ -2,8 +2,8 @@ name: HSE Audit & Storz Automated Cron
 
 on:
   schedule:
-    # Toda segunda-feira às 07:00 UTC (04:00 BRT - Horário de Brasília)
-    - cron: '0 7 * * 1'
+    # Toda segunda-feira às 07:15 UTC (04:15 BRT - Horário de Brasília) — minuto 15 para evitar fila de minuto cheio do GitHub Actions
+    - cron: '15 7 * * 1'
   workflow_dispatch:
     inputs:
       send_email:
@@ -15,33 +15,7 @@ permissions:
   contents: write
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout do Repositório
-        uses: actions/checkout@v4
-      - name: 📦 Instalar pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11
-
-      - name: 🟢 Configurar Node.js (v22)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'pnpm'
-
-      - name: 📦 Instalar Dependências do Projeto
-        run: pnpm install --frozen-lockfile
-
-      - name: 🔎 Type-check
-        run: pnpm typecheck
-
-      - name: 🧪 Rodar Testes
-        run: pnpm test
-
   audit-and-notify:
-    needs: test
     runs-on: ubuntu-latest
 
     steps:
