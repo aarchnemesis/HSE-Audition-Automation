@@ -126,21 +126,28 @@ async function main() {
   console.log(
     '================================================================================'
   )
-  const emailService: IEmailService =
-    SmtpEmailService.fromEnv() || new DummyEmailService()
-  const digestGroups = buildPendencyDigest(syncResult.records)
-  const digestRes = await emailService.sendDailyDigest(
-    EMAIL_RECIPIENT,
-    digestGroups,
-    REF_DATE,
-    [{ filename: 'hse_relatorio_consolidado.xlsx', path: excelPath }]
-  )
-  console.log(
-    `   ${digestGroups.length} pessoa(s) com pendencia incluida(s) no resumo.`
-  )
-  console.log(
-    `   Resumo ${digestRes.success ? 'enviado' : 'falhou'}${digestRes.filePath ? ` (${digestRes.filePath})` : ''}\n`
-  )
+  try {
+    const emailService: IEmailService =
+      SmtpEmailService.fromEnv() || new DummyEmailService()
+    const digestGroups = buildPendencyDigest(syncResult.records)
+    const digestRes = await emailService.sendDailyDigest(
+      EMAIL_RECIPIENT,
+      digestGroups,
+      REF_DATE,
+      [{ filename: 'hse_relatorio_consolidado.xlsx', path: excelPath }]
+    )
+    console.log(
+      `   ${digestGroups.length} pessoa(s) com pendencia incluida(s) no resumo.`
+    )
+    console.log(
+      `   Resumo ${digestRes.success ? 'enviado' : 'falhou'}${digestRes.filePath ? ` (${digestRes.filePath})` : ''}\n`
+    )
+  } catch (emailErr) {
+    console.warn(
+      '[HSEReportExporter] Aviso: falha ao enviar resumo diario por e-mail:',
+      emailErr
+    )
+  }
 }
 
 main().catch(err => {

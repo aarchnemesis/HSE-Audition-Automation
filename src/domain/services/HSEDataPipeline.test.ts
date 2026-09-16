@@ -262,4 +262,120 @@ describe('HSEDataPipeline', () => {
     expect(fs.existsSync(outputPath)).toBe(true)
     expect(fs.statSync(outputPath).size).toBeGreaterThan(1000)
   })
+
+  it('resiste a falha no Drive Adapter caindo suavemente para o cache local', async () => {
+    const cachedInspectors = [
+      {
+        id: '1',
+        name: 'JOAO TESTE',
+        role: 'IQ',
+        certificates: {
+          '01': {
+            code: '01',
+            name: 'ASO',
+            expirationDate: '2027-01-01T00:00:00.000Z',
+            statusEHS: 'CONFORME',
+          },
+        },
+      },
+    ]
+    fs.writeFileSync(
+      path.join(testDataDir, 'drive_inspectors_cache.json'),
+      JSON.stringify(cachedInspectors, null, 2),
+      'utf-8'
+    )
+
+    const failingDriveAdapter: IDocumentProvider = {
+      getInspectors: async () => {
+        throw new Error('Google Drive API 403 Forbidden / Rate Limit')
+      },
+      getInspectorById: async () => null,
+    }
+
+    const mockRpoAdapter = {
+      readRPOData: async () => [
+        {
+          id: '1',
+          name: 'JOAO TESTE',
+          role: 'IQ',
+          rpoBranch: 'INSP. QUALIDADE & TÉC. OPERAÇÕES',
+          certificates: new Map(),
+        },
+      ],
+    } as any
+
+    const pipeline = new HSEDataPipeline({
+      driveAdapter: failingDriveAdapter,
+      rpoAdapter: mockRpoAdapter,
+      storzScraper: { loadCache: () => [] } as any,
+      dbRepo,
+      dataDir: testDataDir,
+      scratchDir: testScratchDir,
+    })
+
+    const result = await pipeline.executeSync({
+      refDate: new Date('2026-09-16'),
+    })
+    expect(result.metadata.driveFoldersCount).toBe(1)
+    expect(result.sourceHealth.drive?.status).toBe('CACHE')
+    expect(result.sourceHealth.drive?.message).toContain('Cache')
+  })
+
+  it('resiste a falha 404 no Smartsheet RPO caindo suavemente para o cache local', async () => {
+    const cachedRpo = [
+      {
+        id: 'rpo_1',
+        name: 'MARIA TESTE',
+        role: 'TO',
+        rpoBranch: 'RECURSOS HUMANOS',
+        certificates: {
+          '01': {
+            code: '01',
+            name: 'ASO',
+            expirationDate: '2027-05-01T00:00:00.000Z',
+            statusEHS: 'CONFORME',
+          },
+        },
+      },
+    ]
+    fs.writeFileSync(
+      path.join(testDataDir, 'rpo_inspectors_cache.json'),
+      JSON.stringify(cachedRpo, null, 2),
+      'utf-8'
+    )
+
+    const failingRpoAdapter = {
+      readRPOData: async () => {
+        throw new Error('Smartsheet API retornou 404: Not Found')
+      },
+    } as any
+
+    const mockDriveAdapter: IDocumentProvider = {
+      getInspectors: async () => [
+        {
+          id: '1',
+          name: 'MARIA TESTE',
+          role: 'TO',
+          certificates: new Map(),
+        },
+      ],
+      getInspectorById: async () => null,
+    }
+
+    const pipeline = new HSEDataPipeline({
+      driveAdapter: mockDriveAdapter,
+      rpoAdapter: failingRpoAdapter,
+      storzScraper: { loadCache: () => [] } as any,
+      dbRepo,
+      dataDir: testDataDir,
+      scratchDir: testScratchDir,
+    })
+
+    const result = await pipeline.executeSync({
+      refDate: new Date('2026-09-16'),
+    })
+    expect(result.metadata.rpoActiveCount).toBe(1)
+    expect(result.sourceHealth.smartsheet?.status).toBe('CACHE')
+    expect(result.sourceHealth.smartsheet?.message).toContain('Cache')
+  })
 })

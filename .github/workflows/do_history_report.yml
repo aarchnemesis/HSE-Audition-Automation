@@ -5,8 +5,8 @@ name: Histórico do Aluno (Desenvolvimento Organizacional)
 
 on:
   schedule:
-    # Terça e sexta-feira às 06:45 UTC (03:45 BRT - Horário de Brasília) — minuto 45 para evitar fila de minuto cheio do GitHub Actions
-    - cron: '45 6 * * 2,5'
+    # Segunda a sexta-feira às 06:45 UTC (03:45 BRT - Horário de Brasília) — minuto 45 para evitar fila de minuto cheio do GitHub Actions
+    - cron: '45 6 * * 1-5'
   workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
 
 jobs:

@@ -13,7 +13,11 @@ import {
 import { StorzHttpScraper } from '../../adapters/storz/StorzHttpScraper.js'
 import { StorzPlaywrightAdapter } from '../../adapters/storz/StorzPlaywrightAdapter.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
-import { Inspector, ParkRequirement } from '../models/Certificate.js'
+import {
+  Certificate,
+  Inspector,
+  ParkRequirement,
+} from '../models/Certificate.js'
 import { StorzRequest } from '../models/StorzRequest.js'
 import { AuditTriangulator } from './AuditTriangulator.js'
 import { PRESENCIAL_REQUIRED_DOC_CODES } from './ComplianceEngine.js'
@@ -114,6 +118,209 @@ export class HSEDataPipeline {
   }
 
   /**
+   * Serializa lista de inspetores convertendo o Map de certificados em objeto plano compativel com JSON.
+   */
+  static serializeInspectors(inspectors: Inspector[]): string {
+    const serializable = inspectors.map(insp => ({
+      ...insp,
+      certificates: Object.fromEntries(
+        Array.from(insp.certificates.entries()).map(([k, v]) => [
+          k,
+          {
+            ...v,
+            issueDate:
+              v.issueDate instanceof Date
+                ? v.issueDate.toISOString()
+                : v.issueDate,
+            expirationDate:
+              v.expirationDate instanceof Date
+                ? v.expirationDate.toISOString()
+                : v.expirationDate,
+          },
+        ])
+      ),
+    }))
+    return JSON.stringify(serializable, null, 2)
+  }
+
+  /**
+   * Deserializa lista de inspetores reconstruindo o Map de certificados com Dates validas.
+   */
+  static deserializeInspectors(raw: any[]): Inspector[] {
+    return raw.map(item => {
+      const certsMap = new Map<string, Certificate>()
+      if (item.certificates && typeof item.certificates === 'object') {
+        for (const [code, cert] of Object.entries(item.certificates) as [
+          string,
+          any,
+        ][]) {
+          certsMap.set(code, {
+            ...cert,
+            issueDate: cert.issueDate ? new Date(cert.issueDate) : undefined,
+            expirationDate: cert.expirationDate
+              ? new Date(cert.expirationDate)
+              : undefined,
+          })
+        }
+      }
+      return {
+        ...item,
+        certificates: certsMap,
+      }
+    })
+  }
+
+  saveDriveInspectorsCache(inspectors: Inspector[]): void {
+    const serialized = HSEDataPipeline.serializeInspectors(inspectors)
+    for (const dir of [this.dataDir, this.scratchDir]) {
+      try {
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+        const filePath = path.join(dir, 'drive_inspectors_cache.json')
+        const tmpPath = `${filePath}.tmp`
+        fs.writeFileSync(tmpPath, serialized, 'utf-8')
+        fs.renameSync(tmpPath, filePath)
+      } catch (err) {
+        console.warn(
+          `[HSEDataPipeline] Aviso ao salvar drive_inspectors_cache.json em ${dir}:`,
+          err
+        )
+      }
+    }
+  }
+
+  loadDriveInspectorsCache(_refDate: Date = new Date()): Inspector[] {
+    const candidates = [
+      path.join(this.dataDir, 'drive_inspectors_cache.json'),
+      path.join(this.scratchDir, 'drive_inspectors_cache.json'),
+    ]
+    for (const p of candidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(p, 'utf-8'))
+          if (Array.isArray(raw)) {
+            return HSEDataPipeline.deserializeInspectors(raw)
+          }
+        } catch (err) {
+          console.warn(
+            `[HSEDataPipeline] Erro ao carregar drive_inspectors_cache de ${p}:`,
+            err
+          )
+        }
+      }
+    }
+    return []
+  }
+
+  saveRPOInspectorsCache(inspectors: Inspector[]): void {
+    const serialized = HSEDataPipeline.serializeInspectors(inspectors)
+    for (const dir of [this.dataDir, this.scratchDir]) {
+      try {
+        if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+        const filePath = path.join(dir, 'rpo_inspectors_cache.json')
+        const tmpPath = `${filePath}.tmp`
+        fs.writeFileSync(tmpPath, serialized, 'utf-8')
+        fs.renameSync(tmpPath, filePath)
+      } catch (err) {
+        console.warn(
+          `[HSEDataPipeline] Aviso ao salvar rpo_inspectors_cache.json em ${dir}:`,
+          err
+        )
+      }
+    }
+  }
+
+  loadRPOInspectorsCache(_refDate: Date = new Date()): Inspector[] {
+    const candidates = [
+      path.join(this.dataDir, 'rpo_inspectors_cache.json'),
+      path.join(this.scratchDir, 'rpo_inspectors_cache.json'),
+    ]
+    for (const p of candidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(p, 'utf-8'))
+          if (Array.isArray(raw)) {
+            return HSEDataPipeline.deserializeInspectors(raw)
+          }
+        } catch (err) {
+          console.warn(
+            `[HSEDataPipeline] Erro ao carregar rpo_inspectors_cache de ${p}:`,
+            err
+          )
+        }
+      }
+    }
+    return this.reconstructRPOInspectorsFromSnapshots()
+  }
+
+  reconstructRPOInspectorsFromSnapshots(): Inspector[] {
+    const divCandidates = [
+      path.join(this.dataDir, 'rpo_divergences.json'),
+      path.join(this.scratchDir, 'rpo_divergences.json'),
+    ]
+    let divergences: DriveRpoComparisonItem[] = []
+    for (const p of divCandidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(p, 'utf-8'))
+          if (Array.isArray(raw)) {
+            divergences = HSEDataPipeline.deserializeDivergences(raw)
+            break
+          }
+        } catch {}
+      }
+    }
+
+    if (divergences.length === 0) return []
+
+    const dbCandidates = [
+      path.join(this.dataDir, 'hse_database.json'),
+      path.join(this.scratchDir, 'hse_database.json'),
+    ]
+    const roleByName = new Map<string, string>()
+    const sectorByName = new Map<string, string>()
+    for (const p of dbCandidates) {
+      if (fs.existsSync(p)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(p, 'utf-8'))
+          if (Array.isArray(raw)) {
+            for (const r of raw) {
+              if (r.inspectorName) {
+                if (r.role) roleByName.set(r.inspectorName, r.role)
+                if (r.sector) sectorByName.set(r.inspectorName, r.sector)
+              }
+            }
+            break
+          }
+        } catch {}
+      }
+    }
+
+    const inspMap = new Map<string, Inspector>()
+    for (const d of divergences) {
+      if (!inspMap.has(d.inspectorName)) {
+        inspMap.set(d.inspectorName, {
+          id: `rpo_${inspMap.size}`,
+          name: d.inspectorName,
+          role: roleByName.get(d.inspectorName) || 'TÉCNICO / INSPETOR',
+          sector: sectorByName.get(d.inspectorName) || 'OPERAÇÕES',
+          rpoBranch: 'RECURSOS HUMANOS',
+          certificates: new Map(),
+        })
+      }
+      if (d.rpoExpiration) {
+        const insp = inspMap.get(d.inspectorName)!
+        insp.certificates.set(d.docCode, {
+          code: d.docCode,
+          name: d.docName,
+          expirationDate: d.rpoExpiration,
+          statusEHS: 'CONFORME',
+        })
+      }
+    }
+    return Array.from(inspMap.values())
+  }
+
+  /**
    * Exporta a lista de divergencias para formato oficial Excel (usado por e-mails e relatorios).
    */
   static async exportDivergencesToExcel(
@@ -207,11 +414,35 @@ export class HSEDataPipeline {
     )
 
     // 1. Provedor Drive
-    const driveAdapter = this.deps.driveAdapter || createDriveAdapter(refDate)
-    const driveInspectorsRaw = await driveAdapter.getInspectors()
-    console.log(
-      `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) lida(s).`
-    )
+    let driveInspectorsRaw: Inspector[] = []
+    let driveSource: 'LIVE' | 'CACHE' = 'LIVE'
+    let driveErrorMessage: string | null = null
+
+    try {
+      const driveAdapter = this.deps.driveAdapter || createDriveAdapter(refDate)
+      driveInspectorsRaw = await driveAdapter.getInspectors()
+      console.log(
+        `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) lida(s) ao vivo.`
+      )
+      if (driveInspectorsRaw.length > 0) {
+        this.saveDriveInspectorsCache(driveInspectorsRaw)
+      }
+    } catch (err: any) {
+      driveErrorMessage = err?.message || String(err)
+      console.warn(
+        `[HSEDataPipeline] Falha ao ler Drive ao vivo (${driveErrorMessage}). Tentando carregar cache local...`
+      )
+    }
+
+    if (driveInspectorsRaw.length === 0) {
+      driveInspectorsRaw = this.loadDriveInspectorsCache(refDate)
+      if (driveInspectorsRaw.length > 0) {
+        driveSource = 'CACHE'
+        console.log(
+          `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) carregada(s) do cache local.`
+        )
+      }
+    }
 
     // 2. Provedor RPO (Smartsheet)
     const rpoAdapter =
@@ -220,6 +451,36 @@ export class HSEDataPipeline {
         : SmartsheetRPOAdapter.fromEnv(refDate)
 
     let rpoInspectorsRaw: Inspector[] = []
+    let rpoSource: 'LIVE' | 'CACHE' = 'LIVE'
+    let rpoErrorMessage: string | null = null
+
+    if (rpoAdapter) {
+      try {
+        rpoInspectorsRaw = await rpoAdapter.readRPOData()
+        console.log(
+          `[HSEDataPipeline] RPO: ${rpoInspectorsRaw.length} linha(s) lida(s) ao vivo do Smartsheet.`
+        )
+        if (rpoInspectorsRaw.length > 0) {
+          this.saveRPOInspectorsCache(rpoInspectorsRaw)
+        }
+      } catch (err: any) {
+        rpoErrorMessage = err?.message || String(err)
+        console.warn(
+          `[HSEDataPipeline] Falha ao ler Smartsheet RPO ao vivo (${rpoErrorMessage}). Tentando carregar cache local...`
+        )
+      }
+    }
+
+    if (rpoInspectorsRaw.length === 0) {
+      rpoInspectorsRaw = this.loadRPOInspectorsCache(refDate)
+      if (rpoInspectorsRaw.length > 0) {
+        rpoSource = 'CACHE'
+        console.log(
+          `[HSEDataPipeline] RPO: ${rpoInspectorsRaw.length} colaborador(es) carregado(s) do cache local.`
+        )
+      }
+    }
+
     let activeRpoInspectors: Inspector[] = []
     let activeDriveInspectors: Inspector[] = []
     let ehsRoster: {
@@ -229,8 +490,7 @@ export class HSEDataPipeline {
       hasDriveFolder: boolean
     }[] = []
 
-    if (rpoAdapter) {
-      rpoInspectorsRaw = await rpoAdapter.readRPOData()
+    if (rpoInspectorsRaw.length > 0) {
       activeRpoInspectors = rpoInspectorsRaw.filter(
         i => classifyEmployeeProfile(i.role) !== null
       )
@@ -252,7 +512,7 @@ export class HSEDataPipeline {
       )
     } else {
       console.log(
-        '[HSEDataPipeline] Smartsheet RPO nao configurada — operando com base restrita ao Drive.'
+        '[HSEDataPipeline] Smartsheet RPO sem dados — operando com base restrita ao Drive.'
       )
       activeDriveInspectors = driveInspectorsRaw
       ehsRoster = driveInspectorsRaw.map(inspector => ({
@@ -375,21 +635,37 @@ export class HSEDataPipeline {
     // 7. Telemetria de Saude das Fontes para o Dashboard
     const sourceHealth: DashboardSourceHealth = {
       drive: {
-        status: driveInspectorsRaw.length > 0 ? 'ONLINE' : 'WARNING',
-        message: `${driveInspectorsRaw.length} pastas no Drive`,
-        detail: `Sincronizacao com Google Drive via OAuth (${driveInspectorsRaw.length} pastas de colaboradores lidas)`,
+        status:
+          driveInspectorsRaw.length > 0
+            ? driveSource === 'LIVE'
+              ? 'ONLINE'
+              : 'CACHE'
+            : 'WARNING',
+        message:
+          driveSource === 'LIVE'
+            ? `${driveInspectorsRaw.length} pastas no Drive (Ao Vivo)`
+            : `${driveInspectorsRaw.length} pastas no Drive (Cache)`,
+        detail:
+          driveSource === 'LIVE'
+            ? `Sincronizacao com Google Drive via OAuth (${driveInspectorsRaw.length} pastas de colaboradores lidas)`
+            : `Fallback de cache ativado (${driveInspectorsRaw.length} pastas). ${driveErrorMessage ? `Erro na conexao: ${driveErrorMessage}` : ''}`,
         lastSync: refDate.toLocaleDateString('pt-BR'),
       },
       smartsheet: {
-        status: activeRpoInspectors.length > 0 ? 'ONLINE' : 'WARNING',
+        status:
+          activeRpoInspectors.length > 0
+            ? rpoSource === 'LIVE'
+              ? 'ONLINE'
+              : 'CACHE'
+            : 'WARNING',
         message:
-          activeRpoInspectors.length > 0
-            ? `${activeRpoInspectors.length} pessoas ativas na RPO`
-            : 'RPO Offline / Nao Configurada',
+          rpoSource === 'LIVE'
+            ? `${activeRpoInspectors.length} pessoas ativas na RPO (Ao Vivo)`
+            : `${activeRpoInspectors.length} pessoas ativas na RPO (Cache)`,
         detail:
-          activeRpoInspectors.length > 0
+          rpoSource === 'LIVE'
             ? `Sincronizacao OK com a planilha RPO via Smartsheet API (${activeRpoInspectors.length} ativos)`
-            : 'Variaveis SMARTSHEET_API_TOKEN / SMARTSHEET_RPO_SHEET_ID nao configuradas',
+            : `Fallback de cache ativado (${activeRpoInspectors.length} ativos). ${rpoErrorMessage ? `Erro na conexao: ${rpoErrorMessage}` : ''}`,
         lastSync: refDate.toLocaleDateString('pt-BR'),
       },
       storz: {
