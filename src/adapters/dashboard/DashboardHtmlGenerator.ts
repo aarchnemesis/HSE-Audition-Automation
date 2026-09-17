@@ -1320,6 +1320,20 @@ export function buildDashboardHtml(
       border: 1px solid var(--card-border);
       border-radius: 8px;
     }
+    .table-container::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .table-container::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+    .table-container::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
     .matrix-table {
       width: 100%;
       border-collapse: separate;
@@ -3700,10 +3714,11 @@ export function buildDashboardHtml(
         }
       }
 
+      const showMatrixTableBars = (viewKey === 'matrix' || viewKey === 'table');
       const globalKpis = document.querySelector('.kpi-row');
       const globalOmniBar = document.querySelector('.omni-bar');
-      if (globalKpis) globalKpis.style.display = (viewKey === 'cockpit') ? 'none' : 'grid';
-      if (globalOmniBar) globalOmniBar.style.display = (viewKey === 'cockpit') ? 'none' : 'flex';
+      if (globalKpis) globalKpis.style.display = showMatrixTableBars ? 'flex' : 'none';
+      if (globalOmniBar) globalOmniBar.style.display = showMatrixTableBars ? 'flex' : 'none';
 
       renderPresets(viewKey);
 
