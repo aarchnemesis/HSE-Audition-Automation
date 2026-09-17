@@ -1642,14 +1642,16 @@ export function buildDashboardHtml(
     .cockpit-kpi-top {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
+      align-items: flex-start;
+      min-height: 28px;
+      margin-bottom: 4px;
     }
     .cockpit-kpi-label {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
+      line-height: 1.25;
       color: var(--text-muted);
     }
     .cockpit-kpi-icon {
@@ -2641,7 +2643,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores aptos para mobilização imediata">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#059669;">Aptos p/ Campo</span>
+              <span class="cockpit-kpi-label" style="color:#059669;">Colaboradores Aptos</span>
               <span class="cockpit-kpi-badge" id="cockpitKpiAptoRate" style="background:#D1FAE5;color:#065F46;">0%</span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiApto" style="color:#059669;">0</div>
@@ -2650,29 +2652,29 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#D97706;">Em Alerta (&le;30d)</span>
+              <span class="cockpit-kpi-label" style="color:#D97706;">Colaboradores em Alerta</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#D97706;">0</div>
-            <div class="cockpit-kpi-sub">Reciclagens no mês</div>
+            <div class="cockpit-kpi-sub">Reciclagens no mês (&le;30d)</div>
           </div>
 
-          <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional (vencido ou ausente no básico)">
+          <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional no escopo selecionado">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#DC2626;">Bloqueados (Pendência)</span>
+              <span class="cockpit-kpi-label" style="color:#DC2626;">Colaboradores Bloqueados</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiBloqueado" style="color:#DC2626;">0</div>
-            <div class="cockpit-kpi-sub">Básico vencido ou falta</div>
+            <div class="cockpit-kpi-sub">Pendência no escopo do parque</div>
           </div>
 
           <div class="cockpit-kpi-card storz" onclick="filterCockpitStatus('STORZ')" style="cursor:pointer;" title="Filtrar colaboradores cursando ou matriculados no LMS Storz">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#7C3AED;">Em Treinamento (Storz)</span>
+              <span class="cockpit-kpi-label" style="color:#7C3AED;">Colaboradores em Treinamento</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiStorz" style="color:#7C3AED;">0</div>
-            <div class="cockpit-kpi-sub">Matrículas ativas no LMS</div>
+            <div class="cockpit-kpi-sub">Matrículas ativas no LMS Storz</div>
           </div>
         </div>
 
