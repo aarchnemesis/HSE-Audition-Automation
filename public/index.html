@@ -1661,13 +1661,65 @@
       border-color: #1D4ED8;
     }
 
+    .cockpit-controls-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+    }
+    .cockpit-toolbar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .cockpit-segment-group, .cockpit-park-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cockpit-seg-btn, .cockpit-park-btn {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s ease;
+    }
+    .cockpit-seg-btn:hover, .cockpit-park-btn:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+      background: #FFFFFF;
+    }
+    .cockpit-seg-btn.active {
+      background: #0F172A;
+      border-color: #0F172A;
+      color: #FFFFFF;
+    }
+    .cockpit-park-btn.active {
+      background: #1E293B;
+      border-color: #1E293B;
+      color: #38BDF8;
+    }
     .cockpit-toolbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 12px;
     }
     .cockpit-chips-group {
       display: flex;
@@ -1829,6 +1881,45 @@
       background: #F5F3FF;
       color: #6D28D9;
       border: 1px solid #DDD6FE;
+    }
+    .badge-cockpit-isento {
+      background: #F1F5F9;
+      color: #475569;
+      border: 1px solid #CBD5E1;
+    }
+    .badge-cockpit-lider {
+      background: #EEF2FF;
+      color: #4338CA;
+      border: 1px solid #C7D2FE;
+    }
+
+    .cockpit-card-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px dashed #E2E8F0;
+    }
+    .spec-tag {
+      font-size: 9.5px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      line-height: 1.2;
+    }
+    .spec-tag.qualified {
+      background: #E0F2FE;
+      color: #0369A1;
+      border: 1px solid #BAE6FD;
+    }
+    .spec-tag.neutral {
+      background: #F8FAFC;
+      color: #64748B;
+      border: 1px solid #E2E8F0;
     }
 
     .cockpit-progress-wrap {
@@ -2118,7 +2209,7 @@
     <div class="page-title-bar">
       <div>
         <h2 id="pageHeading">Cockpit Operacional de Prontidão da Equipe de Campo</h2>
-        <p id="pageSubheading">Status de mobilização técnica e conformidade de NRs por colaborador (ASO e CNH desconsiderados)</p>
+        <p id="pageSubheading">Status de mobilização técnica, requisitos básicos e conformidade de campo por colaborador</p>
       </div>
       <div style="display:flex; align-items:center; gap:10px;">
         <button class="btn-rankings-toggle" id="rankingsToggleBtn" onclick="toggleRankingsPanel()" title="Alternar visualização dos rankings executivos e gargalos operacionais">
@@ -2358,22 +2449,22 @@
       <div id="view-cockpit" class="tab-view active">
         <!-- Cockpit Executive Summary / KPIs -->
         <div class="cockpit-kpi-row">
-          <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores da operação">
+          <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores do segmento ativo">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label">Equipe de Campo</span>
+              <span class="cockpit-kpi-label">Equipe Ativa</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiTotal">0</div>
-            <div class="cockpit-kpi-sub">Total de colaboradores</div>
+            <div class="cockpit-kpi-sub">Total no segmento</div>
           </div>
 
-          <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores 100% aptos para mobilização imediata">
+          <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores aptos para mobilização imediata">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#059669;">100% Aptos (Campo)</span>
+              <span class="cockpit-kpi-label" style="color:#059669;">Aptos p/ Campo</span>
               <span class="cockpit-kpi-badge" id="cockpitKpiAptoRate" style="background:#D1FAE5;color:#065F46;">0%</span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiApto" style="color:#059669;">0</div>
-            <div class="cockpit-kpi-sub">NRs e GWO válidos</div>
+            <div class="cockpit-kpi-sub" id="cockpitKpiAptoSub">Plenos e a vencer</div>
           </div>
 
           <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
@@ -2382,16 +2473,16 @@
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#D97706;">0</div>
-            <div class="cockpit-kpi-sub">Reciclagens próximas</div>
+            <div class="cockpit-kpi-sub">Reciclagens no mês</div>
           </div>
 
-          <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional (vencido ou ausente)">
+          <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional (vencido ou ausente no básico)">
             <div class="cockpit-kpi-top">
               <span class="cockpit-kpi-label" style="color:#DC2626;">Bloqueados (Pendência)</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiBloqueado" style="color:#DC2626;">0</div>
-            <div class="cockpit-kpi-sub">Treinamento expirado/falta</div>
+            <div class="cockpit-kpi-sub">Básico vencido ou falta</div>
           </div>
 
           <div class="cockpit-kpi-card storz" onclick="filterCockpitStatus('STORZ')" style="cursor:pointer;" title="Filtrar colaboradores cursando ou matriculados no LMS Storz">
@@ -2411,9 +2502,8 @@
               <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <span>Critério Operacional de Prontidão de Campo</span>
             </div>
-            <div class="cockpit-scope-desc">
-              Avaliação estrita de normas técnicas de segurança (NRs 10, 11, 12, 18, 20/28, 21, 22, 34, GWO BST, LOTO). 
-              <strong>ASO (01) e CNH (08) estão desconsiderados</strong> deste cálculo para foco exclusivo em capacitação técnica operacional.
+            <div class="cockpit-scope-desc" id="cockpitScopeDesc">
+              Foco: <strong>Linha de Frente de Campo</strong> (65 técnicos/inspetores). Requisitos básicos de mobilização: <strong>ASO (01), GWO BST e NRs regulamentares</strong>. Ausência de módulos específicos (GWO ART, Vestas, Elevador) não gera bloqueio geral.
             </div>
           </div>
           <div class="cockpit-scope-actions">
@@ -2428,18 +2518,59 @@
           </div>
         </div>
 
-        <!-- Cockpit Quick Toolbar -->
-        <div class="cockpit-toolbar">
-          <div class="cockpit-chips-group">
-            <span class="cockpit-filter-label">Filtrar por Status:</span>
-            <button class="cockpit-chip active" id="cockpitChip-ALL" onclick="filterCockpitStatus('ALL')">Todos (<span id="cockpitChipTotalCount">0</span>)</button>
-            <button class="cockpit-chip chip-apto" id="cockpitChip-APTO" onclick="filterCockpitStatus('APTO')">Aptos (<span id="cockpitChipAptoCount">0</span>)</button>
-            <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Em Alerta (<span id="cockpitChipAlertaCount">0</span>)</button>
-            <button class="cockpit-chip chip-bloqueado" id="cockpitChip-BLOQUEADO" onclick="filterCockpitStatus('BLOQUEADO')">Bloqueados (<span id="cockpitChipBloqueadoCount">0</span>)</button>
-            <button class="cockpit-chip chip-storz" id="cockpitChip-STORZ" onclick="filterCockpitStatus('STORZ')">Em Treinamento (<span id="cockpitChipStorzCount">0</span>)</button>
+        <!-- Cockpit Controls Container -->
+        <div class="cockpit-controls-container">
+          <!-- Row 1: Segment & Park Scope -->
+          <div class="cockpit-toolbar-row">
+            <div class="cockpit-segment-group">
+              <span class="cockpit-filter-label">Segmento:</span>
+              <button class="cockpit-seg-btn active" id="cockpitSeg-FRONTLINE" onclick="filterCockpitSegment('FRONTLINE')" title="Técnicos e Inspetores que sobem em aerogerador (IQ, TO, IE)">
+                Linha de Frente (<span id="cockpitSegCountFrontline">65</span>)
+              </button>
+              <button class="cockpit-seg-btn" id="cockpitSeg-LEADERS" onclick="filterCockpitSegment('LEADERS')" title="Líderes de Campo com atuação híbrida (LO)">
+                Liderança Híbrida (<span id="cockpitSegCountLeaders">5</span>)
+              </button>
+              <button class="cockpit-seg-btn" id="cockpitSeg-OFFICE" onclick="filterCockpitSegment('OFFICE')" title="Coordenador, EHS/SSMA e Administrativo (isentos de subida em turbinas)">
+                Gestão &amp; Office (<span id="cockpitSegCountOffice">5</span>)
+              </button>
+              <button class="cockpit-seg-btn" id="cockpitSeg-ALL" onclick="filterCockpitSegment('ALL')" title="Todos os colaboradores da base operacional">
+                Todos (<span id="cockpitSegCountAll">75</span>)
+              </button>
+            </div>
+
+            <div class="cockpit-park-group">
+              <span class="cockpit-filter-label">Exigência do Parque:</span>
+              <button class="cockpit-park-btn active" id="cockpitPark-BASIC" onclick="filterCockpitParkScope('BASIC')" title="Requisitos Básicos de Mobilização (ASO + GWO BST + NRs)">
+                Geral (Básico)
+              </button>
+              <button class="cockpit-park-btn" id="cockpitPark-ART" onclick="filterCockpitParkScope('ART')" title="Exige GWO ART (Resgate Avançado / AST)">
+                Exige GWO ART
+              </button>
+              <button class="cockpit-park-btn" id="cockpitPark-NR33_RESGATE" onclick="filterCockpitParkScope('NR33_RESGATE')" title="Exige NR-33 Supervisor / Resgate">
+                Exige NR-33 Resgate
+              </button>
+              <button class="cockpit-park-btn" id="cockpitPark-VESTAS" onclick="filterCockpitParkScope('VESTAS')" title="Exige Qualificação Turbinas Vestas (SIT/ESO)">
+                Exige Vestas
+              </button>
+              <button class="cockpit-park-btn" id="cockpitPark-ELEVADOR" onclick="filterCockpitParkScope('ELEVADOR')" title="Exige Elevador JASO (Cremalheira)">
+                Exige Elevador
+              </button>
+            </div>
           </div>
-          <div class="cockpit-search-wrap">
-            <input type="text" id="cockpitSearchInput" class="cockpit-search-box" placeholder="Buscar por colaborador, cargo ou setor..." oninput="onCockpitSearch(this.value)">
+
+          <!-- Row 2: Status Chips & Search -->
+          <div class="cockpit-toolbar-row">
+            <div class="cockpit-chips-group">
+              <span class="cockpit-filter-label">Filtrar por Status:</span>
+              <button class="cockpit-chip active" id="cockpitChip-ALL" onclick="filterCockpitStatus('ALL')">Todos (<span id="cockpitChipTotalCount">0</span>)</button>
+              <button class="cockpit-chip chip-apto" id="cockpitChip-APTO" onclick="filterCockpitStatus('APTO')">Aptos (<span id="cockpitChipAptoCount">0</span>)</button>
+              <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Em Alerta (<span id="cockpitChipAlertaCount">0</span>)</button>
+              <button class="cockpit-chip chip-bloqueado" id="cockpitChip-BLOQUEADO" onclick="filterCockpitStatus('BLOQUEADO')">Bloqueados (<span id="cockpitChipBloqueadoCount">0</span>)</button>
+              <button class="cockpit-chip chip-storz" id="cockpitChip-STORZ" onclick="filterCockpitStatus('STORZ')">Em Treinamento (<span id="cockpitChipStorzCount">0</span>)</button>
+            </div>
+            <div class="cockpit-search-wrap">
+              <input type="text" id="cockpitSearchInput" class="cockpit-search-box" placeholder="Buscar por colaborador, cargo ou setor..." oninput="onCockpitSearch(this.value)">
+            </div>
           </div>
         </div>
 
@@ -3381,7 +3512,7 @@
       if (heading) {
         if (viewKey === 'cockpit') {
           heading.innerText = 'Cockpit Operacional de Prontidão da Equipe de Campo';
-          if (pageSub) pageSub.innerText = 'Status de mobilização técnica e conformidade de NRs por colaborador (ASO e CNH desconsiderados)';
+          if (pageSub) pageSub.innerText = 'Status de mobilização técnica, requisitos básicos e conformidade de campo por colaborador';
         } else if (viewKey === 'matrix') {
           heading.innerText = 'Matriz de Qualificação & Treinamentos Normativos (DO)';
           if (pageSub) pageSub.innerText = 'Acompanhamento executivo de conformidade legal de NRs, GWO BST, ASO e reciclagens por colaborador de campo';
@@ -3499,8 +3630,26 @@
       renderStorz(filteredPeople);
     }
 
+    let cockpitSegment = 'FRONTLINE';
+    let cockpitParkScope = 'BASIC';
     let cockpitStatusFilter = 'ALL';
     let cockpitSearchQuery = '';
+
+    function filterCockpitSegment(segment) {
+      cockpitSegment = segment;
+      document.querySelectorAll('.cockpit-seg-btn').forEach(b => b.classList.remove('active'));
+      const btn = document.getElementById('cockpitSeg-' + segment);
+      if (btn) btn.classList.add('active');
+      renderCockpit(lastFilteredPeople);
+    }
+
+    function filterCockpitParkScope(scope) {
+      cockpitParkScope = scope;
+      document.querySelectorAll('.cockpit-park-btn').forEach(b => b.classList.remove('active'));
+      const btn = document.getElementById('cockpitPark-' + scope);
+      if (btn) btn.classList.add('active');
+      renderCockpit(lastFilteredPeople);
+    }
 
     function filterCockpitStatus(status) {
       cockpitStatusFilter = status;
@@ -3521,35 +3670,90 @@
       renderCockpit(lastFilteredPeople);
     }
 
-    function getCollabOperationalHealth(p) {
-      // EXCLUDE ASO (01) and CNH (08)
-      const opRecords = p.records.filter(r => r.docCode !== '01' && r.docCode !== '08');
-      
-      const totalOp = opRecords.length;
+    function getCollabOperationalHealth(p, parkScope = 'BASIC') {
+      const isOffice = ['CO', 'ADM', 'EHS'].includes(p.role);
+      const isLeader = p.role === 'LO';
+
+      if (isOffice) {
+        // Office / Gestão: Isento de normas de escalada técnica
+        const asoRec = p.records.find(r => r.docCode === '01');
+        const asoValid = asoRec ? (isConforme(asoRec.statusEHS) || isAVencer(asoRec.statusEHS)) : true;
+        const storzActiveItems = p.records.filter(isStorzActive);
+        return {
+          status: 'ISENTO_CAMPO',
+          isOffice: true,
+          isLeader: false,
+          isMobilizavel: true,
+          hasStorz: storzActiveItems.length > 0,
+          complianceRate: 100,
+          totalOp: 1,
+          compliantCount: asoValid ? 1 : 0,
+          asoValid,
+          expiredItems: [],
+          missingItems: [],
+          alertItems: [],
+          storzActiveItems,
+          hasArt: false,
+          hasNr33Resgate: false,
+          hasVestas: false,
+          hasElevador: false
+        };
+      }
+
+      // Requisitos Básicos de Mobilização (Core de Campo)
+      const CORE_CODES = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30'];
+      const requiredCodes = new Set(CORE_CODES);
+
+      if (parkScope === 'ART') requiredCodes.add('32');
+      if (parkScope === 'NR33_RESGATE') requiredCodes.add('28');
+      if (parkScope === 'VESTAS') { requiredCodes.add('25'); requiredCodes.add('26'); }
+      if (parkScope === 'ELEVADOR') requiredCodes.add('31');
+
+      const recMap = new Map();
+      p.records.forEach(r => recMap.set(r.docCode, r));
+
+      // Habilitações Específicas de Parque (para os cards)
+      const rArt = recMap.get('32');
+      const hasArt = Boolean(rArt && (isConforme(rArt.statusEHS) || isAVencer(rArt.statusEHS)));
+      const rNr33Sup = recMap.get('28');
+      const hasNr33Resgate = Boolean(rNr33Sup && (isConforme(rNr33Sup.statusEHS) || isAVencer(rNr33Sup.statusEHS)));
+      const rSit = recMap.get('25');
+      const rEso = recMap.get('26');
+      const hasVestas = Boolean((rSit && (isConforme(rSit.statusEHS) || isAVencer(rSit.statusEHS))) || (rEso && (isConforme(rEso.statusEHS) || isAVencer(rEso.statusEHS))));
+      const rElev = recMap.get('31');
+      const hasElevador = Boolean(rElev && (isConforme(rElev.statusEHS) || isAVencer(rElev.statusEHS)));
+
       let compliantCount = 0;
       const expiredItems = [];
       const missingItems = [];
       const alertItems = [];
-      const storzActiveItems = [];
+      const storzActiveItems = p.records.filter(isStorzActive);
 
-      opRecords.forEach(r => {
-        if (isConforme(r.statusEHS)) {
-          compliantCount++;
-        } else if (isAVencer(r.statusEHS)) {
-          alertItems.push(r);
-          compliantCount++;
+      requiredCodes.forEach(code => {
+        const r = recMap.get(code);
+        if (!r) {
+          missingItems.push({
+            docCode: code,
+            docName: docShortNames[code] || ('Doc ' + code),
+            statusEHS: 'AUSENTE',
+            detail: 'Documento ausente no prontuário'
+          });
         } else if (isVencido(r.statusEHS)) {
           expiredItems.push(r);
         } else if (isAusente(r.statusEHS)) {
           missingItems.push(r);
-        }
-
-        if (isStorzActive(r)) {
-          storzActiveItems.push(r);
+        } else if (isAVencer(r.statusEHS)) {
+          alertItems.push(r);
+          compliantCount++;
+        } else if (isConforme(r.statusEHS)) {
+          compliantCount++;
+        } else {
+          missingItems.push(r);
         }
       });
 
-      const complianceRate = totalOp > 0 ? Math.round((compliantCount / totalOp) * 100) : 100;
+      const totalRequired = requiredCodes.size;
+      const complianceRate = totalRequired > 0 ? Math.round((compliantCount / totalRequired) * 100) : 100;
 
       let status = 'APTO';
       if (expiredItems.length > 0 || missingItems.length > 0) {
@@ -3558,45 +3762,112 @@
         status = 'ALERTA';
       }
 
+      const isMobilizavel = (status === 'APTO' || status === 'ALERTA');
       const hasStorz = storzActiveItems.length > 0;
 
       return {
         status,
+        isMobilizavel,
+        isOffice: false,
+        isLeader,
         hasStorz,
         complianceRate,
-        totalOp,
+        totalOp: totalRequired,
         compliantCount,
         expiredItems,
         missingItems,
         alertItems,
-        storzActiveItems
+        storzActiveItems,
+        hasArt,
+        hasNr33Resgate,
+        hasVestas,
+        hasElevador
       };
     }
 
     function renderCockpit(peopleList) {
-      const totalPeople = peopleList.length;
+      // 1. Contagens de Segmento sobre a lista completa
+      let cntFrontline = 0;
+      let cntLeaders = 0;
+      let cntOffice = 0;
+
+      peopleList.forEach(p => {
+        if (['IQ', 'TO', 'IE'].includes(p.role)) cntFrontline++;
+        else if (p.role === 'LO') cntLeaders++;
+        else if (['CO', 'ADM', 'EHS'].includes(p.role)) cntOffice++;
+      });
+
+      const elSegFrontline = document.getElementById('cockpitSegCountFrontline');
+      if (elSegFrontline) elSegFrontline.innerText = cntFrontline;
+      const elSegLeaders = document.getElementById('cockpitSegCountLeaders');
+      if (elSegLeaders) elSegLeaders.innerText = cntLeaders;
+      const elSegOffice = document.getElementById('cockpitSegCountOffice');
+      if (elSegOffice) elSegOffice.innerText = cntOffice;
+      const elSegAll = document.getElementById('cockpitSegCountAll');
+      if (elSegAll) elSegAll.innerText = peopleList.length;
+
+      // 2. Filtrar pelo segmento ativo
+      let segmentPeople = peopleList;
+      if (cockpitSegment === 'FRONTLINE') {
+        segmentPeople = peopleList.filter(p => ['IQ', 'TO', 'IE'].includes(p.role));
+      } else if (cockpitSegment === 'LEADERS') {
+        segmentPeople = peopleList.filter(p => p.role === 'LO');
+      } else if (cockpitSegment === 'OFFICE') {
+        segmentPeople = peopleList.filter(p => ['CO', 'ADM', 'EHS'].includes(p.role));
+      }
+
+      // 3. Atualizar Banner Explicativo com base no segmento ativo
+      const bannerDesc = document.getElementById('cockpitScopeDesc');
+      if (bannerDesc) {
+        if (cockpitSegment === 'FRONTLINE') {
+          bannerDesc.innerHTML = 'Foco: <strong>Linha de Frente de Campo</strong> (' + cntFrontline + ' técnicos/inspetores). Requisitos básicos de mobilização: <strong>ASO (01), GWO BST e NRs regulamentares</strong>. Ausência de módulos específicos (GWO ART, Vestas, Elevador) não gera bloqueio geral.';
+        } else if (cockpitSegment === 'LEADERS') {
+          bannerDesc.innerHTML = 'Foco: <strong>Liderança de Campo</strong> (' + cntLeaders + ' líderes operacionais). <strong>Atuação híbrida</strong> entre escritório e supervisão em turbina. O planejamento de subida em campo deve observar as reciclagens vigentes.';
+        } else if (cockpitSegment === 'OFFICE') {
+          bannerDesc.innerHTML = 'Foco: <strong>Gestão &amp; Apoio Administrativo</strong> (' + cntOffice + ' colaboradores: Coordenação, EHS/SSMA, Compras e Comercial). <strong>Isentos de normas de subida/escalada técnica em turbinas</strong>. Monitoramento focado no PCMSO (ASO).';
+        } else {
+          bannerDesc.innerHTML = 'Visão Consolidada: <strong>Toda a Operação</strong> (' + peopleList.length + ' colaboradores: Linha de frente, liderança híbrida e equipe de gestão/suporte).';
+        }
+      }
+
+      // 4. Avaliar cada pessoa no segmento com o escopo de parque ativo
       let aptoCount = 0;
+      let aptoPlenoCount = 0;
       let alertaCount = 0;
       let bloqueadoCount = 0;
       let storzCount = 0;
+      let isentoCount = 0;
 
-      const evaluatedPeople = peopleList.map(p => {
-        const health = getCollabOperationalHealth(p);
-        if (health.status === 'APTO') aptoCount++;
-        else if (health.status === 'ALERTA') alertaCount++;
-        else if (health.status === 'BLOQUEADO') bloqueadoCount++;
+      const evaluatedPeople = segmentPeople.map(p => {
+        const health = getCollabOperationalHealth(p, cockpitParkScope);
+        if (health.status === 'ISENTO_CAMPO') {
+          isentoCount++;
+        } else {
+          if (health.isMobilizavel) aptoCount++;
+          if (health.status === 'APTO') aptoPlenoCount++;
+          else if (health.status === 'ALERTA') alertaCount++;
+          else if (health.status === 'BLOQUEADO') bloqueadoCount++;
+        }
         if (health.hasStorz) storzCount++;
         return { p, health };
       });
 
-      const aptoRate = totalPeople > 0 ? Math.round((aptoCount / totalPeople) * 100) : 0;
+      const totalActiveSegment = segmentPeople.length;
+      const evaluableCount = totalActiveSegment - isentoCount;
+      const aptoRate = evaluableCount > 0 ? Math.round((aptoCount / evaluableCount) * 100) : 100;
 
+      // 5. Atualizar KPIs
       const elTotal = document.getElementById('cockpitKpiTotal');
-      if (elTotal) elTotal.innerText = totalPeople;
+      if (elTotal) elTotal.innerText = totalActiveSegment;
       const elApto = document.getElementById('cockpitKpiApto');
-      if (elApto) elApto.innerText = aptoCount;
+      if (elApto) elApto.innerText = (cockpitSegment === 'OFFICE') ? isentoCount : aptoCount;
       const elAptoRate = document.getElementById('cockpitKpiAptoRate');
       if (elAptoRate) elAptoRate.innerText = aptoRate + '%';
+      const elAptoSub = document.getElementById('cockpitKpiAptoSub');
+      if (elAptoSub) {
+        if (cockpitSegment === 'OFFICE') elAptoSub.innerText = 'Funções de gestão/suporte';
+        else elAptoSub.innerText = aptoPlenoCount + ' plenos · ' + alertaCount + ' atenção recert.';
+      }
       const elAlerta = document.getElementById('cockpitKpiAlerta');
       if (elAlerta) elAlerta.innerText = alertaCount;
       const elBloqueado = document.getElementById('cockpitKpiBloqueado');
@@ -3604,10 +3875,11 @@
       const elStorz = document.getElementById('cockpitKpiStorz');
       if (elStorz) elStorz.innerText = storzCount;
 
+      // 6. Atualizar contagens dos chips de status
       const chipTotal = document.getElementById('cockpitChipTotalCount');
-      if (chipTotal) chipTotal.innerText = totalPeople;
+      if (chipTotal) chipTotal.innerText = totalActiveSegment;
       const chipApto = document.getElementById('cockpitChipAptoCount');
-      if (chipApto) chipApto.innerText = aptoCount;
+      if (chipApto) chipApto.innerText = (cockpitSegment === 'OFFICE') ? isentoCount : aptoCount;
       const chipAlerta = document.getElementById('cockpitChipAlertaCount');
       if (chipAlerta) chipAlerta.innerText = alertaCount;
       const chipBloqueado = document.getElementById('cockpitChipBloqueadoCount');
@@ -3615,6 +3887,7 @@
       const chipStorz = document.getElementById('cockpitChipStorzCount');
       if (chipStorz) chipStorz.innerText = storzCount;
 
+      // 7. Filtrar por busca e chip de status
       const qNorm = norm(cockpitSearchQuery);
       const filteredCards = evaluatedPeople.filter(({ p, health }) => {
         if (qNorm) {
@@ -3622,7 +3895,10 @@
           if (!matches) return false;
         }
 
-        if (cockpitStatusFilter === 'APTO' && health.status !== 'APTO') return false;
+        if (cockpitStatusFilter === 'APTO') {
+          if (health.status === 'ISENTO_CAMPO') return true;
+          if (!health.isMobilizavel) return false;
+        }
         if (cockpitStatusFilter === 'ALERTA' && health.status !== 'ALERTA') return false;
         if (cockpitStatusFilter === 'BLOQUEADO' && health.status !== 'BLOQUEADO') return false;
         if (cockpitStatusFilter === 'STORZ' && !health.hasStorz) return false;
@@ -3630,13 +3906,15 @@
         return true;
       });
 
-      const statusOrder = { BLOQUEADO: 1, ALERTA: 2, APTO: 3 };
+      // 8. Ordenar: Bloqueados primeiro, depois Alerta, depois Apto, depois Isento
+      const statusOrder = { BLOQUEADO: 1, ALERTA: 2, APTO: 3, ISENTO_CAMPO: 4 };
       filteredCards.sort((a, b) => {
         const diff = (statusOrder[a.health.status] || 99) - (statusOrder[b.health.status] || 99);
         if (diff !== 0) return diff;
         return a.p.name.localeCompare(b.p.name);
       });
 
+      // 9. Renderizar Cards
       const grid = document.getElementById('cockpitCardsGrid');
       if (!grid) return;
 
@@ -3657,18 +3935,46 @@
       let avatarBg = '#D1FAE5';
       let avatarColor = '#065F46';
 
-      if (health.status === 'BLOQUEADO') {
-        statusBadgeClass = 'badge-cockpit-bloqueado';
-        statusLabel = 'BLOQUEADO: PENDÊNCIA';
-        borderColor = '#EF4444';
-        avatarBg = '#FEE2E2';
-        avatarColor = '#991B1B';
-      } else if (health.status === 'ALERTA') {
-        statusBadgeClass = 'badge-cockpit-alerta';
-        statusLabel = 'ATENÇÃO: VENCE EM BREVE';
-        borderColor = '#F59E0B';
-        avatarBg = '#FEF3C7';
-        avatarColor = '#92400E';
+      if (health.isOffice) {
+        statusBadgeClass = 'badge-cockpit-isento';
+        statusLabel = 'GESTÃO / ISENTO DE ESCALADA';
+        borderColor = '#94A3B8';
+        avatarBg = '#F1F5F9';
+        avatarColor = '#475569';
+      } else if (health.isLeader) {
+        if (health.status === 'BLOQUEADO') {
+          statusBadgeClass = 'badge-cockpit-bloqueado';
+          statusLabel = 'LÍDER PENDÊNCIA (HÍBRIDO)';
+          borderColor = '#EF4444';
+          avatarBg = '#FEE2E2';
+          avatarColor = '#991B1B';
+        } else if (health.status === 'ALERTA') {
+          statusBadgeClass = 'badge-cockpit-alerta';
+          statusLabel = 'LÍDER ATENÇÃO (HÍBRIDO)';
+          borderColor = '#F59E0B';
+          avatarBg = '#FEF3C7';
+          avatarColor = '#92400E';
+        } else {
+          statusBadgeClass = 'badge-cockpit-lider';
+          statusLabel = 'LÍDER APTO (HÍBRIDO)';
+          borderColor = '#4F46E5';
+          avatarBg = '#EEF2FF';
+          avatarColor = '#3730A3';
+        }
+      } else {
+        if (health.status === 'BLOQUEADO') {
+          statusBadgeClass = 'badge-cockpit-bloqueado';
+          statusLabel = 'BLOQUEADO: PENDÊNCIA';
+          borderColor = '#EF4444';
+          avatarBg = '#FEE2E2';
+          avatarColor = '#991B1B';
+        } else if (health.status === 'ALERTA') {
+          statusBadgeClass = 'badge-cockpit-alerta';
+          statusLabel = 'APTO (RECERTIFICAÇÃO ≤30D)';
+          borderColor = '#F59E0B';
+          avatarBg = '#FEF3C7';
+          avatarColor = '#92400E';
+        }
       }
 
       let barColor = '#10B981';
@@ -3676,24 +3982,26 @@
       else if (health.complianceRate < 95) barColor = '#F59E0B';
 
       let highlightsHtml = '';
-      if (health.status === 'BLOQUEADO') {
+      if (health.isOffice) {
+        highlightsHtml = '<div class="cockpit-card-ok-msg" style="background:#F8FAFC;border-color:#CBD5E1;color:#475569;"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>Função de escritório/coordenação. Isento de requisitos de subida em turbinas.</div>';
+      } else if (health.status === 'BLOQUEADO') {
         const pendencies = [...health.expiredItems, ...health.missingItems];
         highlightsHtml = '<div class="cockpit-card-pills">' +
           pendencies.map(r => {
             const docName = docShortNames[r.docCode] || r.docName;
             const tag = isVencido(r.statusEHS) ? 'Vencido' : 'Ausente';
-            return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + r.detail + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
+            return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + (r.detail || tag) + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
           }).join('') +
           '</div>';
       } else if (health.status === 'ALERTA') {
         highlightsHtml = '<div class="cockpit-card-pills">' +
           health.alertItems.map(r => {
             const docName = docShortNames[r.docCode] || r.docName;
-            return '<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + r.detail + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>';
+            return '<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + (r.detail || 'Vence em breve') + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>';
           }).join('') +
           '</div>';
       } else {
-        highlightsHtml = '<div class="cockpit-card-ok-msg"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Todas as NRs e qualificações operacionais em dia.</div>';
+        highlightsHtml = '<div class="cockpit-card-ok-msg"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Requisitos básicos de campo em conformidade plena.</div>';
       }
 
       let storzHtml = '';
@@ -3704,6 +4012,27 @@
             return '<span class="cockpit-card-pill pill-storz" title="Matrícula LMS Storz: ' + s.docName + '"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz: ' + courseName + '</span>';
           }).join('') +
           '</div>';
+      }
+
+      let specsHtml = '';
+      if (!health.isOffice) {
+        const artPill = health.hasArt 
+          ? '<span class="spec-tag qualified" title="Qualificado em GWO ART (Resgate Avançado)"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GWO ART OK</span>'
+          : '<span class="spec-tag neutral" title="Não possui GWO ART (Opcional / Específico de Parque)">Sem GWO ART</span>';
+        
+        const nr33Pill = health.hasNr33Resgate
+          ? '<span class="spec-tag qualified" title="Qualificado em NR-33 Supervisor / Resgate"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>NR-33 Resgate OK</span>'
+          : '<span class="spec-tag neutral" title="Possui NR-33 Vigia">NR-33 Vigia</span>';
+
+        const vestasPill = health.hasVestas
+          ? '<span class="spec-tag qualified" title="Habilitado para Turbinas Vestas (SIT/ESO)"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Vestas OK</span>'
+          : '';
+
+        const elevPill = health.hasElevador
+          ? '<span class="spec-tag qualified" title="Habilitado para Elevador JASO"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Elevador OK</span>'
+          : '';
+
+        specsHtml = '<div class="cockpit-card-specs">' + artPill + nr33Pill + (vestasPill ? vestasPill : '') + (elevPill ? elevPill : '') + '</div>';
       }
 
       const escName = (p.name || '').replace(/"/g, '&quot;');
@@ -3729,6 +4058,7 @@
         '</div>' +
         highlightsHtml +
         storzHtml +
+        specsHtml +
         '<div class="cockpit-card-footer">' +
           '<button class="btn-cockpit-card-action" data-collab-name="' + escName + '" onclick="openCollabModal(this.dataset.collabName)">' +
             '<svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
