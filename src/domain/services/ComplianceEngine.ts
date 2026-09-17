@@ -249,6 +249,7 @@ export const ELECTIVE_DOC_CODES = new Set([
   '26', // ESO (Vestas)
   '28', // NR-33 Supervisor
   '31', // Elevador (JASO)
+  '32', // GWO ART (Resgate Avançado / Específico de Parque)
   '34', // CIPA (NR-05)
 ])
 

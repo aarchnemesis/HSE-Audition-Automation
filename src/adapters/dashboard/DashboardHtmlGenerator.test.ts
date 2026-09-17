@@ -79,14 +79,27 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('id="cockpitKpiAlerta"')
     expect(html).toContain('id="cockpitKpiBloqueado"')
     expect(html).toContain('id="cockpitKpiStorz"')
-    expect(html).toContain('ASO (01) e CNH (08) estão desconsiderados')
+    expect(html).toContain('id="cockpitScopeDesc"')
+    expect(html).toContain('ASO (01), GWO BST e NRs regulamentares')
   })
 
-  it('deve conter a logica de exclusao de ASO (01) e CNH (08) no script do Cockpit', () => {
+  it('deve conter seletores de segmento de equipe e exigencia de parque', () => {
     const html = buildDashboardHtml(sampleRecords)
-    expect(html).toContain("r.docCode !== '01' && r.docCode !== '08'")
+    expect(html).toContain('id="cockpitSeg-FRONTLINE"')
+    expect(html).toContain('id="cockpitSeg-LEADERS"')
+    expect(html).toContain('id="cockpitSeg-OFFICE"')
+    expect(html).toContain('id="cockpitPark-BASIC"')
+    expect(html).toContain('id="cockpitPark-ART"')
+    expect(html).toContain('id="cockpitPark-NR33_RESGATE"')
+  })
+
+  it('deve conter a logica de saude operacional com suporte a segmentacao e parque', () => {
+    const html = buildDashboardHtml(sampleRecords)
     expect(html).toContain('function getCollabOperationalHealth')
     expect(html).toContain('function renderCockpit')
+    expect(html).toContain('cockpitSegment')
+    expect(html).toContain('cockpitParkScope')
+    expect(html).toContain('ISENTO_CAMPO')
   })
 
   it('deve conter suporte ao colapso total da barra lateral e modo de impressao', () => {
