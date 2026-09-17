@@ -116,4 +116,24 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain("switchNav('cockpit')")
     expect(html).toContain("let currentViewKey = 'cockpit'")
   })
+
+  it('deve configurar scrollagem em tela e layout vertical de impressao para o Cockpit', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    // Scroll em tela
+    expect(html).toContain('#view-cockpit {')
+    expect(html).toContain('overflow-y: auto')
+    expect(html).toContain('#view-cockpit::-webkit-scrollbar')
+
+    // Cabecalho executivo de impressao
+    expect(html).toContain('class="cockpit-print-header"')
+    expect(html).toContain('id="cockpitPrintSubtitle"')
+    expect(html).toContain('id="cockpitPrintDate"')
+
+    // Lista vertical e quebra de pagina protegida no print
+    expect(html).toContain('.cockpit-grid {')
+    expect(html).toContain('flex-direction: column !important')
+    expect(html).toContain('page-break-inside: avoid !important')
+    expect(html).toContain('break-inside: avoid !important')
+    expect(html).toContain('.tab-view:not(.active)')
+  })
 })

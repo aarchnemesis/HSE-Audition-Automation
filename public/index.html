@@ -1510,6 +1510,38 @@
     }
 
     /* COCKPIT OPERACIONAL - EXECUTIVE STYLES */
+    #view-cockpit {
+      display: none;
+      flex: 1;
+      min-height: 0;
+      height: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-right: 6px;
+      padding-bottom: 24px;
+    }
+    #view-cockpit.active {
+      display: flex;
+      flex-direction: column;
+    }
+    #view-cockpit::-webkit-scrollbar {
+      width: 6px;
+    }
+    #view-cockpit::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    #view-cockpit::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+    #view-cockpit::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+
+    .cockpit-print-header {
+      display: none;
+    }
+
     .cockpit-kpi-row {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -2021,19 +2053,57 @@
       color: #0F172A;
     }
 
-    /* MEDIA PRINT STYLES FOR SCREENSHOT / PDF EXPORT */
+    /* MEDIA PRINT STYLES FOR EXECUTIVE ROSTER & MULTI-PAGE PDF EXPORT */
     @media print {
       @page {
-        size: A4 landscape;
-        margin: 8mm;
+        size: A4 portrait;
+        margin: 10mm 12mm 10mm 12mm;
       }
       *, *::before, *::after {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
       }
-      body {
+      html, body {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
         background: #FFFFFF !important;
         color: #0F172A !important;
+        display: block !important;
+      }
+      .app-layout,
+      .main-viewport,
+      .content-body {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      .tab-view:not(.active) {
+        display: none !important;
+      }
+      .tab-view.active,
+      #view-cockpit.active {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+        position: static !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
       }
       .sidebar,
       .topbar,
@@ -2041,48 +2111,97 @@
       .page-title-bar,
       .kpi-row,
       .filter-panel,
-      .cockpit-scope-actions,
+      .cockpit-controls-container,
       .cockpit-toolbar,
+      .cockpit-scope-actions,
+      .cockpit-card-footer,
+      .btn-cockpit-action,
+      .btn-cockpit-card-action,
       .btn-sidebar-restore,
+      .btn-sidebar-toggle,
       .btn-rankings-toggle,
       #rankingsPanel,
-      #rankingsBackdrop {
+      #rankingsBackdrop,
+      .modal-overlay,
+      .toast-notification {
         display: none !important;
       }
-      .main-viewport {
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
+      .cockpit-print-header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #0F172A;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
       }
-      .content-body {
-        padding: 0 !important;
+      .cockpit-print-logo {
+        height: 28px;
+        width: auto;
       }
-      #view-cockpit {
-        display: block !important;
+      .cockpit-print-title {
+        font-size: 15px;
+        font-weight: 800;
+        color: #0F172A;
+        letter-spacing: -0.3px;
+        margin: 0;
+      }
+      .cockpit-print-subtitle {
+        font-size: 10px;
+        color: #475569;
+        margin-top: 2px;
+      }
+      .cockpit-print-date {
+        font-size: 9px;
+        color: #64748B;
+        text-align: right;
+        line-height: 1.3;
       }
       .cockpit-kpi-row {
         display: grid !important;
         grid-template-columns: repeat(5, 1fr) !important;
         gap: 8px !important;
         margin-bottom: 12px !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
       }
       .cockpit-kpi-card {
         border: 1px solid #CBD5E1 !important;
         box-shadow: none !important;
+        padding: 8px 10px !important;
+      }
+      .cockpit-kpi-val {
+        font-size: 18px !important;
+      }
+      .cockpit-scope-banner {
+        display: block !important;
+        border: 1px solid #CBD5E1 !important;
+        background: #F8FAFC !important;
+        margin-bottom: 12px !important;
+        padding: 8px 12px !important;
+        page-break-after: avoid !important;
+        break-after: avoid !important;
       }
       .cockpit-grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 8px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+        width: 100% !important;
       }
       .cockpit-collab-card {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
         break-inside: avoid !important;
         page-break-inside: avoid !important;
         border: 1px solid #CBD5E1 !important;
+        border-left-width: 4px !important;
         box-shadow: none !important;
-      }
-      .btn-cockpit-card-action {
-        display: none !important;
+        margin-bottom: 6px !important;
+        padding: 8px 12px !important;
+        background: #FFFFFF !important;
       }
     }
   </style>
@@ -2447,6 +2566,21 @@
 
       <!-- VIEW 0: COCKPIT OPERACIONAL -->
       <div id="view-cockpit" class="tab-view active">
+        <!-- Print Header (Exclusively rendered on Print/PDF) -->
+        <div class="cockpit-print-header">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="https://arthwind.com.br/assets/Img/arthwindLogo.png" alt="ArthWind" class="cockpit-print-logo">
+            <div>
+              <div class="cockpit-print-title">ArthWind EHS - Cockpit Operacional de Prontidão de Campo</div>
+              <div class="cockpit-print-subtitle" id="cockpitPrintSubtitle">Segmento: Linha de Frente | Escopo: Geral (Básico)</div>
+            </div>
+          </div>
+          <div class="cockpit-print-date">
+            <strong>Relatório de Mobilização</strong><br>
+            <span id="cockpitPrintDate">Gerado em: 17/09/2026</span>
+          </div>
+        </div>
+
         <!-- Cockpit Executive Summary / KPIs -->
         <div class="cockpit-kpi-row">
           <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores do segmento ativo">
@@ -2511,7 +2645,7 @@
               <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
               <span id="btnCockpitFullscreenText">Ocultar Menu (Print)</span>
             </button>
-            <button class="btn-cockpit-action primary" onclick="printCockpit()" title="Imprimir ou exportar relatório em PDF (A4 Paisagem)">
+            <button class="btn-cockpit-action primary" onclick="printCockpit()" title="Imprimir ou exportar relatório em PDF (Lista Vertical)">
               <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
               <span>Imprimir / PDF</span>
             </button>
@@ -3094,6 +3228,11 @@
     }
 
     function printCockpit() {
+      const elDate = document.getElementById('cockpitPrintDate');
+      if (elDate) {
+        const now = new Date();
+        elDate.innerText = 'Gerado em: ' + now.toLocaleDateString('pt-BR') + ' às ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      }
       window.print();
     }
 
@@ -3914,7 +4053,26 @@
         return a.p.name.localeCompare(b.p.name);
       });
 
-      // 9. Renderizar Cards
+      // 9. Atualizar subtítulo de impressão executiva
+      const elPrintSub = document.getElementById('cockpitPrintSubtitle');
+      if (elPrintSub) {
+        const segLabels = {
+          FRONTLINE: 'Linha de Frente (' + totalActiveSegment + ' colaboradores)',
+          LEADERS: 'Liderança Híbrida (' + totalActiveSegment + ' líderes)',
+          OFFICE: 'Gestão & Office (' + totalActiveSegment + ' colaboradores)',
+          ALL: 'Todos os Colaboradores (' + totalActiveSegment + ' colaboradores)',
+        };
+        const parkLabels = {
+          BASIC: 'Geral (Básico: ASO + BST + NRs)',
+          ART: 'Exige GWO ART',
+          NR33_RESGATE: 'Exige NR-33 Resgate',
+          VESTAS: 'Exige Turbinas Vestas (SIT/ESO)',
+          ELEVADOR: 'Exige Elevador JASO',
+        };
+        elPrintSub.innerText = 'Segmento: ' + (segLabels[cockpitSegment] || cockpitSegment) + ' | Escopo: ' + (parkLabels[cockpitParkScope] || cockpitParkScope) + ' | Listando: ' + filteredCards.length + ' colaboradores';
+      }
+
+      // 10. Renderizar Cards
       const grid = document.getElementById('cockpitCardsGrid');
       if (!grid) return;
 
