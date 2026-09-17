@@ -2181,28 +2181,29 @@ export function buildDashboardHtml(
         align-items: center;
         border-bottom: 2px solid #0F172A;
         padding-bottom: 8px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         page-break-after: avoid !important;
         break-after: avoid !important;
       }
       .cockpit-print-logo {
-        height: 28px;
+        height: 36px;
         width: auto;
+        object-fit: contain;
       }
       .cockpit-print-title {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 800;
         color: #0F172A;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.2px;
         margin: 0;
       }
       .cockpit-print-subtitle {
-        font-size: 10px;
+        font-size: 9.5px;
         color: #475569;
         margin-top: 2px;
       }
       .cockpit-print-date {
-        font-size: 9px;
+        font-size: 8.5px;
         color: #64748B;
         text-align: right;
         line-height: 1.3;
@@ -2210,32 +2211,65 @@ export function buildDashboardHtml(
       .cockpit-kpi-row {
         display: grid !important;
         grid-template-columns: repeat(5, 1fr) !important;
-        gap: 8px !important;
-        margin-bottom: 12px !important;
+        gap: 6px !important;
+        margin-bottom: 10px !important;
         page-break-after: avoid !important;
         break-after: avoid !important;
       }
       .cockpit-kpi-card {
         border: 1px solid #CBD5E1 !important;
+        border-radius: 6px !important;
         box-shadow: none !important;
-        padding: 8px 10px !important;
+        padding: 6px 8px !important;
+      }
+      .cockpit-kpi-top {
+        min-height: 22px !important;
+        margin-bottom: 2px !important;
+        gap: 3px !important;
+      }
+      .cockpit-kpi-label {
+        font-size: 8px !important;
+        letter-spacing: 0 !important;
+        line-height: 1.15 !important;
+      }
+      .cockpit-kpi-badge {
+        font-size: 7.5px !important;
+        padding: 1px 4px !important;
+      }
+      .cockpit-kpi-icon {
+        display: none !important;
       }
       .cockpit-kpi-val {
-        font-size: 18px !important;
+        font-size: 16px !important;
+        margin-bottom: 2px !important;
+      }
+      .cockpit-kpi-sub {
+        font-size: 7.5px !important;
+        line-height: 1.1 !important;
       }
       .cockpit-scope-banner {
         display: block !important;
-        border: 1px solid #CBD5E1 !important;
+        border: 1px solid #E2E8F0 !important;
+        border-left: 3.5px solid var(--brand-blue) !important;
         background: #F8FAFC !important;
-        margin-bottom: 12px !important;
-        padding: 8px 12px !important;
+        margin-bottom: 10px !important;
+        padding: 6px 10px !important;
         page-break-after: avoid !important;
         break-after: avoid !important;
+      }
+      .cockpit-scope-title {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        margin-bottom: 2px !important;
+      }
+      .cockpit-scope-desc {
+        font-size: 8.5px !important;
+        line-height: 1.25 !important;
       }
       .cockpit-grid {
         display: flex !important;
         flex-direction: column !important;
-        gap: 6px !important;
+        gap: 5px !important;
         width: 100% !important;
       }
       .cockpit-collab-card {
@@ -2245,12 +2279,82 @@ export function buildDashboardHtml(
         box-sizing: border-box !important;
         break-inside: avoid !important;
         page-break-inside: avoid !important;
-        border: 1px solid #CBD5E1 !important;
-        border-left-width: 4px !important;
+        border: 1px solid #E2E8F0 !important;
+        border-left-width: 3.5px !important;
         box-shadow: none !important;
-        margin-bottom: 6px !important;
-        padding: 8px 12px !important;
+        margin-bottom: 5px !important;
+        padding: 6px 10px !important;
         background: #FFFFFF !important;
+        border-radius: 6px !important;
+      }
+      .cockpit-collab-header {
+        margin-bottom: 3px !important;
+      }
+      .cockpit-collab-name {
+        font-size: 11px !important;
+      }
+      .cockpit-collab-role {
+        font-size: 8.5px !important;
+      }
+      .cockpit-status-badge {
+        font-size: 8px !important;
+        padding: 2px 6px !important;
+      }
+      .cockpit-progress-wrap {
+        margin: 3px 0 !important;
+      }
+      .cockpit-progress-label {
+        font-size: 8px !important;
+        margin-bottom: 2px !important;
+      }
+      .cockpit-progress-bar {
+        height: 3px !important;
+      }
+      .cockpit-tag {
+        font-size: 7.5px !important;
+        padding: 1.5px 5px !important;
+        border-radius: 3px !important;
+      }
+      .cockpit-tags-row {
+        gap: 3px !important;
+        margin-top: 3px !important;
+      }
+      .cockpit-park-eval-row {
+        margin-top: 3px !important;
+        padding-top: 3px !important;
+      }
+      .cockpit-park-pill {
+        font-size: 7.5px !important;
+        padding: 1px 4px !important;
+      }
+      .cockpit-print-footer {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid #CBD5E1;
+        padding-top: 6px;
+        margin-top: 12px;
+        font-size: 8px;
+        color: #64748B;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .table-container {
+        overflow: visible !important;
+        max-height: none !important;
+        height: auto !important;
+      }
+      .matrix-table,
+      .rpo-table,
+      .storz-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+      }
+      .matrix-table tr,
+      .rpo-table tr,
+      .storz-table tr {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
       }
     }
   </style>
@@ -2261,7 +2365,7 @@ export function buildDashboardHtml(
   <aside class="sidebar">
     <div class="sidebar-brand">
       <div class="brand-logo-wrap">
-        <img src="https://arthwind.com.br/assets/Img/arthwindLogo.png" alt="ArthWind" class="brand-logo-img">
+        <img src="arthwindLogo.png" onerror="this.onerror=null;this.src='https://arthwind.com.br/assets/Img/arthwindLogo.png'" alt="ArthWind" class="brand-logo-img">
       </div>
       <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" onclick="toggleSidebar()" title="Recolher / Expandir Menu Lateral (Alt+S)">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -2618,7 +2722,7 @@ export function buildDashboardHtml(
         <!-- Print Header (Exclusively rendered on Print/PDF) -->
         <div class="cockpit-print-header">
           <div style="display:flex;align-items:center;gap:12px;">
-            <img src="https://arthwind.com.br/assets/Img/arthwindLogo.png" alt="ArthWind" class="cockpit-print-logo">
+            <img src="arthwindLogo.png" onerror="this.onerror=null;this.src='https://arthwind.com.br/assets/Img/arthwindLogo.png'" alt="ArthWind" class="cockpit-print-logo">
             <div>
               <div class="cockpit-print-title">ArthWind EHS - Cockpit Operacional de Prontidão de Campo</div>
               <div class="cockpit-print-subtitle" id="cockpitPrintSubtitle">Segmento: Linha de Frente | Escopo: Geral (Básico)</div>
@@ -2760,6 +2864,12 @@ export function buildDashboardHtml(
         <!-- Cards Container -->
         <div class="cockpit-grid" id="cockpitCardsGrid">
           <!-- Dynamically populated by renderCockpit() -->
+        </div>
+
+        <!-- Print Footer (Exclusively rendered on Print/PDF) -->
+        <div class="cockpit-print-footer">
+          <span>ArthWind EHS Audition System &bull; Relatório Executivo de Prontidão de Campo</span>
+          <span id="cockpitPrintFooterMeta">Documento Interno Operacional &bull; Uso Restrito</span>
         </div>
       </div>
 
@@ -3277,10 +3387,16 @@ export function buildDashboardHtml(
     }
 
     function printCockpit() {
+      const now = new Date();
+      const dateStr = now.toLocaleDateString('pt-BR');
+      const timeStr = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
       const elDate = document.getElementById('cockpitPrintDate');
       if (elDate) {
-        const now = new Date();
-        elDate.innerText = 'Gerado em: ' + now.toLocaleDateString('pt-BR') + ' às ' + now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+        elDate.innerText = 'Gerado em: ' + dateStr + ' às ' + timeStr;
+      }
+      const elFooter = document.getElementById('cockpitPrintFooterMeta');
+      if (elFooter) {
+        elFooter.innerText = 'Relatório de Mobilização • ' + dateStr + ' ' + timeStr + ' • Uso Interno e Confidencial';
       }
       window.print();
     }
@@ -4128,7 +4244,16 @@ export function buildDashboardHtml(
           VESTAS: 'Exige Turbinas Vestas (SIT/ESO)',
           ELEVADOR: 'Exige Elevador JASO',
         };
-        elPrintSub.innerText = 'Segmento: ' + (segLabels[cockpitSegment] || cockpitSegment) + ' | Escopo: ' + (parkLabels[cockpitParkScope] || cockpitParkScope) + ' | Listando: ' + filteredCards.length + ' colaboradores';
+        const statusLabels = {
+          ALL: 'Todos os Status',
+          APTO: 'Apenas Colaboradores Aptos',
+          ALERTA: 'Apenas Colaboradores em Alerta',
+          BLOQUEADO: 'Apenas Colaboradores Bloqueados',
+          STORZ: 'Apenas Colaboradores em Treinamento',
+        };
+        const statusPart = cockpitStatusFilter !== 'ALL' ? ' | Status: ' + (statusLabels[cockpitStatusFilter] || cockpitStatusFilter) : '';
+        const searchPart = cockpitSearchQuery ? ' | Busca: "' + cockpitSearchQuery + '"' : '';
+        elPrintSub.innerText = 'Segmento: ' + (segLabels[cockpitSegment] || cockpitSegment) + ' | Escopo: ' + (parkLabels[cockpitParkScope] || cockpitParkScope) + statusPart + searchPart + ' | Listando: ' + filteredCards.length + ' colaboradores';
       }
 
       // 10. Renderizar Cards

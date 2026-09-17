@@ -130,10 +130,12 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('overflow-y: auto')
     expect(html).toContain('#view-cockpit::-webkit-scrollbar')
 
-    // Cabecalho executivo de impressao
+    // Cabecalho executivo e rodape de impressao
     expect(html).toContain('class="cockpit-print-header"')
     expect(html).toContain('id="cockpitPrintSubtitle"')
     expect(html).toContain('id="cockpitPrintDate"')
+    expect(html).toContain('class="cockpit-print-footer"')
+    expect(html).toContain('id="cockpitPrintFooterMeta"')
 
     // Lista vertical e quebra de pagina protegida no print
     expect(html).toContain('.cockpit-grid {')
