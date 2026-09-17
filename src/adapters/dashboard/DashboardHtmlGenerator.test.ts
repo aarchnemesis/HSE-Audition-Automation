@@ -75,6 +75,8 @@ describe('DashboardHtmlGenerator', () => {
   it('deve incluir o card de KPI executivo e escopo operacional', () => {
     const html = buildDashboardHtml(sampleRecords)
     expect(html).toContain('id="cockpitKpiTotal"')
+    expect(html).toContain('Colaboradores Ativos')
+    expect(html).toContain('Linha de frente')
     expect(html).toContain('id="cockpitKpiApto"')
     expect(html).toContain('id="cockpitKpiAlerta"')
     expect(html).toContain('id="cockpitKpiBloqueado"')

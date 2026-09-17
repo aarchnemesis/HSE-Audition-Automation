@@ -2597,13 +2597,13 @@
 
         <!-- Cockpit Executive Summary / KPIs -->
         <div class="cockpit-kpi-row">
-          <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores do segmento ativo">
+          <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores ativos do segmento">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label">Equipe Ativa</span>
+              <span class="cockpit-kpi-label">Colaboradores Ativos</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiTotal">0</div>
-            <div class="cockpit-kpi-sub">Total no segmento</div>
+            <div class="cockpit-kpi-sub" id="cockpitKpiTotalSub">Linha de frente</div>
           </div>
 
           <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores aptos para mobilização imediata">
@@ -4013,6 +4013,13 @@
       // 5. Atualizar KPIs
       const elTotal = document.getElementById('cockpitKpiTotal');
       if (elTotal) elTotal.innerText = totalActiveSegment;
+      const elTotalSub = document.getElementById('cockpitKpiTotalSub');
+      if (elTotalSub) {
+        if (cockpitSegment === 'LEADERS') elTotalSub.innerText = 'Liderança híbrida';
+        else if (cockpitSegment === 'OFFICE') elTotalSub.innerText = 'Gestão & office';
+        else if (cockpitSegment === 'ALL') elTotalSub.innerText = 'Base completa';
+        else elTotalSub.innerText = 'Linha de frente';
+      }
       const elApto = document.getElementById('cockpitKpiApto');
       if (elApto) elApto.innerText = (cockpitSegment === 'OFFICE') ? isentoCount : aptoCount;
       const elAptoRate = document.getElementById('cockpitKpiAptoRate');
