@@ -1502,6 +1502,531 @@ export function buildDashboardHtml(
     .modal-head h3 { font-size: 14px; font-weight: 700; }
     .modal-close { background: none; border: none; color: #FFF; font-size: 18px; cursor: pointer; }
     .modal-body { padding: 16px 20px; overflow-y: auto; flex: 1; }
+
+    /* SIDEBAR FULLY HIDDEN (PRESENTATION & PRINT MODE) */
+    body.sidebar-fully-hidden .sidebar {
+      width: 0 !important;
+      min-width: 0 !important;
+      max-width: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-right: none !important;
+      overflow: hidden !important;
+      display: none !important;
+    }
+    body.sidebar-fully-hidden .main-viewport {
+      width: 100vw !important;
+      max-width: 100vw !important;
+    }
+    #btnSidebarRestore {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: all 0.15s ease;
+      margin-right: 8px;
+    }
+    #btnSidebarRestore:hover {
+      background: #1D4ED8;
+      transform: translateY(-1px);
+    }
+    body.sidebar-fully-hidden #btnSidebarRestore {
+      display: inline-flex !important;
+    }
+
+    /* COCKPIT OPERACIONAL - EXECUTIVE STYLES */
+    .cockpit-kpi-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 1200px) {
+      .cockpit-kpi-row { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .cockpit-kpi-row { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .cockpit-kpi-row { grid-template-columns: 1fr; }
+    }
+
+    .cockpit-kpi-card {
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.15s ease;
+    }
+    .cockpit-kpi-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    .cockpit-kpi-card.active {
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+    }
+    .cockpit-kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+    .cockpit-kpi-card.total::before { background: #2563EB; }
+    .cockpit-kpi-card.apto::before { background: #10B981; }
+    .cockpit-kpi-card.alerta::before { background: #F59E0B; }
+    .cockpit-kpi-card.bloqueado::before { background: #EF4444; }
+    .cockpit-kpi-card.storz::before { background: #8B5CF6; }
+
+    .cockpit-kpi-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .cockpit-kpi-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+    .cockpit-kpi-icon {
+      color: var(--text-muted);
+      opacity: 0.8;
+    }
+    .cockpit-kpi-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+    }
+    .cockpit-kpi-val {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 4px;
+      color: #0F172A;
+    }
+    .cockpit-kpi-sub {
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    .cockpit-scope-banner {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid var(--brand-blue);
+      border-radius: 8px;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .cockpit-scope-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      max-width: 700px;
+    }
+    .cockpit-scope-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1E293B;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cockpit-scope-desc {
+      font-size: 11px;
+      color: #64748B;
+      line-height: 1.4;
+    }
+    .cockpit-scope-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-cockpit-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #FFFFFF;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .btn-cockpit-action:hover {
+      background: #F1F5F9;
+      border-color: #94A3B8;
+      color: #0F172A;
+    }
+    .btn-cockpit-action.primary {
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
+      color: #FFFFFF;
+    }
+    .btn-cockpit-action.primary:hover {
+      background: #1D4ED8;
+      border-color: #1D4ED8;
+    }
+
+    .cockpit-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .cockpit-chips-group {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .cockpit-filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+    .cockpit-chip {
+      background: #FFFFFF;
+      border: 1px solid var(--chip-border);
+      border-radius: 16px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .cockpit-chip:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+    }
+    .cockpit-chip.active {
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
+      color: #FFFFFF;
+    }
+    .cockpit-chip.chip-apto.active {
+      background: #059669;
+      border-color: #059669;
+      color: #FFFFFF;
+    }
+    .cockpit-chip.chip-alerta.active {
+      background: #D97706;
+      border-color: #D97706;
+      color: #FFFFFF;
+    }
+    .cockpit-chip.chip-bloqueado.active {
+      background: #DC2626;
+      border-color: #DC2626;
+      color: #FFFFFF;
+    }
+    .cockpit-chip.chip-storz.active {
+      background: #7C3AED;
+      border-color: #7C3AED;
+      color: #FFFFFF;
+    }
+
+    .cockpit-search-wrap {
+      flex: 1;
+      max-width: 320px;
+      min-width: 200px;
+    }
+    .cockpit-search-box {
+      width: 100%;
+      padding: 6px 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      font-size: 11px;
+      background: #FFFFFF;
+      color: #0F172A;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+    .cockpit-search-box:focus {
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .cockpit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 12px;
+    }
+    .cockpit-collab-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #10B981;
+      border-radius: 8px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .cockpit-collab-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .cockpit-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .cockpit-collab-avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .cockpit-collab-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0F172A;
+      line-height: 1.2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .cockpit-collab-meta {
+      font-size: 10px;
+      color: #64748B;
+      margin-top: 2px;
+    }
+
+    .cockpit-status-badge {
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .badge-cockpit-apto {
+      background: #ECFDF5;
+      color: #047857;
+      border: 1px solid #A7F3D0;
+    }
+    .badge-cockpit-alerta {
+      background: #FFFBEB;
+      color: #B45309;
+      border: 1px solid #FDE68A;
+    }
+    .badge-cockpit-bloqueado {
+      background: #FEF2F2;
+      color: #B91C1C;
+      border: 1px solid #FECACA;
+    }
+    .badge-cockpit-storz {
+      background: #F5F3FF;
+      color: #6D28D9;
+      border: 1px solid #DDD6FE;
+    }
+
+    .cockpit-progress-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .cockpit-progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #475569;
+    }
+    .cockpit-progress-bar {
+      height: 6px;
+      background: #F1F5F9;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .cockpit-progress-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.3s ease;
+    }
+
+    .cockpit-card-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .cockpit-card-pill {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      line-height: 1.3;
+    }
+    .cockpit-card-pill.pill-danger {
+      background: #FEF2F2;
+      color: #DC2626;
+      border: 1px solid #FCA5A5;
+    }
+    .cockpit-card-pill.pill-warning {
+      background: #FFFBEB;
+      color: #D97706;
+      border: 1px solid #FCD34D;
+    }
+    .cockpit-card-pill.pill-storz {
+      background: #F5F3FF;
+      color: #7C3AED;
+      border: 1px solid #DDD6FE;
+    }
+    .cockpit-card-ok-msg {
+      font-size: 11px;
+      color: #059669;
+      background: #ECFDF5;
+      border: 1px solid #A7F3D0;
+      border-radius: 4px;
+      padding: 6px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+    }
+    .cockpit-card-storz-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .cockpit-card-footer {
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px solid #F1F5F9;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .btn-cockpit-card-action {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      color: #475569;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .btn-cockpit-card-action:hover {
+      background: #F1F5F9;
+      border-color: #CBD5E1;
+      color: #0F172A;
+    }
+
+    /* MEDIA PRINT STYLES FOR SCREENSHOT / PDF EXPORT */
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 8mm;
+      }
+      *, *::before, *::after {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        background: #FFFFFF !important;
+        color: #0F172A !important;
+      }
+      .sidebar,
+      .topbar,
+      .freshness-bar,
+      .page-title-bar,
+      .kpi-row,
+      .filter-panel,
+      .cockpit-scope-actions,
+      .cockpit-toolbar,
+      .btn-sidebar-restore,
+      .btn-rankings-toggle,
+      #rankingsPanel,
+      #rankingsBackdrop {
+        display: none !important;
+      }
+      .main-viewport {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .content-body {
+        padding: 0 !important;
+      }
+      #view-cockpit {
+        display: block !important;
+      }
+      .cockpit-kpi-row {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+      }
+      .cockpit-kpi-card {
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+      }
+      .cockpit-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+      }
+      .cockpit-collab-card {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+      }
+      .btn-cockpit-card-action {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1519,7 +2044,14 @@ export function buildDashboardHtml(
 
     <div class="nav-section">
       <div class="nav-title">EHS &amp; Treinamentos</div>
-      <div class="nav-item active" onclick="switchNav('matrix')" title="Skill Matrix (DO)">
+      <div class="nav-item active" onclick="switchNav('cockpit')" title="Cockpit Operacional (Prontidão de Campo)">
+        <div class="nav-item-title">
+          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span>
+          <span>Cockpit Operacional</span>
+        </div>
+      </div>
+
+      <div class="nav-item" onclick="switchNav('matrix')" title="Skill Matrix (DO)">
         <div class="nav-item-title">
           <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 8v8"/><path d="M14 8v8"/><path d="M18 8v8"/></svg></span>
           <span>Skill Matrix (DO)</span>
@@ -1556,16 +2088,21 @@ export function buildDashboardHtml(
     <!-- TOPBAR -->
     <div class="topbar">
       <div class="breadcrumb-wrap">
+        <button class="btn-sidebar-restore" id="btnSidebarRestore" onclick="toggleSidebarFull()" title="Restaurar Menu Lateral (Alt+S)">
+          <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+          <span>Expandir Menu</span>
+        </button>
         <button class="btn-sidebar-toggle" onclick="toggleSidebar()" title="Recolher / Expandir Menu Lateral (Alt+S)">
           <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
         </button>
-        <div class="breadcrumb-pill">ArthWind &gt; Skill Matrix &amp; EHS Compliance</div>
+        <div class="breadcrumb-pill">ArthWind &gt; Cockpit Operacional &amp; EHS Compliance</div>
       </div>
 
       <div class="topbar-filters">
         <div class="filter-group">
           <span class="filter-label">Visualização:</span>
-          <span class="pill-opt active" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
+          <span class="pill-opt active" onclick="switchNav('cockpit')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Cockpit Operacional</span>
+          <span class="pill-opt" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
           <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
           <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#EF4444;display:none;">0</span></span>
           <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
@@ -1613,8 +2150,8 @@ export function buildDashboardHtml(
     <!-- PAGE TITLE BAR -->
     <div class="page-title-bar">
       <div>
-        <h2 id="pageHeading">Matriz de Qualificação &amp; Treinamentos Normativos (DO)</h2>
-        <p>Acompanhamento executivo de conformidade legal de NRs, GWO BST, ASO e reciclagens por colaborador de campo</p>
+        <h2 id="pageHeading">Cockpit Operacional de Prontidão da Equipe de Campo</h2>
+        <p id="pageSubheading">Status de mobilização técnica e conformidade de NRs por colaborador (ASO e CNH desconsiderados)</p>
       </div>
       <div style="display:flex; align-items:center; gap:10px;">
         <button class="btn-rankings-toggle" id="rankingsToggleBtn" onclick="toggleRankingsPanel()" title="Alternar visualização dos rankings executivos e gargalos operacionais">
@@ -1850,8 +2387,103 @@ export function buildDashboardHtml(
         </div>
       </div>
 
+      <!-- VIEW 0: COCKPIT OPERACIONAL -->
+      <div id="view-cockpit" class="tab-view active">
+        <!-- Cockpit Executive Summary / KPIs -->
+        <div class="cockpit-kpi-row">
+          <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores da operação">
+            <div class="cockpit-kpi-top">
+              <span class="cockpit-kpi-label">Equipe de Campo</span>
+              <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
+            </div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiTotal">0</div>
+            <div class="cockpit-kpi-sub">Total de colaboradores</div>
+          </div>
+
+          <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores 100% aptos para mobilização imediata">
+            <div class="cockpit-kpi-top">
+              <span class="cockpit-kpi-label" style="color:#059669;">100% Aptos (Campo)</span>
+              <span class="cockpit-kpi-badge" id="cockpitKpiAptoRate" style="background:#D1FAE5;color:#065F46;">0%</span>
+            </div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiApto" style="color:#059669;">0</div>
+            <div class="cockpit-kpi-sub">NRs e GWO válidos</div>
+          </div>
+
+          <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
+            <div class="cockpit-kpi-top">
+              <span class="cockpit-kpi-label" style="color:#D97706;">Em Alerta (&le;30d)</span>
+              <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            </div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#D97706;">0</div>
+            <div class="cockpit-kpi-sub">Reciclagens próximas</div>
+          </div>
+
+          <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional (vencido ou ausente)">
+            <div class="cockpit-kpi-top">
+              <span class="cockpit-kpi-label" style="color:#DC2626;">Bloqueados (Pendência)</span>
+              <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
+            </div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiBloqueado" style="color:#DC2626;">0</div>
+            <div class="cockpit-kpi-sub">Treinamento expirado/falta</div>
+          </div>
+
+          <div class="cockpit-kpi-card storz" onclick="filterCockpitStatus('STORZ')" style="cursor:pointer;" title="Filtrar colaboradores cursando ou matriculados no LMS Storz">
+            <div class="cockpit-kpi-top">
+              <span class="cockpit-kpi-label" style="color:#7C3AED;">Em Treinamento (Storz)</span>
+              <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            </div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiStorz" style="color:#7C3AED;">0</div>
+            <div class="cockpit-kpi-sub">Matrículas ativas no LMS</div>
+          </div>
+        </div>
+
+        <!-- Cockpit Banner / Scope Clarification & Actions -->
+        <div class="cockpit-scope-banner">
+          <div class="cockpit-scope-info">
+            <div class="cockpit-scope-title">
+              <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Critério Operacional de Prontidão de Campo</span>
+            </div>
+            <div class="cockpit-scope-desc">
+              Avaliação estrita de normas técnicas de segurança (NRs 10, 11, 12, 18, 20/28, 21, 22, 34, GWO BST, LOTO). 
+              <strong>ASO (01) e CNH (08) estão desconsiderados</strong> deste cálculo para foco exclusivo em capacitação técnica operacional.
+            </div>
+          </div>
+          <div class="cockpit-scope-actions">
+            <button class="btn-cockpit-action" onclick="toggleSidebarFull()" id="btnCockpitFullscreen" title="Ocultar menu lateral completamente para tirar print ou focar nos cards (Alt+S)">
+              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              <span id="btnCockpitFullscreenText">Ocultar Menu (Print)</span>
+            </button>
+            <button class="btn-cockpit-action primary" onclick="printCockpit()" title="Imprimir ou exportar relatório em PDF (A4 Paisagem)">
+              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              <span>Imprimir / PDF</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cockpit Quick Toolbar -->
+        <div class="cockpit-toolbar">
+          <div class="cockpit-chips-group">
+            <span class="cockpit-filter-label">Filtrar por Status:</span>
+            <button class="cockpit-chip active" id="cockpitChip-ALL" onclick="filterCockpitStatus('ALL')">Todos (<span id="cockpitChipTotalCount">0</span>)</button>
+            <button class="cockpit-chip chip-apto" id="cockpitChip-APTO" onclick="filterCockpitStatus('APTO')">Aptos (<span id="cockpitChipAptoCount">0</span>)</button>
+            <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Em Alerta (<span id="cockpitChipAlertaCount">0</span>)</button>
+            <button class="cockpit-chip chip-bloqueado" id="cockpitChip-BLOQUEADO" onclick="filterCockpitStatus('BLOQUEADO')">Bloqueados (<span id="cockpitChipBloqueadoCount">0</span>)</button>
+            <button class="cockpit-chip chip-storz" id="cockpitChip-STORZ" onclick="filterCockpitStatus('STORZ')">Em Treinamento (<span id="cockpitChipStorzCount">0</span>)</button>
+          </div>
+          <div class="cockpit-search-wrap">
+            <input type="text" id="cockpitSearchInput" class="cockpit-search-box" placeholder="Buscar por colaborador, cargo ou setor..." oninput="onCockpitSearch(this.value)">
+          </div>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cockpit-grid" id="cockpitCardsGrid">
+          <!-- Dynamically populated by renderCockpit() -->
+        </div>
+      </div>
+
       <!-- VIEW 1: MATRIX -->
-      <div id="view-matrix" class="tab-view active">
+      <div id="view-matrix" class="tab-view">
         <div class="card">
           <div class="table-container">
             <table class="matrix-table" id="matrixTable">
@@ -2348,11 +2980,30 @@ export function buildDashboardHtml(
     function toggleSidebar() {
       const sidebar = document.querySelector('.sidebar');
       if (!sidebar) return;
+      if (document.body.classList.contains('sidebar-fully-hidden')) {
+        toggleSidebarFull();
+        return;
+      }
       const isCollapsed = sidebar.classList.toggle('collapsed');
       localStorage.setItem('hse_sidebar_collapsed', isCollapsed ? 'true' : 'false');
     }
 
-    if (localStorage.getItem('hse_sidebar_collapsed') === 'true') {
+    function toggleSidebarFull() {
+      const isHidden = document.body.classList.toggle('sidebar-fully-hidden');
+      localStorage.setItem('hse_sidebar_fully_hidden', isHidden ? 'true' : 'false');
+      const btn = document.getElementById('btnCockpitFullscreenText');
+      if (btn) btn.innerText = isHidden ? 'Restaurar Menu' : 'Ocultar Menu (Print)';
+    }
+
+    function printCockpit() {
+      window.print();
+    }
+
+    if (localStorage.getItem('hse_sidebar_fully_hidden') === 'true') {
+      document.body.classList.add('sidebar-fully-hidden');
+      const btn = document.getElementById('btnCockpitFullscreenText');
+      if (btn) btn.innerText = 'Restaurar Menu';
+    } else if (localStorage.getItem('hse_sidebar_collapsed') === 'true') {
       const sidebar = document.querySelector('.sidebar');
       if (sidebar) sidebar.classList.add('collapsed');
     }
@@ -2360,7 +3011,7 @@ export function buildDashboardHtml(
     window.addEventListener('keydown', (e) => {
       if (e.altKey && (e.key === 's' || e.key === 'S')) {
         e.preventDefault();
-        toggleSidebar();
+        toggleSidebarFull();
       } else if (e.key === 'Escape') {
         const panel = document.getElementById('rankingsPanel');
         if (panel && panel.classList.contains('show')) {
@@ -2377,7 +3028,7 @@ export function buildDashboardHtml(
       }
     });
 
-    let currentViewKey = 'matrix';
+    let currentViewKey = 'cockpit';
     let activePresetId = null;
 
     const PRESETS = {
@@ -2746,7 +3397,7 @@ export function buildDashboardHtml(
       document.querySelectorAll('.topbar .pill-opt').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
 
-      const views = ['matrix', 'table', 'rpo', 'storz'];
+      const views = ['cockpit', 'matrix', 'table', 'rpo', 'storz'];
       const idx = views.indexOf(viewKey);
 
       const navs = document.querySelectorAll('.sidebar .nav-item');
@@ -2759,12 +3410,30 @@ export function buildDashboardHtml(
       if (view) view.classList.add('active');
 
       const heading = document.getElementById('pageHeading');
+      const pageSub = document.getElementById('pageSubheading');
       if (heading) {
-        if (viewKey === 'matrix') heading.innerText = 'Matriz de Qualificação & Treinamentos Normativos (DO)';
-        else if (viewKey === 'table') heading.innerText = 'Gestão Analítica de Pendências & Conformidade EHS';
-        else if (viewKey === 'rpo') heading.innerText = 'Auditoria RPO: Fontes Confiáveis (Drive + Storz) vs Smartsheet';
-        else if (viewKey === 'storz') heading.innerText = 'Painel de Gestão e Monitoramento de Treinamentos Storz';
+        if (viewKey === 'cockpit') {
+          heading.innerText = 'Cockpit Operacional de Prontidão da Equipe de Campo';
+          if (pageSub) pageSub.innerText = 'Status de mobilização técnica e conformidade de NRs por colaborador (ASO e CNH desconsiderados)';
+        } else if (viewKey === 'matrix') {
+          heading.innerText = 'Matriz de Qualificação & Treinamentos Normativos (DO)';
+          if (pageSub) pageSub.innerText = 'Acompanhamento executivo de conformidade legal de NRs, GWO BST, ASO e reciclagens por colaborador de campo';
+        } else if (viewKey === 'table') {
+          heading.innerText = 'Gestão Analítica de Pendências & Conformidade EHS';
+          if (pageSub) pageSub.innerText = 'Tabela analítica detalhada com filtros dinâmicos por documento, modalidade e status';
+        } else if (viewKey === 'rpo') {
+          heading.innerText = 'Auditoria RPO: Fontes Confiáveis (Drive + Storz) vs Smartsheet';
+          if (pageSub) pageSub.innerText = 'Identificação de divergências de datas, ausências e erros de digitação entre bases';
+        } else if (viewKey === 'storz') {
+          heading.innerText = 'Painel de Gestão e Monitoramento de Treinamentos Storz';
+          if (pageSub) pageSub.innerText = 'Acompanhamento de matrículas, cursos em andamento e histórico de capacitações';
+        }
       }
+
+      const globalKpis = document.querySelector('.kpi-row');
+      const globalOmniBar = document.querySelector('.omni-bar');
+      if (globalKpis) globalKpis.style.display = (viewKey === 'cockpit') ? 'none' : 'grid';
+      if (globalOmniBar) globalOmniBar.style.display = (viewKey === 'cockpit') ? 'none' : 'flex';
 
       renderPresets(viewKey);
 
@@ -2856,10 +3525,250 @@ export function buildDashboardHtml(
 
       lastFilteredPeople = filteredPeople;
 
+      renderCockpit(filteredPeople);
       renderMatrix(filteredPeople, docF);
       renderTable(filteredPeople, q, st, docF, modF);
       renderRpoTable();
       renderStorz(filteredPeople);
+    }
+
+    let cockpitStatusFilter = 'ALL';
+    let cockpitSearchQuery = '';
+
+    function filterCockpitStatus(status) {
+      cockpitStatusFilter = status;
+      document.querySelectorAll('.cockpit-chip').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.cockpit-kpi-card').forEach(k => k.classList.remove('active'));
+
+      const chip = document.getElementById('cockpitChip-' + status);
+      if (chip) chip.classList.add('active');
+
+      const kpi = document.querySelector('.cockpit-kpi-card.' + (status === 'ALL' ? 'total' : status.toLowerCase()));
+      if (kpi) kpi.classList.add('active');
+
+      renderCockpit(lastFilteredPeople);
+    }
+
+    function onCockpitSearch(val) {
+      cockpitSearchQuery = (val || '').trim();
+      renderCockpit(lastFilteredPeople);
+    }
+
+    function getCollabOperationalHealth(p) {
+      // EXCLUDE ASO (01) and CNH (08)
+      const opRecords = p.records.filter(r => r.docCode !== '01' && r.docCode !== '08');
+      
+      const totalOp = opRecords.length;
+      let compliantCount = 0;
+      const expiredItems = [];
+      const missingItems = [];
+      const alertItems = [];
+      const storzActiveItems = [];
+
+      opRecords.forEach(r => {
+        if (isConforme(r.statusEHS)) {
+          compliantCount++;
+        } else if (isAVencer(r.statusEHS)) {
+          alertItems.push(r);
+          compliantCount++;
+        } else if (isVencido(r.statusEHS)) {
+          expiredItems.push(r);
+        } else if (isAusente(r.statusEHS)) {
+          missingItems.push(r);
+        }
+
+        if (isStorzActive(r)) {
+          storzActiveItems.push(r);
+        }
+      });
+
+      const complianceRate = totalOp > 0 ? Math.round((compliantCount / totalOp) * 100) : 100;
+
+      let status = 'APTO';
+      if (expiredItems.length > 0 || missingItems.length > 0) {
+        status = 'BLOQUEADO';
+      } else if (alertItems.length > 0) {
+        status = 'ALERTA';
+      }
+
+      const hasStorz = storzActiveItems.length > 0;
+
+      return {
+        status,
+        hasStorz,
+        complianceRate,
+        totalOp,
+        compliantCount,
+        expiredItems,
+        missingItems,
+        alertItems,
+        storzActiveItems
+      };
+    }
+
+    function renderCockpit(peopleList) {
+      const totalPeople = peopleList.length;
+      let aptoCount = 0;
+      let alertaCount = 0;
+      let bloqueadoCount = 0;
+      let storzCount = 0;
+
+      const evaluatedPeople = peopleList.map(p => {
+        const health = getCollabOperationalHealth(p);
+        if (health.status === 'APTO') aptoCount++;
+        else if (health.status === 'ALERTA') alertaCount++;
+        else if (health.status === 'BLOQUEADO') bloqueadoCount++;
+        if (health.hasStorz) storzCount++;
+        return { p, health };
+      });
+
+      const aptoRate = totalPeople > 0 ? Math.round((aptoCount / totalPeople) * 100) : 0;
+
+      const elTotal = document.getElementById('cockpitKpiTotal');
+      if (elTotal) elTotal.innerText = totalPeople;
+      const elApto = document.getElementById('cockpitKpiApto');
+      if (elApto) elApto.innerText = aptoCount;
+      const elAptoRate = document.getElementById('cockpitKpiAptoRate');
+      if (elAptoRate) elAptoRate.innerText = aptoRate + '%';
+      const elAlerta = document.getElementById('cockpitKpiAlerta');
+      if (elAlerta) elAlerta.innerText = alertaCount;
+      const elBloqueado = document.getElementById('cockpitKpiBloqueado');
+      if (elBloqueado) elBloqueado.innerText = bloqueadoCount;
+      const elStorz = document.getElementById('cockpitKpiStorz');
+      if (elStorz) elStorz.innerText = storzCount;
+
+      const chipTotal = document.getElementById('cockpitChipTotalCount');
+      if (chipTotal) chipTotal.innerText = totalPeople;
+      const chipApto = document.getElementById('cockpitChipAptoCount');
+      if (chipApto) chipApto.innerText = aptoCount;
+      const chipAlerta = document.getElementById('cockpitChipAlertaCount');
+      if (chipAlerta) chipAlerta.innerText = alertaCount;
+      const chipBloqueado = document.getElementById('cockpitChipBloqueadoCount');
+      if (chipBloqueado) chipBloqueado.innerText = bloqueadoCount;
+      const chipStorz = document.getElementById('cockpitChipStorzCount');
+      if (chipStorz) chipStorz.innerText = storzCount;
+
+      const qNorm = norm(cockpitSearchQuery);
+      const filteredCards = evaluatedPeople.filter(({ p, health }) => {
+        if (qNorm) {
+          const matches = norm(p.name).includes(qNorm) || norm(p.role).includes(qNorm) || norm(p.sector).includes(qNorm);
+          if (!matches) return false;
+        }
+
+        if (cockpitStatusFilter === 'APTO' && health.status !== 'APTO') return false;
+        if (cockpitStatusFilter === 'ALERTA' && health.status !== 'ALERTA') return false;
+        if (cockpitStatusFilter === 'BLOQUEADO' && health.status !== 'BLOQUEADO') return false;
+        if (cockpitStatusFilter === 'STORZ' && !health.hasStorz) return false;
+
+        return true;
+      });
+
+      const statusOrder = { BLOQUEADO: 1, ALERTA: 2, APTO: 3 };
+      filteredCards.sort((a, b) => {
+        const diff = (statusOrder[a.health.status] || 99) - (statusOrder[b.health.status] || 99);
+        if (diff !== 0) return diff;
+        return a.p.name.localeCompare(b.p.name);
+      });
+
+      const grid = document.getElementById('cockpitCardsGrid');
+      if (!grid) return;
+
+      if (filteredCards.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1 / -1; padding: 40px; text-align: center; color: var(--text-muted); background: #FFFFFF; border: 1px dashed #CBD5E1; border-radius: 8px;">Nenhum colaborador encontrado com os filtros selecionados.</div>';
+        return;
+      }
+
+      grid.innerHTML = filteredCards.map(({ p, health }) => renderCockpitCard(p, health)).join('');
+    }
+
+    function renderCockpitCard(p, health) {
+      const initials = p.name.split(' ').filter(Boolean).slice(0, 2).map(n => n[0]).join('');
+      
+      let statusBadgeClass = 'badge-cockpit-apto';
+      let statusLabel = 'APTO PARA CAMPO';
+      let borderColor = '#10B981';
+      let avatarBg = '#D1FAE5';
+      let avatarColor = '#065F46';
+
+      if (health.status === 'BLOQUEADO') {
+        statusBadgeClass = 'badge-cockpit-bloqueado';
+        statusLabel = 'BLOQUEADO: PENDÊNCIA';
+        borderColor = '#EF4444';
+        avatarBg = '#FEE2E2';
+        avatarColor = '#991B1B';
+      } else if (health.status === 'ALERTA') {
+        statusBadgeClass = 'badge-cockpit-alerta';
+        statusLabel = 'ATENÇÃO: VENCE EM BREVE';
+        borderColor = '#F59E0B';
+        avatarBg = '#FEF3C7';
+        avatarColor = '#92400E';
+      }
+
+      let barColor = '#10B981';
+      if (health.complianceRate < 80) barColor = '#EF4444';
+      else if (health.complianceRate < 95) barColor = '#F59E0B';
+
+      let highlightsHtml = '';
+      if (health.status === 'BLOQUEADO') {
+        const pendencies = [...health.expiredItems, ...health.missingItems];
+        highlightsHtml = '<div class="cockpit-card-pills">' +
+          pendencies.map(r => {
+            const docName = docShortNames[r.docCode] || r.docName;
+            const tag = isVencido(r.statusEHS) ? 'Vencido' : 'Ausente';
+            return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + r.detail + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
+          }).join('') +
+          '</div>';
+      } else if (health.status === 'ALERTA') {
+        highlightsHtml = '<div class="cockpit-card-pills">' +
+          health.alertItems.map(r => {
+            const docName = docShortNames[r.docCode] || r.docName;
+            return '<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + r.detail + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>';
+          }).join('') +
+          '</div>';
+      } else {
+        highlightsHtml = '<div class="cockpit-card-ok-msg"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Todas as NRs e qualificações operacionais em dia.</div>';
+      }
+
+      let storzHtml = '';
+      if (health.hasStorz) {
+        storzHtml = '<div class="cockpit-card-storz-row">' +
+          health.storzActiveItems.map(s => {
+            const courseName = docShortNames[s.docCode] || s.docName;
+            return '<span class="cockpit-card-pill pill-storz" title="Matrícula LMS Storz: ' + s.docName + '"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz: ' + courseName + '</span>';
+          }).join('') +
+          '</div>';
+      }
+
+      const escName = (p.name || '').replace(/"/g, '&quot;');
+      return '<div class="cockpit-collab-card" style="border-left-color:' + borderColor + ';">' +
+        '<div class="cockpit-card-header">' +
+          '<div style="display:flex;align-items:center;gap:10px;min-width:0;flex:1;">' +
+            '<div class="cockpit-collab-avatar" style="background:' + avatarBg + ';color:' + avatarColor + ';border:2px solid ' + borderColor + ';">' + initials + '</div>' +
+            '<div style="min-width:0;flex:1;">' +
+              '<div class="cockpit-collab-name" title="' + escName + '">' + escName + '</div>' +
+              '<div class="cockpit-collab-meta">' + (p.role || 'Técnico') + ' · ' + (p.sector || 'Operações') + '</div>' +
+            '</div>' +
+          '</div>' +
+          '<span class="cockpit-status-badge ' + statusBadgeClass + '">' + statusLabel + '</span>' +
+        '</div>' +
+        '<div class="cockpit-progress-wrap">' +
+          '<div class="cockpit-progress-label">' +
+            '<span>Prontidão Técnica (NRs):</span>' +
+            '<strong class="mono" style="color:' + barColor + ';">' + health.complianceRate + '% (' + health.compliantCount + '/' + health.totalOp + ')</strong>' +
+          '</div>' +
+          '<div class="cockpit-progress-bar">' +
+            '<div class="cockpit-progress-fill" style="width:' + health.complianceRate + '%;background:' + barColor + ';"></div>' +
+          '</div>' +
+        '</div>' +
+        highlightsHtml +
+        storzHtml +
+        '<div class="cockpit-card-footer">' +
+          '<button class="btn-cockpit-card-action" data-collab-name="' + escName + '" onclick="openCollabModal(this.dataset.collabName)">' +
+            '<svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
+            '<span>Ver Prontuário Completo</span>' +
+          '</button>' +
+        '</div>' +
+      '</div>';
     }
 
     function renderMatrix(peopleList, docF = 'ALL') {
@@ -3595,9 +4504,10 @@ export function buildDashboardHtml(
       document.getElementById('collabModal').classList.remove('show');
     }
 
-    renderPresets('matrix');
+    renderPresets('cockpit');
     computeRankings();
     renderAll();
+    switchNav('cockpit');
   </script>
 </body>
 </html>`
