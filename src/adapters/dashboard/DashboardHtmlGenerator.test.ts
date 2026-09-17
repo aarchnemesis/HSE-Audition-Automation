@@ -138,4 +138,10 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('break-inside: avoid !important')
     expect(html).toContain('.tab-view:not(.active)')
   })
+
+  it('deve incluir ASO no cockpit apenas em caso de bloqueio (vencido/ausente) e nao em alerta (<=30d)', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain("if (code !== '01')")
+    expect(html).toContain('alertItems.push(r)')
+  })
 })

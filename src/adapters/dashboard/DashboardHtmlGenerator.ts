@@ -3930,7 +3930,9 @@ export function buildDashboardHtml(
         } else if (isAusente(r.statusEHS)) {
           missingItems.push(r);
         } else if (isAVencer(r.statusEHS)) {
-          alertItems.push(r);
+          if (code !== '01') {
+            alertItems.push(r);
+          }
           compliantCount++;
         } else if (isConforme(r.statusEHS)) {
           compliantCount++;
