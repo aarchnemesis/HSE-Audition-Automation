@@ -78,6 +78,6 @@ jobs:
             echo "Nenhuma alteração no dashboard HSE."
           else
             git commit -m "chore(data): auto-update HSE dashboard"
-            git pull origin main --rebase
+            git pull origin main --rebase -X theirs
             git push origin HEAD:main
           fi

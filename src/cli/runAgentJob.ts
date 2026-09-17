@@ -54,7 +54,7 @@ function syncAndDeployDashboard(): void {
       stdio: 'inherit',
       cwd: process.cwd(),
     })
-    execSync('git pull origin main --rebase', {
+    execSync('git pull origin main --rebase -X theirs', {
       stdio: 'inherit',
       cwd: process.cwd(),
     })
