@@ -68,7 +68,7 @@ Para executar rotinas a partir de um agente autonomo ou script, utilize o runner
 # Atualizar dashboard e fazer push para a Vercel
 pnpm run agent:dashboard
 
-# Gerar e enviar relatorio de DO para Mayana Gomes e Joao Oliveira
+# Gerar e enviar relatorio de DO para a equipe de Treinamentos
 pnpm run agent:do
 
 # Gerar relatorio HSE e enviar resumo diario/semanal para a equipe de EHS
@@ -110,7 +110,7 @@ Caso deseje transferir os crons do GitHub Actions para um servidor proprio ou cr
 # 1. Atualizacao Diaria do Dashboard (2x ao dia: 06:45 e 17:45 BRT)
 45 6,17 * * * cd /caminho/do/projeto && pnpm run agent:dashboard >> scratch/dashboard_cron.log 2>&1
 
-# 2. Relatorio de DO (Mayana Gomes) - Segunda a Sexta as 07:00 BRT
+# 2. Relatorio de DO (Treinamentos) - Segunda a Sexta as 07:00 BRT
 0 7 * * 1-5 cd /caminho/do/projeto && pnpm run agent:do >> scratch/do_cron.log 2>&1
 
 # 3. Resumo Semanal EHS - Segunda-feira as 07:15 BRT

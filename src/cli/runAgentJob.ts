@@ -108,7 +108,7 @@ async function main() {
       '  dashboard    - Sincroniza dados, gera public/index.html e faz push para Vercel'
     )
     console.log(
-      '  do-report    - Gera historico do aluno e envia e-mail para Mayana/Joao'
+      '  do-report    - Gera historico do aluno e envia e-mail para a equipe de DO / Treinamentos'
     )
     console.log(
       '  hse-digest   - Gera relatorio HSE e envia resumo de pendencias para equipe HSE'

@@ -378,7 +378,7 @@ async function main() {
   ).length
 
   const bodyHtml = `
-    <p>Olá Mayana,</p>
+    <p>Olá, Equipe,</p>
     <p>Seguem em anexo as planilhas consolidadas e atualizadas sobre os treinamentos e a auditoria de conformidade (Fonte Única da Verdade — SSOT):</p>
     <ol>
       <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com controle de retestes (${syncResult.storzRequests.length} matrículas rastreadas).</li>
