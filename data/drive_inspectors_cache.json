@@ -5222,8 +5222,8 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 08.09.2026 - LUCAS FRANKLIN FALCAO SILVA.pdf",
-        "issueDate": "2026-09-08T03:00:00.000Z",
-        "expirationDate": "2027-09-08T03:00:00.000Z",
+        "issueDate": "2026-09-08T00:00:00.000Z",
+        "expirationDate": "2027-09-08T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/09/2027",
         "sourcePath": "https://drive.google.com/file/d/17PETD2iJu0i9C0AL-YXjtZBdSvg3mIh0/view"
@@ -6493,8 +6493,8 @@
         "code": "11",
         "name": "Doc 11",
         "filename": "11 – NR – 06 Uso EPI – 17.09.2026 - Rafael Andrade Barbosaf",
-        "issueDate": "2026-09-17T03:00:00.000Z",
-        "expirationDate": "2076-09-17T03:00:00.000Z",
+        "issueDate": "2026-09-17T00:00:00.000Z",
+        "expirationDate": "2076-09-17T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 17/09/2076",
         "sourcePath": "https://drive.google.com/file/d/1sd1dVHPxbyZUFkWQhy-MhaGzYRN1HrWs/view"
@@ -6799,12 +6799,12 @@
       "11": {
         "code": "11",
         "name": "Doc 11",
-        "filename": "11 – NR – 06 Uso EPI – 31.12.24 – Pedro Paulo Ferreira de Almeida - Clicksign.pdf",
-        "issueDate": "2024-12-31T00:00:00.000Z",
-        "expirationDate": "2074-12-31T00:00:00.000Z",
+        "filename": "11 – NR – 06 Uso EPI – 18.09.2026 – Pedro Paulo Ferreira de Almeida.pdf",
+        "issueDate": "2026-09-18T00:00:00.000Z",
+        "expirationDate": "2076-09-18T00:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/12/2074",
-        "sourcePath": "https://drive.google.com/file/d/1Ucuxf9hSgFsZqab4ydrgYPZpmf9g8JzA/view"
+        "statusDetail": "Válido até 18/09/2076",
+        "sourcePath": "https://drive.google.com/file/d/1hMK4Go4DqyjgpgDw2y7rNknNGdpCy_XC/view"
       },
       "12": {
         "code": "12",
@@ -10852,12 +10852,12 @@
       "13": {
         "code": "13",
         "name": "Doc 13",
-        "filename": "13 – NR – 10 SEP (40h) – 15.11.24 - Francisco Leonardo da Silva Ferreira",
-        "issueDate": "2024-11-15T00:00:00.000Z",
-        "expirationDate": "2026-11-15T00:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 58 dias (15/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1jzA3qvirX1EeqZDxAer5Ps_xHk0Z_s6s/view"
+        "filename": "13 – NR – 10 SEP (40h) – 17.09.26 - Francisco Leonardo da Silva Ferreira",
+        "issueDate": "2026-09-17T00:00:00.000Z",
+        "expirationDate": "2028-09-17T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/09/2028",
+        "sourcePath": "https://drive.google.com/file/d/1eeCQPtQtB2T0aRsPugSf2kEMkA5-zcrW/view"
       },
       "14": {
         "code": "14",
@@ -15672,6 +15672,16 @@
         "statusDetail": "Válido até 02/12/2026",
         "sourcePath": "https://drive.google.com/file/d/1HrLwo3pKxDRHlQcUi4dLnnDfszCwAjk6/view"
       },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 - ASO - 14.09.2026 - Erveson Nascimento dos Santos.pdf",
+        "issueDate": "2026-09-14T00:00:00.000Z",
+        "expirationDate": "2027-09-14T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2027",
+        "sourcePath": "https://drive.google.com/file/d/1zO0wzjWFkGhnSVyubSRH6Pyrbwn3To3V/view"
+      },
       "08": {
         "code": "08",
         "name": "Doc 08",
@@ -15689,16 +15699,6 @@
         "statusEHS": "INDETERMINADO",
         "statusDetail": "Data não informada ou formato inválido",
         "sourcePath": "https://drive.google.com/file/d/1lPvac5W7AcOfn_3FMZ8-qS0832ubQIS8/view"
-      },
-      "01": {
-        "code": "01",
-        "name": "Doc 01",
-        "filename": "01 - ASO - 26.09.2025 - Erveson Nascimento dos Santos.pdf",
-        "issueDate": "2025-09-26T00:00:00.000Z",
-        "expirationDate": "2026-09-26T00:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 8 dias (26/09/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1M31cXFwiuxMcHimv1s2kQqzKzPsR8byT/view"
       },
       "06": {
         "code": "06",
@@ -16481,8 +16481,8 @@
         "code": "28",
         "name": "Doc 28",
         "filename": "20 – NR – 33 (Supervisor F+R) –  17.09.2026 - Emerson Pallotta Ribeiro.pdf",
-        "issueDate": "2026-09-17T03:00:00.000Z",
-        "expirationDate": "2027-09-17T03:00:00.000Z",
+        "issueDate": "2026-09-17T00:00:00.000Z",
+        "expirationDate": "2027-09-17T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 17/09/2027",
         "sourcePath": "https://drive.google.com/file/d/19ntwsQGbEH6wqQng-n1I1w0SuL_kv3Sz/view"
@@ -17615,8 +17615,8 @@
         "code": "15",
         "name": "Doc 15",
         "filename": "15 – NR – 12 - 09.09.2026 – Diego Menezes Nunes Coelho",
-        "issueDate": "2026-09-09T03:00:00.000Z",
-        "expirationDate": "2028-09-09T03:00:00.000Z",
+        "issueDate": "2026-09-09T00:00:00.000Z",
+        "expirationDate": "2028-09-09T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 09/09/2028",
         "sourcePath": "https://drive.google.com/file/d/1vGc-WX-9FfX0aZSAMR_kLqGl8Lk5gjsr/view"
@@ -17625,8 +17625,8 @@
         "code": "17",
         "name": "Doc 17",
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) – 27.08.26 – Diego Menezes Nunes Coelho - Clicksign.pdf",
-        "issueDate": "2026-08-27T03:00:00.000Z",
-        "expirationDate": "2028-08-27T03:00:00.000Z",
+        "issueDate": "2026-08-27T00:00:00.000Z",
+        "expirationDate": "2028-08-27T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/08/2028",
         "sourcePath": "https://drive.google.com/file/d/14AAhvrqHY_OWMh0sqT4vdliJLWb-H8Vp/view"
@@ -17655,8 +17655,8 @@
         "code": "20",
         "name": "Doc 20",
         "filename": "20.1 – Carta NR – 33 – 08.05.2026 - Diego Menezes Nunes Coelho - Clicksign.pdf",
-        "issueDate": "2026-05-08T03:00:00.000Z",
-        "expirationDate": "2027-05-08T03:00:00.000Z",
+        "issueDate": "2026-05-08T00:00:00.000Z",
+        "expirationDate": "2027-05-08T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/05/2027",
         "sourcePath": "https://drive.google.com/file/d/1i2b3qpnFEg22sKNTJdr5F4bjaa1Q6MAm/view"
@@ -17723,8 +17723,8 @@
         "code": "28",
         "name": "Doc 28",
         "filename": "20 – NR – 33 (Supervisor F+R) – 06.09.2026 - Diego Menezes Nunes Coelho.pdf.pdf",
-        "issueDate": "2026-09-06T03:00:00.000Z",
-        "expirationDate": "2027-09-06T03:00:00.000Z",
+        "issueDate": "2026-09-06T00:00:00.000Z",
+        "expirationDate": "2027-09-06T00:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1sHBmy988r-dHhj8Fq5LO3v004xrhE1vC/view"
@@ -25147,16 +25147,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/12/2026",
         "sourcePath": "https://drive.google.com/file/d/1rDpg4lsQeu4AxPLmwokgxeaRY-OUP7Xf/view"
-      },
-      "01": {
-        "code": "01",
-        "name": "Doc 01",
-        "filename": "01 – ASO – 10.09.2025 - Raphael Afonso Cardoso Pereira.pdf",
-        "issueDate": "2025-09-10T00:00:00.000Z",
-        "expirationDate": "2026-09-10T00:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 8 dias (10/09/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1z8wZ7Df7IMsWHGeR6b8xd8ZOdon2DrJs/view"
       },
       "03": {
         "code": "03",
