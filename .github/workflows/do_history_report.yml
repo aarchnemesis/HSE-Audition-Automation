@@ -5,9 +5,15 @@ name: Histórico do Aluno (Desenvolvimento Organizacional)
 
 on:
   schedule:
-    # Segunda a sexta-feira às 06:45 UTC (03:45 BRT - Horário de Brasília) — minuto 45 para evitar fila de minuto cheio do GitHub Actions
-    - cron: '45 6 * * 1-5'
-  workflow_dispatch: # Permite execução manual a qualquer momento no GitHub Actions
+    # Todos os dias na madrugada às 06:35 UTC (03:35 BRT - Horário de Brasília) — fluxo baixo
+    # O script valida ALLOWED_EMAIL_DAYS=2,6: envia e-mail apenas terça e sábado; nos demais dias, gera artefatos sem e-mail.
+    - cron: '35 6 * * *'
+  workflow_dispatch:
+    inputs:
+      force_email:
+        description: 'Forçar envio de e-mail independente do dia da semana?'
+        type: boolean
+        default: false
 
 jobs:
   report-and-notify:
@@ -43,6 +49,8 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           DO_EMAIL_TO: ${{ secrets.DO_EMAIL_TO }}
+          ALLOWED_EMAIL_DAYS: '2,6'
+          FORCE_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.force_email == true }}
         run: pnpm run storz-history-report
 
       # Contém nomes e histórico de treinamento (dados pessoais). Retenção curta e visibilidade

@@ -107,17 +107,14 @@ Variaveis essenciais:
 Caso deseje transferir os crons do GitHub Actions para um servidor proprio ou crontab do agente:
 
 ```cron
-# 1. Atualizacao Diaria do Dashboard (2x ao dia: 06:45 e 17:45 BRT)
+# 1. Atualizacao Diaria do Dashboard (2x ao dia: 06:45 e 17:45 BRT, sem envio de e-mail)
 45 6,17 * * * cd /caminho/do/projeto && pnpm run agent:dashboard >> scratch/dashboard_cron.log 2>&1
 
-# 2. Relatorio de DO (Treinamentos) - Segunda a Sexta as 07:00 BRT
-0 7 * * 1-5 cd /caminho/do/projeto && pnpm run agent:do >> scratch/do_cron.log 2>&1
+# 2. Relatorio de Treinamentos / DO (Mayana) - Terca e Sabado as 03:35 BRT (madrugada)
+35 3 * * 2,6 cd /caminho/do/projeto && pnpm run agent:do >> scratch/do_cron.log 2>&1
 
-# 3. Resumo Semanal EHS - Segunda-feira as 07:15 BRT
-15 7 * * 1 cd /caminho/do/projeto && pnpm run agent:hse >> scratch/hse_cron.log 2>&1
-
-# 4. Auditoria de Digitacao RPO - Segunda-feira as 07:30 BRT
-30 7 * * 1 cd /caminho/do/projeto && pnpm run agent:rpo >> scratch/rpo_cron.log 2>&1
+# 3. Relatorio Consolidado EHS & Treinamentos (Massude e Darliane) - Segunda-feira as 04:15 BRT (madrugada)
+15 4 * * 1 cd /caminho/do/projeto && pnpm run agent:hse >> scratch/hse_cron.log 2>&1
 ```
 
 ---

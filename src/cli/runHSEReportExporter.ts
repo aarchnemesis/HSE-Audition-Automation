@@ -14,7 +14,7 @@ const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
   : new Date()
 const DEFAULT_HSE_EMAIL_RECIPIENTS =
-  'massude.afonso@arthwind.com.br,marcelo.freitas@arthwind.com.br,darliane.caetano@arthwind.com.br,joao.oliveira@arthwind.com.br'
+  'massude.afonso@arthwind.com.br,darliane.caetano@arthwind.com.br'
 const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
@@ -130,11 +130,31 @@ async function main() {
     const emailService: IEmailService =
       SmtpEmailService.fromEnv() || new DummyEmailService()
     const digestGroups = buildPendencyDigest(syncResult.records)
+    const attachments = [
+      { filename: 'hse_relatorio_consolidado.xlsx', path: excelPath },
+    ]
+
+    const auditPath = path.join(
+      process.cwd(),
+      'scratch',
+      'auditoria_drive_rpo.xlsx'
+    )
+    if (syncResult.rpoDivergences && syncResult.rpoDivergences.length > 0) {
+      await HSEDataPipeline.exportDivergencesToExcel(
+        syncResult.rpoDivergences,
+        auditPath
+      )
+      attachments.push({
+        filename: 'auditoria_drive_rpo.xlsx',
+        path: auditPath,
+      })
+    }
+
     const digestRes = await emailService.sendDailyDigest(
       EMAIL_RECIPIENT,
       digestGroups,
       REF_DATE,
-      [{ filename: 'hse_relatorio_consolidado.xlsx', path: excelPath }]
+      attachments
     )
     console.log(
       `   ${digestGroups.length} pessoa(s) com pendencia incluida(s) no resumo.`

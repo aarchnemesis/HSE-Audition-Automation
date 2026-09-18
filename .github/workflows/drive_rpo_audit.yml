@@ -49,6 +49,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           HSE_EMAIL_TO: ${{ secrets.HSE_EMAIL_TO }}
+          SKIP_EMAIL: 'true'
         run: pnpm run drive-rpo-audit
 
       # Contém nomes e datas de documentos (dados pessoais) — mesma retenção curta do relatório

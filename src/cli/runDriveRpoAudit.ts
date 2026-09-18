@@ -16,7 +16,7 @@ const REF_DATE = refDateArg
     : new Date()
 
 const DEFAULT_HSE_EMAIL_RECIPIENTS =
-  'massude.afonso@arthwind.com.br,marcelo.freitas@arthwind.com.br,darliane.caetano@arthwind.com.br,joao.oliveira@arthwind.com.br'
+  'massude.afonso@arthwind.com.br,darliane.caetano@arthwind.com.br'
 const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'

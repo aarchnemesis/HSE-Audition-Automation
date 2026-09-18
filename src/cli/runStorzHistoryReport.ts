@@ -5,6 +5,7 @@ import ExcelJS from 'exceljs'
 import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGenerator.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
+import { isDayAllowedForEmail } from '../adapters/email/emailScheduleValidator.js'
 import {
   StorzRequest,
   computeCourseDeadline,
@@ -31,10 +32,29 @@ const DEFAULT_DO_EMAIL_RECIPIENTS =
   'mayanna.gomes@arthwind.com.br,joao.oliveira@arthwind.com.br'
 const DO_EMAIL_RECIPIENT =
   toArg || process.env.DO_EMAIL_TO || DEFAULT_DO_EMAIL_RECIPIENTS
-const SKIP_EMAIL =
+let SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
+const FORCE_EMAIL =
+  process.argv.includes('--force-email') || process.env.FORCE_EMAIL === 'true'
 const FORCE_SYNC =
   process.argv.includes('--force-sync') || process.argv.includes('--sync')
+
+const allowedDaysArg = process.argv
+  .find(a => a.startsWith('--allowed-days='))
+  ?.split('=')[1]
+const allowedDaysEnv = process.env.ALLOWED_EMAIL_DAYS || allowedDaysArg
+
+if (allowedDaysEnv && !SKIP_EMAIL && !FORCE_EMAIL) {
+  if (!isDayAllowedForEmail(allowedDaysEnv)) {
+    const currentDow = new Date(
+      new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
+    ).getDay()
+    console.log(
+      `[StorzHistoryReport] Hoje (dia da semana ${currentDow}) não é dia de envio de e-mail (${allowedDaysEnv}) — gerando artefatos e dashboard com SKIP_EMAIL=true.\n`
+    )
+    SKIP_EMAIL = true
+  }
+}
 
 const dateFmt = (d?: Date | string) => {
   if (!d) return ''
