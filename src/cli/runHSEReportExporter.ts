@@ -13,9 +13,11 @@ import { IEmailService } from '../ports/IEmailService.js'
 const REF_DATE = process.env.HSE_REF_DATE
   ? new Date(process.env.HSE_REF_DATE)
   : new Date()
+const toArg = process.argv.find(a => a.startsWith('--to='))?.split('=')[1]
 const DEFAULT_HSE_EMAIL_RECIPIENTS =
   'massude.afonso@arthwind.com.br,darliane.caetano@arthwind.com.br'
-const EMAIL_RECIPIENT = process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
+const EMAIL_RECIPIENT =
+  toArg || process.env.HSE_EMAIL_TO || DEFAULT_HSE_EMAIL_RECIPIENTS
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
 
