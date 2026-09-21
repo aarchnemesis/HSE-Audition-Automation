@@ -42,12 +42,12 @@ const FORCE_SYNC =
 const allowedDaysArg = process.argv
   .find(a => a.startsWith('--allowed-days='))
   ?.split('=')[1]
-const allowedDaysEnv = process.env.ALLOWED_EMAIL_DAYS || allowedDaysArg
+const allowedDaysEnv = process.env.ALLOWED_EMAIL_DAYS || allowedDaysArg || '2,5'
 
 if (allowedDaysEnv && !SKIP_EMAIL && !FORCE_EMAIL) {
-  if (!isDayAllowedForEmail(allowedDaysEnv)) {
+  if (!isDayAllowedForEmail(allowedDaysEnv, REF_DATE)) {
     const currentDow = new Date(
-      new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
+      REF_DATE.toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })
     ).getDay()
     console.log(
       `[StorzHistoryReport] Hoje (dia da semana ${currentDow}) não é dia de envio de e-mail (${allowedDaysEnv}) — gerando artefatos e dashboard com SKIP_EMAIL=true.\n`

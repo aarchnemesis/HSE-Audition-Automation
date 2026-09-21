@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   badgeClassFor,
+  buildExecutiveDashboardHtml,
   statusLabelFor,
   wrapEmailHtml,
 } from './emailTemplates.js'
@@ -48,5 +49,42 @@ describe('emailTemplates', () => {
     expect(statusLabelFor('AUSENTE')).toContain('Ausente')
     expect(statusLabelFor('VENCIDO')).toContain('Vencido')
     expect(statusLabelFor('CONFORME')).toContain('Em Dia')
+  })
+
+  it('gera HTML do Dashboard Executivo com saudações neutras, KPIs e links corretos', () => {
+    const summary = {
+      refDate: new Date('2026-09-21T07:30:00Z'),
+      dashboardUrl: 'https://hse-audition-automation.vercel.app',
+      totalCollaborators: 42,
+      aptosCount: 30,
+      aptosRate: 71,
+      bloqueadosCount: 12,
+      emTreinamentoCount: 8,
+      rpoDivergencesCount: 5,
+      sourceHealth: {
+        driveStatus: 'ONLINE',
+        smartsheetStatus: 'ONLINE',
+        storzStatus: 'ONLINE',
+      },
+    }
+
+    const html = buildExecutiveDashboardHtml(summary)
+    expect(html).toContain('Olá, Equipe Executiva,')
+    expect(html).toContain('https://hse-audition-automation.vercel.app')
+    expect(html).toContain('Acessar Painel Executivo ao Vivo')
+    expect(html).toContain('42')
+    expect(html).toContain('30')
+    expect(html).toContain('71%')
+    expect(html).toContain('12')
+    expect(html).toContain('8')
+    expect(html).toContain('5')
+    expect(html).toContain('Google Drive (Prontuários Oficiais):')
+
+    const wrapped = wrapEmailHtml(
+      'Dashboard HSE ArthWind — Atualização Executiva (21/09/2026)',
+      html
+    )
+    expect(wrapped).toContain('class="container"')
+    expect(wrapped).toContain('Dashboard HSE ArthWind')
   })
 })

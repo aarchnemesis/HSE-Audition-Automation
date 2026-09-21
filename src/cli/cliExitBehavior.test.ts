@@ -8,6 +8,7 @@ const cliFilesThatMustFailHard = [
   'runTriangulation.ts',
   'runDriveRpoAudit.ts',
   'runStorzHistoryReport.ts',
+  'runExecutiveDashboardEmail.ts',
   'testGoogleDriveApi.ts',
 ]
 
