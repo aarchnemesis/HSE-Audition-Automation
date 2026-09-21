@@ -55,12 +55,18 @@ describe('emailTemplates', () => {
     const summary = {
       refDate: new Date('2026-09-21T07:30:00Z'),
       dashboardUrl: 'https://hse-audition-automation.vercel.app',
-      totalCollaborators: 42,
-      aptosCount: 30,
-      aptosRate: 71,
-      bloqueadosCount: 12,
-      emTreinamentoCount: 8,
-      rpoDivergencesCount: 5,
+      totalCollaborators: 77,
+      frontlineTotal: 67,
+      aptosCount: 48,
+      aptosRate: 72,
+      aptoPlenoCount: 28,
+      alertaCount: 20,
+      bloqueadosCount: 19,
+      emTreinamentoCount: 35,
+      totalEmTreinamentoCount: 39,
+      rpoDivergencesCount: 385,
+      leadersCount: 5,
+      officeCount: 5,
       sourceHealth: {
         driveStatus: 'ONLINE',
         smartsheetStatus: 'ONLINE',
@@ -72,12 +78,14 @@ describe('emailTemplates', () => {
     expect(html).toContain('Olá, Equipe Executiva,')
     expect(html).toContain('https://hse-audition-automation.vercel.app')
     expect(html).toContain('Acessar Painel Executivo ao Vivo')
-    expect(html).toContain('42')
-    expect(html).toContain('30')
-    expect(html).toContain('71%')
-    expect(html).toContain('12')
-    expect(html).toContain('8')
-    expect(html).toContain('5')
+    expect(html).toContain('67')
+    expect(html).toContain('48')
+    expect(html).toContain('72%')
+    expect(html).toContain('19')
+    expect(html).toContain('35')
+    expect(html).toContain('39 colaboradores')
+    expect(html).toContain('385')
+    expect(html).toContain('77 colaboradores monitorados')
     expect(html).toContain('Google Drive (Prontuários Oficiais):')
 
     const wrapped = wrapEmailHtml(
