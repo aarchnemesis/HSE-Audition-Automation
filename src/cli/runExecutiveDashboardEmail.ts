@@ -83,9 +83,12 @@ async function main() {
 
   console.log('[ExecDashboardEmail] Indicadores calculados:')
   console.log(`   - Total de Colaboradores: ${kpis.totalCollaborators}`)
-  console.log(`   - Aptos P/ Campo: ${kpis.aptosCount} (${kpis.aptosRate}%)`)
-  console.log(`   - Bloqueados (Pendência): ${kpis.bloqueadosCount}`)
-  console.log(`   - Em Treinamento (Storz): ${kpis.emTreinamentoCount}`)
+  console.log(`   - Linha de Frente (Campo): ${kpis.frontline.total}`)
+  console.log(
+    `   - Aptos P/ Campo: ${kpis.frontline.aptoCount} (${kpis.frontline.aptoRate}%) [Plenos: ${kpis.frontline.aptoPlenoCount}, Alerta: ${kpis.frontline.alertaCount}]`
+  )
+  console.log(`   - Bloqueados (Pendência): ${kpis.frontline.bloqueadoCount}`)
+  console.log(`   - Em Treinamento (Storz Geral): ${kpis.all.storzCount}`)
   console.log(`   - Divergências RPO: ${rpoDivergencesCount}\n`)
 
   const summary: ExecutiveDashboardSummary = {
@@ -94,11 +97,17 @@ async function main() {
       process.env.HSE_DASHBOARD_URL ||
       'https://hse-audition-automation.vercel.app',
     totalCollaborators: kpis.totalCollaborators,
-    aptosCount: kpis.aptosCount,
-    aptosRate: kpis.aptosRate,
-    bloqueadosCount: kpis.bloqueadosCount,
-    emTreinamentoCount: kpis.emTreinamentoCount,
+    frontlineTotal: kpis.frontline.total,
+    aptosCount: kpis.frontline.aptoCount,
+    aptosRate: kpis.frontline.aptoRate,
+    aptoPlenoCount: kpis.frontline.aptoPlenoCount,
+    alertaCount: kpis.frontline.alertaCount,
+    bloqueadosCount: kpis.frontline.bloqueadoCount,
+    emTreinamentoCount: kpis.frontline.storzCount,
+    totalEmTreinamentoCount: kpis.all.storzCount,
     rpoDivergencesCount,
+    leadersCount: kpis.leaders.total,
+    officeCount: kpis.office.total,
     sourceHealth: {
       driveStatus: syncResult.sourceHealth?.drive?.status || 'ONLINE',
       smartsheetStatus: syncResult.sourceHealth?.smartsheet?.status || 'ONLINE',

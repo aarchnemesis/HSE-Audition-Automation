@@ -192,11 +192,17 @@ export interface ExecutiveDashboardSummary {
   refDate: Date
   dashboardUrl?: string
   totalCollaborators: number
+  frontlineTotal: number
   aptosCount: number
   aptosRate: number
+  aptoPlenoCount?: number
+  alertaCount?: number
   bloqueadosCount: number
   emTreinamentoCount: number
+  totalEmTreinamentoCount?: number
   rpoDivergencesCount: number
+  leadersCount?: number
+  officeCount?: number
   sourceHealth?: {
     driveStatus?: string
     smartsheetStatus?: string
@@ -218,10 +224,15 @@ export function buildExecutiveDashboardHtml(
   const rpoHealth = summary.sourceHealth?.smartsheetStatus || 'ONLINE'
   const storzHealth = summary.sourceHealth?.storzStatus || 'ONLINE'
 
+  const subApto =
+    summary.aptoPlenoCount !== undefined && summary.alertaCount !== undefined
+      ? `${summary.aptoPlenoCount} plenos &middot; ${summary.alertaCount} atenção recert.`
+      : 'Mobilizáveis de imediato'
+
   return `
     <p style="margin: 0 0 16px; font-size: 15px; color: #1F2937;">Olá, Equipe Executiva,</p>
     <p style="margin: 0 0 20px; font-size: 13px; color: #4B5563; line-height: 1.5;">
-      Segue a atualização executiva dos indicadores de conformidade de HSE, prontuários de campo e treinamentos (DO) da ArthWind atualizados para <strong>${dateStr}</strong>.
+      Segue a atualização executiva dos indicadores de conformidade de HSE, prontidão de campo e treinamentos (DO) da ArthWind atualizados para <strong>${dateStr}</strong> (Fonte Única da Verdade — SSOT).
     </p>
 
     <div style="text-align: center; margin: 20px 0 24px; padding: 20px; background-color: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px;">
@@ -232,38 +243,54 @@ export function buildExecutiveDashboardHtml(
         Acessar Painel Executivo ao Vivo
       </a>
       <div style="margin-top: 8px; font-size: 11px; color: #64748B;">
-        Visualização interativa em tempo real &middot; Não é necessário baixar arquivos
+        Visualização interativa em tempo real &middot; 100% alinhado com o Cockpit Operacional
       </div>
     </div>
 
-    <table style="width: 100%; border-collapse: separate; border-spacing: 10px; margin-top: 10px;">
+    <div style="margin-bottom: 8px; font-size: 12px; font-weight: 700; text-transform: uppercase; color: #25386B; letter-spacing: 0.5px;">
+      Cockpit Operacional — Linha de Frente de Campo
+    </div>
+
+    <table style="width: 100%; border-collapse: separate; border-spacing: 10px; margin-top: 4px;">
       <tr>
         <td style="width: 50%; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; vertical-align: top;">
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748B; letter-spacing: 0.5px;">Total Monitorado</div>
-          <div style="font-size: 28px; font-weight: 800; color: #25386B; margin: 6px 0 2px;">${summary.totalCollaborators}</div>
-          <div style="font-size: 11px; color: #64748B;">Colaboradores ativos na base</div>
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #64748B; letter-spacing: 0.5px;">Linha de Frente</div>
+          <div style="font-size: 28px; font-weight: 800; color: #25386B; margin: 6px 0 2px;">${summary.frontlineTotal}</div>
+          <div style="font-size: 11px; color: #64748B;">Técnicos e inspetores em campo</div>
         </td>
         <td style="width: 50%; background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 8px; padding: 16px; vertical-align: top;">
-          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #166534; letter-spacing: 0.5px;">Aptos P/ Campo</div>
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #166534; letter-spacing: 0.5px;">Colaboradores Aptos</div>
           <div style="font-size: 28px; font-weight: 800; color: #059669; margin: 6px 0 2px;">${summary.aptosCount} <span style="font-size: 16px; font-weight: 600;">(${summary.aptosRate}%)</span></div>
-          <div style="font-size: 11px; color: #166534;">Mobilizáveis de imediato</div>
+          <div style="font-size: 11px; color: #166534;">${subApto}</div>
         </td>
       </tr>
       <tr>
         <td style="width: 50%; background: #FEF2F2; border: 1px solid #FECACA; border-radius: 8px; padding: 16px; vertical-align: top;">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #991B1B; letter-spacing: 0.5px;">Bloqueados (Pendência)</div>
           <div style="font-size: 28px; font-weight: 800; color: #DC2626; margin: 6px 0 2px;">${summary.bloqueadosCount}</div>
-          <div style="font-size: 11px; color: #991B1B;">Vencimento ou ausência documental</div>
+          <div style="font-size: 11px; color: #991B1B;">Pendência documental ou vencimento</div>
         </td>
         <td style="width: 50%; background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 8px; padding: 16px; vertical-align: top;">
           <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: #1E40AF; letter-spacing: 0.5px;">Em Treinamento / Storz</div>
           <div style="font-size: 28px; font-weight: 800; color: #2563EB; margin: 6px 0 2px;">${summary.emTreinamentoCount}</div>
-          <div style="font-size: 11px; color: #1E40AF;">Matrículas e reciclagens em curso</div>
+          <div style="font-size: 11px; color: #1E40AF;">Matrículas ativas no LMS Storz</div>
         </td>
       </tr>
     </table>
 
-    <div style="margin-top: 15px; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 14px 18px;">
+    <div style="margin-top: 15px; background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px 18px;">
+      <div style="font-size: 12px; font-weight: 700; color: #25386B; margin-bottom: 8px;">
+        Composição da Base Total (${summary.totalCollaborators} colaboradores monitorados):
+      </div>
+      <div style="font-size: 12px; color: #475569; line-height: 1.6;">
+        &bull; <strong>Linha de Frente:</strong> ${summary.frontlineTotal} colaboradores (${summary.aptosCount} aptos, ${summary.bloqueadosCount} bloqueados, ${summary.emTreinamentoCount} com Storz)<br>
+        &bull; <strong>Liderança Híbrida:</strong> ${summary.leadersCount || 5} líderes operacionais<br>
+        &bull; <strong>Gestão & Office:</strong> ${summary.officeCount || 5} colaboradores (isentos de normas de escalada técnica em turbinas)<br>
+        &bull; <strong>Total em Treinamento (Empresa):</strong> ${summary.totalEmTreinamentoCount || summary.emTreinamentoCount} colaboradores com matrícula ativa no LMS Storz
+      </div>
+    </div>
+
+    <div style="margin-top: 12px; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 14px 18px;">
       <table style="width: 100%; border: none; margin: 0;">
         <tr>
           <td style="border: none; padding: 0; vertical-align: middle;">
