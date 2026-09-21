@@ -97,8 +97,9 @@ Variaveis essenciais:
 - `GOOGLE_OAUTH_CLIENT_ID`, `GOOGLE_OAUTH_CLIENT_SECRET`, `GOOGLE_OAUTH_REFRESH_TOKEN`: Autenticacao do Google Drive em modo servidor / CI.
 - `SMARTSHEET_API_TOKEN`, `SMARTSHEET_RPO_SHEET_ID`: Acesso a planilha RPO.
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`: Configuracao de envio de e-mails.
-- `DO_EMAIL_TO`: Destinatarios do relatorio de DO.
-- `HSE_EMAIL_TO`: Destinatarios dos alertas de EHS.
+- `DO_EMAIL_TO`: Destinatarios do relatorio de DO (Mayanna Gomes e Joao Oliveira).
+- `HSE_EMAIL_TO`: Destinatarios dos relatorios de EHS e auditoria RPO (Massude Afonso e Darliane Caetano).
+- `EXEC_EMAIL_TO`: Destinatarios da atualizacao executiva do dashboard (Marcelo Freitas e Leonardo Gaem).
 
 ---
 
@@ -110,10 +111,13 @@ Caso deseje transferir os crons do GitHub Actions para um servidor proprio ou cr
 # 1. Atualizacao Diaria do Dashboard (2x ao dia: 06:45 e 17:45 BRT, sem envio de e-mail)
 45 6,17 * * * cd /caminho/do/projeto && pnpm run agent:dashboard >> scratch/dashboard_cron.log 2>&1
 
-# 2. Relatorio de Treinamentos / DO (Mayana) - Terca e Sabado as 03:35 BRT (madrugada)
-35 3 * * 2,6 cd /caminho/do/projeto && pnpm run agent:do >> scratch/do_cron.log 2>&1
+# 2. Atualizacao Executiva do Dashboard (Marcelo Freitas e Leonardo Gaem) - Segunda, Quarta e Sexta as 04:30 BRT
+30 4 * * 1,3,5 cd /caminho/do/projeto && pnpm run agent:exec >> scratch/exec_cron.log 2>&1
 
-# 3. Relatorio Consolidado EHS & Treinamentos (Massude e Darliane) - Segunda-feira as 04:15 BRT (madrugada)
+# 3. Relatorio de Treinamentos / DO (Mayanna e Joao) - Terca e Sexta as 03:35 BRT (madrugada)
+35 3 * * 2,5 cd /caminho/do/projeto && pnpm run agent:do >> scratch/do_cron.log 2>&1
+
+# 4. Relatorio Consolidado EHS & Auditoria RPO (Massude e Darliane) - Segunda-feira as 04:15 BRT (madrugada)
 15 4 * * 1 cd /caminho/do/projeto && pnpm run agent:hse >> scratch/hse_cron.log 2>&1
 ```
 

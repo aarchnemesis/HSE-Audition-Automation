@@ -5,9 +5,9 @@ name: Histórico do Aluno (Desenvolvimento Organizacional)
 
 on:
   schedule:
-    # Todos os dias na madrugada às 06:35 UTC (03:35 BRT - Horário de Brasília) — fluxo baixo
-    # O script valida ALLOWED_EMAIL_DAYS=2,6: envia e-mail apenas terça e sábado; nos demais dias, gera artefatos sem e-mail.
-    - cron: '35 6 * * *'
+    # Terça e Sexta na madrugada às 06:35 UTC (03:35 BRT - Horário de Brasília) — fluxo baixo
+    # Dispara e-mail apenas terça e sexta para a equipe de DO (Mayanna e João).
+    - cron: '35 6 * * 2,5'
   workflow_dispatch:
     inputs:
       force_email:
@@ -49,7 +49,7 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           DO_EMAIL_TO: ${{ secrets.DO_EMAIL_TO }}
-          ALLOWED_EMAIL_DAYS: '2,6'
+          ALLOWED_EMAIL_DAYS: '2,5'
           FORCE_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.force_email == true }}
         run: pnpm run storz-history-report
 

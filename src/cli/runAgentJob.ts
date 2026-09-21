@@ -7,6 +7,7 @@ const validJobs = [
   'do-report',
   'hse-digest',
   'rpo-audit',
+  'exec-dashboard',
   'all',
 ] as const
 type AgentJob = (typeof validJobs)[number]
@@ -91,6 +92,13 @@ function runRpoAudit(): void {
   )
 }
 
+function runExecDashboard(): void {
+  runCommand(
+    'npx tsx src/cli/runExecutiveDashboardEmail.ts',
+    'Atualizacao do Dashboard Executivo e Envio por E-mail'
+  )
+}
+
 async function main() {
   const jobArg = process.argv[2] as AgentJob | undefined
 
@@ -105,18 +113,21 @@ async function main() {
     console.log('Uso: npx tsx src/cli/runAgentJob.ts <job>\n')
     console.log('Jobs disponiveis:')
     console.log(
-      '  dashboard    - Sincroniza dados, gera public/index.html e faz push para Vercel'
+      '  dashboard      - Sincroniza dados, gera public/index.html e faz push para Vercel'
     )
     console.log(
-      '  do-report    - Gera historico do aluno e envia e-mail para a equipe de DO / Treinamentos'
+      '  do-report      - Gera historico do aluno e envia e-mail para a equipe de DO / Treinamentos'
     )
     console.log(
-      '  hse-digest   - Gera relatorio HSE e envia resumo de pendencias para equipe HSE'
+      '  hse-digest     - Gera relatorio HSE e envia resumo de pendencias para equipe HSE'
     )
     console.log(
-      '  rpo-audit    - Executa auditoria de digitacao Drive x RPO e envia alerta'
+      '  rpo-audit      - Executa auditoria de digitacao Drive x RPO e envia alerta'
     )
-    console.log('  all          - Executa dashboard + do-report em sequencia')
+    console.log(
+      '  exec-dashboard - Gera e envia e-mail executivo do dashboard para Marcelo e Leonardo'
+    )
+    console.log('  all            - Executa dashboard + do-report em sequencia')
     console.log(
       '================================================================================\n'
     )
@@ -138,6 +149,9 @@ async function main() {
       break
     case 'rpo-audit':
       runRpoAudit()
+      break
+    case 'exec-dashboard':
+      runExecDashboard()
       break
     case 'all':
       syncAndDeployDashboard()
