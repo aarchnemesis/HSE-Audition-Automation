@@ -3575,9 +3575,9 @@
       "12": {
         "code": "12",
         "name": "NR 10",
-        "expirationDate": "2028-10-30T12:00:00.000Z",
+        "expirationDate": "2027-10-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/10/2028"
+        "statusDetail": "Válido até 30/10/2027"
       },
       "13": {
         "code": "13",
@@ -3694,9 +3694,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2026-10-25T12:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (25/10/2026)"
+        "expirationDate": "2027-12-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/12/2027"
       }
     }
   },
