@@ -1,9 +1,9 @@
 name: HSE Audit & Storz Automated Cron
 
 on:
-  schedule:
-    # Toda segunda-feira às 07:15 UTC (04:15 BRT - Horário de Brasília) — minuto 15 para evitar fila de minuto cheio do GitHub Actions
-    - cron: '15 7 * * 1'
+  # Agendamento desativado no GitHub Actions (centralizado na VPS Prometeu)
+  # schedule:
+  #   - cron: '15 7 * * 1'
   workflow_dispatch:
     inputs:
       send_email:
