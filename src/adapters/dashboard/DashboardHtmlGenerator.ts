@@ -3139,6 +3139,7 @@ export function buildDashboardHtml(
           name: r.inspectorName,
           role: r.role || 'Técnico',
           sector: r.sector || 'Operações',
+          rpoBranch: r.rpoBranch,
           records: []
         });
       }
@@ -3154,7 +3155,7 @@ export function buildDashboardHtml(
     });
 
     function isConforme(st) {
-      return st === 'CONFORME';
+      return st === 'CONFORME' || st === 'INDETERMINADO';
     }
 
     function isAVencer(st) {
@@ -3978,6 +3979,7 @@ export function buildDashboardHtml(
     function getCollabOperationalHealth(p, parkScope = 'BASIC') {
       const isOffice = ['CO', 'ADM', 'EHS'].includes(p.role);
       const isLeader = p.role === 'LO';
+      const isDrone = p.rpoBranch === 'DRONE INSP. EQUIPAMENTO' || (p.role === 'IE' && p.rpoBranch !== 'LPS - SPDA');
 
       if (isOffice) {
         // Office / Gestão: Isento de normas de escalada técnica
@@ -3988,6 +3990,7 @@ export function buildDashboardHtml(
           status: 'ISENTO_CAMPO',
           isOffice: true,
           isLeader: false,
+          isDrone: false,
           isMobilizavel: true,
           hasStorz: storzActiveItems.length > 0,
           complianceRate: 100,
@@ -3998,6 +4001,7 @@ export function buildDashboardHtml(
           missingItems: [],
           alertItems: [],
           storzActiveItems,
+          storzInProgressItems: [],
           hasArt: false,
           hasNr33Resgate: false,
           hasVestas: false,
@@ -4005,14 +4009,19 @@ export function buildDashboardHtml(
         };
       }
 
-      // Requisitos Básicos de Mobilização (Core de Campo)
-      const CORE_CODES = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30'];
-      const requiredCodes = new Set(CORE_CODES);
+      // Requisitos Básicos de Mobilização (Core de Campo vs Drone)
+      const DRONE_CORE_CODES = ['01', '08', '09', '10', '11', '12', '13', '15', '18', '19', '27'];
+      const TURBINE_CORE_CODES = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30'];
+      const requiredCodes = new Set(isDrone ? DRONE_CORE_CODES : TURBINE_CORE_CODES);
 
-      if (parkScope === 'ART') requiredCodes.add('32');
-      if (parkScope === 'NR33_RESGATE') requiredCodes.add('28');
-      if (parkScope === 'VESTAS') { requiredCodes.add('25'); requiredCodes.add('26'); }
-      if (parkScope === 'ELEVADOR') requiredCodes.add('31');
+      if (isDrone) {
+        if (p.records.some(r => r.docCode === '40')) requiredCodes.add('40');
+      } else {
+        if (parkScope === 'ART') requiredCodes.add('32');
+        if (parkScope === 'NR33_RESGATE') requiredCodes.add('28');
+        if (parkScope === 'VESTAS') { requiredCodes.add('25'); requiredCodes.add('26'); }
+        if (parkScope === 'ELEVADOR') requiredCodes.add('31');
+      }
 
       const recMap = new Map();
       p.records.forEach(r => recMap.set(r.docCode, r));
@@ -4032,6 +4041,7 @@ export function buildDashboardHtml(
       const expiredItems = [];
       const missingItems = [];
       const alertItems = [];
+      const storzInProgressItems = [];
       const storzActiveItems = p.records.filter(isStorzActive);
 
       requiredCodes.forEach(code => {
@@ -4044,7 +4054,20 @@ export function buildDashboardHtml(
             detail: 'Documento ausente no prontuário'
           });
         } else if (isVencido(r.statusEHS)) {
-          expiredItems.push(r);
+          // Se o documento estiver vencido, mas a reciclagem já foi efetivamente iniciada na Storz
+          // (progresso > 0%) e não for documento médico/legal estrito (ASO / CNH), flexibiliza para ALERTA
+          const hasStorzProgress = Boolean(
+            r.storzRequestId &&
+            (r.storzProgressPercent || 0) > 0 &&
+            code !== '01' &&
+            code !== '08'
+          );
+          if (hasStorzProgress) {
+            storzInProgressItems.push(r);
+            compliantCount++;
+          } else {
+            expiredItems.push(r);
+          }
         } else if (isAusente(r.statusEHS)) {
           missingItems.push(r);
         } else if (isAVencer(r.statusEHS)) {
@@ -4065,7 +4088,7 @@ export function buildDashboardHtml(
       let status = 'APTO';
       if (expiredItems.length > 0 || missingItems.length > 0) {
         status = 'BLOQUEADO';
-      } else if (alertItems.length > 0) {
+      } else if (alertItems.length > 0 || storzInProgressItems.length > 0) {
         status = 'ALERTA';
       }
 
@@ -4077,6 +4100,7 @@ export function buildDashboardHtml(
         isMobilizavel,
         isOffice: false,
         isLeader,
+        isDrone,
         hasStorz,
         complianceRate,
         totalOp: totalRequired,
@@ -4085,6 +4109,7 @@ export function buildDashboardHtml(
         missingItems,
         alertItems,
         storzActiveItems,
+        storzInProgressItems,
         hasArt,
         hasNr33Resgate,
         hasVestas,
@@ -4292,7 +4317,9 @@ export function buildDashboardHtml(
           avatarColor = '#991B1B';
         } else if (health.status === 'ALERTA') {
           statusBadgeClass = 'badge-cockpit-alerta';
-          statusLabel = 'LÍDER ATENÇÃO (HÍBRIDO)';
+          statusLabel = (health.storzInProgressItems && health.storzInProgressItems.length > 0)
+            ? 'LÍDER ATENÇÃO (RECICLAGEM STORZ)'
+            : 'LÍDER ATENÇÃO (HÍBRIDO)';
           borderColor = '#F59E0B';
           avatarBg = '#FEF3C7';
           avatarColor = '#92400E';
@@ -4303,6 +4330,28 @@ export function buildDashboardHtml(
           avatarBg = '#EEF2FF';
           avatarColor = '#3730A3';
         }
+      } else if (health.isDrone) {
+        if (health.status === 'BLOQUEADO') {
+          statusBadgeClass = 'badge-cockpit-bloqueado';
+          statusLabel = 'DRONE: PENDÊNCIA SOLO';
+          borderColor = '#EF4444';
+          avatarBg = '#FEE2E2';
+          avatarColor = '#991B1B';
+        } else if (health.status === 'ALERTA') {
+          statusBadgeClass = 'badge-cockpit-alerta';
+          statusLabel = (health.storzInProgressItems && health.storzInProgressItems.length > 0)
+            ? 'DRONE: ATENÇÃO (RECICLAGEM STORZ)'
+            : 'DRONE: ATENÇÃO SOLO';
+          borderColor = '#F59E0B';
+          avatarBg = '#FEF3C7';
+          avatarColor = '#92400E';
+        } else {
+          statusBadgeClass = 'badge-cockpit-apto';
+          statusLabel = 'DRONE: APTO (SOLO)';
+          borderColor = '#10B981';
+          avatarBg = '#D1FAE5';
+          avatarColor = '#065F46';
+        }
       } else {
         if (health.status === 'BLOQUEADO') {
           statusBadgeClass = 'badge-cockpit-bloqueado';
@@ -4312,7 +4361,9 @@ export function buildDashboardHtml(
           avatarColor = '#991B1B';
         } else if (health.status === 'ALERTA') {
           statusBadgeClass = 'badge-cockpit-alerta';
-          statusLabel = 'APTO (RECERTIFICAÇÃO \u226430D)';
+          statusLabel = (health.storzInProgressItems && health.storzInProgressItems.length > 0)
+            ? 'APTO (RECICLAGEM EM ANDAMENTO)'
+            : 'APTO (RECERTIFICAÇÃO \u226430D)';
           borderColor = '#F59E0B';
           avatarBg = '#FEF3C7';
           avatarColor = '#92400E';
@@ -4336,14 +4387,26 @@ export function buildDashboardHtml(
           }).join('') +
           '</div>';
       } else if (health.status === 'ALERTA') {
-        highlightsHtml = '<div class="cockpit-card-pills">' +
-          health.alertItems.map(r => {
+        const pills = [];
+        if (health.storzInProgressItems && health.storzInProgressItems.length > 0) {
+          health.storzInProgressItems.forEach(r => {
             const docName = docShortNames[r.docCode] || r.docName;
-            return '<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + (r.detail || 'Vence em breve') + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>';
-          }).join('') +
-          '</div>';
+            const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent + '%' : 'Iniciado';
+            pills.push('<span class="cockpit-card-pill pill-warning" style="background:#FEF3C7;color:#92400E;border-color:#FCD34D;font-weight:600;" title="' + r.docName + ' (Vencido - Reciclagem em andamento na Storz: ' + prog + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>' + docName + ' (Storz: ' + prog + ')</span>');
+          });
+        }
+        if (health.alertItems && health.alertItems.length > 0) {
+          health.alertItems.forEach(r => {
+            const docName = docShortNames[r.docCode] || r.docName;
+            pills.push('<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + (r.detail || 'Vence em breve') + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>');
+          });
+        }
+        highlightsHtml = '<div class="cockpit-card-pills">' + pills.join('') + '</div>';
       } else {
-        highlightsHtml = '<div class="cockpit-card-ok-msg"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>Requisitos básicos de campo em conformidade plena.</div>';
+        const msg = health.isDrone
+          ? 'Requisitos de solo/drone em conformidade plena (isento de escalada).'
+          : 'Requisitos básicos de campo em conformidade plena.';
+        highlightsHtml = '<div class="cockpit-card-ok-msg"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>' + msg + '</div>';
       }
 
       let storzHtml = '';
@@ -4357,7 +4420,9 @@ export function buildDashboardHtml(
       }
 
       let specsHtml = '';
-      if (!health.isOffice) {
+      if (health.isDrone) {
+        specsHtml = '<div class="cockpit-card-specs"><span class="spec-tag qualified" title="Operação exclusiva em solo e inspeção aérea via drone"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Operação Solo / Drone (Isento de Escalada)</span></div>';
+      } else if (!health.isOffice) {
         const artPill = health.hasArt 
           ? '<span class="spec-tag qualified" title="Qualificado em GWO ART (Resgate Avançado)"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>GWO ART OK</span>'
           : '<span class="spec-tag neutral" title="Não possui GWO ART (Opcional / Específico de Parque)">Sem GWO ART</span>';

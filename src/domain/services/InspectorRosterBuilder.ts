@@ -60,13 +60,18 @@ export function buildRoster(
       certificates: mergedCertificates,
     }
 
+    const baseRequiredCodes = getRequiredDocCodesForProfile(
+      profile,
+      rpoInspector.employmentType
+    )
+    // Documentos marcados como N/A no RPO são isentos para aquele colaborador individualmente
+    const exemptSet = new Set(rpoInspector.exemptDocCodes || [])
+    const requiredDocCodes = baseRequiredCodes.filter(c => !exemptSet.has(c))
+
     entries.push({
       inspector,
       profile,
-      requiredDocCodes: getRequiredDocCodesForProfile(
-        profile,
-        rpoInspector.employmentType
-      ),
+      requiredDocCodes,
       hasDriveFolder: !!driveMatch,
     })
   }

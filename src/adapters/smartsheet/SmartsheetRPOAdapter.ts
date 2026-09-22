@@ -144,9 +144,10 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
 
   async readRPOData(_filePath?: string): Promise<Inspector[]> {
     const url = `${SMARTSHEET_API_BASE}/sheets/${this.sheetId}?includeAll=true`
-    const resp = await fetch(url, {
+    let resp = await fetch(url, {
       headers: { Authorization: `Bearer ${this.apiToken}` },
     })
+
 
     if (!resp.ok) {
       throw new Error(
@@ -243,11 +244,20 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
       if (typeof name !== 'string' || !name.trim()) continue
 
       const certificates = new Map<string, Certificate>()
+      const exemptDocCodes: string[] = []
+
       for (const [columnTitle, code] of Object.entries(
         RPO_DATE_COLUMN_TO_CODE
       )) {
         const rawValue = cellByTitle.get(columnTitle)
-        if (typeof rawValue !== 'string' || rawValue === 'N/A') continue
+        if (typeof rawValue === 'string') {
+          const trimmedUpper = rawValue.trim().toUpperCase()
+          if (trimmedUpper === 'N/A' || trimmedUpper === 'NA') {
+            exemptDocCodes.push(code)
+            continue
+          }
+        }
+        if (typeof rawValue !== 'string') continue
 
         const expirationDate = parseIsoDateLocal(rawValue)
         if (!expirationDate) continue
@@ -265,6 +275,15 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         })
       }
 
+      // Se a coluna WINDA estiver como N/A ou NA, isenta também o código '30' (GWO WINDA ID)
+      const rawWinda = cellByTitle.get(WINDA_COLUMN)
+      if (typeof rawWinda === 'string') {
+        const trimmedWinda = rawWinda.trim().toUpperCase()
+        if (trimmedWinda === 'N/A' || trimmedWinda === 'NA') {
+          exemptDocCodes.push('30')
+        }
+      }
+
       // Grupo hierárquico "DESLIGADOS" vence o texto da célula FUNÇÃO — ver comentário acima.
       const role = isDesligadoByHierarchy(row)
         ? 'DE'
@@ -279,6 +298,7 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         rpoBranch: findRpoBranch(row),
         windaId: cellByTitle.get(WINDA_COLUMN) as string | undefined,
         certificates,
+        exemptDocCodes: exemptDocCodes.length > 0 ? exemptDocCodes : undefined,
       })
     }
 

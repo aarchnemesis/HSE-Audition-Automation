@@ -44,7 +44,7 @@ describe('classifyEmployeeProfile', () => {
       classifyEmployeeProfile('XYZ', 'INSP. QUALIDADE & TÉC. OPERAÇÕES')
     ).toBe('CAMPO')
     expect(classifyEmployeeProfile('XYZ', 'DRONE INSP. EQUIPAMENTO')).toBe(
-      'CAMPO'
+      'DRONE'
     )
     expect(classifyEmployeeProfile('XYZ', 'LPS - SPDA')).toBe('CAMPO')
     expect(classifyEmployeeProfile('XYZ', 'ENGENHARIA')).toBe('ADMINISTRATIVO')
@@ -134,6 +134,33 @@ describe('getRequiredDocCodesForProfile', () => {
 
   it('COORDENADOR + PJ não exige nada — sem o mesmo motivo de exposição a risco do perfil CAMPO', () => {
     expect(getRequiredDocCodesForProfile('COORDENADOR', 'PJ')).toEqual([])
+  })
+
+  it('DRONE exige documentos de solo/trânsito e não exige turbina (GWO BST, NR-35, NR-33, LOTO)', () => {
+    const codes = getRequiredDocCodesForProfile('DRONE')
+    expect(codes).toContain('01') // ASO
+    expect(codes).toContain('08') // CNH
+    expect(codes).toContain('09') // DIREÇÃO DEFENSIVA
+    expect(codes).toContain('10') // NR 01
+    expect(codes).toContain('12') // NR 10
+    expect(codes).toContain('15') // NR 12
+    expect(codes).toContain('18') // NR 18
+    expect(codes).toContain('19') // NR 23
+    expect(codes).toContain('27') // NR 07 - PS
+
+    // Não deve exigir turbina/altura
+    expect(codes).not.toContain('16') // GWO BST
+    expect(codes).not.toContain('21') // NR-35
+    expect(codes).not.toContain('20') // NR-33
+    expect(codes).not.toContain('22') // LOTO
+    expect(codes).not.toContain('14') // NR-11
+    expect(codes).not.toContain('30') // WINDA
+  })
+
+  it('DRONE + PJ inclui contrato de prestação de serviços (40)', () => {
+    const codes = getRequiredDocCodesForProfile('DRONE', 'PJ')
+    expect(codes).toContain('40')
+    expect(codes).toContain('01')
   })
 })
 

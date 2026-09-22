@@ -1,10 +1,14 @@
 import { ELECTIVE_DOC_CODES } from './ComplianceEngine.js'
 
-export type EmployeeProfile = 'CAMPO' | 'ADMINISTRATIVO' | 'COORDENADOR'
+export type EmployeeProfile =
+  | 'CAMPO'
+  | 'ADMINISTRATIVO'
+  | 'COORDENADOR'
+  | 'DRONE'
 
 // Baseado nos valores reais da coluna FUNÇÃO na RPO (confirmado com o time de HSE em 21/08/2026):
 //   IQ = Inspetor de Qualidade, TO = Técnico de Operações, LO = Líder Operacional,
-//   IE = Inspetor de Equipamentos — todos perfil CAMPO (pacote completo de documentação).
+//   IE = Inspetor de Equipamentos (quando em campo/SPDA).
 // CO (Coordenador) NÃO está mais aqui — ganhou perfil próprio em 25/08/2026, ver COORDENADOR_FUNCAO_CODES.
 const CAMPO_FUNCAO_CODES = new Set(['IQ', 'TO', 'LO', 'IE'])
 
@@ -25,14 +29,12 @@ const DESLIGADO_FUNCAO_CODES = new Set(['DE'])
 /**
  * Ramos da hierarquia da RPO (dentro de "RECURSOS HUMANOS") que são homogêneos o suficiente pra
  * decidir o perfil sozinhos, sem depender do texto da coluna FUNÇÃO — confirmado em 25/08/2026
- * conferindo a composição real de cada ramo (100% do mesmo código FUNÇÃO em cada um destes).
- * "LÍDERES / EHS" fica de fora de propósito: é um ramo MISTO (LO, CO, DO, ADM, EHS convivem ali),
- * então usar hierarquia ali destruiria a distinção que a FUNÇÃO já faz corretamente — pra esse
- * ramo (e pra quem não tem `rpoBranch`, ex.: inspetor só do Drive) cai no fallback por FUNÇÃO.
+ * conferindo a composição real de cada ramo.
+ * "DRONE INSP. EQUIPAMENTO" possui perfil próprio (DRONE) com requisitos de solo (sem turbina).
  */
-const BRANCH_TO_PROFILE: Record<string, 'CAMPO' | 'ADMINISTRATIVO'> = {
+const BRANCH_TO_PROFILE: Record<string, EmployeeProfile> = {
   'INSP. QUALIDADE & TÉC. OPERAÇÕES': 'CAMPO',
-  'DRONE INSP. EQUIPAMENTO': 'CAMPO',
+  'DRONE INSP. EQUIPAMENTO': 'DRONE',
   'LPS - SPDA': 'CAMPO',
   ENGENHARIA: 'ADMINISTRATIVO',
   ADMINISTRATIVO: 'ADMINISTRATIVO',
@@ -126,6 +128,23 @@ const CAMPO_REQUIRED_DOC_CODES = [
 ]
 const ADMINISTRATIVO_REQUIRED_DOC_CODES = ['01', '34']
 
+// Perfil DRONE (Pilotos de Drone / Inspetores de Equipamentos): atuam em solo, sem atividade de
+// escalada em turbina. Documentos de solo e trânsito são obrigatórios; normas de altura (GWO BST,
+// NR-35, NR-33, LOTO, Talha, WINDA) não são aplicáveis (confirmado no RPO onde constam como N/A).
+const DRONE_REQUIRED_DOC_CODES = [
+  '01', // ASO
+  '08', // CNH
+  '09', // DIREÇÃO DEFENSIVA
+  '10', // NR 01
+  '11', // NR 06
+  '12', // NR 10
+  '13', // NR 10 SEP
+  '15', // NR 12
+  '18', // NR 18
+  '19', // NR 23
+  '27', // NR 07 - PS
+]
+
 // Coordenador: só ASO é de fato exigido. O resto do pacote de campo (mesmos códigos do perfil
 // CAMPO, exceto ASO) entra como monitoramento — ver getElectiveDocCodesForProfile, que marca
 // todos esses códigos como eletivos pra esse perfil específico.
@@ -155,6 +174,8 @@ export function getRequiredDocCodesForProfile(
   // pelo usuário em 27/08/2026: quer saber quando termina o prazo do contrato/aditivo dos pilotos PJ.
   if (profile === 'CAMPO')
     return isPJ ? [...CAMPO_REQUIRED_DOC_CODES, '40'] : CAMPO_REQUIRED_DOC_CODES
+  if (profile === 'DRONE')
+    return isPJ ? [...DRONE_REQUIRED_DOC_CODES, '40'] : DRONE_REQUIRED_DOC_CODES
   if (profile === 'COORDENADOR')
     return isPJ ? [] : COORDENADOR_REQUIRED_DOC_CODES
 

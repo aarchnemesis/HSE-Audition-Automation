@@ -16,6 +16,7 @@ export interface HSEDatabaseRecord {
   inspectorName: string
   role: string
   sector?: string
+  rpoBranch?: string
   city?: string
   state?: string
   docCode: string
@@ -73,6 +74,7 @@ export class HSEDatabaseRepository {
           inspectorName: audit.inspectorName,
           role: inspector?.role || 'TÉCNICO',
           sector: inspector?.sector || 'OPERAÇÕES',
+          rpoBranch: inspector?.rpoBranch,
           city: inspector?.location?.city,
           state: inspector?.location?.state,
           docCode: item.code,

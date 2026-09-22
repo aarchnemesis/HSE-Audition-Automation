@@ -47,6 +47,8 @@ export interface Inspector {
     lng?: number
   }
   certificates: Map<string, Certificate> // Mapeado pelo código ("01".."30")
+  /** Códigos de documentos marcados como N/A na linha do colaborador no RPO (isentos/não aplicáveis) */
+  exemptDocCodes?: string[]
 }
 
 export interface ParkRequirement {

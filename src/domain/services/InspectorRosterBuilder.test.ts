@@ -123,5 +123,25 @@ describe('buildRoster', () => {
       expect(merged?.expirationDate).toEqual(aditivoDate)
       expect(merged?.code).toBe('40') // continua sob o código exigido, não '40.1'
     })
+
+    it('remove códigos de exemptDocCodes (N/A no RPO) da lista requiredDocCodes', () => {
+      const rpo = [
+        inspector('PILOTO DRONE', 'IE', [], {
+          employmentType: 'PJ',
+          rpoBranch: 'DRONE INSP. EQUIPAMENTO',
+          exemptDocCodes: ['16', '21', '20', '22', '30'],
+        }),
+      ]
+
+      const roster = buildRoster(rpo, [])
+
+      expect(roster[0].profile).toBe('DRONE')
+      expect(roster[0].requiredDocCodes).toContain('01') // ASO
+      expect(roster[0].requiredDocCodes).toContain('40') // Contrato PJ
+      expect(roster[0].requiredDocCodes).not.toContain('16') // Isento
+      expect(roster[0].requiredDocCodes).not.toContain('21') // Isento
+      expect(roster[0].requiredDocCodes).not.toContain('20') // Isento
+      expect(roster[0].inspector.exemptDocCodes).toEqual(['16', '21', '20', '22', '30'])
+    })
   })
 })
