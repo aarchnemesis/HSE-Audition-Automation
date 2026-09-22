@@ -4,10 +4,9 @@ name: Histórico do Aluno (Desenvolvimento Organizacional)
 # status de conformidade — histórico completo de matrículas na Storz e controle de retestes.
 
 on:
-  schedule:
-    # Terça e Sexta na madrugada às 06:35 UTC (03:35 BRT - Horário de Brasília) — fluxo baixo
-    # Dispara e-mail apenas terça e sexta para a equipe de DO (Mayanna e João).
-    - cron: '35 6 * * 2,5'
+  # Agendamento desativado no GitHub Actions (centralizado na VPS Prometeu)
+  # schedule:
+  #   - cron: '35 6 * * 2,5'
   workflow_dispatch:
     inputs:
       force_email:

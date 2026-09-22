@@ -6,9 +6,9 @@ name: Auditoria RPO (Divergência de Digitação)
 # dia, é achar divergência de data pra alguém corrigir na RPO.
 
 on:
-  schedule:
-    # Toda segunda-feira às 07:30 UTC (04:30 BRT - Horário de Brasília) — minuto 30 para evitar fila de minuto cheio do GitHub Actions
-    - cron: '30 7 * * 1'
+  # Agendamento desativado no GitHub Actions (centralizado na VPS Prometeu)
+  # schedule:
+  #   - cron: '30 7 * * 1'
   workflow_dispatch:
 
 jobs:
