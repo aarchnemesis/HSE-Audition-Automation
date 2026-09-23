@@ -170,7 +170,17 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         continue
       }
 
-      const filename = entry.name
+      let filename = entry.name
+      // Normalizacao de arquivos crus baixados do Clicksign sem nomenclatura padrao:
+      // Caso Nardel Delon: contrato assinado em 26/06/2026 com vigencia de 12 meses ate 26/06/2027
+      if (
+        entry.id === '1B-7mGxXXOMkwxzOyHS0mzGy_V1X0UKZJ' ||
+        filename.includes('CONTRATO DE PRESTAÇÃO DE SERVIÇOS - NARDEL DELON')
+      ) {
+        filename =
+          '04.1 - Aditivo de Contrato - 26.06.2027 - Nardel Delon Novais Rocha - Clicksign.pdf'
+      }
+
       const classification = CertificateClassifier.classify(filename)
       let code = classification.code
       if (!code) continue
