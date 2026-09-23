@@ -201,7 +201,9 @@ export class AuditTriangulator {
           refDate
         )
         status = evaluation.status
-        detail = evaluation.detail
+        detail = cert.statusDetail
+          ? `${evaluation.detail} ${cert.statusDetail}`
+          : evaluation.detail
 
         if (status === 'CONFORME') {
           validCount++

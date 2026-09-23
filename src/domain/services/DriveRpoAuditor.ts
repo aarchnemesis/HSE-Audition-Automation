@@ -10,6 +10,7 @@ import {
 } from './ComplianceEngine.js'
 import { EHSEvaluator } from './EHSEvaluator.js'
 import { findInspectorMatch, matchesInspector } from './InspectorMatcher.js'
+import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
 export type DriveRpoDivergenceKind =
   | 'SOMENTE_DRIVE'
@@ -17,6 +18,7 @@ export type DriveRpoDivergenceKind =
   | 'SOMENTE_RPO'
   | 'DATA_DIVERGENTE'
   | 'DRIVE_SEM_DATA'
+  | 'RPO_VALIDADO_PENDENTE_BACKUP'
 export type TrustedSource = 'DRIVE' | 'STORZ'
 
 export interface DriveRpoComparisonItem {
@@ -35,6 +37,8 @@ export interface DriveRpoComparisonItem {
   direction?: 'RPO_NEWER' | 'DRIVE_NEWER'
   /** Indica se a divergência decorre de provável inversão de dia/mês (DD/MM vs MM/DD) */
   isSwappedDayMonth?: boolean
+  /** Indica se o colaborador foi validado manualmente no RPO (nome com fundo branco) */
+  isRpoValidated?: boolean
   detail: string
   diffDays?: number
   recommendedAction?: string
@@ -153,17 +157,28 @@ export class DriveRpoAuditor {
 
         // Caso 3: RPO tem registro, mas NENHUM certificado no Drive nem curso na Storz encontrado
         if (!trustedExpiration && rpoCert?.expirationDate) {
+          const isRpoValidated =
+            rpoInspector?.rpoAuditStatus === 'VALIDADO' ||
+            RPOAuditStatusManager.isCollabValidated(
+              rpoInspector?.name || driveInspector.name
+            )
           items.push({
             inspectorName: driveInspector.name,
             docCode: code,
             docName,
             rpoExpiration: rpoCert.expirationDate,
             divergent: true,
-            divergenceKind: 'SOMENTE_RPO',
+            divergenceKind: isRpoValidated
+              ? 'RPO_VALIDADO_PENDENTE_BACKUP'
+              : 'SOMENTE_RPO',
             direction: 'RPO_NEWER',
-            detail: `Registro presente na planilha RPO (${this.formatDate(rpoCert.expirationDate)}), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.`,
-            recommendedAction:
-              'Checar documento físico e fazer upload do backup no Drive',
+            isRpoValidated,
+            detail: isRpoValidated
+              ? `Curso validado na planilha RPO (${this.formatDate(rpoCert.expirationDate)}), pendente apenas upload do backup no Drive.`
+              : `Registro presente na planilha RPO (${this.formatDate(rpoCert.expirationDate)}), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.`,
+            recommendedAction: isRpoValidated
+              ? 'Fazer upload do certificado no Drive (RPO já validado)'
+              : 'Checar documento físico e fazer upload do backup no Drive',
           })
           continue
         }
@@ -214,16 +229,28 @@ export class DriveRpoAuditor {
             tParts.month === rParts.day &&
             tParts.day !== tParts.month
 
+          const isRpoValidated =
+            rpoInspector?.rpoAuditStatus === 'VALIDADO' ||
+            RPOAuditStatusManager.isCollabValidated(
+              rpoInspector?.name || driveInspector.name
+            )
           let detail: string
           let recommendedAction: string
+          let divergenceKind: DriveRpoDivergenceKind = 'DATA_DIVERGENTE'
 
           if (isSwappedDayMonth) {
             detail = `Provável inversão de dia/mês (DD/MM vs MM/DD) ao preencher a planilha RPO: ${this.formatDate(trustedExpiration!)} no ${sourceName} vs ${this.formatDate(rpoCert!.expirationDate!)} na RPO.`
             recommendedAction = `Corrigir inversão de dia/mês na RPO para ${this.formatDate(trustedExpiration!)}`
           } else if (isRpoNewer) {
-            detail = `RPO mais recente que o ${sourceName} em ${roundedDiff} dia(s) (${this.formatDate(rpoCert!.expirationDate!)} na RPO vs ${this.formatDate(trustedExpiration!)} no ${sourceName}) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.`
-            recommendedAction =
-              'Checar documento físico e atualizar backup no Drive'
+            if (isRpoValidated) {
+              divergenceKind = 'RPO_VALIDADO_PENDENTE_BACKUP'
+              detail = `Curso validado na planilha RPO (${this.formatDate(rpoCert!.expirationDate!)}), porém o ${sourceName} ainda possui registro anterior (${this.formatDate(trustedExpiration!)}).`
+              recommendedAction = `Fazer upload do novo certificado no Drive (RPO já validado)`
+            } else {
+              detail = `RPO mais recente que o ${sourceName} em ${roundedDiff} dia(s) (${this.formatDate(rpoCert!.expirationDate!)} na RPO vs ${this.formatDate(trustedExpiration!)} no ${sourceName}) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.`
+              recommendedAction =
+                'Checar documento físico e atualizar backup no Drive'
+            }
           } else {
             detail = `${sourceName} mais recente que a RPO em ${roundedDiff} dia(s) (${this.formatDate(trustedExpiration!)} no ${sourceName} vs ${this.formatDate(rpoCert!.expirationDate!)} na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.`
             recommendedAction = `Atualizar data na RPO para ${this.formatDate(trustedExpiration!)}`
@@ -238,11 +265,12 @@ export class DriveRpoAuditor {
             trustedSource,
             rpoExpiration: rpoCert!.expirationDate,
             divergent: true,
-            divergenceKind: 'DATA_DIVERGENTE',
+            divergenceKind,
             direction,
             isSwappedDayMonth,
-            diffDays: roundedDiff,
+            isRpoValidated,
             detail,
+            diffDays: roundedDiff,
             recommendedAction,
           })
           continue

@@ -157,4 +157,14 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('function getSortKey(r)')
     expect(html).toContain('const sortedRecords = [...p.records].sort')
   })
+
+  it('deve conter suporte aos filtros e badges de validacao manual da RPO (Opcao B)', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain('id="rpoChip-ACTIONABLE_DIV"')
+    expect(html).toContain('id="rpoChip-PENDENTE_BACKUP"')
+    expect(html).toContain('id="rpoKpiActionable"')
+    expect(html).toContain('id="rpoKpiPendenteBackup"')
+    expect(html).toContain('Pendente Backup Drive')
+    expect(html).toContain('RPO Validado')
+  })
 })

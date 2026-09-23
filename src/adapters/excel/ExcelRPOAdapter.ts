@@ -27,7 +27,8 @@ export class ExcelRPOAdapter implements IRPOExporter {
     sheet.eachRow((row, rowNumber) => {
       if (rowNumber < 12) return
 
-      const funcName = row.getCell(54).value?.toString()
+      const funcCell = row.getCell(54)
+      const funcName = funcCell.value?.toString()
       const setor = row.getCell(53).value?.toString()
       const winda = row.getCell(55).value?.toString()
       const tipo = row.getCell(50).value?.toString()
@@ -85,6 +86,20 @@ export class ExcelRPOAdapter implements IRPOExporter {
           }
         }
 
+        // Fundo branco / sem preenchimento = validado manualmente pela equipe
+        // Fundo laranja / colorido = pendente de revisão manual
+        const isAuditedByTeam = (fill: any): boolean => {
+          if (!fill) return true
+          if (fill.type !== 'pattern') return true
+          if (fill.pattern === 'none') return true
+          const argb = (fill.fgColor?.argb || '').toUpperCase()
+          return argb === 'FFFFFFFF' || argb === '00FFFFFF' || !argb
+        }
+
+        const rpoAuditStatus: 'VALIDADO' | 'PENDENTE_REVISAO' = isAuditedByTeam(funcCell.fill)
+          ? 'VALIDADO'
+          : 'PENDENTE_REVISAO'
+
         inspectors.push({
           id: `rpo_${rowNumber}`,
           name: funcName,
@@ -92,6 +107,7 @@ export class ExcelRPOAdapter implements IRPOExporter {
           sector: setor,
           windaId: winda,
           certificates,
+          rpoAuditStatus,
         })
       }
     })

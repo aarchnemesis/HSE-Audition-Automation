@@ -5,6 +5,7 @@ import {
   getRequiredDocCodesForProfile,
 } from './EmployeeProfileClassifier.js'
 import { matchesInspector } from './InspectorMatcher.js'
+import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
 export interface RosterEntry {
   inspector: Inspector
@@ -18,6 +19,8 @@ export interface RosterEntry {
  * administrativo/visibilidade, diferente do Drive que só tem pasta para quem é campo). Quando a
  * pessoa também tem pasta no Drive, os certificados de lá têm prioridade (documento de fato,
  * mais confiável que só uma data digitada na planilha) — a RPO preenche o que falta.
+ * Quando o colaborador tem status VALIDADO na RPO (auditado manualmente pela equipe) e o RPO
+ * possui data de validade mais recente que o arquivo antigo do Drive, a data do RPO tem precedência.
  * Desligados (perfil null) são excluídos do resultado.
  */
 export function buildRoster(
@@ -37,10 +40,32 @@ export function buildRoster(
       matchesInspector(d, rpoInspector.name)
     )
 
+    const auditStatus =
+      rpoInspector.rpoAuditStatus ||
+      (RPOAuditStatusManager.isCollabValidated(rpoInspector.name)
+        ? 'VALIDADO'
+        : 'PENDENTE_REVISAO')
+
     const mergedCertificates = new Map(rpoInspector.certificates)
     if (driveMatch) {
-      for (const [code, cert] of driveMatch.certificates) {
-        mergedCertificates.set(code, cert)
+      for (const [code, driveCert] of driveMatch.certificates) {
+        const rpoCert = rpoInspector.certificates.get(code)
+        const isRpoValidated = auditStatus === 'VALIDADO'
+        const isRpoNewer = Boolean(
+          rpoCert &&
+            rpoCert.expirationDate &&
+            (!driveCert.expirationDate ||
+              rpoCert.expirationDate.getTime() > driveCert.expirationDate.getTime())
+        )
+
+        if (isRpoValidated && isRpoNewer) {
+          mergedCertificates.set(code, {
+            ...rpoCert!,
+            statusDetail: `${rpoCert!.statusDetail || ''} (Validado no RPO | Comprovante pendente no Drive)`,
+          })
+        } else {
+          mergedCertificates.set(code, driveCert)
+        }
       }
     }
 
@@ -56,6 +81,7 @@ export function buildRoster(
 
     const inspector: Inspector = {
       ...rpoInspector,
+      rpoAuditStatus: auditStatus,
       location: driveMatch?.location,
       certificates: mergedCertificates,
     }

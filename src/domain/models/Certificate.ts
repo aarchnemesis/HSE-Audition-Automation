@@ -49,6 +49,8 @@ export interface Inspector {
   certificates: Map<string, Certificate> // Mapeado pelo código ("01".."30")
   /** Códigos de documentos marcados como N/A na linha do colaborador no RPO (isentos/não aplicáveis) */
   exemptDocCodes?: string[]
+  /** Status da auditoria manual no RPO: 'VALIDADO' (fundo branco / verificado) ou 'PENDENTE_REVISAO' (fundo laranja) */
+  rpoAuditStatus?: 'VALIDADO' | 'PENDENTE_REVISAO'
 }
 
 export interface ParkRequirement {

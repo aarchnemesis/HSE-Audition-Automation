@@ -2922,13 +2922,13 @@ export function buildDashboardHtml(
             <div class="rpo-summary-val mono" id="rpoKpiTotal" style="color:var(--brand-blue);">0</div>
             <div class="rpo-summary-label">Total Comparados</div>
           </div>
-          <div class="rpo-summary-card crit" onclick="filterRpoSubTab('ALL_DIV')" style="cursor:pointer;" title="Filtrar todas as divergências ativas">
-            <div class="rpo-summary-val mono" id="rpoKpiDivergences" style="color:#EF4444;">0</div>
-            <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências Ativas</div>
+          <div class="rpo-summary-card crit" onclick="filterRpoSubTab('ACTIONABLE_DIV')" style="cursor:pointer;" title="Filtrar divergências que exigem ação corretiva imediata">
+            <div class="rpo-summary-val mono" id="rpoKpiActionable" style="color:#EF4444;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências de Ação</div>
           </div>
-          <div class="rpo-summary-card drive" onclick="filterRpoSubTab('RPO_NEWER')" style="cursor:pointer;" title="RPO mais recente que Drive/Storz: Checar documento físico e atualizar backup no Drive">
-            <div class="rpo-summary-val mono" id="rpoKpiRpoNewer" style="color:#2563EB;">0</div>
-            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (Falta Backup Drive)</div>
+          <div class="rpo-summary-card drive" onclick="filterRpoSubTab('PENDENTE_BACKUP')" style="cursor:pointer;border-color:#C7D2FE;background:#EEF2FF;" title="RPO validado manualmente pela equipe — pendente apenas anexar comprovante no Drive">
+            <div class="rpo-summary-val mono" id="rpoKpiPendenteBackup" style="color:#3730A3;">0</div>
+            <div class="rpo-summary-label"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Validado RPO (Pendente Backup)</div>
           </div>
           <div class="rpo-summary-card warn" onclick="filterRpoSubTab('DRIVE_NEWER')" style="cursor:pointer;" title="Drive mais recente que RPO: Atualizar data na planilha RPO">
             <div class="rpo-summary-val mono" id="rpoKpiDriveNewer" style="color:#DC2626;">0</div>
@@ -2944,7 +2944,9 @@ export function buildDashboardHtml(
           <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
             <h3><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria de Digitação: Fontes Confiáveis (Drive + Storz) vs Planilha RPO</h3>
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
-              <button class="chip active" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Só Divergências (<span id="rpoChipDivCount">0</span>)</button>
+              <button class="chip active" id="rpoChip-ACTIONABLE_DIV" onclick="filterRpoSubTab('ACTIONABLE_DIV')">Divergências de Ação (<span id="rpoChipActionableCount">0</span>)</button>
+              <button class="chip" id="rpoChip-PENDENTE_BACKUP" onclick="filterRpoSubTab('PENDENTE_BACKUP')" style="color:#3730A3;background:#EEF2FF;border-color:#C7D2FE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Validado RPO (Pendente Backup) (<span id="rpoChipPendenteBackupCount">0</span>)</button>
+              <button class="chip" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Todas Divergências (<span id="rpoChipDivCount">0</span>)</button>
               <button class="chip" id="rpoChip-RPO_NEWER" onclick="filterRpoSubTab('RPO_NEWER')" style="color:#1D4ED8;border-color:#BFDBFE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (<span id="rpoChipRpoNewerCount">0</span>)</button>
               <button class="chip chip-crit" id="rpoChip-DRIVE_NEWER" onclick="filterRpoSubTab('DRIVE_NEWER')"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>Drive Mais Recente (<span id="rpoChipDriveNewerCount">0</span>)</button>
               <button class="chip chip-warn" id="rpoChip-SWAP" onclick="filterRpoSubTab('SWAP')" style="color:#92400E;background:#FEF3C7;border-color:#FCD34D;"><svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>Inversão DD/MM (<span id="rpoChipSwapCount">0</span>)</button>
@@ -3282,6 +3284,8 @@ export function buildDashboardHtml(
 
     // RPO AUDIT KPIS & BADGES
     const rpoDivergentCount = rawRpoDivergences.filter(d => d.divergent).length;
+    const rpoPendenteBackupCount = rawRpoDivergences.filter(d => d.divergent && d.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP').length;
+    const rpoActionableCount = rawRpoDivergences.filter(d => d.divergent && d.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP').length;
     let rpoDataDivergenteCount = 0, rpoSomenteDriveCount = 0, rpoSomenteStorzCount = 0, rpoSomenteRpoCount = 0;
     let rpoNewerCount = 0, driveNewerCount = 0, rpoSwapCount = 0;
     rawRpoDivergences.forEach(d => {
@@ -3298,24 +3302,32 @@ export function buildDashboardHtml(
       } else if (d.divergenceKind === 'SOMENTE_RPO') {
         rpoSomenteRpoCount++;
         rpoNewerCount++;
+      } else if (d.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP') {
+        rpoNewerCount++;
       }
     });
 
     if (document.getElementById('rpoBadgeSidebar')) {
       const badge = document.getElementById('rpoBadgeSidebar');
-      badge.innerText = rpoDivergentCount;
-      badge.style.display = rpoDivergentCount > 0 ? 'inline-block' : 'none';
+      badge.innerText = rpoActionableCount;
+      badge.title = rpoActionableCount + ' divergências reais de ação (' + rpoPendenteBackupCount + ' validados com backup pendente)';
+      badge.style.display = rpoActionableCount > 0 ? 'inline-block' : 'none';
     }
     if (document.getElementById('rpoBadgeTab')) {
       const badge = document.getElementById('rpoBadgeTab');
-      badge.innerText = rpoDivergentCount;
-      badge.style.display = rpoDivergentCount > 0 ? 'inline-block' : 'none';
+      badge.innerText = rpoActionableCount;
+      badge.title = rpoActionableCount + ' divergências reais de ação (' + rpoPendenteBackupCount + ' validados com backup pendente)';
+      badge.style.display = rpoActionableCount > 0 ? 'inline-block' : 'none';
     }
     if (document.getElementById('rpoKpiTotal')) document.getElementById('rpoKpiTotal').innerText = rawRpoDivergences.length;
     if (document.getElementById('rpoKpiDivergences')) document.getElementById('rpoKpiDivergences').innerText = rpoDivergentCount;
+    if (document.getElementById('rpoKpiActionable')) document.getElementById('rpoKpiActionable').innerText = rpoActionableCount;
+    if (document.getElementById('rpoKpiPendenteBackup')) document.getElementById('rpoKpiPendenteBackup').innerText = rpoPendenteBackupCount;
     if (document.getElementById('rpoKpiRpoNewer')) document.getElementById('rpoKpiRpoNewer').innerText = rpoNewerCount;
     if (document.getElementById('rpoKpiDriveNewer')) document.getElementById('rpoKpiDriveNewer').innerText = driveNewerCount;
     if (document.getElementById('rpoKpiSomenteRpo')) document.getElementById('rpoKpiSomenteRpo').innerText = rpoSomenteRpoCount;
+    if (document.getElementById('rpoChipActionableCount')) document.getElementById('rpoChipActionableCount').innerText = rpoActionableCount;
+    if (document.getElementById('rpoChipPendenteBackupCount')) document.getElementById('rpoChipPendenteBackupCount').innerText = rpoPendenteBackupCount;
     if (document.getElementById('rpoChipDivCount')) document.getElementById('rpoChipDivCount').innerText = rpoDivergentCount;
     if (document.getElementById('rpoChipRpoNewerCount')) document.getElementById('rpoChipRpoNewerCount').innerText = rpoNewerCount;
     if (document.getElementById('rpoChipDriveNewerCount')) document.getElementById('rpoChipDriveNewerCount').innerText = driveNewerCount;
@@ -4568,7 +4580,7 @@ export function buildDashboardHtml(
       });
     }
 
-    let rpoSubTab = 'ALL_DIV';
+    let rpoSubTab = 'ACTIONABLE_DIV';
     function filterRpoSubTab(sub) {
       rpoSubTab = sub;
       document.querySelectorAll('[id^="rpoChip-"]').forEach(b => b.classList.remove('active'));
@@ -4594,11 +4606,13 @@ export function buildDashboardHtml(
           norm(item.recommendedAction).includes(qNorm);
         if (!matchQ) return false;
 
+        if (rpoSubTab === 'ACTIONABLE_DIV') return item.divergent && item.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP';
+        if (rpoSubTab === 'PENDENTE_BACKUP') return item.divergent && item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP';
         if (rpoSubTab === 'ALL_DIV') return item.divergent;
         if (rpoSubTab === 'SWAP') return item.divergent && item.isSwappedDayMonth;
-        if (rpoSubTab === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO');
+        if (rpoSubTab === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
         if (rpoSubTab === 'DRIVE_NEWER') return item.divergent && item.direction === 'DRIVE_NEWER';
-        if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && item.divergenceKind === 'DATA_DIVERGENTE';
+        if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && (item.divergenceKind === 'DATA_DIVERGENTE' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
         if (rpoSubTab === 'SOMENTE_DRIVE') return item.divergent && item.divergenceKind === 'SOMENTE_DRIVE';
         if (rpoSubTab === 'SOMENTE_STORZ') return item.divergent && item.divergenceKind === 'SOMENTE_STORZ';
         if (rpoSubTab === 'SOMENTE_RPO') return item.divergent && item.divergenceKind === 'SOMENTE_RPO';
@@ -4632,6 +4646,8 @@ export function buildDashboardHtml(
         let badgeHtml = '';
         if (!item.divergent) {
           badgeHtml = '<span class="diff-badge consistente">' + SVG_ICONS.check + 'Consistente</span>';
+        } else if (item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP') {
+          badgeHtml = '<span class="diff-badge rpo-validado" style="background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE;">' + SVG_ICONS.check + 'Pendente Backup Drive</span>';
         } else if (item.divergenceKind === 'SOMENTE_DRIVE') {
           badgeHtml = '<span class="diff-badge somente-drive">' + SVG_ICONS.alert + 'Só Drive</span>';
         } else if (item.divergenceKind === 'DRIVE_SEM_DATA') {
@@ -4672,7 +4688,7 @@ export function buildDashboardHtml(
         if (item.isSwappedDayMonth) {
           actionClass = 'action-swap';
           actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>';
-        } else if (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO') {
+        } else if (item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP' || item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO') {
           actionClass = 'action-drive';
           actionIcon = '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>';
         }
@@ -5180,7 +5196,11 @@ export function buildDashboardHtml(
       const p = peopleMap.get(name);
       if (!p) return;
 
-      document.getElementById('modalCollabName').innerText = p.name + ' (' + p.role + ' - ' + p.sector + ')';
+      const isValidated = p.records.some(r => r.rpoAuditStatus === 'VALIDADO');
+      const auditBadge = isValidated
+        ? ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE;vertical-align:middle;margin-left:8px;">RPO Validado</span>'
+        : ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;vertical-align:middle;margin-left:8px;">Pendente Revisão</span>';
+      document.getElementById('modalCollabName').innerHTML = p.name + ' (' + p.role + ' - ' + p.sector + ')' + auditBadge;
       
       let html = '<table class="matrix-table" style="font-size:12px;">' +
         '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th>Validade</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';

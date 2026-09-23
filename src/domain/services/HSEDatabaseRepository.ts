@@ -10,6 +10,7 @@ import { StorzRequest } from '../models/StorzRequest.js'
 import { TripleAuditResult } from './AuditTriangulator.js'
 import { ELECTIVE_DOC_CODES, getTrainingModality } from './ComplianceEngine.js'
 import { matchesInspector } from './InspectorMatcher.js'
+import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
 export interface HSEDatabaseRecord {
   inspectorId: string
@@ -30,6 +31,7 @@ export interface HSEDatabaseRecord {
   storzProgressPercent?: number
   storzDeadline?: string
   detail: string
+  rpoAuditStatus?: 'VALIDADO' | 'PENDENTE_REVISAO'
   lastUpdated: string
 }
 
@@ -92,6 +94,11 @@ export class HSEDatabaseRepository {
             ? item.storzDeadline.toLocaleDateString('pt-BR')
             : undefined,
           detail: item.detail,
+          rpoAuditStatus:
+            inspector?.rpoAuditStatus ||
+            (RPOAuditStatusManager.isCollabValidated(audit.inspectorName)
+              ? 'VALIDADO'
+              : 'PENDENTE_REVISAO'),
           lastUpdated: timestamp,
         })
       }
@@ -102,7 +109,7 @@ export class HSEDatabaseRepository {
     fs.writeFileSync(tmpPath, JSON.stringify(records, null, 2), 'utf-8')
     fs.renameSync(tmpPath, this.dbPath)
     console.log(
-      `[HSEDatabaseRepository] 💾 Banco de dados HSE atualizado com ${records.length} registro(s) em: ${this.dbPath}`
+      `[HSEDatabaseRepository] Banco de dados HSE atualizado com ${records.length} registro(s) em: ${this.dbPath}`
     )
 
     // Salva cópia na pasta persistente data/ para suporte a CI/GitHub Actions apenas se não for caminho customizado de teste

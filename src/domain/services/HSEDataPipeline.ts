@@ -35,6 +35,7 @@ import {
 } from './HSEDatabaseRepository.js'
 import { matchesInspector } from './InspectorMatcher.js'
 import { buildRoster } from './InspectorRosterBuilder.js'
+import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
 export const MODALITY_REQUIREMENTS: ParkRequirement['requiredModalities'] =
   Object.fromEntries(
@@ -163,8 +164,14 @@ export class HSEDataPipeline {
           })
         }
       }
+      const rpoAuditStatus =
+        item.rpoAuditStatus ||
+        (RPOAuditStatusManager.isCollabValidated(item.name)
+          ? 'VALIDADO'
+          : 'PENDENTE_REVISAO')
       return {
         ...item,
+        rpoAuditStatus,
         certificates: certsMap,
       }
     })
@@ -298,12 +305,18 @@ export class HSEDataPipeline {
     const inspMap = new Map<string, Inspector>()
     for (const d of divergences) {
       if (!inspMap.has(d.inspectorName)) {
+        const auditStatus = RPOAuditStatusManager.isCollabValidated(
+          d.inspectorName
+        )
+          ? 'VALIDADO'
+          : 'PENDENTE_REVISAO'
         inspMap.set(d.inspectorName, {
           id: `rpo_${inspMap.size}`,
           name: d.inspectorName,
           role: roleByName.get(d.inspectorName) || 'TÉCNICO / INSPETOR',
           sector: sectorByName.get(d.inspectorName) || 'OPERAÇÕES',
           rpoBranch: 'RECURSOS HUMANOS',
+          rpoAuditStatus: auditStatus,
           certificates: new Map(),
         })
       }
@@ -478,6 +491,18 @@ export class HSEDataPipeline {
         console.log(
           `[HSEDataPipeline] RPO: ${rpoInspectorsRaw.length} colaborador(es) carregado(s) do cache local.`
         )
+      }
+    }
+
+    if (rpoInspectorsRaw.length > 0) {
+      for (const insp of rpoInspectorsRaw) {
+        if (!insp.rpoAuditStatus) {
+          insp.rpoAuditStatus = RPOAuditStatusManager.isCollabValidated(
+            insp.name
+          )
+            ? 'VALIDADO'
+            : 'PENDENTE_REVISAO'
+        }
       }
     }
 
