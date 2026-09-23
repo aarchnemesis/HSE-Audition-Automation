@@ -150,4 +150,11 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain("if (code !== '01')")
     expect(html).toContain('alertItems.push(r)')
   })
+
+  it('deve ordenar registros do prontuario do mais proximo de vencer ate o mais longe', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain('<th>Validade</th>')
+    expect(html).toContain('function getSortKey(r)')
+    expect(html).toContain('const sortedRecords = [...p.records].sort')
+  })
 })

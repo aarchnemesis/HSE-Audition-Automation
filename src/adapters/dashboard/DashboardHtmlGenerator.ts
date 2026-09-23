@@ -5183,18 +5183,39 @@ export function buildDashboardHtml(
       document.getElementById('modalCollabName').innerText = p.name + ' (' + p.role + ' - ' + p.sector + ')';
       
       let html = '<table class="matrix-table" style="font-size:12px;">' +
-        '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
+        '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th>Validade</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
 
-      p.records.forEach(r => {
+      function getSortKey(r) {
+        if (r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE') {
+          return r.expirationDate ? new Date(r.expirationDate).getTime() : 0;
+        }
+        if (r.expirationDate) {
+          const t = new Date(r.expirationDate).getTime();
+          return isNaN(t) ? Infinity : t;
+        }
+        return Infinity;
+      }
+
+      const sortedRecords = [...p.records].sort((a, b) => {
+        const keyA = getSortKey(a);
+        const keyB = getSortKey(b);
+        if (keyA !== keyB) return keyA - keyB;
+        return (a.docCode || '').localeCompare(b.docCode || '', undefined, { numeric: true });
+      });
+
+      sortedRecords.forEach(r => {
         const isPres = (r.modality || 'ONLINE') === 'PRESENCIAL';
         const modBadge = isPres
           ? '<span class="badge-modality presencial" title="Presencial">Presencial</span>'
           : '<span class="badge-modality remoto" title="Remoto">Remoto</span>';
 
+        const expFormatted = r.expirationDate ? new Date(r.expirationDate).toLocaleDateString('pt-BR') : '—';
+
         html += '<tr>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td>' + modBadge + '</td>' +
           '<td>' + renderBadge(r) + '</td>' +
+          '<td style="text-align:center;font-family:monospace;font-size:11px;">' + expFormatted + '</td>' +
           '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>' +
           '</tr>';
       });

@@ -21116,8 +21116,8 @@
   },
   {
     "fileId": "1vbP_WJpUNFVm1oeQLPpUYZty-l5MyaBA",
-    "filename": "17 – NR – 17 Car. Manual Peso (GWO) – 20.09.26 - Francisco Leonardo da Silva Ferreira.pdf",
-    "modifiedTime": "2026-09-22T12:18:15.282Z",
+    "filename": "17 – NR – 17 Car. Manual Peso– 20.09.26 - Francisco Leonardo da Silva Ferreira.pdf",
+    "modifiedTime": "2026-09-23T16:42:27.931Z",
     "code": "17",
     "issueDate": "2026-09-20T03:00:00.000Z",
     "expirationDate": "2028-09-20T03:00:00.000Z",
@@ -51189,5 +51189,44 @@
     "classificationSource": "SEMANTIC",
     "matchedTerm": "GWO ART (via PDF)",
     "extractedClause": "Fortaleza, 22 de fevereiro de 2024"
+  },
+  {
+    "fileId": "1D31WQq5i_-Si5c5LsDYEwcmWinf7IjuX",
+    "filename": "09 – Direção Defensiva (08 horas) – 19.09.26 – Francisco Leonardo da Silva Ferreira",
+    "modifiedTime": "2026-09-23T15:11:47.654Z",
+    "code": "09",
+    "issueDate": "2026-09-19T03:00:00.000Z",
+    "expirationDate": "2028-09-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/09/2028",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Direção Defensiva"
+  },
+  {
+    "fileId": "1ivlwg8CfxHyQfQGW4f5WUsxWsz_tXDRs",
+    "filename": "20-09-2026_Francisco_Leonardo_Da_Silva_Ferreira_[STORZ]_-_NR17_-_LEVANTAMENTO_E_TRANSPORTE_MANUAL_DE_CARGAS.pdf",
+    "modifiedTime": "2026-09-22T12:15:23.802Z",
+    "code": "17",
+    "issueDate": "2026-09-20T03:00:00.000Z",
+    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/09/2028",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-17"
+  },
+  {
+    "fileId": "19QVn46gPnLzJEc86rTAJ8RCN2o1WrEZ6",
+    "filename": "09 – NR – 01 Integração – 19.11.2025  – Raphael Afonso.pdf",
+    "modifiedTime": "2026-09-23T16:30:32.114Z",
+    "code": "10",
+    "issueDate": "2025-11-19T03:00:00.000Z",
+    "expirationDate": "2075-11-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/11/2075",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-01 (sobrepôs prefixo 09)"
   }
 ]
