@@ -264,13 +264,14 @@ const SEMANTIC_RULES: Array<{
   },
   // Contrato PJ / Aditivo
   {
-    regex: /\b(?:ADITIVO\s+(?:AO\s+)?CONTRATO|ADITIVO\s+CONTRATUAL)\b/i,
+    regex:
+      /\b(?:TERMO\s+ADITIVO|ADITIVO\s+(?:AO\s+)?CONTRATO|ADITIVO\s+CONTRATUAL|PRIMEIRO\s+TERMO\s+ADITIVO)\b/i,
     code: '40.1',
     matchedTerm: 'Aditivo ao Contrato (PJ)',
   },
   {
     regex:
-      /\b(?:CONTRATO\s+PJ|CONTRATO\s+DE\s+PRESTACAO\s+DE\s+SERVICO|CONTRATO\s+PILOTO)\b/i,
+      /\b(?:CONTRATO\s+PJ|CONTRATO\s+(?:DE\s+)?PRESTACAO\s+DE\s+SERVICOS?|CONTRATO\s+PILOTO|CONTRATATO\s+(?:DE\s+)?PRESTACAO)\b/i,
     code: '40',
     matchedTerm: 'Contrato PJ',
   },

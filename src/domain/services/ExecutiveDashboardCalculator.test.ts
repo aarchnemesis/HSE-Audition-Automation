@@ -132,7 +132,22 @@ describe('ExecutiveDashboardCalculator', () => {
   })
 
   it('mantem colaborador BLOQUEADO se documento estiver vencido e na Storz com 0% de progresso', () => {
-    const coreCodes = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30']
+    const coreCodes = [
+      '01',
+      '10',
+      '11',
+      '12',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '30',
+    ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '10',
       inspectorName: 'Pedro Aluno',
@@ -154,7 +169,22 @@ describe('ExecutiveDashboardCalculator', () => {
   })
 
   it('flexibiliza para ALERTA (Apto com Alerta) se documento vencido tiver reciclagem iniciada na Storz (>0%)', () => {
-    const coreCodes = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30']
+    const coreCodes = [
+      '01',
+      '10',
+      '11',
+      '12',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '30',
+    ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '11',
       inspectorName: 'Caio Iniciado',
@@ -178,7 +208,22 @@ describe('ExecutiveDashboardCalculator', () => {
   })
 
   it('mantem BLOQUEADO se ASO (01) estiver vencido mesmo com solicitacao na Storz', () => {
-    const coreCodes = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30']
+    const coreCodes = [
+      '01',
+      '10',
+      '11',
+      '12',
+      '14',
+      '15',
+      '16',
+      '17',
+      '18',
+      '19',
+      '20',
+      '21',
+      '22',
+      '30',
+    ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '12',
       inspectorName: 'Marcos Medico',
@@ -200,7 +245,19 @@ describe('ExecutiveDashboardCalculator', () => {
   })
 
   it('avalia colaborador DRONE com requisitos de solo e nao bloqueia por normas de subida', () => {
-    const droneCodes = ['01', '08', '09', '10', '11', '12', '13', '15', '18', '19', '27']
+    const droneCodes = [
+      '01',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+      '13',
+      '15',
+      '18',
+      '19',
+      '27',
+    ]
     const records: HSEDatabaseRecord[] = droneCodes.map(code => ({
       inspectorId: '13',
       inspectorName: 'Kelvin Piloto',

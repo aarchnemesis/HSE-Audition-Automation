@@ -1,7 +1,9 @@
 import fs from 'fs'
 import path from 'path'
+import pdfParse from 'pdf-parse'
 import { Certificate, Inspector } from '../../domain/models/Certificate.js'
 import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
+import { PDFContentInspector } from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
 import {
   calculateDocExpiration,
@@ -50,7 +52,7 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
       const certificates = new Map<string, Certificate>()
       const inspectorDir = path.join(this.baseDir, folderName)
 
-      this.scanDirectoryRecursive(inspectorDir, certificates)
+      await this.scanDirectoryRecursive(inspectorDir, certificates)
 
       inspectors.push({
         id: folderName,
@@ -63,10 +65,10 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
     return inspectors
   }
 
-  private scanDirectoryRecursive(
+  private async scanDirectoryRecursive(
     dirPath: string,
     certificates: Map<string, Certificate>
-  ): void {
+  ): Promise<void> {
     if (!fs.existsSync(dirPath)) return
     const entries = fs.readdirSync(dirPath, { withFileTypes: true })
 
@@ -75,39 +77,50 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
 
       if (entry.isDirectory()) {
         if (entry.name.toLowerCase().includes('obsoleto')) continue
-        this.scanDirectoryRecursive(fullPath, certificates)
+        await this.scanDirectoryRecursive(fullPath, certificates)
       } else if (entry.isFile()) {
         const filename = entry.name
-        const code = parseDocCode(filename)
+        const isPdf = filename.toLowerCase().endsWith('.pdf')
 
+        let pdfText = ''
+        if (isPdf) {
+          try {
+            const buffer = fs.readFileSync(fullPath)
+            const parsed = await pdfParse(buffer)
+            pdfText = parsed.text || ''
+          } catch (err: any) {
+            console.warn(
+              `[DriveFileSystemAdapter] Falha ao extrair texto do PDF ${filename}:`,
+              err?.message || err
+            )
+          }
+        }
+
+        const inspected = PDFContentInspector.inspect(
+          filename,
+          isPdf ? pdfText : undefined,
+          this.refDate
+        )
+
+        const code = inspected.code
         if (code) {
-          const parsedDate = parseDateFromFilename(filename)
-          const expirationDate = calculateDocExpiration(
-            code,
-            parsedDate,
-            this.refDate
-          )
-          const evalResult = EHSEvaluator.evaluateDate(
-            expirationDate,
-            this.refDate
-          )
-
           const cert: Certificate = {
             code,
             name: `Doc ${code}`,
             filename,
-            issueDate: parsedDate || undefined,
-            expirationDate,
-            statusEHS: evalResult.status,
-            statusDetail: evalResult.detail,
+            issueDate: inspected.issueDate,
+            expirationDate: inspected.expirationDate,
+            statusEHS: inspected.statusEHS as any,
+            statusDetail: inspected.statusDetail,
             sourcePath: fullPath,
           }
 
           if (
             !certificates.has(code) ||
-            (expirationDate &&
+            (inspected.expirationDate &&
               (!certificates.get(code)?.expirationDate ||
-                expirationDate > certificates.get(code)!.expirationDate!))
+                inspected.expirationDate >
+                  certificates.get(code)!.expirationDate!))
           ) {
             certificates.set(code, cert)
           }

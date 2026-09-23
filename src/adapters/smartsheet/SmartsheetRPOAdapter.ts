@@ -148,7 +148,6 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
       headers: { Authorization: `Bearer ${this.apiToken}` },
     })
 
-
     if (!resp.ok) {
       throw new Error(
         `Smartsheet API retornou ${resp.status}: ${await resp.text()}`

@@ -141,7 +141,13 @@ describe('buildRoster', () => {
       expect(roster[0].requiredDocCodes).not.toContain('16') // Isento
       expect(roster[0].requiredDocCodes).not.toContain('21') // Isento
       expect(roster[0].requiredDocCodes).not.toContain('20') // Isento
-      expect(roster[0].inspector.exemptDocCodes).toEqual(['16', '21', '20', '22', '30'])
+      expect(roster[0].inspector.exemptDocCodes).toEqual([
+        '16',
+        '21',
+        '20',
+        '22',
+        '30',
+      ])
     })
   })
 })
