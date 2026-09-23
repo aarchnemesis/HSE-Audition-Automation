@@ -159,16 +159,21 @@ describe('buildRoster', () => {
         ]),
       ]
       const rpo = [
-        inspector('JOSÉ MARCELO MAGALHÃES SOUSA', 'IQ', [
-          cert('01', rpoRenewalDate),
-        ], { rpoAuditStatus: 'VALIDADO' }),
+        inspector(
+          'JOSÉ MARCELO MAGALHÃES SOUSA',
+          'IQ',
+          [cert('01', rpoRenewalDate)],
+          { rpoAuditStatus: 'VALIDADO' }
+        ),
       ]
 
       const roster = buildRoster(rpo, drive)
       const mergedCert = roster[0].inspector.certificates.get('01')
 
       expect(mergedCert?.expirationDate).toEqual(rpoRenewalDate)
-      expect(mergedCert?.statusDetail).toContain('Validado no RPO | Comprovante pendente no Drive')
+      expect(mergedCert?.statusDetail).toContain(
+        'Validado no RPO | Comprovante pendente no Drive'
+      )
       expect(roster[0].inspector.rpoAuditStatus).toBe('VALIDADO')
     })
 
@@ -176,14 +181,12 @@ describe('buildRoster', () => {
       const driveOldDate = new Date(2024, 5, 10)
       const rpoRenewalDate = new Date(2027, 5, 10)
       const drive = [
-        inspector('FULANO PENDENTE', 'IQ', [
-          cert('01', driveOldDate),
-        ]),
+        inspector('FULANO PENDENTE', 'IQ', [cert('01', driveOldDate)]),
       ]
       const rpo = [
-        inspector('FULANO PENDENTE', 'IQ', [
-          cert('01', rpoRenewalDate),
-        ], { rpoAuditStatus: 'PENDENTE_REVISAO' }),
+        inspector('FULANO PENDENTE', 'IQ', [cert('01', rpoRenewalDate)], {
+          rpoAuditStatus: 'PENDENTE_REVISAO',
+        }),
       ]
 
       const roster = buildRoster(rpo, drive)

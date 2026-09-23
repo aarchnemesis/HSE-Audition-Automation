@@ -96,7 +96,9 @@ export class ExcelRPOAdapter implements IRPOExporter {
           return argb === 'FFFFFFFF' || argb === '00FFFFFF' || !argb
         }
 
-        const rpoAuditStatus: 'VALIDADO' | 'PENDENTE_REVISAO' = isAuditedByTeam(funcCell.fill)
+        const rpoAuditStatus: 'VALIDADO' | 'PENDENTE_REVISAO' = isAuditedByTeam(
+          funcCell.fill
+        )
           ? 'VALIDADO'
           : 'PENDENTE_REVISAO'
 

@@ -325,11 +325,15 @@ describe('DriveRpoAuditor.compare', () => {
 
   it('classifica como RPO_VALIDADO_PENDENTE_BACKUP quando colaborador tem status VALIDADO e RPO e mais recente que Drive', () => {
     const drive = [
-      makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [makeCert('01', new Date(2024, 5, 10))]),
+      makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [
+        makeCert('01', new Date(2024, 5, 10)),
+      ]),
     ]
     const rpo = [
       {
-        ...makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [makeCert('01', new Date(2027, 5, 10))]),
+        ...makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [
+          makeCert('01', new Date(2027, 5, 10)),
+        ]),
         rpoAuditStatus: 'VALIDADO' as const,
       },
     ]
@@ -338,14 +342,18 @@ describe('DriveRpoAuditor.compare', () => {
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('RPO_VALIDADO_PENDENTE_BACKUP')
     expect(result[0].isRpoValidated).toBe(true)
-    expect(result[0].recommendedAction).toContain('Fazer upload do novo certificado no Drive')
+    expect(result[0].recommendedAction).toContain(
+      'Fazer upload do novo certificado no Drive'
+    )
   })
 
   it('classifica como RPO_VALIDADO_PENDENTE_BACKUP quando colaborador tem status VALIDADO e documento so existe no RPO', () => {
     const drive = [makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [])]
     const rpo = [
       {
-        ...makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [makeCert('21', new Date(2027, 8, 10))]),
+        ...makeInspector('JOSÉ MARCELO MAGALHÃES SOUSA', [
+          makeCert('21', new Date(2027, 8, 10)),
+        ]),
         rpoAuditStatus: 'VALIDADO' as const,
       },
     ]
@@ -354,16 +362,22 @@ describe('DriveRpoAuditor.compare', () => {
     expect(result).toHaveLength(1)
     expect(result[0].divergenceKind).toBe('RPO_VALIDADO_PENDENTE_BACKUP')
     expect(result[0].isRpoValidated).toBe(true)
-    expect(result[0].recommendedAction).toContain('Fazer upload do certificado no Drive')
+    expect(result[0].recommendedAction).toContain(
+      'Fazer upload do certificado no Drive'
+    )
   })
 
   it('classifica como DATA_DIVERGENTE normal quando colaborador tem status PENDENTE_REVISAO e RPO e mais recente', () => {
     const drive = [
-      makeInspector('FULANO NAO AUDITADO', [makeCert('01', new Date(2024, 5, 10))]),
+      makeInspector('FULANO NAO AUDITADO', [
+        makeCert('01', new Date(2024, 5, 10)),
+      ]),
     ]
     const rpo = [
       {
-        ...makeInspector('FULANO NAO AUDITADO', [makeCert('01', new Date(2027, 5, 10))]),
+        ...makeInspector('FULANO NAO AUDITADO', [
+          makeCert('01', new Date(2027, 5, 10)),
+        ]),
         rpoAuditStatus: 'PENDENTE_REVISAO' as const,
       },
     ]

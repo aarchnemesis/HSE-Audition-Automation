@@ -51228,5 +51228,81 @@
     "source": "FILENAME",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "NR-01 (sobrepôs prefixo 09)"
+  },
+  {
+    "fileId": "1s8VG3v_N4Pz23_RtAQH3axSTLZ_wTQ1y",
+    "filename": "WORKSHOP ROB├ö - Clicksign.pdf",
+    "modifiedTime": "2026-09-23T19:21:45.905Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE"
+  },
+  {
+    "fileId": "1c4XG61Zlmwa2WyKwY2AqAZJQATxpBH9j",
+    "filename": "19 – NR – 23 C. Incêndio (GWO) - 12.05.26 - Gabriel Lima Feitosa",
+    "modifiedTime": "2026-09-23T19:49:09.330Z",
+    "code": "19",
+    "issueDate": "2026-05-19T03:00:00.000Z",
+    "expirationDate": "2028-05-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-23",
+    "extractedClause": "no dia 19de Maio de 2026"
+  },
+  {
+    "fileId": "1fEYdnEbtUTmPMnrfPqwueVKulURIh13c",
+    "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO) –   - Gabriel Lima Feitosa. 13.05.2026",
+    "modifiedTime": "2026-09-23T19:44:33.786Z",
+    "code": "21",
+    "issueDate": "2026-05-13T03:00:00.000Z",
+    "expirationDate": "2028-05-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 13 de Maio de 2026 (validade 2 anos)"
+  },
+  {
+    "fileId": "1ZnEFI44g3ErIx8Ej8Rr5UHiL_z0sECw7",
+    "filename": "Gabriel Lima Feitosa - COMB - Clicksign.pdf",
+    "modifiedTime": "2026-09-23T19:25:56.753Z",
+    "code": "19",
+    "issueDate": "2026-05-12T03:00:00.000Z",
+    "expirationDate": "2028-05-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-23 (via PDF)",
+    "extractedClause": "no dia 12 de Maio de 2026 (validade 2 anos)"
+  },
+  {
+    "fileId": "1LKPviKZHPR74OlU0PGwTl9EmP0R7rt4v",
+    "filename": "Gabriel Lima Feitosa - MOV - Clicksign.pdf",
+    "modifiedTime": "2026-09-23T19:25:08.620Z",
+    "code": "17",
+    "issueDate": "2026-05-12T03:00:00.000Z",
+    "expirationDate": "2028-05-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-17 (via PDF)",
+    "extractedClause": "no dia 12 de Maio de 2026 (validade 2 anos)"
+  },
+  {
+    "fileId": "1S-2Do8oSfyiqVkFlyisVPsjtsDAQ8wDU",
+    "filename": "WORKSHOP ROB├ö - Clicksign.pdf",
+    "modifiedTime": "2026-09-23T21:10:16.679Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE"
   }
 ]

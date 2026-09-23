@@ -55,7 +55,8 @@ export function buildRoster(
           rpoCert &&
             rpoCert.expirationDate &&
             (!driveCert.expirationDate ||
-              rpoCert.expirationDate.getTime() > driveCert.expirationDate.getTime())
+              rpoCert.expirationDate.getTime() >
+                driveCert.expirationDate.getTime())
         )
 
         if (isRpoValidated && isRpoNewer) {

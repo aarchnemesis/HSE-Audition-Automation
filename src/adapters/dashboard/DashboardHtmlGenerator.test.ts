@@ -167,4 +167,33 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('Pendente Backup Drive')
     expect(html).toContain('RPO Validado')
   })
+
+  it('deve conter controles de filtros cascateaveis e ordenacao alfabetica na auditoria RPO', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    // Filtros e seletores
+    expect(html).toContain('id="rpoCollabFilter"')
+    expect(html).toContain('id="rpoDocFilter"')
+    expect(html).toContain('id="rpoSortFilter"')
+    expect(html).toContain('id="btnResetRpoFilters"')
+    expect(html).toContain('id="rpoCounterBadge"')
+
+    // Cabecalhos ordenaveis interativos
+    expect(html).toContain("toggleRpoSort('NAME')")
+    expect(html).toContain("toggleRpoSort('DOC')")
+    expect(html).toContain("toggleRpoSort('KIND')")
+    expect(html).toContain("toggleRpoSort('TRUSTED_EXP')")
+    expect(html).toContain("toggleRpoSort('RPO_EXP')")
+    expect(html).toContain("toggleRpoSort('DIFF')")
+    expect(html).toContain('id="rpoSortIcon-NAME"')
+
+    // Logica JS de ordenacao e filtros cascateaveis
+    expect(html).toContain('updateRpoFilterDropdownOptions')
+    expect(html).toContain('onRpoCollabChange')
+    expect(html).toContain('onRpoDocChange')
+    expect(html).toContain('toggleRpoSort')
+    expect(html).toContain('resetRpoFilters')
+    expect(html).toContain("rpoSortCol = 'NAME'")
+    expect(html).toContain("rpoSortDir = 'ASC'")
+    expect(html).toContain("localeCompare(b.inspectorName || '', 'pt-BR')")
+  })
 })

@@ -1133,6 +1133,92 @@ export function buildDashboardHtml(
       border-color: #BBF7D0;
     }
 
+    /* RPO FILTER STRIP & CASCADING SELECTS */
+    .rpo-filter-strip {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: #F8FAFC;
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+    }
+    .rpo-filter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: nowrap;
+    }
+    .rpo-filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+    .rpo-select {
+      font-size: 12px;
+      font-family: inherit;
+      color: var(--text-main);
+      background: #FFFFFF;
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 5px 8px;
+      outline: none;
+      cursor: pointer;
+      max-width: 250px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .rpo-select:focus {
+      border-color: var(--brand-blue);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+    }
+    .rpo-btn-reset {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #DC2626;
+      background: #FEE2E2;
+      border: 1px solid #FCA5A5;
+      border-radius: 6px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .rpo-btn-reset:hover {
+      background: #FCA5A5;
+      color: #991B1B;
+    }
+    .rpo-counter-badge {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .rpo-counter-badge strong {
+      color: var(--text-main);
+    }
+    .matrix-table th.sortable {
+      user-select: none;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .matrix-table th.sortable:hover {
+      background: rgba(37, 99, 235, 0.06);
+      color: var(--brand-blue);
+    }
+    .rpo-sort-icon {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
     /* STORZ SUB-FILTERS GROUP */
     .storz-filter-strip {
       display: flex;
@@ -2958,16 +3044,50 @@ export function buildDashboardHtml(
               <button class="chip" id="rpoChip-ALL" onclick="filterRpoSubTab('ALL')">Todos os Registros</button>
             </div>
           </div>
+          <!-- CASCADING FILTER STRIP -->
+          <div class="rpo-filter-strip">
+            <div class="rpo-filter-group">
+              <span class="rpo-filter-label">Colaborador:</span>
+              <select id="rpoCollabFilter" class="rpo-select" onchange="onRpoCollabChange(this.value)">
+                <option value="ALL">Todos os Colaboradores</option>
+              </select>
+            </div>
+            <div class="rpo-filter-group">
+              <span class="rpo-filter-label">Documento:</span>
+              <select id="rpoDocFilter" class="rpo-select" onchange="onRpoDocChange(this.value)">
+                <option value="ALL">Todos os Documentos</option>
+              </select>
+            </div>
+            <div class="rpo-filter-group">
+              <span class="rpo-filter-label">Ordenar:</span>
+              <select id="rpoSortFilter" class="rpo-select" onchange="onRpoSortSelectChange(this.value)">
+                <option value="NAME_ASC">Colaborador (A - Z)</option>
+                <option value="NAME_DESC">Colaborador (Z - A)</option>
+                <option value="DOC_ASC">Documento (A - Z)</option>
+                <option value="DOC_DESC">Documento (Z - A)</option>
+                <option value="DIFF_DESC">Maior Diferença (Dias)</option>
+                <option value="DIFF_ASC">Menor Diferença (Dias)</option>
+                <option value="TRUSTED_DESC">Validade Confiável (Mais recente)</option>
+                <option value="TRUSTED_ASC">Validade Confiável (Mais antiga)</option>
+              </select>
+            </div>
+            <button id="btnResetRpoFilters" class="rpo-btn-reset" onclick="resetRpoFilters()" title="Limpar todos os filtros da auditoria RPO" style="display:none;">
+              <svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              Limpar Filtros
+            </button>
+            <div class="rpo-counter-badge" id="rpoCounterBadge"></div>
+          </div>
+
           <div class="table-container">
             <table class="matrix-table">
               <thead>
                 <tr>
-                  <th style="text-align:left;">Colaborador</th>
-                  <th style="text-align:left;">Documento / Treinamento</th>
-                  <th>Tipo de Divergência</th>
-                  <th>Validade Confiável</th>
-                  <th>Validade RPO</th>
-                  <th>Diferença</th>
+                  <th class="sortable" onclick="toggleRpoSort('NAME')" style="text-align:left;">Colaborador <span id="rpoSortIcon-NAME" class="rpo-sort-icon"></span></th>
+                  <th class="sortable" onclick="toggleRpoSort('DOC')" style="text-align:left;">Documento / Treinamento <span id="rpoSortIcon-DOC" class="rpo-sort-icon"></span></th>
+                  <th class="sortable" onclick="toggleRpoSort('KIND')">Tipo de Divergência <span id="rpoSortIcon-KIND" class="rpo-sort-icon"></span></th>
+                  <th class="sortable" onclick="toggleRpoSort('TRUSTED_EXP')">Validade Confiável <span id="rpoSortIcon-TRUSTED_EXP" class="rpo-sort-icon"></span></th>
+                  <th class="sortable" onclick="toggleRpoSort('RPO_EXP')">Validade RPO <span id="rpoSortIcon-RPO_EXP" class="rpo-sort-icon"></span></th>
+                  <th class="sortable" onclick="toggleRpoSort('DIFF')">Diferença <span id="rpoSortIcon-DIFF" class="rpo-sort-icon"></span></th>
                   <th style="text-align:left;">Ação Recomendada</th>
                 </tr>
               </thead>
@@ -3074,7 +3194,10 @@ export function buildDashboardHtml(
       alert: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
       x: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
       cap: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
-      minus: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><line x1="8" y1="12" x2="16" y2="12"/></svg>'
+      minus: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><line x1="8" y1="12" x2="16" y2="12"/></svg>',
+      sortAsc: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>',
+      sortDesc: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>',
+      sortNone: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="7 15 12 20 17 15"/><polyline points="7 9 12 4 17 9"/></svg>'
     };
 
     const priorityDocCodes = [
@@ -3853,8 +3976,13 @@ export function buildDashboardHtml(
 
       renderPresets(viewKey);
 
-      if (viewKey === 'rpo') renderRpoTable();
-      else renderAll();
+      if (viewKey === 'rpo') {
+        updateRpoFilterDropdownOptions();
+        updateSortHeaderIcons();
+        renderRpoTable();
+      } else {
+        renderAll();
+      }
     }
 
     function onSelectStatusFilter(st) {
@@ -3944,6 +4072,7 @@ export function buildDashboardHtml(
       renderCockpit(filteredPeople);
       renderMatrix(filteredPeople, docF);
       renderTable(filteredPeople, q, st, docF, modF);
+      if (typeof currentViewKey !== 'undefined' && currentViewKey === 'rpo') updateRpoFilterDropdownOptions();
       renderRpoTable();
       renderStorz(filteredPeople);
     }
@@ -4581,11 +4710,168 @@ export function buildDashboardHtml(
     }
 
     let rpoSubTab = 'ACTIONABLE_DIV';
+    let rpoSelectedCollab = 'ALL';
+    let rpoSelectedDoc = 'ALL';
+    let rpoSortCol = 'NAME';
+    let rpoSortDir = 'ASC';
+
+    function isItemMatchingSubTab(item, sub) {
+      if (sub === 'ACTIONABLE_DIV') return item.divergent && item.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP';
+      if (sub === 'PENDENTE_BACKUP') return item.divergent && item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP';
+      if (sub === 'ALL_DIV') return item.divergent;
+      if (sub === 'SWAP') return item.divergent && item.isSwappedDayMonth;
+      if (sub === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
+      if (sub === 'DRIVE_NEWER') return item.divergent && item.direction === 'DRIVE_NEWER';
+      if (sub === 'DATA_DIVERGENTE') return item.divergent && (item.divergenceKind === 'DATA_DIVERGENTE' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
+      if (sub === 'SOMENTE_DRIVE') return item.divergent && item.divergenceKind === 'SOMENTE_DRIVE';
+      if (sub === 'SOMENTE_STORZ') return item.divergent && item.divergenceKind === 'SOMENTE_STORZ';
+      if (sub === 'SOMENTE_RPO') return item.divergent && item.divergenceKind === 'SOMENTE_RPO';
+      if (sub === 'DIFF_30') return item.divergent && (item.diffDays !== undefined && item.diffDays > 30);
+      if (sub === 'ALL') return true;
+      return true;
+    }
+
     function filterRpoSubTab(sub) {
       rpoSubTab = sub;
       document.querySelectorAll('[id^="rpoChip-"]').forEach(b => b.classList.remove('active'));
       const activeBtn = document.getElementById('rpoChip-' + sub);
       if (activeBtn) activeBtn.classList.add('active');
+      updateRpoFilterDropdownOptions();
+      renderRpoTable();
+    }
+
+    function updateRpoFilterDropdownOptions() {
+      const q = (document.getElementById('searchInput')?.value || '').trim();
+      const qNorm = norm(q);
+      const items = rawRpoDivergences || [];
+
+      const baseItems = items.filter(item => {
+        const matchQ = !qNorm ||
+          norm(item.inspectorName).includes(qNorm) ||
+          norm(item.docName).includes(qNorm) ||
+          norm(item.docCode).includes(qNorm) ||
+          norm(item.recommendedAction).includes(qNorm);
+        return matchQ && isItemMatchingSubTab(item, rpoSubTab);
+      });
+
+      // 1. Populate Document dropdown (filtered by selected collab if any)
+      const docSelect = document.getElementById('rpoDocFilter');
+      if (docSelect) {
+        const docItems = (rpoSelectedCollab !== 'ALL')
+          ? baseItems.filter(item => item.inspectorName === rpoSelectedCollab)
+          : baseItems;
+
+        const docCounts = {};
+        docItems.forEach(item => {
+          const name = item.docName || 'Outro';
+          docCounts[name] = (docCounts[name] || 0) + 1;
+        });
+
+        const sortedDocs = Object.keys(docCounts).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+        let docHtml = '<option value="ALL">Todos os Documentos (' + docItems.length + ')</option>';
+        sortedDocs.forEach(d => {
+          docHtml += '<option value="' + d.replace(/"/g, '&quot;') + '">' + d + ' (' + docCounts[d] + ')</option>';
+        });
+        docSelect.innerHTML = docHtml;
+
+        if (rpoSelectedDoc !== 'ALL' && sortedDocs.includes(rpoSelectedDoc)) {
+          docSelect.value = rpoSelectedDoc;
+        } else {
+          rpoSelectedDoc = 'ALL';
+          docSelect.value = 'ALL';
+        }
+      }
+
+      // 2. Populate Collaborator dropdown (filtered by selected doc if any)
+      const collabSelect = document.getElementById('rpoCollabFilter');
+      if (collabSelect) {
+        const collabItems = (rpoSelectedDoc !== 'ALL')
+          ? baseItems.filter(item => item.docName === rpoSelectedDoc)
+          : baseItems;
+
+        const collabCounts = {};
+        collabItems.forEach(item => {
+          const name = item.inspectorName || 'Desconhecido';
+          collabCounts[name] = (collabCounts[name] || 0) + 1;
+        });
+
+        const sortedCollabs = Object.keys(collabCounts).sort((a, b) => a.localeCompare(b, 'pt-BR'));
+        let collabHtml = '<option value="ALL">Todos os Colaboradores (' + sortedCollabs.length + ')</option>';
+        sortedCollabs.forEach(c => {
+          collabHtml += '<option value="' + c.replace(/"/g, '&quot;') + '">' + c + ' (' + collabCounts[c] + ')</option>';
+        });
+        collabSelect.innerHTML = collabHtml;
+
+        if (rpoSelectedCollab !== 'ALL' && sortedCollabs.includes(rpoSelectedCollab)) {
+          collabSelect.value = rpoSelectedCollab;
+        } else {
+          rpoSelectedCollab = 'ALL';
+          collabSelect.value = 'ALL';
+        }
+      }
+    }
+
+    function onRpoCollabChange(val) {
+      rpoSelectedCollab = val;
+      updateRpoFilterDropdownOptions();
+      renderRpoTable();
+    }
+
+    function onRpoDocChange(val) {
+      rpoSelectedDoc = val;
+      updateRpoFilterDropdownOptions();
+      renderRpoTable();
+    }
+
+    function onRpoSortSelectChange(val) {
+      const parts = val.split('_');
+      rpoSortDir = parts.pop();
+      rpoSortCol = parts.join('_');
+      updateSortHeaderIcons();
+      renderRpoTable();
+    }
+
+    function toggleRpoSort(col) {
+      if (rpoSortCol === col) {
+        rpoSortDir = (rpoSortDir === 'ASC' ? 'DESC' : 'ASC');
+      } else {
+        rpoSortCol = col;
+        rpoSortDir = (col === 'DIFF' || col === 'TRUSTED_EXP' || col === 'RPO_EXP') ? 'DESC' : 'ASC';
+      }
+      const sortSelect = document.getElementById('rpoSortFilter');
+      if (sortSelect) {
+        const val = rpoSortCol + '_' + rpoSortDir;
+        if (Array.from(sortSelect.options).some(o => o.value === val)) {
+          sortSelect.value = val;
+        }
+      }
+      updateSortHeaderIcons();
+      renderRpoTable();
+    }
+
+    function updateSortHeaderIcons() {
+      ['NAME', 'DOC', 'KIND', 'TRUSTED_EXP', 'RPO_EXP', 'DIFF'].forEach(col => {
+        const iconSpan = document.getElementById('rpoSortIcon-' + col);
+        if (!iconSpan) return;
+        if (rpoSortCol === col) {
+          iconSpan.innerHTML = (rpoSortDir === 'ASC' ? SVG_ICONS.sortAsc : SVG_ICONS.sortDesc);
+          iconSpan.style.opacity = '1';
+        } else {
+          iconSpan.innerHTML = SVG_ICONS.sortNone;
+          iconSpan.style.opacity = '0.35';
+        }
+      });
+    }
+
+    function resetRpoFilters() {
+      rpoSelectedCollab = 'ALL';
+      rpoSelectedDoc = 'ALL';
+      rpoSortCol = 'NAME';
+      rpoSortDir = 'ASC';
+      const sortSelect = document.getElementById('rpoSortFilter');
+      if (sortSelect) sortSelect.value = 'NAME_ASC';
+      updateRpoFilterDropdownOptions();
+      updateSortHeaderIcons();
       renderRpoTable();
     }
 
@@ -4598,33 +4884,72 @@ export function buildDashboardHtml(
       const qNorm = norm(q);
 
       const items = rawRpoDivergences || [];
-      const filtered = items.filter(item => {
+      const baseSubTabItems = items.filter(item => {
         const matchQ = !qNorm ||
           norm(item.inspectorName).includes(qNorm) ||
           norm(item.docName).includes(qNorm) ||
           norm(item.docCode).includes(qNorm) ||
           norm(item.recommendedAction).includes(qNorm);
-        if (!matchQ) return false;
+        return matchQ && isItemMatchingSubTab(item, rpoSubTab);
+      });
 
-        if (rpoSubTab === 'ACTIONABLE_DIV') return item.divergent && item.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP';
-        if (rpoSubTab === 'PENDENTE_BACKUP') return item.divergent && item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP';
-        if (rpoSubTab === 'ALL_DIV') return item.divergent;
-        if (rpoSubTab === 'SWAP') return item.divergent && item.isSwappedDayMonth;
-        if (rpoSubTab === 'RPO_NEWER') return item.divergent && (item.direction === 'RPO_NEWER' || item.divergenceKind === 'SOMENTE_RPO' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
-        if (rpoSubTab === 'DRIVE_NEWER') return item.divergent && item.direction === 'DRIVE_NEWER';
-        if (rpoSubTab === 'DATA_DIVERGENTE') return item.divergent && (item.divergenceKind === 'DATA_DIVERGENTE' || item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP');
-        if (rpoSubTab === 'SOMENTE_DRIVE') return item.divergent && item.divergenceKind === 'SOMENTE_DRIVE';
-        if (rpoSubTab === 'SOMENTE_STORZ') return item.divergent && item.divergenceKind === 'SOMENTE_STORZ';
-        if (rpoSubTab === 'SOMENTE_RPO') return item.divergent && item.divergenceKind === 'SOMENTE_RPO';
-        if (rpoSubTab === 'DIFF_30') return item.divergent && (item.diffDays !== undefined && item.diffDays > 30);
-        if (rpoSubTab === 'ALL') return true;
+      const filtered = baseSubTabItems.filter(item => {
+        if (rpoSelectedCollab !== 'ALL' && item.inspectorName !== rpoSelectedCollab) return false;
+        if (rpoSelectedDoc !== 'ALL' && item.docName !== rpoSelectedDoc) return false;
         return true;
       });
+
+      const counterBadge = document.getElementById('rpoCounterBadge');
+      if (counterBadge) {
+        counterBadge.innerHTML = 'Exibindo <strong>' + filtered.length + '</strong> de ' + baseSubTabItems.length + ' divergências';
+      }
+      const btnReset = document.getElementById('btnResetRpoFilters');
+      if (btnReset) {
+        const isModified = (rpoSelectedCollab !== 'ALL' || rpoSelectedDoc !== 'ALL' || rpoSortCol !== 'NAME' || rpoSortDir !== 'ASC');
+        btnReset.style.display = isModified ? 'inline-flex' : 'none';
+      }
 
       if (filtered.length === 0) {
         tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum registro de auditoria encontrado com os filtros atuais.</td></tr>';
         return;
       }
+
+      function getTrustedExpTime(item) {
+        const exp = item.trustedSource === 'STORZ' ? item.storzExpiration : item.driveExpiration;
+        if (!exp) return 0;
+        const t = new Date(exp).getTime();
+        return isNaN(t) ? 0 : t;
+      }
+
+      function getRpoExpTime(item) {
+        if (!item.rpoExpiration) return 0;
+        const t = new Date(item.rpoExpiration).getTime();
+        return isNaN(t) ? 0 : t;
+      }
+
+      const sorted = [...filtered].sort((a, b) => {
+        let diff = 0;
+        if (rpoSortCol === 'NAME') {
+          diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+          if (diff === 0) diff = (a.docName || '').localeCompare(b.docName || '', 'pt-BR');
+        } else if (rpoSortCol === 'DOC') {
+          diff = (a.docName || '').localeCompare(b.docName || '', 'pt-BR');
+          if (diff === 0) diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+        } else if (rpoSortCol === 'KIND') {
+          diff = (a.divergenceKind || '').localeCompare(b.divergenceKind || '', 'pt-BR');
+          if (diff === 0) diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+        } else if (rpoSortCol === 'TRUSTED_EXP') {
+          diff = getTrustedExpTime(a) - getTrustedExpTime(b);
+          if (diff === 0) diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+        } else if (rpoSortCol === 'RPO_EXP') {
+          diff = getRpoExpTime(a) - getRpoExpTime(b);
+          if (diff === 0) diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+        } else if (rpoSortCol === 'DIFF') {
+          diff = (a.diffDays || 0) - (b.diffDays || 0);
+          if (diff === 0) diff = (a.inspectorName || '').localeCompare(b.inspectorName || '', 'pt-BR');
+        }
+        return rpoSortDir === 'ASC' ? diff : -diff;
+      });
 
       const formatDate = (isoOrStr) => {
         if (!isoOrStr) return '—';
@@ -4640,7 +4965,7 @@ export function buildDashboardHtml(
         return day + '/' + month + '/' + year;
       };
 
-      filtered.slice(0, 200).forEach(item => {
+      sorted.forEach(item => {
         const tr = document.createElement('tr');
         
         let badgeHtml = '';
@@ -5251,6 +5576,8 @@ export function buildDashboardHtml(
 
     renderPresets('cockpit');
     computeRankings();
+    updateRpoFilterDropdownOptions();
+    updateSortHeaderIcons();
     renderAll();
     switchNav('cockpit');
   </script>

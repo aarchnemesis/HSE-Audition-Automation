@@ -2,8 +2,16 @@ import fs from 'fs'
 import path from 'path'
 
 export class RPOAuditStatusManager {
-  private static defaultDataPath = path.join(process.cwd(), 'data', 'rpo_audit_status.json')
-  private static defaultScratchPath = path.join(process.cwd(), 'scratch', 'rpo_audit_status.json')
+  private static defaultDataPath = path.join(
+    process.cwd(),
+    'data',
+    'rpo_audit_status.json'
+  )
+  private static defaultScratchPath = path.join(
+    process.cwd(),
+    'scratch',
+    'rpo_audit_status.json'
+  )
 
   /**
    * Lista padrão de colaboradores com RPO validado manualmente pela equipe
@@ -38,7 +46,7 @@ export class RPOAuditStatusManager {
     'DIEGO PATRICK SANCHES CAMPOS',
     'FRANCISCO MARCOS DE SOUZA MAGALHÃES',
     'ITALO DE ABREU DUARTE',
-    'LEONARDO SIMON COSTA GAEM'
+    'LEONARDO SIMON COSTA GAEM',
   ])
 
   static loadAuditStatusMap(): Map<string, 'VALIDADO' | 'PENDENTE_REVISAO'> {
@@ -62,7 +70,10 @@ export class RPOAuditStatusManager {
             }
           }
         } catch (err) {
-          console.warn(`[RPOAuditStatusManager] Erro ao ler status de ${p}:`, err)
+          console.warn(
+            `[RPOAuditStatusManager] Erro ao ler status de ${p}:`,
+            err
+          )
         }
       }
     }
@@ -70,7 +81,9 @@ export class RPOAuditStatusManager {
     return map
   }
 
-  static saveAuditStatusMap(map: Map<string, 'VALIDADO' | 'PENDENTE_REVISAO'>): void {
+  static saveAuditStatusMap(
+    map: Map<string, 'VALIDADO' | 'PENDENTE_REVISAO'>
+  ): void {
     const obj: Record<string, string> = {}
     for (const [k, v] of map.entries()) {
       obj[k] = v
@@ -83,7 +96,10 @@ export class RPOAuditStatusManager {
         if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
         fs.writeFileSync(filePath, json, 'utf-8')
       } catch (err) {
-        console.warn(`[RPOAuditStatusManager] Erro ao salvar status em ${filePath}:`, err)
+        console.warn(
+          `[RPOAuditStatusManager] Erro ao salvar status em ${filePath}:`,
+          err
+        )
       }
     }
   }

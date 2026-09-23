@@ -22,7 +22,9 @@ describe('RPOAuditStatusManager', () => {
 
   it('e insensivel a espacos e caixa alta/baixa', () => {
     expect(
-      RPOAuditStatusManager.isCollabValidated('  josé marcelo magalhães sousa  ')
+      RPOAuditStatusManager.isCollabValidated(
+        '  josé marcelo magalhães sousa  '
+      )
     ).toBe(true)
   })
 })
