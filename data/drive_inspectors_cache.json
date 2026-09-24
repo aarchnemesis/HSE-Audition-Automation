@@ -6204,7 +6204,7 @@
         "expirationDate": "2028-08-13T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/08/2028",
-        "sourcePath": "https://drive.google.com/file/d/1HVRjb4WSlIJGxk4-ZjwjytMk3_8suBEx/view"
+        "sourcePath": "https://drive.google.com/file/d/1jUH8H_jhDWxPK8iFiQTvxbbq7Ppr1-QB/view"
       },
       "22": {
         "code": "22",
@@ -7714,16 +7714,6 @@
         "statusDetail": "Válido até 25/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1ILA24BI3RKPIJD83Ogh3QVfkjeb30Mgi/view"
       },
-      "28": {
-        "code": "28",
-        "name": "Doc 28",
-        "filename": "20 – NR – 33 (Supervisor F+R) – 09.10.2025 - Maria Bruna Soares Santos.pdf",
-        "issueDate": "2023-10-30T03:00:00.000Z",
-        "expirationDate": "2024-10-30T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 693 dias (30/10/2024)",
-        "sourcePath": "https://drive.google.com/file/d/1k-BEIa1qojw13YqLSQecA1c3-SuKh3Wo/view"
-      },
       "30": {
         "code": "30",
         "name": "Doc 30",
@@ -7744,6 +7734,16 @@
         "statusDetail": "Válido até 23/05/2027",
         "sourcePath": "https://drive.google.com/file/d/1a2w_dhoENFge0IYZ79ii5490OrUyLz9k/view"
       },
+      "09": {
+        "code": "09",
+        "name": "Doc 09",
+        "filename": "09 – Direção Defensiva (08 horas) – 18.09.26 – Maria Bruna Soares Santos",
+        "issueDate": "2026-09-18T03:00:00.000Z",
+        "expirationDate": "2028-09-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/09/2028",
+        "sourcePath": "https://drive.google.com/file/d/1-BdXHC1Lxu7nnwOVpjoWAXDjYe_U2f9Z/view"
+      },
       "12.1": {
         "code": "12.1",
         "name": "Doc 12.1",
@@ -7763,16 +7763,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/02/2028",
         "sourcePath": "https://drive.google.com/file/d/1YQlHFueX4bEsmeUeXOoDYMkwv7umO0QE/view"
-      },
-      "09": {
-        "code": "09",
-        "name": "Doc 09",
-        "filename": "09 – Direção Defensiva (04 horas) – 14.11.24 – Maria Bruna Soares Santos- Clicksign.pdf",
-        "issueDate": "2024-11-14T03:00:00.000Z",
-        "expirationDate": "2026-11-14T03:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 52 dias (14/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1P6GAeTM0550JO1U0XrkVPGcNdI2dgyXt/view"
       },
       "01": {
         "code": "01",

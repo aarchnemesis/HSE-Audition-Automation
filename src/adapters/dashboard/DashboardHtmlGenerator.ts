@@ -57,7 +57,7 @@ export function buildDashboardHtml(
       
       --brand-cyan: #00D2B4;
       --brand-blue: #2563EB;
-      --brand-coral: #F43F5E;
+      --brand-coral: #DC2626;
       --brand-purple: #7C3AED;
       --brand-amber: #F59E0B;
       --brand-green: #10B981;
@@ -73,7 +73,7 @@ export function buildDashboardHtml(
       --status-ok-bg: #DCFCE7;
       --status-warn: #F59E0B;
       --status-warn-bg: #FEF3C7;
-      --status-crit: #EF4444;
+      --status-crit: #DC2626;
       --status-crit-bg: #FEE2E2;
       --status-storz: #8B5CF6;
       --status-storz-bg: #EDE9FE;
@@ -142,7 +142,7 @@ export function buildDashboardHtml(
     }
 
     /* SPECIFIC ACCENT COLORS FOR ICONS */
-    .icon-crit { color: #EF4444 !important; stroke: #EF4444 !important; }
+    .icon-crit { color: #DC2626 !important; stroke: #DC2626 !important; }
     .icon-warn { color: #F59E0B !important; stroke: #F59E0B !important; }
     .icon-ok { color: #10B981 !important; stroke: #10B981 !important; }
     .icon-storz { color: #8B5CF6 !important; stroke: #8B5CF6 !important; }
@@ -642,7 +642,7 @@ export function buildDashboardHtml(
     .source-dot.ok { background: #10B981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.6); }
     .source-dot.cache { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
     .source-dot.warn { background: #F59E0B; box-shadow: 0 0 6px rgba(245, 158, 11, 0.6); }
-    .source-dot.crit { background: #EF4444; box-shadow: 0 0 6px rgba(239, 68, 68, 0.6); }
+    .source-dot.crit { background: #DC2626; box-shadow: 0 0 6px rgba(220, 38, 38, 0.6); }
     .source-name {
       color: var(--text-muted);
       font-weight: 600;
@@ -1071,7 +1071,7 @@ export function buildDashboardHtml(
     }
     .rpo-summary-card:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08); }
     .rpo-summary-card.total { border-left-color: var(--brand-blue); background: #F8FAFC; }
-    .rpo-summary-card.crit { border-left-color: #EF4444; background: #FEF2F2; }
+    .rpo-summary-card.crit { border-left-color: #DC2626; background: #FEF2F2; }
     .rpo-summary-card.warn { border-left-color: #F59E0B; background: #FFFBEB; }
     .rpo-summary-card.drive { border-left-color: #2563EB; background: #EFF6FF; }
     .rpo-summary-card.rpo { border-left-color: #8B5CF6; background: #FAF5FF; }
@@ -1284,6 +1284,28 @@ export function buildDashboardHtml(
     .group-altura { background: #FFFBEB; color: #B45309; }
     .group-gwo { background: #F5F3FF; color: #6D28D9; }
     .group-collab { background: #F8FAFC; color: var(--text-muted); }
+    .group-header.group-parque { color: #475569; background: #F1F5F9; }
+
+    /* Consequence banner for mobilization blockers vs park scope modules */
+    .consequence-header {
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      text-align: center;
+      border-bottom: 2px solid transparent;
+    }
+    .consequence-block {
+      color: #B91C1C;
+      background: #FEE2E2;
+      border-bottom-color: #DC2626;
+    }
+    .consequence-scope {
+      color: #475569;
+      background: #E2E8F0;
+      border-bottom-color: #94A3B8;
+    }
 
     /* COLLABORATOR STICKY ROW DESIGN */
     .collab-avatar {
@@ -1722,7 +1744,7 @@ export function buildDashboardHtml(
     .cockpit-kpi-card.total::before { background: #2563EB; }
     .cockpit-kpi-card.apto::before { background: #10B981; }
     .cockpit-kpi-card.alerta::before { background: #F59E0B; }
-    .cockpit-kpi-card.bloqueado::before { background: #EF4444; }
+    .cockpit-kpi-card.bloqueado::before { background: #DC2626; }
     .cockpit-kpi-card.storz::before { background: #8B5CF6; }
 
     .cockpit-kpi-top {
@@ -2486,7 +2508,7 @@ export function buildDashboardHtml(
           <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
           <span>Auditoria RPO</span>
         </div>
-        <span class="storz-badge-pill" id="rpoBadgeSidebar" style="background:#EF4444;display:none;">0</span>
+        <span class="storz-badge-pill" id="rpoBadgeSidebar" style="background:#DC2626;display:none;">0</span>
       </div>
 
       <div class="nav-item" onclick="switchNav('storz')" title="Storz Matrículas">
@@ -2520,7 +2542,7 @@ export function buildDashboardHtml(
           <span class="pill-opt active" onclick="switchNav('cockpit')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Cockpit Operacional</span>
           <span class="pill-opt" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
           <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
-          <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#EF4444;display:none;">0</span></span>
+          <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#DC2626;display:none;">0</span></span>
           <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
         </div>
       </div>
@@ -2597,7 +2619,7 @@ export function buildDashboardHtml(
 
         <div class="kpi-box" id="kpiBox-CONFORME" onclick="applyStatusFilter('CONFORME')" title="Ver apenas colaboradores 100% conformes" style="--kpi-accent:#10B981;">
           <div class="kpi-top">
-            <div class="label" style="color:var(--brand-green);">Em Dia</div>
+            <div class="label" style="color:var(--brand-green);">Em Dia &middot; % dos docs</div>
             <div class="kpi-ring-wrap">
               <svg viewBox="0 0 40 40">
                 <circle class="kpi-ring-bg" cx="20" cy="20" r="16"></circle>
@@ -2612,16 +2634,16 @@ export function buildDashboardHtml(
 
         <div class="kpi-box" id="kpiBox-VENCE_30" onclick="applyStatusFilter('VENCE_30')" title="Filtrar reciclagens em até 30 dias" style="--kpi-accent:#F59E0B;">
           <div class="kpi-top">
-            <div class="label" style="color:var(--brand-amber);">Reciclagens (&lt;30d)</div>
+            <div class="label" style="color:var(--brand-amber);">Reciclagens (&lt;30d) &middot; docs</div>
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-amber);" id="kpiWarnCount">0</div>
           <div class="sub">Prioridade agendamento</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-VENCIDO" onclick="applyStatusFilter('VENCIDO')" title="Filtrar colaboradores com documentos vencidos no Drive" style="--kpi-accent:#F43F5E;">
+        <div class="kpi-box" id="kpiBox-VENCIDO" onclick="applyStatusFilter('VENCIDO')" title="Filtrar colaboradores com documentos vencidos no Drive" style="--kpi-accent:#DC2626;">
           <div class="kpi-top">
-            <div class="label" style="color:var(--brand-coral);">Vencidos (Drive)</div>
+            <div class="label" style="color:var(--brand-coral);">Vencidos (Drive) &middot; docs</div>
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-coral);" id="kpiCritCount">0</div>
@@ -2630,7 +2652,7 @@ export function buildDashboardHtml(
 
         <div class="kpi-box" id="kpiBox-AUSENTE" onclick="applyStatusFilter('AUSENTE')" title="Filtrar documentos ausentes sem certificado no Drive" style="--kpi-accent:#64748B;">
           <div class="kpi-top">
-            <div class="label" style="color:#64748B;">Ausentes (sem Doc)</div>
+            <div class="label" style="color:#64748B;">Ausentes (sem Doc) &middot; docs</div>
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
           </div>
           <div class="val mono" style="color:#64748B;" id="kpiAusenteCount">0</div>
@@ -2639,7 +2661,7 @@ export function buildDashboardHtml(
 
         <div class="kpi-box" id="kpiBox-STORZ" onclick="applyStatusFilter('STORZ')" title="Filtrar matrículas ativas ou solicitadas na plataforma Storz" style="--kpi-accent:#7C3AED;">
           <div class="kpi-top">
-            <div class="label" style="color:var(--brand-purple);">Storz Ativas</div>
+            <div class="label" style="color:var(--brand-purple);">Storz Ativas &middot; matrículas</div>
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
           </div>
           <div class="val mono" style="color:var(--brand-purple);" id="kpiStorzCount">0</div>
@@ -2824,7 +2846,7 @@ export function buildDashboardHtml(
         <div class="cockpit-kpi-row">
           <div class="cockpit-kpi-card total" onclick="filterCockpitStatus('ALL')" style="cursor:pointer;" title="Ver todos os colaboradores ativos do segmento">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label">Colaboradores Ativos</span>
+              <span class="cockpit-kpi-label">Colaboradores Ativos &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiTotal">0</div>
@@ -2833,7 +2855,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores aptos para mobilização imediata">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#059669;">Colaboradores Aptos</span>
+              <span class="cockpit-kpi-label" style="color:#059669;">Colaboradores Aptos &middot; % das pessoas</span>
               <span class="cockpit-kpi-badge" id="cockpitKpiAptoRate" style="background:#D1FAE5;color:#065F46;">0%</span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiApto" style="color:#059669;">0</div>
@@ -2842,7 +2864,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#D97706;">Colaboradores em Alerta</span>
+              <span class="cockpit-kpi-label" style="color:#D97706;">Colaboradores em Alerta &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#D97706;">0</div>
@@ -2851,7 +2873,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional no escopo selecionado">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#DC2626;">Colaboradores Bloqueados</span>
+              <span class="cockpit-kpi-label" style="color:#DC2626;">Colaboradores Bloqueados &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiBloqueado" style="color:#DC2626;">0</div>
@@ -2860,7 +2882,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card storz" onclick="filterCockpitStatus('STORZ')" style="cursor:pointer;" title="Filtrar colaboradores cursando ou matriculados no LMS Storz">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#7C3AED;">Colaboradores em Treinamento</span>
+              <span class="cockpit-kpi-label" style="color:#7C3AED;">Colaboradores em Treinamento &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiStorz" style="color:#7C3AED;">0</div>
@@ -2965,12 +2987,18 @@ export function buildDashboardHtml(
           <div class="table-container">
             <table class="matrix-table" id="matrixTable">
               <thead id="matrixHead">
+                <tr id="matrixConsequenceRow">
+                  <th class="th-sticky group-collab"></th>
+                  <th colspan="16" class="consequence-header consequence-block">Bloqueia mobilização</th>
+                  <th colspan="4" class="consequence-header consequence-scope">Não bloqueia &middot; restringe alocação por parque</th>
+                </tr>
                 <tr id="matrixGroupRow">
                   <th class="th-sticky group-collab">COLABORADOR / RAMO</th>
                   <th colspan="4" class="group-header group-saude"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Saúde &amp; Integração</th>
                   <th colspan="4" class="group-header group-eletrica"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Elétrica &amp; Máquinas</th>
-                  <th colspan="6" class="group-header group-altura"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Altura, Espaço &amp; CIPA</th>
-                  <th colspan="6" class="group-header group-gwo"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>Módulos GWO &amp; Específicos</th>
+                  <th colspan="4" class="group-header group-altura"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Altura &amp; Espaço Confinado</th>
+                  <th colspan="4" class="group-header group-gwo"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>GWO Obrigatórios</th>
+                  <th colspan="4" class="group-header group-parque"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Módulos de Parque</th>
                 </tr>
                 <tr id="matrixHeaderRow"></tr>
               </thead>
@@ -3009,7 +3037,7 @@ export function buildDashboardHtml(
             <div class="rpo-summary-label">Total Comparados</div>
           </div>
           <div class="rpo-summary-card crit" onclick="filterRpoSubTab('ACTIONABLE_DIV')" style="cursor:pointer;" title="Filtrar divergências que exigem ação corretiva imediata">
-            <div class="rpo-summary-val mono" id="rpoKpiActionable" style="color:#EF4444;">0</div>
+            <div class="rpo-summary-val mono" id="rpoKpiActionable" style="color:#DC2626;">0</div>
             <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências de Ação</div>
           </div>
           <div class="rpo-summary-card drive" onclick="filterRpoSubTab('PENDENTE_BACKUP')" style="cursor:pointer;border-color:#C7D2FE;background:#EEF2FF;" title="RPO validado manualmente pela equipe — pendente apenas anexar comprovante no Drive">
@@ -3201,14 +3229,16 @@ export function buildDashboardHtml(
     };
 
     const priorityDocCodes = [
-      // Saude & Integracao (4)
+      // Bloqueia mobilizacao — Saude & Integracao (4)
       '01', '08', '10', '11',
-      // Eletrica & Maquinas (4)
+      // Bloqueia mobilizacao — Eletrica & Maquinas (4)
       '12', '13', '14', '15',
-      // Altura, Espaco & CIPA (6)
-      '18', '20', '28', '21', '22', '34',
-      // Modulos GWO & Especificos (6)
-      '16', '17', '19', '30', '31', '32'
+      // Bloqueia mobilizacao — Altura & Espaco Confinado (4)
+      '18', '20', '21', '22',
+      // Bloqueia mobilizacao — GWO obrigatorios (4)
+      '16', '17', '19', '30',
+      // Nao bloqueia — modulos de parque, restringem alocacao (4)
+      '28', '31', '32', '34'
     ];
     const docShortNames = {
       '01': 'ASO',
@@ -3805,7 +3835,7 @@ export function buildDashboardHtml(
             const posClass = idx === 0 ? 'top-1' : idx === 1 ? 'top-2' : idx === 2 ? 'top-3' : '';
             const escName = (c.name || '').replace(/"/g, '&quot;');
             const barW = Math.max(8, Math.round((c.count / maxCrit) * 100));
-            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#EF4444;" title="Filtrar colaborador ' + escName + '">' +
+            return '<div class="ranking-item" onclick="filterByCollab(this.dataset.name)" data-name="' + escName + '" style="cursor:pointer;--w:' + barW + '%;--bar-color:#DC2626;" title="Filtrar colaborador ' + escName + '">' +
               '<div class="ranking-item-left">' +
               '<span class="ranking-pos ' + posClass + '">' + (idx + 1) + '</span>' +
               '<span class="ranking-item-name" title="' + c.name + ' (' + c.role + ')">' + c.name + '</span>' +
@@ -4453,7 +4483,7 @@ export function buildDashboardHtml(
         if (health.status === 'BLOQUEADO') {
           statusBadgeClass = 'badge-cockpit-bloqueado';
           statusLabel = 'LÍDER PENDÊNCIA (HÍBRIDO)';
-          borderColor = '#EF4444';
+          borderColor = '#DC2626';
           avatarBg = '#FEE2E2';
           avatarColor = '#991B1B';
         } else if (health.status === 'ALERTA') {
@@ -4475,7 +4505,7 @@ export function buildDashboardHtml(
         if (health.status === 'BLOQUEADO') {
           statusBadgeClass = 'badge-cockpit-bloqueado';
           statusLabel = 'DRONE: PENDÊNCIA SOLO';
-          borderColor = '#EF4444';
+          borderColor = '#DC2626';
           avatarBg = '#FEE2E2';
           avatarColor = '#991B1B';
         } else if (health.status === 'ALERTA') {
@@ -4497,7 +4527,7 @@ export function buildDashboardHtml(
         if (health.status === 'BLOQUEADO') {
           statusBadgeClass = 'badge-cockpit-bloqueado';
           statusLabel = 'BLOQUEADO: PENDÊNCIA';
-          borderColor = '#EF4444';
+          borderColor = '#DC2626';
           avatarBg = '#FEE2E2';
           avatarColor = '#991B1B';
         } else if (health.status === 'ALERTA') {
@@ -4512,7 +4542,7 @@ export function buildDashboardHtml(
       }
 
       let barColor = '#10B981';
-      if (health.complianceRate < 80) barColor = '#EF4444';
+      if (health.complianceRate < 80) barColor = '#DC2626';
       else if (health.complianceRate < 95) barColor = '#F59E0B';
 
       let highlightsHtml = '';
@@ -4619,9 +4649,10 @@ export function buildDashboardHtml(
     function renderMatrix(peopleList, docF = 'ALL') {
       const activeCols = docF === 'ALL' ? priorityDocCodes : [docF];
       const groupRow = document.getElementById('matrixGroupRow');
-      if (groupRow) {
-        groupRow.style.display = docF === 'ALL' ? '' : 'none';
-      }
+      const consequenceRow = document.getElementById('matrixConsequenceRow');
+      [groupRow, consequenceRow].forEach(row => {
+        if (row) row.style.display = docF === 'ALL' ? '' : 'none';
+      });
 
       const headerRow = document.getElementById('matrixHeaderRow');
       headerRow.innerHTML = '<th class="th-sticky group-collab" style="font-size:10px;">NOME &amp; CARGO</th>' + 
@@ -5004,7 +5035,7 @@ export function buildDashboardHtml(
 
         const rpoExp = formatDate(item.rpoExpiration);
         const diffText = item.diffDays !== undefined 
-          ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#EF4444;' : 'color:#F59E0B;') + '">' + item.diffDays + ' d</span>'
+          ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#DC2626;' : 'color:#F59E0B;') + '">' + item.diffDays + ' d</span>'
           : '<span style="color:var(--text-muted);">—</span>';
 
         let actionClass = 'action-rpo';

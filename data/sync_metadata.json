@@ -1,6 +1,6 @@
 {
-  "syncTimestamp": "2026-09-23T22:10:43.534Z",
-  "refDate": "2026-09-23T22:07:17.223Z",
+  "syncTimestamp": "2026-09-24T12:58:59.304Z",
+  "refDate": "2026-09-24T12:55:04.254Z",
   "driveFoldersCount": 96,
   "rpoActiveCount": 127,
   "rpoTotalCount": 358,
@@ -10,9 +10,9 @@
   "divergencesCount": 487,
   "divergencesByKind": {
     "SOMENTE_RPO": 48,
-    "DATA_DIVERGENTE": 237,
+    "DATA_DIVERGENTE": 238,
     "SOMENTE_DRIVE": 102,
-    "RPO_VALIDADO_PENDENTE_BACKUP": 96,
+    "RPO_VALIDADO_PENDENTE_BACKUP": 95,
     "DRIVE_SEM_DATA": 1,
     "SOMENTE_STORZ": 3
   },

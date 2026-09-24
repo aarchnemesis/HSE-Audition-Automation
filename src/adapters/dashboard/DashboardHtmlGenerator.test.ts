@@ -196,4 +196,30 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain("rpoSortDir = 'ASC'")
     expect(html).toContain("localeCompare(b.inspectorName || '', 'pt-BR')")
   })
+
+  it('deve conter a faixa de consequencia operacional, modulos de parque e unidades nos KPIs (refinamento visual)', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    // Faixa de consequencia e modulos de parque
+    expect(html).toContain('id="matrixConsequenceRow"')
+    expect(html).toContain('Bloqueia mobilização')
+    expect(html).toContain(
+      'Não bloqueia &middot; restringe alocação por parque'
+    )
+    expect(html).toContain('Módulos de Parque')
+    expect(html).toContain('group-parque')
+    expect(html).toContain('consequence-header')
+
+    // Unidades explicitas nos KPIs
+    expect(html).toContain('Em Dia &middot; % dos docs')
+    expect(html).toContain('Reciclagens (&lt;30d) &middot; docs')
+    expect(html).toContain('Vencidos (Drive) &middot; docs')
+    expect(html).toContain('Ausentes (sem Doc) &middot; docs')
+    expect(html).toContain('Storz Ativas &middot; matrículas')
+    expect(html).toContain('Colaboradores Ativos &middot; pessoas')
+    expect(html).toContain('Colaboradores Aptos &middot; % das pessoas')
+
+    // Cores WCAG de alto contraste
+    expect(html).toContain('--status-crit: #DC2626;')
+    expect(html).toContain('--brand-coral: #DC2626;')
+  })
 })

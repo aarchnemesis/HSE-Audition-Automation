@@ -51304,5 +51304,42 @@
     "statusDetail": "Data não informada ou formato inválido",
     "source": "FILENAME",
     "classificationSource": "NONE"
+  },
+  {
+    "fileId": "1jUH8H_jhDWxPK8iFiQTvxbbq7Ppr1-QB",
+    "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO) – 13.08.26– Rafael Andrade Barbosa - Clicksign.pdf",
+    "modifiedTime": "2026-09-24T12:23:18.196Z",
+    "code": "21",
+    "issueDate": "2026-08-13T03:00:00.000Z",
+    "expirationDate": "2028-08-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 13de Agosto de 2026"
+  },
+  {
+    "fileId": "1-BdXHC1Lxu7nnwOVpjoWAXDjYe_U2f9Z",
+    "filename": "09 – Direção Defensiva (08 horas) – 18.09.26 – Maria Bruna Soares Santos",
+    "modifiedTime": "2026-09-24T11:30:04.762Z",
+    "code": "09",
+    "issueDate": "2026-09-18T03:00:00.000Z",
+    "expirationDate": "2028-09-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/09/2028",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Direção Defensiva"
+  },
+  {
+    "fileId": "1EmlvzJ3ztIfJ-65ehwCdHPgIlJe8FmOq",
+    "filename": "WORKSHOP ROB├ö - Clicksign (1).pdf",
+    "modifiedTime": "2026-09-24T12:02:48.331Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE"
   }
 ]
