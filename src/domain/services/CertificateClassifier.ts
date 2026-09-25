@@ -83,7 +83,7 @@ const SEMANTIC_RULES: Array<{
   // NR-35 / GWO Working at Heights
   {
     regex:
-      /\b(?:NR\s*[-_]?\s*35\b|TRABALHO\s+EM\s+ALTURA|WORKING\s+AT\s+HEIGHTS|WAH\b)\b/i,
+      /(?:\b(?:NR\s*[-_]?\s*35\b|TRABALHO\s+EM\s+ALTURA|WORKING\s+AT\s+HEIGHTS|WAH\b)\b|[-_]\s*ALTURA(?:\s*\(\d+\))?\s*(?:[-_.]|$))/i,
     code: '21',
     matchedTerm: 'NR-35',
   },
@@ -118,13 +118,14 @@ const SEMANTIC_RULES: Array<{
   // GWO NR-17 / Ergonomia / Carga Manual
   {
     regex:
-      /\b(?:NR\s*[-_]?\s*17\b|ERGONOMIA|MANUSEIO\s+MANUAL\s+DE\s+CARGAS?|CARGA\s+MANUAL|MANUAL\s+HANDLING)\b/i,
+      /(?:\b(?:NR\s*[-_]?\s*17\b|ERGONOMIA|MANUSEIO\s+MANUAL\s+DE\s+CARGAS?|CARGA\s+MANUAL|MANUAL\s+HANDLING)\b|[-_]\s*MOV(?:\s*\(\d+\))?\s*(?:[-_.]|$))/i,
     code: '17',
     matchedTerm: 'GWO NR-17',
   },
   // GWO Primeiros Socorros (BST)
   {
-    regex: /\b(?:GWO\s+BST\s+PRIMEIROS|FIRST\s+AID|GWO\s+FA\b)\b/i,
+    regex:
+      /(?:\b(?:GWO[^\n]*PRIMEIROS|PRIMEIROS[^\n]*GWO|BST[^\n]*PRIMEIROS|PRIMEIROS[^\n]*BST|FIRST\s+AID|GWO\s+FA\b)\b|[-_]\s*SOS(?:\s*\(\d+\))?\s*(?:[-_.]|$))/i,
     code: '16',
     matchedTerm: 'GWO Primeiros Socorros',
   },
@@ -137,7 +138,7 @@ const SEMANTIC_RULES: Array<{
   // GWO NR-23 / Combate a Incêndio
   {
     regex:
-      /\b(?:NR\s*[-_]?\s*23\b|COMBATE\s+A\s+INCENDIO|PREVENCAO\s+E\s+COMBATE\s+A\s+INCENDIO|FIRE\s+AWARENESS)\b/i,
+      /(?:\b(?:NR\s*[-_]?\s*23\b|COMBATE\s+A\s+INC[EI]NDIO|PREVENCAO\s+E\s+COMBATE\s+A\s+INC[EI]NDIO|CONSCIENTIZA[A-Z„\s]+INC[EI]NDIO|FIRE\s+AWARENESS)\b|[-_]\s*COMB(?:\s*\(\d+\))?\s*(?:[-_.]|$))/i,
     code: '19',
     matchedTerm: 'GWO NR-23',
   },
@@ -277,6 +278,9 @@ const SEMANTIC_RULES: Array<{
   },
 ]
 
+const WINDA_PDF_REGEX =
+  /\b(?:REGISTRO\s+(?:NO\s+)?WINDA|PERFIL\s+(?:DO\s+)?(?:PARTICIPANTE\s+)?WINDA|WINDA\s+PROFILE|WINDA\s+REGISTRATION)\b/i
+
 export class CertificateClassifier {
   /**
    * Classifica um arquivo a partir de seu nome (e opcionalmente texto interno extraído de PDF).
@@ -310,6 +314,9 @@ export class CertificateClassifier {
       if (extractedText) {
         const normText = normalizeText(extractedText)
         for (const rule of SEMANTIC_RULES) {
+          if (rule.code === '30' && !WINDA_PDF_REGEX.test(normText)) {
+            continue
+          }
           if (rule.regex.test(normText)) {
             return {
               code: rule.code,
@@ -366,6 +373,9 @@ export class CertificateClassifier {
     if (!semanticMatch && extractedText) {
       const normText = normalizeText(extractedText)
       for (const rule of SEMANTIC_RULES) {
+        if (rule.code === '30' && !WINDA_PDF_REGEX.test(normText)) {
+          continue
+        }
         if (rule.regex.test(normText)) {
           semanticMatch = {
             code: rule.code,

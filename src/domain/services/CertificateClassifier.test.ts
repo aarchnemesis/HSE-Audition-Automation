@@ -152,4 +152,52 @@ describe('CertificateClassifier.classify', () => {
   it('ignora desktop.ini', () => {
     expect(CertificateClassifier.classify('desktop.ini').code).toBeNull()
   })
+
+  it('classifica módulos GWO BST da Storz emitidos via Clicksign (COMB, SOS, MOV, ALTURA)', () => {
+    expect(
+      CertificateClassifier.classify(
+        'Diego Menezes Nunes Coelho - COMB - Clicksign.pdf'
+      ).code
+    ).toBe('19')
+    expect(
+      CertificateClassifier.classify(
+        'Francisco Davilo Marques de Sousa - COMB (1) - Clicksign.pdf'
+      ).code
+    ).toBe('19')
+    expect(
+      CertificateClassifier.classify(
+        'Francisco Davilo Marques de Sousa - SOS - Clicksign.pdf'
+      ).code
+    ).toBe('16')
+    expect(
+      CertificateClassifier.classify(
+        'Francisco Davilo Marques de Sousa - MOV - Clicksign.pdf'
+      ).code
+    ).toBe('17')
+    expect(
+      CertificateClassifier.classify(
+        'Igor Martins Rocha -altura - Clicksign.pdf'
+      ).code
+    ).toBe('21')
+  })
+
+  it('não confunde menção a ID WINDA no corpo de certificados com documento de WINDA ID', () => {
+    const textWithWindaId = `
+      Certificado do Curso GWO BST Combate a Incêndio
+      Participante: Diego Menezes Nunes Coelho
+      ID Winda: DM043079BR
+    `
+    const result = CertificateClassifier.classify(
+      'Diego Menezes Nunes Coelho - COMB - Clicksign.pdf',
+      textWithWindaId
+    )
+    expect(result.code).toBe('19') // Mantém Combate a Incêndio, não vira 30
+  })
+
+  it('não confunde Checklist EPI de altura com NR-35 Trabalho em Altura', () => {
+    const result = CertificateClassifier.classify(
+      '06.1 - Checklist EPI de altura (AVANTI) - 09.09.2025.pdf'
+    )
+    expect(result.code).not.toBe('21')
+  })
 })

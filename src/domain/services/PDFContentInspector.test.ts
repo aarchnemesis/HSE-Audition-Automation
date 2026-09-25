@@ -157,5 +157,86 @@ describe('PDFContentInspector', () => {
       expect(result.issueDate?.getFullYear()).toBe(2024)
       expect(result.expirationDate?.getFullYear()).toBe(2026)
     })
+
+    it('deve extrair data e classificar corretamente certificado GWO BST Combate a Incêndio (COMB)', () => {
+      const text = `
+        Certificado
+        Certifico para os devidos fins que
+        DiegoMenezesNunesCoelho–ID: DM043079BR–RG:20085602013
+        participou do Curso GWO/BST (Global Wind Organisation) –Módulo de Conscientização sobre Incêndio –
+        Reciclagem de acordo com a norma GWO Versão 20 realizado no Centro de Treinamentos da Storz em 
+        Caucaia/CE, no dia 01 de Setembro de 2026, totalizando 04 horas/aula.
+        Caucaia, 01 de Setembro de 2026.
+        Treinamento válido por 02 (Dois) anos.
+        ID Winda: JM046460BR
+      `
+      const filename = 'Diego Menezes Nunes Coelho - COMB - Clicksign.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
+      expect(result.code).toBe('19')
+      expect(result.source).toBe('PDF_CONTENT')
+      expect(result.issueDate?.getFullYear()).toBe(2026)
+      expect(result.issueDate?.getMonth()).toBe(8) // Setembro
+      expect(result.issueDate?.getDate()).toBe(1)
+      expect(result.expirationDate?.getFullYear()).toBe(2028)
+      expect(result.expirationDate?.getMonth()).toBe(8)
+      expect(result.expirationDate?.getDate()).toBe(1)
+      expect(result.statusEHS).toBe('CONFORME')
+    })
+
+    it('deve extrair data com formatação sem espaços (Setembrode) em Davilo COMB (1)', () => {
+      const text = `
+        Certificado
+        Certifico para os devidos fins que
+        FranciscoDaviloMarquesdeSousa–ID: FM083200BR–RG:20073408527
+        participou do Curso GWO/BST (Global Wind Organisation) –Módulo de Conscientização sobre Incêndio –
+        Reciclagem de acordo com a norma GWO Versão 20 realizado no Centro de Treinamentos da Storz em Caucaia/CE, 
+        no dia 11de Setembrode 2026, totalizando 04 horas/aula.
+        Caucaia, 11de Setembrode 2026.
+        ID Winda: JM046460BR
+        Treinamento válido por 02 (Dois) anos.
+      `
+      const filename =
+        'Francisco Davilo Marques de Sousa - COMB (1) - Clicksign.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
+      expect(result.code).toBe('19')
+      expect(result.source).toBe('PDF_CONTENT')
+      expect(result.issueDate?.getFullYear()).toBe(2026)
+      expect(result.issueDate?.getMonth()).toBe(8) // Setembro
+      expect(result.issueDate?.getDate()).toBe(11)
+      expect(result.expirationDate?.getFullYear()).toBe(2028)
+      expect(result.expirationDate?.getMonth()).toBe(8)
+      expect(result.expirationDate?.getDate()).toBe(11)
+      expect(result.statusEHS).toBe('CONFORME')
+    })
+
+    it('deve extrair data e classificar como código 16 o módulo Primeiros Socorros (SOS)', () => {
+      const text = `
+        Certificado
+        Certifico para os devidos fins que
+        FranciscoDaviloMarquesdeSousa–ID: FM083200BR
+        RG: 20073408527
+        participou do Curso GWO/BST (Global Wind Organisation) –Módulo Primeiros Socorros –Reciclagem, de 
+        acordo com a Norma GWO Versão 20,realizado no Centro de Treinamentos da Storz em Caucaia/CE, no dia 
+        09de Setembrode 2026, totalizando 04 horas/aula.
+        Caucaia, 09de Setembrode 2026.
+        ID Winda: JM046460BR
+        Treinamento válido por 02 (Dois) anos.
+      `
+      const filename =
+        'Francisco Davilo Marques de Sousa - SOS - Clicksign.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
+      expect(result.code).toBe('16')
+      expect(result.source).toBe('PDF_CONTENT')
+      expect(result.issueDate?.getFullYear()).toBe(2026)
+      expect(result.issueDate?.getMonth()).toBe(8) // Setembro
+      expect(result.issueDate?.getDate()).toBe(9)
+      expect(result.expirationDate?.getFullYear()).toBe(2028)
+      expect(result.expirationDate?.getMonth()).toBe(8)
+      expect(result.expirationDate?.getDate()).toBe(9)
+      expect(result.statusEHS).toBe('CONFORME')
+    })
   })
 })

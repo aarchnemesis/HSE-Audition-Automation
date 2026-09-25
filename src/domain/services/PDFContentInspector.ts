@@ -89,7 +89,21 @@ const DATE_CAPTURE_PATTERN =
  */
 export function parsePortugueseDate(raw: string): Date | null {
   if (!raw) return null
-  const cleaned = raw.trim().replace(/\s+/g, ' ')
+  let cleaned = raw.trim().replace(/\s+/g, ' ')
+
+  // Normaliza casos onde "de" ficou grudado no dia, no mês ou no ano (ex.: "11de Setembrode 2026")
+  cleaned = cleaned
+    .replace(/(\d{1,2})de\b/gi, '$1 de ')
+    .replace(
+      /(janeiro|fevereiro|mar[cç]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)de\b/gi,
+      '$1 de '
+    )
+    .replace(
+      /\bde(janeiro|fevereiro|mar[cç]o|abril|maio|junho|julho|agosto|setembro|outubro|novembro|dezembro|jan|fev|mar|abr|mai|jun|jul|ago|set|out|nov|dez)\b/gi,
+      'de $1'
+    )
+    .replace(/\bde(\d{2,4})\b/gi, 'de $1')
+    .replace(/\s+/g, ' ')
 
   // 1. Formato numérico DMY: "21/01/2025", "21.01.2025", "21-01-2025"
   const dmyMatch = cleaned.match(/(\d{1,2})[\/\.-](\d{1,2})[\/\.-](\d{2,4})/)
@@ -478,6 +492,22 @@ export class PDFContentInspector {
         if (parsed) {
           explicitIssueDate = parsed
           if (!foundClause) foundClause = cidadeMatch[0]
+        }
+      }
+    }
+
+    // Ex. E: Clicksign logs / assinaturas no rodapé: "Assinou em 14 set 2026", "Log gerado em 14 de setembro de 2026"
+    if (!explicitIssueDate) {
+      const clicksignRegex = new RegExp(
+        `(?:assinou\\s+em|log\\s+gerado\\s+em)\\s+(${DATE_CAPTURE_PATTERN})`,
+        'i'
+      )
+      const clicksignMatch = clean.match(clicksignRegex)
+      if (clicksignMatch) {
+        const parsed = parsePortugueseDate(clicksignMatch[1])
+        if (parsed) {
+          explicitIssueDate = parsed
+          if (!foundClause) foundClause = clicksignMatch[0]
         }
       }
     }
