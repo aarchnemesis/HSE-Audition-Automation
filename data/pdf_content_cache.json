@@ -52391,5 +52391,43 @@
     "classificationSource": "SEMANTIC",
     "matchedTerm": "NR-33",
     "extractedClause": "Data do arquivo: 20 – NR – 33 (Vigia F) - 19.09.2026 - Antonio Geiciano Mendes Serpa"
+  },
+  {
+    "fileId": "1HOM4tcqbYLFqUIACcgggOQ9elpFIM-tC",
+    "filename": "09 - Direção Defensiva - 07.07.2026 - ANTONIO RAFAEL.pdf",
+    "modifiedTime": "2026-09-29T13:43:27.339Z",
+    "code": "09",
+    "issueDate": "2026-07-07T03:00:00.000Z",
+    "expirationDate": "2028-07-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 07/07/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Direção Defensiva (via PDF) (Pág. 1)",
+    "extractedClause": "Data do arquivo: 09 - Direção Defensiva - 07.07.2026 - ANTONIO RAFAEL.pdf",
+    "documents": [
+      {
+        "code": "09",
+        "issueDate": "2026-07-07T03:00:00.000Z",
+        "expirationDate": "2028-07-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/07/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Direção Defensiva (via PDF) (Pág. 1)",
+        "extractedClause": "Data do arquivo: 09 - Direção Defensiva - 07.07.2026 - ANTONIO RAFAEL.pdf"
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-07-07T03:00:00.000Z",
+        "expirationDate": "2028-07-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/07/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 09 - Direção Defensiva - 07.07.2026 - ANTONIO RAFAEL.pdf"
+      }
+    ]
   }
 ]
