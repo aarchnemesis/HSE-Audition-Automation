@@ -236,7 +236,39 @@ export class PDFContentInspector {
     }
 
     // 3. Extração para Certificados Normativos (NRs, GWO, ASO, Treinamentos)
-    const certResult = this.extractCertificateDates(text, code, refDate)
+    let certResult = this.extractCertificateDates(text, code, refDate)
+    const fnDate = parseDateFromFilename(filename)
+
+    // Reconciliação com data do nome do arquivo (especialmente crucial para PDFs F+R - Formação + Reciclagem):
+    // Se o nome do arquivo contém uma data mais recente que a data de emissão extraída do texto
+    // (ou se a data de validade extraída do texto já está vencida enquanto a data do nome é posterior),
+    // a data do nome reflete a reciclagem mais recente e deve prevalecer.
+    if (fnDate) {
+      if (!certResult) {
+        certResult = {
+          issueDate: fnDate,
+          clause: `Data do arquivo: ${filename}`,
+        }
+      } else {
+        const textIssueTime = certResult.issueDate?.getTime() || 0
+        const textExpTime = certResult.expirationDate?.getTime() || 0
+        const isTextExpired = textExpTime > 0 && textExpTime < refDate.getTime()
+
+        if (
+          fnDate.getTime() > textIssueTime ||
+          (isTextExpired && fnDate.getTime() > textExpTime)
+        ) {
+          certResult.issueDate = fnDate
+          if (isTextExpired || !certResult.expirationDate) {
+            certResult.expirationDate = undefined
+          }
+          certResult.clause = certResult.clause
+            ? `${certResult.clause} | Atualizado via nome: ${fnDate.toLocaleDateString('pt-BR')}`
+            : `Data do arquivo: ${filename}`
+        }
+      }
+    }
+
     if (certResult && (certResult.expirationDate || certResult.issueDate)) {
       const finalExpDate =
         code && EVENT_TRIGGERED_ONLY_CODES.includes(code)
@@ -413,24 +445,24 @@ export class PDFContentInspector {
     // 1. Procura validade explícita direta: "Válido até DD/MM/AAAA" ou "Validade: DD/MM/AAAA"
     const validadeAteRegex = new RegExp(
       `(?:v[aá]lido\\s+at[eé]|validade(?:\\s+at[eé])?)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
-      'i'
+      'gi'
     )
-    const validadeAteMatch = clean.match(validadeAteRegex)
-    if (validadeAteMatch) {
-      const parsed = parsePortugueseDate(validadeAteMatch[1])
+    for (const match of clean.matchAll(validadeAteRegex)) {
+      const parsed = parsePortugueseDate(match[1])
       if (parsed) {
-        explicitExpDate = parsed
-        foundClause = validadeAteMatch[0]
+        if (!explicitExpDate || parsed.getTime() > explicitExpDate.getTime()) {
+          explicitExpDate = parsed
+          foundClause = match[0]
+        }
       }
     }
 
     // 2. Procura cláusula de validade por período: "Treinamento válido por 02 (Dois) anos", "válido por 1 ano"
     let validityYearsFromText: number | undefined
-    const validadePeriodoMatch = clean.match(
-      /(?:treinamento\s+)?v[aá]lido\s+por\s+([^\.,;\n]+?)(?:anos?|ano|meses?)/i
-    )
-    if (validadePeriodoMatch) {
-      const snippet = validadePeriodoMatch[0]
+    for (const match of clean.matchAll(
+      /(?:treinamento\s+)?v[aá]lido\s+por\s+([^\.,;\n]+?)(?:anos?|ano|meses?)/gi
+    )) {
+      const snippet = match[0]
       const numberMatch = snippet.match(
         /\b(um|uma|01|1|dois|duas|02|2|tres|três|03|3|quatro|04|4|cinco|05|5)\b/i
       )
@@ -440,66 +472,77 @@ export class PDFContentInspector {
       }
     }
 
-    // 3. Procura data de realização / conclusão do curso
-    // Ex. A: "Concluído em 12 de Maio de 2025" / "Concluido em 12 de Maio de 2025"
+    // 3. Procura data de realização / conclusão do curso (coleta todas e prioriza a mais recente)
+    interface DateCandidate {
+      date: Date
+      clause: string
+      priority: number // 1: conclusão direta/período, 2: cidade/assinatura, 3: clicksign log
+    }
+    const completionCandidates: DateCandidate[] = []
+
+    // Ex. A: "Concluído em 12 de Maio de 2025" / "Concluido em 12 de Maio de 2025" / "terminado em" / "finalizado em"
     const concluidoRegex = new RegExp(
-      `conclu[ií]do\\s+em\\s+(${DATE_CAPTURE_PATTERN})`,
-      'i'
+      `(?:conclu[ií]do|terminado|finalizado)\\s+em\\s+(${DATE_CAPTURE_PATTERN})`,
+      'gi'
     )
-    const concluidoMatch = clean.match(concluidoRegex)
-    if (concluidoMatch) {
-      const parsed = parsePortugueseDate(concluidoMatch[1])
+    for (const m of clean.matchAll(concluidoRegex)) {
+      const parsed = parsePortugueseDate(m[1])
       if (parsed) {
-        explicitIssueDate = parsed
-        if (!foundClause) foundClause = concluidoMatch[0]
+        completionCandidates.push({ date: parsed, clause: m[0], priority: 1 })
       }
     }
 
-    // Ex. B: "nos dias 07 e 08 de Janeiro de 2026", "no dia 27de Agosto de 2026", "no dia 27/01/2026"
-    if (!explicitIssueDate) {
-      const noDiaRegex = new RegExp(
-        `(?:no[s]?\\s+dia[s]?|completou.*?no\\s+dia)\\s*(?:[0-9]{1,2}\\s*e\\s*)?(${DATE_CAPTURE_PATTERN})`,
-        'i'
-      )
-      const noDiaMatch = clean.match(noDiaRegex)
-      if (noDiaMatch) {
-        const parsed = parsePortugueseDate(noDiaMatch[1])
-        if (parsed) {
-          explicitIssueDate = parsed
-          if (!foundClause) foundClause = noDiaMatch[0]
-        }
+    // Ex. B: "Concluido no período de ... a [DATA]" / "no período de ... a [DATA]" / "período de ... à [DATA]"
+    const periodoRegex = new RegExp(
+      `(?:conclu[ií]do|realizado|ministrado)?\\s*(?:no\\s+per[ií]odo\\s+de|per[ií]odo\\s+de)\\s+([^\\.,;\\n]+?)\\s+[aà]\\s+(${DATE_CAPTURE_PATTERN})`,
+      'gi'
+    )
+    for (const m of clean.matchAll(periodoRegex)) {
+      const parsed = parsePortugueseDate(m[2])
+      if (parsed) {
+        completionCandidates.push({ date: parsed, clause: m[0], priority: 1 })
       }
     }
 
-    // Ex. C: "Realizado no período de ... à DD/MM/AAAA"
-    if (!explicitIssueDate) {
-      const periodoRegex = new RegExp(
-        `per[ií]odo\\s+de.*?[\\u00e0a]\\s+(${DATE_CAPTURE_PATTERN})`,
-        'i'
-      )
-      const periodoMatch = clean.match(periodoRegex)
-      if (periodoMatch) {
-        const parsed = parsePortugueseDate(periodoMatch[1])
-        if (parsed) {
-          explicitIssueDate = parsed
-          if (!foundClause) foundClause = periodoMatch[0]
-        }
+    // Ex. C: "nos dias 07 e 08 de Janeiro de 2026", "no dia 27de Agosto de 2026", "no dia 27/01/2026", "completou ... no dia [DATA]"
+    const noDiaRegex = new RegExp(
+      `(?:no[s]?\\s+dia[s]?|completou.*?no\\s+dia)\\s*(?:[0-9]{1,2}\\s*(?:e|[aà])\\s*)?(${DATE_CAPTURE_PATTERN})`,
+      'gi'
+    )
+    for (const m of clean.matchAll(noDiaRegex)) {
+      const parsed = parsePortugueseDate(m[1])
+      if (parsed) {
+        completionCandidates.push({ date: parsed, clause: m[0], priority: 1 })
       }
+    }
+
+    // Se encontramos candidatos de prioridade 1 (conclusão direta/período), ordenamos pela data mais recente
+    const directCandidates = completionCandidates.filter(
+      (c) => c.priority === 1
+    )
+    if (directCandidates.length > 0) {
+      directCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
+      explicitIssueDate = directCandidates[0].date
+      if (!foundClause) foundClause = directCandidates[0].clause
     }
 
     // Ex. D: Assinatura de cidade no rodapé: "Fortaleza, 08 de Janeiro de 2026", "Sorocaba (SP), 29 de Março de 2023"
     if (!explicitIssueDate) {
       const cidadeRegex = new RegExp(
         `(?:Fortaleza|Caucaia|Sorocaba|Mossor[oó]|Parnamirim|S[aã]o\\s+Paulo|Natal)[\\s\\/\\(A-Z]*,?\\s*(${DATE_CAPTURE_PATTERN})`,
-        'i'
+        'gi'
       )
-      const cidadeMatch = clean.match(cidadeRegex)
-      if (cidadeMatch) {
-        const parsed = parsePortugueseDate(cidadeMatch[1])
+      const cidadeCandidates: DateCandidate[] = []
+      for (const m of clean.matchAll(cidadeRegex)) {
+        const parsed = parsePortugueseDate(m[1])
         if (parsed) {
-          explicitIssueDate = parsed
-          if (!foundClause) foundClause = cidadeMatch[0]
+          cidadeCandidates.push({ date: parsed, clause: m[0], priority: 2 })
         }
+      }
+      if (cidadeCandidates.length > 0) {
+        cidadeCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
+        explicitIssueDate = cidadeCandidates[0].date
+        if (!foundClause) foundClause = cidadeCandidates[0].clause
       }
     }
 
@@ -507,15 +550,19 @@ export class PDFContentInspector {
     if (!explicitIssueDate) {
       const clicksignRegex = new RegExp(
         `(?:assinou\\s+em|log\\s+gerado\\s+em)\\s+(${DATE_CAPTURE_PATTERN})`,
-        'i'
+        'gi'
       )
-      const clicksignMatch = clean.match(clicksignRegex)
-      if (clicksignMatch) {
-        const parsed = parsePortugueseDate(clicksignMatch[1])
+      const clicksignCandidates: DateCandidate[] = []
+      for (const m of clean.matchAll(clicksignRegex)) {
+        const parsed = parsePortugueseDate(m[1])
         if (parsed) {
-          explicitIssueDate = parsed
-          if (!foundClause) foundClause = clicksignMatch[0]
+          clicksignCandidates.push({ date: parsed, clause: m[0], priority: 3 })
         }
+      }
+      if (clicksignCandidates.length > 0) {
+        clicksignCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
+        explicitIssueDate = clicksignCandidates[0].date
+        if (!foundClause) foundClause = clicksignCandidates[0].clause
       }
     }
 

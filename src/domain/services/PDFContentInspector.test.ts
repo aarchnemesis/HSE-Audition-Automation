@@ -238,5 +238,53 @@ describe('PDFContentInspector', () => {
       expect(result.expirationDate?.getDate()).toBe(9)
       expect(result.statusEHS).toBe('CONFORME')
     })
+
+    it('deve priorizar a data de reciclagem mais recente em certificados F+R com múltiplas datas', () => {
+      const text = `
+        Página 1:
+        CERTIFICADO DE RECICLAGEM
+        Certificamos que Thayna Nogueira Tavares participou do treinamento de Reciclagem NR-10 Básico,
+        realizado no período de 6 de Outubro de 2025 a 9 de Outubro de 2025, com carga horária de 20 horas.
+        Treinamento válido por 02 (Dois) anos.
+
+        Página 3:
+        CERTIFICADO DE FORMAÇÃO INICIAL
+        Certificamos que Thayna Nogueira Tavares concluiu a formação inicial NR-10 Básico.
+        Concluido em 16 de Outubro de 2023.
+      `
+      const filename =
+        '12 – NR – 10 Básico (F+R) – 09.10.2025 - Thayna Nogueira Tavares.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
+      expect(result.code).toBe('12')
+      expect(result.source).toBe('PDF_CONTENT')
+      expect(result.issueDate?.getFullYear()).toBe(2025)
+      expect(result.issueDate?.getMonth()).toBe(9) // Outubro
+      expect(result.issueDate?.getDate()).toBe(9)
+      expect(result.expirationDate?.getFullYear()).toBe(2027)
+      expect(result.expirationDate?.getMonth()).toBe(9)
+      expect(result.statusEHS).toBe('CONFORME')
+    })
+
+    it('deve conciliar com data mais recente no nome do arquivo quando o texto só contiver formação antiga', () => {
+      const text = `
+        Página 1: [Documento digitalizado / imagem sem texto legível]
+        Página 2:
+        CERTIFICADO DE FORMAÇÃO INICIAL
+        Concluido em 16 de Outubro de 2023.
+        Treinamento válido por 02 (Dois) anos.
+      `
+      const filename =
+        '12 – NR – 10 Básico (F+R) – 09.10.2025 - Thayna Nogueira Tavares.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
+      expect(result.code).toBe('12')
+      expect(result.issueDate?.getFullYear()).toBe(2025)
+      expect(result.issueDate?.getMonth()).toBe(9) // Outubro
+      expect(result.issueDate?.getDate()).toBe(9)
+      expect(result.expirationDate?.getFullYear()).toBe(2027)
+      expect(result.expirationDate?.getMonth()).toBe(9)
+      expect(result.statusEHS).toBe('CONFORME')
+    })
   })
 })
