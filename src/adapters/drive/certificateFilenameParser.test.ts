@@ -122,15 +122,22 @@ describe('calculateDocExpiration', () => {
     )
   })
 
-  it('NR-01 (código 10) e NR-06 (código 11) não têm validade fixa — tratados como válidos por muito tempo (50 anos)', () => {
+  it('NR-01 (código 10), NR-06 (código 11) e GWO WINDA ID (código 30) não têm validade fixa — tratados como válidos por muito tempo (50 anos)', () => {
     const issued = new Date(2020, 0, 1)
     const exp10 = calculateDocExpiration('10', issued, REF_DATE)
     const exp11 = calculateDocExpiration('11', issued, REF_DATE)
+    const exp30 = calculateDocExpiration('30', issued, REF_DATE)
     expect(exp10?.getFullYear()).toBe(2070)
     expect(exp11?.getFullYear()).toBe(2070)
+    expect(exp30?.getFullYear()).toBe(2070)
   })
 
-  it('retorna undefined quando não há data parseada', () => {
+  it('código de evento-gatilho ou cadastro permanente sem data no nome retorna validade de 50 anos a partir de REF_DATE', () => {
+    const exp30 = calculateDocExpiration('30', null, REF_DATE)
+    expect(exp30?.getFullYear()).toBe(REF_DATE.getFullYear() + 50)
+  })
+
+  it('retorna undefined quando não há data parseada para códigos com validade temporal', () => {
     expect(calculateDocExpiration('01', null, REF_DATE)).toBeUndefined()
   })
 

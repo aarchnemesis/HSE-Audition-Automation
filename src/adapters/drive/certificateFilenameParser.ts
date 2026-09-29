@@ -6,18 +6,16 @@ import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 // '33'; alguém confundiu o número da NR com o código interno do documento).
 const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20', '28', '34']
 
-// NR-01 (Integração, código 10) e NR-06 (Uso de EPI, código 11) NÃO têm periodicidade fixa
-// segundo o guia — só são retreinados por gatilho (mudança de risco, acidente grave, troca de
-// EPI), nunca por calendário. Calcular uma validade fixa pra eles gera vencimento falso. Como
-// nosso modelo de dados não tem um conceito de "documento sem prazo, só por evento", marcamos
-// com uma validade bem distante (50 anos) — o documento fica CONFORME indefinidamente até
-// alguém decidir modelar retreinamento por gatilho de verdade. Exportado porque DriveRpoAuditor
-// precisa saber quais códigos são event-triggered pra NÃO comparar data de validade entre Drive
-// e RPO nesses casos — comparar um prazo de "não vence" (proxy de 50 anos) contra uma data real
-// digitada na RPO sempre vai divergir em ~17.500 dias, mascarando divergências reais no meio de
-// centenas de falsos positivos (achado em 25/08/2026, 118 ocorrências na auditoria real).
-export const EVENT_TRIGGERED_ONLY_CODES = ['10', '11']
-const EVENT_TRIGGERED_VALIDITY_YEARS = 50
+// NR-01 (Integração, código 10), NR-06 (Uso de EPI, código 11) e GWO WINDA ID (código 30) NÃO têm
+// periodicidade fixa por calendário. NR-01 e NR-06 só são retreinados por gatilho de evento. GWO WINDA ID
+// é um cadastro de identificação único e vitalício do profissional na base da Global Wind Organisation,
+// que comprova registro e exibe os módulos GWO cursados — o controle de validade real cabe exclusivamente
+// aos 4 módulos individuais do GWO BST (16, 17, 19 e 21). Calcular uma validade fixa pra eles gera
+// vencimento falso. Marcamos com validade de 50 anos como proxy de documento permanente / CONFORME.
+// Exportado porque DriveRpoAuditor precisa saber quais códigos são event-triggered pra NÃO comparar data
+// de validade entre Drive e RPO nesses casos.
+export const EVENT_TRIGGERED_ONLY_CODES = ['10', '11', '30']
+export const EVENT_TRIGGERED_VALIDITY_YEARS = 50
 
 // Contrato PJ (40) e Aditivo ao Contrato (40.1) — confirmado pelo usuário em 27/08/2026: a data
 // no nome do arquivo já É o prazo final (não uma data de emissão pra somar anos de validade em
@@ -94,6 +92,13 @@ export function calculateDocExpiration(
   parsedDate: Date | null,
   refDate: Date
 ): Date | undefined {
+  if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
+    return EHSEvaluator.calculateExpirationFromIssue(
+      parsedDate || refDate,
+      EVENT_TRIGGERED_VALIDITY_YEARS
+    )
+  }
+
   if (!parsedDate) return undefined
 
   if (

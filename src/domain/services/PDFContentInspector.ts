@@ -1,5 +1,6 @@
 import {
   calculateDocExpiration,
+  EVENT_TRIGGERED_ONLY_CODES,
   getValidityYearsForCode,
   parseDateFromFilename,
 } from '../../adapters/drive/certificateFilenameParser.js'
@@ -238,10 +239,16 @@ export class PDFContentInspector {
     const certResult = this.extractCertificateDates(text, code, refDate)
     if (certResult && (certResult.expirationDate || certResult.issueDate)) {
       const finalExpDate =
-        certResult.expirationDate ||
-        (certResult.issueDate && code
-          ? calculateDocExpiration(code, certResult.issueDate, refDate)
-          : undefined)
+        code && EVENT_TRIGGERED_ONLY_CODES.includes(code)
+          ? calculateDocExpiration(
+              code,
+              certResult.issueDate || certResult.expirationDate || refDate,
+              refDate
+            )
+          : certResult.expirationDate ||
+            (certResult.issueDate && code
+              ? calculateDocExpiration(code, certResult.issueDate, refDate)
+              : undefined)
 
       const evalResult = EHSEvaluator.evaluateDate(finalExpDate, refDate)
       return {
