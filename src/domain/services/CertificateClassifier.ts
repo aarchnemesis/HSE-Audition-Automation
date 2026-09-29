@@ -224,25 +224,33 @@ const SEMANTIC_RULES: Array<{
     code: '30',
     matchedTerm: 'GWO WINDA ID',
   },
-  // CTPS Digital
+  // Ficha de Registro / Documentos Cadastrais PJ (CNPJ / CCMEI)
   {
-    regex: /\b(?:CTPS\b|CARTEIRA\s+DE\s+TRABALHO)\b/i,
+    regex:
+      /\b(?:FICHA\s+(?:DE\s+)?REGISTRO|CCMEI\b|CARTAO\s+CNPJ|COMPROVANTE\s+CNPJ)\b/i,
+    code: '03',
+    matchedTerm: 'Ficha de Registro',
+  },
+  // CTPS Digital / Contrato de Trabalho CLT
+  {
+    regex:
+      /\b(?:CTPS\b|CARTEIRA\s+DE\s+TRABALHO|CONTRATO\s+(?:DE\s+)?TRABALHO)\b/i,
     code: '04',
     matchedTerm: 'CTPS Digital',
   },
   // Cartão de Vacina / SUS
   {
     regex:
-      /\b(?:CARTAO\s+DE\s+VACINA|VACINA\b|COMPROVANTE\s+DE\s+VACINACAO)\b/i,
+      /\b(?:CARTAO\s+DE\s+VACINA|VACINA\b|COMPROVANTE\s+DE\s+VACINACAO|CARTAO\s+SUS|FEBRE\s+AMARELA)\b/i,
     code: '05',
     matchedTerm: 'Cartão de Vacina / SUS',
   },
-  // Ficha de EPI
+  // Ficha de EPI / Checklist Altura
   {
     regex:
-      /\b(?:FICHA\s+DE\s+EPI|CHECKLIST\s+ALTURA|TERMO\s+DE\s+ENTREGA\s+DE\s+EPI)\b/i,
+      /\b(?:FICHA\s+DE\s+EPI|CHECKLIST\s+(?:DE\s+)?(?:EPI|ALTURA)|CHECKLIST\s+EPI\s+DE\s+ALTURA|TERMO\s+DE\s+ENTREGA\s+DE\s+EPI)\b/i,
     code: '06',
-    matchedTerm: 'Ficha de EPI',
+    matchedTerm: 'Ficha de EPI / Checklist Altura',
   },
   // Seguro de Vida
   {
@@ -294,6 +302,12 @@ export class CertificateClassifier {
       return { code: null, confidence: 'NONE', source: 'NONE' }
     }
 
+    // 0. Passaporte é documento de viagem/identificação civil e NUNCA documento de capacitação/CIPA.
+    // Frequentemente prefixado com "34 - Passaporte" por técnicos, colidindo com o código interno da CIPA.
+    if (/\b(?:passaporte|passport)\b/i.test(filename)) {
+      return { code: null, confidence: 'NONE', source: 'NONE' }
+    }
+
     // 1. Caso o arquivo comece com DATA (ex.: 27 08 2026, 30-08-2026, 2026-08-27)
     // Os números iniciais são a DATA e NUNCA o código do documento!
     if (startsWithDate(filename)) {
@@ -341,7 +355,15 @@ export class CertificateClassifier {
       if (prefixCode.length === 1) prefixCode = `0${prefixCode}`
     }
 
-    // Trata casos específicos de convenção de pasta Drone/LPS (04 e 04.1)
+    // Trata casos específicos de convenções de pasta e subcódigos
+    if (prefixCode === '03.1') {
+      return {
+        code: '03',
+        confidence: 'HIGH',
+        source: 'PREFIX',
+        matchedTerm: 'Ficha de Registro / CNPJ (03.1)',
+      }
+    }
     if (prefixCode === '04.1') {
       return {
         code: '04.1',
@@ -356,6 +378,22 @@ export class CertificateClassifier {
         confidence: 'HIGH',
         source: 'PREFIX',
         matchedTerm: 'Contrato (04)',
+      }
+    }
+    if (prefixCode === '05.1') {
+      return {
+        code: '05',
+        confidence: 'HIGH',
+        source: 'PREFIX',
+        matchedTerm: 'Cartão de Vacina / SUS (05.1)',
+      }
+    }
+    if (prefixCode === '06.1') {
+      return {
+        code: '06',
+        confidence: 'HIGH',
+        source: 'PREFIX',
+        matchedTerm: 'Ficha de EPI / Checklist Altura (06.1)',
       }
     }
 

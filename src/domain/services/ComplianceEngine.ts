@@ -283,10 +283,23 @@ export class ComplianceEngine {
       }
 
       const evaluation = EHSEvaluator.evaluateDate(cert.expirationDate, refDate)
+      let status = evaluation.status
+      let detail = evaluation.detail
 
-      if (evaluation.status === 'AUSENTE') {
+      // CIPA (34) é eletivo e restrito a membros da gestão atual. Certificados
+      // de gestões anteriores são registros históricos e não geram pendência/bloqueio.
+      if (
+        code === '34' &&
+        (status === 'VENCIDO' || status === 'INDETERMINADO')
+      ) {
+        status = 'CONFORME'
+        detail =
+          'Histórico CIPA (Gestão anterior) - não exigido como pendência para a gestão atual.'
+      }
+
+      if (status === 'AUSENTE') {
         missingCount++
-      } else if (evaluation.status === 'VENCIDO') {
+      } else if (status === 'VENCIDO') {
         expiredCount++
       } else if (
         [
@@ -295,7 +308,7 @@ export class ComplianceEngine {
           'VENCE_15',
           'VENCE_07',
           'INDETERMINADO',
-        ].includes(evaluation.status)
+        ].includes(status)
       ) {
         warningCount++
       } else {
@@ -305,8 +318,8 @@ export class ComplianceEngine {
       return {
         code,
         reqName,
-        status: evaluation.status,
-        detail: evaluation.detail,
+        status,
+        detail,
       }
     })
 

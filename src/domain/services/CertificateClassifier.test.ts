@@ -194,10 +194,46 @@ describe('CertificateClassifier.classify', () => {
     expect(result.code).toBe('19') // Mantém Combate a Incêndio, não vira 30
   })
 
-  it('não confunde Checklist EPI de altura com NR-35 Trabalho em Altura', () => {
+  it('classifica Checklist EPI de altura (06.1) como código 06 e não confunde com NR-35', () => {
     const result = CertificateClassifier.classify(
       '06.1 - Checklist EPI de altura (AVANTI) - 09.09.2025.pdf'
     )
-    expect(result.code).not.toBe('21')
+    expect(result.code).toBe('06')
+  })
+
+  it('não classifica Passaporte como CIPA mesmo quando prefixado com 34', () => {
+    const files = [
+      '34 - Passaporte - Lucas Franklin Falcão Silva.pdf',
+      '34 - Passaporte - Antonio Carvalho Júnior.pdf',
+      '34 - Passport - John Doe.pdf',
+      'Passaporte_Brasileiro.pdf',
+    ]
+    for (const fn of files) {
+      const result = CertificateClassifier.classify(fn)
+      expect(result.code).toBeNull()
+      expect(result.confidence).toBe('NONE')
+    }
+  })
+
+  it('classifica subcódigos e documentos cadastrais/pessoais (03, 04, 05, 06)', () => {
+    expect(
+      CertificateClassifier.classify('03.1 - Comprovante CNPJ - Fulano.pdf')
+        .code
+    ).toBe('03')
+    expect(
+      CertificateClassifier.classify('03 - Ficha de Registro de Empregado.pdf')
+        .code
+    ).toBe('03')
+    expect(
+      CertificateClassifier.classify('04 - CTPS Digital - Carteira de Trabalho.pdf')
+        .code
+    ).toBe('04')
+    expect(
+      CertificateClassifier.classify('05.1 - Vacina Febre Amarela - Fulano.pdf')
+        .code
+    ).toBe('05')
+    expect(
+      CertificateClassifier.classify('05 - Cartao SUS e Vacinacao.pdf').code
+    ).toBe('05')
   })
 })

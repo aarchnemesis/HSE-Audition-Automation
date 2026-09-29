@@ -122,23 +122,34 @@ describe('calculateDocExpiration', () => {
     )
   })
 
-  it('NR-01 (código 10), NR-06 (código 11) e GWO WINDA ID (código 30) não têm validade fixa — tratados como válidos por muito tempo (50 anos)', () => {
+  it('documentos permanentes e de evento-gatilho (02, 03, 04, 05, 10, 11, 23, 24, 30) têm validade vitalícia de 50 anos', () => {
     const issued = new Date(2020, 0, 1)
+    const exp05 = calculateDocExpiration('05', issued, REF_DATE)
     const exp10 = calculateDocExpiration('10', issued, REF_DATE)
     const exp11 = calculateDocExpiration('11', issued, REF_DATE)
+    const exp24 = calculateDocExpiration('24', issued, REF_DATE)
     const exp30 = calculateDocExpiration('30', issued, REF_DATE)
+    expect(exp05?.getFullYear()).toBe(2070)
     expect(exp10?.getFullYear()).toBe(2070)
     expect(exp11?.getFullYear()).toBe(2070)
+    expect(exp24?.getFullYear()).toBe(2070)
     expect(exp30?.getFullYear()).toBe(2070)
   })
 
-  it('código de evento-gatilho ou cadastro permanente sem data no nome retorna validade de 50 anos a partir de REF_DATE', () => {
+  it('documentos permanentes sem data no nome retornam validade de 50 anos a partir de REF_DATE', () => {
+    const exp04 = calculateDocExpiration('04', null, REF_DATE)
+    const exp05 = calculateDocExpiration('05', null, REF_DATE)
+    const exp24 = calculateDocExpiration('24', null, REF_DATE)
     const exp30 = calculateDocExpiration('30', null, REF_DATE)
+    expect(exp04?.getFullYear()).toBe(REF_DATE.getFullYear() + 50)
+    expect(exp05?.getFullYear()).toBe(REF_DATE.getFullYear() + 50)
+    expect(exp24?.getFullYear()).toBe(REF_DATE.getFullYear() + 50)
     expect(exp30?.getFullYear()).toBe(REF_DATE.getFullYear() + 50)
   })
 
   it('retorna undefined quando não há data parseada para códigos com validade temporal', () => {
     expect(calculateDocExpiration('01', null, REF_DATE)).toBeUndefined()
+    expect(calculateDocExpiration('20', null, REF_DATE)).toBeUndefined()
   })
 
   it('Contrato PJ (40) e Aditivo (40.1) usam a data do arquivo direto como prazo, mesmo se já passou — confirmado pelo usuário em 27/08/2026 que a data no nome já é o vencimento, não a emissão', () => {

@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
+import { Inspector, ParkRequirement } from '../models/Certificate.js'
 import {
+  ComplianceEngine,
   DOC_CATALOG_MAP,
   PRESENCIAL_REQUIRED_DOC_CODES,
   getTrainingModality,
@@ -73,5 +75,57 @@ describe('getTrainingModality', () => {
     expect(getTrainingModality('99', 'Operador de Elevador JASO')).toBe(
       'ONLINE'
     )
+  })
+})
+
+describe('ComplianceEngine.evaluateInspectorForPark', () => {
+  it('trata CIPA (34) vencida como histórico de gestão anterior (CONFORME) e mantém APTO', () => {
+    const refDate = new Date(2026, 7, 19)
+    const park: ParkRequirement = {
+      id: 'p-cipa',
+      parkName: 'Parque Administrativo',
+      clientName: 'Cliente Teste',
+      description: '',
+      requiredDocCodes: ['01', '34'],
+    }
+    const inspector: Inspector = {
+      id: '1',
+      name: 'FULANO DA CIPA',
+      role: 'ADMINISTRATIVO',
+      certificates: new Map([
+        [
+          '01',
+          {
+            code: '01',
+            name: 'ASO',
+            expirationDate: new Date(2028, 0, 1),
+            statusEHS: 'CONFORME',
+            modality: 'PRESENCIAL',
+          },
+        ],
+        [
+          '34',
+          {
+            code: '34',
+            name: 'CIPA',
+            expirationDate: new Date(2025, 0, 1), // Vencido em relação a refDate
+            statusEHS: 'CONFORME',
+            modality: 'ONLINE',
+          },
+        ],
+      ]),
+    }
+
+    const result = ComplianceEngine.evaluateInspectorForPark(
+      inspector,
+      park,
+      refDate
+    )
+    const cipaDoc = result.docDetails.find(d => d.code === '34')
+    expect(cipaDoc?.status).toBe('CONFORME')
+    expect(cipaDoc?.detail).toContain('Histórico CIPA (Gestão anterior)')
+    expect(result.overallStatus).toBe('APTO')
+    expect(result.expiredDocsCount).toBe(0)
+    expect(result.validDocsCount).toBe(2)
   })
 })

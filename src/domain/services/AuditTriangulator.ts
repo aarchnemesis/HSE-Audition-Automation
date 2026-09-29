@@ -178,11 +178,24 @@ export class AuditTriangulator {
         const completionStr = storzCompletionDate?.toLocaleDateString('pt-BR')
         const expStr = storzExpDate.toLocaleDateString('pt-BR')
 
+        // CIPA (34) é eletivo e restrito a membros eleitos da gestão atual. Certificados
+        // de gestões anteriores são registros históricos e não geram pendência/bloqueio.
+        if (
+          code === '34' &&
+          (status === 'VENCIDO' || status === 'INDETERMINADO')
+        ) {
+          status = 'CONFORME'
+          detail =
+            'Histórico CIPA (Gestão anterior) - não exigido como pendência para a gestão atual.'
+        }
+
         if (status === 'CONFORME') {
           validCount++
-          detail = cert
-            ? `Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
-            : `Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+          if (!detail) {
+            detail = cert
+              ? `Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+              : `Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+          }
         } else if (status === 'VENCIDO') {
           expiredCount++
           detail = `${evaluation.detail} | Concluído na Storz (${completedReq!.id}) em ${completionStr} (aguardando upload no Drive).`
@@ -204,6 +217,17 @@ export class AuditTriangulator {
         detail = cert.statusDetail
           ? `${evaluation.detail} ${cert.statusDetail}`
           : evaluation.detail
+
+        // CIPA (34) é eletivo e restrito a membros eleitos da gestão atual. Certificados
+        // de gestões anteriores são registros históricos e não geram pendência/bloqueio.
+        if (
+          code === '34' &&
+          (status === 'VENCIDO' || status === 'INDETERMINADO')
+        ) {
+          status = 'CONFORME'
+          detail =
+            'Histórico CIPA (Gestão anterior) - não exigido como pendência para a gestão atual.'
+        }
 
         if (status === 'CONFORME') {
           validCount++

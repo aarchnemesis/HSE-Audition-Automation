@@ -2,19 +2,29 @@ import { CertificateClassifier } from '../../domain/services/CertificateClassifi
 import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 
 // Baseado no "Guia de Treinamentos Normativos SST" (ARTH-Wind SSMA, v2.0, ago/2026).
-// '33' era código morto — não existe no nosso catálogo (o código interno da NR-33 é '20', não
-// '33'; alguém confundiu o número da NR com o código interno do documento).
-const ANNUAL_VALIDITY_CODES = ['01', '05', '06', '20', '28', '34']
+// '05' (Cartão de Vacina / SUS) é documento permanente / pessoal e NÃO possui periodicidade anual.
+const ANNUAL_VALIDITY_CODES = ['01', '06', '20', '28', '34']
 
-// NR-01 (Integração, código 10), NR-06 (Uso de EPI, código 11) e GWO WINDA ID (código 30) NÃO têm
-// periodicidade fixa por calendário. NR-01 e NR-06 só são retreinados por gatilho de evento. GWO WINDA ID
-// é um cadastro de identificação único e vitalício do profissional na base da Global Wind Organisation,
-// que comprova registro e exibe os módulos GWO cursados — o controle de validade real cabe exclusivamente
-// aos 4 módulos individuais do GWO BST (16, 17, 19 e 21). Calcular uma validade fixa pra eles gera
-// vencimento falso. Marcamos com validade de 50 anos como proxy de documento permanente / CONFORME.
-// Exportado porque DriveRpoAuditor precisa saber quais códigos são event-triggered pra NÃO comparar data
-// de validade entre Drive e RPO nesses casos.
-export const EVENT_TRIGGERED_ONLY_CODES = ['10', '11', '30']
+// Documentos permanentes ou sem periodicidade fixa por calendário:
+// - 02 (Ordem de Serviço): emitida na admissão/mudança de função
+// - 03 (Ficha de Registro / Comprovante PJ): cadastro inicial
+// - 04 (CTPS Digital / Contrato de Trabalho CLT): vínculo trabalhista permanente
+// - 05 (Cartão de Vacina / SUS): registro vitalício de imunizações
+// - 10 (NR-01 Integração EHS) e 11 (NR-06 Uso de EPI): retreinados apenas por gatilho de evento
+// - 23 (CRT - Conselho de Técnicos) e 24 (Diploma Técnico): registro e titulação permanentes
+// - 30 (GWO WINDA ID): identificação única e vitalícia do profissional na GWO
+// Todos esses usam validade de 50 anos como proxy de documento permanente / CONFORME.
+export const EVENT_TRIGGERED_ONLY_CODES = [
+  '02',
+  '03',
+  '04',
+  '05',
+  '10',
+  '11',
+  '23',
+  '24',
+  '30',
+]
 export const EVENT_TRIGGERED_VALIDITY_YEARS = 50
 
 // Contrato PJ (40) e Aditivo ao Contrato (40.1) — confirmado pelo usuário em 27/08/2026: a data

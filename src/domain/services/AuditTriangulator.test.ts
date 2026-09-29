@@ -413,4 +413,35 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.warningDocsCount).toBe(1)
     expect(result.storzInProgressCount).toBe(1)
   })
+
+  it('trata certificado CIPA (34) vencido como histórico de gestão anterior (CONFORME) e não penaliza o colaborador', () => {
+    const parkWithCipa: ParkRequirement = {
+      id: 'p-cipa',
+      parkName: 'Parque Administrativo',
+      clientName: 'Cliente Teste',
+      description: '',
+      requiredDocCodes: ['01', '34'],
+    }
+    const cipaExpirada = new Date(2025, 0, 1) // expirado em relação à REF_DATE (2026-08-19)
+    const asoValido = FAR_FUTURE
+    const inspector = makeInspector([
+      makeCert('01', asoValido),
+      makeCert('34', cipaExpirada),
+    ])
+
+    const result = AuditTriangulator.performTripleAudit(
+      inspector,
+      parkWithCipa,
+      [],
+      REF_DATE
+    )
+
+    const cipaItem = result.auditItems.find(i => i.code === '34')
+    expect(cipaItem).toBeDefined()
+    expect(cipaItem?.status).toBe('CONFORME')
+    expect(cipaItem?.detail).toContain('Histórico CIPA (Gestão anterior)')
+    expect(result.overallStatus).toBe('APTO')
+    expect(result.expiredDocsCount).toBe(0)
+    expect(result.validDocsCount).toBe(2)
+  })
 })
