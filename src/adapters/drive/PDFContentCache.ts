@@ -1,6 +1,18 @@
 import fs from 'fs'
 import path from 'path'
 
+export interface CachedPDFDocument {
+  code: string | null
+  issueDate?: string
+  expirationDate?: string
+  statusEHS: string
+  statusDetail: string
+  source: 'PDF_CONTENT' | 'FILENAME' | 'IMAGE_FALLBACK'
+  classificationSource?: 'SEMANTIC' | 'PREFIX' | 'NONE'
+  matchedTerm?: string
+  extractedClause?: string
+}
+
 export interface CachedPDFEntry {
   fileId: string
   filename: string
@@ -14,6 +26,8 @@ export interface CachedPDFEntry {
   classificationSource?: 'SEMANTIC' | 'PREFIX' | 'NONE'
   matchedTerm?: string
   extractedClause?: string
+  /** Lista de múltiplos documentos/normas identificados no mesmo PDF (Fase 2) */
+  documents?: CachedPDFDocument[]
 }
 
 export class PDFContentCache {
@@ -80,6 +94,28 @@ export class PDFContentCache {
     }
 
     return entry
+  }
+
+  /**
+   * Retorna todos os documentos associados a esta entrada de cache (seja individual ou lista da Fase 2).
+   */
+  getAllDocuments(entry: CachedPDFEntry): CachedPDFDocument[] {
+    if (entry.documents && entry.documents.length > 0) {
+      return entry.documents
+    }
+    return [
+      {
+        code: entry.code,
+        issueDate: entry.issueDate,
+        expirationDate: entry.expirationDate,
+        statusEHS: entry.statusEHS,
+        statusDetail: entry.statusDetail,
+        source: entry.source,
+        classificationSource: entry.classificationSource,
+        matchedTerm: entry.matchedTerm,
+        extractedClause: entry.extractedClause,
+      },
+    ]
   }
 
   set(entry: CachedPDFEntry): void {

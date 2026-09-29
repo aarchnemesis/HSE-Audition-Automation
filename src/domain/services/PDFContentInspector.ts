@@ -1,6 +1,6 @@
 import {
-  calculateDocExpiration,
   EVENT_TRIGGERED_ONLY_CODES,
+  calculateDocExpiration,
   getValidityYearsForCode,
   parseDateFromFilename,
 } from '../../adapters/drive/certificateFilenameParser.js'
@@ -8,7 +8,37 @@ import {
   CertificateClassifier,
   ClassificationResult,
 } from './CertificateClassifier.js'
+import { DOC_CATALOG_MAP } from './ComplianceEngine.js'
 import { EHSEvaluator } from './EHSEvaluator.js'
+
+/**
+ * Cria coletor de texto pagina a pagina para uso com pdf-parse (Fase 2).
+ */
+export function createPdfPageCollector(): {
+  pages: string[]
+  pagerender: (pageData: any) => Promise<string>
+} {
+  const pages: string[] = []
+  const pagerender = async (pageData: any): Promise<string> => {
+    const textContent = await pageData.getTextContent({
+      normalizeWhitespace: false,
+      disableCombineTextItems: false,
+    })
+    let lastY: number | undefined
+    let text = ''
+    for (const item of textContent.items) {
+      if (lastY === undefined || lastY === item.transform[5]) {
+        text += item.str
+      } else {
+        text += '\n' + item.str
+      }
+      lastY = item.transform[5]
+    }
+    pages.push(text)
+    return text
+  }
+  return { pages, pagerender }
+}
 
 export interface InspectedDocumentResult {
   code: string | null
@@ -301,6 +331,129 @@ export class PDFContentInspector {
   }
 
   /**
+   * Inspeciona um PDF composto por uma ou múltiplas páginas (Fase 2).
+   * Se páginas individuais contiverem certificados de normas diferentes (ex.: GWO BST composto por
+   * Primeiros Socorros, Carga Manual, Incêndio e Altura em páginas distintas, ou NR-10 Básico + SEP),
+   * retorna um resultado independente para cada norma encontrada.
+   */
+  static inspectPages(
+    filename: string,
+    pages: string[],
+    refDate: Date = new Date()
+  ): InspectedDocumentResult[] {
+    if (!pages || pages.length === 0) {
+      return [this.inspect(filename, '', refDate)]
+    }
+
+    if (pages.length === 1) {
+      return [this.inspect(filename, pages[0], refDate)]
+    }
+
+    const combinedText = pages.join('\n\n')
+    const overallResult = this.inspect(filename, combinedText, refDate)
+
+    // Se o documento todo for vazio (scan puro sem texto), retorna o fallback geral
+    const totalLength = combinedText.replace(/\s+/g, '').length
+    if (totalLength < 30) {
+      return [overallResult]
+    }
+
+    // Analisa página a página para identificar se há normas distintas
+    const pageResultsByCode = new Map<string, InspectedDocumentResult>()
+
+    for (let i = 0; i < pages.length; i++) {
+      const pageText = pages[i]
+      if (pageText.replace(/\s+/g, '').length < 30) continue
+
+      // Classifica a página individualmente pelo seu conteúdo textual (não pelo nome compilado do arquivo)
+      let pageClassification = CertificateClassifier.classify(
+        `pagina_${i + 1}.pdf`,
+        pageText
+      )
+      if (!pageClassification.code) {
+        pageClassification = CertificateClassifier.classify(filename, pageText)
+      }
+      const pageCode = pageClassification.code
+      if (!pageCode) continue
+
+      // Extrai datas para a norma identificada nesta página
+      let pageCert = this.extractCertificateDates(pageText, pageCode, refDate)
+
+      // Reconciliação caso a página não traga data expressa no texto mas o nome do arquivo tenha
+      const fnDate = parseDateFromFilename(filename)
+      if (!pageCert && fnDate) {
+        pageCert = {
+          issueDate: fnDate,
+          clause: `Data do arquivo: ${filename}`,
+        }
+      }
+
+      let expDate: Date | undefined
+      if (EVENT_TRIGGERED_ONLY_CODES.includes(pageCode)) {
+        expDate = calculateDocExpiration(
+          pageCode,
+          pageCert?.issueDate || refDate,
+          refDate
+        )
+      } else if (pageCert?.expirationDate) {
+        expDate = pageCert.expirationDate
+      } else if (pageCert?.issueDate) {
+        expDate = calculateDocExpiration(pageCode, pageCert.issueDate, refDate)
+      } else if (
+        overallResult.code === pageCode &&
+        overallResult.expirationDate
+      ) {
+        expDate = overallResult.expirationDate
+      }
+
+      const evalRes = EHSEvaluator.evaluateDate(expDate, refDate)
+      const pageItem: InspectedDocumentResult = {
+        code: pageCode,
+        issueDate: pageCert?.issueDate || overallResult.issueDate,
+        expirationDate: expDate,
+        statusEHS: evalRes.status,
+        statusDetail: evalRes.detail,
+        source: 'PDF_CONTENT',
+        classificationSource: pageClassification.source,
+        matchedTerm: `${pageClassification.matchedTerm || DOC_CATALOG_MAP[pageCode]} (Pág. ${i + 1})`,
+        extractedClause: pageCert?.clause || overallResult.extractedClause,
+      }
+
+      const existing = pageResultsByCode.get(pageCode)
+      if (
+        !existing ||
+        (pageItem.expirationDate &&
+          (!existing.expirationDate ||
+            pageItem.expirationDate.getTime() >
+              existing.expirationDate.getTime()))
+      ) {
+        pageResultsByCode.set(pageCode, pageItem)
+      }
+    }
+
+    // Se encontramos 2 ou mais normas diferentes nas páginas (ex.: 16, 17, 19, 21 ou 12, 13):
+    if (pageResultsByCode.size > 1) {
+      return Array.from(pageResultsByCode.values())
+    }
+
+    // Se encontrou apenas 1 norma nas páginas:
+    if (pageResultsByCode.size === 1) {
+      const singlePageResult = Array.from(pageResultsByCode.values())[0]
+      if (
+        singlePageResult.expirationDate &&
+        (!overallResult.expirationDate ||
+          singlePageResult.expirationDate.getTime() >
+            overallResult.expirationDate.getTime())
+      ) {
+        return [singlePageResult]
+      }
+      return [overallResult]
+    }
+
+    return [overallResult]
+  }
+
+  /**
    * Extração de datas a partir de cláusulas de vigência e duração contratual.
    */
   private static extractContractDates(
@@ -517,9 +670,7 @@ export class PDFContentInspector {
     }
 
     // Se encontramos candidatos de prioridade 1 (conclusão direta/período), ordenamos pela data mais recente
-    const directCandidates = completionCandidates.filter(
-      (c) => c.priority === 1
-    )
+    const directCandidates = completionCandidates.filter(c => c.priority === 1)
     if (directCandidates.length > 0) {
       directCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
       explicitIssueDate = directCandidates[0].date

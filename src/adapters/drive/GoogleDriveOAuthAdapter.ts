@@ -7,8 +7,10 @@ import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 import {
   InspectedDocumentResult,
   PDFContentInspector,
+  createPdfPageCollector,
 } from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
+import { TesseractOcrAdapter } from '../ocr/TesseractOcrAdapter.js'
 import { PDFContentCache } from './PDFContentCache.js'
 import {
   calculateDocExpiration,
@@ -184,38 +186,55 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         filename.toLowerCase().endsWith('.pdf') ||
         entry.mimeType === 'application/pdf'
 
-      let inspected: InspectedDocumentResult
+      let inspectedList: InspectedDocumentResult[] = []
 
       if (isPdf && entry.id) {
         const cache = PDFContentCache.getInstance()
         const cached = cache.get(entry.id, entry.modifiedTime || undefined)
 
         if (cached) {
-          inspected = {
-            code: cached.code,
-            issueDate: cached.issueDate
-              ? new Date(cached.issueDate)
+          const cachedDocs = cache.getAllDocuments(cached)
+          inspectedList = cachedDocs.map(doc => ({
+            code: doc.code,
+            issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,
+            expirationDate: doc.expirationDate
+              ? new Date(doc.expirationDate)
               : undefined,
-            expirationDate: cached.expirationDate
-              ? new Date(cached.expirationDate)
-              : undefined,
-            statusEHS: cached.statusEHS,
-            statusDetail: cached.statusDetail,
-            source: cached.source,
-            classificationSource: cached.classificationSource,
-            matchedTerm: cached.matchedTerm,
-            extractedClause: cached.extractedClause,
-          }
+            statusEHS: doc.statusEHS,
+            statusDetail: doc.statusDetail,
+            source: doc.source,
+            classificationSource: doc.classificationSource,
+            matchedTerm: doc.matchedTerm,
+            extractedClause: doc.extractedClause,
+          }))
         } else {
+          let pdfPages: string[] = []
           let pdfText = ''
+          let ocrUsed = false
+
           try {
             const drive = await this.getDrive()
             const res = await drive.files.get(
               { fileId: entry.id, alt: 'media' },
               { responseType: 'arraybuffer' }
             )
-            const parsed = await pdfParse(Buffer.from(res.data as ArrayBuffer))
+            const buffer = Buffer.from(res.data as ArrayBuffer)
+            const { pages, pagerender } = createPdfPageCollector()
+            const parsed = await pdfParse(buffer, { pagerender })
+            pdfPages = pages
             pdfText = parsed.text || ''
+
+            // Fase 3: Se o PDF for um scan puro (sem texto digital legível), aplica OCR
+            if (pdfText.replace(/\s+/g, '').length < 30) {
+              const ocrPages =
+                await TesseractOcrAdapter.extractTextFromScannedPdf(buffer, 2)
+              const ocrCombined = ocrPages.join('\n\n')
+              if (ocrCombined.replace(/\s+/g, '').length >= 30) {
+                pdfPages = ocrPages
+                pdfText = ocrCombined
+                ocrUsed = true
+              }
+            }
           } catch (err: any) {
             console.warn(
               `[GoogleDriveOAuthAdapter] Falha ao extrair texto do PDF ${filename} (${entry.id}):`,
@@ -223,9 +242,10 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
             )
           }
 
-          inspected = PDFContentInspector.inspect(
+          // Fase 2: Inspeção modular página a página (multi-certificados)
+          inspectedList = PDFContentInspector.inspectPages(
             filename,
-            pdfText,
+            pdfPages,
             this.refDate
           )
 
@@ -233,15 +253,28 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
             fileId: entry.id,
             filename,
             modifiedTime: entry.modifiedTime || undefined,
-            code: inspected.code,
-            issueDate: inspected.issueDate?.toISOString(),
-            expirationDate: inspected.expirationDate?.toISOString(),
-            statusEHS: inspected.statusEHS,
-            statusDetail: inspected.statusDetail,
-            source: inspected.source,
-            classificationSource: inspected.classificationSource,
-            matchedTerm: inspected.matchedTerm,
-            extractedClause: inspected.extractedClause,
+            code: inspectedList[0]?.code || null,
+            issueDate: inspectedList[0]?.issueDate?.toISOString(),
+            expirationDate: inspectedList[0]?.expirationDate?.toISOString(),
+            statusEHS: inspectedList[0]?.statusEHS || 'INDETERMINADO',
+            statusDetail: inspectedList[0]?.statusDetail || '',
+            source: ocrUsed
+              ? 'IMAGE_FALLBACK'
+              : inspectedList[0]?.source || 'PDF_CONTENT',
+            classificationSource: inspectedList[0]?.classificationSource,
+            matchedTerm: inspectedList[0]?.matchedTerm,
+            extractedClause: inspectedList[0]?.extractedClause,
+            documents: inspectedList.map(item => ({
+              code: item.code,
+              issueDate: item.issueDate?.toISOString(),
+              expirationDate: item.expirationDate?.toISOString(),
+              statusEHS: item.statusEHS,
+              statusDetail: item.statusDetail,
+              source: ocrUsed ? 'IMAGE_FALLBACK' : item.source,
+              classificationSource: item.classificationSource,
+              matchedTerm: item.matchedTerm,
+              extractedClause: item.extractedClause,
+            })),
           })
         }
       } else {
@@ -259,50 +292,54 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           this.refDate
         )
 
-        inspected = {
-          code: classification.code,
-          issueDate: parsedDate || undefined,
-          expirationDate,
-          statusEHS: evalResult.status,
-          statusDetail: evalResult.detail,
-          source: 'FILENAME',
-          classificationSource: classification.source,
-          matchedTerm: classification.matchedTerm,
+        inspectedList = [
+          {
+            code: classification.code,
+            issueDate: parsedDate || undefined,
+            expirationDate,
+            statusEHS: evalResult.status,
+            statusDetail: evalResult.detail,
+            source: 'FILENAME',
+            classificationSource: classification.source,
+            matchedTerm: classification.matchedTerm,
+          },
+        ]
+      }
+
+      for (const inspected of inspectedList) {
+        let code = inspected.code
+        if (!code) continue
+
+        if (
+          inspected.classificationSource !== 'SEMANTIC' &&
+          codeRemap &&
+          codeRemap[code]
+        ) {
+          code = codeRemap[code]
         }
-      }
 
-      let code = inspected.code
-      if (!code) continue
+        const cert: Certificate = {
+          code,
+          name: `Doc ${code}`,
+          filename,
+          issueDate: inspected.issueDate,
+          expirationDate: inspected.expirationDate,
+          statusEHS: inspected.statusEHS as any,
+          statusDetail: inspected.statusDetail,
+          sourcePath: entry.id
+            ? `https://drive.google.com/file/d/${entry.id}/view`
+            : undefined,
+        }
 
-      if (
-        inspected.classificationSource !== 'SEMANTIC' &&
-        codeRemap &&
-        codeRemap[code]
-      ) {
-        code = codeRemap[code]
-      }
-
-      const cert: Certificate = {
-        code,
-        name: `Doc ${code}`,
-        filename,
-        issueDate: inspected.issueDate,
-        expirationDate: inspected.expirationDate,
-        statusEHS: inspected.statusEHS as any,
-        statusDetail: inspected.statusDetail,
-        sourcePath: entry.id
-          ? `https://drive.google.com/file/d/${entry.id}/view`
-          : undefined,
-      }
-
-      const existing = certificates.get(code)
-      if (
-        !existing ||
-        (inspected.expirationDate &&
-          (!existing.expirationDate ||
-            inspected.expirationDate > existing.expirationDate))
-      ) {
-        certificates.set(code, cert)
+        const existing = certificates.get(code)
+        if (
+          !existing ||
+          (inspected.expirationDate &&
+            (!existing.expirationDate ||
+              inspected.expirationDate > existing.expirationDate))
+        ) {
+          certificates.set(code, cert)
+        }
       }
     }
   }

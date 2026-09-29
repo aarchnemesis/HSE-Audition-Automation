@@ -225,8 +225,9 @@ describe('CertificateClassifier.classify', () => {
         .code
     ).toBe('03')
     expect(
-      CertificateClassifier.classify('04 - CTPS Digital - Carteira de Trabalho.pdf')
-        .code
+      CertificateClassifier.classify(
+        '04 - CTPS Digital - Carteira de Trabalho.pdf'
+      ).code
     ).toBe('04')
     expect(
       CertificateClassifier.classify('05.1 - Vacina Febre Amarela - Fulano.pdf')

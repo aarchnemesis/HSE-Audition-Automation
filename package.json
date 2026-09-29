@@ -13,6 +13,7 @@
     "build-dash": "tsx src/cli/buildDashboardFromDb.ts",
     "test-gdrive": "tsx src/cli/testGoogleDriveApi.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
+    "ocr:deep": "tsx src/cli/runDeepOcr.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
     "agent:dashboard": "tsx src/cli/runAgentJob.ts dashboard",

@@ -224,8 +224,7 @@ describe('PDFContentInspector', () => {
         ID Winda: JM046460BR
         Treinamento válido por 02 (Dois) anos.
       `
-      const filename =
-        'Francisco Davilo Marques de Sousa - SOS - Clicksign.pdf'
+      const filename = 'Francisco Davilo Marques de Sousa - SOS - Clicksign.pdf'
       const result = PDFContentInspector.inspect(filename, text, refDate)
 
       expect(result.code).toBe('16')
@@ -285,6 +284,91 @@ describe('PDFContentInspector', () => {
       expect(result.expirationDate?.getFullYear()).toBe(2027)
       expect(result.expirationDate?.getMonth()).toBe(9)
       expect(result.statusEHS).toBe('CONFORME')
+    })
+
+    it('deve extrair multiplas normas distintas em PDF multi-paginas (ex.: GWO BST completo)', () => {
+      const page1 = `
+        Certificado GWO First Aid (Primeiros Socorros)
+        Participante: Fulano de Tal
+        Concluido em 10 de Agosto de 2026.
+        Validade: 10/08/2028.
+      `
+      const page2 = `
+        Certificado GWO Manual Handling (Carga Manual / Ergonomia)
+        Participante: Fulano de Tal
+        Concluido em 11 de Agosto de 2026.
+        Validade: 11/08/2028.
+      `
+      const page3 = `
+        Certificado GWO Fire Awareness (Combate a Incendio)
+        Participante: Fulano de Tal
+        Concluido em 12 de Agosto de 2026.
+        Validade: 12/08/2028.
+      `
+      const page4 = `
+        Certificado GWO Working at Heights (NR-35 Trabalho em Altura)
+        Participante: Fulano de Tal
+        Concluido em 13 de Agosto de 2026.
+        Validade: 13/08/2028.
+      `
+      const filename = 'GWO BST Completo - Fulano.pdf'
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page1, page2, page3, page4],
+        refDate
+      )
+
+      expect(results.length).toBe(4)
+      const codes = results.map(r => r.code).sort()
+      expect(codes).toEqual(['16', '17', '19', '21'])
+      for (const r of results) {
+        expect(r.statusEHS).toBe('CONFORME')
+        expect(r.expirationDate?.getFullYear()).toBe(2028)
+      }
+    })
+
+    it('deve extrair NR-10 Basico e NR-10 SEP quando presentes em paginas distintas do mesmo PDF', () => {
+      const page1 = `
+        Certificado NR-10 Basico Seguranca em Instalacoes Eletricas
+        Concluido em 05 de Janeiro de 2026.
+        Treinamento valido por 2 anos.
+      `
+      const page2 = `
+        Certificado NR-10 SEP Sistema Eletrico de Potencia
+        Concluido em 06 de Janeiro de 2026.
+        Treinamento valido por 2 anos.
+      `
+      const filename = '12 - NR-10 Basico + SEP - Fulano.pdf'
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page1, page2],
+        refDate
+      )
+
+      expect(results.length).toBe(2)
+      const codes = results.map(r => r.code).sort()
+      expect(codes).toEqual(['12', '13'])
+    })
+
+    it('deve consolidar em um unico resultado quando multiplas paginas forem da mesma norma (frente e verso)', () => {
+      const page1 = `
+        Certificado NR-35 Trabalho em Altura
+        Concluido em 20 de Fevereiro de 2026.
+        Treinamento valido por 2 anos.
+      `
+      const page2 = `
+        Conteudo Programatico do Treinamento NR-35
+        Carga Horaria: 8 horas.
+      `
+      const filename = '21 - NR-35 Altura - Fulano.pdf'
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page1, page2],
+        refDate
+      )
+
+      expect(results.length).toBe(1)
+      expect(results[0].code).toBe('21')
     })
   })
 })
