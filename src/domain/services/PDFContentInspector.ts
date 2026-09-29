@@ -78,6 +78,26 @@ const PORTUGUESE_MONTHS: Record<string, number> = {
   nov: 10,
   dezembro: 11,
   dez: 11,
+  // Suporte a meses em inglês para certificados internacionais (GWO, Lift, etc.)
+  january: 0,
+  february: 1,
+  feb: 1,
+  march: 2,
+  april: 3,
+  apr: 3,
+  may: 4,
+  june: 5,
+  july: 6,
+  jul: 6,
+  august: 7,
+  aug: 7,
+  september: 8,
+  sep: 8,
+  october: 9,
+  oct: 9,
+  november: 10,
+  december: 11,
+  dec: 11,
 }
 
 const NUMBER_WORDS: Record<string, number> = {
@@ -112,7 +132,7 @@ const NUMBER_WORDS: Record<string, number> = {
 }
 
 const DATE_CAPTURE_PATTERN =
-  '(?:[0-9]{1,2}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{2,4}|[0-9]{1,2}\\s*(?:de\\s*)?[a-zç]+\\s*(?:de\\s*)?[0-9]{2,4})'
+  '(?:[0-9]{4}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{1,2}|[0-9]{1,2}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{2,4}|[0-9]{1,2}\\s*(?:de\\s*)?[a-zç]+\\s*(?:de\\s*)?[0-9]{2,4})'
 
 /**
  * Converte strings contendo datas no formato numérico (DD/MM/YYYY) ou por extenso (DD de Mês de YYYY)
@@ -136,8 +156,31 @@ export function parsePortugueseDate(raw: string): Date | null {
     .replace(/\bde(\d{2,4})\b/gi, 'de $1')
     .replace(/\s+/g, ' ')
 
-  // 1. Formato numérico DMY: "21/01/2025", "21.01.2025", "21-01-2025"
-  const dmyMatch = cleaned.match(/(\d{1,2})[\/\.-](\d{1,2})[\/\.-](\d{2,4})/)
+  // 1. Formato ISO: "YYYY-MM-DD" ou "YYYY/MM/DD"
+  const isoMatch = cleaned.match(
+    /(?:^|\D)(\d{4})[\/\.-](\d{1,2})[\/\.-](\d{1,2})(?:\D|$)/
+  )
+  if (isoMatch) {
+    const year = parseInt(isoMatch[1], 10)
+    const month = parseInt(isoMatch[2], 10) - 1
+    const day = parseInt(isoMatch[3], 10)
+    if (
+      month >= 0 &&
+      month <= 11 &&
+      day >= 1 &&
+      day <= 31 &&
+      year >= 1990 &&
+      year <= 2050
+    ) {
+      const d = new Date(year, month, day)
+      if (!isNaN(d.getTime())) return d
+    }
+  }
+
+  // 2. Formato numérico DMY: "21/01/2025", "21.01.2025", "21-01-2025"
+  const dmyMatch = cleaned.match(
+    /(?:^|\D)(\d{1,2})[\/\.-](\d{1,2})[\/\.-](\d{2,4})(?:\D|$)/
+  )
   if (dmyMatch) {
     const day = parseInt(dmyMatch[1], 10)
     const month = parseInt(dmyMatch[2], 10) - 1
@@ -157,7 +200,7 @@ export function parsePortugueseDate(raw: string): Date | null {
     }
   }
 
-  // 2. Formato textual: "26 de junho de 2026", "27de Agosto de 2026", "08 de Janeiro de 2026"
+  // 3. Formato textual: "26 de junho de 2026", "27de Agosto de 2026", "08 de Janeiro de 2026"
   const textMatch = cleaned.match(
     /(\d{1,2})\s*(?:de\s*)?([a-zç]+)\s*(?:de\s*)?(\d{2,4})/i
   )
@@ -176,25 +219,6 @@ export function parsePortugueseDate(raw: string): Date | null {
         const d = new Date(year, month, day)
         if (!isNaN(d.getTime())) return d
       }
-    }
-  }
-
-  // 3. Formato ISO: "YYYY-MM-DD"
-  const isoMatch = cleaned.match(/(\d{4})[\/\.-](\d{1,2})[\/\.-](\d{1,2})/)
-  if (isoMatch) {
-    const year = parseInt(isoMatch[1], 10)
-    const month = parseInt(isoMatch[2], 10) - 1
-    const day = parseInt(isoMatch[3], 10)
-    if (
-      month >= 0 &&
-      month <= 11 &&
-      day >= 1 &&
-      day <= 31 &&
-      year >= 1990 &&
-      year <= 2050
-    ) {
-      const d = new Date(year, month, day)
-      if (!isNaN(d.getTime())) return d
     }
   }
 
@@ -595,9 +619,9 @@ export class PDFContentInspector {
     let explicitIssueDate: Date | undefined
     let foundClause = ''
 
-    // 1. Procura validade explícita direta: "Válido até DD/MM/AAAA" ou "Validade: DD/MM/AAAA"
+    // 1. Procura validade explícita direta: "Válido até DD/MM/AAAA", "Validade: DD/MM/AAAA", "Expiration Date: YYYY-MM-DD", "Valid until"
     const validadeAteRegex = new RegExp(
-      `(?:v[aá]lido\\s+at[eé]|validade(?:\\s+at[eé])?)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
+      `(?:v[aá]lido\\s+at[eé]|validade(?:\\s+at[eé])?|expiration\\s+date|valid\\s+until|expires)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const match of clean.matchAll(validadeAteRegex)) {
@@ -633,9 +657,9 @@ export class PDFContentInspector {
     }
     const completionCandidates: DateCandidate[] = []
 
-    // Ex. A: "Concluído em 12 de Maio de 2025" / "Concluido em 12 de Maio de 2025" / "terminado em" / "finalizado em"
+    // Ex. A: "Concluído em 12 de Maio de 2025" / "Date Certified: 2026-06-03" / "issue date"
     const concluidoRegex = new RegExp(
-      `(?:conclu[ií]do|terminado|finalizado)\\s+em\\s+(${DATE_CAPTURE_PATTERN})`,
+      `(?:conclu[ií]do|terminado|finalizado|date\\s+certified|certified\\s+date|issue\\s+date|date\\s+of\\s+issue)\\s*(?:em|on|:)?\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(concluidoRegex)) {
@@ -657,9 +681,9 @@ export class PDFContentInspector {
       }
     }
 
-    // Ex. C: "nos dias 07 e 08 de Janeiro de 2026", "no dia 27de Agosto de 2026", "no dia 27/01/2026", "completou ... no dia [DATA]"
+    // Ex. C: "nos dias 07 e 08 de Janeiro de 2026", "no dia 27de Agosto de 2026", "no dia 27/01/2026", "completou ... no dia [DATA]", "entre os dias 26 A 29 DE NOVEMBRO DE 2025"
     const noDiaRegex = new RegExp(
-      `(?:no[s]?\\s+dia[s]?|completou.*?no\\s+dia)\\s*(?:[0-9]{1,2}\\s*(?:e|[aà])\\s*)?(${DATE_CAPTURE_PATTERN})`,
+      `(?:no[s]?\\s+dia[s]?|entre\\s+os\\s+dias|completou.*?no\\s+dia|completou.*?entre\\s+os\\s+dias)\\s*(?:[0-9]{1,2}\\s*(?:e|[aàAÀ])\\s*)?(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(noDiaRegex)) {
