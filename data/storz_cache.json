@@ -507,9 +507,10 @@
     "trainingName": "[STORZ] - LOTO - GUIA PRáTICO",
     "modality": "PRESENCIAL",
     "requestDate": "2026-09-03T03:00:00.000Z",
-    "state": "EM_ANDAMENTO",
-    "rawSituacao": "Em andamento",
-    "progressPercent": 83,
+    "completionDate": "2026-10-01T03:00:00.000Z",
+    "state": "CONCLUIDO",
+    "rawSituacao": "Aprovado",
+    "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
@@ -4772,7 +4773,7 @@
     "requestDate": "2026-09-22T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 3,
+    "progressPercent": 19,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -5223,7 +5224,7 @@
     "requestDate": "2026-09-02T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 65,
+    "progressPercent": 73,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1

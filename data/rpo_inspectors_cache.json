@@ -2522,9 +2522,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2026-10-25T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 24 dias (25/10/2026)"
+        "expirationDate": "2028-09-24T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2028"
       }
     },
     "exemptDocCodes": [
@@ -3815,9 +3815,9 @@
       "12": {
         "code": "12",
         "name": "NR 10",
-        "expirationDate": "2028-09-03T12:00:00.000Z",
+        "expirationDate": "2028-02-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/09/2028"
+        "statusDetail": "Válido até 03/02/2028"
       },
       "13": {
         "code": "13",
@@ -3878,9 +3878,9 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-01-21T12:00:00.000Z",
+        "expirationDate": "2027-01-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027"
+        "statusDetail": "Válido até 24/01/2027"
       },
       "22": {
         "code": "22",
@@ -4179,9 +4179,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-12-22T12:00:00.000Z",
+        "expirationDate": "2027-12-26T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/12/2027"
+        "statusDetail": "Válido até 26/12/2027"
       },
       "20": {
         "code": "20",
@@ -4193,9 +4193,9 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-12-22T12:00:00.000Z",
+        "expirationDate": "2027-12-27T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/12/2027"
+        "statusDetail": "Válido até 27/12/2027"
       },
       "22": {
         "code": "22",
@@ -4323,9 +4323,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-01-07T12:00:00.000Z",
+        "expirationDate": "2027-01-09T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/01/2027"
+        "statusDetail": "Válido até 09/01/2027"
       },
       "18": {
         "code": "18",
@@ -4337,9 +4337,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-01-07T12:00:00.000Z",
+        "expirationDate": "2027-01-09T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/01/2027"
+        "statusDetail": "Válido até 09/01/2027"
       },
       "20": {
         "code": "20",
@@ -4351,9 +4351,9 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-01-07T12:00:00.000Z",
+        "expirationDate": "2027-01-13T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/01/2027"
+        "statusDetail": "Válido até 13/01/2027"
       },
       "22": {
         "code": "22",
@@ -4407,9 +4407,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2027-02-12T12:00:00.000Z",
+        "expirationDate": "2027-02-22T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/02/2027"
+        "statusDetail": "Válido até 22/02/2027"
       }
     },
     "exemptDocCodes": [
@@ -4767,16 +4767,16 @@
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2027-10-12T12:00:00.000Z",
+        "expirationDate": "2027-10-10T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/10/2027"
+        "statusDetail": "Válido até 10/10/2027"
       },
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2027-10-12T12:00:00.000Z",
+        "expirationDate": "2027-12-06T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/10/2027"
+        "statusDetail": "Válido até 06/12/2027"
       },
       "16": {
         "code": "16",
@@ -4809,9 +4809,9 @@
       "20": {
         "code": "20",
         "name": "NR33 [DATA]",
-        "expirationDate": "2027-08-25T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/08/2027"
+        "expirationDate": "2026-07-08T12:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 85 dias (08/07/2026)"
       },
       "21": {
         "code": "21",
@@ -4851,9 +4851,9 @@
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
-        "expirationDate": "2027-08-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/08/2027"
+        "expirationDate": "2026-08-07T12:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 55 dias (07/08/2026)"
       },
       "01": {
         "code": "01",
@@ -4901,9 +4901,9 @@
       "11": {
         "code": "11",
         "name": "NR 06",
-        "expirationDate": "2028-06-27T12:00:00.000Z",
+        "expirationDate": "2028-07-27T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/06/2028"
+        "statusDetail": "Válido até 27/07/2028"
       },
       "12": {
         "code": "12",
@@ -4922,9 +4922,9 @@
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2027-05-29T12:00:00.000Z",
+        "expirationDate": "2028-04-23T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/05/2027"
+        "statusDetail": "Válido até 23/04/2028"
       },
       "15": {
         "code": "15",
@@ -4936,9 +4936,9 @@
       "16": {
         "code": "16",
         "name": "GWO BST",
-        "expirationDate": "2027-11-27T12:00:00.000Z",
+        "expirationDate": "2027-11-29T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/11/2027"
+        "statusDetail": "Válido até 29/11/2027"
       },
       "17": {
         "code": "17",
@@ -4950,9 +4950,9 @@
       "18": {
         "code": "18",
         "name": "NR 18",
-        "expirationDate": "2027-05-01T12:00:00.000Z",
+        "expirationDate": "2028-07-31T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/05/2027"
+        "statusDetail": "Válido até 31/07/2028"
       },
       "19": {
         "code": "19",
@@ -4971,16 +4971,16 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-11-27T12:00:00.000Z",
+        "expirationDate": "2027-11-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/11/2027"
+        "statusDetail": "Válido até 30/11/2027"
       },
       "22": {
         "code": "22",
         "name": "LOTO",
-        "expirationDate": "2028-07-24T12:00:00.000Z",
+        "expirationDate": "2028-07-29T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/07/2028"
+        "statusDetail": "Válido até 29/07/2028"
       },
       "25": {
         "code": "25",
@@ -5013,9 +5013,9 @@
       "32": {
         "code": "32",
         "name": "GWO ART",
-        "expirationDate": "2027-05-27T12:00:00.000Z",
+        "expirationDate": "2027-05-26T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/05/2027"
+        "statusDetail": "Válido até 26/05/2027"
       },
       "01": {
         "code": "01",
@@ -5258,9 +5258,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-07-23T12:00:00.000Z",
+        "expirationDate": "2027-07-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2027"
+        "statusDetail": "Válido até 24/07/2027"
       },
       "18": {
         "code": "18",
@@ -5272,9 +5272,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-07-23T12:00:00.000Z",
+        "expirationDate": "2027-07-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2027"
+        "statusDetail": "Válido até 24/07/2027"
       },
       "20": {
         "code": "20",
@@ -5286,9 +5286,9 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-07-27T12:00:00.000Z",
+        "expirationDate": "2027-07-23T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/07/2027"
+        "statusDetail": "Válido até 23/07/2027"
       },
       "22": {
         "code": "22",
@@ -5307,16 +5307,16 @@
       "26": {
         "code": "26",
         "name": "ESO VESTAS",
-        "expirationDate": "2027-12-23T12:00:00.000Z",
+        "expirationDate": "2027-12-19T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/12/2027"
+        "statusDetail": "Válido até 19/12/2027"
       },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2027-07-23T12:00:00.000Z",
+        "expirationDate": "2027-07-25T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2027"
+        "statusDetail": "Válido até 25/07/2027"
       },
       "28": {
         "code": "28",
@@ -5419,9 +5419,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2026-11-04T12:00:00.000Z",
+        "expirationDate": "2026-11-05T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (04/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (05/11/2026)"
       },
       "18": {
         "code": "18",
@@ -5433,9 +5433,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2026-11-04T12:00:00.000Z",
+        "expirationDate": "2026-11-05T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (04/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (05/11/2026)"
       },
       "20": {
         "code": "20",
@@ -5454,9 +5454,9 @@
       "22": {
         "code": "22",
         "name": "LOTO",
-        "expirationDate": "2027-12-01T12:00:00.000Z",
+        "expirationDate": "2027-03-05T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2027"
+        "statusDetail": "Válido até 05/03/2027"
       },
       "25": {
         "code": "25",
@@ -5482,9 +5482,9 @@
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
-        "expirationDate": "2027-01-18T12:00:00.000Z",
+        "expirationDate": "2027-03-06T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/01/2027"
+        "statusDetail": "Válido até 06/03/2027"
       },
       "01": {
         "code": "01",
@@ -5503,9 +5503,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2026-10-25T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 24 dias (25/10/2026)"
+        "expirationDate": "2027-08-05T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/08/2027"
       }
     },
     "exemptDocCodes": [
@@ -5574,9 +5574,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-12-01T12:00:00.000Z",
+        "expirationDate": "2027-12-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2027"
+        "statusDetail": "Válido até 03/12/2027"
       },
       "18": {
         "code": "18",
@@ -5588,9 +5588,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-12-01T12:00:00.000Z",
+        "expirationDate": "2027-12-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2027"
+        "statusDetail": "Válido até 03/12/2027"
       },
       "20": {
         "code": "20",
@@ -5686,9 +5686,9 @@
       "10": {
         "code": "10",
         "name": "NR 01",
-        "expirationDate": "2028-04-28T12:00:00.000Z",
+        "expirationDate": "2028-04-29T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/04/2028"
+        "statusDetail": "Válido até 29/04/2028"
       },
       "11": {
         "code": "11",
@@ -5735,9 +5735,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-10-07T12:00:00.000Z",
+        "expirationDate": "2027-10-10T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/10/2027"
+        "statusDetail": "Válido até 10/10/2027"
       },
       "18": {
         "code": "18",
@@ -5749,9 +5749,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-10-07T12:00:00.000Z",
+        "expirationDate": "2027-10-10T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/10/2027"
+        "statusDetail": "Válido até 10/10/2027"
       },
       "20": {
         "code": "20",
@@ -5763,9 +5763,9 @@
       "21": {
         "code": "21",
         "name": "NR 35",
-        "expirationDate": "2027-10-07T12:00:00.000Z",
+        "expirationDate": "2027-10-09T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/10/2027"
+        "statusDetail": "Válido até 09/10/2027"
       },
       "22": {
         "code": "22",
@@ -5791,9 +5791,9 @@
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2027-10-07T12:00:00.000Z",
+        "expirationDate": "2027-10-08T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/10/2027"
+        "statusDetail": "Válido até 08/10/2027"
       },
       "28": {
         "code": "28",
@@ -5826,9 +5826,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2027-04-23T12:00:00.000Z",
+        "expirationDate": "2028-04-23T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/04/2027"
+        "statusDetail": "Válido até 23/04/2028"
       }
     },
     "exemptDocCodes": [
@@ -5896,9 +5896,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-10-27T12:00:00.000Z",
+        "expirationDate": "2027-10-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/10/2027"
+        "statusDetail": "Válido até 30/10/2027"
       },
       "18": {
         "code": "18",
@@ -5910,9 +5910,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-10-27T12:00:00.000Z",
+        "expirationDate": "2027-10-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/10/2027"
+        "statusDetail": "Válido até 30/10/2027"
       },
       "20": {
         "code": "20",
