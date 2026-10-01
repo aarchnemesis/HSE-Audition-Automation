@@ -14680,6 +14680,16 @@
         "statusDetail": "VENCIDO há 306 dias (21/11/2025)",
         "sourcePath": "https://drive.google.com/file/d/1c-hY8x9ODIDNMKFI28KWGdzdFpxFiryN/view"
       },
+      "09": {
+        "code": "09",
+        "name": "Doc 09",
+        "filename": "09 – Direção Defensiva (08 horas) – 01.10.26 – João Carlos Guardiano da Silva",
+        "issueDate": "2026-10-01T03:00:00.000Z",
+        "expirationDate": "2028-10-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2028",
+        "sourcePath": "https://drive.google.com/file/d/1X5gKm37w6BdF0Ix-3zW8Cv5OHdCtN3yu/view"
+      },
       "21.1": {
         "code": "21.1",
         "name": "Doc 21.1",
@@ -14699,16 +14709,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 18/12/2027",
         "sourcePath": "https://drive.google.com/file/d/1AiUkUdcdr6p2-ENMtu1mfsBNv-fuFMAF/view"
-      },
-      "09": {
-        "code": "09",
-        "name": "Doc 09",
-        "filename": "09 – Direção Defensiva (08 horas) – 25.10.24 – João Carlos Guardiano da Silva - Clicksign.pdf",
-        "issueDate": "2024-10-25T03:00:00.000Z",
-        "expirationDate": "2026-10-25T03:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (25/10/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1kd7PtX4AtpOY1WHxx12iRFxCoATLsAom/view"
       },
       "06": {
         "code": "06",
@@ -20093,7 +20093,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "Francisco Fabircio - Nr1.zip",
-        "expirationDate": "2076-10-01T14:23:03.070Z",
+        "expirationDate": "2076-10-01T14:39:44.932Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1byuF5bN-tI4iwMcop1qNzkl1C1FavLii/view"
