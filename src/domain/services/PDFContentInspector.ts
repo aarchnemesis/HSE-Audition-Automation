@@ -88,7 +88,6 @@ const PORTUGUESE_MONTHS: Record<string, number> = {
   may: 4,
   june: 5,
   july: 6,
-  jul: 6,
   august: 7,
   aug: 7,
   september: 8,
@@ -441,6 +440,28 @@ export class PDFContentInspector {
         classificationSource: pageClassification.source,
         matchedTerm: `${pageClassification.matchedTerm || DOC_CATALOG_MAP[pageCode]} (Pág. ${i + 1})`,
         extractedClause: pageCert?.clause || overallResult.extractedClause,
+      }
+
+      // Se a página for de outro certificado GWO mas contiver o WINDA ID no texto, adiciona o 30 também!
+      if (
+        pageCode !== '30' &&
+        /\b(?:WINDA\s+ID|WINDA\b|GWO\s+WINDA)\b/i.test(pageText)
+      ) {
+        const windaItem: InspectedDocumentResult = {
+          code: '30',
+          issueDate: pageCert?.issueDate || overallResult.issueDate,
+          expirationDate: calculateDocExpiration('30', pageCert?.issueDate || overallResult.issueDate || refDate, refDate),
+          statusEHS: 'CONFORME',
+          statusDetail: 'ID Vitalício (Detectado via conteúdo GWO)',
+          source: 'PDF_CONTENT',
+          classificationSource: 'SEMANTIC',
+          matchedTerm: `GWO WINDA ID (Detectado na Pág. ${i + 1})`,
+          extractedClause: `Conteúdo da página confirmou o WINDA ID do colaborador.`,
+        }
+        const existingWinda = pageResultsByCode.get('30')
+        if (!existingWinda) {
+          pageResultsByCode.set('30', windaItem)
+        }
       }
 
       const existing = pageResultsByCode.get(pageCode)

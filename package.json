@@ -36,18 +36,21 @@
     "dotenv": "^17.4.2",
     "exceljs": "^4.4.0",
     "googleapis": "^176.0.0",
-    "nodemailer": "^6.9.9",
-    "pdf-parse": "^1.1.1",
-    "playwright": "^1.41.2"
+    "nodemailer": "^6.10.1",
+    "pdf-parse": "^1.1.4",
+    "playwright": "^1.63.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@types/node": "^20.11.0",
-    "@types/nodemailer": "^6.4.14",
-    "@types/pdf-parse": "^1.1.4",
-    "tsx": "^4.7.1",
-    "typescript": "^5.3.3",
+    "@types/node": "^20.19.43",
+    "@types/nodemailer": "^6.4.24",
+    "@types/pdf-parse": "^1.1.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
     "vitest": "^1.6.1"
   },
-  "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+  "onlyBuiltDependencies": [
+    "@biomejs/biome",
+    "esbuild"
+  ]
 }
