@@ -132855,5 +132855,43 @@
         "extractedClause": "Data do arquivo: 11 - Primeiros Socorros – 28.09.26 – Daniel Fernandes Pacheco"
       }
     ]
+  },
+  {
+    "fileId": "11u6l0cXZgf_U6LxJL5DviIGcYsMX-5SH",
+    "filename": "13 - NR 10 SEP (For+Rec) - 02.10.2026 - Allan Thiago Ramos Veiga.pdf",
+    "modifiedTime": "2026-10-02T19:05:28.650Z",
+    "code": "13",
+    "issueDate": "2026-10-02T00:00:00.000Z",
+    "expirationDate": "2028-10-02T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 SEP (Pág. 1)",
+    "extractedClause": "Data do arquivo: 13 - NR 10 SEP (For+Rec) - 02.10.2026 - Allan Thiago Ramos Veiga.pdf",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-10-02T00:00:00.000Z",
+        "expirationDate": "2028-10-02T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP (Pág. 1)",
+        "extractedClause": "Data do arquivo: 13 - NR 10 SEP (For+Rec) - 02.10.2026 - Allan Thiago Ramos Veiga.pdf"
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-10-02T00:00:00.000Z",
+        "expirationDate": "2028-10-02T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 4)",
+        "extractedClause": "Data do arquivo: 13 - NR 10 SEP (For+Rec) - 02.10.2026 - Allan Thiago Ramos Veiga.pdf"
+      }
+    ]
   }
 ]
