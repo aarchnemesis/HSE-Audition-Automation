@@ -9079,11 +9079,10 @@
     "docName": "ESO (Vestas)",
     "driveExpiration": "2027-09-24T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-09-24T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -10925,15 +10924,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2027-09-14T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-26T12:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
-    "isSwappedDayMonth": false,
-    "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 353 dia(s) (14/09/2027 no Drive vs 26/09/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 353,
-    "recommendedAction": "Atualizar data na RPO para 14/09/2027"
+    "rpoExpiration": "2027-09-14T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "ERVESON NASCIMENTO DOS SANTOS",
@@ -18049,15 +18044,11 @@
     "driveExpiration": "2028-10-02T00:00:00.000Z",
     "storzExpiration": "2028-10-02T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-11-20T12:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
-    "isSwappedDayMonth": false,
-    "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 682 dia(s) (02/10/2028 no Drive vs 20/11/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 682,
-    "recommendedAction": "Atualizar data na RPO para 02/10/2028"
+    "rpoExpiration": "2028-10-02T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 1,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "ALLAN THIAGO RAMOS VEIGA",
@@ -18952,15 +18943,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2027-09-18T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-10T12:00:00.000Z",
-    "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
-    "isSwappedDayMonth": false,
-    "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 373 dia(s) (18/09/2027 no Drive vs 10/09/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 373,
-    "recommendedAction": "Atualizar data na RPO para 18/09/2027"
+    "rpoExpiration": "2027-09-18T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "RAPHAEL AFONSO CARDOSO PEREIRA",
@@ -19835,11 +19822,15 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2026-09-10T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-09-10T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2027-09-23T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "RPO_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "RPO mais recente que o Drive em 378 dia(s) (23/09/2027 na RPO vs 10/09/2026 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 378,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "BRUNO EDUARDO FERREIRA DE PAIVA",
