@@ -132893,5 +132893,80 @@
         "extractedClause": "Data do arquivo: 13 - NR 10 SEP (For+Rec) - 02.10.2026 - Allan Thiago Ramos Veiga.pdf"
       }
     ]
+  },
+  {
+    "fileId": "1RcrOOnLXak_DMv0GsgcZr726u-ACD8Zb",
+    "filename": "01. ASO-ADM-CARLOS HENRIQUE SOARES DA SILVA-29-09-2026.pdf",
+    "modifiedTime": "2026-10-02T17:40:46.482Z",
+    "code": "01",
+    "issueDate": "2026-09-29T00:00:00.000Z",
+    "expirationDate": "2027-09-29T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-29T00:00:00.000Z",
+        "expirationDate": "2027-09-29T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
+  },
+  {
+    "fileId": "1HyHPhceyannxJu2mPgGeoBWA_5xRE9Im",
+    "filename": "01. ASO_ADM_WERMESON DE OLIVEIRA FRANCO_23_09_2026.pdf",
+    "modifiedTime": "2026-10-02T17:40:32.005Z",
+    "code": "01",
+    "issueDate": "2026-09-23T00:00:00.000Z",
+    "expirationDate": "2027-09-23T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-23T00:00:00.000Z",
+        "expirationDate": "2027-09-23T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
+  },
+  {
+    "fileId": "1VbYhA1R4hYm13MtmfAvNNvJVQ-a9q6oS",
+    "filename": "01. ASO-ADM-SIMON DIAS DA SILVA-29-09-2026 (1).pdf",
+    "modifiedTime": "2026-10-02T17:40:41.369Z",
+    "code": "01",
+    "issueDate": "2026-09-29T00:00:00.000Z",
+    "expirationDate": "2027-09-29T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-29T00:00:00.000Z",
+        "expirationDate": "2027-09-29T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
   }
 ]
