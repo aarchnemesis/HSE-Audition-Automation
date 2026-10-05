@@ -4585,11 +4585,11 @@
     "inspectorName": "RAFAEL ANDRADE BARBOSA",
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
-    "driveExpiration": "2028-09-11T03:00:00.000Z",
+    "driveExpiration": "2028-09-11T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-09-11T12:00:00.000Z",
     "divergent": false,
-    "diffDays": 0,
+    "diffDays": 1,
     "detail": "Drive e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
