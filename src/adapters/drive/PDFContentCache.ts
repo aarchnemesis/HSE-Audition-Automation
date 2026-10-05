@@ -28,6 +28,8 @@ export interface CachedPDFEntry {
   extractedClause?: string
   /** Lista de múltiplos documentos/normas identificados no mesmo PDF (Fase 2) */
   documents?: CachedPDFDocument[]
+  /** Versão do motor de extração */
+  v?: number
 }
 
 export class PDFContentCache {
@@ -67,6 +69,17 @@ export class PDFContentCache {
           if (Array.isArray(entries)) {
             for (const entry of entries) {
               if (entry.fileId) {
+                // Invalida o cache de documentos GWO para forçar re-processamento (multi-norma WINDA ID patch)
+                // Se for um certificado GWO ('16', '17', '19', '21', '30', '32') e não tiver a flag de versão, ignora
+                const isGwo =
+                  ['16', '17', '19', '21', '30', '32'].includes(entry.code || '') ||
+                  (entry.documents && entry.documents.some(d => ['16', '17', '19', '21', '30', '32'].includes(d.code || '')))
+
+                if (isGwo && (entry as any).v !== 2) {
+                  this.isDirty = true // forçará o save sem essas entradas
+                  continue
+                }
+
                 this.cache.set(entry.fileId, entry)
               }
             }

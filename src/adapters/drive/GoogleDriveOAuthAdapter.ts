@@ -252,6 +252,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           cache.set({
             fileId: entry.id,
             filename,
+            v: 2, // flag de versão da extração multi-norma (WINDA ID)
             modifiedTime: entry.modifiedTime || undefined,
             code: inspectedList[0]?.code || null,
             issueDate: inspectedList[0]?.issueDate?.toISOString(),
