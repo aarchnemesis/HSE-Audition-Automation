@@ -1,10 +1,10 @@
 {
-  "syncTimestamp": "2026-10-06T13:48:40.554Z",
-  "refDate": "2026-10-06T13:45:07.024Z",
+  "syncTimestamp": "2026-10-06T14:02:56.693Z",
+  "refDate": "2026-10-06T14:00:11.117Z",
   "driveFoldersCount": 99,
-  "rpoActiveCount": 126,
-  "rpoTotalCount": 357,
-  "ehsRosterCount": 78,
+  "rpoActiveCount": 127,
+  "rpoTotalCount": 358,
+  "ehsRosterCount": 79,
   "storzRequestsCount": 438,
   "storzSource": "LIVE",
   "divergencesCount": 726,
@@ -15,5 +15,5 @@
     "SOMENTE_RPO": 4,
     "SOMENTE_STORZ": 4
   },
-  "complianceTotalRecords": 1337
+  "complianceTotalRecords": 1353
 }
