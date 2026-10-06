@@ -1274,6 +1274,7 @@
     "name": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "windaId": "CS064376BR",
     "certificates": {
       "11": {
         "code": "11",
@@ -1281,6 +1282,34 @@
         "expirationDate": "2028-02-19T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/02/2028"
+      },
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-03-02T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/03/2028"
+      },
+      "13": {
+        "code": "13",
+        "name": "NR 10 SEP",
+        "expirationDate": "2028-03-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/03/2028"
+      },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-02-24T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/02/2028"
+      },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-02-23T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/02/2028"
       },
       "16": {
         "code": "16",
@@ -1302,6 +1331,13 @@
         "expirationDate": "2028-02-27T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/02/2028"
+      },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-03-18T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/03/2027"
       },
       "21": {
         "code": "21",
