@@ -28,7 +28,6 @@ export const TURBINE_CORE_CODES = new Set([
   '20', // PTA Plataforma Elevatória
   '21', // Ponte Rolante
   '22', // Talha Elétrica
-  '30', // CNH
 ])
 
 // Manter CORE_DOC_CODES para compatibilidade retroativa

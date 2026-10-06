@@ -3235,8 +3235,8 @@ export function buildDashboardHtml(
       '12', '13', '14', '15',
       // Bloqueia mobilizacao — Altura & Espaco Confinado (4)
       '18', '20', '21', '22',
-      // Bloqueia mobilizacao — GWO obrigatorios (4)
-      '16', '17', '19', '30',
+      // Bloqueia mobilizacao — GWO obrigatorios (3)
+      '16', '17', '19',
       // Nao bloqueia — modulos de parque, restringem alocacao (4)
       '28', '31', '32', '34'
     ];
@@ -4182,7 +4182,7 @@ export function buildDashboardHtml(
 
       // Requisitos Básicos de Mobilização (Core de Campo vs Drone)
       const DRONE_CORE_CODES = ['01', '08', '09', '10', '11', '12', '13', '15', '18', '19', '27'];
-      const TURBINE_CORE_CODES = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22', '30'];
+      const TURBINE_CORE_CODES = ['01', '10', '11', '12', '14', '15', '16', '17', '18', '19', '20', '21', '22'];
       const requiredCodes = new Set(isDrone ? DRONE_CORE_CODES : TURBINE_CORE_CODES);
 
       if (isDrone) {

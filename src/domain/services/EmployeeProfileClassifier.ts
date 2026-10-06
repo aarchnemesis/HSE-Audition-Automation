@@ -121,7 +121,6 @@ const CAMPO_REQUIRED_DOC_CODES = [
   '25',
   '26',
   '28',
-  '30',
   '31',
   '32',
   '34',

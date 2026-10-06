@@ -75,7 +75,6 @@ describe('ExecutiveDashboardCalculator', () => {
       '20',
       '21',
       '22',
-      '30',
     ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '4',
@@ -146,7 +145,6 @@ describe('ExecutiveDashboardCalculator', () => {
       '20',
       '21',
       '22',
-      '30',
     ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '10',
@@ -183,7 +181,6 @@ describe('ExecutiveDashboardCalculator', () => {
       '20',
       '21',
       '22',
-      '30',
     ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '11',
@@ -222,7 +219,6 @@ describe('ExecutiveDashboardCalculator', () => {
       '20',
       '21',
       '22',
-      '30',
     ]
     const records: HSEDatabaseRecord[] = coreCodes.map(code => ({
       inspectorId: '12',

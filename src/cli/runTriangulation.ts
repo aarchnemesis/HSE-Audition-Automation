@@ -14,7 +14,7 @@ const PARKS: ParkRequirement[] = [
     clientName: 'Vestas',
     description:
       'Parque Eólico com aerogeradores Vestas. Exige certificações específicas Vestas e GWO.',
-    requiredDocCodes: ['01', '08', '12', '13', '21', '25', '26', '30'],
+    requiredDocCodes: ['01', '08', '12', '13', '21', '25', '26'],
   },
   {
     id: 'park_voltalia_02',

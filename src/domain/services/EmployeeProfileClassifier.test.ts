@@ -95,6 +95,7 @@ describe('getRequiredDocCodesForProfile', () => {
     const gwoCodes = Object.entries(DOC_CATALOG_MAP)
       .filter(([, name]) => name.toUpperCase().includes('GWO'))
       .map(([code]) => code)
+      .filter(code => code !== '30')
     const codes = getRequiredDocCodesForProfile('CAMPO')
 
     expect(gwoCodes.length).toBeGreaterThanOrEqual(5) // 16,17,19,21,30,32 no catálogo atual
