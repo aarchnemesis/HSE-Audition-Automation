@@ -15981,6 +15981,16 @@
         "statusDetail": "Válido até 28/09/2028",
         "sourcePath": "https://drive.google.com/file/d/1Cw2MW9VvyMauMPK2p3zA8p650R7q6yQO/view"
       },
+      "40": {
+        "code": "40",
+        "name": "Doc 40",
+        "filename": "04 – Contrato (Piloto Drone) – 27.07.23 – Daniel Fernandes – Clicksign.pdf",
+        "issueDate": "2023-08-05T00:00:00.000Z",
+        "expirationDate": "2073-08-05T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/08/2073",
+        "sourcePath": "https://drive.google.com/file/d/1gO0LC3LyEQ0VqPO_CLxO2IQR7bdhqkqg/view"
+      },
       "09": {
         "code": "09",
         "name": "Doc 09",
@@ -16000,6 +16010,94 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 14/01/2028",
         "sourcePath": "https://drive.google.com/file/d/1UBAhx2VuEOhI6t34aYq0-uA7X8Zya06C/view"
+      },
+      "03": {
+        "code": "03",
+        "name": "Doc 03",
+        "filename": "03 – Cartão CNPJ – 35.383.692000-89 – Daniel Fernandes Pacheco(1).pdf",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1q7lYbhmlIf_Zpfvt2rehgW37le-plB7Q/view"
+      },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 - ASO - 11.12.26 - Daniel Fernandes Pacheco - Clicksign.pdf",
+        "issueDate": "2025-12-17T03:00:00.000Z",
+        "expirationDate": "2026-12-17T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/12/2026",
+        "sourcePath": "https://drive.google.com/file/d/1Pbli41hcVYrbqFouY4Us6xH81CqSUQVV/view"
+      },
+      "06": {
+        "code": "06",
+        "name": "Doc 06",
+        "filename": "06 – Ficha de EPI - 11.11.2025 - Daniel Fernandes Pacheco - Clicksign.pdf",
+        "issueDate": "2025-11-11T00:00:00.000Z",
+        "expirationDate": "2026-11-11T00:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (11/11/2026)",
+        "sourcePath": "https://drive.google.com/file/d/11UhyQ3M49NoR5TMzx0eIP0r2KvZkNvI3/view"
+      },
+      "40.1": {
+        "code": "40.1",
+        "name": "Doc 40.1",
+        "filename": "04.1 - Aditivo de Contrato - 24.06.2025- Daniel Fernandes Pacheco - Clicksign.pdf",
+        "issueDate": "2025-06-26T00:00:00.000Z",
+        "expirationDate": "2027-06-26T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/06/2027",
+        "sourcePath": "https://drive.google.com/file/d/11ij3Sqw0epUgC50C9shPvTPu6LM2yMZX/view"
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "02 - Ordem de Serviço - 27.05.2025 - Daniel Fernandes Pacheco - Clicksign.pdf",
+        "issueDate": "2025-05-27T00:00:00.000Z",
+        "expirationDate": "2075-05-27T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/05/2075",
+        "sourcePath": "https://drive.google.com/file/d/1XzkWBKgGZwfoS16b3zogoC_e0F7f1y1-/view"
+      },
+      "02": {
+        "code": "02",
+        "name": "Doc 02",
+        "filename": "02 - Ordem de Serviço - 27.05.2025 - Daniel Fernandes Pacheco - Clicksign.pdf",
+        "issueDate": "2025-05-27T00:00:00.000Z",
+        "expirationDate": "2075-05-27T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/05/2075",
+        "sourcePath": "https://drive.google.com/file/d/1XzkWBKgGZwfoS16b3zogoC_e0F7f1y1-/view"
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05.1 - Cartão do SUS - Daniel Fernandes Pacheco",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1frvw2T0WoNC5uMnCi2xzKsMh5mpfCx6f/view"
+      },
+      "07": {
+        "code": "07",
+        "name": "Doc 07",
+        "filename": "07 – Seguro de Vida – 06.12.25 – Daniel Fernandes Pacheco.pdf",
+        "issueDate": "2025-12-06T00:00:00.000Z",
+        "expirationDate": "2027-12-06T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/12/2027",
+        "sourcePath": "https://drive.google.com/file/d/1wR8OFDzZozjV6YXxX4VN1DL8j71G1oQZ/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "07 – CNH – 26.06.34  – Daniel Fernandes Pacheco.pdf",
+        "issueDate": "2034-06-26T03:00:00.000Z",
+        "expirationDate": "2034-06-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/06/2034",
+        "sourcePath": "https://drive.google.com/file/d/1tNHIXeFY6YsIHTjYVfWd6QQe8gnEkJE9/view"
       }
     }
   },
@@ -16568,6 +16666,24 @@
         "statusDetail": "Válido até 05/02/2028",
         "sourcePath": "https://drive.google.com/file/d/1xlylVvIeH6EsXMONuzECpp0fXJXUJTJb/view"
       },
+      "23": {
+        "code": "23",
+        "name": "Doc 23",
+        "filename": "23 – CRT – JOSE MARCELO MAGALHAES SOUSA.pdf",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1ZUdDSpmUAeJhVLmuFI7nd2IWNdGpOd2r/view"
+      },
+      "24": {
+        "code": "24",
+        "name": "Doc 24",
+        "filename": "24 – Diploma ( Téc. em Eletromecânica) – JOSE MARCELO MAGALHAES SOUSA .pdf",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1_wfGm6zCUDgzh3ibmcCy0hZP_l8cCQk8/view"
+      },
       "27": {
         "code": "27",
         "name": "Doc 27",
@@ -16628,6 +16744,16 @@
         "statusDetail": "Válido até 27/09/2028",
         "sourcePath": "https://drive.google.com/file/d/18kUm_YsjzIUcPKhL7V2F0uQcx3zJd8qR/view"
       },
+      "40": {
+        "code": "40",
+        "name": "Doc 40",
+        "filename": "04 – Contrato – TÉC. MECÂNICO - JOSE MARCELO MAGALHAES SOUSA.pdf",
+        "issueDate": "2025-01-21T00:00:00.000Z",
+        "expirationDate": "2076-10-06T10:45:05.594Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1OTk7kcRV9vCgHLLqwydY4b7Qq3ttwaYb/view"
+      },
       "09": {
         "code": "09",
         "name": "Doc 09",
@@ -16657,6 +16783,94 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/03/2027",
         "sourcePath": "https://drive.google.com/file/d/1Rds11IX_luMEUS75OQNSdFqZ_QLeXNwg/view"
+      },
+      "06": {
+        "code": "06",
+        "name": "Doc 06",
+        "filename": "06 – Ficha de EPI - Téc. Mecânico - 17.03.2025 - JOSE MARCELO MAGALHÃES SOUSA - Clicksign .pdf",
+        "issueDate": "2025-03-17T00:00:00.000Z",
+        "expirationDate": "2026-03-17T00:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 203 dias (17/03/2026)",
+        "sourcePath": "https://drive.google.com/file/d/1z9fVKSWFJPFgi3h6bH0Wfo7rVlYuHsIE/view"
+      },
+      "40.1": {
+        "code": "40.1",
+        "name": "Doc 40.1",
+        "filename": "04.1 - Aditivo ao Contrato - 08.01.2027 -  JOSE MARCELO MAGALHAES SOUSA - Clicksign.pdf",
+        "issueDate": "2026-01-09T00:00:00.000Z",
+        "expirationDate": "2028-01-09T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/01/2028",
+        "sourcePath": "https://drive.google.com/file/d/1upnTQUpOt7ZABebQ1G0EkUHf12Cmh072/view"
+      },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 - ASO - 08.12.2025 - José Marcelo Magalhães Sousa.pdf",
+        "issueDate": "2025-12-08T03:00:00.000Z",
+        "expirationDate": "2026-12-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/12/2026",
+        "sourcePath": "https://drive.google.com/file/d/1hk8tCKFKJvQpy3CwfyrUcjJbW_BpKLON/view"
+      },
+      "07": {
+        "code": "07",
+        "name": "Doc 07",
+        "filename": "07 – Seguro de Vida –  06.12.2026 - Jose Marcelo Magalhaes Souza.pdf",
+        "issueDate": "2026-12-06T00:00:00.000Z",
+        "expirationDate": "2026-12-06T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/12/2026",
+        "sourcePath": "https://drive.google.com/file/d/15gwX0MVuiNXahx90IfvvXygAVdNXd-0P/view"
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "02 - Ordem de Serviço - 28.05.2025 - José Marcelo Magalhaes Sousa - Clicksign.pdf",
+        "issueDate": "2025-05-28T00:00:00.000Z",
+        "expirationDate": "2075-05-28T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/05/2075",
+        "sourcePath": "https://drive.google.com/file/d/1-jROxpUbmde0j_sDC6V1cs0ftzf1528C/view"
+      },
+      "02": {
+        "code": "02",
+        "name": "Doc 02",
+        "filename": "02 - Ordem de Serviço - 28.05.2025 - José Marcelo Magalhaes Sousa - Clicksign.pdf",
+        "issueDate": "2025-05-29T00:00:00.000Z",
+        "expirationDate": "2075-05-29T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/05/2075",
+        "sourcePath": "https://drive.google.com/file/d/1-jROxpUbmde0j_sDC6V1cs0ftzf1528C/view"
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05.1 - IGE ESPECIFICO PARA VENENO DE MARIMBONDO, VESPAS E ABELHA - JOSE MARCELO MAGALHAES SOUSA.pdf",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1aehUv6l4hk9Nbu2RtTAWcPaHDi_t3HAF/view"
+      },
+      "03": {
+        "code": "03",
+        "name": "Doc 03",
+        "filename": "03.1 - CCMEI - JOSE MARCELO MAGALHAES SOUSA.pdf",
+        "expirationDate": "2076-10-01T15:32:42.281Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1YeW1V35x3BELyueeKtvWDCrpaw4m4fjJ/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "07 – CNH – 05.02.34 – JOSÉ MARCELO MAGALHAES SOUSA",
+        "issueDate": "2034-02-05T03:00:00.000Z",
+        "expirationDate": "2034-02-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/02/2034",
+        "sourcePath": "https://drive.google.com/file/d/1H0NjRQq3JhmWKgfSBRukUhmWG0GJ046P/view"
       }
     }
   }
