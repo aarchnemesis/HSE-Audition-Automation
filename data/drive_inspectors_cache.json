@@ -3194,8 +3194,9 @@
         "name": "Doc 40",
         "filename": "04 – Contrato – TÉC. MECÂNICO - JOSE MARCELO MAGALHAES SOUSA.pdf",
         "issueDate": "2025-01-21T00:00:00.000Z",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
+        "expirationDate": "2076-10-06T18:00:14.998Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1Bkx2kD7cVnLO-pEtlmEcF-IrYXhse9B6/view"
       },
       "06": {
@@ -3211,16 +3212,6 @@
       "40.1": {
         "code": "40.1",
         "name": "Doc 40.1",
-        "filename": "04.1 - Aditivo ao Contrato - 08.01.2027 -  JOSE MARCELO MAGALHAES SOUSA - Clicksign.pdf",
-        "issueDate": "2027-01-08T00:00:00.000Z",
-        "expirationDate": "2027-01-08T00:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/01/2027",
-        "sourcePath": "https://drive.google.com/file/d/1Fu7zFIt4CJrzkz8w0TYRlvCMUDHDygsm/view"
-      },
-      "04.1": {
-        "code": "04.1",
-        "name": "Doc 04.1",
         "filename": "04.1 - Aditivo ao Contrato - 08.01.2027 -  JOSE MARCELO MAGALHAES SOUSA - Clicksign.pdf",
         "issueDate": "2026-01-09T00:00:00.000Z",
         "expirationDate": "2028-01-09T00:00:00.000Z",
@@ -3251,12 +3242,12 @@
       "04": {
         "code": "04",
         "name": "Doc 04",
-        "filename": "04 – Contrato – TÉC. MECÂNICO - JOSE MARCELO MAGALHAES SOUSA.pdf",
-        "issueDate": "2025-01-21T00:00:00.000Z",
-        "expirationDate": "2076-10-06T18:00:14.998Z",
+        "filename": "02 - Ordem de Serviço - 28.05.2025 - José Marcelo Magalhaes Sousa - Clicksign.pdf",
+        "issueDate": "2025-05-28T00:00:00.000Z",
+        "expirationDate": "2075-05-28T00:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/10/2076",
-        "sourcePath": "https://drive.google.com/file/d/1Bkx2kD7cVnLO-pEtlmEcF-IrYXhse9B6/view"
+        "statusDetail": "Válido até 28/05/2075",
+        "sourcePath": "https://drive.google.com/file/d/1fw-6TYBWblw9Xwx6b2n1XZRLMAHuOORh/view"
       },
       "02": {
         "code": "02",
