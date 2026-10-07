@@ -21,8 +21,8 @@ import { getAuthorizedClient } from './googleAuth.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
-const DRONE_ROOT_FOLDER_ID = '1AyOLeSdD5S3fcELziWhT1ORwij3UbPgC' // 03 - Drone Insp. Equipamento
-const LPS_SPDA_ROOT_FOLDER_ID = '1Yn9_peIcUruJkfVsDHLbEeHzwyVCqEX3' // 04 - LPS - SPDA
+const DRONE_ROOT_FOLDER_ID = '1fF0SHglnfs0ELKsekZVoAygwNyxQek3w' // 03 - Drone Insp. Equipamento
+const LPS_SPDA_ROOT_FOLDER_ID = '1B9hlkQIyCYPpp3ygcBrEX_ajKIC9h9Il' // 04 - LPS - SPDA
 
 /**
  * Cada pasta de ramo pode ter sua PRÓPRIA numeração de documento — confirmado em 27/08/2026 contra
