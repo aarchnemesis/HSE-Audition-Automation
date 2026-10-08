@@ -5670,7 +5670,7 @@
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2074-10-24T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-10-20T12:00:00.000Z",
+    "rpoExpiration": "2028-10-06T12:00:00.000Z",
     "divergent": false,
     "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
     "recommendedAction": "Nenhuma ação necessária (Consistente)"
@@ -5831,15 +5831,15 @@
     "driveExpiration": "2027-05-26T00:00:00.000Z",
     "storzExpiration": "2028-10-02T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-11-28T12:00:00.000Z",
+    "rpoExpiration": "2028-10-02T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 179 dia(s) (26/05/2027 no Drive vs 28/11/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 179,
-    "recommendedAction": "Atualizar data na RPO para 26/05/2027"
+    "detail": "Curso validado na planilha RPO (02/10/2028), porém o Drive ainda possui registro anterior (26/05/2027).",
+    "diffDays": 496,
+    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
   },
   {
     "inspectorName": "MARIA BRUNA SOARES SANTOS",
