@@ -11533,7 +11533,7 @@
     "inspectorName": "WANDERSON AVELINO DE SOUZA",
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
-    "driveExpiration": "2028-07-07T00:00:00.000Z",
+    "driveExpiration": "2028-10-01T00:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-04-09T12:00:00.000Z",
     "divergent": true,
@@ -11541,9 +11541,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 89 dia(s) (07/07/2028 no Drive vs 09/04/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 89,
-    "recommendedAction": "Atualizar data na RPO para 07/07/2028"
+    "detail": "Drive mais recente que a RPO em 175 dia(s) (01/10/2028 no Drive vs 09/04/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 175,
+    "recommendedAction": "Atualizar data na RPO para 01/10/2028"
   },
   {
     "inspectorName": "WANDERSON AVELINO DE SOUZA",
