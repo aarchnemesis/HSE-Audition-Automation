@@ -19083,15 +19083,15 @@
     "docName": "NR-12 Segurança em Máquinas",
     "driveExpiration": "2027-12-29T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-19T12:00:00.000Z",
+    "rpoExpiration": "2028-10-08T12:00:00.000Z",
     "divergent": true,
     "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 313 dia(s) (29/12/2027 no Drive vs 19/02/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 313,
-    "recommendedAction": "Atualizar data na RPO para 29/12/2027"
+    "detail": "RPO mais recente que o Drive em 285 dia(s) (08/10/2028 na RPO vs 29/12/2027 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 285,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "BRUNO EDUARDO FERREIRA DE PAIVA",
@@ -19260,15 +19260,15 @@
     "docName": "NR-12 Segurança em Máquinas",
     "driveExpiration": "2027-08-28T00:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-10-18T12:00:00.000Z",
+    "rpoExpiration": "2028-10-08T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 314 dia(s) (28/08/2027 no Drive vs 18/10/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 314,
-    "recommendedAction": "Atualizar data na RPO para 28/08/2027"
+    "detail": "Curso validado na planilha RPO (08/10/2028), porém o Drive ainda possui registro anterior (28/08/2027).",
+    "diffDays": 408,
+    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
   },
   {
     "inspectorName": "ALISON DOS SANTOS RIBEIRO",
