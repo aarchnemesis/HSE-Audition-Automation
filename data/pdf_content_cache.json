@@ -276402,5 +276402,29 @@
         "extractedClause": "no dia 25/04/2024"
       }
     ]
+  },
+  {
+    "fileId": "1fFEtwjcxKcG_6MbT6T2N69kw1PpPVs5t",
+    "filename": "05 – Cartão de Vacina + Covid  – Jose Ricardo Braga Matos.pdf.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-10T21:22:26.143Z",
+    "code": "05",
+    "expirationDate": "2076-10-10T21:45:06.097Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/10/2076",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Cartão de Vacina / SUS",
+    "documents": [
+      {
+        "code": "05",
+        "expirationDate": "2076-10-10T21:45:06.097Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/10/2076",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Cartão de Vacina / SUS"
+      }
+    ]
   }
 ]
