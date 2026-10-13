@@ -694,7 +694,7 @@
     "requestDate": "2026-10-09T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 34,
+    "progressPercent": 50,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
@@ -1961,6 +1961,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "606510",
+    "collaboratorName": "ERVESON NASCIMENTO DOS SANTOS",
+    "collaboratorCpf": "081.864.623-33",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-10-13T20:47:46.627Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "576040",
     "collaboratorName": "EZEQUIEL CRUZ VIEIRA",
     "collaboratorCpf": "042.429.563-63",
@@ -2160,6 +2175,21 @@
     "courseDurationDays": 60,
     "workloadHours": 14,
     "idealSlaDays": 2
+  },
+  {
+    "id": "606512",
+    "collaboratorName": "FRANCISCO DAVILO MARQUES DE SOUSA",
+    "collaboratorCpf": "055.004.973-83",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-10-13T20:47:48.941Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
   },
   {
     "id": "572906",
@@ -3227,7 +3257,7 @@
     "requestDate": "2026-10-13T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 11,
+    "progressPercent": 15,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -4678,6 +4708,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "606511",
+    "collaboratorName": "RAIMUNDO NONATO DE HOLANDA FILHO",
+    "collaboratorCpf": "082.676.543-21",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-10-13T20:48:06.233Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "601794",
     "collaboratorName": "SIMON DIAS DA SILVA",
     "collaboratorCpf": "071.135.023-00",
@@ -4703,7 +4748,7 @@
     "requestDate": "2026-10-11T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 15,
+    "progressPercent": 19,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
