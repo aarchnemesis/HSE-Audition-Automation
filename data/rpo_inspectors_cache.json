@@ -3786,12 +3786,26 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/12/2027"
       },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2028-07-29T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/07/2028"
+      },
       "18": {
         "code": "18",
         "name": "NR 18",
         "expirationDate": "2027-12-11T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 11/12/2027"
+      },
+      "19": {
+        "code": "19",
+        "name": "NR 23",
+        "expirationDate": "2028-07-31T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/07/2028"
       },
       "20": {
         "code": "20",
