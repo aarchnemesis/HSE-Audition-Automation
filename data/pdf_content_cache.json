@@ -276465,5 +276465,55 @@
         "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa"
       }
     ]
+  },
+  {
+    "fileId": "1Yh5apZ54YwhZJlXLJHgvKj_STlNh1C6W",
+    "filename": "14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-14T13:09:50.923Z",
+    "code": "12",
+    "issueDate": "2026-09-14T00:00:00.000Z",
+    "expirationDate": "2028-09-14T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-14T00:00:00.000Z",
+        "expirationDate": "2028-09-14T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf"
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-09-14T00:00:00.000Z",
+        "expirationDate": "2028-09-14T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 4)",
+        "extractedClause": "Data do arquivo: 14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf"
+      },
+      {
+        "code": "13",
+        "issueDate": "2023-02-20T00:00:00.000Z",
+        "expirationDate": "2025-02-20T00:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 601 dias (20/02/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP (via PDF) (Pág. 8)",
+        "extractedClause": "Assinou em 20 fev 2023"
+      }
+    ]
   }
 ]
