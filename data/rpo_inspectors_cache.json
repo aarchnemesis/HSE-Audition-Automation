@@ -1354,6 +1354,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/02/2028"
       },
+      "22": {
+        "code": "22",
+        "name": "LOTO",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -7989,6 +7996,48 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "SD035314BR",
     "certificates": {
+      "10": {
+        "code": "10",
+        "name": "NR 01",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "13": {
+        "code": "13",
+        "name": "NR 10 SEP",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
       "16": {
         "code": "16",
         "name": "GWO BST",
@@ -8002,6 +8051,13 @@
         "expirationDate": "2027-02-05T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 05/02/2027"
+      },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
       },
       "19": {
         "code": "19",
@@ -8017,12 +8073,26 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/02/2027"
       },
+      "22": {
+        "code": "22",
+        "name": "LOTO",
+        "expirationDate": "2028-10-08T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
         "expirationDate": "2027-02-04T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 04/02/2027"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-08T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028"
       }
     }
   },
@@ -8157,9 +8227,9 @@
       "01": {
         "code": "01",
         "name": "ASO",
-        "expirationDate": "2026-10-07T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 7 dias (07/10/2026)"
+        "expirationDate": "2027-09-02T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/09/2027"
       },
       "08": {
         "code": "08",
@@ -12920,9 +12990,9 @@
       "01": {
         "code": "01",
         "name": "ASO",
-        "expirationDate": "2026-09-24T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 20 dias (24/09/2026)"
+        "expirationDate": "2027-09-15T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/09/2027"
       }
     },
     "exemptDocCodes": [
@@ -13402,9 +13472,9 @@
       "01": {
         "code": "01",
         "name": "ASO",
-        "expirationDate": "2026-09-17T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 27 dias (17/09/2026)"
+        "expirationDate": "2027-09-21T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/09/2027"
       }
     },
     "exemptDocCodes": [
@@ -14531,13 +14601,6 @@
         "expirationDate": "2027-03-21T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/03/2027"
-      },
-      "01": {
-        "code": "01",
-        "name": "ASO",
-        "expirationDate": "2026-10-03T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 11 dias (03/10/2026)"
       },
       "08": {
         "code": "08",

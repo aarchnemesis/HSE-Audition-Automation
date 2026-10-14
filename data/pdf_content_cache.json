@@ -276426,5 +276426,44 @@
         "matchedTerm": "Cartão de Vacina / SUS"
       }
     ]
+  },
+  {
+    "fileId": "1FYiBRvbPJF6RJkqyuB6FTh3Pu8xqmLCS",
+    "filename": "12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa",
+    "v": 2,
+    "modifiedTime": "2026-10-14T12:43:06.755Z",
+    "code": "12",
+    "issueDate": "2026-09-22T00:00:00.000Z",
+    "expirationDate": "2028-09-22T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-22T00:00:00.000Z",
+        "expirationDate": "2028-09-22T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa"
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-09-22T00:00:00.000Z",
+        "expirationDate": "2028-09-22T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 4)",
+        "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa"
+      }
+    ]
   }
 ]
