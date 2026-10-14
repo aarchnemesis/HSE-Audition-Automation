@@ -276515,5 +276515,55 @@
         "extractedClause": "Assinou em 20 fev 2023"
       }
     ]
+  },
+  {
+    "fileId": "1uFN3iPtfviA4tuFuYuGjbTHMKTZllXq1",
+    "filename": "21 – NR – 35 Trab. Altura (R+F)– 16.07.26 - Jose Marcos Lima de Moura_.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-14T14:36:26.808Z",
+    "code": "30",
+    "issueDate": "2026-07-16T00:00:00.000Z",
+    "expirationDate": "2076-07-16T00:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-16T00:00:00.000Z",
+        "expirationDate": "2076-07-16T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-09-29T00:00:00.000Z",
+        "expirationDate": "2028-09-29T00:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 5)",
+        "extractedClause": "Assinou em 29 set 2026"
+      },
+      {
+        "code": "32",
+        "issueDate": "2023-11-30T00:00:00.000Z",
+        "expirationDate": "2025-11-30T00:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 318 dias (30/11/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 7)",
+        "extractedClause": "Concluido em 30 de Novembro de 2023"
+      }
+    ]
   }
 ]
