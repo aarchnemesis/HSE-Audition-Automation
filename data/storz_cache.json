@@ -4749,7 +4749,7 @@
     "requestDate": "2026-10-11T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 57,
+    "progressPercent": 80,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
@@ -5123,9 +5123,10 @@
     "trainingName": "[STORZ] - NR33 SUPERVISOR (INICIAçãO)",
     "modality": "PRESENCIAL",
     "requestDate": "2026-10-10T00:00:00.000Z",
-    "state": "EM_ANDAMENTO",
-    "rawSituacao": "Em andamento",
-    "progressPercent": 73,
+    "completionDate": "2026-10-13T00:00:00.000Z",
+    "state": "CONCLUIDO",
+    "rawSituacao": "Aprovado",
+    "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
