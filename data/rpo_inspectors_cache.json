@@ -3828,12 +3828,26 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/12/2027"
       },
+      "27": {
+        "code": "27",
+        "name": "NR 07 - PS",
+        "expirationDate": "2028-08-05T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/08/2028"
+      },
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
         "expirationDate": "2027-12-21T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/12/2027"
+      },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2027-12-11T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/12/2027"
       },
       "01": {
         "code": "01",
