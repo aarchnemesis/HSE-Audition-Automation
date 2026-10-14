@@ -706,10 +706,10 @@
     "trainingCode": "20",
     "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (INICIAçãO)",
     "modality": "PRESENCIAL",
-    "requestDate": "2026-10-13T19:03:19.341Z",
-    "state": "SOLICITADO",
-    "rawSituacao": "Não iniciado",
-    "progressPercent": 0,
+    "requestDate": "2026-10-13T00:00:00.000Z",
+    "state": "EM_ANDAMENTO",
+    "rawSituacao": "Em andamento",
+    "progressPercent": 3,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -770,7 +770,7 @@
     "requestDate": "2026-10-13T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 12,
+    "progressPercent": 75,
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
@@ -5125,7 +5125,7 @@
     "requestDate": "2026-10-10T00:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 57,
+    "progressPercent": 73,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
