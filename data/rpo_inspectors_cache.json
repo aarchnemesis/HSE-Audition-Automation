@@ -8503,6 +8503,41 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 14/01/2028"
       },
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-10-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2028"
+      },
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-10-10T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/10/2028"
+      },
+      "13": {
+        "code": "13",
+        "name": "NR 10 SEP",
+        "expirationDate": "2028-10-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2028"
+      },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-10-11T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/10/2028"
+      },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-10-12T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/10/2028"
+      },
       "16": {
         "code": "16",
         "name": "GWO BST",
@@ -8517,12 +8552,26 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/07/2027"
       },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-10-11T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/10/2028"
+      },
       "19": {
         "code": "19",
         "name": "NR 23",
         "expirationDate": "2027-07-22T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/07/2027"
+      },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2027"
       },
       "21": {
         "code": "21",
@@ -8531,12 +8580,33 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 24/07/2027"
       },
+      "22": {
+        "code": "22",
+        "name": "LOTO",
+        "expirationDate": "2028-10-08T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
         "expirationDate": "2027-07-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 24/07/2027"
+      },
+      "28": {
+        "code": "28",
+        "name": "NR 33 SUP",
+        "expirationDate": "2028-10-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2028"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-07T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/10/2028"
       }
     }
   },
