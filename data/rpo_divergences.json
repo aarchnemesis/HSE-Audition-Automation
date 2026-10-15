@@ -522,6 +522,7 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "driveExpiration": "2026-11-07T03:00:00.000Z",
+    "storzExpiration": "2027-10-15T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2026-11-03T12:00:00.000Z",
     "divergent": false,
@@ -2466,7 +2467,7 @@
     "inspectorName": "EDCLEI DA CONCEIÇÃO CUSTÓDIO",
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
-    "driveExpiration": "2028-02-05T03:00:00.000Z",
+    "driveExpiration": "2028-09-24T03:00:00.000Z",
     "storzExpiration": "2028-09-24T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-03-26T12:00:00.000Z",
@@ -2475,9 +2476,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 316 dia(s) (05/02/2028 no Drive vs 26/03/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 316,
-    "recommendedAction": "Atualizar data na RPO para 05/02/2028"
+    "detail": "Drive mais recente que a RPO em 548 dia(s) (24/09/2028 no Drive vs 26/03/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 548,
+    "recommendedAction": "Atualizar data na RPO para 24/09/2028"
   },
   {
     "inspectorName": "EDCLEI DA CONCEIÇÃO CUSTÓDIO",
@@ -3562,6 +3563,18 @@
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "docCode": "09",
+    "docName": "Direção Defensiva",
+    "rpoExpiration": "2028-10-07T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (07/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "driveExpiration": "2076-10-13T09:48:35.652Z",
@@ -3577,10 +3590,10 @@
     "docName": "NR-06 Uso de EPI",
     "storzExpiration": "2076-10-10T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-06T12:00:00.000Z",
+    "divergent": false,
+    "detail": "Storz e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3600,10 +3613,11 @@
     "docName": "NR-10 Básico",
     "storzExpiration": "2028-10-10T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-10T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3611,10 +3625,15 @@
     "docName": "NR-10 SEP",
     "storzExpiration": "2028-10-12T03:00:00.000Z",
     "trustedSource": "STORZ",
+    "rpoExpiration": "2028-10-06T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "Storz mais recente que a RPO em 6 dia(s) (12/10/2028 no Storz vs 06/10/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 6,
+    "recommendedAction": "Atualizar data na RPO para 12/10/2028"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3622,10 +3641,11 @@
     "docName": "NR-11 Uso de Talha",
     "storzExpiration": "2028-10-11T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-11T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3633,10 +3653,11 @@
     "docName": "NR-12 Segurança em Máquinas",
     "storzExpiration": "2028-10-12T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-12T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3656,10 +3677,11 @@
     "docName": "NR-18 Integração EHS",
     "storzExpiration": "2028-10-11T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-11T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3679,10 +3701,27 @@
     "docName": "NR-33 Espaço Confinado",
     "storzExpiration": "2027-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
+    "rpoExpiration": "2027-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+  },
+  {
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "storzExpiration": "2027-10-13T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "rpoExpiration": "2028-10-06T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "RPO_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "RPO mais recente que o Storz em 359 dia(s) (06/10/2028 na RPO vs 13/10/2027 no Storz) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 359,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -3702,10 +3741,11 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "storzExpiration": "2028-10-11T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-08T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 3,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
@@ -4611,14 +4651,26 @@
   },
   {
     "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
+    "docCode": "09",
+    "docName": "Direção Defensiva",
+    "rpoExpiration": "2028-08-08T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (08/08/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "storzExpiration": "2076-10-09T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-09T12:00:00.000Z",
+    "divergent": false,
+    "detail": "Storz e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
@@ -4706,6 +4758,17 @@
   },
   {
     "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
+    "docCode": "18",
+    "docName": "NR-18 Integração EHS",
+    "storzExpiration": "2028-10-14T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_STORZ",
+    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base na Storz"
+  },
+  {
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "rpoExpiration": "2028-02-27T12:00:00.000Z",
@@ -4746,10 +4809,11 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "storzExpiration": "2028-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "FERNANDO TEODORO DE MORAIS NETO",
@@ -6606,6 +6670,7 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2075-09-10T03:00:00.000Z",
+    "storzExpiration": "2076-10-13T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2026-12-10T12:00:00.000Z",
     "divergent": false,
@@ -6837,14 +6902,26 @@
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
+    "docCode": "09",
+    "docName": "Direção Defensiva",
+    "rpoExpiration": "2028-10-08T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (08/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "SIMON DIAS DA SILVA",
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "storzExpiration": "2076-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "detail": "Storz e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6852,10 +6929,10 @@
     "docName": "NR-06 Uso de EPI",
     "storzExpiration": "2076-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "detail": "Storz e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6875,10 +6952,23 @@
     "docName": "NR-10 Básico",
     "storzExpiration": "2028-10-11T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 2,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+  },
+  {
+    "inspectorName": "SIMON DIAS DA SILVA",
+    "docCode": "13",
+    "docName": "NR-10 SEP",
+    "storzExpiration": "2028-10-13T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6886,10 +6976,11 @@
     "docName": "NR-11 Uso de Talha",
     "storzExpiration": "2028-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6897,10 +6988,11 @@
     "docName": "NR-12 Segurança em Máquinas",
     "storzExpiration": "2028-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6920,10 +7012,11 @@
     "docName": "NR-18 Integração EHS",
     "storzExpiration": "2028-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-13T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 0,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
@@ -6955,10 +7048,11 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "storzExpiration": "2028-10-13T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz"
+    "rpoExpiration": "2028-10-08T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 5,
+    "detail": "Storz e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)"
   },
   {
     "inspectorName": "FELIPE DOS SANTOS CASTRO",
@@ -7684,6 +7778,7 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "driveExpiration": "2027-10-30T03:00:00.000Z",
+    "storzExpiration": "2028-10-14T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-10-11T12:00:00.000Z",
     "divergent": true,
@@ -11087,11 +11182,15 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "driveExpiration": "2026-10-07T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-10-07T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2027-09-02T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
+    "direction": "RPO_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": true,
+    "detail": "Curso validado na planilha RPO (02/09/2027), porém o Drive ainda possui registro anterior (07/10/2026).",
+    "diffDays": 330,
+    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
   },
   {
     "inspectorName": "THAYNA NOGUEIRA TAVARES",
@@ -16435,11 +16534,15 @@
     "docName": "SIT (Vestas)",
     "driveExpiration": "2026-11-26T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-11-26T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-10-14T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "RPO_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "RPO mais recente que o Drive em 688 dia(s) (14/10/2028 na RPO vs 26/11/2026 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 688,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "ERVESON NASCIMENTO DOS SANTOS",
@@ -20554,7 +20657,7 @@
     "inspectorName": "THIAGO LIMA SANTOS SILVA",
     "docCode": "32",
     "docName": "GWO ART",
-    "driveExpiration": "2028-05-11T03:00:00.000Z",
+    "driveExpiration": "2028-04-27T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "divergent": true,
     "divergenceKind": "SOMENTE_DRIVE",

@@ -1,19 +1,19 @@
 {
-  "syncTimestamp": "2026-10-13T19:06:22.463Z",
-  "refDate": "2026-10-13T19:02:35.895Z",
+  "syncTimestamp": "2026-10-15T15:14:46.845Z",
+  "refDate": "2026-10-15T15:10:55.610Z",
   "driveFoldersCount": 99,
-  "rpoActiveCount": 132,
-  "rpoTotalCount": 363,
-  "ehsRosterCount": 81,
-  "storzRequestsCount": 471,
+  "rpoActiveCount": 133,
+  "rpoTotalCount": 364,
+  "ehsRosterCount": 82,
+  "storzRequestsCount": 535,
   "storzSource": "LIVE",
-  "divergencesCount": 772,
+  "divergencesCount": 763,
   "divergencesByKind": {
-    "RPO_VALIDADO_PENDENTE_BACKUP": 24,
+    "RPO_VALIDADO_PENDENTE_BACKUP": 25,
     "SOMENTE_DRIVE": 115,
-    "DATA_DIVERGENTE": 590,
-    "SOMENTE_RPO": 22,
-    "SOMENTE_STORZ": 21
+    "DATA_DIVERGENTE": 593,
+    "SOMENTE_RPO": 25,
+    "SOMENTE_STORZ": 5
   },
-  "complianceTotalRecords": 1325
+  "complianceTotalRecords": 1344
 }

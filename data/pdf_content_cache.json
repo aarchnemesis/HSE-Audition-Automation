@@ -181136,11 +181136,11 @@
     "filename": "04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf",
     "v": 2,
     "modifiedTime": "2026-05-15T10:26:20.000Z",
-    "code": "40",
+    "code": "40.1",
     "issueDate": "2026-05-11T03:00:00.000Z",
-    "expirationDate": "2026-05-11T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "statusDetail": "VENCIDO há 155 dias (11/05/2026)",
+    "expirationDate": "2027-05-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/05/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Contrato PJ (via PDF) (Pág. 1)",
@@ -181151,21 +181151,10 @@
         "issueDate": "2026-05-11T03:00:00.000Z",
         "expirationDate": "2026-05-11T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 155 dias (11/05/2026)",
+        "statusDetail": "VENCIDO há 157 dias (11/05/2026)",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Contrato PJ (via PDF) (Pág. 1)",
-        "extractedClause": "Data do arquivo: 04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf"
-      },
-      {
-        "code": "32",
-        "issueDate": "2026-05-11T03:00:00.000Z",
-        "expirationDate": "2028-05-11T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 11/05/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO ART (via PDF) (Pág. 2)",
         "extractedClause": "Data do arquivo: 04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf"
       },
       {
@@ -181176,19 +181165,19 @@
         "statusDetail": "Válido até 11/05/2076",
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
-        "matchedTerm": "Contrato (04) (Pág. 3)",
+        "matchedTerm": "Contrato (04) (Pág. 2)",
         "extractedClause": "Data do arquivo: 04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf"
       },
       {
         "code": "40.1",
         "issueDate": "2026-05-11T03:00:00.000Z",
-        "expirationDate": "2026-05-11T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 155 dias (11/05/2026)",
+        "expirationDate": "2027-05-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/05/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Aditivo ao Contrato (PJ) (via PDF) (Pág. 24)",
-        "extractedClause": "Data do arquivo: 04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf"
+        "matchedTerm": "Aditivo ao Contrato (PJ) (via PDF) (Pág. 25)",
+        "extractedClause": "encerrando- se em 11/05/2027"
       }
     ]
   },
@@ -184716,6 +184705,140 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-33 Supervisor (sobrepôs prefixo 20)",
         "extractedClause": "Assinou em 27 mar 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1mCUbN9-fLrGzbDq4eLuBA3TUEmO1WD3E",
+    "filename": "14 – NR – 11 Uso de Talha - 24.09.26 - Edclei da Conceição Custódio - Clicksign.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-15T13:31:54.710Z",
+    "code": "14",
+    "issueDate": "2026-09-24T03:00:00.000Z",
+    "expirationDate": "2028-09-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11",
+    "extractedClause": "Data do arquivo: 14 – NR – 11 Uso de Talha - 24.09.26 - Edclei da Conceição Custódio - Clicksign.pdf",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-09-24T03:00:00.000Z",
+        "expirationDate": "2028-09-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11",
+        "extractedClause": "Data do arquivo: 14 – NR – 11 Uso de Talha - 24.09.26 - Edclei da Conceição Custódio - Clicksign.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1uFN3iPtfviA4tuFuYuGjbTHMKTZllXq1",
+    "filename": "21 – NR – 35 Trab. Altura (R+F)– 16.07.26 - Jose Marcos Lima de Moura_.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-14T14:36:26.808Z",
+    "code": "30",
+    "issueDate": "2026-07-16T03:00:00.000Z",
+    "expirationDate": "2076-07-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-16T03:00:00.000Z",
+        "expirationDate": "2076-07-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 5)",
+        "extractedClause": "Assinou em 29 set 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1Yh5apZ54YwhZJlXLJHgvKj_STlNh1C6W",
+    "filename": "14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf",
+    "v": 2,
+    "modifiedTime": "2026-10-14T13:09:50.923Z",
+    "code": "12",
+    "issueDate": "2026-09-14T03:00:00.000Z",
+    "expirationDate": "2028-09-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 14– NR – 10 Básico (F+R) – 14.09.26 - Ítalo de Abreu Duarte.pdf"
+      },
+      {
+        "code": "13",
+        "issueDate": "2023-02-20T03:00:00.000Z",
+        "expirationDate": "2025-02-20T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 602 dias (20/02/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP (via PDF) (Pág. 8)",
+        "extractedClause": "Assinou em 20 fev 2023"
+      }
+    ]
+  },
+  {
+    "fileId": "1FYiBRvbPJF6RJkqyuB6FTh3Pu8xqmLCS",
+    "filename": "12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa",
+    "v": 2,
+    "modifiedTime": "2026-10-14T12:43:06.755Z",
+    "code": "12",
+    "issueDate": "2026-09-22T03:00:00.000Z",
+    "expirationDate": "2028-09-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-22T03:00:00.000Z",
+        "expirationDate": "2028-09-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (F+R) –  22.09.2026 - Jose Marcelo Magalhaes Sousa"
       }
     ]
   }
