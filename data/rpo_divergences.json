@@ -4793,6 +4793,17 @@
   },
   {
     "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "storzExpiration": "2027-10-15T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_STORZ",
+    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base na Storz"
+  },
+  {
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "rpoExpiration": "2028-02-26T12:00:00.000Z",

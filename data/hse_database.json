@@ -2534,11 +2534,11 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "601804",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 17,
+    "storzProgressPercent": 39,
     "storzDeadline": "12/12/2026",
     "detail": "Válido até 18/03/2027 Válido até 18/03/2027 | Reciclagem já solicitada na Storz (601804 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-15T21:48:23.846Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -2582,14 +2582,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "expirationDate": "2027-10-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "601801",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 92,
-    "storzDeadline": "08/12/2026",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601801 - Progresso: 92%) [Prazo Storz: 08/12/2026].",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso concluído e aprovado na Storz (601801) em 15/10/2026 — Válido até 15/10/2027 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T20:48:07.026Z"
+    "lastUpdated": "2026-10-15T21:48:23.846Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -18782,11 +18782,11 @@
     "statusEHS": "VENCIDO",
     "storzRequestId": "607048",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 57,
     "storzDeadline": "14/12/2026",
-    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | EM ANDAMENTO NA STORZ (607048 - Progresso: 50%) [Prazo Storz: 14/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 01/04/2026, ANTES do prazo da Storz (14/12/2026)!",
+    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | EM ANDAMENTO NA STORZ (607048 - Progresso: 57%) [Prazo Storz: 14/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 01/04/2026, ANTES do prazo da Storz (14/12/2026)!",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T21:03:17.786Z"
+    "lastUpdated": "2026-10-15T21:48:23.846Z"
   },
   {
     "inspectorId": "rpo_77",
