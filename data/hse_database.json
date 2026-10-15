@@ -2585,11 +2585,11 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "601801",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 80,
+    "storzProgressPercent": 92,
     "storzDeadline": "08/12/2026",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601801 - Progresso: 80%) [Prazo Storz: 08/12/2026].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601801 - Progresso: 92%) [Prazo Storz: 08/12/2026].",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T17:48:15.702Z"
+    "lastUpdated": "2026-10-15T20:48:07.026Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -18782,11 +18782,11 @@
     "statusEHS": "VENCIDO",
     "storzRequestId": "607048",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 26,
+    "storzProgressPercent": 42,
     "storzDeadline": "14/12/2026",
-    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | EM ANDAMENTO NA STORZ (607048 - Progresso: 26%) [Prazo Storz: 14/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 01/04/2026, ANTES do prazo da Storz (14/12/2026)!",
+    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | EM ANDAMENTO NA STORZ (607048 - Progresso: 42%) [Prazo Storz: 14/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 01/04/2026, ANTES do prazo da Storz (14/12/2026)!",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T19:48:09.834Z"
+    "lastUpdated": "2026-10-15T20:48:07.026Z"
   },
   {
     "inspectorId": "rpo_77",
