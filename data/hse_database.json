@@ -2585,11 +2585,11 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "601801",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 73,
+    "storzProgressPercent": 80,
     "storzDeadline": "08/12/2026",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601801 - Progresso: 73%) [Prazo Storz: 08/12/2026].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601801 - Progresso: 80%) [Prazo Storz: 08/12/2026].",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-15T17:48:15.702Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -9299,11 +9299,11 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "581685",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 57,
     "storzDeadline": "12/12/2026",
     "detail": "Válido até 03/01/2027 Válido até 03/01/2027 | Reciclagem já solicitada na Storz (581685 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T17:03:36.871Z"
+    "lastUpdated": "2026-10-15T17:48:15.702Z"
   },
   {
     "inspectorId": "rpo_42",
