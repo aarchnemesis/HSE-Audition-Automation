@@ -131,7 +131,7 @@ const NUMBER_WORDS: Record<string, number> = {
 }
 
 const DATE_CAPTURE_PATTERN =
-  '(?:[0-9]{4}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{1,2}|[0-9]{1,2}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{2,4}|[0-9]{1,2}\\s*(?:de\\s*)?[a-zç]+\\s*(?:de\\s*)?[0-9]{2,4})'
+  '(?:[0-9]{4}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{1,2}|[0-9]{4}\\s[0-9]{1,2}\\s[0-9]{1,2}|[0-9]{1,2}[\\/\\.-][0-9]{1,2}[\\/\\.-][0-9]{2,4}|[0-9]{1,2}\\s*(?:de\\s*)?[a-zç]+\\s*(?:de\\s*)?[0-9]{2,4})'
 
 /**
  * Converte strings contendo datas no formato numérico (DD/MM/YYYY) ou por extenso (DD de Mês de YYYY)
@@ -139,7 +139,7 @@ const DATE_CAPTURE_PATTERN =
  */
 export function parsePortugueseDate(raw: string): Date | null {
   if (!raw) return null
-  let cleaned = raw.trim().replace(/\s+/g, ' ')
+  let cleaned = raw.replace(/[\x00\0]/g, ' ').trim().replace(/\s+/g, ' ')
 
   // Normaliza casos onde "de" ficou grudado no dia, no mês ou no ano (ex.: "11de Setembrode 2026")
   cleaned = cleaned
@@ -155,9 +155,9 @@ export function parsePortugueseDate(raw: string): Date | null {
     .replace(/\bde(\d{2,4})\b/gi, 'de $1')
     .replace(/\s+/g, ' ')
 
-  // 1. Formato ISO: "YYYY-MM-DD" ou "YYYY/MM/DD"
+  // 1. Formato ISO: "YYYY-MM-DD", "YYYY/MM/DD" ou "YYYY MM DD"
   const isoMatch = cleaned.match(
-    /(?:^|\D)(\d{4})[\/\.-](\d{1,2})[\/\.-](\d{1,2})(?:\D|$)/
+    /(?:^|\D)(\d{4})[\/\.\-\s](\d{1,2})[\/\.\-\s](\d{1,2})(?:\D|$)/
   )
   if (isoMatch) {
     const year = parseInt(isoMatch[1], 10)
@@ -251,7 +251,7 @@ export class PDFContentInspector {
     pdfText: string | undefined | null,
     refDate: Date = new Date()
   ): InspectedDocumentResult {
-    const text = (pdfText || '').trim()
+    const text = (pdfText || '').replace(/[\x00\0]/g, ' ').trim()
     const isScannedImage = text.length < 50
 
     // 1. Classificação do documento (nome + texto do PDF)
@@ -400,7 +400,10 @@ export class PDFContentInspector {
       if (!pageCode) continue
 
       // Extrai datas para a norma identificada nesta página
-      let pageCert = this.extractCertificateDates(pageText, pageCode, refDate)
+      const isContractDoc = ['40', '40.1', '04', '04.1'].includes(pageCode)
+      let pageCert = isContractDoc
+        ? this.extractContractDates(pageText, pageCode, refDate)
+        : this.extractCertificateDates(pageText, pageCode, refDate)
 
       // Reconciliação caso a página não traga data expressa no texto mas o nome do arquivo tenha
       const fnDate = parseDateFromFilename(filename)
@@ -507,19 +510,32 @@ export class PDFContentInspector {
     refDate: Date
   ): { issueDate?: Date; expirationDate?: Date; clause: string } | null {
     // Normaliza quebras de linha e múltiplos espaços
-    const clean = text.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
+    const clean = text.replace(/[\x00\0]/g, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
 
     // Caso A: Cláusula de encerramento explícito:
-    // Ex.: "encerrando-se em 08/01/2027", "encerrando-se em 08 de janeiro de 2027"
+    // Ex.: "encerrando-se em 08/01/2027", "encerrando- se em 11/05/2027"
     const encerramentoRegex = new RegExp(
-      `encerrando-se\\s+em\\s+(${DATE_CAPTURE_PATTERN})`,
+      `encerrando\\s*-\\s*se\\s+em\\s+(${DATE_CAPTURE_PATTERN})`,
       'i'
     )
     const encerramentoMatch = clean.match(encerramentoRegex)
     if (encerramentoMatch) {
       const parsedExp = parsePortugueseDate(encerramentoMatch[1])
       if (parsedExp) {
+        let issueDate: Date | undefined
+        const dateNearRegex = new RegExp(
+          `(?:Sorocaba|Caucaia|Fortaleza|São\\s+Paulo|Curitiba|Rio\\s+de\\s+Janeiro)[\\s\\/A-Z]*,?\\s*(${DATE_CAPTURE_PATTERN})`,
+          'i'
+        )
+        const dateNear = clean.match(dateNearRegex)
+        if (dateNear) {
+          const base = parsePortugueseDate(dateNear[1])
+          if (base && base.getTime() < parsedExp.getTime()) {
+            issueDate = base
+          }
+        }
         return {
+          issueDate,
           expirationDate: parsedExp,
           clause: encerramentoMatch[0],
         }
@@ -558,9 +574,9 @@ export class PDFContentInspector {
       }
     }
 
-    // Caso D: "passa a vigorar [a partir de|de] [DATA] e terá [vigência|duração] de [X] [meses|ano|anos]"
+    // Caso D: "passa a vigorar [a partir de|de|da data de] [DATA] e terá [vigência|duração] de [X] [meses|ano|anos]"
     const vigorarRegex = new RegExp(
-      `passa\\s+a\\s+vigorar\\s+(?:a\\s+partir\\s+de|de)\\s+(${DATE_CAPTURE_PATTERN})\\s+e\\s+ter[aá]\\s+(?:vig[eê]ncia|dura[cç][aã]o)\\s+de\\s+([^\\.,;\\n]+?)(?:meses|mes|anos|ano)`,
+      `passa(?:ndo)?\\s+a\\s+vigorar\\s+(?:a\\s+partir\\s+de|da\\s+data\\s+de|de)\\s+(${DATE_CAPTURE_PATTERN})\\s+e\\s+ter[aá]\\s+(?:vig[eê]ncia|dura[cç][aã]o)\\s+de\\s+([^\\.,;\\n]+?)(?:meses|mes|anos|ano)`,
       'i'
     )
     const vigorarMatch = clean.match(vigorarRegex)
@@ -634,7 +650,7 @@ export class PDFContentInspector {
     code: string | null,
     refDate: Date
   ): { issueDate?: Date; expirationDate?: Date; clause: string } | null {
-    const clean = text.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
+    const clean = text.replace(/[\x00\0]/g, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
 
     let explicitExpDate: Date | undefined
     let explicitIssueDate: Date | undefined
@@ -678,9 +694,9 @@ export class PDFContentInspector {
     }
     const completionCandidates: DateCandidate[] = []
 
-    // Ex. A: "Concluído em 12 de Maio de 2025" / "Date Certified: 2026-06-03" / "issue date"
+    // Ex. A: "Concluído em 12 de Maio de 2025" / "Date Certified: 2026-06-03" / "Data de Conclusão: <uuid> 2025 07 24"
     const concluidoRegex = new RegExp(
-      `(?:conclu[ií]do|terminado|finalizado|date\\s+certified|certified\\s+date|issue\\s+date|date\\s+of\\s+issue)\\s*(?:em|on|:)?\\s*(${DATE_CAPTURE_PATTERN})`,
+      `(?:data\\s+de\\s+(?:conclus[aã]o|t[eé]rmino|emiss[aã]o|realiza[cç][aã]o)|conclus[aã]o|conclu[ií]do|terminado|finalizado|date\\s+certified|certified\\s+date|issue\\s+date|date\\s+of\\s+issue)\\s*(?:em|on|:)?(?:\\s+[0-9a-f\\s\\-]{16,50})?\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(concluidoRegex)) {

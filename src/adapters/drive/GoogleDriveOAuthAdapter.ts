@@ -133,10 +133,12 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           if (!matchesFilter) continue
         }
 
-        const nameParts = folderName.split('-')
+        const nameParts = folderName.split(/[-–—_]/)
         const name = nameParts[0].trim()
         const role =
-          nameParts.length > 1 ? nameParts[1].trim() : 'TÉCNICO / INSPETOR'
+          nameParts.length > 1 && nameParts.slice(1).join(' - ').trim()
+            ? nameParts.slice(1).join(' - ').trim()
+            : 'TÉCNICO / INSPETOR'
 
         const certificates = new Map<string, Certificate>()
         await this.scanFolderRecursive(
@@ -249,22 +251,32 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
             this.refDate
           )
 
+          // Seleciona o documento mais representativo para os campos de topo do cache
+          const primaryDoc =
+            [...inspectedList].sort((a, b) => {
+              if (a.code === '40.1' && b.code === '40') return -1
+              if (b.code === '40.1' && a.code === '40') return 1
+              const timeA = a.expirationDate ? a.expirationDate.getTime() : 0
+              const timeB = b.expirationDate ? b.expirationDate.getTime() : 0
+              return timeB - timeA
+            })[0] || inspectedList[0]
+
           cache.set({
             fileId: entry.id,
             filename,
             v: 2, // flag de versão da extração multi-norma (WINDA ID)
             modifiedTime: entry.modifiedTime || undefined,
-            code: inspectedList[0]?.code || null,
-            issueDate: inspectedList[0]?.issueDate?.toISOString(),
-            expirationDate: inspectedList[0]?.expirationDate?.toISOString(),
-            statusEHS: inspectedList[0]?.statusEHS || 'INDETERMINADO',
-            statusDetail: inspectedList[0]?.statusDetail || '',
+            code: primaryDoc?.code || null,
+            issueDate: primaryDoc?.issueDate?.toISOString(),
+            expirationDate: primaryDoc?.expirationDate?.toISOString(),
+            statusEHS: primaryDoc?.statusEHS || 'INDETERMINADO',
+            statusDetail: primaryDoc?.statusDetail || '',
             source: ocrUsed
               ? 'IMAGE_FALLBACK'
-              : inspectedList[0]?.source || 'PDF_CONTENT',
-            classificationSource: inspectedList[0]?.classificationSource,
-            matchedTerm: inspectedList[0]?.matchedTerm,
-            extractedClause: inspectedList[0]?.extractedClause,
+              : primaryDoc?.source || 'PDF_CONTENT',
+            classificationSource: primaryDoc?.classificationSource,
+            matchedTerm: primaryDoc?.matchedTerm,
+            extractedClause: primaryDoc?.extractedClause,
             documents: inspectedList.map(item => ({
               code: item.code,
               issueDate: item.issueDate?.toISOString(),

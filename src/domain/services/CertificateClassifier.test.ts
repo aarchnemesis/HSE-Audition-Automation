@@ -237,4 +237,10 @@ describe('CertificateClassifier.classify', () => {
       CertificateClassifier.classify('05 - Cartao SUS e Vacinacao.pdf').code
     ).toBe('05')
   })
+
+  it('não classifica menção à empresa ARTH WIND como GWO ART (32)', () => {
+    const text = 'ARTH WIND SERVICES & CONSULTING EIRELI - PRESTACAO DE SERVICOS'
+    const result = CertificateClassifier.classify('contrato_prestacao.pdf', text)
+    expect(result.code).not.toBe('32')
+  })
 })

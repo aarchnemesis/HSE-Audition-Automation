@@ -2,8 +2,10 @@ import fs from 'fs'
 import path from 'path'
 import pdfParse from 'pdf-parse'
 import { Certificate, Inspector } from '../../domain/models/Certificate.js'
-import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
-import { PDFContentInspector } from '../../domain/services/PDFContentInspector.js'
+import {
+  PDFContentInspector,
+  createPdfPageCollector,
+} from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
 import {
   calculateDocExpiration,
@@ -44,10 +46,12 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
         if (!matchesFilter) continue
       }
 
-      const nameParts = folderName.split('-')
+      const nameParts = folderName.split(/[-–—_]/)
       const name = nameParts[0].trim()
       const role =
-        nameParts.length > 1 ? nameParts[1].trim() : 'TÉCNICO / INSPETOR'
+        nameParts.length > 1 && nameParts.slice(1).join(' - ').trim()
+          ? nameParts.slice(1).join(' - ').trim()
+          : 'TÉCNICO / INSPETOR'
 
       const certificates = new Map<string, Certificate>()
       const inspectorDir = path.join(this.baseDir, folderName)
@@ -82,12 +86,17 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
         const filename = entry.name
         const isPdf = filename.toLowerCase().endsWith('.pdf')
 
-        let pdfText = ''
+        let inspectedList: ReturnType<typeof PDFContentInspector.inspectPages> = []
         if (isPdf) {
           try {
             const buffer = fs.readFileSync(fullPath)
-            const parsed = await pdfParse(buffer)
-            pdfText = parsed.text || ''
+            const { pages, pagerender } = createPdfPageCollector()
+            await pdfParse(buffer, { pagerender })
+            inspectedList = PDFContentInspector.inspectPages(
+              filename,
+              pages,
+              this.refDate
+            )
           } catch (err: any) {
             console.warn(
               `[DriveFileSystemAdapter] Falha ao extrair texto do PDF ${filename}:`,
@@ -96,14 +105,16 @@ export class DriveFileSystemAdapter implements IDocumentProvider {
           }
         }
 
-        const inspected = PDFContentInspector.inspect(
-          filename,
-          isPdf ? pdfText : undefined,
-          this.refDate
-        )
+        if (inspectedList.length === 0) {
+          inspectedList = [
+            PDFContentInspector.inspect(filename, undefined, this.refDate),
+          ]
+        }
 
-        const code = inspected.code
-        if (code) {
+        for (const inspected of inspectedList) {
+          const code = inspected.code
+          if (!code) continue
+
           const cert: Certificate = {
             code,
             name: `Doc ${code}`,

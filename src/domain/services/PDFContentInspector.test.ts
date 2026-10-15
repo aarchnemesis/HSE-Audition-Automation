@@ -366,9 +366,68 @@ describe('PDFContentInspector', () => {
         [page1, page2],
         refDate
       )
-
       expect(results.length).toBe(1)
       expect(results[0].code).toBe('21')
+    })
+
+    it('deve extrair data de conclusao com UUID da Storz e espacos no formato ISO', () => {
+      const page = `
+        Wermeson de Oliveira Franco
+        Storz Servicos Tecnicos Ltda
+        participou do Curso GWO/BST - Modulo Primeiros Socorros
+        Certificado valido por 2 (Dois) anos.
+        Data de Conclusao:
+        aa1e582e-924d-4dac-8a5a-656e6053d179
+        2025 07 24
+      `
+      const filename = 'Wermeson de Oliveira Franco - SOS.pdf'
+      const results = PDFContentInspector.inspectPages(filename, [page], refDate)
+
+      expect(results.length).toBe(1)
+      expect(results[0].code).toBe('16')
+      expect(results[0].statusEHS).toBe('CONFORME')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2025-07-24')
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2027-07-24')
+    })
+
+    it('deve extrair data de aditivo contratual com espaco em encerrando- se em documento multipaginas', () => {
+      const page1 = `
+        CONTRATO DE PRESTACAO DE SERVICOS ESPECIALIZADOS
+        DE INSPECÃO DE EQUIPAMENTOS COM PILOTAGEM DE DRONES
+        Página 1 de 20
+      `
+      const page2 = `
+        DO OBJETO CLÁUSULA PRIMEIRA
+        ARTH WIND SERVICES & CONSULTING EIRELI
+        Página 2 de 20
+      `
+      const page24 = `
+        TERMO ADITIVO AO CONTRATO DE PRESTACAO DE SERVICOS
+        Página 1 de 2
+      `
+      const page25 = `
+        Paragrafo Primeiro. As partes decidem prorrogar a vigencia do Contrato por mais 12 (doze) meses,
+        encerrando- se em 11/05/2027, podendo ser rescindido a qualquer momento.
+        Sorocaba/SP, 11 de maio de 2026.
+        Clicksign b55fc124-18a1-413c-9d3a-b7f0ee87570a
+      `
+      const filename = '04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf'
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page1, page2, page24, page25],
+        new Date('2026-10-15T00:00:00Z')
+      )
+
+      const aditivoDoc = results.find(r => r.code === '40.1')
+      expect(aditivoDoc).toBeDefined()
+      expect(aditivoDoc?.statusEHS).toBe('CONFORME')
+      expect(aditivoDoc?.expirationDate?.toISOString().slice(0, 10)).toBe('2027-05-11')
+      expect(aditivoDoc?.issueDate?.toISOString().slice(0, 10)).toBe('2026-05-11')
+      expect(aditivoDoc?.extractedClause).toContain('encerrando- se em 11/05/2027')
+
+      // Garante que ARTH WIND na pagina 2 nao gerou falso positivo de GWO ART (32)
+      const gwoDoc = results.find(r => r.code === '32')
+      expect(gwoDoc).toBeUndefined()
     })
   })
 })

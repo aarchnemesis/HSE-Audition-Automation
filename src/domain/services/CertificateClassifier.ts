@@ -50,7 +50,7 @@ const SEMANTIC_RULES: Array<{
   // GWO ART (Advanced Rescue) - módulos Nacelle/Hub
   {
     regex:
-      /\b(?:ART-?H|ART-?N|ART-?HR|ART-?NR|GWO\s+ART|ADVANCED\s+RESCUE|HUB[\s,]+SPINNER|NACELLE[\s,]+TORRE)\b/i,
+      /\b(?:ART[-_]H|ART[-_]N|ART[-_]?HR|ART[-_]?NR|ARTH-R|ARTN-R|GWO\s+ART|ADVANCED\s+RESCUE|HUB[\s,]+SPINNER|NACELLE[\s,]+TORRE)\b/i,
     code: '32',
     matchedTerm: 'GWO ART',
   },
@@ -274,7 +274,7 @@ const SEMANTIC_RULES: Array<{
   // Contrato PJ / Aditivo
   {
     regex:
-      /\b(?:TERMO\s+ADITIVO|ADITIVO\s+(?:AO\s+)?CONTRATO|ADITIVO\s+CONTRATUAL|PRIMEIRO\s+TERMO\s+ADITIVO)\b/i,
+      /\b(?:TERMO\s+ADITIVO|ADITIVO\s+(?:AO\s+)?CONTRATO|ADITIVO\s+CONTRATUAL|PRIMEIRO\s+TERMO\s+ADITIVO|PRORROGA(?:R|CAO|ÇÃO)\s+(?:DA|A)?\s*VIG[EÊ]NCIA\s+(?:DO\s+)?CONTRATO|ADITAMENTO)\b/i,
     code: '40.1',
     matchedTerm: 'Aditivo ao Contrato (PJ)',
   },
