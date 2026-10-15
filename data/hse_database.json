@@ -18781,11 +18781,12 @@
     "expirationDate": "2026-04-01T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "607048",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | SOLICITADO NA STORZ (607048 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "14/12/2026",
+    "detail": "VENCIDO há 197 dias (01/04/2026) VENCIDO há 195 dias (01/04/2026) | EM ANDAMENTO NA STORZ (607048 - Progresso: 3%) [Prazo Storz: 14/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 01/04/2026, ANTES do prazo da Storz (14/12/2026)!",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-15T19:03:19.488Z"
   },
   {
     "inspectorId": "rpo_77",
