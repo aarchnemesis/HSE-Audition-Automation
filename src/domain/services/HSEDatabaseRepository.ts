@@ -58,6 +58,7 @@ export class HSEDatabaseRepository {
   ): void {
     const records: HSEDatabaseRecord[] = []
     const timestamp = new Date().toISOString()
+    const previousLastUpdated = this.loadPreviousLastUpdated()
 
     for (const audit of auditResults) {
       const inspector = inspectors.find(i =>
@@ -71,7 +72,7 @@ export class HSEDatabaseRepository {
         if (item.status === 'AUSENTE' && ELECTIVE_DOC_CODES.has(item.code))
           continue
 
-        records.push({
+        const record: Omit<HSEDatabaseRecord, 'lastUpdated'> = {
           inspectorId: inspector?.id || audit.inspectorName,
           inspectorName: audit.inspectorName,
           role: inspector?.role || 'TÉCNICO',
@@ -99,7 +100,13 @@ export class HSEDatabaseRepository {
             (RPOAuditStatusManager.isCollabValidated(audit.inspectorName)
               ? 'VALIDADO'
               : 'PENDENTE_REVISAO'),
-          lastUpdated: timestamp,
+        }
+        // lastUpdated = quando o registro mudou de fato. Registro idêntico ao do sync anterior mantém
+        // a data antiga, senão cada execução reescreveria todos os ~1.300 registros no commit.
+        records.push({
+          ...record,
+          lastUpdated:
+            previousLastUpdated.get(JSON.stringify(record)) ?? timestamp,
         })
       }
     }
@@ -130,6 +137,29 @@ export class HSEDatabaseRepository {
         )
       }
     }
+  }
+
+  /** Mapa conteúdo-do-registro (sem lastUpdated) → lastUpdated, a partir do último snapshot salvo. */
+  private loadPreviousLastUpdated(): Map<string, string> {
+    // Leitura crua de propósito: getAllRecords() normaliza `modality`, e o registro normalizado
+    // nunca bateria com o recém-calculado.
+    const candidates = this.isCustomPath
+      ? [this.dbPath]
+      : [path.join(process.cwd(), 'data', 'hse_database.json'), this.dbPath]
+    const previous = new Map<string, string>()
+    for (const p of candidates) {
+      try {
+        const parsed = JSON.parse(fs.readFileSync(p, 'utf-8'))
+        if (!Array.isArray(parsed)) continue
+        for (const { lastUpdated, ...rest } of parsed) {
+          if (lastUpdated) previous.set(JSON.stringify(rest), lastUpdated)
+        }
+        return previous
+      } catch {
+        // Sem snapshot anterior legível: todos os registros recebem o timestamp atual
+      }
+    }
+    return previous
   }
 
   /**

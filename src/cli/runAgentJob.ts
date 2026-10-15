@@ -2,6 +2,13 @@ import 'dotenv/config'
 import { execSync } from 'child_process'
 import path from 'path'
 
+// Datas de nome de arquivo viram meia-noite local. Na VPS (UTC) isso gravava 11/05 como 21h do dia
+// 10 em Brasília e alternava T00/T03 com os dados gerados no notebook. Herdado pelos subprocessos.
+process.env.TZ ||= 'America/Sao_Paulo'
+
+// Só quem publica (a VPS) mexe no git. Em qualquer outra máquina o job gera o dashboard local e para.
+const PUBLISH = process.env.HSE_PUBLISH === '1'
+
 const validJobs = [
   'dashboard',
   'do-report',
@@ -23,52 +30,104 @@ function runCommand(cmd: string, description: string): void {
   }
 }
 
+function git(args: string): string {
+  return execSync(`git ${args}`, {
+    cwd: process.cwd(),
+    encoding: 'utf-8',
+    stdio: ['ignore', 'pipe', 'inherit'],
+  }).trim()
+}
+
+/** Para comandos que podem não ter o que fazer (ex.: abortar um rebase que não existe). */
+function tryGit(args: string): string | null {
+  try {
+    return execSync(`git ${args}`, {
+      cwd: process.cwd(),
+      encoding: 'utf-8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Começa do origin/main: o código mais recente já vale para o sync desta execução, e commits
+ * locais de uma publicação que falhou são descartados (os dados são regenerados a cada sync).
+ */
+function alignWithOrigin(): void {
+  console.log('\n[AgentRunner] Alinhando com origin/main...')
+  const lockfileBefore = tryGit('rev-parse HEAD:pnpm-lock.yaml')
+
+  // Uma execução anterior pode ter parado no meio de um rebase (HEAD solto): sem limpar isso,
+  // todo sync seguinte falharia até alguém entrar na VPS.
+  tryGit('rebase --abort')
+  tryGit('merge --abort')
+  git('fetch origin main')
+  git('reset --hard')
+  git('checkout -B main origin/main')
+  // Arquivo solto em data/ (ex.: .tmp de uma gravação interrompida) seria pego pelo `git add data/`
+  git('clean -fd -- data/ public/')
+
+  if (tryGit('rev-parse HEAD:pnpm-lock.yaml') !== lockfileBefore) {
+    runCommand(
+      'pnpm install --frozen-lockfile',
+      'Atualizando dependencias (pnpm-lock.yaml mudou)'
+    )
+  }
+  console.log(
+    `[AgentRunner] Rodando o codigo de ${git('log -1 --format="%h %s"')}`
+  )
+}
+
+function publishDashboard(): void {
+  console.log('\n[AgentRunner] Verificando alteracoes para deploy na Vercel...')
+  git('add public/index.html data/')
+  const changed = git('diff --staged --name-only')
+  if (!changed) {
+    console.log(
+      '[AgentRunner] Nenhuma alteracao no dashboard ou nos dados. Vercel ja esta atualizada.'
+    )
+    return
+  }
+
+  console.log('[AgentRunner] Arquivos modificados:\n' + changed)
+  git('commit -m "chore(data): auto-update HSE dashboard via agent"')
+  try {
+    git('push origin HEAD:main')
+  } catch {
+    // Um commit de código chegou durante a execução. Como só a VPS commita data/, o rebase não
+    // tem conflito; se tiver, é para falhar e alguém olhar (nada de -X theirs silencioso).
+    console.log('[AgentRunner] Push recusado, rebase em cima do origin/main...')
+    try {
+      git('pull --rebase origin main')
+    } catch (err) {
+      tryGit('rebase --abort')
+      throw err
+    }
+    git('push origin HEAD:main')
+  }
+  console.log(
+    '[AgentRunner] Commit e push efetuados com sucesso. Deploy acionado na Vercel.'
+  )
+}
+
 function syncAndDeployDashboard(): void {
-  // 1. Executa relatorio e dashboard sem disparo de e-mail desnecessario
+  if (PUBLISH) alignWithOrigin()
+
+  // Executa relatorio e dashboard sem disparo de e-mail desnecessario
   runCommand(
     'npx tsx src/cli/runHSEReportExporter.ts --no-email',
     'Sincronizacao SSOT e Geracao do Dashboard HTML'
   )
 
-  // 2. Commit e push para publicar na Vercel
-  console.log('\n[AgentRunner] Verificando alteracoes para deploy na Vercel...')
-  try {
-    execSync('git add public/index.html data/', {
-      stdio: 'inherit',
-      cwd: process.cwd(),
-    })
-    const diff = execSync('git diff --staged --name-only', {
-      cwd: process.cwd(),
-    })
-      .toString()
-      .trim()
-    if (!diff) {
-      console.log(
-        '[AgentRunner] Nenhuma alteracao no dashboard ou nos dados. Vercel ja esta atualizada.'
-      )
-      return
-    }
-
-    console.log('[AgentRunner] Arquivos modificados:\n' + diff)
-    const commitMsg = 'chore(data): auto-update HSE dashboard via agent'
-    execSync(`git commit -m "${commitMsg}"`, {
-      stdio: 'inherit',
-      cwd: process.cwd(),
-    })
-    execSync('git pull origin main --rebase -X theirs', {
-      stdio: 'inherit',
-      cwd: process.cwd(),
-    })
-    execSync('git push origin main', { stdio: 'inherit', cwd: process.cwd() })
+  if (!PUBLISH) {
     console.log(
-      '[AgentRunner] Commit e push efetuados com sucesso. Deploy acionado na Vercel.'
+      '\n[AgentRunner] HSE_PUBLISH != 1: dashboard gerado localmente, nada foi commitado (quem publica e a VPS).'
     )
-  } catch (gitErr: any) {
-    console.warn(
-      '[AgentRunner] Aviso durante etapa de git push:',
-      gitErr?.message || gitErr
-    )
+    return
   }
+  publishDashboard()
 }
 
 function runDoReport(): void {

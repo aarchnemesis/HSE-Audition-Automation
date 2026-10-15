@@ -1,6 +1,27 @@
 import fs from 'fs'
 import path from 'path'
 
+/**
+ * Versão da extração de datas de Contrato/Aditivo (04, 04.1, 40, 40.1). Subir este número no mesmo
+ * commit de qualquer correção na lógica de contrato: no próximo sync, só os PDFs que contêm contrato
+ * são baixados e re-inspecionados (~320 em out/2026, muitos são pacotes de admissão com contrato
+ * junto), sem precisar apagar entradas do cache na mão.
+ * Separado do `v` do GWO porque aquele gate testa `v !== 2` e quebraria com um bump global.
+ */
+export const CONTRACT_EXTRACTOR_VERSION = 1
+
+const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
+
+export function isContractEntry(entry: CachedPDFEntry): boolean {
+  return (
+    CONTRACT_CODES.includes(entry.code || '') ||
+    Boolean(
+      entry.documents?.some(d => CONTRACT_CODES.includes(d.code || ''))
+    ) ||
+    /contrat|aditiv/i.test(entry.filename || '')
+  )
+}
+
 export interface CachedPDFDocument {
   code: string | null
   issueDate?: string
@@ -30,6 +51,8 @@ export interface CachedPDFEntry {
   documents?: CachedPDFDocument[]
   /** Versão do motor de extração */
   v?: number
+  /** Versão da extração de contrato (ver CONTRACT_EXTRACTOR_VERSION) */
+  cv?: number
 }
 
 export class PDFContentCache {
@@ -72,11 +95,27 @@ export class PDFContentCache {
                 // Invalida o cache de documentos GWO para forçar re-processamento (multi-norma WINDA ID patch)
                 // Se for um certificado GWO ('16', '17', '19', '21', '30', '32') e não tiver a flag de versão, ignora
                 const isGwo =
-                  ['16', '17', '19', '21', '30', '32'].includes(entry.code || '') ||
-                  (entry.documents && entry.documents.some(d => ['16', '17', '19', '21', '30', '32'].includes(d.code || '')))
+                  ['16', '17', '19', '21', '30', '32'].includes(
+                    entry.code || ''
+                  ) ||
+                  (entry.documents &&
+                    entry.documents.some(d =>
+                      ['16', '17', '19', '21', '30', '32'].includes(
+                        d.code || ''
+                      )
+                    ))
 
                 if (isGwo && (entry as any).v !== 2) {
                   this.isDirty = true // forçará o save sem essas entradas
+                  continue
+                }
+
+                // Contrato extraído por uma versão anterior da lógica: re-inspeciona no próximo sync
+                if (
+                  isContractEntry(entry) &&
+                  (entry.cv ?? 0) < CONTRACT_EXTRACTOR_VERSION
+                ) {
+                  this.isDirty = true
                   continue
                 }
 

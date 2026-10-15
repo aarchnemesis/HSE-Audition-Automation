@@ -11,7 +11,10 @@ import {
 } from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
 import { TesseractOcrAdapter } from '../ocr/TesseractOcrAdapter.js'
-import { PDFContentCache } from './PDFContentCache.js'
+import {
+  CONTRACT_EXTRACTOR_VERSION,
+  PDFContentCache,
+} from './PDFContentCache.js'
 import {
   calculateDocExpiration,
   parseDateFromFilename,
@@ -265,6 +268,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
             fileId: entry.id,
             filename,
             v: 2, // flag de versão da extração multi-norma (WINDA ID)
+            cv: CONTRACT_EXTRACTOR_VERSION,
             modifiedTime: entry.modifiedTime || undefined,
             code: primaryDoc?.code || null,
             issueDate: primaryDoc?.issueDate?.toISOString(),

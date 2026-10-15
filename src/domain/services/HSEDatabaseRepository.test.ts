@@ -1,7 +1,7 @@
 import fs from 'fs'
 import os from 'os'
 import path from 'path'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { Inspector } from '../models/Certificate.js'
 import { TripleAuditResult } from './AuditTriangulator.js'
 import { HSEDatabaseRepository } from './HSEDatabaseRepository.js'
@@ -95,5 +95,63 @@ describe('HSEDatabaseRepository.saveAuditSnapshot', () => {
     repo.saveAuditSnapshot([auditResult], [makeInspector()])
     const records = repo.getAllRecords()
     expect(records).toHaveLength(1)
+  })
+})
+
+describe('HSEDatabaseRepository — lastUpdated só muda quando o registro muda', () => {
+  const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'hse-db-lastupdated-'))
+
+  afterEach(() => {
+    vi.useRealTimers()
+    fs.rmSync(tmpDir, { recursive: true, force: true })
+    fs.mkdirSync(tmpDir)
+  })
+
+  const aso = (status: 'CONFORME' | 'VENCIDO', detail: string) => ({
+    code: '01',
+    reqName: 'ASO',
+    status,
+    isModalityCompliant: true,
+    hasDriveDoc: true,
+    // Modalidade diferente da padrão: o registro cru precisa bater mesmo assim
+    actualModality: 'PRESENCIAL',
+    detail,
+  })
+  const sit = {
+    code: '25',
+    reqName: 'SIT (Vestas)',
+    status: 'CONFORME' as const,
+    isModalityCompliant: true,
+    hasDriveDoc: true,
+    actualModality: 'PRESENCIAL',
+    detail: 'Válido.',
+  }
+
+  function save(repo: HSEDatabaseRepository, at: string, items: any[]) {
+    vi.setSystemTime(new Date(at))
+    repo.saveAuditSnapshot([makeAuditResult(items)], [makeInspector()])
+    return JSON.parse(fs.readFileSync(path.join(tmpDir, 'db.json'), 'utf-8'))
+  }
+
+  it('mantém a data de registros idênticos e atualiza só o que mudou', () => {
+    vi.useFakeTimers()
+    const repo = new HSEDatabaseRepository(path.join(tmpDir, 'db.json'))
+
+    save(repo, '2026-10-15T10:00:00.000Z', [aso('CONFORME', 'Válido.'), sit])
+    const second = save(repo, '2026-10-15T10:45:00.000Z', [
+      aso('VENCIDO', 'Vencido.'),
+      sit,
+    ])
+
+    const byCode = Object.fromEntries(second.map((r: any) => [r.docCode, r]))
+    expect(byCode['01'].lastUpdated).toBe('2026-10-15T10:45:00.000Z')
+    expect(byCode['25'].lastUpdated).toBe('2026-10-15T10:00:00.000Z')
+  })
+
+  it('sem snapshot anterior, todos recebem o timestamp atual', () => {
+    vi.useFakeTimers()
+    const repo = new HSEDatabaseRepository(path.join(tmpDir, 'db.json'))
+    const first = save(repo, '2026-10-15T10:00:00.000Z', [sit])
+    expect(first[0].lastUpdated).toBe('2026-10-15T10:00:00.000Z')
   })
 })
