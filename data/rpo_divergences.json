@@ -3795,11 +3795,12 @@
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
     "docCode": "31",
     "docName": "Elevador (JASO)",
+    "driveExpiration": "2027-05-15T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "divergent": true,
     "divergenceKind": "SOMENTE_DRIVE",
-    "detail": "Certificado presente no Drive (31 – Elevador (JASO) – SEM_DATA - WERMESON DE OLIVEIRA FRANCO.pdf), porém sem data identificada e sem registro na RPO.",
-    "recommendedAction": "Conferir data e incluir na RPO"
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive"
   },
   {
     "inspectorName": "EMERSON PALLOTTA RIBEIRO",
@@ -9719,7 +9720,7 @@
     "inspectorName": "ADENILÇO QUEIROZ DA SILVA",
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
-    "driveExpiration": "2027-01-29T03:00:00.000Z",
+    "driveExpiration": "2027-01-30T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-01-20T12:00:00.000Z",
     "divergent": true,
@@ -9727,9 +9728,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 9 dia(s) (29/01/2027 no Drive vs 20/01/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 9,
-    "recommendedAction": "Atualizar data na RPO para 29/01/2027"
+    "detail": "Drive mais recente que a RPO em 10 dia(s) (30/01/2027 no Drive vs 20/01/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 10,
+    "recommendedAction": "Atualizar data na RPO para 30/01/2027"
   },
   {
     "inspectorName": "ADENILÇO QUEIROZ DA SILVA",

@@ -68148,21 +68148,25 @@
   },
   {
     "fileId": "1qt3IHPFfLA0RaodvmQW_LdBMq9WmCnxu",
-    "filename": "31 – Elevador (JASO) – SEM_DATA - WERMESON DE OLIVEIRA FRANCO.pdf",
+    "filename": "31 – Elevador (JASO) – 15.05.2027 - WERMESON DE OLIVEIRA FRANCO.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:22:22.904Z",
+    "modifiedTime": "2026-10-16T13:06:22.923Z",
     "code": "31",
-    "statusEHS": "INDETERMINADO",
-    "statusDetail": "Data não informada ou formato inválido",
+    "issueDate": "2027-05-15T03:00:00.000Z",
+    "expirationDate": "2027-05-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/05/2027",
     "source": "FILENAME",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
     "documents": [
       {
         "code": "31",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
+        "issueDate": "2027-05-15T03:00:00.000Z",
+        "expirationDate": "2027-05-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/05/2027",
         "source": "FILENAME",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Elevador (JASO)"
@@ -68332,7 +68336,7 @@
     "filename": "10 – NR-01 Integração – 14.01.2026 - WERMESON DE OLIVEIRA FRANCO.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T12:48:35.249Z",
+    "modifiedTime": "2026-10-16T13:06:19.081Z",
     "code": "10",
     "issueDate": "2026-01-14T03:00:00.000Z",
     "expirationDate": "2076-01-14T03:00:00.000Z",
@@ -112559,7 +112563,7 @@
     "filename": "07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T12:48:33.902Z",
+    "modifiedTime": "2026-10-16T13:06:17.783Z",
     "code": "07",
     "issueDate": "2026-12-06T03:00:00.000Z",
     "expirationDate": "2026-12-06T03:00:00.000Z",
@@ -152680,24 +152684,30 @@
   },
   {
     "fileId": "1gawi8NGYcAY88N3owpbB3lTxfvgBqrne",
-    "filename": "07 – Seguro de Vida – SEM_DATA - RAMON RAMIRES COSTA CIRINO.pdf",
+    "filename": "07 – Seguro de Vida – 06.12.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:55:17.176Z",
+    "modifiedTime": "2026-10-16T13:06:24.443Z",
     "code": "07",
-    "statusEHS": "INDETERMINADO",
-    "statusDetail": "Data não informada ou formato inválido",
-    "source": "FILENAME",
+    "issueDate": "2026-12-06T03:00:00.000Z",
+    "expirationDate": "2026-12-06T03:00:00.000Z",
+    "statusEHS": "VENCE_60",
+    "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/12/2026)",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Seguro de Vida",
+    "extractedClause": "Data do arquivo: 07 – Seguro de Vida – 06.12.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
     "documents": [
       {
         "code": "07",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "FILENAME",
+        "issueDate": "2026-12-06T03:00:00.000Z",
+        "expirationDate": "2026-12-06T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/12/2026)",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Seguro de Vida"
+        "matchedTerm": "Seguro de Vida",
+        "extractedClause": "Data do arquivo: 07 – Seguro de Vida – 06.12.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
       }
     ]
   },
@@ -157714,7 +157724,7 @@
     "filename": "10 – NR-01 Integração – 04.08.2024 - NARDEL DELON NOVAIS ROCHA.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T12:48:36.453Z",
+    "modifiedTime": "2026-10-16T13:06:20.340Z",
     "code": "10",
     "issueDate": "2024-08-04T03:00:00.000Z",
     "expirationDate": "2074-08-04T03:00:00.000Z",
@@ -163331,7 +163341,7 @@
     "filename": "10 – NR-01 Integração – 04.08.2024 - THIAGO LIMA SANTOS SILVA.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T12:48:37.602Z",
+    "modifiedTime": "2026-10-16T13:06:21.653Z",
     "code": "10",
     "issueDate": "2024-08-04T03:00:00.000Z",
     "expirationDate": "2074-08-04T03:00:00.000Z",
@@ -179487,6 +179497,1991 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Aditivo ao Contrato (PJ) (via PDF) (Pág. 23)",
         "extractedClause": "Data do arquivo: 40 – Contrato + Aditivo – 08.01.2027 - JOSÉ MARCELO MAGALHÃES SOUSA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "12bU8S2ZwFEKCGFEEge4jqqAM1fyzEatN",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - LUANA QUEIROZ DE SOUSA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:34:15.999Z",
+    "code": "21",
+    "issueDate": "2027-10-31T03:00:00.000Z",
+    "expirationDate": "2027-10-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (Pág. 2)",
+    "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - LUANA QUEIROZ DE SOUSA.pdf",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2027-10-31T03:00:00.000Z",
+        "expirationDate": "2027-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - LUANA QUEIROZ DE SOUSA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1VBf0hXWn57_VTDdJp4HbYwzcbUy4u_ws",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 04.11.2027 - LUANA QUEIROZ DE SOUSA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:34:05.930Z",
+    "code": "15",
+    "issueDate": "2027-11-04T03:00:00.000Z",
+    "expirationDate": "2027-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Sorocaba/SP, 04 de Novembro de 2025 | Atualizado via nome: 04/11/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-11-04T03:00:00.000Z",
+        "expirationDate": "2027-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Sorocaba/SP, 04 de Novembro de 2025 | Atualizado via nome: 04/11/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1bGOdsUqc7SQolNfc3vTKtZEpWqH4VEj9",
+    "filename": "19 – GWO NR-23 Combate a Incêndio (F+R) – 03.09.2028 - EDCLEI DA CONCEIÇÃO CUSTÓDIO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:45:23.325Z",
+    "code": "30",
+    "issueDate": "2026-07-29T03:00:00.000Z",
+    "expirationDate": "2076-07-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-29T03:00:00.000Z",
+        "expirationDate": "2076-07-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "19",
+        "issueDate": "2028-09-03T03:00:00.000Z",
+        "expirationDate": "2028-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 19 – GWO NR-23 Combate a Incêndio (F+R) – 03.09.2028 - EDCLEI DA CONCEIÇÃO CUSTÓDIO.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1loZNF0rjQp3JIntJvl08o34q5wdkD3m0",
+    "filename": "17 – GWO NR-17 Ergonomia (F+R) – 03.09.2028 - EDCLEI DA CONCEIÇÃO CUSTÓDIO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:45:10.488Z",
+    "code": "30",
+    "issueDate": "2026-07-29T03:00:00.000Z",
+    "expirationDate": "2076-07-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-29T03:00:00.000Z",
+        "expirationDate": "2076-07-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2028-09-03T03:00:00.000Z",
+        "expirationDate": "2028-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 17 – GWO NR-17 Ergonomia (F+R) – 03.09.2028 - EDCLEI DA CONCEIÇÃO CUSTÓDIO.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1bxZ477TlTyd8_BwguYeCEkl3mv8JI3uW",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 18.12.2027 - EDCLEI DA CONCEIÇÃO CUSTÓDIO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:57.811Z",
+    "code": "15",
+    "issueDate": "2027-12-18T03:00:00.000Z",
+    "expirationDate": "2027-12-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/12/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 19 de Abril de 2025 | Atualizado via nome: 18/12/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-12-18T03:00:00.000Z",
+        "expirationDate": "2027-12-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/12/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 19 de Abril de 2025 | Atualizado via nome: 18/12/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1P0ufEnsJ1cBuoX2ds0cts2HH2KrbgloO",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 28.07.2028 - CAIO FELIPE RIBEIRO RODRIGUES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:42:32.581Z",
+    "code": "21",
+    "issueDate": "2028-07-28T03:00:00.000Z",
+    "expirationDate": "2028-07-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/07/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 28.07.2028 - CAIO FELIPE RIBEIRO RODRIGUES.pdf",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2028-07-28T03:00:00.000Z",
+        "expirationDate": "2028-07-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/07/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 28.07.2028 - CAIO FELIPE RIBEIRO RODRIGUES.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1enXaJ8sTG4pSlIIQiqJ8eR0DL1EjNI6f",
+    "filename": "22 – LOTO (F+R) – 07.09.2028 - ELIAS DOS SANTOS RODRIGUES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:46:06.140Z",
+    "code": "14",
+    "issueDate": "2028-09-07T03:00:00.000Z",
+    "expirationDate": "2028-09-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 07/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11 (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 22 – LOTO (F+R) – 07.09.2028 - ELIAS DOS SANTOS RODRIGUES.pdf",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2028-09-07T03:00:00.000Z",
+        "expirationDate": "2028-09-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 22 – LOTO (F+R) – 07.09.2028 - ELIAS DOS SANTOS RODRIGUES.pdf"
+      },
+      {
+        "code": "22",
+        "issueDate": "2028-09-07T03:00:00.000Z",
+        "expirationDate": "2028-09-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO (via PDF) (Pág. 3)",
+        "extractedClause": "Data do arquivo: 22 – LOTO (F+R) – 07.09.2028 - ELIAS DOS SANTOS RODRIGUES.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1VtCmRjAPTIaY1wcvqkXzs-N_xC0oiBVr",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 04.11.2024 - ELIAS DOS SANTOS RODRIGUES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:45:47.499Z",
+    "code": "21",
+    "issueDate": "2024-12-20T03:00:00.000Z",
+    "expirationDate": "2026-12-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/12/2026",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+    "extractedClause": "Log gerado em 20 de dezembro de 2024",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2024-12-20T03:00:00.000Z",
+        "expirationDate": "2026-12-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/12/2026",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+        "extractedClause": "Log gerado em 20 de dezembro de 2024"
+      }
+    ]
+  },
+  {
+    "fileId": "1lT0sFv80qIjTOoJuZPM6civFruu7RCPm",
+    "filename": "12 – NR-10 Básico (F+R) – 10.09.2026 - ELIAS DOS SANTOS RODRIGUES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:45:36.084Z",
+    "code": "12",
+    "issueDate": "2026-09-10T03:00:00.000Z",
+    "expirationDate": "2028-09-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Concluido no período de 19 de Setembro de 2024 a 10 de Outubro de 2024 | Atualizado via nome: 10/09/2026",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-10T03:00:00.000Z",
+        "expirationDate": "2028-09-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Concluido no período de 19 de Setembro de 2024 a 10 de Outubro de 2024 | Atualizado via nome: 10/09/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1rCHpW21cKjiFta9cMMJM8seIjJNHyrfO",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 09.03.2025 - DANIEL FERREIRA DA SILVA FILHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:25.178Z",
+    "code": "30",
+    "issueDate": "2025-03-09T03:00:00.000Z",
+    "expirationDate": "2075-03-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2025-03-17T03:00:00.000Z",
+        "expirationDate": "2027-03-17T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/03/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 17 mar 2025"
+      },
+      {
+        "code": "30",
+        "issueDate": "2025-03-09T03:00:00.000Z",
+        "expirationDate": "2075-03-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1YfymAbYeK2j-TxILLEhUSv2iUgtzrLWK",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 18.03.2027 - DANIEL FERREIRA DA SILVA FILHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:15.442Z",
+    "code": "15",
+    "issueDate": "2027-03-18T03:00:00.000Z",
+    "expirationDate": "2027-03-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/03/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Sorocaba/SP, 18 de Março de 2025 | Atualizado via nome: 18/03/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-03-18T03:00:00.000Z",
+        "expirationDate": "2027-03-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/03/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Sorocaba/SP, 18 de Março de 2025 | Atualizado via nome: 18/03/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1dvlpjxmk8lbjFH26oJu6nxXwXHdBWfN1",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 11.02.2028 - ANTONIO RAFAEL DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:42:20.655Z",
+    "code": "15",
+    "issueDate": "2028-02-11T03:00:00.000Z",
+    "expirationDate": "2028-02-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/02/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Sorocaba/SP, 11 de Fevereiro de 2026 | Atualizado via nome: 11/02/2028",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2028-02-11T03:00:00.000Z",
+        "expirationDate": "2028-02-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/02/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Sorocaba/SP, 11 de Fevereiro de 2026 | Atualizado via nome: 11/02/2028"
+      }
+    ]
+  },
+  {
+    "fileId": "1GhtlZHO_aeSIbmTNBKefVccyFff7Qqzc",
+    "filename": "22 – LOTO (F+R) – 12.06.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:37:18.899Z",
+    "code": "22",
+    "issueDate": "2028-06-12T03:00:00.000Z",
+    "expirationDate": "2028-06-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/06/2028",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "LOTO",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2028-06-12T03:00:00.000Z",
+        "expirationDate": "2028-06-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/06/2028",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO"
+      }
+    ]
+  },
+  {
+    "fileId": "14Ns97gRAbalHH7dqSNh2q0RgoTgPe0Ia",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:37:07.469Z",
+    "code": "30",
+    "issueDate": "2026-07-06T03:00:00.000Z",
+    "expirationDate": "2076-07-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-06T03:00:00.000Z",
+        "expirationDate": "2076-07-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1hFah-K9DD--0hkoqZT2aVYrBDlrdG2i3",
+    "filename": "20 – NR-33 Espaço Confinado (F+R) – 28.01.2027 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:36:52.303Z",
+    "code": "30",
+    "issueDate": "2026-01-30T03:00:00.000Z",
+    "expirationDate": "2076-01-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 16)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-01-30T03:00:00.000Z",
+        "expirationDate": "2027-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (Pág. 18)",
+        "extractedClause": "Assinou em 30 jan 2026"
+      },
+      {
+        "code": "27",
+        "issueDate": "2027-01-28T03:00:00.000Z",
+        "expirationDate": "2027-01-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 7)",
+        "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado (F+R) – 28.01.2027 - ADENILÇO QUEIROZ DA SILVA.pdf"
+      },
+      {
+        "code": "30",
+        "issueDate": "2026-01-30T03:00:00.000Z",
+        "expirationDate": "2076-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 16)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-01-30T03:00:00.000Z",
+        "expirationDate": "2028-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/01/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 16)",
+        "extractedClause": "no dia 30/01/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1c3ltz3QEwfZsBycIRIZsaHIvsOM6NXqe",
+    "filename": "19 – GWO NR-23 Combate a Incêndio (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:36:33.746Z",
+    "code": "30",
+    "issueDate": "2028-09-29T03:00:00.000Z",
+    "expirationDate": "2078-09-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "19",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 19 – GWO NR-23 Combate a Incêndio (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf"
+      },
+      {
+        "code": "30",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2078-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1ghR5lQOpmn7ZH5yXw1jlQhUcGs7uc3hM",
+    "filename": "16 – GWO Primeiros Socorros (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:36:13.163Z",
+    "code": "30",
+    "issueDate": "2026-07-07T03:00:00.000Z",
+    "expirationDate": "2076-07-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-07T03:00:00.000Z",
+        "expirationDate": "2076-07-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 29 set 2026"
+      },
+      {
+        "code": "27",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 16 – GWO Primeiros Socorros (F+R) – 29.09.2028 - ADENILÇO QUEIROZ DA SILVA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1gSGMRPZUmRje2wf8OCaQeekezkimSKCK",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 29.04.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:36:01.485Z",
+    "code": "15",
+    "issueDate": "2028-04-29T03:00:00.000Z",
+    "expirationDate": "2028-04-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/04/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Data do arquivo: 15 – NR-12 Segurança em Máquinas (F+R) – 29.04.2028 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2028-04-29T03:00:00.000Z",
+        "expirationDate": "2028-04-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/04/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Data do arquivo: 15 – NR-12 Segurança em Máquinas (F+R) – 29.04.2028 - ADENILÇO QUEIROZ DA SILVA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "16wFZi2544ZSrCzZTKMMM6-FZDoGOFE3N",
+    "filename": "17 – GWO NR-17 Ergonomia (F+R) – 08.07.2026 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:36:23.141Z",
+    "code": "30",
+    "issueDate": "2026-07-08T03:00:00.000Z",
+    "expirationDate": "2076-07-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-07-08T03:00:00.000Z",
+        "expirationDate": "2076-07-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 29 set 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1MX25uK7vrFZCA7GelnWinZEuLp-yFZlA",
+    "filename": "12 – NR-10 Básico (F+R) – 31.03.2026 - ADENILÇO QUEIROZ DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:35:53.093Z",
+    "code": "12",
+    "issueDate": "2026-03-31T03:00:00.000Z",
+    "expirationDate": "2028-03-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/03/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Assinou em 08 jul 2024 | Atualizado via nome: 31/03/2026",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-03-31T03:00:00.000Z",
+        "expirationDate": "2028-03-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/03/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Assinou em 08 jul 2024 | Atualizado via nome: 31/03/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1111V3np5nXpBBzLp7RqkeHYSo-VRxPWm",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 24.04.2025 - CARLOS EDUARDO FERREIRA ALVES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:05.532Z",
+    "code": "21",
+    "issueDate": "2025-05-05T03:00:00.000Z",
+    "expirationDate": "2027-05-05T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 05/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (Pág. 3)",
+    "extractedClause": "Assinou em 05 mai 2025",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2025-05-05T03:00:00.000Z",
+        "expirationDate": "2027-05-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (Pág. 3)",
+        "extractedClause": "Assinou em 05 mai 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1HZOj8cF0Vhnp_qqK5JwmorhLJJm0mEgP",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 16.04.2027 - CARLOS EDUARDO FERREIRA ALVES.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:42:54.483Z",
+    "code": "15",
+    "issueDate": "2027-04-16T03:00:00.000Z",
+    "expirationDate": "2027-04-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/04/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 11 de Abril de 2025 | Atualizado via nome: 16/04/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-04-16T03:00:00.000Z",
+        "expirationDate": "2027-04-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/04/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 11 de Abril de 2025 | Atualizado via nome: 16/04/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1qjxaFZjBoRZIhYqZYriH65xk5LUBiX_L",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 18.08.2026 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:10.475Z",
+    "code": "30",
+    "issueDate": "2026-08-13T03:00:00.000Z",
+    "expirationDate": "2076-08-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-08-13T03:00:00.000Z",
+        "expirationDate": "2076-08-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 9)",
+        "extractedClause": "Assinou em 29 set 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1jROECFjfwmGy6g4jw1X4sf_PMwL3y0RP",
+    "filename": "19 – GWO NR-23 Combate a Incêndio (F+R) – 29.09.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:00.896Z",
+    "code": "30",
+    "issueDate": "2026-08-11T03:00:00.000Z",
+    "expirationDate": "2076-08-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-08-11T03:00:00.000Z",
+        "expirationDate": "2076-08-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "19",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 19 – GWO NR-23 Combate a Incêndio (F+R) – 29.09.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1rPdL-UFr3Ow17i8Su1iVfC_x3n0XhDhZ",
+    "filename": "17 – GWO NR-17 Ergonomia (F+R) – 29.09.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:52.133Z",
+    "code": "30",
+    "issueDate": "2026-08-11T03:00:00.000Z",
+    "expirationDate": "2076-08-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-08-11T03:00:00.000Z",
+        "expirationDate": "2076-08-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2028-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 17 – GWO NR-17 Ergonomia (F+R) – 29.09.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1gT0NIMum-uDhBkCxXjOveWMvxCi-lqzA",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 22.08.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:43.029Z",
+    "code": "15",
+    "issueDate": "2028-08-22T03:00:00.000Z",
+    "expirationDate": "2028-08-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Data do arquivo: 15 – NR-12 Segurança em Máquinas (F+R) – 22.08.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2028-08-22T03:00:00.000Z",
+        "expirationDate": "2028-08-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Data do arquivo: 15 – NR-12 Segurança em Máquinas (F+R) – 22.08.2028 - DAVID KELSON DE SOUZA LOYOLA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1D1AZd7EZYeyEEK_FUhS7jluPT83lOQ8G",
+    "filename": "12 – NR-10 Básico (F+R) – 11.10.2027 - DAVID KELSON DE SOUZA LOYOLA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:43:35.243Z",
+    "code": "12",
+    "issueDate": "2025-10-13T03:00:00.000Z",
+    "expirationDate": "2027-10-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico (Pág. 3)",
+    "extractedClause": "Assinou em 13 out 2025",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2025-10-13T03:00:00.000Z",
+        "expirationDate": "2027-10-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (Pág. 3)",
+        "extractedClause": "Assinou em 13 out 2025"
+      },
+      {
+        "code": "27",
+        "issueDate": "2027-10-11T03:00:00.000Z",
+        "expirationDate": "2027-10-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 7)",
+        "extractedClause": "Data do arquivo: 12 – NR-10 Básico (F+R) – 11.10.2027 - DAVID KELSON DE SOUZA LOYOLA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "13A4QCEiwT-2bPDbobSLJz0gvKsNlzcAL",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 23.09.2024 - ALISSON MATEUS ALMEIDA DA COSTA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:37:51.195Z",
+    "code": "21",
+    "issueDate": "2025-01-09T03:00:00.000Z",
+    "expirationDate": "2027-01-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/01/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+    "extractedClause": "Assinou em 09 jan 2025",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2025-01-09T03:00:00.000Z",
+        "expirationDate": "2027-01-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 09 jan 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1kRJTIcjqriTDsNGewpobdXRiGDQQaAO6",
+    "filename": "20 – NR-33 Espaço Confinado (F+R) – 06.05.2026 - ALISSON MATEUS ALMEIDA DA COSTA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:37:39.375Z",
+    "code": "20",
+    "issueDate": "2026-05-06T03:00:00.000Z",
+    "expirationDate": "2027-05-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33",
+    "extractedClause": "nos dias 12 e 15 de Fevereiro de 2025 (validade 1 anos) | Atualizado via nome: 06/05/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-05-06T03:00:00.000Z",
+        "expirationDate": "2027-05-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33",
+        "extractedClause": "nos dias 12 e 15 de Fevereiro de 2025 (validade 1 anos) | Atualizado via nome: 06/05/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1mlZYLy7c86p3-JnjTgqzrSfw-K_RizNK",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 06.05.2027 - ALISSON MATEUS ALMEIDA DA COSTA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:37:28.457Z",
+    "code": "15",
+    "issueDate": "2027-05-06T03:00:00.000Z",
+    "expirationDate": "2027-05-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 18 de Janeiro de 2025 | Atualizado via nome: 06/05/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-05-06T03:00:00.000Z",
+        "expirationDate": "2027-05-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 18 de Janeiro de 2025 | Atualizado via nome: 06/05/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1-blfzuG7ZXK7XecTQhyVtse--VFRmTkL",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 14.09.2028 - CAIO VICTOR OLIVEIRA BALBINO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:42:43.274Z",
+    "code": "30",
+    "issueDate": "2026-09-02T03:00:00.000Z",
+    "expirationDate": "2076-09-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-09-02T03:00:00.000Z",
+        "expirationDate": "2076-09-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2028-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 14.09.2028 - CAIO VICTOR OLIVEIRA BALBINO.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "18pGl2XD8B7_1Ic0APX2bctqlhzsixryy",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:42:09.681Z",
+    "code": "21",
+    "issueDate": "2027-10-31T03:00:00.000Z",
+    "expirationDate": "2027-10-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (Pág. 2)",
+    "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2027-10-31T03:00:00.000Z",
+        "expirationDate": "2027-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 31.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1qqaVEuOXntIvcmW9PdYXrwlfByKncH7U",
+    "filename": "20 – NR-33 Espaço Confinado Vigia (F+R) – 19.09.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:56.603Z",
+    "code": "20",
+    "issueDate": "2027-09-19T03:00:00.000Z",
+    "expirationDate": "2027-09-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado Vigia (F+R) – 19.09.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2027-09-19T03:00:00.000Z",
+        "expirationDate": "2027-09-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado Vigia (F+R) – 19.09.2027 - ANTONIO GEICIANO MENDES SERPA.pdf"
+      },
+      {
+        "code": "28",
+        "issueDate": "2027-09-19T03:00:00.000Z",
+        "expirationDate": "2027-09-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Supervisor (via PDF) (Pág. 7)",
+        "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado Vigia (F+R) – 19.09.2027 - ANTONIO GEICIANO MENDES SERPA.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1cCheoaCg6jnSwZ8_YJdpH870c9zh4d41",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 30.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:46.038Z",
+    "code": "15",
+    "issueDate": "2027-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "no dia 11 de Outubro de 2025 | Atualizado via nome: 30/10/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "no dia 11 de Outubro de 2025 | Atualizado via nome: 30/10/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1xaYdcJcYGeGkWieIch3a3yZsDaQrJEVQ",
+    "filename": "14 – NR-11 Uso de Talha (F+R) – 30.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:36.896Z",
+    "code": "14",
+    "issueDate": "2027-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11",
+    "extractedClause": "no dia 12 de Outubro de 2025 | Atualizado via nome: 30/10/2027",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2027-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11",
+        "extractedClause": "no dia 12 de Outubro de 2025 | Atualizado via nome: 30/10/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1CSZyE3my91uTcqvdvBsEJ0RL5keMzxzt",
+    "filename": "13 – NR-10 SEP (F+R) – 30.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:27.694Z",
+    "code": "13",
+    "issueDate": "2027-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 SEP",
+    "extractedClause": "Concluido no período de 17 de Outubro de 2025 a 20 de Outubro de 2025 | Atualizado via nome: 30/10/2027",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2027-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP",
+        "extractedClause": "Concluido no período de 17 de Outubro de 2025 a 20 de Outubro de 2025 | Atualizado via nome: 30/10/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1fQCP0EH4WDn366IjIWnMMK89edh5KEQR",
+    "filename": "12 – NR-10 Básico (F+R) – 30.10.2027 - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:18.385Z",
+    "code": "12",
+    "issueDate": "2027-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Concluido no período de 13 de Outubro de 2025 a 16 de Outubro de 2025 | Atualizado via nome: 30/10/2027",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2027-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Concluido no período de 13 de Outubro de 2025 a 16 de Outubro de 2025 | Atualizado via nome: 30/10/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1fE9g7dXIlcbN8KBrP3WMee5bZW3fsAhk",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 23.01.2025 - EZEQUIEL CRUZ VIEIRA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:47:17.883Z",
+    "code": "30",
+    "issueDate": "2023-02-10T03:00:00.000Z",
+    "expirationDate": "2073-02-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 9)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2025-02-07T03:00:00.000Z",
+        "expirationDate": "2027-02-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 07 fev 2025"
+      },
+      {
+        "code": "30",
+        "issueDate": "2023-02-10T03:00:00.000Z",
+        "expirationDate": "2073-02-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 9)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1WDvrFBwZIJZ0JmbSNZLC0E76JZCCXC2y",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 23.12.2027 - EZEQUIEL CRUZ VIEIRA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:47:07.030Z",
+    "code": "15",
+    "issueDate": "2027-12-23T03:00:00.000Z",
+    "expirationDate": "2027-12-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/12/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 31 de Janeiro de 2025 | Atualizado via nome: 23/12/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-12-23T03:00:00.000Z",
+        "expirationDate": "2027-12-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/12/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 31 de Janeiro de 2025 | Atualizado via nome: 23/12/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "18DUb1Mkudq6aqns1SA7po-VTIMEhB1oa",
+    "filename": "12 – NR-10 Básico (F+R) – 11.10.2027 - EZEQUIEL CRUZ VIEIRA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:46:55.579Z",
+    "code": "12",
+    "issueDate": "2025-10-13T03:00:00.000Z",
+    "expirationDate": "2027-10-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico (Pág. 3)",
+    "extractedClause": "Assinou em 13 out 2025",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2025-10-13T03:00:00.000Z",
+        "expirationDate": "2027-10-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (Pág. 3)",
+        "extractedClause": "Assinou em 13 out 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1XXhJyrNX6D0RqQlrlUwAWbzF6-5U8jyz",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 01.05.2026 - DIEGO MENEZES NUNES COELHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:40.285Z",
+    "code": "21",
+    "issueDate": "2026-05-01T03:00:00.000Z",
+    "expirationDate": "2028-05-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 01.05.2026 - DIEGO MENEZES NUNES COELHO.pdf",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-05-01T03:00:00.000Z",
+        "expirationDate": "2028-05-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 01.05.2026 - DIEGO MENEZES NUNES COELHO.pdf"
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-01-08T03:00:00.000Z",
+        "expirationDate": "2027-01-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO Primeiros Socorros (via PDF) (Pág. 13)",
+        "extractedClause": "Assinou em 08 jan 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1a9FbHr0I_q4KnPE07EXg74-n1HJZOkVk",
+    "filename": "17 – GWO NR-17 Ergonomia (F+R) – 14.09.2028 - DIEGO MENEZES NUNES COELHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:29.679Z",
+    "code": "30",
+    "issueDate": "2026-09-01T03:00:00.000Z",
+    "expirationDate": "2076-09-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2076-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2028-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 17 – GWO NR-17 Ergonomia (F+R) – 14.09.2028 - DIEGO MENEZES NUNES COELHO.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1rUgASeE8vmtNP0jTQzi4RRDspaDXaMy4",
+    "filename": "16 – GWO Primeiros Socorros (F+R) – 14.09.2028 - DIEGO MENEZES NUNES COELHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:20.626Z",
+    "code": "30",
+    "issueDate": "2026-08-31T03:00:00.000Z",
+    "expirationDate": "2076-08-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-08-31T03:00:00.000Z",
+        "expirationDate": "2076-08-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 14 set 2026"
+      },
+      {
+        "code": "27",
+        "issueDate": "2028-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 16 – GWO Primeiros Socorros (F+R) – 14.09.2028 - DIEGO MENEZES NUNES COELHO.pdf"
+      },
+      {
+        "code": "21",
+        "issueDate": "2025-01-08T03:00:00.000Z",
+        "expirationDate": "2027-01-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 6)",
+        "extractedClause": "Assinou em 08 jan 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1Cll7OfnCPfhV_A0xSsvCYGXW_xY4fZB6",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 28.11.2026 - ERVESON NASCIMENTO DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:46:37.269Z",
+    "code": "15",
+    "issueDate": "2026-11-28T03:00:00.000Z",
+    "expirationDate": "2026-11-28T03:00:00.000Z",
+    "statusEHS": "VENCE_60",
+    "statusDetail": "ALERTA INICIAL: Vence em 43 dias (28/11/2026)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 27 de Novembro de 2024 | Atualizado via nome: 28/11/2026",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-28T03:00:00.000Z",
+        "expirationDate": "2026-11-28T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 43 dias (28/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 27 de Novembro de 2024 | Atualizado via nome: 28/11/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "167JsqVBKARGKIqEOTnwCmCgv7UwP0u3H",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 30.01.2028 - DIEGO PATRICK SANCHES CAMPOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:44:49.439Z",
+    "code": "15",
+    "issueDate": "2028-01-30T03:00:00.000Z",
+    "expirationDate": "2028-01-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/01/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Sorocaba/SP, 30 de Janeiro de 2026 | Atualizado via nome: 30/01/2028",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2028-01-30T03:00:00.000Z",
+        "expirationDate": "2028-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/01/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Sorocaba/SP, 30 de Janeiro de 2026 | Atualizado via nome: 30/01/2028"
+      }
+    ]
+  },
+  {
+    "fileId": "1w0slmPqhrxIDFdZBSogMiIxN_l2kUnuW",
+    "filename": "22 – LOTO (F+R) – 25.03.2026 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:41:06.202Z",
+    "code": "22",
+    "issueDate": "2026-03-25T03:00:00.000Z",
+    "expirationDate": "2028-03-25T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 25/03/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "LOTO",
+    "extractedClause": "Concluido em 6 de Março de 2024 | Atualizado via nome: 25/03/2026",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-03-25T03:00:00.000Z",
+        "expirationDate": "2028-03-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/03/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO",
+        "extractedClause": "Concluido em 6 de Março de 2024 | Atualizado via nome: 25/03/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1Gdc6T12SW_J3NlrzT2HEK_dKc6AQktLo",
+    "filename": "19 – GWO NR-23 Combate a Incêndio (F+R) – 20.11.2026 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:39:54.722Z",
+    "code": "30",
+    "issueDate": "2022-11-09T03:00:00.000Z",
+    "expirationDate": "2072-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "19",
+        "issueDate": "2026-11-20T03:00:00.000Z",
+        "expirationDate": "2026-11-20T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (20/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 19 – GWO NR-23 Combate a Incêndio (F+R) – 20.11.2026 - ANTONIO CARVALHO JUNIOR.pdf"
+      },
+      {
+        "code": "30",
+        "issueDate": "2022-11-09T03:00:00.000Z",
+        "expirationDate": "2072-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1lgmSjaqTYOhT06GQahCCDxjCrd5Y7sJL",
+    "filename": "17 – GWO NR-17 Ergonomia (F+R) – 30.10.2024 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:39:39.247Z",
+    "code": "30",
+    "issueDate": "2022-11-09T03:00:00.000Z",
+    "expirationDate": "2072-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2024-11-20T03:00:00.000Z",
+        "expirationDate": "2026-11-20T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (20/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 5)",
+        "extractedClause": "Assinou em 20 nov 2024"
+      },
+      {
+        "code": "30",
+        "issueDate": "2022-11-09T03:00:00.000Z",
+        "expirationDate": "2072-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1WzK5cMY5aIcg_AwSBm8tuL4VGaV18vhA",
+    "filename": "16 – GWO Primeiros Socorros (F+R) – 20.11.2026 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:39:24.776Z",
+    "code": "30",
+    "issueDate": "2022-11-07T03:00:00.000Z",
+    "expirationDate": "2072-11-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "16",
+        "issueDate": "2024-11-20T03:00:00.000Z",
+        "expirationDate": "2026-11-20T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (20/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 20 nov 2024"
+      },
+      {
+        "code": "27",
+        "issueDate": "2026-11-20T03:00:00.000Z",
+        "expirationDate": "2026-11-20T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (20/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 16 – GWO Primeiros Socorros (F+R) – 20.11.2026 - ANTONIO CARVALHO JUNIOR.pdf"
+      },
+      {
+        "code": "30",
+        "issueDate": "2022-11-07T03:00:00.000Z",
+        "expirationDate": "2072-11-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "1EiGzUhOECTRej0V7amguQNHG6_y_Krm4",
+    "filename": "12 – NR-10 Básico (F+R) – 12.11.2024 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:38:42.549Z",
+    "code": "12",
+    "issueDate": "2024-11-12T03:00:00.000Z",
+    "expirationDate": "2026-11-12T03:00:00.000Z",
+    "statusEHS": "VENCE_30",
+    "statusDetail": "ALERTA MÉDIO: Vence em 27 dias (12/11/2026)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Concluido no período de 31 de Outubro de 2024 a 12 de Novembro de 2024",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2024-11-12T03:00:00.000Z",
+        "expirationDate": "2026-11-12T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 27 dias (12/11/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Concluido no período de 31 de Outubro de 2024 a 12 de Novembro de 2024"
+      }
+    ]
+  },
+  {
+    "fileId": "1MBm--oJ9PkoY7asXWyLJWvVjaRAU1tR6",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 12.09.2028 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:40:42.491Z",
+    "code": "30",
+    "issueDate": "2022-11-10T03:00:00.000Z",
+    "expirationDate": "2072-11-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 20)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2028-09-12T03:00:00.000Z",
+        "expirationDate": "2028-09-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 21 – NR-35 Trabalho em Altura (F+R) – 12.09.2028 - ANTONIO CARVALHO JUNIOR.pdf"
+      },
+      {
+        "code": "30",
+        "issueDate": "2022-11-10T03:00:00.000Z",
+        "expirationDate": "2072-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 20)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      }
+    ]
+  },
+  {
+    "fileId": "132ztWHKdH2MLl37fjb2-NY69XeZqeAhw",
+    "filename": "20 – NR-33 Espaço Confinado Vigia (F+R) – 09.03.2025 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:40:18.738Z",
+    "code": "27",
+    "issueDate": "2025-03-09T03:00:00.000Z",
+    "expirationDate": "2027-03-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/03/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 2)",
+    "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado Vigia (F+R) – 09.03.2025 - ANTONIO CARVALHO JUNIOR.pdf",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2025-03-17T03:00:00.000Z",
+        "expirationDate": "2026-03-17T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 213 dias (17/03/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 17 mar 2025"
+      },
+      {
+        "code": "27",
+        "issueDate": "2025-03-09T03:00:00.000Z",
+        "expirationDate": "2027-03-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/03/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 20 – NR-33 Espaço Confinado Vigia (F+R) – 09.03.2025 - ANTONIO CARVALHO JUNIOR.pdf"
+      },
+      {
+        "code": "28",
+        "issueDate": "2024-03-07T03:00:00.000Z",
+        "expirationDate": "2025-03-07T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 588 dias (07/03/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Supervisor (via PDF) (Pág. 20)",
+        "extractedClause": "Assinou em 07 mar 2024"
+      }
+    ]
+  },
+  {
+    "fileId": "1SrYGpuWAo8UZzvu10U_CJVCToWYbV6yh",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 11.06.2027 - ANTONIO CARVALHO JUNIOR.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:39:07.539Z",
+    "code": "15",
+    "issueDate": "2027-06-11T03:00:00.000Z",
+    "expirationDate": "2027-06-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/06/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 2 de Outubro de 2024 | Atualizado via nome: 11/06/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-06-11T03:00:00.000Z",
+        "expirationDate": "2027-06-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/06/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 2 de Outubro de 2024 | Atualizado via nome: 11/06/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1POmg2UOsScBCdr3uyn2u0v7oie6u_mhL",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 24.01.2025 - ALLAN THIAGO RAMOS VEIGA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:38:23.473Z",
+    "code": "21",
+    "issueDate": "2025-01-30T03:00:00.000Z",
+    "expirationDate": "2027-01-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/01/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (Pág. 3)",
+    "extractedClause": "Assinou em 30 jan 2025",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2025-01-30T03:00:00.000Z",
+        "expirationDate": "2027-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/01/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (Pág. 3)",
+        "extractedClause": "Assinou em 30 jan 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1RhFI9ycb5R0gzKzfAfrjsFmrcKhGaZYX",
+    "filename": "15 – NR-12 Segurança em Máquinas (F+R) – 18.11.2027 - ALLAN THIAGO RAMOS VEIGA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:38:12.576Z",
+    "code": "15",
+    "issueDate": "2027-11-18T03:00:00.000Z",
+    "expirationDate": "2027-11-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Concluido em 19 de Janeiro de 2025 | Atualizado via nome: 18/11/2027",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2027-11-18T03:00:00.000Z",
+        "expirationDate": "2027-11-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Concluido em 19 de Janeiro de 2025 | Atualizado via nome: 18/11/2027"
+      }
+    ]
+  },
+  {
+    "fileId": "1FiirUl2Wfg3RAViLzZP0cpLztkH4yuBz",
+    "filename": "14 – NR-11 Uso de Talha (F+R) – 16.04.2027 - ALLAN THIAGO RAMOS VEIGA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T13:38:01.775Z",
+    "code": "14",
+    "issueDate": "2027-04-16T03:00:00.000Z",
+    "expirationDate": "2027-04-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/04/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11 (via PDF) (Pág. 1)",
+    "extractedClause": "Data do arquivo: 14 – NR-11 Uso de Talha (F+R) – 16.04.2027 - ALLAN THIAGO RAMOS VEIGA.pdf",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2027-04-16T03:00:00.000Z",
+        "expirationDate": "2027-04-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/04/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11 (via PDF) (Pág. 1)",
+        "extractedClause": "Data do arquivo: 14 – NR-11 Uso de Talha (F+R) – 16.04.2027 - ALLAN THIAGO RAMOS VEIGA.pdf"
+      },
+      {
+        "code": "12",
+        "issueDate": "2027-04-16T03:00:00.000Z",
+        "expirationDate": "2027-04-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/04/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 6)",
+        "extractedClause": "Data do arquivo: 14 – NR-11 Uso de Talha (F+R) – 16.04.2027 - ALLAN THIAGO RAMOS VEIGA.pdf"
+      },
+      {
+        "code": "13",
+        "issueDate": "2023-02-20T03:00:00.000Z",
+        "expirationDate": "2025-02-20T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 603 dias (20/02/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP (via PDF) (Pág. 12)",
+        "extractedClause": "Assinou em 20 fev 2023"
       }
     ]
   }
