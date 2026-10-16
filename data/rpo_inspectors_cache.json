@@ -1333,6 +1333,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/02/2028"
       },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-10-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2028"
+      },
       "19": {
         "code": "19",
         "name": "NR 23",
@@ -1367,6 +1374,13 @@
         "expirationDate": "2028-02-28T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/02/2028"
+      },
+      "28": {
+        "code": "28",
+        "name": "NR 33 SUP",
+        "expirationDate": "2027-10-15T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/10/2027"
       },
       "09": {
         "code": "09",
