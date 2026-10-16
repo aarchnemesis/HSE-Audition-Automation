@@ -6851,10 +6851,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-04-08T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 08/04/2028 Válido até 08/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -6865,10 +6866,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-03-21T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 21/03/2028 Válido até 21/03/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -6921,10 +6923,11 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-07-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/07/2027 Válido até 19/07/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -6935,10 +6938,11 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-08-01T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 01/08/2027 Válido até 01/08/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -6963,10 +6967,11 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-07-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/07/2027 Válido até 19/07/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -6991,10 +6996,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-08-30T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 30/08/2027 Válido até 30/08/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7005,10 +7011,26 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-04-02T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 02/04/2028 Válido até 02/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
+  },
+  {
+    "inspectorId": "rpo_34",
+    "inspectorName": "FRANCISCO EVERSON BARBOSA VASCONCELOS",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "expirationDate": "2027-09-15T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 15/09/2027 Válido até 15/09/2027",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_35",
@@ -9463,10 +9485,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-05-14T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 14/05/2028 Válido até 14/05/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -9536,10 +9559,11 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-13T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 13/10/2028 Válido até 13/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -9550,10 +9574,11 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-09-18T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 18/09/2028 Válido até 18/09/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -9923,14 +9948,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-08-24T03:00:00.000Z",
+    "expirationDate": "2027-08-25T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "549963",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 24/08/2027 Válido até 24/08/2027",
+    "detail": "Válido até 25/08/2027 Válido até 25/08/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-16T14:06:49.772Z"
   },
   {
     "inspectorId": "rpo_45",

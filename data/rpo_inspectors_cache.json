@@ -3594,7 +3594,78 @@
     "employmentType": "CLT",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "FV011217BR",
-    "certificates": {}
+    "certificates": {
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-04-08T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/04/2028"
+      },
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-03-21T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/03/2028"
+      },
+      "16": {
+        "code": "16",
+        "name": "GWO BST",
+        "expirationDate": "2027-07-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/07/2027"
+      },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2027-08-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2027"
+      },
+      "19": {
+        "code": "19",
+        "name": "NR 23",
+        "expirationDate": "2027-07-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/07/2027"
+      },
+      "21": {
+        "code": "21",
+        "name": "NR 35",
+        "expirationDate": "2027-08-30T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/08/2027"
+      },
+      "22": {
+        "code": "22",
+        "name": "LOTO",
+        "expirationDate": "2028-04-02T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/04/2028"
+      },
+      "27": {
+        "code": "27",
+        "name": "NR 07 - PS",
+        "expirationDate": "2027-07-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/07/2027"
+      },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2027-09-15T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/09/2027"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-06-23T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/06/2028"
+      }
+    }
   },
   {
     "id": "rpo_35",
@@ -4836,6 +4907,13 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "HG039708BR",
     "certificates": {
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-05-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/05/2028"
+      },
       "12": {
         "code": "12",
         "name": "NR 10",
@@ -4857,6 +4935,20 @@
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 56 dias (11/12/2026)"
       },
+      "16": {
+        "code": "16",
+        "name": "GWO BST",
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
+      },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2028-09-18T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/09/2028"
+      },
       "19": {
         "code": "19",
         "name": "NR 23",
@@ -4874,9 +4966,9 @@
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2028-10-16T12:00:00.000Z",
+        "expirationDate": "2028-09-16T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2028"
+        "statusDetail": "Válido até 16/09/2028"
       }
     }
   },
