@@ -87,6 +87,12 @@ const SEMANTIC_RULES: Array<{
     code: '21',
     matchedTerm: 'NR-35',
   },
+  // Carta NR-33
+  {
+    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR\s*[-_]?\s*33\b/i,
+    code: '20.1',
+    matchedTerm: 'Carta NR-33',
+  },
   // NR-33 Supervisor - deve vir antes de NR-33 Vigia/Trabalhador
   {
     regex:
@@ -107,6 +113,12 @@ const SEMANTIC_RULES: Array<{
       /\b(?:NR\s*[-_]?\s*11\b|TALHA|PALETEIRA|PONTE\s+ROLANTE|MOVIMENTACAO\s+DE\s+CARGA)\b/i,
     code: '14',
     matchedTerm: 'NR-11',
+  },
+  // Carta NR-12
+  {
+    regex: /\bCARTA\s+(?:DE\s+)?(?:ANUENCIA\s+)?NR\s*[-_]?\s*12\b/i,
+    code: '15.1',
+    matchedTerm: 'Carta NR-12',
   },
   // NR-12 Máquinas e Equipamentos
   {
@@ -184,6 +196,12 @@ const SEMANTIC_RULES: Array<{
     code: '01',
     matchedTerm: 'ASO',
   },
+  // Ordem de Serviço
+  {
+    regex: /\b(?:ORDEM\s+DE\s+SERVICO)\b/i,
+    code: '02',
+    matchedTerm: 'Ordem de Serviço',
+  },
   // CNH - Carteira Nacional de Habilitação
   {
     regex:
@@ -210,6 +228,13 @@ const SEMANTIC_RULES: Array<{
       /\b(?:VESTAS\s+ESO|ESO\s+VESTAS|VESTAS.*ESO|ELECTRICAL\s+SAFETY\s+OPERATOR)\b/i,
     code: '26',
     matchedTerm: 'ESO (Vestas)',
+  },
+  // Ficha de EPI / Checklist Altura (deve vir antes de Elevador/Avanti pois fichas de EPI citam marca AVANTI)
+  {
+    regex:
+      /\b(?:FICHA\s+DE\s+EPI|CHECKLIST\s+(?:DE\s+)?(?:EPI|ALTURA)|CHECKLIST\s+EPI\s+DE\s+ALTURA|TERMO\s+DE\s+ENTREGA\s+DE\s+EPI)\b/i,
+    code: '06',
+    matchedTerm: 'Ficha de EPI / Checklist Altura',
   },
   // Elevador (JASO / Avanti)
   {
@@ -244,13 +269,6 @@ const SEMANTIC_RULES: Array<{
       /\b(?:CARTAO\s+DE\s+VACINA|VACINA\b|COMPROVANTE\s+DE\s+VACINACAO|CARTAO\s+SUS|FEBRE\s+AMARELA)\b/i,
     code: '05',
     matchedTerm: 'Cartão de Vacina / SUS',
-  },
-  // Ficha de EPI / Checklist Altura
-  {
-    regex:
-      /\b(?:FICHA\s+DE\s+EPI|CHECKLIST\s+(?:DE\s+)?(?:EPI|ALTURA)|CHECKLIST\s+EPI\s+DE\s+ALTURA|TERMO\s+DE\s+ENTREGA\s+DE\s+EPI)\b/i,
-    code: '06',
-    matchedTerm: 'Ficha de EPI / Checklist Altura',
   },
   // Seguro de Vida
   {
@@ -304,7 +322,7 @@ export class CertificateClassifier {
 
     // 0. Passaporte é documento de viagem/identificação civil e NUNCA documento de capacitação/CIPA.
     // Frequentemente prefixado com "34 - Passaporte" por técnicos, colidindo com o código interno da CIPA.
-    if (/\b(?:passaporte|passport)\b/i.test(filename)) {
+    if (/\b(?:pas+aporte|passport)\b/i.test(filename)) {
       return { code: null, confidence: 'NONE', source: 'NONE' }
     }
 

@@ -44,6 +44,7 @@ const CANONICAL_DOC_NAMES: Record<string, string> = {
   '26': 'ESO (Vestas)',
   '27': 'NR-07 Primeiros Socorros',
   '28': 'NR-33 Supervisor',
+  '29': 'ATW Integração',
   '30': 'GWO WINDA',
   '31': 'Elevador (JASO)',
   '32': 'GWO ART',
@@ -52,7 +53,44 @@ const CANONICAL_DOC_NAMES: Record<string, string> = {
   '40.1': 'Aditivo ao Contrato',
 }
 
+const COURSE_AND_CARTA_CODES = new Set([
+  '09',
+  '10',
+  '11',
+  '12',
+  '12.1',
+  '13',
+  '14',
+  '15',
+  '15.1',
+  '16',
+  '17',
+  '18',
+  '19',
+  '20',
+  '20.1',
+  '21',
+  '21.1',
+  '22',
+  '25',
+  '26',
+  '27',
+  '28',
+  '29',
+  '31',
+  '32',
+  '34',
+])
+
 export class DriveNomenclatureStandardizer {
+  /**
+   * Indica se o código corresponde a um Curso / Treinamento ou Carta de Anuência
+   * que deve utilizar a data de início/realização/emissão no nome do arquivo (regra da Darliane).
+   */
+  static isCourseOrCartaCode(code: string): boolean {
+    return COURSE_AND_CARTA_CODES.has(code.trim())
+  }
+
   /**
    * Converte qualquer Date ou string ISO em DD.MM.AAAA
    */
@@ -145,11 +183,11 @@ export class DriveNomenclatureStandardizer {
     let docTitle = CANONICAL_DOC_NAMES[code] || DOC_CATALOG_MAP[code] || `Doc ${code}`
     docTitle = docTitle.split(' - ')[0].trim()
 
-    // Trata qualificadores (ex: Supervisor, Vigia, Robô)
+    // Trata qualificadores (ex: Supervisor, Vigia)
     const origUpper = (options.originalFilename || '').toUpperCase()
     let qualifier = options.customQualifier || ''
     if (!qualifier) {
-      if (code === '20' || code === '28') {
+      if (code === '20') {
         if (origUpper.includes('SUPERVISOR')) qualifier = 'Supervisor'
         else if (origUpper.includes('VIGIA')) qualifier = 'Vigia'
       }
