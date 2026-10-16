@@ -183688,5 +183688,34 @@
         "extractedClause": "Assinou em 25 mar 2026"
       }
     ]
+  },
+  {
+    "fileId": "1Rdp5JlZdfYDnokNVCksG8Os9iaW_05Lj",
+    "filename": "30 - GWO WINDA - AD016923BR - 23.01.2026 - Adenilço Queiroz da Silva.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-01-30T13:29:14.000Z",
+    "code": "30",
+    "issueDate": "2026-01-23T03:00:00.000Z",
+    "expirationDate": "2076-01-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/01/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID",
+    "extractedClause": "Data do arquivo: 30 - GWO WINDA - AD016923BR - 23.01.2026 - Adenilço Queiroz da Silva.pdf",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-01-23T03:00:00.000Z",
+        "expirationDate": "2076-01-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/01/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID",
+        "extractedClause": "Data do arquivo: 30 - GWO WINDA - AD016923BR - 23.01.2026 - Adenilço Queiroz da Silva.pdf"
+      }
+    ]
   }
 ]
