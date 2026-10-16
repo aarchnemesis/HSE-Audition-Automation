@@ -4,7 +4,9 @@ import path from 'path'
 import { google } from 'googleapis'
 import type { OAuth2Client } from 'googleapis-common'
 
-const SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+import readline from 'readline'
+
+const SCOPES = ['https://www.googleapis.com/auth/drive']
 
 interface OAuthClientCredentials {
   client_id: string
@@ -40,12 +42,14 @@ function loadClientCredentials(
  * não toca em disco, não abre navegador. É o modo usado pelo GitHub Actions.
  *
  * Modo local (interativo): reaproveita o token salvo em scratch/google_oauth_token.json quando
- * existir; na primeira execução, abre o fluxo de consentimento via servidor HTTP local (loopback)
+ * existir e possuir permissão compatível com SCOPES; na primeira execução ou caso precise de
+ * permissão de escrita, abre o fluxo de consentimento via servidor HTTP local (loopback)
  * e persiste o refresh token para as próximas execuções não pedirem login de novo.
  */
 export async function getAuthorizedClient(options?: {
   credentialsPath?: string
   tokenPath?: string
+  forceReauth?: boolean
 }): Promise<OAuth2Client> {
   const envClient = getClientFromEnv()
   if (envClient) return envClient
@@ -65,10 +69,26 @@ export async function getAuthorizedClient(options?: {
   const redirectUri = `http://localhost:${redirectPort}/oauth2callback`
   const client = new google.auth.OAuth2(client_id, client_secret, redirectUri)
 
-  if (fs.existsSync(tokenPath)) {
-    const token = JSON.parse(fs.readFileSync(tokenPath, 'utf-8'))
-    client.setCredentials(token)
-    return client
+  if (fs.existsSync(tokenPath) && !options?.forceReauth) {
+    try {
+      const token = JSON.parse(fs.readFileSync(tokenPath, 'utf-8'))
+      const tokenScope = token.scope || ''
+      // Verifica se o token já possui o escopo completo de escrita (https://www.googleapis.com/auth/drive)
+      const hasDriveWrite =
+        tokenScope.includes('https://www.googleapis.com/auth/drive') &&
+        !tokenScope.includes('drive.readonly')
+
+      if (hasDriveWrite) {
+        client.setCredentials(token)
+        return client
+      } else {
+        console.log(
+          '[googleAuth] Token existente possui apenas escopo readonly. Solicitando autorização de escrita...'
+        )
+      }
+    } catch (err) {
+      console.warn('[googleAuth] Falha ao ler token existente:', err)
+    }
   }
 
   const code = await promptForAuthorizationCode(client, redirectPort)
@@ -132,6 +152,28 @@ function promptForAuthorizationCode(
       '================================================================================\n'
     )
 
+    let isFinished = false
+    let rl: readline.Interface | null = null
+
+    const finish = (code: string | null, error?: string | null) => {
+      if (isFinished) return
+      isFinished = true
+      try {
+        server.close()
+      } catch {}
+      try {
+        rl?.close()
+      } catch {}
+
+      if (error || !code) {
+        reject(
+          new Error(`Autorização OAuth falhou: ${error || 'código ausente'}`)
+        )
+      } else {
+        resolve(code)
+      }
+    }
+
     const server = http.createServer((req, res) => {
       if (!req.url || !req.url.startsWith('/oauth2callback')) {
         res.writeHead(404)
@@ -149,17 +191,31 @@ function promptForAuthorizationCode(
           : '<h2>Autorização concluída! Pode fechar esta aba e voltar ao terminal.</h2>'
       )
 
-      server.close()
-
-      if (error || !code) {
-        reject(
-          new Error(`Autorização OAuth falhou: ${error || 'código ausente'}`)
-        )
-      } else {
-        resolve(code)
-      }
+      finish(code, error)
     })
 
-    server.listen(port)
+    server.listen(port, () => {
+      rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout,
+      })
+      console.log(
+        '  (Dica: se o navegador nao redirecionar automaticamente para localhost, cole aqui o codigo ou a URL completa):\n'
+      )
+      rl.question('  URL ou Codigo > ', answer => {
+        const trimmed = answer.trim()
+        if (!trimmed) return
+        let code = trimmed
+        if (trimmed.includes('code=')) {
+          try {
+            const parsed = new URL(
+              trimmed.startsWith('http') ? trimmed : `http://localhost/${trimmed}`
+            )
+            code = parsed.searchParams.get('code') || code
+          } catch {}
+        }
+        finish(code)
+      })
+    })
   })
 }
