@@ -259,6 +259,29 @@ async function main() {
     }
 
     try {
+      // 0. Verifica se o arquivo mesclado já existe na pasta de destino
+      const searchTarget = await drive.files.list({
+        q: `'${g.folderId}' in parents and name = '${g.proposedName.replace(/'/g, "\\'")}' and trashed = false`,
+        fields: 'files(id, name)',
+      })
+      if (searchTarget.data.files && searchTarget.data.files.length > 0) {
+        console.log(
+          `   Arquivo mesclado já existe no Drive: ${g.proposedName} (${searchTarget.data.files[0].id}). Pulando grupo.`
+        )
+        successCount++
+        executionLogs.push({
+          collab: g.collab,
+          code: g.code,
+          proposedName: g.proposedName,
+          folderId: g.folderId,
+          filesCount: g.files.length,
+          mergedFileId: searchTarget.data.files[0].id,
+          status: 'SUCESSO',
+          timestamp: new Date().toISOString(),
+        })
+        continue
+      }
+
       // 1. Baixar os buffers de cada PDF
       const pdfBuffers: Array<{
         buffer: Buffer
