@@ -79,6 +79,16 @@ describe('DriveNomenclatureStandardizer', () => {
       expect(res).toBe('40 – Contrato + Aditivo – 11.05.2027 - THIAGO LIMA SANTOS SILVA.pdf')
     })
 
+    it('prioriza data do fim do aditivo sobre a data do contrato (pedido Darliane)', () => {
+      const res = DriveNomenclatureStandardizer.buildStandardFilename({
+        code: '40',
+        collaboratorName: 'Thiago Lima Santos Silva',
+        date: new Date('2026-05-11T03:00:00Z'), // data original do contrato
+        aditivoDate: new Date('2027-05-11T03:00:00Z'), // data do fim do aditivo
+      })
+      expect(res).toBe('40 – Contrato + Aditivo – 11.05.2027 - THIAGO LIMA SANTOS SILVA.pdf')
+    })
+
     it('preserva qualificadores como Supervisor em NR-33', () => {
       const res = DriveNomenclatureStandardizer.buildStandardFilename({
         code: '20',

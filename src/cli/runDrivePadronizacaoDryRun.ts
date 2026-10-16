@@ -21,6 +21,88 @@ interface CollabFileSim {
   mergeGroupId?: string
 }
 
+function parseDateFromFilename(filename: string): Date | null {
+  const normalized = filename.replace(/_/g, ' ')
+  // Caso período: "a DD.MM.YYYY" (ex.: 12.03.2026 a 11.05.2027)
+  const periodMatch = normalized.match(/a\s+(\d{2})[\s\.\/-](\d{2})[\s\.\/-](\d{2,4})/i)
+  if (periodMatch) {
+    const day = parseInt(periodMatch[1], 10)
+    const month = parseInt(periodMatch[2], 10) - 1
+    let year = parseInt(periodMatch[3], 10)
+    if (year < 100) year += 2000
+    return new Date(Date.UTC(year, month, day))
+  }
+  const dmyMatch = normalized.match(/(?:^|\D)(\d{2})[\s\.\/-](\d{2})[\s\.\/-](\d{2,4})(?:\D|$)/)
+  if (dmyMatch) {
+    const day = parseInt(dmyMatch[1], 10)
+    const month = parseInt(dmyMatch[2], 10) - 1
+    let year = parseInt(dmyMatch[3], 10)
+    if (year < 100) year += 2000
+    if (year >= 1990 && year <= 2040) return new Date(Date.UTC(year, month, day))
+  }
+  return null
+}
+
+function resolveContractAditivoDate(items: any[]): { date: Date | null; hasAditivo: boolean } {
+  let aditivoDate: Date | null = null
+
+  // 1. Prioridade absoluta: data de fim do aditivo (pedido da Darliane)
+  for (const item of items) {
+    const fn = (item.cert.filename || '').toUpperCase()
+    const isAditivo = fn.includes('ADITIVO') || (item.effectiveCode === '40.1' && !fn.includes('CONTRATO PJ'))
+
+    if (isAditivo) {
+      const fnDate = parseDateFromFilename(item.cert.filename)
+      if (fnDate && (!aditivoDate || fnDate.getTime() > aditivoDate.getTime())) {
+        aditivoDate = fnDate
+      }
+      const exp = item.cert.expirationDate ? new Date(item.cert.expirationDate) : null
+      if (exp && !isNaN(exp.getTime()) && exp.getUTCFullYear() < 2050) {
+        if (!aditivoDate || exp.getTime() > aditivoDate.getTime()) {
+          aditivoDate = exp
+        }
+      }
+    }
+
+    if (item.cached?.documents) {
+      for (const doc of item.cached.documents) {
+        if (['40.1', '04.1'].includes(doc.code) && doc.expirationDate) {
+          const exp = new Date(doc.expirationDate)
+          if (!isNaN(exp.getTime()) && exp.getUTCFullYear() < 2050) {
+            if (!aditivoDate || exp.getTime() > aditivoDate.getTime()) {
+              aditivoDate = exp
+            }
+          }
+        }
+      }
+    }
+  }
+
+  if (aditivoDate) return { date: aditivoDate, hasAditivo: true }
+
+  // 2. Se não houver aditivo, busca data real do contrato (ignorando proxies de 50 anos)
+  for (const item of items) {
+    const fnDate = parseDateFromFilename(item.cert.filename)
+    if (fnDate) return { date: fnDate, hasAditivo: false }
+
+    if (item.cached?.documents) {
+      const doc40 = item.cached.documents.find((d: any) => ['40', '04'].includes(d.code) && d.expirationDate)
+      if (doc40) {
+        const exp = new Date(doc40.expirationDate)
+        if (!isNaN(exp.getTime()) && exp.getUTCFullYear() < 2050) return { date: exp, hasAditivo: false }
+      }
+    }
+
+    const exp = item.cert.expirationDate ? new Date(item.cert.expirationDate) : null
+    if (exp && !isNaN(exp.getTime()) && exp.getUTCFullYear() < 2050) return { date: exp, hasAditivo: false }
+
+    const issue = item.cert.issueDate ? new Date(item.cert.issueDate) : null
+    if (issue && !isNaN(issue.getTime()) && issue.getUTCFullYear() < 2050) return { date: issue, hasAditivo: false }
+  }
+
+  return { date: null, hasAditivo: false }
+}
+
 async function main() {
   console.log('\n================================================================================')
   console.log('  SIMULAÇÃO DE PADRONIZAÇÃO E MESCLAGEM DO GOOGLE DRIVE (FASE 1 - DRY RUN)')
@@ -79,17 +161,95 @@ async function main() {
     }
 
     for (const [groupCode, items] of Object.entries(filesByCode)) {
-      const isMergeGroup = items.length > 1 && ['12', '13', '14', '15', '16', '17', '19', '20', '21', '22', '32', '40'].includes(groupCode)
+      // Agrupa por arquivo físico único no Drive (pelo fileId ou filename)
+      const fileIdMap = new Map<string, any[]>()
+      for (const item of items) {
+        const key = item.fileId || item.cert.filename
+        if (!fileIdMap.has(key)) fileIdMap.set(key, [])
+        fileIdMap.get(key)!.push(item)
+      }
 
-      if (isMergeGroup) {
+      const uniqueFilesCount = fileIdMap.size
+      const isMergeableCode = ['12', '13', '14', '15', '16', '17', '19', '20', '21', '22', '32', '40'].includes(groupCode)
+      const isMergeGroup = uniqueFilesCount > 1 && isMergeableCode
+
+      if (groupCode === '40') {
+        // Regra especial Contrato PJ / Aditivo (Darliane: data do fim do aditivo)
+        const contractRes = resolveContractAditivoDate(items)
+        const effectiveDate = contractRes.date
+        const hasAditivo = contractRes.hasAditivo
+
+        if (isMergeGroup) {
+          mergeCount++
+          const proposedMergedName = DriveNomenclatureStandardizer.buildStandardFilename({
+            code: '40',
+            collaboratorName: cleanName,
+            date: effectiveDate,
+            aditivoDate: hasAditivo ? effectiveDate : undefined,
+            isMerged: true,
+          })
+
+          for (const [fId, fileItems] of fileIdMap.entries()) {
+            const primaryItem = fileItems[0]
+            simRows.push({
+              folderId,
+              collaborator: cleanName,
+              fileId: primaryItem.fileId,
+              currentName: primaryItem.cert.filename,
+              code: primaryItem.effectiveCode,
+              docTitle: DOC_CATALOG_MAP[primaryItem.effectiveCode] || `Doc ${primaryItem.effectiveCode}`,
+              modality: DriveNomenclatureStandardizer.detectModality(primaryItem.cert.filename) || 'Avulso',
+              date: DriveNomenclatureStandardizer.formatDate(effectiveDate),
+              proposedName: proposedMergedName,
+              action: 'MESCLAR',
+              mergeGroupId: `${cleanName}_40`,
+            })
+          }
+        } else {
+          // Arquivo único (já contém contrato ou contrato+aditivo)
+          for (const [fId, fileItems] of fileIdMap.entries()) {
+            const primaryItem = fileItems[0]
+            const proposedName = DriveNomenclatureStandardizer.buildStandardFilename({
+              code: '40',
+              originalFilename: primaryItem.cert.filename,
+              collaboratorName: cleanName,
+              date: effectiveDate,
+              aditivoDate: hasAditivo ? effectiveDate : undefined,
+              isMerged: false,
+            })
+            const isIdentical = primaryItem.cert.filename === proposedName
+            if (!isIdentical) renameCount++
+
+            simRows.push({
+              folderId,
+              collaborator: cleanName,
+              fileId: primaryItem.fileId,
+              currentName: primaryItem.cert.filename,
+              code: '40',
+              docTitle: hasAditivo ? 'Contrato + Aditivo' : 'Contrato de Prestação de Serviço',
+              modality: DriveNomenclatureStandardizer.detectModality(primaryItem.cert.filename) || 'Avulso',
+              date: DriveNomenclatureStandardizer.formatDate(effectiveDate),
+              proposedName,
+              action: isIdentical ? 'MANTER' : 'RENOMEAR',
+            })
+          }
+        }
+      } else if (isMergeGroup) {
         mergeCount++
-        // Determina a data mais recente
+        // Determina a data mais recente válida (< 2050)
         const sortedByExp = [...items].sort((a, b) => {
-          const tA = a.cert.expirationDate ? new Date(a.cert.expirationDate).getTime() : 0
-          const tB = b.cert.expirationDate ? new Date(b.cert.expirationDate).getTime() : 0
+          const tA = (a.cert.expirationDate && new Date(a.cert.expirationDate).getUTCFullYear() < 2050)
+            ? new Date(a.cert.expirationDate).getTime()
+            : (a.cert.issueDate ? new Date(a.cert.issueDate).getTime() : 0)
+          const tB = (b.cert.expirationDate && new Date(b.cert.expirationDate).getUTCFullYear() < 2050)
+            ? new Date(b.cert.expirationDate).getTime()
+            : (b.cert.issueDate ? new Date(b.cert.issueDate).getTime() : 0)
           return tB - tA
         })
-        const latestDate = sortedByExp[0]?.cert.expirationDate || sortedByExp[0]?.cached?.expirationDate
+        const latestExp = sortedByExp[0]?.cert.expirationDate
+        const latestDate = (latestExp && new Date(latestExp).getUTCFullYear() < 2050)
+          ? latestExp
+          : sortedByExp[0]?.cert.issueDate
 
         const proposedMergedName = DriveNomenclatureStandardizer.buildStandardFilename({
           code: groupCode,
@@ -98,16 +258,19 @@ async function main() {
           isMerged: true,
         })
 
-        for (const item of items) {
+        for (const [fId, fileItems] of fileIdMap.entries()) {
+          const primaryItem = fileItems[0]
+          const exp = primaryItem.cert.expirationDate
+          const dateToUse = (exp && new Date(exp).getUTCFullYear() < 2050) ? exp : primaryItem.cert.issueDate
           simRows.push({
             folderId,
             collaborator: cleanName,
-            fileId: item.fileId,
-            currentName: item.cert.filename,
-            code: item.effectiveCode,
-            docTitle: DOC_CATALOG_MAP[item.effectiveCode] || `Doc ${item.effectiveCode}`,
-            modality: DriveNomenclatureStandardizer.detectModality(item.cert.filename) || 'Avulso',
-            date: DriveNomenclatureStandardizer.formatDate(item.cert.expirationDate || item.cached?.expirationDate),
+            fileId: primaryItem.fileId,
+            currentName: primaryItem.cert.filename,
+            code: primaryItem.effectiveCode,
+            docTitle: DOC_CATALOG_MAP[primaryItem.effectiveCode] || `Doc ${primaryItem.effectiveCode}`,
+            modality: DriveNomenclatureStandardizer.detectModality(primaryItem.cert.filename) || 'Avulso',
+            date: DriveNomenclatureStandardizer.formatDate(dateToUse),
             proposedName: proposedMergedName,
             action: 'MESCLAR',
             mergeGroupId: `${cleanName}_${groupCode}`,
@@ -115,27 +278,36 @@ async function main() {
         }
       } else {
         // Documentos individuais
-        for (const item of items) {
-          const expDate = item.cert.expirationDate || item.cached?.expirationDate
+        for (const [fId, fileItems] of fileIdMap.entries()) {
+          const primaryItem = fileItems[0]
+          const exp = primaryItem.cert.expirationDate
+          const dateToUse = (exp && new Date(exp).getUTCFullYear() < 2050)
+            ? exp
+            : (primaryItem.cert.issueDate && new Date(primaryItem.cert.issueDate).getUTCFullYear() < 2050
+                ? primaryItem.cert.issueDate
+                : (primaryItem.cached?.expirationDate && new Date(primaryItem.cached.expirationDate).getUTCFullYear() < 2050
+                    ? primaryItem.cached.expirationDate
+                    : null))
+
           const proposedName = DriveNomenclatureStandardizer.buildStandardFilename({
-            code: item.effectiveCode,
-            originalFilename: item.cert.filename,
+            code: primaryItem.effectiveCode,
+            originalFilename: primaryItem.cert.filename,
             collaboratorName: cleanName,
-            date: expDate,
+            date: dateToUse,
           })
 
-          const isIdentical = item.cert.filename === proposedName
+          const isIdentical = primaryItem.cert.filename === proposedName
           if (!isIdentical) renameCount++
 
           simRows.push({
             folderId,
             collaborator: cleanName,
-            fileId: item.fileId,
-            currentName: item.cert.filename,
-            code: item.effectiveCode,
-            docTitle: DOC_CATALOG_MAP[item.effectiveCode] || `Doc ${item.effectiveCode}`,
-            modality: DriveNomenclatureStandardizer.detectModality(item.cert.filename) || 'Avulso',
-            date: DriveNomenclatureStandardizer.formatDate(expDate),
+            fileId: primaryItem.fileId,
+            currentName: primaryItem.cert.filename,
+            code: primaryItem.effectiveCode,
+            docTitle: DOC_CATALOG_MAP[primaryItem.effectiveCode] || `Doc ${primaryItem.effectiveCode}`,
+            modality: DriveNomenclatureStandardizer.detectModality(primaryItem.cert.filename) || 'Avulso',
+            date: DriveNomenclatureStandardizer.formatDate(dateToUse),
             proposedName,
             action: isIdentical ? 'MANTER' : 'RENOMEAR',
           })

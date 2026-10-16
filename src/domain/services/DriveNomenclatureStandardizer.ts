@@ -5,6 +5,7 @@ export interface StandardizeOptions {
   originalFilename?: string
   collaboratorName: string
   date?: Date | string | null
+  aditivoDate?: Date | string | null
   isMerged?: boolean
   modality?: 'F' | 'Rec' | 'F+R' | 'AUTO'
   customQualifier?: string
@@ -131,7 +132,14 @@ export class DriveNomenclatureStandardizer {
   static buildStandardFilename(options: StandardizeOptions): string {
     const code = options.code.trim()
     const collab = this.cleanCollaboratorName(options.collaboratorName)
-    const dateFormatted = this.formatDate(options.date)
+
+    // Se for Contrato (Doc 40) e houver data de fim do aditivo, a data do fim do aditivo tem precedência absoluta (pedido da Darliane)
+    let targetDate = options.date
+    if (code === '40' && options.aditivoDate) {
+      targetDate = options.aditivoDate
+    }
+
+    const dateFormatted = this.formatDate(targetDate)
 
     // Base do nome do documento
     let docTitle = CANONICAL_DOC_NAMES[code] || DOC_CATALOG_MAP[code] || `Doc ${code}`
@@ -164,6 +172,7 @@ export class DriveNomenclatureStandardizer {
     if (code === '40') {
       const hasAditivo =
         options.isMerged ||
+        !!options.aditivoDate ||
         origUpper.includes('ADITIVO') ||
         origUpper.includes('04.1') ||
         origUpper.includes('40.1')
