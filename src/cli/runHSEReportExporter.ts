@@ -4,6 +4,7 @@ import path from 'path'
 import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
+import { buildAgentBriefing } from '../domain/services/AgentBriefingBuilder.js'
 import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js'
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js'
@@ -107,6 +108,25 @@ async function main() {
   fs.writeFileSync(publicDashboardPath, dashboardHtml)
   console.log(
     `[HSEReportExporter] Dashboard gerado em: ${dashboardPath} e ${publicDashboardPath}\n`
+  )
+
+  // Resumo para o Prometheus (a VPS copia para o volume dele). Fica em scratch/, fora do git.
+  const briefingPath = path.join(
+    process.cwd(),
+    'scratch',
+    'agent_briefing.json'
+  )
+  const briefing = buildAgentBriefing(
+    syncResult.records,
+    syncResult.storzRequests,
+    {
+      refDate: REF_DATE,
+      sourceHealth: { ...syncResult.sourceHealth },
+    }
+  )
+  fs.writeFileSync(briefingPath, JSON.stringify(briefing, null, 2))
+  console.log(
+    `[HSEReportExporter] Resumo do agente gerado em: ${briefingPath}\n`
   )
 
   // 5. Enviar Resumo Diario por E-mail (ignorado se --no-email ou SKIP_EMAIL=true)
