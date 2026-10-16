@@ -7048,7 +7048,15 @@
     "role": "INSPETOR",
     "employmentType": "CLT",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "certificates": {}
+    "certificates": {
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2028-07-17T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/07/2028"
+      }
+    }
   },
   {
     "id": "rpo_58",
