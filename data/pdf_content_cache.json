@@ -68329,29 +68329,29 @@
   },
   {
     "fileId": "1NMVcqKyeeavppBv4wZbfPZJZFUPS6uTS",
-    "filename": "10 – NR-01 Integração – SEM_DATA - WERMESON DE OLIVEIRA FRANCO.pdf",
+    "filename": "10 – NR-01 Integração – 14.01.2026 - WERMESON DE OLIVEIRA FRANCO.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:22:17.809Z",
+    "modifiedTime": "2026-10-16T12:48:35.249Z",
     "code": "10",
     "issueDate": "2026-01-14T03:00:00.000Z",
-    "expirationDate": "2076-10-16T11:45:07.722Z",
+    "expirationDate": "2076-01-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 16/10/2076",
+    "statusDetail": "Válido até 14/01/2076",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-01 (Pág. 2)",
+    "matchedTerm": "NR-01",
     "extractedClause": "Data de emissão: 14 de janeiro de 2026",
     "documents": [
       {
         "code": "10",
         "issueDate": "2026-01-14T03:00:00.000Z",
-        "expirationDate": "2076-10-16T11:45:07.722Z",
+        "expirationDate": "2076-01-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2076",
+        "statusDetail": "Válido até 14/01/2076",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-01 (Pág. 2)",
+        "matchedTerm": "NR-01",
         "extractedClause": "Data de emissão: 14 de janeiro de 2026"
       }
     ]
@@ -112556,24 +112556,30 @@
   },
   {
     "fileId": "1TVefB0hGdBcGAbJiDYoK7yXWnt3pc_ZW",
-    "filename": "07 – Seguro de Vida – SEM_DATA - THAYNA NOGUEIRA TAVARES.pdf",
+    "filename": "07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:40:44.271Z",
+    "modifiedTime": "2026-10-16T12:48:33.902Z",
     "code": "07",
-    "statusEHS": "INDETERMINADO",
-    "statusDetail": "Data não informada ou formato inválido",
-    "source": "FILENAME",
+    "issueDate": "2026-12-06T03:00:00.000Z",
+    "expirationDate": "2026-12-06T03:00:00.000Z",
+    "statusEHS": "VENCE_60",
+    "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/12/2026)",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Seguro de Vida",
+    "extractedClause": "Data do arquivo: 07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
     "documents": [
       {
         "code": "07",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "FILENAME",
+        "issueDate": "2026-12-06T03:00:00.000Z",
+        "expirationDate": "2026-12-06T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/12/2026)",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Seguro de Vida"
+        "matchedTerm": "Seguro de Vida",
+        "extractedClause": "Data do arquivo: 07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf"
       }
     ]
   },
@@ -157705,26 +157711,30 @@
   },
   {
     "fileId": "1xJc85PDw1s00--rfyra0dBlskirYP7kj",
-    "filename": "10 – NR-01 Integração – SEM_DATA - NARDEL DELON NOVAIS ROCHA.pdf",
+    "filename": "10 – NR-01 Integração – 04.08.2024 - NARDEL DELON NOVAIS ROCHA.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:57:17.895Z",
+    "modifiedTime": "2026-10-16T12:48:36.453Z",
     "code": "10",
-    "expirationDate": "2076-10-16T11:45:07.722Z",
+    "issueDate": "2024-08-04T03:00:00.000Z",
+    "expirationDate": "2074-08-04T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 16/10/2076",
-    "source": "FILENAME",
+    "statusDetail": "Válido até 04/08/2074",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "NR-01",
+    "extractedClause": "Data do arquivo: 10 – NR-01 Integração – 04.08.2024 - NARDEL DELON NOVAIS ROCHA.pdf",
     "documents": [
       {
         "code": "10",
-        "expirationDate": "2076-10-16T11:45:07.722Z",
+        "issueDate": "2024-08-04T03:00:00.000Z",
+        "expirationDate": "2074-08-04T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2076",
-        "source": "FILENAME",
+        "statusDetail": "Válido até 04/08/2074",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-01"
+        "matchedTerm": "NR-01",
+        "extractedClause": "Data do arquivo: 10 – NR-01 Integração – 04.08.2024 - NARDEL DELON NOVAIS ROCHA.pdf"
       }
     ]
   },
@@ -163318,26 +163328,30 @@
   },
   {
     "fileId": "1USqoVtoho0U2dZeTYJpER5CkNL6H7aHC",
-    "filename": "10 – NR-01 Integração – SEM_DATA - THIAGO LIMA SANTOS SILVA.pdf",
+    "filename": "10 – NR-01 Integração – 04.08.2024 - THIAGO LIMA SANTOS SILVA.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-16T11:59:50.879Z",
+    "modifiedTime": "2026-10-16T12:48:37.602Z",
     "code": "10",
-    "expirationDate": "2076-10-16T11:45:07.722Z",
+    "issueDate": "2024-08-04T03:00:00.000Z",
+    "expirationDate": "2074-08-04T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 16/10/2076",
-    "source": "FILENAME",
+    "statusDetail": "Válido até 04/08/2074",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "NR-01",
+    "extractedClause": "Data do arquivo: 10 – NR-01 Integração – 04.08.2024 - THIAGO LIMA SANTOS SILVA.pdf",
     "documents": [
       {
         "code": "10",
-        "expirationDate": "2076-10-16T11:45:07.722Z",
+        "issueDate": "2024-08-04T03:00:00.000Z",
+        "expirationDate": "2074-08-04T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2076",
-        "source": "FILENAME",
+        "statusDetail": "Válido até 04/08/2074",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-01"
+        "matchedTerm": "NR-01",
+        "extractedClause": "Data do arquivo: 10 – NR-01 Integração – 04.08.2024 - THIAGO LIMA SANTOS SILVA.pdf"
       }
     ]
   },

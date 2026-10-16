@@ -5630,11 +5630,11 @@
       "10": {
         "code": "10",
         "name": "Doc 10",
-        "filename": "10 – NR-01 Integração – SEM_DATA - WERMESON DE OLIVEIRA FRANCO.pdf",
+        "filename": "10 – NR-01 Integração – 14.01.2026 - WERMESON DE OLIVEIRA FRANCO.pdf",
         "issueDate": "2026-01-14T03:00:00.000Z",
-        "expirationDate": "2076-10-16T11:45:07.722Z",
+        "expirationDate": "2076-01-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2076",
+        "statusDetail": "Válido até 14/01/2076",
         "sourcePath": "https://drive.google.com/file/d/1NMVcqKyeeavppBv4wZbfPZJZFUPS6uTS/view"
       },
       "16": {
@@ -16426,6 +16426,16 @@
         "statusDetail": "Válido até 01/10/2028",
         "sourcePath": "https://drive.google.com/file/d/15V364P2o0LiWJd_r88IZIt83mfrasnPR/view"
       },
+      "07": {
+        "code": "07",
+        "name": "Doc 07",
+        "filename": "07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2026-12-06T03:00:00.000Z",
+        "expirationDate": "2026-12-06T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/12/2026)",
+        "sourcePath": "https://drive.google.com/file/d/1TVefB0hGdBcGAbJiDYoK7yXWnt3pc_ZW/view"
+      },
       "05": {
         "code": "05",
         "name": "Doc 05",
@@ -16503,14 +16513,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 09/01/2036",
         "sourcePath": "https://drive.google.com/file/d/1Mbj3Ucmzq3WeCLUL2h4vIqcKg3C3EaAh/view"
-      },
-      "07": {
-        "code": "07",
-        "name": "Doc 07",
-        "filename": "07 – Seguro de Vida – SEM_DATA - THAYNA NOGUEIRA TAVARES.pdf",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "sourcePath": "https://drive.google.com/file/d/1TVefB0hGdBcGAbJiDYoK7yXWnt3pc_ZW/view"
       }
     }
   },
