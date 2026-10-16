@@ -181820,5 +181820,34 @@
         "extractedClause": "passa a vigorar de 21/01/2025 e terá duração de um ano"
       }
     ]
+  },
+  {
+    "fileId": "183KskGlOHnjzo6DrsfWmwUgNddN30XcB",
+    "filename": "20 – NR – 33 (Vigia F+R) –  30.09.2026 - Rafael Pereira Nunes..pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-16T00:35:40.330Z",
+    "code": "20",
+    "issueDate": "2026-09-30T03:00:00.000Z",
+    "expirationDate": "2027-09-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33",
+    "extractedClause": "Concluido no período de 17 de Janeiro de 2025 a 20 de Janeiro de 2025 | Atualizado via nome: 30/09/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-09-30T03:00:00.000Z",
+        "expirationDate": "2027-09-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33",
+        "extractedClause": "Concluido no período de 17 de Janeiro de 2025 a 20 de Janeiro de 2025 | Atualizado via nome: 30/09/2026"
+      }
+    ]
   }
 ]
