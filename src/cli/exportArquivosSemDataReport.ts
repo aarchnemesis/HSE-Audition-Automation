@@ -196,9 +196,9 @@ export function buildSemDataItems(
       item.code === '10'
     ) {
       diagnostico =
-        'Arquivo original "Francisco Fabircio - Nr1.zip" é um pacote compactado (.zip) contendo documentos de integração NR-01.'
+        'Pacote compactado (.zip) contendo 16 certificados de 2023 (NR-01, NR-33, NR-10, NR-06, NR-12, GWO, ASO, etc.) de Francisco Fabricio armazenado na pasta do Alisson.'
       orientacao =
-        'Abrir pelo link direto do Drive caso necessite descompactar ou extrair o certificado em PDF individual.'
+        'Arquivo ZIP de multitreinamentos. Caso o cliente solicite a NR-01 individual do Alisson, verificar se há emissão de certificado individual pendente.'
     } else if (
       item.collaborator === 'WERMESON DE OLIVEIRA FRANCO' &&
       item.code === '10'
@@ -631,7 +631,9 @@ export function buildExcelReport(
     totalCount,
     1.0,
     'Total consolidado de arquivos indexados como SEM_DATA no Google Drive.',
-    'Apenas 7 arquivos (4,7%) demandam verificação manual se requerido.',
+    actionCount > 0
+      ? `Apenas ${actionCount} arquivo(s) demandam verificação ou descompactação manual se requerido.`
+      : 'Todos os documentos com data foram devidamente padronizados.',
   ]
   totalRow.height = 24
   totalRow.font = { name: 'Segoe UI', size: 10, bold: true }
@@ -673,9 +675,9 @@ export function buildExcelReport(
   wsResumo.getRow(notesStart).height = 26
 
   const guidelines = [
-    '1. DOCUMENTOS VITALÍCIOS (95,3% - 143 arquivos): Cartões de Vacina (05), Diplomas (24), CRT (23), Fichas Cadastrais/CCMEI (03), CTPS (04), eSocial (04.1) e WINDA ID (30) não possuem data de expiração/vencimento contratual nas auditorias de SSMA. A nomenclatura "SEM_DATA" é tecnicamente correta e suficiente.',
-    '2. DOCUMENTOS PASSÍVEIS DE AJUSTE PONTUAL (4,7% - 7 arquivos): Apenas 4 arquivos de NR-01 (10), 2 de Seguro de Vida (07) e 1 de Elevador Toplift (31) podem conter data de conclusão/vigência no corpo do documento.',
-    '3. ATUAÇÃO SOB DEMANDA: Não é necessário realizar varreduras manuais no Drive. Caso alguma auditoria de cliente solicite especificamente um desses 7 documentos, basta acessar a Aba 2 deste relatório, filtrar o colaborador e clicar no link direto "Abrir Arquivo" para consultar ou renomear.',
+    `1. DOCUMENTOS VITALÍCIOS (${((permCount / totalCount) * 100).toFixed(1)}% - ${permCount} arquivos): Cartões de Vacina (05), Diplomas (24), CRT (23), Fichas Cadastrais/CCMEI (03), CTPS (04), eSocial (04.1) e WINDA ID (30) não possuem data de expiração/vencimento contratual nas auditorias de SSMA. A nomenclatura "SEM_DATA" é tecnicamente correta e suficiente.`,
+    `2. DOCUMENTOS PASSÍVEIS DE AJUSTE PONTUAL (${((actionCount / totalCount) * 100).toFixed(1)}% - ${actionCount} arquivo(s)): Documentos com potencial vigência ou pacotes com múltiplos certificados compactados.`,
+    '3. ATUAÇÃO SOB DEMANDA: Não é necessário realizar varreduras manuais no Drive. Caso alguma auditoria de cliente solicite especificamente um desses documentos, basta acessar a Aba 2 deste relatório, filtrar o colaborador e clicar no link direto "Abrir Arquivo" para consultar ou renomear.',
   ]
 
   for (let i = 0; i < guidelines.length; i++) {

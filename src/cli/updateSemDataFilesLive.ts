@@ -66,6 +66,42 @@ export const TARGETED_SEM_DATA_UPDATES: TargetedUpdate[] = [
     reason:
       'Data de conclusão do treinamento de NR-01 na Storz compartilhada com a turma (4 de Agosto de 2024).',
   },
+  {
+    collaborator: 'WERMESON DE OLIVEIRA FRANCO',
+    fileId: '1qt3IHPFfLA0RaodvmQW_LdBMq9WmCnxu',
+    folderId: '1U85H7x6x7THXAeQRUDFF-wC0BOIu0b6l',
+    code: '31',
+    docTitle: 'Elevador (JASO)',
+    date: '15.05.2027',
+    newName:
+      '31 – Elevador (JASO) – 15.05.2027 - WERMESON DE OLIVEIRA FRANCO.pdf',
+    reason:
+      'Data de validade do treinamento de elevador confirmada pelo gestor (15/05/2027).',
+  },
+  {
+    collaborator: 'RAMON RAMIRES COSTA CIRINO',
+    fileId: '1gawi8NGYcAY88N3owpbB3lTxfvgBqrne',
+    folderId: '1UKjZd3ZoTDj5FCYZk3X0t3WF89WHpe3s',
+    code: '07',
+    docTitle: 'Seguro de Vida',
+    date: '06.12.2026',
+    newName:
+      '07 – Seguro de Vida – 06.12.2026 - RAMON RAMIRES COSTA CIRINO.pdf',
+    reason:
+      'Término de vigência confirmado na página 1 da apólice Mongeral Aegon (06/12/2026 23:59).',
+  },
+  {
+    collaborator: 'ALISSON MATEUS ALMEIDA DA COSTA',
+    fileId: '1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1',
+    folderId: '136k5LWMnfQnpqXDhXhAPTCl83Ra_3eF-',
+    code: '10',
+    docTitle: 'NR-01 Integração EHS',
+    date: 'SEM_DATA',
+    newName:
+      '10 – NR-01 Integração (Pacote Treinamentos ZIP) – SEM_DATA - ALISSON MATEUS ALMEIDA DA COSTA.zip',
+    reason:
+      'Arquivo ZIP contendo 16 treinamentos diversos de 2023. Extensão corrigida para .zip.',
+  },
 ]
 
 async function main() {

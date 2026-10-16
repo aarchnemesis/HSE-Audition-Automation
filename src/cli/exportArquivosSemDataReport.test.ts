@@ -141,7 +141,7 @@ describe('exportArquivosSemDataReport', () => {
       x => x.collaborator === 'ALISSON MATEUS ALMEIDA DA COSTA'
     )
     expect(alisson).toBeDefined()
-    expect(alisson?.diagnostico).toContain('pacote compactado (.zip)')
+    expect(alisson?.diagnostico).toContain('Pacote compactado (.zip)')
   })
 
   it('gera links corretos do Google Drive para arquivo e pasta', () => {
