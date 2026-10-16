@@ -11281,11 +11281,12 @@
     "expirationDate": "2026-12-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "586647",
-    "storzState": "SOLICITADO",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 24/12/2026 Válido até 24/12/2026 | Reciclagem já solicitada na Storz (586647 - Status: SOLICITADO).",
+    "storzDeadline": "14/12/2026",
+    "detail": "Válido até 24/12/2026 Válido até 24/12/2026 | Reciclagem já solicitada na Storz (586647 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-16T02:48:20.217Z"
   },
   {
     "inspectorId": "rpo_48",
