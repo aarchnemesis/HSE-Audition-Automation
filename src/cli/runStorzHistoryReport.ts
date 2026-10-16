@@ -6,6 +6,7 @@ import { buildDoDashboardHtml } from '../adapters/dashboard/DoDashboardHtmlGener
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
 import { isDayAllowedForEmail } from '../adapters/email/emailScheduleValidator.js'
+import { Inspector } from '../domain/models/Certificate.js'
 import {
   StorzRequest,
   computeCourseDeadline,
@@ -16,6 +17,7 @@ import {
   RetestAttempt,
   groupRetests,
 } from '../domain/services/RetestTracker.js'
+import { TrainingSlaReportBuilder } from '../domain/services/TrainingSlaReportBuilder.js'
 import { IEmailService } from '../ports/IEmailService.js'
 
 const refDateArg = process.argv
@@ -276,11 +278,25 @@ function buildRetestSheet(
 
 async function exportToExcel(
   requests: StorzRequest[],
-  outputPath: string
+  outputPath: string,
+  rpoInspectors: Inspector[] = [],
+  refDate: Date = new Date()
 ): Promise<void> {
   const workbook = new ExcelJS.Workbook()
   buildHistorySheet(workbook, requests)
   buildRetestSheet(workbook, requests)
+  TrainingSlaReportBuilder.buildResumoColaboradorRhSheet(
+    workbook,
+    requests,
+    rpoInspectors,
+    refDate
+  )
+  TrainingSlaReportBuilder.buildSlaOciosidadeSheet(
+    workbook,
+    requests,
+    rpoInspectors,
+    refDate
+  )
   await workbook.xlsx.writeFile(outputPath)
 }
 
@@ -305,15 +321,29 @@ async function main() {
     refDate: REF_DATE,
     preferSnapshot: !FORCE_SYNC,
   })
+  const rpoInspectors = pipeline.loadRPOInspectorsCache(REF_DATE)
 
   console.log(
     `[StorzHistoryReport] ${syncResult.storzRequests.length} matrícula(s)/curso(s) carregada(s) da Storz (${syncResult.metadata.storzSource}).`
   )
+  console.log(
+    `[StorzHistoryReport] ${rpoInspectors.length} colaboradores carregados do cache do RPO para cruzamento de CLT/PJ e cargos.`
+  )
 
-  // 2. Gerar Relatorio Excel de Historico do Aluno
+  // 2. Gerar Relatorio Excel de Historico do Aluno (com abas de Reteste, Resumo RH e SLA/Ociosidade)
   const outputPath = path.join(scratchDir, 'historico_aluno_storz.xlsx')
-  await exportToExcel(syncResult.storzRequests, outputPath)
-  console.log(`[StorzHistoryReport] Relatório gerado em: ${outputPath}\n`)
+  await exportToExcel(syncResult.storzRequests, outputPath, rpoInspectors, REF_DATE)
+  console.log(`[StorzHistoryReport] Relatório do Aluno gerado em: ${outputPath}`)
+
+  // 2.1 Gerar Relatorio Standalone focado exclusivamente no RH (Mayana -> RH p/ Folha e VA)
+  const rhOutputPath = path.join(scratchDir, 'relatorio_sla_ociosidade_rh.xlsx')
+  await TrainingSlaReportBuilder.exportStandaloneRhReport(
+    syncResult.storzRequests,
+    rpoInspectors,
+    rhOutputPath,
+    REF_DATE
+  )
+  console.log(`[StorzHistoryReport] Relatório Standalone de SLA e Ociosidade (RH) gerado em: ${rhOutputPath}\n`)
 
   // 3. Garantir geracao da Auditoria Drive x RPO correspondente
   const auditPath = path.join(scratchDir, 'auditoria_drive_rpo.xlsx')
@@ -401,7 +431,8 @@ async function main() {
     <p>Olá, Equipe,</p>
     <p>Seguem em anexo as planilhas consolidadas e atualizadas sobre os treinamentos e a auditoria de conformidade (Fonte Única da Verdade — SSOT):</p>
     <ol>
-      <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com controle de retestes (${syncResult.storzRequests.length} matrículas rastreadas).</li>
+      <li><strong>historico_aluno_storz.xlsx:</strong> Histórico completo de matrículas na Storz com abas de Retestes, Resumo RH e Controle de SLA/Ociosidade (${syncResult.storzRequests.length} matrículas rastreadas).</li>
+      <li><strong>relatorio_sla_ociosidade_rh.xlsx:</strong> Relatório executivo para o RH e Mayana com controle de ociosidade e dias sem atividade para apontamento de desconto de Vale Alimentação (VA).</li>
       <li><strong>auditoria_drive_rpo.xlsx:</strong> Relatório consolidado da Auditoria Drive x RPO (${divergencesCount} divergências identificadas, 100% alinhado com o Dashboard).</li>
     </ol>
     ${ctaButtonHtml}
@@ -417,6 +448,7 @@ async function main() {
 
   const attachments = [
     { filename: 'historico_aluno_storz.xlsx', path: outputPath },
+    { filename: 'relatorio_sla_ociosidade_rh.xlsx', path: rhOutputPath },
     { filename: 'auditoria_drive_rpo.xlsx', path: auditPath },
   ]
 
