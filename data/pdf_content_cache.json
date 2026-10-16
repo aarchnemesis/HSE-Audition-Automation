@@ -143270,9 +143270,10 @@
   },
   {
     "fileId": "16tskQKzgTvHvnkrtuQR99mTEz8u2GDAS",
-    "filename": "21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf",
+    "filename": "21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf COM PROBLEMA",
     "v": 2,
-    "modifiedTime": "2026-05-04T09:00:42.000Z",
+    "cv": 1,
+    "modifiedTime": "2026-10-16T10:22:13.892Z",
     "code": "21",
     "issueDate": "2026-04-29T03:00:00.000Z",
     "expirationDate": "2028-04-29T03:00:00.000Z",
@@ -143280,8 +143281,8 @@
     "statusDetail": "Válido até 29/04/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
-    "extractedClause": "Data do arquivo: 21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf",
+    "matchedTerm": "NR-35",
+    "extractedClause": "Data do arquivo: 21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf COM PROBLEMA",
     "documents": [
       {
         "code": "21",
@@ -143291,19 +143292,8 @@
         "statusDetail": "Válido até 29/04/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-35 (via PDF) (Pág. 2)",
-        "extractedClause": "Data do arquivo: 21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf"
-      },
-      {
-        "code": "32",
-        "issueDate": "2026-04-29T03:00:00.000Z",
-        "expirationDate": "2028-04-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/04/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO ART (via PDF) (Pág. 4)",
-        "extractedClause": "Data do arquivo: 21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf"
+        "matchedTerm": "NR-35",
+        "extractedClause": "Data do arquivo: 21 – NR – 35 Trab. Altura– 29.04.26 - Italo de Abreu Duarte.pdf COM PROBLEMA"
       }
     ]
   },
