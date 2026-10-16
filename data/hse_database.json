@@ -1267,9 +1267,12 @@
     "modality": "ONLINE",
     "expirationDate": "2028-09-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 30/09/2028 Válido até 30/09/2028",
+    "storzRequestId": "608174",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 30/09/2028 Válido até 30/09/2028 | Reciclagem já solicitada na Storz (608174 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-16T15:03:49.223Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1282,12 +1285,12 @@
     "modality": "ONLINE",
     "expirationDate": "2028-09-30T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "572828",
-    "storzState": "CONCLUIDO",
+    "storzRequestId": "608173",
+    "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 30/09/2028 Válido até 30/09/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 30/09/2028 Válido até 30/09/2028 (Validado no RPO | Comprovante pendente no Drive) | Reciclagem já solicitada na Storz (608173 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-16T15:03:49.223Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -3598,9 +3601,12 @@
     "modality": "ONLINE",
     "expirationDate": "2027-12-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 18/12/2027 Válido até 18/12/2027",
+    "storzRequestId": "608172",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 18/12/2027 Válido até 18/12/2027 | Reciclagem já solicitada na Storz (608172 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-16T15:03:49.223Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -19444,11 +19450,11 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "607048",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 73,
+    "storzProgressPercent": 92,
     "storzDeadline": "14/12/2026",
     "detail": "Válido até 01/04/2028 Válido até 01/04/2028 | Reciclagem já solicitada na Storz (607048 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T14:49:55.292Z"
+    "lastUpdated": "2026-10-16T15:03:49.223Z"
   },
   {
     "inspectorId": "rpo_80",
