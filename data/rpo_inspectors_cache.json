@@ -7073,12 +7073,33 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "MS068740BR",
     "certificates": {
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-10-18T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/10/2028"
+      },
+      "13": {
+        "code": "13",
+        "name": "NR 10 SEP",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
+      },
       "14": {
         "code": "14",
         "name": "NR 11",
         "expirationDate": "2027-04-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 24/04/2027"
+      },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
       },
       "16": {
         "code": "16",
