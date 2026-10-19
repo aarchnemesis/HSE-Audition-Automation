@@ -2582,10 +2582,6 @@ export function buildDashboardHtml(
           </div>
         </div>
       </div>
-      <div class="mono" style="font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:6px;cursor:help;" title="${auditFullDateTimeStr}">
-        <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>Ref: <span id="freshnessTimestamp" style="border-bottom: 1px dotted var(--text-sub);">${auditDateStr}</span></span>
-      </div>
     </div>
 
     <!-- PAGE TITLE BAR -->
