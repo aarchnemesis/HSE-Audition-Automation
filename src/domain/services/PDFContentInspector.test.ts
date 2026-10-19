@@ -429,5 +429,40 @@ describe('PDFContentInspector', () => {
       const gwoDoc = results.find(r => r.code === '32')
       expect(gwoDoc).toBeUndefined()
     })
+
+    it('deve extrair vigencia de certificado de seguro de vida MAG Seguros com tabela inicio e termino (caso Thayna)', () => {
+      const page = `
+        CERTIFICADO
+        Mongeral Aegon Seguros e Previdência S.A. - CNPJ: 33.608.308/0001-73
+        Estipulante: ARTH WIND TECHNOLOGIES S.A.
+        Nome do Segurado: THAYNA NOGUEIRA TAVARES
+        Periodicidade do pagamento Início de Vigência Término de Vigência
+        MENSAL 07/06/2026 00:00 06/12/2026 23:59
+      `
+      const filename = '07 – Seguro de Vida – SEM_DATA - THAYNA NOGUEIRA TAVARES.pdf'
+      const results = PDFContentInspector.inspectPages(filename, [page], new Date('2026-10-19T00:00:00Z'))
+
+      expect(results.length).toBe(1)
+      expect(results[0].code).toBe('07')
+      expect(results[0].statusEHS).toBe('VENCE_60')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2026-06-07')
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2026-12-06')
+    })
+
+    it('deve extrair inicio e fim da vigencia de seguro viagem Coris (caso Felipe Bispo)', () => {
+      const page = `
+        Olá, FELIPE RODRIGUES BISPO !
+        Segurado: FELIPE RODRIGUES BISPO CPF: 045.978.561-37
+        Início da vigência: 22/04/2026 Fim da vigência: 21/05/2026
+        Número de bilhete: BZCORS03572381
+      `
+      const filename = 'SEGURO CORIS_FELIPE RODRIGUES BISPO2026-04.pdf'
+      const results = PDFContentInspector.inspectPages(filename, [page], new Date('2026-10-19T00:00:00Z'))
+
+      expect(results.length).toBe(1)
+      expect(results[0].code).toBe('07')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2026-04-22')
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2026-05-21')
+    })
   })
 })

@@ -656,9 +656,9 @@ export class PDFContentInspector {
     let explicitIssueDate: Date | undefined
     let foundClause = ''
 
-    // 1. Procura validade explícita direta: "Válido até DD/MM/AAAA", "Validade: DD/MM/AAAA", "Expiration Date: YYYY-MM-DD", "Valid until"
+    // 1. Procura validade explícita direta: "Válido até DD/MM/AAAA", "Validade: DD/MM/AAAA", "Expiration Date: YYYY-MM-DD", "Valid until", "Término da vigência: DD/MM/AAAA", "Fim da vigência: DD/MM/AAAA"
     const validadeAteRegex = new RegExp(
-      `(?:v[aá]lido\\s+at[eé]|validade(?:\\s+at[eé])?|expiration\\s+date|valid\\s+until|expires)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
+      `(?:v[aá]lido\\s+at[eé]|validade(?:\\s+at[eé])?|expiration\\s+date|valid\\s+until|expires|t[eé]rmino\\s*(?:de|da)?\\s*vig[eê]ncia|fim\\s*(?:de|da)?\\s*vig[eê]ncia|vig[eê]ncia\\s+at[eé])\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const match of clean.matchAll(validadeAteRegex)) {
@@ -668,6 +668,23 @@ export class PDFContentInspector {
           explicitExpDate = parsed
           foundClause = match[0]
         }
+      }
+    }
+
+    // 1.1 Apólices e certificados de seguro (ex: MAG Seguros / Mongeral Aegon / Porto): tabela com "Início de Vigência ... Término de Vigência ... DATA ... DATA"
+    const seguroTableRegex = /In[íi]cio\s*(?:de|da)?\s*Vig[êe]ncia.*?T[éèe]rmino\s*(?:de|da)?\s*Vig[êe]ncia.*?(\d{2}\/\d{2}\/\d{4}).*?(\d{2}\/\d{2}\/\d{4})/i
+    const seguroTableMatch = clean.match(seguroTableRegex)
+    if (seguroTableMatch) {
+      const parsedInicio = parsePortugueseDate(seguroTableMatch[1])
+      const parsedTermino = parsePortugueseDate(seguroTableMatch[2])
+      if (parsedTermino) {
+        if (!explicitExpDate || parsedTermino.getTime() > explicitExpDate.getTime()) {
+          explicitExpDate = parsedTermino
+          foundClause = seguroTableMatch[0].slice(0, 100)
+        }
+      }
+      if (parsedInicio && !explicitIssueDate) {
+        explicitIssueDate = parsedInicio
       }
     }
 
@@ -694,9 +711,9 @@ export class PDFContentInspector {
     }
     const completionCandidates: DateCandidate[] = []
 
-    // Ex. 0: "Iniciado em 31/03/2026 e concluído em 17/04/2026", "Data de início: 28/01/2026"
+    // Ex. 0: "Iniciado em 31/03/2026 e concluído em 17/04/2026", "Data de início: 28/01/2026", "Início da vigência: 22/04/2026"
     const iniciadoRegex = new RegExp(
-      `(?:data\\s+de\\s+in[ií]cio|iniciado\\s+em|realizado\\s+de|per[ií]odo\\s+de)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
+      `(?:data\\s+de\\s+in[ií]cio|iniciado\\s+em|realizado\\s+de|per[ií]odo\\s+de|in[ií]cio\\s*(?:de|da)?\\s*vig[eê]ncia)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(iniciadoRegex)) {

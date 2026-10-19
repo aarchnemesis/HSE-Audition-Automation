@@ -272,7 +272,7 @@ const SEMANTIC_RULES: Array<{
   },
   // Seguro de Vida
   {
-    regex: /\b(?:SEGURO\s+DE\s+VIDA|APOLICE\s+DE\s+SEGURO)\b/i,
+    regex: /\b(?:SEGURO\s+DE\s+VIDA|APOLICE\s+DE\s+SEGURO|SEGURO\s+CORIS|SEGURO\s+VIAGEM)\b/i,
     code: '07',
     matchedTerm: 'Seguro de Vida',
   },
