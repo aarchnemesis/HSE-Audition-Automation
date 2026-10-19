@@ -18421,15 +18421,15 @@
     "driveExpiration": "2027-06-13T03:00:00.000Z",
     "storzExpiration": "2028-10-16T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-03-25T12:00:00.000Z",
+    "rpoExpiration": "2028-10-14T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 445 dia(s) (13/06/2027 no Drive vs 25/03/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 445,
-    "recommendedAction": "Atualizar data na RPO para 13/06/2027"
+    "detail": "Curso validado na planilha RPO (14/10/2028), porém o Drive ainda possui registro anterior (13/06/2027).",
+    "diffDays": 489,
+    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
   },
   {
     "inspectorName": "LEONARDO SIMON COSTA GAEM",
@@ -18449,15 +18449,15 @@
     "docName": "NR-12 Segurança em Máquinas",
     "driveExpiration": "2027-06-13T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2026-06-29T12:00:00.000Z",
+    "rpoExpiration": "2028-10-16T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 349 dia(s) (13/06/2027 no Drive vs 29/06/2026 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 349,
-    "recommendedAction": "Atualizar data na RPO para 13/06/2027"
+    "detail": "Curso validado na planilha RPO (16/10/2028), porém o Drive ainda possui registro anterior (13/06/2027).",
+    "diffDays": 491,
+    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
   },
   {
     "inspectorName": "LEONARDO SIMON COSTA GAEM",
