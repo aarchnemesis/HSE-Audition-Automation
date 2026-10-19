@@ -6927,6 +6927,18 @@
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "rpoExpiration": "2028-10-15T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (15/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "SIMON DIAS DA SILVA",
     "docCode": "09",
     "docName": "Direção Defensiva",
     "rpoExpiration": "2028-10-08T12:00:00.000Z",
