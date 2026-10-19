@@ -686,13 +686,25 @@ export class PDFContentInspector {
       }
     }
 
-    // 3. Procura data de realização / conclusão do curso (coleta todas e prioriza a mais recente)
+    // 3. Procura data de realização / início do curso (coleta candidatos dando prioridade à data de início)
     interface DateCandidate {
       date: Date
       clause: string
-      priority: number // 1: conclusão direta/período, 2: cidade/assinatura, 3: clicksign log
+      priority: number // 0: data de início explícita/período inicial, 1: conclusão direta/período, 2: cidade/assinatura, 3: clicksign log
     }
     const completionCandidates: DateCandidate[] = []
+
+    // Ex. 0: "Iniciado em 31/03/2026 e concluído em 17/04/2026", "Data de início: 28/01/2026"
+    const iniciadoRegex = new RegExp(
+      `(?:data\\s+de\\s+in[ií]cio|iniciado\\s+em|realizado\\s+de|per[ií]odo\\s+de)\\s*:?\\s*(${DATE_CAPTURE_PATTERN})`,
+      'gi'
+    )
+    for (const m of clean.matchAll(iniciadoRegex)) {
+      const parsed = parsePortugueseDate(m[1])
+      if (parsed) {
+        completionCandidates.push({ date: parsed, clause: m[0], priority: 0 })
+      }
+    }
 
     // Ex. A: "Concluído em 12 de Maio de 2025" / "Date Certified: 2026-06-03" / "Data de Conclusão: <uuid> 2025 07 24"
     const concluidoRegex = new RegExp(
@@ -706,36 +718,48 @@ export class PDFContentInspector {
       }
     }
 
-    // Ex. B: "Concluido no período de ... a [DATA]" / "no período de ... a [DATA]" / "período de ... à [DATA]"
+    // Ex. B: "no período de [INICIO] a [FIM]" -> m[1] é a data de início!
     const periodoRegex = new RegExp(
-      `(?:conclu[ií]do|realizado|ministrado)?\\s*(?:no\\s+per[ií]odo\\s+de|per[ií]odo\\s+de)\\s+([^\\.,;\\n]+?)\\s+[aà]\\s+(${DATE_CAPTURE_PATTERN})`,
+      `(?:conclu[ií]do|realizado|ministrado)?\\s*(?:no\\s+per[ií]odo\\s+de|per[ií]odo\\s+de)\\s+(${DATE_CAPTURE_PATTERN})\\s+[aà]\\s+(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(periodoRegex)) {
-      const parsed = parsePortugueseDate(m[2])
-      if (parsed) {
-        completionCandidates.push({ date: parsed, clause: m[0], priority: 1 })
+      const startParsed = parsePortugueseDate(m[1])
+      if (startParsed) {
+        completionCandidates.push({ date: startParsed, clause: m[0], priority: 0 })
+      } else {
+        const endParsed = parsePortugueseDate(m[2])
+        if (endParsed) {
+          completionCandidates.push({ date: endParsed, clause: m[0], priority: 1 })
+        }
       }
     }
 
     // Ex. C: "nos dias 07 e 08 de Janeiro de 2026", "no dia 27de Agosto de 2026", "no dia 27/01/2026", "completou ... no dia [DATA]", "entre os dias 26 A 29 DE NOVEMBRO DE 2025"
     const noDiaRegex = new RegExp(
-      `(?:no[s]?\\s+dia[s]?|entre\\s+os\\s+dias|completou.*?no\\s+dia|completou.*?entre\\s+os\\s+dias)\\s*(?:[0-9]{1,2}\\s*(?:e|[aàAÀ])\\s*)?(${DATE_CAPTURE_PATTERN})`,
+      `(?:no[s]?\\s+dia[s]?|entre\\s+os\\s+dias|completou.*?no\\s+dia|completou.*?entre\\s+os\\s+dias)\\s*(${DATE_CAPTURE_PATTERN})`,
       'gi'
     )
     for (const m of clean.matchAll(noDiaRegex)) {
       const parsed = parsePortugueseDate(m[1])
       if (parsed) {
-        completionCandidates.push({ date: parsed, clause: m[0], priority: 1 })
+        completionCandidates.push({ date: parsed, clause: m[0], priority: 0 })
       }
     }
 
-    // Se encontramos candidatos de prioridade 1 (conclusão direta/período), ordenamos pela data mais recente
-    const directCandidates = completionCandidates.filter(c => c.priority === 1)
-    if (directCandidates.length > 0) {
-      directCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
-      explicitIssueDate = directCandidates[0].date
-      if (!foundClause) foundClause = directCandidates[0].clause
+    // Se encontramos candidatos de início (prioridade 0) ou conclusão (prioridade 1)
+    const startCandidates = completionCandidates.filter(c => c.priority === 0)
+    if (startCandidates.length > 0) {
+      startCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
+      explicitIssueDate = startCandidates[0].date
+      foundClause = startCandidates[0].clause
+    } else {
+      const directCandidates = completionCandidates.filter(c => c.priority === 1)
+      if (directCandidates.length > 0) {
+        directCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
+        explicitIssueDate = directCandidates[0].date
+        if (!foundClause) foundClause = directCandidates[0].clause
+      }
     }
 
     // Ex. D: Assinatura de cidade no rodapé: "Fortaleza, 08 de Janeiro de 2026", "Sorocaba (SP), 29 de Março de 2023"

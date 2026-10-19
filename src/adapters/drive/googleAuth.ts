@@ -1,8 +1,8 @@
 import fs from 'fs'
 import http from 'http'
 import path from 'path'
-import { google } from 'googleapis'
-import type { OAuth2Client } from 'googleapis-common'
+import { google, Auth } from 'googleapis'
+type OAuth2Client = Auth.OAuth2Client
 
 import readline from 'readline'
 

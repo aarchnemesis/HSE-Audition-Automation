@@ -275,7 +275,7 @@ async function main() {
           proposedName: g.proposedName,
           folderId: g.folderId,
           filesCount: g.files.length,
-          mergedFileId: searchTarget.data.files[0].id,
+          mergedFileId: searchTarget.data.files[0].id || '',
           status: 'SUCESSO',
           timestamp: new Date().toISOString(),
         })

@@ -1,5 +1,5 @@
-import { drive_v3, google } from 'googleapis'
-import type { OAuth2Client } from 'googleapis-common'
+import { drive_v3, google, Auth } from 'googleapis'
+type OAuth2Client = Auth.OAuth2Client
 import pdfParse from 'pdf-parse'
 import { Certificate, Inspector } from '../../domain/models/Certificate.js'
 import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
@@ -128,7 +128,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         if (entry.mimeType !== FOLDER_MIME || !entry.id || !entry.name) continue
 
         const folderName = entry.name
-        if (folderName.toLowerCase().includes('obsoleto')) continue
+        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(folderName.trim())) continue
         if (filterNames && filterNames.length > 0) {
           const matchesFilter = filterNames.some(fname =>
             folderName.toUpperCase().includes(fname.toUpperCase())
@@ -173,8 +173,8 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       if (!entry.name) continue
 
       if (entry.mimeType === FOLDER_MIME) {
-        const lowerName = entry.name.toLowerCase()
-        if (lowerName.includes('obsoleto') || !entry.id) continue
+        const lowerName = entry.name.toLowerCase().trim()
+        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(lowerName) || !entry.id) continue
         if (excludedFolderNames?.some(excluded => lowerName.includes(excluded)))
           continue
         await this.scanFolderRecursive(

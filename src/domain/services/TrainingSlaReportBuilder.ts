@@ -77,7 +77,7 @@ export class TrainingSlaReportBuilder {
     const direct = rpoMap.get(clean)
     if (direct) return direct
 
-    const matched = rpoInspectors.find(i => matchesInspector(i.name, collabName))
+    const matched = rpoInspectors.find(i => matchesInspector(i, collabName))
     if (matched) {
       return {
         role: matched.role || 'TÉCNICO',
