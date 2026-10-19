@@ -1389,7 +1389,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/08/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_20",
@@ -3679,7 +3682,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/06/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_35",
@@ -3971,7 +3977,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/12/2027"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_37",
@@ -4983,6 +4992,13 @@
         "expirationDate": "2028-09-16T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/09/2028"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/10/2028"
       }
     }
   },
@@ -8394,6 +8410,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 05/02/2027"
       },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027"
+      },
       "21": {
         "code": "21",
         "name": "NR 35",
@@ -8415,6 +8438,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 04/02/2027"
       },
+      "28": {
+        "code": "28",
+        "name": "NR 33 SUP",
+        "expirationDate": "2027-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
@@ -8422,7 +8452,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/10/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_67",
@@ -9020,7 +9053,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/10/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_71",

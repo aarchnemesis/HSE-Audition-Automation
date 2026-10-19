@@ -74,14 +74,14 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-16T03:00:00.000Z",
+    "expirationDate": "2028-08-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "482147",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 16/09/2028 Válido até 16/09/2028",
+    "detail": "Válido até 19/08/2028 Válido até 19/08/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -241,9 +241,9 @@
     "storzRequestId": "514631",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 12/06/2028 Válido até 12/06/2028",
+    "detail": "Válido até 12/06/2028 Válido até 12/06/2028 (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -299,11 +299,11 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-03-31T03:00:00.000Z",
+    "expirationDate": "2028-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 31/03/2028 Válido até 31/03/2028",
+    "detail": "Válido até 30/01/2028 Válido até 30/01/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -362,11 +362,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-08-26T03:00:00.000Z",
+    "expirationDate": "2078-08-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 26/08/2077 Válido até 26/08/2077",
+    "detail": "Válido até 26/08/2078 Válido até 26/08/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -569,11 +569,11 @@
     "docCode": "26",
     "docName": "ESO (Vestas)",
     "modality": "ONLINE",
-    "expirationDate": "2027-11-17T03:00:00.000Z",
+    "expirationDate": "2027-03-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 17/11/2027 Válido até 17/11/2027",
+    "detail": "Válido até 18/03/2027 Válido até 18/03/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -604,9 +604,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 4 dia(s) (23/10/2026) CRÍTICO: Vence em 7 dia(s) (23/10/2026)",
+    "detail": "CRÍTICO: Vence em 4 dia(s) (23/10/2026) CRÍTICO: Vence em 4 dia(s) (23/10/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_13",
@@ -647,11 +647,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-11-26T03:00:00.000Z",
+    "expirationDate": "2077-11-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 26/11/2076 Válido até 26/11/2076",
+    "detail": "Válido até 26/11/2077 Válido até 26/11/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_13",
@@ -787,9 +787,9 @@
     "storzRequestId": "572832",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (572832) em 19/09/2026 — Válido até 19/09/2027 (aguardando upload no Drive).",
+    "detail": "Válido até 19/09/2027 Válido até 19/09/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_13",
@@ -800,11 +800,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-11-30T03:00:00.000Z",
+    "expirationDate": "2027-11-03T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 30/11/2027 Válido até 30/11/2027",
+    "detail": "Válido até 03/11/2027 Válido até 03/11/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_13",
@@ -923,11 +923,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-01-08T03:00:00.000Z",
+    "expirationDate": "2076-01-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 08/01/2076 Válido até 08/01/2076",
+    "detail": "Válido até 05/01/2076 Válido até 05/01/2076",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_14",
@@ -938,11 +938,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-02-11T03:00:00.000Z",
+    "expirationDate": "2078-02-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/02/2077 Válido até 11/02/2077",
+    "detail": "Válido até 11/02/2078 Válido até 11/02/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_14",
@@ -1175,11 +1175,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-08T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 08/10/2027 Válido até 08/10/2027",
+    "expirationDate": "2026-10-08T12:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 10 dias (08/10/2026) VENCIDO há 10 dias (08/10/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1220,11 +1220,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-03-09T03:00:00.000Z",
+    "expirationDate": "2078-03-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/03/2077 Válido até 09/03/2077",
+    "detail": "Válido até 09/03/2078 Válido até 09/03/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1265,14 +1265,14 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-30T03:00:00.000Z",
+    "expirationDate": "2028-08-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "608174",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 30/09/2028 Válido até 30/09/2028 | Reciclagem já solicitada na Storz (608174 - Status: SOLICITADO).",
+    "detail": "Válido até 21/08/2028 Válido até 21/08/2028 | Reciclagem já solicitada na Storz (608174 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T15:03:49.223Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1520,14 +1520,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2078-01-31T03:00:00.000Z",
+    "expirationDate": "2078-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572819",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 31/01/2078 Válido até 31/01/2078",
+    "detail": "Válido até 30/01/2078 Válido até 30/01/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -1568,11 +1568,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-10-01T03:00:00.000Z",
+    "expirationDate": "2028-08-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 01/10/2028 Válido até 01/10/2028",
+    "detail": "Válido até 27/08/2028 Válido até 27/08/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -1780,9 +1780,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 38 dias (26/11/2026) ALERTA INICIAL: Vence em 41 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 38 dias (26/11/2026) ALERTA INICIAL: Vence em 38 dias (26/11/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -1823,11 +1823,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-09-11T03:00:00.000Z",
+    "expirationDate": "2078-09-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/09/2077 Válido até 11/09/2077",
+    "detail": "Válido até 11/09/2078 Válido até 11/09/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -2114,11 +2114,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-05-28T03:00:00.000Z",
+    "expirationDate": "2078-05-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 28/05/2077 Válido até 28/05/2077",
+    "detail": "Válido até 27/05/2078 Válido até 27/05/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_18",
@@ -2648,11 +2648,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-05-21T03:00:00.000Z",
+    "expirationDate": "2077-05-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 21/05/2076 Válido até 21/05/2076",
+    "detail": "Válido até 21/05/2077 Válido até 21/05/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -2858,11 +2858,11 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-02-24T03:00:00.000Z",
+    "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/02/2027 Válido até 24/02/2027",
+    "detail": "Válido até 04/02/2027 Válido até 04/02/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -2903,11 +2903,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-09-03T03:00:00.000Z",
+    "expirationDate": "2075-08-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 03/09/2076 Válido até 03/09/2076",
+    "detail": "Válido até 14/08/2075 Válido até 14/08/2075",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -2918,11 +2918,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-12-23T03:00:00.000Z",
+    "expirationDate": "2077-12-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 23/12/2076 Válido até 23/12/2076",
+    "detail": "Válido até 23/12/2077 Válido até 23/12/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -2933,11 +2933,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-11-11T03:00:00.000Z",
+    "expirationDate": "2027-10-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/11/2027 Válido até 11/11/2027",
+    "detail": "Válido até 11/10/2027 Válido até 11/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -2963,11 +2963,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-14T03:00:00.000Z",
+    "expirationDate": "2028-08-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 14/09/2028 Válido até 14/09/2028",
+    "detail": "Válido até 21/08/2028 Válido até 21/08/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -3097,9 +3097,9 @@
     "storzRequestId": "572968",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 14/09/2028 Válido até 14/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (572968) em 14/09/2026 — Válido até 14/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_21",
@@ -3203,11 +3203,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2075-10-23T03:00:00.000Z",
+    "expirationDate": "2075-10-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 23/10/2075 Válido até 23/10/2075",
+    "detail": "Válido até 09/10/2075 Válido até 09/10/2075",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3233,11 +3233,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-11T03:00:00.000Z",
+    "expirationDate": "2027-12-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/09/2028 Válido até 11/09/2028",
+    "detail": "Válido até 15/12/2027 Válido até 15/12/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3284,14 +3284,14 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-08-31T12:00:00.000Z",
+    "expirationDate": "2028-09-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583165",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 31/08/2028 Válido até 31/08/2028 | Reciclagem já solicitada na Storz (583165 - Status: SOLICITADO).",
+    "detail": "Válido até 14/09/2028 Válido até 14/09/2028 | Reciclagem já solicitada na Storz (583165 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3302,14 +3302,14 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-08-27T03:00:00.000Z",
+    "expirationDate": "2028-09-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "572963",
-    "storzState": "CONCLUIDO",
+    "storzRequestId": "580039",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (572963) em 27/08/2026 — Válido até 27/08/2028 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (580039 - Status: EM_ANDAMENTO).",
+    "detail": "Válido até 14/09/2028 Válido até 14/09/2028 | Reciclagem já solicitada na Storz (580039 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3356,14 +3356,14 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-06T03:00:00.000Z",
+    "expirationDate": "2027-08-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583089",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 06/09/2027 Válido até 06/09/2027 | Reciclagem já solicitada na Storz (583089 - Status: SOLICITADO).",
+    "detail": "Válido até 28/08/2027 Válido até 28/08/2027 | Reciclagem já solicitada na Storz (583089 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3392,11 +3392,11 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-11T03:00:00.000Z",
+    "expirationDate": "2028-04-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/09/2028 Válido até 11/09/2028",
+    "detail": "Válido até 28/04/2028 Válido até 28/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3437,11 +3437,11 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-06T03:00:00.000Z",
+    "expirationDate": "2027-08-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/09/2027 Válido até 06/09/2027",
+    "detail": "Válido até 28/08/2027 Válido até 28/08/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3530,11 +3530,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-12-15T03:00:00.000Z",
+    "expirationDate": "2077-12-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 15/12/2076 Válido até 15/12/2076",
+    "detail": "Válido até 15/12/2077 Válido até 15/12/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -3550,9 +3550,9 @@
     "storzRequestId": "571438",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 09/09/2028 Válido até 09/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (571438) em 09/09/2026 — Válido até 09/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -3568,9 +3568,9 @@
     "storzRequestId": "574967",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 05/09/2028 Válido até 05/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (574967) em 05/09/2026 — Válido até 05/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -3636,14 +3636,14 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-01T03:00:00.000Z",
+    "expirationDate": "2028-09-03T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "571449",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 01/09/2028 Válido até 01/09/2028",
+    "detail": "Válido até 03/09/2028 Válido até 03/09/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -3789,11 +3789,11 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-22T03:00:00.000Z",
+    "expirationDate": "2028-09-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 22/09/2028 Válido até 22/09/2028",
+    "detail": "Válido até 18/09/2028 Válido até 18/09/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -3864,14 +3864,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-06-19T03:00:00.000Z",
+    "expirationDate": "2076-09-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572898",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 19/06/2077 Válido até 19/06/2077",
+    "detail": "Válido até 16/09/2076 Válido até 16/09/2076",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -4110,14 +4110,14 @@
     "docCode": "34",
     "docName": "CIPA (NR-05)",
     "modality": "ONLINE",
-    "expirationDate": "2034-07-29T03:00:00.000Z",
+    "expirationDate": "2027-05-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "497600",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 29/07/2034 Válido até 29/07/2034",
+    "detail": "Curso renovado e aprovado na Storz (497600) em 26/05/2026 — Válido até 26/05/2027 (aguardando upload no Drive).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4173,14 +4173,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-11-15T03:00:00.000Z",
+    "expirationDate": "2077-11-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606755",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 15/11/2076 Válido até 15/11/2076 | Reciclagem já solicitada na Storz (606755 - Status: SOLICITADO).",
+    "detail": "Válido até 12/11/2077 Válido até 12/11/2077 | Reciclagem já solicitada na Storz (606755 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4209,11 +4209,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2027-07-02T03:00:00.000Z",
+    "expirationDate": "2027-05-08T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 02/07/2027 Válido até 02/07/2027",
+    "detail": "Válido até 08/05/2027 Válido até 08/05/2027",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4224,14 +4224,14 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-04-04T03:00:00.000Z",
+    "expirationDate": "2028-08-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606996",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 04/04/2027 Válido até 04/04/2027 | Reciclagem já solicitada na Storz (606996 - Status: SOLICITADO).",
+    "detail": "Válido até 28/08/2028 Válido até 28/08/2028 | Reciclagem já solicitada na Storz (606996 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4317,14 +4317,14 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-13T03:00:00.000Z",
+    "expirationDate": "2027-02-07T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "607037",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 13/01/2027 Válido até 13/01/2027 | Reciclagem já solicitada na Storz (607037 - Status: SOLICITADO).",
+    "detail": "Válido até 07/02/2027 Válido até 07/02/2027 | Reciclagem já solicitada na Storz (607037 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4476,11 +4476,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-11-06T03:00:00.000Z",
+    "expirationDate": "2077-11-06T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/11/2076 Válido até 06/11/2076",
+    "detail": "Válido até 06/11/2077 Válido até 06/11/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -4496,9 +4496,9 @@
     "storzRequestId": "571437",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 01/09/2028 Válido até 01/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (571437) em 01/09/2026 — Válido até 01/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T17:03:36.871Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -4527,11 +4527,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-03-20T03:00:00.000Z",
+    "expirationDate": "2028-08-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 20/03/2027 Válido até 20/03/2027",
+    "detail": "Válido até 21/08/2028 Válido até 21/08/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -4650,14 +4650,14 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-11T12:00:00.000Z",
+    "expirationDate": "2028-09-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572969",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 11/09/2028 Válido até 11/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (572969) em 11/09/2026 — Válido até 11/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -4683,11 +4683,11 @@
     "docCode": "26",
     "docName": "ESO (Vestas)",
     "modality": "ONLINE",
-    "expirationDate": "2027-02-23T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 23/02/2027 Válido até 23/02/2027",
+    "expirationDate": "2026-09-05T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 44 dias (05/09/2026) VENCIDO há 44 dias (05/09/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -4716,11 +4716,11 @@
     "docCode": "34",
     "docName": "CIPA (NR-05)",
     "modality": "ONLINE",
-    "expirationDate": "2033-09-19T03:00:00.000Z",
+    "expirationDate": "2025-06-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 19/09/2033 Válido até 19/09/2033",
+    "detail": "Histórico CIPA (Gestão anterior) - não exigido como pendência para a gestão atual.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_27",
@@ -4776,14 +4776,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-08-05T03:00:00.000Z",
+    "expirationDate": "2078-08-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583192",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 05/08/2077 Válido até 05/08/2077",
+    "detail": "Válido até 05/08/2078 Válido até 05/08/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_27",
@@ -4824,11 +4824,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-08T03:00:00.000Z",
+    "expirationDate": "2028-08-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 08/09/2028 Válido até 08/09/2028",
+    "detail": "Válido até 21/08/2028 Válido até 21/08/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_27",
@@ -4958,9 +4958,9 @@
     "storzRequestId": "572970",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 08/09/2028 Válido até 08/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (572970) em 08/09/2026 — Válido até 08/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_27",
@@ -5138,14 +5138,14 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-30T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "606510",
-    "storzState": "SOLICITADO",
+    "storzRequestId": "587450",
+    "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 30/09/2028 Válido até 30/09/2028 | Reciclagem já solicitada na Storz (606510 - Status: SOLICITADO).",
+    "detail": "Curso renovado e aprovado na Storz (587450) em 23/09/2026 — Válido até 23/09/2028 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (606510 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5161,9 +5161,9 @@
     "storzRequestId": "587453",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (587453) em 26/09/2026 — Válido até 26/09/2028 (aguardando upload no Drive).",
+    "detail": "Válido até 26/09/2028 Válido até 26/09/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T21:04:13.718Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5242,9 +5242,9 @@
     "storzRequestId": "587480",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (587480) em 21/09/2026 — Válido até 21/09/2027 (aguardando upload no Drive).",
+    "detail": "Válido até 21/09/2027 Válido até 21/09/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5275,9 +5275,9 @@
     "storzRequestId": "587483",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 30/09/2028 Válido até 30/09/2028",
+    "detail": "Curso renovado e aprovado na Storz (587483) em 30/09/2026 — Válido até 30/09/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T17:03:36.871Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5318,14 +5318,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-22T03:00:00.000Z",
+    "expirationDate": "2027-09-25T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "587481",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 22/09/2027 Válido até 22/09/2027",
+    "detail": "Válido até 25/09/2027 Válido até 25/09/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5396,14 +5396,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-02-10T03:00:00.000Z",
+    "expirationDate": "2078-02-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "596692",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 10/02/2077 Válido até 10/02/2077 | Reciclagem já solicitada na Storz (596692 - Status: SOLICITADO).",
+    "detail": "Válido até 10/02/2078 Válido até 10/02/2078 | Reciclagem já solicitada na Storz (596692 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -5414,11 +5414,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-05-12T03:00:00.000Z",
+    "expirationDate": "2027-10-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 12/05/2027 Válido até 12/05/2027",
+    "detail": "Válido até 11/10/2027 Válido até 11/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -5614,9 +5614,9 @@
     "modality": "ONLINE",
     "expirationDate": "2026-04-16T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 186 dias (16/04/2026) VENCIDO há 183 dias (16/04/2026)",
+    "detail": "VENCIDO há 186 dias (16/04/2026) VENCIDO há 186 dias (16/04/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_30",
@@ -5657,11 +5657,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-02-05T03:00:00.000Z",
+    "expirationDate": "2076-01-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 05/02/2076 Válido até 05/02/2076",
+    "detail": "Válido até 13/01/2076 Válido até 13/01/2076",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_30",
@@ -5672,14 +5672,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-01-21T03:00:00.000Z",
+    "expirationDate": "2078-01-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606756",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 21/01/2077 Válido até 21/01/2077 | Reciclagem já solicitada na Storz (606756 - Status: SOLICITADO).",
+    "detail": "Válido até 21/01/2078 Válido até 21/01/2078 | Reciclagem já solicitada na Storz (606756 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_30",
@@ -5954,14 +5954,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-05-20T03:00:00.000Z",
+    "expirationDate": "2078-05-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606757",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 20/05/2077 Válido até 20/05/2077 | Reciclagem já solicitada na Storz (606757 - Status: SOLICITADO).",
+    "detail": "Válido até 19/05/2078 Válido até 19/05/2078 | Reciclagem já solicitada na Storz (606757 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T12:48:11.348Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -5990,11 +5990,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2027-02-06T03:00:00.000Z",
+    "expirationDate": "2027-07-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/02/2027 Válido até 06/02/2027",
+    "detail": "Válido até 02/07/2027 Válido até 02/07/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6023,14 +6023,14 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2028-06-12T03:00:00.000Z",
+    "expirationDate": "2027-11-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "607011",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 12/06/2028 Válido até 12/06/2028 | Reciclagem já solicitada na Storz (607011 - Status: SOLICITADO).",
+    "detail": "Válido até 19/11/2027 Válido até 19/11/2027 | Reciclagem já solicitada na Storz (607011 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6129,11 +6129,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-07-06T03:00:00.000Z",
+    "expirationDate": "2027-11-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/07/2028 Válido até 06/07/2028",
+    "detail": "Válido até 19/11/2027 Válido até 19/11/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6144,14 +6144,14 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2027-11-19T03:00:00.000Z",
+    "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "607043",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 19/11/2027 Válido até 19/11/2027 | Reciclagem já solicitada na Storz (607043 - Status: SOLICITADO).",
+    "detail": "Válido até 05/02/2027 Válido até 05/02/2027 | Reciclagem já solicitada na Storz (607043 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6192,11 +6192,11 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-03-14T03:00:00.000Z",
+    "expirationDate": "2027-01-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 14/03/2027 Válido até 14/03/2027",
+    "detail": "Válido até 13/01/2027 Válido até 13/01/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-15T15:14:46.790Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6224,9 +6224,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 4 dia(s) (23/10/2026) CRÍTICO: Vence em 7 dia(s) (23/10/2026)",
+    "detail": "CRÍTICO: Vence em 4 dia(s) (23/10/2026) CRÍTICO: Vence em 4 dia(s) (23/10/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -6252,14 +6252,14 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-09-21T03:00:00.000Z",
+    "expirationDate": "2076-08-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572884",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 21/09/2076 Válido até 21/09/2076",
+    "detail": "Válido até 31/08/2076 Válido até 31/08/2076",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -6270,11 +6270,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-10-10T03:00:00.000Z",
+    "expirationDate": "2075-10-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 10/10/2076 Válido até 10/10/2076",
+    "detail": "Válido até 30/10/2075 Válido até 30/10/2075",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -6285,11 +6285,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-10-29T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 29/10/2027 Válido até 29/10/2027",
+    "detail": "Válido até 30/10/2027 Válido até 30/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -6333,11 +6333,11 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2028-07-07T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 07/07/2028 Válido até 07/07/2028",
+    "detail": "Válido até 30/10/2027 Válido até 30/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7252,11 +7252,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-03-25T03:00:00.000Z",
+    "expirationDate": "2028-07-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 25/03/2028 Válido até 25/03/2028",
+    "detail": "Válido até 28/07/2028 Válido até 28/07/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_35",
@@ -7267,11 +7267,11 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2028-02-24T03:00:00.000Z",
+    "expirationDate": "2028-03-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/02/2028 Válido até 24/02/2028",
+    "detail": "Válido até 30/03/2028 Válido até 30/03/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_35",
@@ -7312,14 +7312,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-23T03:00:00.000Z",
+    "expirationDate": "2027-08-06T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "561412",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 23/09/2027 Válido até 23/09/2027",
+    "detail": "Curso renovado e aprovado na Storz (561412) em 06/08/2026 — Válido até 06/08/2027 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_36",
@@ -7667,14 +7667,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-07-27T03:00:00.000Z",
+    "expirationDate": "2078-07-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572887",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 27/07/2077 Válido até 27/07/2077",
+    "detail": "Válido até 23/07/2078 Válido até 23/07/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_37",
@@ -7778,11 +7778,11 @@
     "docCode": "18",
     "docName": "NR-18 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-15T03:00:00.000Z",
+    "expirationDate": "2027-01-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 15/01/2027 Válido até 15/01/2027",
+    "detail": "Válido até 10/01/2027 Válido até 10/01/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_37",
@@ -7856,11 +7856,11 @@
     "docCode": "25",
     "docName": "SIT (Vestas)",
     "modality": "ONLINE",
-    "expirationDate": "2028-02-17T12:00:00.000Z",
+    "expirationDate": "2028-02-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "detail": "Válido até 17/02/2028 Válido até 17/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_37",
@@ -8217,11 +8217,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-09-24T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 24/09/2027 Válido até 24/09/2027",
+    "expirationDate": "2026-09-24T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 25 dias (24/09/2026) VENCIDO há 25 dias (24/09/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -8265,14 +8265,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-05-19T03:00:00.000Z",
+    "expirationDate": "2078-05-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583190",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 19/05/2077 Válido até 19/05/2077",
+    "detail": "Válido até 19/05/2078 Válido até 19/05/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -8442,11 +8442,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-11T03:00:00.000Z",
+    "expirationDate": "2027-05-20T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/10/2027 Válido até 11/10/2027",
+    "detail": "Válido até 20/05/2027 Válido até 20/05/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -8829,11 +8829,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2033-12-19T03:00:00.000Z",
+    "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 19/12/2033 Válido até 19/12/2033",
+    "detail": "Válido até 19/12/2026 Válido até 19/12/2026",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -8877,14 +8877,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-08-12T03:00:00.000Z",
+    "expirationDate": "2077-08-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606759",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 12/08/2076 Válido até 12/08/2076 | Reciclagem já solicitada na Storz (606759 - Status: SOLICITADO).",
+    "detail": "Válido até 12/08/2077 Válido até 12/08/2077 | Reciclagem já solicitada na Storz (606759 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9051,11 +9051,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-04-11T03:00:00.000Z",
+    "expirationDate": "2027-05-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/04/2028 Válido até 11/04/2028",
+    "detail": "Válido até 21/05/2027 Válido até 21/05/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9960,9 +9960,9 @@
     "storzRequestId": "549963",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 24/08/2027 Válido até 24/08/2027",
+    "detail": "Curso renovado e aprovado na Storz (549963) em 24/08/2026 — Válido até 24/08/2027 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10190,14 +10190,14 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-05-29T03:00:00.000Z",
+    "expirationDate": "2028-07-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "517500",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 29/05/2028 Válido até 29/05/2028",
+    "detail": "Válido até 09/07/2028 Válido até 09/07/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10226,11 +10226,11 @@
     "docCode": "25",
     "docName": "SIT (Vestas)",
     "modality": "ONLINE",
-    "expirationDate": "2026-07-25T03:00:00.000Z",
+    "expirationDate": "2026-07-25T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 86 dias (25/07/2026) VENCIDO há 83 dias (25/07/2026)",
+    "detail": "VENCIDO há 85 dias (25/07/2026) VENCIDO há 85 dias (25/07/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10935,11 +10935,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-12-31T03:00:00.000Z",
+    "expirationDate": "2077-12-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 31/12/2076 Válido até 31/12/2076",
+    "detail": "Válido até 31/12/2077 Válido até 31/12/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_48",
@@ -11181,11 +11181,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2026-10-27T03:00:00.000Z",
+    "expirationDate": "2026-10-27T12:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 8 dias (27/10/2026) ALERTA URGENTE: Vence em 11 dias (27/10/2026)",
+    "detail": "ALERTA URGENTE: Vence em 9 dias (27/10/2026) ALERTA URGENTE: Vence em 9 dias (27/10/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11196,11 +11196,11 @@
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
     "modality": "PRESENCIAL",
-    "expirationDate": "2033-03-12T03:00:00.000Z",
+    "expirationDate": "2033-06-12T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 12/03/2033 Válido até 12/03/2033",
+    "detail": "Válido até 12/06/2033 Válido até 12/06/2033",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11226,14 +11226,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-10-03T03:00:00.000Z",
+    "expirationDate": "2077-10-03T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606760",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 03/10/2076 Válido até 03/10/2076 | Reciclagem já solicitada na Storz (606760 - Status: SOLICITADO).",
+    "detail": "Válido até 03/10/2077 Válido até 03/10/2077 | Reciclagem já solicitada na Storz (606760 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11244,14 +11244,14 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-05-08T03:00:00.000Z",
+    "expirationDate": "2027-02-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583158",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 08/05/2027 Válido até 08/05/2027 | Reciclagem já solicitada na Storz (583158 - Status: SOLICITADO).",
+    "detail": "Válido até 22/02/2027 Válido até 22/02/2027 | Reciclagem já solicitada na Storz (583158 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11262,15 +11262,15 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2027-08-04T03:00:00.000Z",
+    "expirationDate": "2027-02-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "581692",
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 3,
     "storzDeadline": "11/12/2026",
-    "detail": "Válido até 04/08/2027 Válido até 04/08/2027 | Reciclagem já solicitada na Storz (581692 - Status: EM_ANDAMENTO).",
+    "detail": "Válido até 22/02/2027 Válido até 22/02/2027 | Reciclagem já solicitada na Storz (581692 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11319,9 +11319,9 @@
     "storzRequestId": "583168",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 33 dias (21/11/2026) ALERTA INICIAL: Vence em 36 dias (21/11/2026) | SOLICITADO NA STORZ (583168 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (21/11/2026) ALERTA INICIAL: Vence em 33 dias (21/11/2026) | SOLICITADO NA STORZ (583168 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11401,11 +11401,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-23T03:00:00.000Z",
+    "expirationDate": "2027-05-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 23/10/2027 Válido até 23/10/2027",
+    "detail": "Válido até 15/05/2027 Válido até 15/05/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11463,9 +11463,9 @@
     "modality": "ONLINE",
     "expirationDate": "2026-03-11T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 222 dias (11/03/2026) VENCIDO há 219 dias (11/03/2026)",
+    "detail": "VENCIDO há 222 dias (11/03/2026) VENCIDO há 222 dias (11/03/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -11478,9 +11478,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 38 dias (26/11/2026) ALERTA INICIAL: Vence em 41 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 38 dias (26/11/2026) ALERTA INICIAL: Vence em 38 dias (26/11/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -11521,11 +11521,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-01-26T03:00:00.000Z",
+    "expirationDate": "2078-01-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 26/01/2077 Válido até 26/01/2077",
+    "detail": "Válido até 26/01/2078 Válido até 26/01/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -11690,11 +11690,11 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2027-12-05T03:00:00.000Z",
+    "expirationDate": "2028-01-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 05/12/2027 Válido até 05/12/2027",
+    "detail": "Válido até 26/01/2028 Válido até 26/01/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -12371,9 +12371,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-08-03T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 03/08/2027 Válido até 03/08/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 03/08/2027 Válido até 03/08/2027",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -12386,9 +12386,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2034-08-04T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 04/08/2034 Válido até 04/08/2034 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 04/08/2034 Válido até 04/08/2034",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -12414,11 +12414,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-07-16T03:00:00.000Z",
+    "expirationDate": "2078-07-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 16/07/2077 Válido até 16/07/2077",
+    "detail": "Válido até 15/07/2078 Válido até 15/07/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -12504,11 +12504,11 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-12T03:00:00.000Z",
+    "expirationDate": "2028-08-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 12/09/2028 Válido até 12/09/2028",
+    "detail": "Válido até 26/08/2028 Válido até 26/08/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -16330,14 +16330,15 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "expirationDate": "2027-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "601803",
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 17,
     "storzDeadline": "13/12/2026",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601803 - Progresso: 17%) [Prazo Storz: 13/12/2026].",
+    "detail": "Válido até 19/10/2027 Válido até 19/10/2027 | Reciclagem já solicitada na Storz (601803 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_66",
@@ -16381,14 +16382,15 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "expirationDate": "2027-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "601800",
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 3,
     "storzDeadline": "09/12/2026",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (601800 - Progresso: 3%) [Prazo Storz: 09/12/2026].",
+    "detail": "Válido até 19/10/2027 Válido até 19/10/2027 | Reciclagem já solicitada na Storz (601800 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_67",
@@ -17555,21 +17557,6 @@
     "lastUpdated": "2026-10-16T13:51:31.693Z"
   },
   {
-    "inspectorId": "rpo_70",
-    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
-    "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
-    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "docCode": "31",
-    "docName": "Elevador (JASO)",
-    "modality": "ONLINE",
-    "expirationDate": "2027-05-15T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 15/05/2027 Válido até 15/05/2027",
-    "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
-  },
-  {
     "inspectorId": "rpo_71",
     "inspectorName": "WILDEN ALVES FERREIRA",
     "role": "IQ",
@@ -17917,14 +17904,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-08-21T03:00:00.000Z",
+    "expirationDate": "2078-08-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "572821",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 21/08/2077 Válido até 21/08/2077",
+    "detail": "Válido até 21/08/2078 Válido até 21/08/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_73",
@@ -18070,11 +18057,11 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-05-10T03:00:00.000Z",
+    "expirationDate": "2027-04-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 10/05/2027 Válido até 10/05/2027",
+    "detail": "Válido até 28/04/2027 Válido até 28/04/2027",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_73",
@@ -18145,14 +18132,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-05-10T03:00:00.000Z",
+    "expirationDate": "2027-04-28T12:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "482365",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 10/05/2027 Válido até 10/05/2027",
+    "detail": "Válido até 28/04/2027 Válido até 28/04/2027 (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_73",
@@ -18178,11 +18165,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-05-23T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 23/05/2027 Válido até 23/05/2027",
+    "expirationDate": "2026-05-23T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 149 dias (23/05/2026) VENCIDO há 149 dias (23/05/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -18598,11 +18585,11 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2028-07-16T03:00:00.000Z",
+    "expirationDate": "2028-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 16/07/2028 Válido até 16/07/2028",
+    "detail": "Válido até 30/01/2028 Válido até 30/01/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_75",
@@ -18829,14 +18816,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-08-12T03:00:00.000Z",
+    "expirationDate": "2078-05-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "573601",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 12/08/2077 Válido até 12/08/2077",
+    "detail": "Válido até 28/05/2078 Válido até 28/05/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_76",
@@ -18862,11 +18849,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2028-02-24T03:00:00.000Z",
+    "expirationDate": "2028-07-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/02/2028 Válido até 24/02/2028",
+    "detail": "Válido até 02/07/2028 Válido até 02/07/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_76",
@@ -18973,11 +18960,11 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-19T03:00:00.000Z",
+    "expirationDate": "2027-08-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 19/01/2027 Válido até 19/01/2027",
+    "detail": "Válido até 24/08/2027 Válido até 24/08/2027",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_76",
@@ -18988,11 +18975,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-08-18T03:00:00.000Z",
+    "expirationDate": "2028-03-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 18/08/2028 Válido até 18/08/2028",
+    "detail": "Válido até 27/03/2028 Válido até 27/03/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_76",
@@ -19114,11 +19101,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-03-05T03:00:00.000Z",
+    "expirationDate": "2076-01-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 05/03/2076 Válido até 05/03/2076",
+    "detail": "Válido até 05/01/2076 Válido até 05/01/2076",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_77",
@@ -19129,14 +19116,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-01-27T03:00:00.000Z",
+    "expirationDate": "2078-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606766",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 27/01/2077 Válido até 27/01/2077 | Reciclagem já solicitada na Storz (606766 - Status: SOLICITADO).",
+    "detail": "Válido até 30/01/2078 Válido até 30/01/2078 | Reciclagem já solicitada na Storz (606766 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_77",
@@ -19183,11 +19170,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-04-27T03:00:00.000Z",
+    "expirationDate": "2028-04-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 27/04/2028 Válido até 27/04/2028",
+    "detail": "Válido até 02/04/2028 Válido até 02/04/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_77",
@@ -19292,14 +19279,14 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "expirationDate": "2028-06-03T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "492244",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 20/09/2028 Válido até 20/09/2028",
+    "detail": "Válido até 03/06/2028 Válido até 03/06/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_77",
@@ -19358,14 +19345,14 @@
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-20T03:00:00.000Z",
+    "expirationDate": "2027-01-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "607042",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 20/09/2027 Válido até 20/09/2027 | Reciclagem já solicitada na Storz (607042 - Status: SOLICITADO).",
+    "detail": "Válido até 13/01/2027 Válido até 13/01/2027 | Reciclagem já solicitada na Storz (607042 - Status: SOLICITADO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_77",
@@ -19583,9 +19570,9 @@
     "storzRequestId": "607052",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 115 dias (26/06/2026) VENCIDO há 112 dias (26/06/2026) | SOLICITADO NA STORZ (607052 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 115 dias (26/06/2026) VENCIDO há 115 dias (26/06/2026) | SOLICITADO NA STORZ (607052 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_80",
@@ -19779,15 +19766,15 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-03-19T03:00:00.000Z",
+    "expirationDate": "2078-03-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "574868",
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 16,
     "storzDeadline": "11/11/2026",
-    "detail": "Válido até 19/03/2077 Válido até 19/03/2077 | Reciclagem já solicitada na Storz (574868 - Status: EM_ANDAMENTO).",
+    "detail": "Válido até 19/03/2078 Válido até 19/03/2078 | Reciclagem já solicitada na Storz (574868 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_86",
@@ -19969,11 +19956,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-01-22T03:00:00.000Z",
+    "expirationDate": "2078-01-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 22/01/2077 Válido até 22/01/2077",
+    "detail": "Válido até 22/01/2078 Válido até 22/01/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_87",
@@ -20079,9 +20066,9 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-09T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 51 dias (09/12/2026) ALERTA INICIAL: Vence em 54 dias (09/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 51 dias (09/12/2026) ALERTA INICIAL: Vence em 51 dias (09/12/2026)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_88",
@@ -20092,11 +20079,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-09-10T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 10/09/2027 Válido até 10/09/2027",
+    "expirationDate": "2026-09-10T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 39 dias (10/09/2026) VENCIDO há 39 dias (10/09/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_88",
@@ -20152,14 +20139,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-05-19T03:00:00.000Z",
+    "expirationDate": "2078-05-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606329",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 19/05/2077 Válido até 19/05/2077 | Reciclagem já solicitada na Storz (606329 - Status: SOLICITADO).",
+    "detail": "Válido até 18/05/2078 Válido até 18/05/2078 | Reciclagem já solicitada na Storz (606329 - Status: SOLICITADO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_88",
@@ -20283,9 +20270,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-17T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 59 dias (17/12/2026) Válido até 17/12/2026",
+    "detail": "ALERTA INICIAL: Vence em 59 dias (17/12/2026) ALERTA INICIAL: Vence em 59 dias (17/12/2026)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_89",
@@ -20344,14 +20331,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-11-11T03:00:00.000Z",
+    "expirationDate": "2077-11-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "605668",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 11/11/2076 Válido até 11/11/2076",
+    "detail": "Válido até 11/11/2077 Válido até 11/11/2077",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_89",
@@ -20362,11 +20349,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-12-08T03:00:00.000Z",
+    "expirationDate": "2028-06-20T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 08/12/2027 Válido até 08/12/2027",
+    "detail": "Válido até 20/06/2028 Válido até 20/06/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_89",
@@ -20473,11 +20460,11 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-09-30T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 30/09/2027 Válido até 30/09/2027",
+    "expirationDate": "2026-09-30T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 19 dias (30/09/2026) VENCIDO há 19 dias (30/09/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -20518,11 +20505,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2074-11-11T03:00:00.000Z",
+    "expirationDate": "2074-10-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/11/2074 Válido até 11/11/2074",
+    "detail": "Válido até 24/10/2074 Válido até 24/10/2074",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -20533,11 +20520,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-10-06T03:00:00.000Z",
+    "expirationDate": "2077-10-06T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/10/2076 Válido até 06/10/2076",
+    "detail": "Válido até 06/10/2077 Válido até 06/10/2077",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -20583,9 +20570,9 @@
     "storzRequestId": "572905",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 22 dias (27/09/2026) VENCIDO há 16 dias (27/09/2026) | SOLICITADO NA STORZ (572905 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 22 dias (27/09/2026) VENCIDO há 22 dias (27/09/2026) | SOLICITADO NA STORZ (572905 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -20646,9 +20633,9 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-06T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 13 dias (06/10/2026) VENCIDO há 10 dias (06/10/2026)",
+    "detail": "VENCIDO há 13 dias (06/10/2026) VENCIDO há 13 dias (06/10/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20719,14 +20706,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-07-23T03:00:00.000Z",
+    "expirationDate": "2078-07-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "482135",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 23/07/2077 Válido até 23/07/2077",
+    "detail": "Válido até 23/07/2078 Válido até 23/07/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20742,9 +20729,9 @@
     "storzRequestId": "482142",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 27/04/2028 Válido até 27/04/2028",
+    "detail": "Curso renovado e aprovado na Storz (482142) em 27/04/2026 — Válido até 27/04/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20773,14 +20760,14 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2028-05-26T03:00:00.000Z",
+    "expirationDate": "2028-05-25T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "498435",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 26/05/2028 Válido até 26/05/2028",
+    "detail": "Válido até 25/05/2028 Válido até 25/05/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20809,11 +20796,11 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-04-13T12:00:00.000Z",
+    "expirationDate": "2028-04-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 13/04/2028 Válido até 13/04/2028",
+    "detail": "Válido até 28/04/2028 Válido até 28/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20824,11 +20811,11 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2028-05-31T03:00:00.000Z",
+    "expirationDate": "2028-04-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 31/05/2028 Válido até 31/05/2028",
+    "detail": "Válido até 29/04/2028 Válido até 29/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -20917,11 +20904,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-09-30T03:00:00.000Z",
+    "expirationDate": "2077-09-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 30/09/2076 Válido até 30/09/2076",
+    "detail": "Válido até 30/09/2077 Válido até 30/09/2077",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_92",
@@ -21109,14 +21096,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-09-18T03:00:00.000Z",
+    "expirationDate": "2078-01-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583189",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 18/09/2077 Válido até 18/09/2077",
+    "detail": "Válido até 05/01/2078 Válido até 05/01/2078",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T17:35:42.904Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_93",
@@ -21193,11 +21180,11 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-12-07T12:00:00.000Z",
+    "expirationDate": "2027-12-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 07/12/2027 Válido até 07/12/2027",
+    "detail": "Válido até 17/12/2027 Válido até 17/12/2027",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_93",
@@ -21208,11 +21195,11 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-18T03:00:00.000Z",
+    "expirationDate": "2028-09-09T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 18/09/2028 Válido até 18/09/2028",
+    "detail": "Válido até 09/09/2028 Válido até 09/09/2028 (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_93",
@@ -21223,11 +21210,11 @@
     "docCode": "40",
     "docName": "Contrato de Prestação de Serviço (PJ)",
     "modality": "ONLINE",
-    "expirationDate": "2074-07-01T03:00:00.000Z",
+    "expirationDate": "2028-06-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 01/07/2074 Válido até 01/07/2074",
+    "detail": "Válido até 24/06/2028 Válido até 24/06/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_94",
@@ -21298,14 +21285,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-05-27T03:00:00.000Z",
+    "expirationDate": "2078-05-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583193",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 27/05/2077 Válido até 27/05/2077",
+    "detail": "Válido até 27/05/2078 Válido até 27/05/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_94",
@@ -21397,11 +21384,11 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2027-12-29T03:00:00.000Z",
+    "expirationDate": "2027-12-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 29/12/2027 Válido até 29/12/2027",
+    "detail": "Válido até 28/12/2027 Válido até 28/12/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_94",
@@ -21429,9 +21416,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-11T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 53 dias (11/12/2026) ALERTA INICIAL: Vence em 56 dias (11/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 53 dias (11/12/2026) ALERTA INICIAL: Vence em 53 dias (11/12/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-19T03:02:22.614Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -21490,14 +21477,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-09-10T03:00:00.000Z",
+    "expirationDate": "2078-09-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583186",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 10/09/2077 Válido até 10/09/2077",
+    "detail": "Válido até 10/09/2078 Válido até 10/09/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -21513,9 +21500,9 @@
     "storzRequestId": "514669",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 09/07/2028 Válido até 09/07/2028",
+    "detail": "Curso renovado e aprovado na Storz (514669) em 09/07/2026 — Válido até 09/07/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -21531,9 +21518,9 @@
     "storzRequestId": "514677",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 10/07/2028 Válido até 10/07/2028",
+    "detail": "Curso renovado e aprovado na Storz (514677) em 10/07/2026 — Válido até 10/07/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -21655,11 +21642,11 @@
     "docCode": "09",
     "docName": "Direção Defensiva",
     "modality": "ONLINE",
-    "expirationDate": "2028-03-04T03:00:00.000Z",
+    "expirationDate": "2028-02-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 04/03/2028 Válido até 04/03/2028",
+    "detail": "Válido até 02/02/2028 Válido até 02/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_96",
@@ -21685,11 +21672,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2077-01-30T03:00:00.000Z",
+    "expirationDate": "2078-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 30/01/2077 Válido até 30/01/2077",
+    "detail": "Válido até 30/01/2078 Válido até 30/01/2078",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_96",
@@ -21835,11 +21822,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2076-01-24T03:00:00.000Z",
+    "expirationDate": "2075-12-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/01/2076 Válido até 24/01/2076",
+    "detail": "Válido até 14/12/2075 Válido até 14/12/2075",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -21850,11 +21837,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2076-03-17T03:00:00.000Z",
+    "expirationDate": "2077-03-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 17/03/2076 Válido até 17/03/2076",
+    "detail": "Válido até 17/03/2077 Válido até 17/03/2077",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -21898,11 +21885,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2028-02-05T03:00:00.000Z",
+    "expirationDate": "2028-09-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 05/02/2028 Válido até 05/02/2028",
+    "detail": "Válido até 24/09/2028 Válido até 24/09/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T16:32:27.288Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -21913,11 +21900,11 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2027-04-09T03:00:00.000Z",
+    "expirationDate": "2028-09-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/04/2027 Válido até 09/04/2027",
+    "detail": "Válido até 24/09/2028 Válido até 24/09/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -21958,11 +21945,11 @@
     "docCode": "18",
     "docName": "NR-18 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2028-09-24T03:00:00.000Z",
+    "expirationDate": "2028-01-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/09/2028 Válido até 24/09/2028",
+    "detail": "Válido até 30/01/2028 Válido até 30/01/2028",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-19T12:24:48.919Z"
   },
   {
     "inspectorId": "rpo_98",
