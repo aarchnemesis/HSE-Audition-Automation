@@ -3886,6 +3886,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/12/2027"
       },
+      "16": {
+        "code": "16",
+        "name": "GWO BST",
+        "expirationDate": "2028-08-10T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/08/2028"
+      },
       "17": {
         "code": "17",
         "name": "NR 17",
@@ -7064,13 +7071,42 @@
     "role": "INSPETOR",
     "employmentType": "CLT",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "windaId": "MS068740BR",
     "certificates": {
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2027-04-24T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/04/2027"
+      },
       "16": {
         "code": "16",
         "name": "GWO BST",
         "expirationDate": "2027-02-24T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 24/02/2027"
+      },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2027-02-25T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027"
+      },
+      "19": {
+        "code": "19",
+        "name": "NR 23",
+        "expirationDate": "2027-02-25T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027"
+      },
+      "27": {
+        "code": "27",
+        "name": "NR 07 - PS",
+        "expirationDate": "2027-02-25T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027"
       },
       "32": {
         "code": "32",
