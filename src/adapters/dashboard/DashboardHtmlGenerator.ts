@@ -29,7 +29,10 @@ export function buildDashboardHtml(
   const rpoDivergencesJson = JSON.stringify(extraData.rpoDivergences || [])
   const storzHistoryJson = JSON.stringify(extraData.storzHistory || [])
   const sourceHealthJson = JSON.stringify(extraData.sourceHealth || {})
-  const auditDateStr = new Date().toLocaleDateString('pt-BR')
+  const now = new Date()
+  const auditDateStr = now.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })
+  const auditTimeStr = now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+  const auditFullDateTimeStr = `Sincronizado e auditado em ${auditDateStr} às ${auditTimeStr} (Horário de Brasília)`
 
   return `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -2579,9 +2582,9 @@ export function buildDashboardHtml(
           </div>
         </div>
       </div>
-      <div class="mono" style="font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:6px;">
+      <div class="mono" style="font-size:11px;color:var(--text-muted);display:flex;align-items:center;gap:6px;cursor:help;" title="${auditFullDateTimeStr}">
         <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>Ref: <span id="freshnessTimestamp">${auditDateStr}</span></span>
+        <span>Ref: <span id="freshnessTimestamp" style="border-bottom: 1px dotted var(--text-sub);">${auditDateStr}</span></span>
       </div>
     </div>
 
@@ -2596,9 +2599,9 @@ export function buildDashboardHtml(
           <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           Rankings &amp; Gargalos
         </button>
-        <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+        <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px; cursor: help;" title="${auditFullDateTimeStr}">
           <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; display: inline-block;"></span>
-          STATUS: <span style="color: var(--brand-green); font-weight: 800;" id="liveAuditDate">AUDITADO EM ${auditDateStr}</span>
+          STATUS: <span style="color: var(--brand-green); font-weight: 800; border-bottom: 1px dotted rgba(16, 185, 129, 0.4);" id="liveAuditDate">AUDITADO EM ${auditDateStr}</span>
         </div>
       </div>
     </div>
