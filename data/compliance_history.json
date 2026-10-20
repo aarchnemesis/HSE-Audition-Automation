@@ -321,10 +321,18 @@
   },
   {
     "date": "2026-10-19",
-    "documents": 1390,
-    "onTime": 1294,
+    "documents": 1391,
+    "onTime": 1303,
     "expiringSoon": 39,
     "expired": 22,
-    "missing": 35
+    "missing": 27
+  },
+  {
+    "date": "2026-10-20",
+    "documents": 1391,
+    "onTime": 1298,
+    "expiringSoon": 44,
+    "expired": 22,
+    "missing": 27
   }
 ]
