@@ -136,7 +136,7 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   }
   .stat:hover{ border-color: var(--border-strong); }
   .stat.active{ border-color: var(--coral); box-shadow: inset 0 0 0 1px var(--coral); }
-  .stat-label{ font-size:11.5px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:600; }
+  .stat-label{ font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-muted); font-weight:600; }
   .stat-value{ font-family:"Sora",sans-serif; font-size:26px; font-weight:700; }
   .stat-sub{ font-size:12px; color:var(--text-secondary); }
   .stat[data-tone="all"] .stat-value{ color:var(--text-primary); }
@@ -145,7 +145,7 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   .stat[data-tone="warning"] .stat-value{ color:var(--warning); }
 
   .maingrid{ display:grid; grid-template-columns: minmax(0,1fr) 320px; gap:16px; align-items:start; }
-  @media (max-width: 900px){ .maingrid{ grid-template-columns: 1fr; } }
+  @media (max-width: 900px){ .maingrid{ grid-template-columns: minmax(0,1fr); } }
 
   .panel{ background:var(--surface-1); border:1px solid var(--border); border-radius:14px; padding:18px 20px 20px; }
   .panel-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:14px; flex-wrap:wrap; }
@@ -167,7 +167,7 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   .table-wrap{ overflow-x:auto; border:1px solid var(--border); border-radius:10px; }
   table{ width:100%; border-collapse:collapse; font-size:13px; }
   thead th{
-    text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.04em;
+    text-align:left; font-size:12px; text-transform:uppercase; letter-spacing:.04em;
     color:var(--text-muted); font-weight:600; padding:10px 12px; background:var(--surface-2);
     border-bottom:1px solid var(--border); white-space:nowrap; position:sticky; top:0;
   }
@@ -175,11 +175,11 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   tbody tr:last-child td{ border-bottom:none; }
   tbody tr:hover{ background: var(--surface-2); }
   .cell-name{ font-weight:600; color:var(--text-primary); }
-  .cell-sub{ font-size:11.5px; color:var(--text-muted); margin-top:1px; }
+  .cell-sub{ font-size:12px; color:var(--text-muted); margin-top:1px; }
 
   .badge{
     display:inline-flex; align-items:center; gap:5px; padding:3px 9px 3px 7px;
-    border-radius:999px; font-size:11.5px; font-weight:600; white-space:nowrap;
+    border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap;
   }
   .badge::before{ content:""; width:6px; height:6px; border-radius:50%; flex-shrink:0; }
   .badge.s-good{ background:var(--good-bg); color:var(--good); }
@@ -197,19 +197,41 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
   .retest-item{ display:flex; flex-direction:column; gap:4px; padding:10px; border-radius:10px; background:var(--surface-2); }
   .retest-item .name{ font-weight:600; font-size:13px; }
   .retest-item .course{ font-size:12px; color:var(--text-secondary); }
-  .retest-facts{ display:flex; flex-wrap:wrap; gap:8px 12px; font-size:11.5px; color:var(--text-secondary); margin-top:2px; }
+  .retest-facts{ display:flex; flex-wrap:wrap; gap:8px 12px; font-size:12px; color:var(--text-secondary); margin-top:2px; }
   .retest-facts strong{ color:var(--text-primary); font-weight:600; }
   .retest-list{ display:flex; flex-direction:column; gap:8px; max-height:520px; overflow-y:auto; }
 
-  footer{ text-align:center; font-size:11.5px; color:var(--text-muted); padding-top:8px; }
+  footer{ text-align:center; font-size:12px; color:var(--text-muted); padding-top:8px; }
 
   @media (max-width: 720px){ .stats{ grid-template-columns: repeat(2,1fr); } }
+
+  .main-content{ display:flex; flex-direction:column; gap:22px; }
+  .stat{ cursor:pointer; }
+  :focus-visible{ outline:2px solid var(--navy); outline-offset:2px; }
+  @media (max-width: 720px){
+    .shell{ padding:16px 12px 40px; }
+    .panel{ padding:14px; }
+    .table-wrap{ border:0; overflow:visible; }
+    table, tbody{ display:block; width:100%; }
+    thead{ display:none; }
+    tbody tr{
+      display:grid; grid-template-columns:1fr 1fr; gap:6px 14px;
+      padding:12px 2px; border-bottom:1px solid var(--border);
+    }
+    tbody td{ display:block; min-width:0; padding:0; border:0; overflow-wrap:anywhere; }
+    tbody td[data-label]::before{
+      content:attr(data-label); display:block; font-size:12px; color:var(--text-muted); margin-bottom:1px;
+    }
+    tbody td:first-child, tbody td:nth-child(2){ grid-column:1 / -1; }
+    tbody td:first-child::before{ display:none; }
+    tbody tr.empty-row{ display:block; }
+  }
 </style>
 </head>
 <body>
 <div class="shell viz-root">
 
-  <div class="topbar">
+  <header class="topbar">
     <div class="brand">
       <div class="brand-mark">DO</div>
       <div class="brand-text">
@@ -220,8 +242,9 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
     <div class="topbar-meta">
       <span id="peopleCount">—</span> colaboradores · <span id="courseCount">—</span> cursos distintos
     </div>
-  </div>
+  </header>
 
+  <main class="main-content">
   <div class="stats" id="statTiles"></div>
 
   <div class="maingrid">
@@ -262,6 +285,7 @@ export function buildDoDashboardHtml(requests: StorzRequest[]): string {
       </div>
     </div>
   </div>
+  </main>
 
   <footer>Gerado a partir do histórico completo raspado da Storz — dados pessoais, não publicar publicamente.</footer>
 </div>
@@ -375,15 +399,22 @@ function renderStats(){
   ];
   const wrap = document.getElementById('statTiles');
   wrap.innerHTML = tiles.map(t => \`
-    <div class="stat" data-tone="\${t.tone}" data-key="\${t.key}">
+    <div class="stat" role="button" tabindex="0" aria-pressed="\${state.statFilter === t.key}" data-tone="\${t.tone}" data-key="\${t.key}">
       <span class="stat-label">\${t.label}</span>
       <span class="stat-value">\${t.value}</span>
       <span class="stat-sub">\${t.sub}</span>
     </div>\`).join('');
   wrap.querySelectorAll('.stat').forEach(el => {
-    el.addEventListener('click', () => {
+    const toggle = () => {
       state.statFilter = state.statFilter === el.dataset.key ? 'all' : el.dataset.key;
       render();
+    };
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
     });
   });
 }
@@ -416,14 +447,14 @@ function renderTable(){
     const deadline = computeDeadline(r);
     const overdue = deadline && deadline.getTime() < Date.now();
     return \`<tr>
-      <td><div class="cell-name">\${r.collaboratorName}</div></td>
-      <td>\${courseLabel(r)}</td>
-      <td>\${r.modality || '—'}</td>
-      <td>\${fmtDate(r.requestDate)}</td>
-      <td>\${fmtDate(r.completionDate)}</td>
-      <td><span class="badge s-\${tone}">\${r.rawSituacao || r.state}</span></td>
-      <td>\${r.progressPercent !== undefined && r.progressPercent !== null ? r.progressPercent + '%' : '—'}</td>
-      <td>\${deadline ? \`<span class="badge s-\${overdue ? 'critical' : 'warning'}">\${fmtDate(deadline)}\${overdue ? ' (atrasado)' : ''}</span>\` : '—'}</td>
+      <td data-label="Colaborador"><div class="cell-name">\${r.collaboratorName}</div></td>
+      <td data-label="Curso">\${courseLabel(r)}</td>
+      <td data-label="Modalidade">\${r.modality || '—'}</td>
+      <td data-label="Matrícula">\${fmtDate(r.requestDate)}</td>
+      <td data-label="Conclusão">\${fmtDate(r.completionDate)}</td>
+      <td data-label="Situação"><span class="badge s-\${tone}">\${r.rawSituacao || r.state}</span></td>
+      <td data-label="Progresso">\${r.progressPercent !== undefined && r.progressPercent !== null ? r.progressPercent + '%' : '—'}</td>
+      <td data-label="Prazo">\${deadline ? \`<span class="badge s-\${overdue ? 'critical' : 'warning'}">\${fmtDate(deadline)}\${overdue ? ' (atrasado)' : ''}</span>\` : '—'}</td>
     </tr>\`;
   }).join('');
 }
