@@ -77,7 +77,7 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('id="cockpitKpiTotal"')
     expect(html).toContain('Colaboradores Ativos')
     expect(html).toContain('Colaboradores Aptos')
-    expect(html).toContain('Colaboradores em Alerta')
+    expect(html).toContain('Aptos que vencem em at&eacute; 30 d')
     expect(html).toContain('Colaboradores Bloqueados')
     expect(html).toContain('Colaboradores em Treinamento')
     expect(html).toContain('Linha de frente')
@@ -108,13 +108,72 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('ISENTO_CAMPO')
   })
 
-  it('deve conter suporte ao colapso total da barra lateral e modo de impressao', () => {
+  it('deve usar navegacao unica na barra superior, sem barra lateral, e manter o modo de impressao', () => {
     const html = buildDashboardHtml(sampleRecords)
-    expect(html).toContain('sidebar-fully-hidden')
-    expect(html).toContain('toggleSidebarFull()')
-    expect(html).toContain('id="btnSidebarRestore"')
+    expect(html).not.toContain('class="sidebar"')
+    expect(html).not.toContain('toggleSidebar')
+    expect(html).toContain('aria-label="Navegação principal"')
+    expect(html).toContain("switchNav('rpo')")
+    expect(html).toContain('id="freshnessBar"')
     expect(html).toContain('@media print')
     expect(html).toContain('printCockpit()')
+  })
+
+  it('deve incluir a paleta de comandos com atalho Ctrl K para telas e colaboradores', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain('id="cmdk"')
+    expect(html).toContain('openCmdk()')
+    expect(html).toContain('function cmdkBuild')
+    expect(html).toContain('openCollabModal(p.name)')
+  })
+
+  it('keeps people with a future expiry as fit for the field and shows days on the cards', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain('Seguem aptos para campo')
+    expect(html).toContain('com vencimento em até 30 d')
+    expect(html).toContain('function overdueLabel')
+    expect(html).toContain('function cockpitUrgency')
+    expect(html).toContain(
+      "const isMobilizavel = (status === 'APTO' || status === 'ALERTA');"
+    )
+  })
+
+  it('flags RPO divergences that flip a document between valid and expired', () => {
+    const html = buildDashboardHtml(sampleRecords)
+    expect(html).toContain('function rpoFlipsStatus')
+    expect(html).toContain('id="rpoChip-IMPACT"')
+    expect(html).toContain("let rpoSubTab = 'IMPACT'")
+    expect(html).toContain("let rpoSortCol = 'DIFF'")
+  })
+
+  it('renders the expiry agenda, the compliance trend and Drive evidence links', () => {
+    const html = buildDashboardHtml(sampleRecords, {
+      complianceHistory: [
+        {
+          date: '2026-10-18',
+          documents: 10,
+          onTime: 8,
+          expiringSoon: 1,
+          expired: 1,
+          missing: 0,
+        },
+        {
+          date: '2026-10-19',
+          documents: 10,
+          onTime: 9,
+          expiringSoon: 0,
+          expired: 1,
+          missing: 0,
+        },
+      ],
+    })
+    expect(html).toContain('id="agendaList"')
+    expect(html).toContain('id="trendBox"')
+    expect(html).toContain('function renderAgenda')
+    expect(html).toContain('function renderTrend')
+    expect(html).toContain('"onTime":9')
+    expect(html).toContain('function evidenceLink')
+    expect(html).toContain('rel="noopener noreferrer"')
   })
 
   it('deve inicializar com o Cockpit Operacional como tela ativa padrao', () => {
@@ -192,8 +251,10 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('onRpoDocChange')
     expect(html).toContain('toggleRpoSort')
     expect(html).toContain('resetRpoFilters')
-    expect(html).toContain("rpoSortCol = 'NAME'")
-    expect(html).toContain("rpoSortDir = 'ASC'")
+    // default order is by impact (largest gap first); alphabetical stays one click away
+    expect(html).toContain("rpoSortCol = 'DIFF'")
+    expect(html).toContain("rpoSortDir = 'DESC'")
+    expect(html).toContain('<option value="NAME_ASC">')
     expect(html).toContain("localeCompare(b.inspectorName || '', 'pt-BR')")
   })
 
@@ -211,7 +272,7 @@ describe('DashboardHtmlGenerator', () => {
 
     // Unidades explicitas nos KPIs
     expect(html).toContain('Em Dia &middot; % dos docs')
-    expect(html).toContain('Reciclagens (&lt;30d) &middot; docs')
+    expect(html).toContain('A vencer (&le;60 d) &middot; docs')
     expect(html).toContain('Vencidos (Drive) &middot; docs')
     expect(html).toContain('Ausentes (sem Doc) &middot; docs')
     expect(html).toContain('Storz Ativas &middot; matrículas')

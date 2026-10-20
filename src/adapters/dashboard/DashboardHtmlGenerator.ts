@@ -1,4 +1,5 @@
 import { StorzRequest } from '../../domain/models/StorzRequest.js'
+import { ComplianceSnapshot } from '../../domain/services/ComplianceHistory.js'
 import { DriveRpoComparisonItem } from '../../domain/services/DriveRpoAuditor.js'
 import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js'
 
@@ -19,6 +20,7 @@ export interface DashboardExtraData {
   rpoDivergences?: DriveRpoComparisonItem[]
   storzHistory?: StorzRequest[]
   sourceHealth?: DashboardSourceHealth
+  complianceHistory?: ComplianceSnapshot[]
 }
 
 export function buildDashboardHtml(
@@ -29,6 +31,7 @@ export function buildDashboardHtml(
   const rpoDivergencesJson = JSON.stringify(extraData.rpoDivergences || [])
   const storzHistoryJson = JSON.stringify(extraData.storzHistory || [])
   const sourceHealthJson = JSON.stringify(extraData.sourceHealth || {})
+  const complianceHistoryJson = JSON.stringify(extraData.complianceHistory || [])
   const now = new Date()
   const auditDateStr = now.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })
   const auditTimeStr = now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' })
@@ -38,8 +41,9 @@ export function buildDashboardHtml(
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>ArthWind | EHS & DO Training Matrix Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23090D16'/%3E%3Cpath d='M16 6l8 3v7c0 5-4 8-8 10-4-2-8-5-8-10V9z' fill='none' stroke='%2300D2B4' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
@@ -48,15 +52,11 @@ export function buildDashboardHtml(
        ARTHWIND CORPORATE DESIGN SYSTEM - HSE & DO TRAINING MATRIX (ARTHNEX STYLE)
        ========================================================================== */
     :root {
-      --sidebar-bg: #090D16;
-      --sidebar-hover: #131A29;
-      --sidebar-text: #94A3B8;
-      --sidebar-text-active: #FFFFFF;
-      --sidebar-border: #172033;
-      
-      --canvas-bg: #EAEFF5;
+      --ink-bg: #090D16;
+
+      --canvas-bg: #FAFAFA;
       --card-bg: #FFFFFF;
-      --card-border: #E2E8F0;
+      --card-border: #E4E4E7;
       
       --brand-cyan: #00D2B4;
       --brand-blue: #2563EB;
@@ -65,11 +65,11 @@ export function buildDashboardHtml(
       --brand-amber: #F59E0B;
       --brand-green: #10B981;
       
-      --text-main: #0F172A;
-      --text-muted: #64748B;
-      --text-sub: #94A3B8;
+      --text-main: #09090B;
+      --text-muted: #52525B;
+      --text-sub: #71717A;
 
-      --pill-bg: #DDE4EE;
+      --pill-bg: #E4E4E7;
       --pill-text: #334155;
 
       --status-ok: #10B981;
@@ -89,7 +89,9 @@ export function buildDashboardHtml(
     html, body {
       width: 100vw;
       height: 100vh;
+      height: 100dvh;
       max-height: 100vh;
+      max-height: 100dvh;
       background-color: var(--canvas-bg);
       color: var(--text-main);
       font-family: 'Inter', -apple-system, sans-serif;
@@ -152,150 +154,13 @@ export function buildDashboardHtml(
     .icon-req { color: #2563EB !important; stroke: #2563EB !important; }
     .icon-gray { color: #64748B !important; stroke: #64748B !important; }
 
-    /* LEFT SIDEBAR */
-    .sidebar {
-      width: 230px;
-      background: var(--sidebar-bg);
-      border-right: 1px solid var(--sidebar-border);
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-      padding: 12px 10px;
-      z-index: 20;
-      transition: width 0.22s cubic-bezier(0.4, 0, 0.2, 1), padding 0.22s ease;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-
-    /* SIDEBAR COLLAPSED STATE */
-    .sidebar.collapsed {
-      width: 56px;
-      padding: 12px 6px;
-    }
-    .sidebar.collapsed .brand-logo-wrap {
-      display: none;
-    }
-    .sidebar.collapsed .sidebar-brand {
-      justify-content: center;
-      padding: 0 0 12px 0;
-    }
-    .sidebar.collapsed .nav-title {
-      display: none;
-    }
-    .sidebar.collapsed .nav-item {
-      padding: 0;
-      justify-content: center;
-      width: 42px;
-      height: 38px;
-      margin: 0 auto 4px auto;
-    }
-    .sidebar.collapsed .nav-item-title {
-      justify-content: center;
-      gap: 0;
-      width: 100%;
-    }
-    .sidebar.collapsed .nav-item-title > span:not(.ico) {
-      display: none;
-    }
-    .sidebar.collapsed .sidebar-collapse-btn svg {
-      transform: rotate(180deg);
-    }
-
-    .sidebar-brand {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 4px 12px 4px;
-      border-bottom: 1px solid var(--sidebar-border);
-      margin-bottom: 12px;
-    }
-    .brand-logo-wrap {
-      background: #FFFFFF;
-      padding: 4px 8px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-    }
-    .brand-logo-img {
-      height: 20px;
-      width: auto;
-      object-fit: contain;
-    }
-    .sidebar-collapse-btn {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 6px;
-      color: var(--sidebar-text);
-      cursor: pointer;
-      width: 26px;
-      height: 26px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.15s ease;
-      flex-shrink: 0;
-      padding: 0;
-    }
-    .sidebar-collapse-btn:hover {
-      background: var(--sidebar-hover);
-      color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-    .sidebar-collapse-btn svg {
-      width: 14px;
-      height: 14px;
-      stroke-width: 2.5;
-      transition: transform 0.22s ease;
-    }
-
-    .nav-section { margin-bottom: 14px; }
-    .nav-title {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.6px;
-      color: #475569;
-      padding: 4px 8px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-    .nav-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 7px 10px;
-      border-radius: 6px;
-      color: var(--sidebar-text);
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
-      margin-bottom: 2px;
-      height: 36px;
-      box-sizing: border-box;
-      white-space: nowrap;
-    }
-    .nav-item-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      min-width: 0;
-    }
-    .nav-item:hover { background: var(--sidebar-hover); color: #FFFFFF; }
-    .nav-item.active {
-      background: rgba(0, 210, 180, 0.12);
-      color: var(--brand-cyan);
-      font-weight: 700;
-    }
-
     /* MAIN VIEWPORT */
     .main-viewport {
       flex: 1;
       display: flex;
       flex-direction: column;
       height: 100vh;
+      height: 100dvh;
       min-width: 0;
       overflow: hidden;
       position: relative;
@@ -323,52 +188,6 @@ export function buildDashboardHtml(
       z-index: 1;
       flex-shrink: 0;
     }
-    .breadcrumb-wrap { display: flex; align-items: center; gap: 12px; }
-    .btn-back {
-      width: 28px; height: 28px; border-radius: 999px;
-      border: 1px solid var(--pill-bg); background: #FFFFFF;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer; color: var(--text-main);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    .btn-sidebar-toggle {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      border: 1px solid var(--card-border);
-      background: #FFFFFF;
-      color: var(--text-muted);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.15s;
-      padding: 0;
-      flex-shrink: 0;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-    }
-    .btn-sidebar-toggle:hover {
-      background: #F1F5F9;
-      color: var(--text-main);
-      border-color: #CBD5E1;
-    }
-    .btn-sidebar-toggle svg {
-      width: 14px !important;
-      height: 14px !important;
-      stroke-width: 2 !important;
-    }
-    .breadcrumb-pill {
-      background: var(--pill-bg);
-      color: var(--pill-text);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 5px 12px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
     .topbar-filters { display: flex; align-items: center; gap: 10px; }
     .filter-group {
       display: flex;
@@ -380,7 +199,7 @@ export function buildDashboardHtml(
       box-shadow: 0 1px 2px rgba(0,0,0,0.03);
     }
     .filter-label {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -388,7 +207,7 @@ export function buildDashboardHtml(
     }
     .pill-opt {
       padding: 4px 10px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       border-radius: 4px;
       cursor: pointer;
@@ -406,14 +225,14 @@ export function buildDashboardHtml(
       z-index: 1;
       flex-shrink: 0;
     }
-    .page-title-bar h2 {
+    .page-title-bar h1 {
       font-size: 17px;
       font-weight: 800;
       color: var(--text-main);
       letter-spacing: -0.3px;
     }
     .page-title-bar p {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-muted);
       margin-top: 1px;
     }
@@ -487,7 +306,7 @@ export function buildDashboardHtml(
       margin-bottom: 6px;
     }
     .kpi-box .label {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       color: var(--text-muted);
@@ -523,9 +342,10 @@ export function buildDashboardHtml(
       letter-spacing: -0.5px;
     }
     .kpi-box .sub {
-      font-size: 10.5px;
+      font-size: 12px;
       color: var(--text-sub);
-      white-space: nowrap;
+      white-space: normal;
+      overflow-wrap: anywhere;
     }
     .kpi-compliance-bar {
       width: 100%;
@@ -551,9 +371,9 @@ export function buildDashboardHtml(
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 9.5px;
+      font-size: 12px;
       font-weight: 800;
-      color: var(--brand-green);
+      color: #047857;
       font-family: 'JetBrains Mono', monospace;
     }
 
@@ -565,7 +385,7 @@ export function buildDashboardHtml(
       background: #FFFFFF;
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       padding: 0 10px;
       height: 28px;
@@ -589,7 +409,7 @@ export function buildDashboardHtml(
       background: #FFFFFF;
       border-bottom: 1px solid var(--card-border);
       flex-shrink: 0;
-      font-size: 11px;
+      font-size: 12px;
     }
     .freshness-left {
       display: flex;
@@ -598,7 +418,7 @@ export function buildDashboardHtml(
       flex-wrap: wrap;
     }
     .freshness-title {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -621,7 +441,7 @@ export function buildDashboardHtml(
       border-radius: 999px;
       background: #F8FAFC;
       border: 1px solid var(--card-border);
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--text-main);
       cursor: help;
@@ -649,7 +469,7 @@ export function buildDashboardHtml(
     .source-name {
       color: var(--text-muted);
       font-weight: 600;
-      font-size: 10px;
+      font-size: 12px;
       text-transform: uppercase;
     }
     .source-status {
@@ -662,7 +482,7 @@ export function buildDashboardHtml(
       border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 4px 9px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-main);
       cursor: pointer;
@@ -686,7 +506,7 @@ export function buildDashboardHtml(
       border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 4px 10px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-muted);
       cursor: pointer;
@@ -787,7 +607,7 @@ export function buildDashboardHtml(
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--text-main);
       border-bottom: 1px solid #E2E8F0;
@@ -802,7 +622,7 @@ export function buildDashboardHtml(
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: 11px;
+      font-size: 12px;
       padding: 5px 6px;
       border-radius: 5px;
       cursor: pointer;
@@ -847,8 +667,8 @@ export function buildDashboardHtml(
       height: 19px;
       border-radius: 50%;
       background: #F1F5F9;
-      color: #64748B;
-      font-size: 9.5px;
+      color: #475569;
+      font-size: 12px;
       font-weight: 800;
       display: flex;
       align-items: center;
@@ -893,7 +713,7 @@ export function buildDashboardHtml(
       border: 1px solid var(--card-border);
       border-radius: 6px;
       padding: 0 30px 0 28px;
-      font-size: 11.5px;
+      font-size: 12px;
       font-family: inherit;
       background: #F8FAFC;
       color: var(--text-main);
@@ -908,7 +728,7 @@ export function buildDashboardHtml(
     .omni-search-kbd {
       position: absolute;
       right: 7px;
-      font-size: 9.5px;
+      font-size: 12px;
       font-family: 'JetBrains Mono', monospace;
       background: #E2E8F0;
       color: var(--text-muted);
@@ -945,7 +765,7 @@ export function buildDashboardHtml(
     .omni-select {
       height: 30px;
       padding: 0 22px 0 9px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--text-main);
       background: #F8FAFC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 7px center;
@@ -976,7 +796,7 @@ export function buildDashboardHtml(
     .btn-omni-action {
       height: 30px;
       padding: 0 9px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-main);
       background: #FFFFFF;
@@ -1001,7 +821,7 @@ export function buildDashboardHtml(
       height: 28px;
       padding: 0 8px;
       border-radius: 5px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       background: #F8FAFC;
       border: 1px solid var(--card-border);
@@ -1079,7 +899,7 @@ export function buildDashboardHtml(
     .rpo-summary-card.drive { border-left-color: #2563EB; background: #EFF6FF; }
     .rpo-summary-card.rpo { border-left-color: #8B5CF6; background: #FAF5FF; }
     .rpo-summary-val { font-size: 26px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; letter-spacing: -0.5px; }
-    .rpo-summary-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .rpo-summary-label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
 
     .diff-badge {
       display: inline-flex;
@@ -1087,16 +907,16 @@ export function buildDashboardHtml(
       gap: 4px;
       padding: 2px 7px;
       border-radius: 4px;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       white-space: nowrap;
     }
     .diff-badge.somente-drive { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
     .diff-badge.somente-storz { background: #FAF5FF; color: #7C3AED; border: 1px solid #E9D5FF; }
     .diff-badge.somente-rpo { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
-    .diff-badge.data-divergente { background: #FEE2E2; color: #DC2626; border: 1px solid #FECACA; }
+    .diff-badge.data-divergente { background: #FEE2E2; color: #B91C1C; border: 1px solid #FECACA; }
     .diff-badge.rpo-mais-recente { background: #EFF6FF; color: #1D4ED8; border: 1px solid #BFDBFE; }
-    .diff-badge.drive-mais-recente { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+    .diff-badge.drive-mais-recente { background: #FEF2F2; color: #B91C1C; border: 1px solid #FECACA; }
     .diff-badge.inversao-dia-mes { background: #FEF3C7; color: #92400E; border: 1px solid #FCD34D; }
     .diff-badge.consistente { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
 
@@ -1106,7 +926,7 @@ export function buildDashboardHtml(
       gap: 5px;
       padding: 3px 8px;
       border-radius: 4px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       background: #F1F5F9;
       color: #334155;
@@ -1155,7 +975,7 @@ export function buildDashboardHtml(
       flex-wrap: nowrap;
     }
     .rpo-filter-label {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -1183,7 +1003,7 @@ export function buildDashboardHtml(
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: #DC2626;
       background: #FEE2E2;
@@ -1237,7 +1057,7 @@ export function buildDashboardHtml(
       flex-wrap: wrap;
     }
     .storz-filter-label {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -1270,11 +1090,11 @@ export function buildDashboardHtml(
     .storz-summary-card.requested { border-left-color: #3B82F6; background: #F0F9FF; }
     .storz-summary-card.completed { border-left-color: #10B981; background: #F0FDF4; }
     .storz-summary-val { font-size: 26px; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; letter-spacing: -0.5px; }
-    .storz-summary-label { font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+    .storz-summary-label { font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
 
     /* SUPER-HEADER GROUPS IN MATRIX */
     .group-header {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.5px;
       text-transform: uppercase;
@@ -1291,7 +1111,7 @@ export function buildDashboardHtml(
 
     /* Consequence banner for mobilization blockers vs park scope modules */
     .consequence-header {
-      font-size: 9.5px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: .12em;
       text-transform: uppercase;
@@ -1317,7 +1137,7 @@ export function buildDashboardHtml(
       border-radius: 50%;
       background: #E2E8F0;
       color: #334155;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       display: flex;
       align-items: center;
@@ -1334,7 +1154,7 @@ export function buildDashboardHtml(
       color: #6D28D9;
       border: 1px solid #DDD6FE;
       border-radius: 999px;
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 700;
       padding: 0 5px;
       white-space: nowrap;
@@ -1353,7 +1173,7 @@ export function buildDashboardHtml(
       gap: 2px;
       padding: 1px 4px;
       border-radius: 3px;
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 700;
       white-space: nowrap;
       line-height: 1.1;
@@ -1362,9 +1182,9 @@ export function buildDashboardHtml(
     .storz-mini-tag.req { background: #EFF6FF; color: #1D4ED8; border: 1px solid #DBEAFE; }
     .storz-mini-tag.done { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
     .storz-badge-pill {
-      background: #8B5CF6;
+      background: #6D28D9;
       color: #FFFFFF;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
       padding: 1px 6px;
       border-radius: 999px;
@@ -1393,14 +1213,6 @@ export function buildDashboardHtml(
     .card-header h3 { font-size: 13px; font-weight: 700; color: var(--text-main); }
 
     /* SEARCH BAR */
-    .controls-strip {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-      flex-shrink: 0;
-    }
     .search-input {
       background: #F8FAFC;
       border: 1px solid var(--card-border);
@@ -1449,14 +1261,14 @@ export function buildDashboardHtml(
       width: 100%;
       border-collapse: separate;
       border-spacing: 0;
-      font-size: 11px;
+      font-size: 12px;
     }
     .matrix-table th {
       background: #F8FAFC;
       color: var(--text-muted);
       padding: 10px 8px;
       font-weight: 700;
-      font-size: 10px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.3px;
       text-align: center;
@@ -1513,7 +1325,7 @@ export function buildDashboardHtml(
       justify-content: center;
       padding: 2px 6px;
       border-radius: 4px;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.15s ease;
@@ -1571,7 +1383,7 @@ export function buildDashboardHtml(
       gap: 3px;
       padding: 2px 7px;
       border-radius: 4px;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.02em;
       white-space: nowrap;
@@ -1616,7 +1428,7 @@ export function buildDashboardHtml(
       overflow: hidden;
     }
     .modal-head {
-      background: var(--sidebar-bg);
+      background: var(--ink-bg);
       color: #FFFFFF;
       padding: 14px 20px;
       display: flex;
@@ -1627,45 +1439,6 @@ export function buildDashboardHtml(
     .modal-head h3 { font-size: 14px; font-weight: 700; }
     .modal-close { background: none; border: none; color: #FFF; font-size: 18px; cursor: pointer; }
     .modal-body { padding: 16px 20px; overflow-y: auto; flex: 1; }
-
-    /* SIDEBAR FULLY HIDDEN (PRESENTATION & PRINT MODE) */
-    body.sidebar-fully-hidden .sidebar {
-      width: 0 !important;
-      min-width: 0 !important;
-      max-width: 0 !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      border-right: none !important;
-      overflow: hidden !important;
-      display: none !important;
-    }
-    body.sidebar-fully-hidden .main-viewport {
-      width: 100vw !important;
-      max-width: 100vw !important;
-    }
-    #btnSidebarRestore {
-      display: none;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 10px;
-      background: var(--brand-blue);
-      color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 600;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-      transition: all 0.15s ease;
-      margin-right: 8px;
-    }
-    #btnSidebarRestore:hover {
-      background: #1D4ED8;
-      transform: translateY(-1px);
-    }
-    body.sidebar-fully-hidden #btnSidebarRestore {
-      display: inline-flex !important;
-    }
 
     /* COCKPIT OPERACIONAL - EXECUTIVE STYLES */
     #view-cockpit {
@@ -1758,7 +1531,7 @@ export function buildDashboardHtml(
       margin-bottom: 4px;
     }
     .cockpit-kpi-label {
-      font-size: 10.5px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.02em;
@@ -1770,7 +1543,7 @@ export function buildDashboardHtml(
       opacity: 0.8;
     }
     .cockpit-kpi-badge {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 700;
       padding: 2px 6px;
       border-radius: 10px;
@@ -1783,7 +1556,7 @@ export function buildDashboardHtml(
       color: #0F172A;
     }
     .cockpit-kpi-sub {
-      font-size: 10px;
+      font-size: 12px;
       color: var(--text-muted);
     }
 
@@ -1815,8 +1588,8 @@ export function buildDashboardHtml(
       gap: 6px;
     }
     .cockpit-scope-desc {
-      font-size: 11px;
-      color: #64748B;
+      font-size: 12px;
+      color: #526074;
       line-height: 1.4;
     }
     .cockpit-scope-actions {
@@ -1832,7 +1605,7 @@ export function buildDashboardHtml(
       background: #FFFFFF;
       border: 1px solid #CBD5E1;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       color: #334155;
       cursor: pointer;
@@ -1882,7 +1655,7 @@ export function buildDashboardHtml(
       border: 1px solid #CBD5E1;
       border-radius: 6px;
       padding: 4px 10px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       color: #334155;
       cursor: pointer;
@@ -1920,7 +1693,7 @@ export function buildDashboardHtml(
       gap: 6px;
     }
     .cockpit-filter-label {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       color: var(--text-muted);
       margin-right: 4px;
@@ -1930,7 +1703,7 @@ export function buildDashboardHtml(
       border: 1px solid var(--chip-border);
       border-radius: 16px;
       padding: 4px 10px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
       color: #475569;
       cursor: pointer;
@@ -1979,7 +1752,7 @@ export function buildDashboardHtml(
       padding: 6px 12px;
       border: 1px solid #CBD5E1;
       border-radius: 6px;
-      font-size: 11px;
+      font-size: 12px;
       background: #FFFFFF;
       color: #0F172A;
       outline: none;
@@ -2033,19 +1806,21 @@ export function buildDashboardHtml(
       font-size: 12px;
       font-weight: 700;
       color: #0F172A;
-      line-height: 1.2;
+      line-height: 1.25;
       overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow-wrap: anywhere;
     }
     .cockpit-collab-meta {
-      font-size: 10px;
+      font-size: 12px;
       color: #64748B;
       margin-top: 2px;
     }
 
     .cockpit-status-badge {
-      font-size: 9px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.03em;
       text-transform: uppercase;
@@ -2094,7 +1869,7 @@ export function buildDashboardHtml(
       border-top: 1px dashed #E2E8F0;
     }
     .spec-tag {
-      font-size: 9.5px;
+      font-size: 12px;
       font-weight: 600;
       padding: 2px 6px;
       border-radius: 4px;
@@ -2122,7 +1897,7 @@ export function buildDashboardHtml(
     .cockpit-progress-label {
       display: flex;
       justify-content: space-between;
-      font-size: 10px;
+      font-size: 12px;
       color: #475569;
     }
     .cockpit-progress-bar {
@@ -2143,7 +1918,7 @@ export function buildDashboardHtml(
       gap: 4px;
     }
     .cockpit-card-pill {
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       padding: 2px 6px;
       border-radius: 4px;
@@ -2168,7 +1943,7 @@ export function buildDashboardHtml(
       border: 1px solid #DDD6FE;
     }
     .cockpit-card-ok-msg {
-      font-size: 11px;
+      font-size: 12px;
       color: #059669;
       background: #ECFDF5;
       border: 1px solid #A7F3D0;
@@ -2197,7 +1972,7 @@ export function buildDashboardHtml(
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
       color: #475569;
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 600;
       padding: 4px 8px;
       border-radius: 4px;
@@ -2211,6 +1986,701 @@ export function buildDashboardHtml(
       background: #F1F5F9;
       border-color: #CBD5E1;
       color: #0F172A;
+    }
+
+    /* ==========================================================================
+       THEME LAYER: single source of the current visual design.
+       Principles: color only signals status, hairline surfaces, text over boxes,
+       one navigation (top bar; bottom bar on mobile), keyboard first.
+       Sections: 1 Utilities and a11y, 2 Global, 3 Navigation, 4 Command palette,
+       5 KPI strips, 6 Controls, 7 Tables, 8 Status, 9 Cockpit list, 10 Banners,
+       11 Touch and mobile.
+       ========================================================================== */
+
+    /* 1. UTILITIES AND ACCESSIBILITY */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .repeat-cell {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
+    .is-hidden { display: none !important; }
+    :focus-visible {
+      outline: 2px solid var(--brand-blue) !important;
+      outline-offset: 2px !important;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .cockpit-kpi-card:hover { transform: none; }
+    }
+
+    /* 2. GLOBAL (screen only, print keeps its own rules) */
+    @media screen {
+      body { letter-spacing: -0.006em; font-feature-settings: 'calt', 'cv11'; font-variant-numeric: tabular-nums; }
+      .main-viewport::before { display: none; }
+      .cockpit-print-footer { display: none; }
+      [style*="box-shadow: 0 0 8px"] { box-shadow: none !important; }
+      .page-title-bar .mono, #liveAuditDate {
+        font-family: inherit !important;
+        border-bottom: 0 !important;
+      }
+      .page-title-bar h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.025em; }
+      .card, .table-container { border-radius: 8px; }
+      .card, .omni-bar { box-shadow: none; }
+      .cockpit-kpi-label, .kpi-box .label, .freshness-title, .filter-label,
+      .rpo-summary-label, .storz-summary-label, .matrix-table th, .cockpit-filter-label {
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+      }
+    }
+
+    /* 3. NAVIGATION: top bar with brand, tabs, search and source health */
+    @media screen {
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 28px;
+        height: 52px;
+        padding: 0 24px;
+        background: #FFFFFF;
+        border-bottom: 1px solid var(--card-border);
+        flex-shrink: 0;
+        z-index: 2;
+      }
+      .topbar-brand { display: flex; align-items: center; flex-shrink: 0; }
+      .brand-logo-img { height: 22px; width: auto; object-fit: contain; }
+      .topbar-filters { align-self: stretch; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+      .topbar-filters::-webkit-scrollbar { display: none; }
+      .topbar .filter-group { align-self: stretch; height: 100%; gap: 6px; }
+      .topbar .pill-opt {
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 2px !important;
+        margin-right: 14px;
+        border-bottom-width: 3px !important;
+      }
+      .topbar .freshness-bar {
+        padding: 0;
+        border: 0;
+        background: none;
+        margin-left: auto;
+        flex-shrink: 0;
+      }
+      .topbar .freshness-title { display: none; }
+      .pill-opt { white-space: nowrap; }
+    }
+    @media screen and (max-width: 1560px) {
+      .topbar .source-pill.ok .source-status { display: none; }
+    }
+    @media screen and (max-width: 1100px) {
+      .topbar .source-name { display: none; }
+    }
+
+    /* 4. COMMAND PALETTE */
+    .cmdk { display: none; }
+    @media print { .cmdk, .cmdk-trigger, .stale-banner { display: none !important; } }
+    @media screen {
+      .kbd {
+        font: inherit;
+        font-size: 12px;
+        border: 1px solid var(--card-border);
+        border-radius: 4px;
+        padding: 0 5px;
+        background: #FAFAFA;
+        color: #52525B;
+      }
+      .cmdk-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        height: 32px;
+        padding: 0 8px 0 10px;
+        border: 1px solid var(--card-border);
+        border-radius: 6px;
+        background: #FFFFFF;
+        color: #52525B;
+        font: inherit;
+        font-size: 13px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .cmdk-trigger:hover { border-color: #A1A1AA; color: #09090B; }
+      .cmdk {
+        position: fixed;
+        inset: 0;
+        z-index: 2000;
+        align-items: flex-start;
+        justify-content: center;
+        padding-top: 14vh;
+        background: rgba(9, 9, 11, 0.35);
+      }
+      .cmdk.open { display: flex; }
+      .cmdk-panel {
+        width: min(560px, 92vw);
+        background: #FFFFFF;
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        box-shadow: 0 16px 48px rgba(9, 9, 11, 0.18);
+        overflow: hidden;
+      }
+      .cmdk-input {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid var(--card-border);
+        padding: 14px 16px;
+        font: inherit;
+        font-size: 15px;
+        background: transparent;
+        color: var(--text-main);
+      }
+      .cmdk-input:focus-visible { outline-offset: -2px !important; }
+      .cmdk-list { list-style: none; max-height: 340px; overflow-y: auto; padding: 6px; }
+      .cmdk-group { padding: 8px 10px 4px; font-size: 12px; font-weight: 500; color: #71717A; }
+      .cmdk-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 9px 10px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .cmdk-item small { color: #71717A; font-size: 12px; text-align: right; }
+      .cmdk-item[aria-selected="true"] { background: #F4F4F5; }
+      .cmdk-empty { padding: 18px 10px; font-size: 13px; color: #71717A; text-align: center; }
+      .cmdk-foot { border-top: 1px solid var(--card-border); padding: 8px 14px; font-size: 12px; color: #71717A; }
+    }
+
+    /* 5. KPI STRIPS: one hairline container per row, color only for status */
+    @media screen {
+      .cockpit-kpi-row, .kpi-row {
+        gap: 1px !important;
+        background: var(--card-border);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .cockpit-kpi-card, .kpi-box {
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: #FFFFFF;
+        box-shadow: none;
+      }
+      .cockpit-kpi-card:hover, .kpi-box:hover, .rpo-summary-card:hover, .storz-summary-card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .cockpit-kpi-card::before, .kpi-box::after { display: none; }
+      .cockpit-kpi-icon, .kpi-icon-badge { display: none !important; }
+      .cockpit-kpi-label, .kpi-box .label { color: #526074 !important; font-weight: 500 !important; }
+      .cockpit-kpi-badge { background: none !important; padding: 0 !important; color: #047857 !important; font-weight: 600; }
+      .cockpit-kpi-val { font-size: 30px; font-weight: 600; letter-spacing: -0.02em; color: #0F172A !important; }
+      .cockpit-kpi-card.alerta .cockpit-kpi-val { color: #B45309 !important; }
+      .cockpit-kpi-card.bloqueado .cockpit-kpi-val { color: #B91C1C !important; font-size: 38px; }
+      .cockpit-kpi-card.active { box-shadow: inset 0 -2px 0 #09090B; }
+      #kpiBox-STORZ .val { color: #0F172A !important; }
+      .rpo-summary-card, .storz-summary-card {
+        background: #FFFFFF !important;
+        border: 1px solid var(--card-border) !important;
+        border-radius: 6px;
+        box-shadow: none !important;
+      }
+      .rpo-summary-val, .storz-summary-val {
+        color: #0F172A !important;
+        font-family: inherit !important;
+        font-weight: 600 !important;
+        font-size: 28px !important;
+        letter-spacing: -0.02em !important;
+      }
+      .rpo-summary-card.crit .rpo-summary-val { color: #B91C1C !important; }
+      .rpo-summary-card.warn .rpo-summary-val { color: #B45309 !important; }
+      .rpo-summary-label, .storz-summary-label { font-weight: 500 !important; }
+      .rpo-summary-label svg, .storz-summary-label svg, .omni-presets-pills svg {
+        color: #526074 !important;
+        stroke: #526074 !important;
+      }
+    }
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
+      .cockpit-kpi-card:last-child { grid-column: span 2; }
+    }
+    @media screen and (min-width: 1201px) {
+      .cockpit-kpi-row { grid-template-columns: 1fr 1fr 1fr 1.4fr 1fr; }
+    }
+
+    /* 6. CONTROLS: tab-style filters, plain source health, quiet banners */
+    .omni-toggle { display: none; }
+    .scope-toggle {
+      display: none;
+      margin-left: 6px;
+      padding: 2px 8px;
+      border: 1px solid #CBD5E1;
+      border-radius: 6px;
+      background: #FFFFFF;
+      color: var(--brand-blue);
+      font: inherit;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .cockpit-scope-banner .scope-toggle { display: inline-flex; }
+    .cockpit-scope-banner:not(.expanded) .cockpit-scope-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    @media print {
+      .scope-toggle { display: none !important; }
+      .cockpit-scope-banner .cockpit-scope-desc {
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
+      }
+    }
+    @media screen {
+      .cockpit-scope-banner {
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        padding: 2px 0 10px 0;
+      }
+      .cockpit-controls-container {
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 1px solid var(--card-border) !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 4px 0 8px 0 !important;
+      }
+      .cockpit-seg-btn, .cockpit-park-btn, .cockpit-chip, .chip, .pill-opt,
+      .omni-presets-pills > * {
+        background: transparent !important;
+        border: 0 !important;
+        border-bottom: 2px solid transparent !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        color: #475569 !important;
+        padding: 6px 2px !important;
+        margin-right: 12px;
+        font-weight: 500 !important;
+      }
+      .cockpit-seg-btn:hover, .cockpit-park-btn:hover, .cockpit-chip:hover, .chip:hover,
+      .pill-opt:hover, .omni-presets-pills > *:hover {
+        color: #0F172A !important;
+        border-bottom-color: #CBD5E1 !important;
+      }
+      .cockpit-seg-btn.active, .cockpit-park-btn.active, .cockpit-chip.active, .chip.active,
+      .pill-opt.active, .omni-presets-pills > .active {
+        color: #0F172A !important;
+        border-bottom-color: #0F172A !important;
+        font-weight: 600 !important;
+      }
+      .filter-group { background: transparent; border: 0; box-shadow: none; padding: 0; }
+      .source-pill {
+        background: none !important;
+        border: 0 !important;
+        padding: 0 10px 0 0 !important;
+        color: #334155 !important;
+        font-weight: 500;
+      }
+      .source-pill:hover { box-shadow: none !important; }
+    }
+
+    /* 7. TABLES: hairlines, no zebra, sortable headers, counters */
+    .matrix-table th.sortable[aria-sort]::after {
+      content: '';
+      display: inline-block;
+      margin-left: 6px;
+      vertical-align: middle;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+    .matrix-table th.sortable[aria-sort="ascending"]::after { border-bottom: 5px solid currentColor; }
+    .matrix-table th.sortable[aria-sort="descending"]::after { border-top: 5px solid currentColor; }
+    .matrix-table tr.row-group-start td { border-top: 2px solid #E2E8F0; }
+    .count-cell {
+      padding: 10px 12px !important;
+      text-align: left !important;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .count-cell .btn-cockpit-action { margin-left: 12px; padding: 4px 10px; }
+    @media screen {
+      .matrix-table td { border-right: 0; border-bottom: 1px solid #F4F4F5; }
+      .matrix-table th { font-weight: 500; border-bottom-width: 1px; }
+      .matrix-table tbody tr:nth-child(even) td { background: #FFFFFF; }
+      .matrix-table tr:hover td { background: #FAFAFA; }
+    }
+
+    /* 8. STATUS AS TEXT: dot or icon plus colored label, no boxes */
+    @media screen {
+      .badge:hover { transform: none !important; box-shadow: none !important; }
+      .badge, .badge-modality {
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+      }
+      .badge.ok { color: #047857 !important; }
+      .badge.danger { color: #B91C1C !important; }
+      .badge.warn, .badge.ausente { color: #B45309 !important; }
+      .badge.storz, .badge.na, .badge-modality { color: #526074 !important; }
+      .badge-modality { font-weight: 500; }
+      .cockpit-status-badge {
+        background: none !important;
+        border: 0 !important;
+        padding: 0 !important;
+        font-size: 12px;
+        letter-spacing: 0;
+        text-transform: lowercase;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .cockpit-status-badge::first-letter { text-transform: uppercase; }
+      .cockpit-status-badge::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: currentColor;
+        flex-shrink: 0;
+      }
+      .badge-cockpit-storz, .badge-cockpit-isento { color: #526074 !important; }
+      .badge-cockpit-lider { color: #047857 !important; }
+      .cockpit-card-pill, .spec-tag, .cockpit-card-ok-msg {
+        background: none !important;
+        border: 0 !important;
+        padding: 0 !important;
+        font-weight: 500 !important;
+      }
+      .cockpit-card-pill.pill-danger { color: #B91C1C !important; }
+      .cockpit-card-pill.pill-warning { color: #92400E !important; }
+      .cockpit-card-pill.pill-storz, .spec-tag { color: #526074 !important; }
+      .cockpit-card-ok-msg { color: #047857 !important; }
+      .cockpit-card-pills, .cockpit-card-storz-row, .cockpit-card-specs { gap: 4px 14px; }
+      .cockpit-card-specs { border-top: 0; margin-top: 0; padding-top: 0; }
+      .cockpit-collab-avatar {
+        background: #F1F5F9 !important;
+        color: #475569 !important;
+        border: 0 !important;
+        width: 30px;
+        height: 30px;
+      }
+      .cockpit-collab-name { font-size: 13px; font-weight: 600; }
+      .cockpit-progress-fill { transition: none; }
+      .cockpit-progress-label { white-space: nowrap; color: #526074; }
+      .cockpit-progress-label strong { color: #0F172A !important; font-weight: 600; }
+      .cockpit-progress-bar { height: 4px; }
+      .btn-cockpit-card-action { background: transparent; border-color: transparent; }
+      .btn-cockpit-card-action:hover { background: #F1F5F9; }
+    }
+
+    /* 9. COCKPIT LIST: one dense row per person on desktop */
+    .cockpit-card-body {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px 16px;
+      min-width: 0;
+    }
+    @media screen {
+      .cockpit-card-body .cockpit-card-pills,
+      .cockpit-card-body .cockpit-card-storz-row,
+      .cockpit-card-body .cockpit-card-specs { display: contents; }
+    }
+    @media screen and (min-width: 769px) {
+      .cockpit-grid {
+        display: block !important;
+        background: #FFFFFF;
+        border: 1px solid var(--card-border);
+        border-radius: 6px;
+        flex-shrink: 0;
+      }
+      .cockpit-collab-card {
+        display: grid !important;
+        grid-template-columns: minmax(250px, 340px) 230px minmax(0, 1fr) auto;
+        column-gap: 24px;
+        row-gap: 4px;
+        align-items: center;
+        background: #FFFFFF;
+        border: 0 !important;
+        border-bottom: 1px solid #EEF0F3 !important;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 10px 16px;
+        transition: none;
+      }
+      .cockpit-collab-card:first-child { border-radius: 6px 6px 0 0; }
+      .cockpit-collab-card:last-child { border-radius: 0 0 6px 6px; border-bottom: 0 !important; }
+      .cockpit-collab-card:hover { background: #F8FAFC; transform: none; box-shadow: none; }
+      .cockpit-collab-card > .cockpit-card-header {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+      }
+      .cockpit-card-header .cockpit-status-badge { margin-left: 40px; }
+      .cockpit-collab-card > .cockpit-progress-wrap { grid-column: 2; grid-row: 1 / span 2; }
+      .cockpit-collab-card > .cockpit-card-body { grid-column: 3; grid-row: 1; }
+      .cockpit-collab-card > .cockpit-card-footer {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+        border: 0;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    /* 9b. AGENDA, TREND, EVIDENCE LINKS */
+    .agenda-summary, .trend-now { font-size: 13px; color: var(--text-main); margin-bottom: 8px; }
+    .agenda-row {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      padding: 3px 0;
+      font-size: 12px;
+    }
+    .agenda-bar { height: 6px; background: var(--card-border); border-radius: 3px; overflow: hidden; }
+    .agenda-bar > span { display: block; height: 100%; background: #09090B; }
+    .agenda-count { color: var(--text-muted); text-align: right; white-space: nowrap; }
+    .trend-svg { display: block; width: 100%; height: 90px; color: #09090B; }
+    .trend-axis { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); }
+    .trend-delta { margin-top: 6px; font-size: 12px; color: var(--text-muted); }
+    .evidence-link { color: var(--brand-blue); font-weight: 500; white-space: nowrap; text-decoration: underline; }
+    .rpo-summary-row { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+
+    /* 10. BANNERS */
+    .stale-banner { display: none; }
+    .stale-banner.show {
+      display: block;
+      padding: 8px 24px;
+      background: #FFFBEB;
+      border-bottom: 1px solid #FDE68A;
+      color: #92400E;
+      font-size: 13px;
+      font-weight: 500;
+      flex-shrink: 0;
+    }
+
+    /* 11. TOUCH AND MOBILE */
+    @media (pointer: coarse), (max-width: 768px) {
+      .pill-opt, .cockpit-seg-btn, .cockpit-park-btn, .cockpit-chip, .chip,
+      .btn-cockpit-action, .btn-rankings-toggle {
+        min-height: 44px;
+      }
+      .pill-opt { display: inline-flex; align-items: center; }
+    }
+    @media (max-width: 768px) {
+      html, body { overflow-x: hidden; }
+      .main-viewport {
+        width: 100vw;
+        max-width: 100vw;
+        padding-bottom: calc(64px + env(safe-area-inset-bottom));
+      }
+      .stale-banner.show { padding: 8px 12px; }
+
+      /* top bar and bottom tab bar */
+      .topbar {
+        height: auto;
+        min-height: 48px;
+        padding: 8px 12px;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .topbar .freshness-bar { margin-left: 0; }
+      .topbar .source-name, .topbar .source-status { display: none; }
+      .topbar .source-pills-wrap { flex-direction: row; gap: 10px; width: auto; }
+      .topbar-filters {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        flex: none;
+        background: #FFFFFF;
+        border-top: 1px solid var(--card-border);
+        padding-bottom: env(safe-area-inset-bottom);
+        overflow: visible;
+      }
+      .topbar .filter-group {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        height: auto;
+        gap: 0;
+      }
+      .topbar .pill-opt {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+        min-height: 58px;
+        margin: 0;
+        padding: 6px 2px !important;
+        font-size: 12px;
+        line-height: 1.15;
+        text-align: center;
+        white-space: normal;
+        position: relative;
+        border-bottom: 0 !important;
+        border-top: 3px solid transparent !important;
+      }
+      .topbar .pill-opt.active { border-top-color: #0F172A !important; }
+      .topbar .pill-opt svg { margin: 0 !important; }
+      .topbar .pill-opt .storz-badge-pill {
+        position: absolute;
+        top: 4px;
+        left: calc(50% + 6px);
+        margin: 0;
+      }
+      .cmdk-trigger { padding: 0 8px; }
+      .cmdk-trigger-label, .cmdk-trigger .kbd { display: none; }
+      .cmdk { padding-top: 8vh; }
+
+      /* page scroll: the content area scrolls, views flow naturally */
+      .page-title-bar { padding: 0 12px 8px 12px; flex-direction: column; gap: 8px; align-items: flex-start; }
+      .content-body { padding: 0 12px 16px 12px; overflow-y: auto; overflow-x: hidden; }
+      .content-body > * { flex-shrink: 0; }
+      .tab-view, #view-cockpit { height: auto; flex: none; min-height: 0; overflow: visible; padding-right: 0; }
+      .tab-view .card { flex: none; padding: 10px 12px; }
+      .tab-view .table-container { flex: none; overflow: visible; border: 0; }
+      #view-matrix .table-container {
+        overflow: auto;
+        max-height: calc(100dvh - 240px);
+        min-height: 320px;
+        border: 1px solid var(--card-border);
+      }
+
+      /* KPI strips */
+      .cockpit-kpi-row, .kpi-row { grid-template-columns: repeat(2, 1fr); }
+      .kpi-row { display: grid; overflow: visible; }
+      .cockpit-kpi-card:last-child:nth-child(odd),
+      .kpi-row .kpi-box:last-child:nth-child(odd) { grid-column: 1 / -1; }
+      .cockpit-kpi-card { padding: 10px 12px; }
+      .cockpit-kpi-val { font-size: 26px; }
+      .cockpit-kpi-card.bloqueado .cockpit-kpi-val { font-size: 30px; }
+      .kpi-row .kpi-box { min-width: 0; padding: 8px 12px; }
+      .kpi-row .kpi-box .sub { display: none; }
+      .kpi-row .kpi-box .val { font-size: 22px; }
+      body[data-view="matrix"] .kpi-row { display: none; }
+      .rpo-summary-row, .storz-summary-row { grid-template-columns: repeat(2, 1fr); }
+      .rpo-summary-row .rpo-summary-card, .storz-summary-row .storz-summary-card { padding: 10px 12px; }
+
+      /* filters */
+      .cockpit-toolbar-row { flex-direction: column; align-items: stretch; }
+      .cockpit-segment-group, .cockpit-park-group, .cockpit-chips-group {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+      .cockpit-seg-btn, .cockpit-park-btn, .cockpit-chip { white-space: nowrap; flex-shrink: 0; }
+      .cockpit-scope-actions { width: 100%; flex-wrap: wrap; }
+      .omni-bar { flex-direction: column; align-items: stretch; gap: 8px; }
+      .omni-bar > * { width: 100%; max-width: 100%; min-width: 0; }
+      .omni-bar:not(.open) > :not(.omni-search-wrap):not(.omni-toggle) { display: none; }
+      .omni-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        border: 1px solid var(--card-border);
+        border-radius: 6px;
+        background: #FFFFFF;
+        color: var(--text-main);
+        font: inherit;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .omni-divider, .omni-spacer { display: none; }
+      .omni-presets-group, .omni-presets-pills { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+      .omni-presets-pills > * { flex-shrink: 0; white-space: nowrap; }
+      .omni-filters-group {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
+        width: 100%;
+        min-width: 0;
+      }
+      .omni-filters-group select, .omni-select { width: 100%; min-width: 0; max-width: none; }
+      .omni-actions-group { justify-content: flex-start; flex-wrap: wrap; }
+      div:has(> .chip) { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; max-width: 100%; }
+      .chip { flex-shrink: 0; white-space: nowrap; min-height: 36px; }
+      .rpo-filter-group { width: 100%; flex-wrap: wrap; }
+      .rpo-select { width: 100%; max-width: 100%; min-width: 0; }
+      select { max-width: 100%; }
+
+      /* tables become cards */
+      .responsive-table thead { display: none; }
+      .responsive-table, .responsive-table tbody { display: block; width: 100%; }
+      .responsive-table tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px 14px;
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--card-border);
+        background: #FFFFFF;
+      }
+      .responsive-table tr.row-group-start td { border-top: 0; }
+      .responsive-table td {
+        display: block;
+        min-width: 0;
+        padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        text-align: left !important;
+        overflow-wrap: anywhere;
+      }
+      .responsive-table td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 1px;
+        font-size: 12px;
+        color: var(--text-sub);
+      }
+      .responsive-table td:first-child { grid-column: 1 / -1; font-size: 14px; }
+      .responsive-table td:first-child::before { display: none; }
+      .responsive-table td:last-child { grid-column: 1 / -1; }
+      .responsive-table td:empty { display: none; }
+      .responsive-table .repeat-cell {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+      .responsive-table tr.count-row { display: block; }
+      .responsive-table td.count-cell::before { display: none; }
+
+      /* cockpit cards keep the status color on the left edge */
+      .cockpit-collab-card { padding: 12px 14px; }
+      .cockpit-grid { grid-template-columns: 1fr; }
+      .table-container { overflow-x: auto; }
     }
 
     /* MEDIA PRINT STYLES FOR EXECUTIVE ROSTER & MULTI-PAGE PDF EXPORT */
@@ -2265,7 +2735,6 @@ export function buildDashboardHtml(
         border: none !important;
         box-shadow: none !important;
       }
-      .sidebar,
       .topbar,
       .freshness-bar,
       .page-title-bar,
@@ -2277,8 +2746,6 @@ export function buildDashboardHtml(
       .cockpit-card-footer,
       .btn-cockpit-action,
       .btn-cockpit-card-action,
-      .btn-sidebar-restore,
-      .btn-sidebar-toggle,
       .btn-rankings-toggle,
       #rankingsPanel,
       #rankingsBackdrop,
@@ -2472,122 +2939,66 @@ export function buildDashboardHtml(
 </head>
 <body>
 
-  <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-logo-wrap">
-        <img src="arthwindLogo.png" onerror="this.onerror=null;this.src='https://arthwind.com.br/assets/Img/arthwindLogo.png'" alt="ArthWind" class="brand-logo-img">
-      </div>
-      <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" onclick="toggleSidebar()" title="Recolher / Expandir Menu Lateral (Alt+S)">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-    </div>
-
-    <div class="nav-section">
-      <div class="nav-title">EHS &amp; Treinamentos</div>
-      <div class="nav-item active" onclick="switchNav('cockpit')" title="Cockpit Operacional (Prontidão de Campo)">
-        <div class="nav-item-title">
-          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span>
-          <span>Cockpit Operacional</span>
-        </div>
-      </div>
-
-      <div class="nav-item" onclick="switchNav('matrix')" title="Skill Matrix (DO)">
-        <div class="nav-item-title">
-          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 8v8"/><path d="M14 8v8"/><path d="M18 8v8"/></svg></span>
-          <span>Skill Matrix (DO)</span>
-        </div>
-      </div>
-
-      <div class="nav-item" onclick="switchNav('table')" title="Gestão de Pendências">
-        <div class="nav-item-title">
-          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
-          <span>Gestão de Pendências</span>
-        </div>
-      </div>
-
-      <div class="nav-item" onclick="switchNav('rpo')" title="Auditoria RPO (Smartsheet x Confiáveis)">
-        <div class="nav-item-title">
-          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
-          <span>Auditoria RPO</span>
-        </div>
-        <span class="storz-badge-pill" id="rpoBadgeSidebar" style="background:#DC2626;display:none;">0</span>
-      </div>
-
-      <div class="nav-item" onclick="switchNav('storz')" title="Storz Matrículas">
-        <div class="nav-item-title">
-          <span class="ico"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
-          <span>Storz Matrículas</span>
-        </div>
-      </div>
-    </div>
-  </aside>
-
   <!-- MAIN VIEWPORT -->
   <main class="main-viewport">
     
-    <!-- TOPBAR -->
-    <div class="topbar">
-      <div class="breadcrumb-wrap">
-        <button class="btn-sidebar-restore" id="btnSidebarRestore" onclick="toggleSidebarFull()" title="Restaurar Menu Lateral (Alt+S)">
-          <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-          <span>Expandir Menu</span>
-        </button>
-        <button class="btn-sidebar-toggle" onclick="toggleSidebar()" title="Recolher / Expandir Menu Lateral (Alt+S)">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-        </button>
-        <div class="breadcrumb-pill">ArthWind &gt; Cockpit Operacional &amp; EHS Compliance</div>
+    <!-- TOPBAR: brand, single navigation, source health -->
+    <header class="topbar">
+      <div class="topbar-brand">
+        <img src="arthwindLogo.png" onerror="this.onerror=null;this.src='https://arthwind.com.br/assets/Img/arthwindLogo.png'" alt="ArthWind" class="brand-logo-img">
       </div>
-
-      <div class="topbar-filters">
+      <nav class="topbar-filters" aria-label="Navegação principal">
         <div class="filter-group">
-          <span class="filter-label">Visualização:</span>
-          <span class="pill-opt active" onclick="switchNav('cockpit')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Cockpit Operacional</span>
+          <span class="pill-opt active" onclick="switchNav('cockpit')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>Cockpit</span>
           <span class="pill-opt" onclick="switchNav('matrix')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Matriz NRs</span>
-          <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Tabela Analítica</span>
+          <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Pendências</span>
           <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#DC2626;display:none;">0</span></span>
-          <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz Matrículas <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
+          <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
+        </div>
+      </nav>
+      <button class="cmdk-trigger" type="button" onclick="openCmdk()" aria-label="Buscar telas e colaboradores (Ctrl K)">
+        <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="cmdk-trigger-label">Buscar</span>
+        <kbd class="kbd">Ctrl K</kbd>
+      </button>
+      <div class="freshness-bar" id="freshnessBar">
+        <div class="freshness-left">
+          <span class="freshness-title">
+            <svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            Saúde das Fontes:
+          </span>
+          <div class="source-pills-wrap" id="sourcePillsWrap">
+            <!-- Drive Pill -->
+            <div class="source-pill ok" id="sourcePillDrive" title="Google Drive: Arquivos e pastas de certificados">
+              <span class="source-dot ok" id="sourceDotDrive"></span>
+              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span class="source-name">Drive</span>
+              <span class="source-status" id="sourceStatusDrive">Conectado</span>
+            </div>
+            <!-- Smartsheet Pill -->
+            <div class="source-pill ok" id="sourcePillSmartsheet" title="Smartsheet RPO: Planilha operacional">
+              <span class="source-dot ok" id="sourceDotSmartsheet"></span>
+              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span class="source-name">Smartsheet RPO</span>
+              <span class="source-status" id="sourceStatusSmartsheet">Conectado</span>
+            </div>
+            <!-- Storz Pill -->
+            <div class="source-pill ok" id="sourcePillStorz" title="Storz LMS: Plataforma de treinamentos online e presencial">
+              <span class="source-dot ok" id="sourceDotStorz"></span>
+              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              <span class="source-name">Storz LMS</span>
+              <span class="source-status" id="sourceStatusStorz">Ao Vivo (REST API)</span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- FRESHNESS / SOURCE HEALTH BAR -->
-    <div class="freshness-bar" id="freshnessBar">
-      <div class="freshness-left">
-        <span class="freshness-title">
-          <svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-          Saúde das Fontes:
-        </span>
-        <div class="source-pills-wrap" id="sourcePillsWrap">
-          <!-- Drive Pill -->
-          <div class="source-pill ok" id="sourcePillDrive" title="Google Drive: Arquivos e pastas de certificados">
-            <span class="source-dot ok" id="sourceDotDrive"></span>
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            <span class="source-name">Drive</span>
-            <span class="source-status" id="sourceStatusDrive">Conectado</span>
-          </div>
-          <!-- Smartsheet Pill -->
-          <div class="source-pill ok" id="sourcePillSmartsheet" title="Smartsheet RPO: Planilha operacional">
-            <span class="source-dot ok" id="sourceDotSmartsheet"></span>
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-            <span class="source-name">Smartsheet RPO</span>
-            <span class="source-status" id="sourceStatusSmartsheet">Conectado</span>
-          </div>
-          <!-- Storz Pill -->
-          <div class="source-pill ok" id="sourcePillStorz" title="Storz LMS: Plataforma de treinamentos online e presencial">
-            <span class="source-dot ok" id="sourceDotStorz"></span>
-            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            <span class="source-name">Storz LMS</span>
-            <span class="source-status" id="sourceStatusStorz">Ao Vivo (REST API)</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </header>
+    <div class="stale-banner" id="staleBanner" role="status"></div>
 
     <!-- PAGE TITLE BAR -->
     <div class="page-title-bar">
       <div>
-        <h2 id="pageHeading">Cockpit Operacional de Prontidão da Equipe de Campo</h2>
+        <h1 id="pageHeading">Cockpit Operacional de Prontidão da Equipe de Campo</h1>
         <p id="pageSubheading">Status de mobilização técnica, requisitos básicos e conformidade de campo por colaborador</p>
       </div>
       <div style="display:flex; align-items:center; gap:10px;">
@@ -2595,9 +3006,9 @@ export function buildDashboardHtml(
           <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           Rankings &amp; Gargalos
         </button>
-        <div class="mono" style="font-size: 11px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px; cursor: help;" title="${auditFullDateTimeStr}">
+        <div class="mono" style="font-size: 12px; font-weight: 700; color: var(--text-muted); display: flex; align-items: center; gap: 8px; cursor: help;" title="${auditFullDateTimeStr}">
           <span style="width: 8px; height: 8px; border-radius: 50%; background: #10B981; box-shadow: 0 0 8px #10B981; display: inline-block;"></span>
-          STATUS: <span style="color: var(--brand-green); font-weight: 800; border-bottom: 1px dotted rgba(16, 185, 129, 0.4);" id="liveAuditDate">AUDITADO EM ${auditDateStr}</span>
+          STATUS: <span style="color: #047857; font-weight: 800; border-bottom: 1px dotted rgba(16, 185, 129, 0.4);" id="liveAuditDate">AUDITADO EM ${auditDateStr} ${auditTimeStr.slice(0, 5)}</span>
         </div>
       </div>
     </div>
@@ -2613,7 +3024,7 @@ export function buildDashboardHtml(
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></span>
           </div>
           <div class="val mono" id="kpiTotalPeople">0</div>
-          <div class="sub">Universo auditado</div>
+          <div class="sub">Todos os segmentos</div>
         </div>
 
         <div class="kpi-box" id="kpiBox-CONFORME" onclick="applyStatusFilter('CONFORME')" title="Ver apenas colaboradores 100% conformes" style="--kpi-accent:#10B981;">
@@ -2627,16 +3038,16 @@ export function buildDashboardHtml(
               <span class="kpi-ring-label" id="kpiComplianceRate">0%</span>
             </div>
           </div>
-          <div class="val mono" style="color:var(--brand-green);" id="kpiOkCount">0</div>
+          <div class="val mono" style="color:#047857;" id="kpiOkCount">0</div>
           <div class="sub">documentos em conformidade</div>
         </div>
 
-        <div class="kpi-box" id="kpiBox-VENCE_30" onclick="applyStatusFilter('VENCE_30')" title="Filtrar reciclagens em até 30 dias" style="--kpi-accent:#F59E0B;">
+        <div class="kpi-box" id="kpiBox-VENCE_30" onclick="applyStatusFilter('VENCE_30')" title="Filtrar documentos que vencem em até 60 dias" style="--kpi-accent:#F59E0B;">
           <div class="kpi-top">
-            <div class="label" style="color:var(--brand-amber);">Reciclagens (&lt;30d) &middot; docs</div>
+            <div class="label" style="color:#B45309;">A vencer (&le;60 d) &middot; docs</div>
             <span class="kpi-icon-badge"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
           </div>
-          <div class="val mono" style="color:var(--brand-amber);" id="kpiWarnCount">0</div>
+          <div class="val mono" style="color:#B45309;" id="kpiWarnCount">0</div>
           <div class="sub">Prioridade agendamento</div>
         </div>
 
@@ -2668,83 +3079,19 @@ export function buildDashboardHtml(
         </div>
       </div>
 
-      <!-- DRAWER BACKDROP -->
-      <div class="drawer-backdrop" id="rankingsBackdrop" onclick="toggleRankingsPanel()"></div>
-
-      <!-- SLIDE-OVER DRAWER (RANKINGS & GARGALOS) -->
-      <aside class="rankings-panel" id="rankingsPanel">
-        <div class="drawer-header">
-          <div style="display:flex; align-items:center; gap:8px;">
-            <svg class="ico ico-sm icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
-            <div>
-              <h3 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:1px;">Rankings &amp; Gargalos Operacionais</h3>
-              <p style="font-size:10.5px; color:var(--text-muted);">Priorização executiva para intervenção imediata</p>
-            </div>
-          </div>
-          <button class="drawer-close-btn" onclick="toggleRankingsPanel()" title="Fechar painel (Esc)">
-            <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
-        </div>
-
-        <div class="drawer-body">
-          <div class="ranking-card">
-            <div class="ranking-header">
-              <span style="display:flex;align-items:center;gap:5px;">
-                <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                Top Colaboradores Críticos
-              </span>
-              <span class="mono" style="font-size:10px;color:var(--text-muted);">Vencidos + Ausentes</span>
-            </div>
-            <div class="ranking-list" id="rankingTopCrit"></div>
-          </div>
-
-          <div class="ranking-card">
-            <div class="ranking-header">
-              <span style="display:flex;align-items:center;gap:5px;">
-                <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                Gargalos Presenciais (Mobilização)
-              </span>
-              <span class="mono" style="font-size:10px;color:var(--text-muted);">GWO, NR-35, ASO, CNH</span>
-            </div>
-            <div class="ranking-list" id="rankingTopPresencial"></div>
-          </div>
-
-          <div class="ranking-card">
-            <div class="ranking-header">
-              <span style="display:flex;align-items:center;gap:5px;">
-                <svg class="ico ico-xs icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                Gargalos de Reteste (Storz)
-              </span>
-              <span class="mono" style="font-size:10px;color:var(--text-muted);">Mais Reprovações</span>
-            </div>
-            <div class="ranking-list" id="rankingTopRetest"></div>
-          </div>
-
-          <div class="ranking-card">
-            <div class="ranking-header">
-              <span style="display:flex;align-items:center;gap:5px;">
-                <svg class="ico ico-xs icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Alerta de Inércia Storz
-              </span>
-              <span class="mono" style="font-size:10px;color:var(--text-muted);">Parados em 0%</span>
-            </div>
-            <div class="ranking-list" id="rankingTopInertia"></div>
-          </div>
-        </div>
-      </aside>
 
       <!-- QUICK CHIPS ROW (HIDDEN FOR FULL JS/TEST COMPATIBILITY) -->
       <div class="quick-chips-row" id="quickChipsRow" style="display:none;">
         <button class="chip active" id="chip-ALL" onclick="applyStatusFilter('ALL')">Todos (<span id="chipAllCount">0</span>)</button>
         <button class="chip chip-action" id="chip-ACTION" onclick="applyStatusFilter('ACTION')">Ação Necessária (<span id="chipActionCount">0</span>)</button>
         <button class="chip chip-crit" id="chip-VENCIDO" onclick="applyStatusFilter('VENCIDO')">Com Vencidos</button>
-        <button class="chip chip-warn" id="chip-VENCE_30" onclick="applyStatusFilter('VENCE_30')">A Vencer (&lt;30d)</button>
+        <button class="chip chip-warn" id="chip-VENCE_30" onclick="applyStatusFilter('VENCE_30')">A Vencer (&le;60 d)</button>
         <button class="chip chip-storz" id="chip-STORZ" onclick="applyStatusFilter('STORZ')">Com Storz Ativa (<span id="chipStorzCount">0</span>)</button>
         <button class="chip chip-ok" id="chip-CONFORME" onclick="applyStatusFilter('CONFORME')">100% Em Dia</button>
       </div>
 
       <!-- OMNI-COMMAND BAR (UNIFIED SEARCH, PRESETS, FILTERS & ACTIONS) -->
-      <div class="omni-bar">
+      <div class="omni-bar" id="omniBar">
         <!-- Quick Search -->
         <div class="omni-search-wrap">
           <svg class="ico ico-xs omni-search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -2752,6 +3099,7 @@ export function buildDashboardHtml(
           <kbd class="omni-search-kbd">/</kbd>
         </div>
 
+        <button type="button" class="omni-toggle" id="omniToggle" aria-expanded="false" aria-controls="omniBar" onclick="toggleOmniBar()">Filtros</button>
         <div class="omni-divider"></div>
 
         <!-- Presets Group -->
@@ -2854,7 +3202,7 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card apto" onclick="filterCockpitStatus('APTO')" style="cursor:pointer;" title="Filtrar colaboradores aptos para mobilização imediata">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#059669;">Colaboradores Aptos &middot; % das pessoas</span>
+              <span class="cockpit-kpi-label" style="color:#047857;">Colaboradores Aptos &middot; % das pessoas</span>
               <span class="cockpit-kpi-badge" id="cockpitKpiAptoRate" style="background:#D1FAE5;color:#065F46;">0%</span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiApto" style="color:#059669;">0</div>
@@ -2863,11 +3211,11 @@ export function buildDashboardHtml(
 
           <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#D97706;">Colaboradores em Alerta &middot; pessoas</span>
+              <span class="cockpit-kpi-label" style="color:#B45309;">Aptos que vencem em at&eacute; 30 d &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             </div>
-            <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#D97706;">0</div>
-            <div class="cockpit-kpi-sub">Reciclagens no mês (&le;30d)</div>
+            <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#B45309;">0</div>
+            <div class="cockpit-kpi-sub">Seguem aptos para campo</div>
           </div>
 
           <div class="cockpit-kpi-card bloqueado" onclick="filterCockpitStatus('BLOQUEADO')" style="cursor:pointer;" title="Filtrar colaboradores com pendência operacional no escopo selecionado">
@@ -2885,26 +3233,23 @@ export function buildDashboardHtml(
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiStorz" style="color:#7C3AED;">0</div>
-            <div class="cockpit-kpi-sub">Matrículas ativas no LMS Storz</div>
+            <div class="cockpit-kpi-sub">Com curso Storz em andamento &middot; j&aacute; contados ao lado</div>
           </div>
         </div>
 
         <!-- Cockpit Banner / Scope Clarification & Actions -->
-        <div class="cockpit-scope-banner">
+        <div class="cockpit-scope-banner" id="cockpitScopeBanner">
           <div class="cockpit-scope-info">
             <div class="cockpit-scope-title">
               <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
               <span>Critério Operacional de Prontidão de Campo</span>
+              <button class="scope-toggle" id="scopeToggleBtn" aria-expanded="false" aria-controls="cockpitScopeDesc" onclick="toggleScopeDesc()">Ver critério</button>
             </div>
             <div class="cockpit-scope-desc" id="cockpitScopeDesc">
               Foco: <strong>Linha de Frente de Campo</strong> (65 técnicos/inspetores). Requisitos básicos de mobilização: <strong>ASO (01), GWO BST e NRs regulamentares</strong>. Ausência de módulos específicos (GWO ART, Vestas, Elevador) não gera bloqueio geral.
             </div>
           </div>
           <div class="cockpit-scope-actions">
-            <button class="btn-cockpit-action" onclick="toggleSidebarFull()" id="btnCockpitFullscreen" title="Ocultar menu lateral completamente para tirar print ou focar nos cards (Alt+S)">
-              <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
-              <span id="btnCockpitFullscreenText">Ocultar Menu (Print)</span>
-            </button>
             <button class="btn-cockpit-action primary" onclick="printCockpit()" title="Imprimir ou exportar relatório em PDF (Lista Vertical)">
               <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
               <span>Imprimir / PDF</span>
@@ -2958,7 +3303,7 @@ export function buildDashboardHtml(
               <span class="cockpit-filter-label">Filtrar por Status:</span>
               <button class="cockpit-chip active" id="cockpitChip-ALL" onclick="filterCockpitStatus('ALL')">Todos (<span id="cockpitChipTotalCount">0</span>)</button>
               <button class="cockpit-chip chip-apto" id="cockpitChip-APTO" onclick="filterCockpitStatus('APTO')">Aptos (<span id="cockpitChipAptoCount">0</span>)</button>
-              <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Em Alerta (<span id="cockpitChipAlertaCount">0</span>)</button>
+              <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Aptos &middot; vencem em &le;30 d (<span id="cockpitChipAlertaCount">0</span>)</button>
               <button class="cockpit-chip chip-bloqueado" id="cockpitChip-BLOQUEADO" onclick="filterCockpitStatus('BLOQUEADO')">Bloqueados (<span id="cockpitChipBloqueadoCount">0</span>)</button>
               <button class="cockpit-chip chip-storz" id="cockpitChip-STORZ" onclick="filterCockpitStatus('STORZ')">Em Treinamento (<span id="cockpitChipStorzCount">0</span>)</button>
             </div>
@@ -3011,15 +3356,15 @@ export function buildDashboardHtml(
       <div id="view-table" class="tab-view">
         <div class="card">
           <div class="table-container">
-            <table class="matrix-table">
+            <table class="matrix-table responsive-table">
               <thead>
                 <tr>
-                  <th style="text-align:left;">Colaborador</th>
-                  <th style="text-align:left;">Ramo / Setor</th>
-                  <th style="text-align:left;">Treinamento / Documento</th>
-                  <th>Modalidade</th>
-                  <th>Status DO/EHS</th>
-                  <th style="text-align:left;">Validade / Detalhes</th>
+                  <th class="sortable" data-sort="NAME" onclick="toggleTableSort('NAME')" style="text-align:left;">Colaborador</th>
+                  <th class="sortable" data-sort="SECTOR" onclick="toggleTableSort('SECTOR')" style="text-align:left;">Ramo / Setor</th>
+                  <th class="sortable" data-sort="DOC" onclick="toggleTableSort('DOC')" style="text-align:left;">Treinamento / Documento</th>
+                  <th class="sortable" data-sort="MOD" onclick="toggleTableSort('MOD')">Modalidade</th>
+                  <th class="sortable" data-sort="PRIORITY" onclick="toggleTableSort('PRIORITY')">Status DO/EHS</th>
+                  <th class="sortable" data-sort="EXP" onclick="toggleTableSort('EXP')" style="text-align:left;">Validade / Detalhes</th>
                 </tr>
               </thead>
               <tbody id="dataTableBody"></tbody>
@@ -3035,7 +3380,11 @@ export function buildDashboardHtml(
             <div class="rpo-summary-val mono" id="rpoKpiTotal" style="color:var(--brand-blue);">0</div>
             <div class="rpo-summary-label">Total Comparados</div>
           </div>
-          <div class="rpo-summary-card crit" onclick="filterRpoSubTab('ACTIONABLE_DIV')" style="cursor:pointer;" title="Filtrar divergências que exigem ação corretiva imediata">
+          <div class="rpo-summary-card crit" onclick="filterRpoSubTab('IMPACT')" style="cursor:pointer;" title="RPO e fonte confiável discordam se o documento já venceu: o status de alguém muda">
+            <div class="rpo-summary-val mono" id="rpoKpiImpact">0</div>
+            <div class="rpo-summary-label">Mudam o status (v&aacute;lido ou vencido)</div>
+          </div>
+          <div class="rpo-summary-card action" onclick="filterRpoSubTab('ACTIONABLE_DIV')" style="cursor:pointer;" title="Filtrar divergências que exigem ação corretiva imediata">
             <div class="rpo-summary-val mono" id="rpoKpiActionable" style="color:#DC2626;">0</div>
             <div class="rpo-summary-label"><svg class="chip-svg icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>Divergências de Ação</div>
           </div>
@@ -3057,7 +3406,8 @@ export function buildDashboardHtml(
           <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
             <h3><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria de Digitação: Fontes Confiáveis (Drive + Storz) vs Planilha RPO</h3>
             <div style="display:flex; gap:6px; flex-wrap:wrap;">
-              <button class="chip active" id="rpoChip-ACTIONABLE_DIV" onclick="filterRpoSubTab('ACTIONABLE_DIV')">Divergências de Ação (<span id="rpoChipActionableCount">0</span>)</button>
+              <button class="chip active" id="rpoChip-IMPACT" onclick="filterRpoSubTab('IMPACT')">Mudam o status (<span id="rpoChipImpactCount">0</span>)</button>
+              <button class="chip" id="rpoChip-ACTIONABLE_DIV" onclick="filterRpoSubTab('ACTIONABLE_DIV')">Divergências de Ação (<span id="rpoChipActionableCount">0</span>)</button>
               <button class="chip" id="rpoChip-PENDENTE_BACKUP" onclick="filterRpoSubTab('PENDENTE_BACKUP')" style="color:#3730A3;background:#EEF2FF;border-color:#C7D2FE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>Validado RPO (Pendente Backup) (<span id="rpoChipPendenteBackupCount">0</span>)</button>
               <button class="chip" id="rpoChip-ALL_DIV" onclick="filterRpoSubTab('ALL_DIV')">Todas Divergências (<span id="rpoChipDivCount">0</span>)</button>
               <button class="chip" id="rpoChip-RPO_NEWER" onclick="filterRpoSubTab('RPO_NEWER')" style="color:#1D4ED8;border-color:#BFDBFE;"><svg class="chip-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>RPO Mais Recente (<span id="rpoChipRpoNewerCount">0</span>)</button>
@@ -3106,7 +3456,7 @@ export function buildDashboardHtml(
           </div>
 
           <div class="table-container">
-            <table class="matrix-table">
+            <table class="matrix-table responsive-table">
               <thead>
                 <tr>
                   <th class="sortable" onclick="toggleRpoSort('NAME')" style="text-align:left;">Colaborador <span id="rpoSortIcon-NAME" class="rpo-sort-icon"></span></th>
@@ -3169,7 +3519,7 @@ export function buildDashboardHtml(
             </div>
           </div>
           <div class="table-container">
-            <table class="matrix-table">
+            <table class="matrix-table responsive-table">
               <thead>
                 <tr>
                   <th style="text-align:left;">Colaborador</th>
@@ -3199,6 +3549,102 @@ export function buildDashboardHtml(
   </main>
 
   <!-- COLLAB MODAL -->
+  <!-- Rankings drawer lives at body level so no stacking context can put it under the top bar -->
+  <!-- DRAWER BACKDROP -->
+  <div class="drawer-backdrop" id="rankingsBackdrop" onclick="toggleRankingsPanel()"></div>
+
+  <!-- SLIDE-OVER DRAWER (RANKINGS & GARGALOS) -->
+  <aside class="rankings-panel" id="rankingsPanel">
+    <div class="drawer-header">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <svg class="ico ico-sm icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        <div>
+          <h3 style="font-size:13px; font-weight:800; color:var(--text-main); margin-bottom:1px;">Agenda, tend&ecirc;ncia e gargalos</h3>
+          <p style="font-size: 12px; color:var(--text-muted);">Planejamento de vencimentos e prioridade de intervenção</p>
+        </div>
+      </div>
+      <button class="drawer-close-btn" onclick="toggleRankingsPanel()" title="Fechar painel (Esc)">
+        <svg class="ico ico-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Agenda de vencimentos
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">13 semanas</span>
+        </div>
+        <div class="agenda-list" id="agendaList" role="list"></div>
+      </div>
+
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            Tend&ecirc;ncia de conformidade
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">documentos em dia</span>
+        </div>
+        <div id="trendBox"></div>
+      </div>
+
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Top Colaboradores Críticos
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">Vencidos + Ausentes</span>
+        </div>
+        <div class="ranking-list" id="rankingTopCrit"></div>
+      </div>
+
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs icon-crit" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Gargalos Presenciais (Mobilização)
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">GWO, NR-35, ASO, CNH</span>
+        </div>
+        <div class="ranking-list" id="rankingTopPresencial"></div>
+      </div>
+
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs icon-storz" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            Gargalos de Reteste (Storz)
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">Mais Reprovações</span>
+        </div>
+        <div class="ranking-list" id="rankingTopRetest"></div>
+      </div>
+
+      <div class="ranking-card">
+        <div class="ranking-header">
+          <span style="display:flex;align-items:center;gap:5px;">
+            <svg class="ico ico-xs icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Alerta de Inércia Storz
+          </span>
+          <span class="mono" style="font-size: 12px;color:var(--text-muted);">Parados em 0%</span>
+        </div>
+        <div class="ranking-list" id="rankingTopInertia"></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="cmdk" id="cmdk" role="dialog" aria-modal="true" aria-label="Paleta de comandos" onclick="if (event.target === this) closeCmdk()">
+    <div class="cmdk-panel">
+      <input class="cmdk-input" id="cmdkInput" type="text" autocomplete="off" spellcheck="false" placeholder="Buscar tela ou colaborador" aria-label="Buscar tela ou colaborador" aria-controls="cmdkList" role="combobox" aria-expanded="true">
+      <ul class="cmdk-list" id="cmdkList" role="listbox" aria-label="Resultados"></ul>
+      <div class="cmdk-foot">Setas para navegar &middot; Enter para abrir &middot; Esc para fechar</div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="collabModal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <div class="modal-head">
@@ -3214,6 +3660,7 @@ export function buildDashboardHtml(
     const rawRpoDivergences = ${rpoDivergencesJson};
     const rawStorzHistory = ${storzHistoryJson};
     const sourceHealth = ${sourceHealthJson};
+    const complianceHistory = ${complianceHistoryJson};
 
     const SVG_ICONS = {
       check: '<svg class="ico ico-xs ico-inline" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>',
@@ -3351,23 +3798,23 @@ export function buildDashboardHtml(
 
       let mainBadge = '';
       if (r.statusEHS === 'CONFORME') {
-        mainBadge = '<span class="badge ok" title="' + r.detail + '">' + SVG_ICONS.check + 'Em Dia</span>';
+        mainBadge = '<span class="badge ok" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.check + 'Em Dia</span>';
       } else if (r.statusEHS === 'VENCE_60') {
-        mainBadge = '<span class="badge warn" style="background:rgba(37,99,235,0.1); color:#2563EB;" title="' + r.detail + '">' + SVG_ICONS.clock + '&lt;60d</span>';
+        mainBadge = '<span class="badge warn" style="background:rgba(37,99,235,0.1); color:#2563EB;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;60d</span>';
       } else if (r.statusEHS === 'VENCE_30') {
-        mainBadge = '<span class="badge warn" title="' + r.detail + '">' + SVG_ICONS.clock + '&lt;30d</span>';
+        mainBadge = '<span class="badge warn" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;30d</span>';
       } else if (r.statusEHS === 'VENCE_15') {
-        mainBadge = '<span class="badge warn" style="background:#FEF3C7; color:#D97706; font-weight:800;" title="' + r.detail + '">' + SVG_ICONS.clock + '&lt;15d</span>';
+        mainBadge = '<span class="badge warn" style="background:#FEF3C7; color:#D97706; font-weight:800;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;15d</span>';
       } else if (r.statusEHS === 'VENCE_07') {
-        mainBadge = '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + r.detail + '">' + SVG_ICONS.alert + '&lt;7d</span>';
+        mainBadge = '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.alert + '&lt;7d</span>';
       } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
-        mainBadge = '<span class="badge storz" title="' + r.detail + '">' + SVG_ICONS.cap + 'Storz</span>';
+        mainBadge = '<span class="badge storz" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.cap + 'Storz</span>';
       } else if (r.statusEHS === 'AUSENTE') {
-        mainBadge = '<span class="badge ausente" title="' + (r.detail || 'Não encontrado no Drive') + '">' + SVG_ICONS.minus + 'Ausente</span>';
+        mainBadge = '<span class="badge ausente" title="' + (dedupeDetail(r.detail) || 'Não encontrado no Drive') + '">' + SVG_ICONS.minus + 'Ausente</span>';
       } else if (r.statusEHS === 'VENCIDO') {
-        mainBadge = '<span class="badge danger" title="' + r.detail + '">' + SVG_ICONS.x + 'Vencido</span>';
+        mainBadge = '<span class="badge danger" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.x + 'Vencido</span>';
       } else {
-        mainBadge = '<span class="badge na" title="' + r.detail + '">—</span>';
+        mainBadge = '<span class="badge na" title="' + dedupeDetail(r.detail) + '">—</span>';
       }
 
       if (storzTag) {
@@ -3434,7 +3881,17 @@ export function buildDashboardHtml(
     if (document.getElementById('storzSummaryRequested')) document.getElementById('storzSummaryRequested').innerText = storzRequested;
     if (document.getElementById('storzSummaryCompleted')) document.getElementById('storzSummaryCompleted').innerText = storzCompleted;
 
+    // A divergence only changes a person's status when RPO and the trusted source disagree
+    // about whether the document is already expired.
+    function rpoFlipsStatus(item) {
+      const trusted = item.trustedSource === 'STORZ' ? item.storzExpiration : item.driveExpiration;
+      if (!trusted || !item.rpoExpiration) return false;
+      const now = Date.now();
+      return (new Date(trusted).getTime() < now) !== (new Date(item.rpoExpiration).getTime() < now);
+    }
+
     // RPO AUDIT KPIS & BADGES
+    const rpoImpactCount = rawRpoDivergences.filter(d => d.divergent && rpoFlipsStatus(d)).length;
     const rpoDivergentCount = rawRpoDivergences.filter(d => d.divergent).length;
     const rpoPendenteBackupCount = rawRpoDivergences.filter(d => d.divergent && d.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP').length;
     const rpoActionableCount = rawRpoDivergences.filter(d => d.divergent && d.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP').length;
@@ -3459,26 +3916,22 @@ export function buildDashboardHtml(
       }
     });
 
-    if (document.getElementById('rpoBadgeSidebar')) {
-      const badge = document.getElementById('rpoBadgeSidebar');
-      badge.innerText = rpoActionableCount;
-      badge.title = rpoActionableCount + ' divergências reais de ação (' + rpoPendenteBackupCount + ' validados com backup pendente)';
-      badge.style.display = rpoActionableCount > 0 ? 'inline-block' : 'none';
-    }
     if (document.getElementById('rpoBadgeTab')) {
       const badge = document.getElementById('rpoBadgeTab');
-      badge.innerText = rpoActionableCount;
-      badge.title = rpoActionableCount + ' divergências reais de ação (' + rpoPendenteBackupCount + ' validados com backup pendente)';
-      badge.style.display = rpoActionableCount > 0 ? 'inline-block' : 'none';
+      badge.innerText = rpoImpactCount;
+      badge.title = rpoImpactCount + ' divergência(s) mudam o status válido/vencido de alguém. No total há ' + rpoActionableCount + ' divergências de ação (' + rpoPendenteBackupCount + ' validados com backup pendente).';
+      badge.style.display = rpoImpactCount > 0 ? 'inline-block' : 'none';
     }
     if (document.getElementById('rpoKpiTotal')) document.getElementById('rpoKpiTotal').innerText = rawRpoDivergences.length;
     if (document.getElementById('rpoKpiDivergences')) document.getElementById('rpoKpiDivergences').innerText = rpoDivergentCount;
     if (document.getElementById('rpoKpiActionable')) document.getElementById('rpoKpiActionable').innerText = rpoActionableCount;
+    if (document.getElementById('rpoKpiImpact')) document.getElementById('rpoKpiImpact').innerText = rpoImpactCount;
     if (document.getElementById('rpoKpiPendenteBackup')) document.getElementById('rpoKpiPendenteBackup').innerText = rpoPendenteBackupCount;
     if (document.getElementById('rpoKpiRpoNewer')) document.getElementById('rpoKpiRpoNewer').innerText = rpoNewerCount;
     if (document.getElementById('rpoKpiDriveNewer')) document.getElementById('rpoKpiDriveNewer').innerText = driveNewerCount;
     if (document.getElementById('rpoKpiSomenteRpo')) document.getElementById('rpoKpiSomenteRpo').innerText = rpoSomenteRpoCount;
     if (document.getElementById('rpoChipActionableCount')) document.getElementById('rpoChipActionableCount').innerText = rpoActionableCount;
+    if (document.getElementById('rpoChipImpactCount')) document.getElementById('rpoChipImpactCount').innerText = rpoImpactCount;
     if (document.getElementById('rpoChipPendenteBackupCount')) document.getElementById('rpoChipPendenteBackupCount').innerText = rpoPendenteBackupCount;
     if (document.getElementById('rpoChipDivCount')) document.getElementById('rpoChipDivCount').innerText = rpoDivergentCount;
     if (document.getElementById('rpoChipRpoNewerCount')) document.getElementById('rpoChipRpoNewerCount').innerText = rpoNewerCount;
@@ -3486,7 +3939,38 @@ export function buildDashboardHtml(
     if (document.getElementById('rpoChipSwapCount')) document.getElementById('rpoChipSwapCount').innerText = rpoSwapCount;
 
     // RENDER FRESHNESS BAR
+    const BUILT_AT = new Date('${now.toISOString()}');
+    const STALE_HOURS = 24;
+    const SOURCE_LABELS = { drive: 'Google Drive', smartsheet: 'Smartsheet RPO', storz: 'Storz LMS' };
+
+    function formatAge(hours) {
+      return hours < 48 ? Math.round(hours) + ' h' : Math.round(hours / 24) + ' dias';
+    }
+
+    function updateStaleBanner() {
+      const banner = document.getElementById('staleBanner');
+      if (!banner) return;
+      const messages = [];
+      const builtHours = (Date.now() - BUILT_AT.getTime()) / 3600000;
+      if (builtHours > STALE_HOURS) messages.push('Painel gerado há ' + formatAge(builtHours));
+      Object.keys(SOURCE_LABELS).forEach(key => {
+        const info = sourceHealth && sourceHealth[key];
+        if (!info) return;
+        const synced = info.lastSync ? new Date(info.lastSync) : null;
+        if (synced && !isNaN(synced.getTime())) {
+          const hours = (Date.now() - synced.getTime()) / 3600000;
+          if (hours > STALE_HOURS) messages.push(SOURCE_LABELS[key] + ': última sincronização há ' + formatAge(hours));
+        }
+        if (info.status && info.status !== 'ONLINE') messages.push(SOURCE_LABELS[key] + ': ' + (info.message || 'sem conexão ao vivo'));
+      });
+      banner.textContent = messages.length ? 'Atenção: ' + messages.join(' · ') + '. Confirme os dados na fonte antes de decidir.' : '';
+      banner.classList.toggle('show', messages.length > 0);
+    }
+
+    setInterval(updateStaleBanner, 300000);
+
     function renderFreshnessBar() {
+      updateStaleBanner();
       if (!sourceHealth || Object.keys(sourceHealth).length === 0) return;
 
       const driveInfo = sourceHealth.drive;
@@ -3533,23 +4017,225 @@ export function buildDashboardHtml(
     }
     renderFreshnessBar();
 
-    function toggleSidebar() {
-      const sidebar = document.querySelector('.sidebar');
-      if (!sidebar) return;
-      if (document.body.classList.contains('sidebar-fully-hidden')) {
-        toggleSidebarFull();
-        return;
-      }
-      const isCollapsed = sidebar.classList.toggle('collapsed');
-      localStorage.setItem('hse_sidebar_collapsed', isCollapsed ? 'true' : 'false');
+    const CMDK_VIEWS = [
+      ['cockpit', 'Cockpit', 'Prontidão da equipe de campo'],
+      ['matrix', 'Matriz NRs', 'Qualificações por colaborador'],
+      ['table', 'Pendências', 'Tabela analítica por documento'],
+      ['rpo', 'Auditoria RPO', 'Divergências entre Drive, Storz e Smartsheet'],
+      ['storz', 'Storz', 'Matrículas e andamento dos cursos']
+    ];
+    let cmdkIndex = 0;
+    let cmdkItems = [];
+    let cmdkReturnFocus = null;
+
+    function cmdkNormalize(value) {
+      return String(value || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
     }
 
-    function toggleSidebarFull() {
-      const isHidden = document.body.classList.toggle('sidebar-fully-hidden');
-      localStorage.setItem('hse_sidebar_fully_hidden', isHidden ? 'true' : 'false');
-      const btn = document.getElementById('btnCockpitFullscreenText');
-      if (btn) btn.innerText = isHidden ? 'Restaurar Menu' : 'Ocultar Menu (Print)';
+    function cmdkBuild(query) {
+      const q = cmdkNormalize(query).trim();
+      const items = [];
+      CMDK_VIEWS.forEach((v, i) => {
+        if (q && !cmdkNormalize(v[1] + ' ' + v[2]).includes(q)) return;
+        items.push({ group: 'Telas', label: v[1], hint: v[2] + ' · tecla ' + (i + 1), run: () => switchNav(v[0]) });
+      });
+      if (q) {
+        let shown = 0;
+        for (const p of peopleMap.values()) {
+          if (shown >= 8) break;
+          if (!cmdkNormalize(p.name + ' ' + p.role + ' ' + p.sector).includes(q)) continue;
+          items.push({ group: 'Colaboradores', label: p.name, hint: (p.role || 'Técnico') + ' · ' + (p.sector || 'Operações'), run: () => openCollabModal(p.name) });
+          shown++;
+        }
+      }
+      return items;
     }
+
+    function cmdkSelect() {
+      const input = document.getElementById('cmdkInput');
+      document.querySelectorAll('#cmdkList .cmdk-item').forEach((li, i) => {
+        const on = i === cmdkIndex;
+        li.setAttribute('aria-selected', on ? 'true' : 'false');
+        if (on) {
+          input.setAttribute('aria-activedescendant', li.id);
+          li.scrollIntoView({ block: 'nearest' });
+        }
+      });
+    }
+
+    function cmdkRender() {
+      const list = document.getElementById('cmdkList');
+      list.innerHTML = '';
+      let lastGroup = null;
+      cmdkItems.forEach((it, i) => {
+        if (it.group !== lastGroup) {
+          const g = document.createElement('li');
+          g.className = 'cmdk-group';
+          g.setAttribute('role', 'presentation');
+          g.textContent = it.group;
+          list.appendChild(g);
+          lastGroup = it.group;
+        }
+        const li = document.createElement('li');
+        li.className = 'cmdk-item';
+        li.id = 'cmdk-opt-' + i;
+        li.setAttribute('role', 'option');
+        const label = document.createElement('span');
+        label.textContent = it.label;
+        const hint = document.createElement('small');
+        hint.textContent = it.hint;
+        li.append(label, hint);
+        li.addEventListener('click', () => cmdkRun(i));
+        li.addEventListener('mousemove', () => {
+          if (cmdkIndex !== i) {
+            cmdkIndex = i;
+            cmdkSelect();
+          }
+        });
+        list.appendChild(li);
+      });
+      if (!cmdkItems.length) {
+        const empty = document.createElement('li');
+        empty.className = 'cmdk-empty';
+        empty.textContent = 'Nenhum resultado';
+        list.appendChild(empty);
+      }
+      cmdkSelect();
+    }
+
+    function cmdkRefresh() {
+      cmdkItems = cmdkBuild(document.getElementById('cmdkInput').value);
+      cmdkIndex = 0;
+      cmdkRender();
+    }
+
+    function openCmdk() {
+      const box = document.getElementById('cmdk');
+      if (!box) return;
+      cmdkReturnFocus = document.activeElement;
+      box.classList.add('open');
+      const input = document.getElementById('cmdkInput');
+      input.value = '';
+      cmdkRefresh();
+      input.focus();
+    }
+
+    function closeCmdk() {
+      const box = document.getElementById('cmdk');
+      if (!box || !box.classList.contains('open')) return;
+      box.classList.remove('open');
+      if (cmdkReturnFocus && cmdkReturnFocus.focus) cmdkReturnFocus.focus();
+    }
+
+    function cmdkRun(i) {
+      const it = cmdkItems[i];
+      if (!it) return;
+      closeCmdk();
+      it.run();
+    }
+
+    document.getElementById('cmdkInput').addEventListener('input', cmdkRefresh);
+    document.getElementById('cmdkInput').addEventListener('keydown', e => {
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!cmdkItems.length) return;
+        const step = e.key === 'ArrowDown' ? 1 : -1;
+        cmdkIndex = (cmdkIndex + step + cmdkItems.length) % cmdkItems.length;
+        cmdkSelect();
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        cmdkRun(cmdkIndex);
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      const open = document.getElementById('cmdk').classList.contains('open');
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        if (open) closeCmdk();
+        else openCmdk();
+        return;
+      }
+      if (e.key === 'Escape' && open) {
+        e.preventDefault();
+        closeCmdk();
+        return;
+      }
+      const tag = e.target && e.target.tagName;
+      if (open || e.ctrlKey || e.metaKey || e.altKey || tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      const idx = '12345'.indexOf(e.key);
+      if (idx >= 0 && e.key.length === 1) switchNav(CMDK_VIEWS[idx][0]);
+    });
+
+    function toggleOmniBar() {
+      const bar = document.getElementById('omniBar');
+      const btn = document.getElementById('omniToggle');
+      if (!bar || !btn) return;
+      const open = bar.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Ocultar filtros' : 'Filtros';
+    }
+
+    function toggleScopeDesc() {
+      const banner = document.getElementById('cockpitScopeBanner');
+      const btn = document.getElementById('scopeToggleBtn');
+      if (!banner || !btn) return;
+      const expanded = banner.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      btn.textContent = expanded ? 'Ocultar critério' : 'Ver critério';
+    }
+
+    function enhanceInteractive(root) {
+      const scope = root || document;
+      const skip = ['BUTTON', 'A', 'INPUT', 'SELECT', 'TEXTAREA', 'OPTION', 'LABEL'];
+      const structural = ['TH', 'TD', 'TR'];
+      scope.querySelectorAll('[onclick]').forEach(el => {
+        if (skip.includes(el.tagName) || el.dataset.a11y) return;
+        el.dataset.a11y = '1';
+        el.tabIndex = 0;
+        if (!structural.includes(el.tagName) && !el.getAttribute('role')) el.setAttribute('role', 'button');
+      });
+      scope.querySelectorAll('button').forEach(b => {
+        if (b.textContent.trim() || b.getAttribute('aria-label')) return;
+        const t = b.getAttribute('title');
+        if (t) b.setAttribute('aria-label', t);
+      });
+      labelTableCells(scope);
+    }
+
+    function labelTableCells(root) {
+      (root || document).querySelectorAll('table.responsive-table').forEach(table => {
+        const headRow = table.querySelector('thead tr:last-child');
+        if (!headRow) return;
+        const labels = Array.from(headRow.children).map(th => th.textContent.trim());
+        table.querySelectorAll('tbody tr').forEach(tr => {
+          if (tr.dataset.labeled) return;
+          tr.dataset.labeled = '1';
+          Array.from(tr.children).forEach((td, i) => {
+            if (!td.hasAttribute('colspan') && labels[i]) td.setAttribute('data-label', labels[i]);
+          });
+        });
+      });
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      const el = e.target;
+      if (!el || !el.dataset || !el.dataset.a11y) return;
+      e.preventDefault();
+      el.click();
+    });
+
+    let a11yFramePending = false;
+    new MutationObserver(() => {
+      if (a11yFramePending) return;
+      a11yFramePending = true;
+      requestAnimationFrame(() => {
+        a11yFramePending = false;
+        enhanceInteractive();
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+    enhanceInteractive();
 
     function printCockpit() {
       const now = new Date();
@@ -3566,20 +4252,8 @@ export function buildDashboardHtml(
       window.print();
     }
 
-    if (localStorage.getItem('hse_sidebar_fully_hidden') === 'true') {
-      document.body.classList.add('sidebar-fully-hidden');
-      const btn = document.getElementById('btnCockpitFullscreenText');
-      if (btn) btn.innerText = 'Restaurar Menu';
-    } else if (localStorage.getItem('hse_sidebar_collapsed') === 'true') {
-      const sidebar = document.querySelector('.sidebar');
-      if (sidebar) sidebar.classList.add('collapsed');
-    }
-
     window.addEventListener('keydown', (e) => {
-      if (e.altKey && (e.key === 's' || e.key === 'S')) {
-        e.preventDefault();
-        toggleSidebarFull();
-      } else if (e.key === 'Escape') {
+      if (e.key === 'Escape') {
         const panel = document.getElementById('rankingsPanel');
         if (panel && panel.classList.contains('show')) {
           toggleRankingsPanel();
@@ -3628,7 +4302,7 @@ export function buildDashboardHtml(
         },
         {
           id: 'VENCE_30',
-          label: 'Vencendo em 30 dias',
+          label: 'Vencendo em 60 dias',
           svg: '<svg class="chip-svg icon-warn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>',
           apply: () => {
             const modSelect = document.getElementById('modalityFilter');
@@ -3807,7 +4481,98 @@ export function buildDashboardHtml(
       }
     }
 
+    function formatDayMonth(date) {
+      return String(date.getDate()).padStart(2, '0') + '/' + String(date.getMonth() + 1).padStart(2, '0');
+    }
+
+    function renderAgenda() {
+      const el = document.getElementById('agendaList');
+      if (!el) return;
+      el.innerHTML = '';
+      const DAY = 86400000;
+      const WEEKS = 13;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const weeks = Array.from({ length: WEEKS }, (_, i) => ({
+        start: new Date(today.getTime() + i * 7 * DAY),
+        docs: 0,
+        people: new Set()
+      }));
+      const allPeople = new Set();
+      let totalDocs = 0;
+      rawData.forEach(r => {
+        if (!r.expirationDate) return;
+        const diff = Math.floor((new Date(r.expirationDate).getTime() - today.getTime()) / DAY);
+        if (diff < 0) return;
+        const idx = Math.floor(diff / 7);
+        if (idx >= WEEKS) return;
+        weeks[idx].docs++;
+        weeks[idx].people.add(r.inspectorName);
+        allPeople.add(r.inspectorName);
+        totalDocs++;
+      });
+      const summary = document.createElement('div');
+      summary.className = 'agenda-summary';
+      summary.textContent = totalDocs + ' documento(s) de ' + allPeople.size + ' pessoa(s) vencem nos próximos 90 dias.';
+      el.appendChild(summary);
+      const peak = Math.max(1, ...weeks.map(w => w.docs));
+      weeks.forEach(w => {
+        const row = document.createElement('div');
+        row.className = 'agenda-row';
+        row.setAttribute('role', 'listitem');
+        const label = document.createElement('span');
+        label.className = 'mono';
+        label.textContent = formatDayMonth(w.start);
+        const bar = document.createElement('span');
+        bar.className = 'agenda-bar';
+        bar.setAttribute('aria-hidden', 'true');
+        const fill = document.createElement('span');
+        fill.style.width = (w.docs / peak * 100) + '%';
+        bar.appendChild(fill);
+        const count = document.createElement('span');
+        count.className = 'agenda-count';
+        count.textContent = w.docs ? w.docs + ' doc · ' + w.people.size + ' pessoa(s)' : 'nenhum';
+        row.append(label, bar, count);
+        el.appendChild(row);
+      });
+    }
+
+    function renderTrend() {
+      const box = document.getElementById('trendBox');
+      if (!box) return;
+      box.innerHTML = '';
+      const series = (complianceHistory || []).filter(s => s.documents > 0);
+      if (series.length < 2) {
+        box.textContent = 'A tendência aparece quando houver pelo menos 2 dias registrados.';
+        return;
+      }
+      const pct = s => s.onTime / s.documents * 100;
+      const values = series.map(pct);
+      const low = Math.floor(Math.min(...values)) - 1;
+      const high = Math.ceil(Math.max(...values)) + 1;
+      const W = 300, H = 90, pad = 6;
+      const x = i => pad + i * (W - 2 * pad) / (series.length - 1);
+      const y = v => H - pad - (v - low) / (high - low) * (H - 2 * pad);
+      const points = values.map((v, i) => x(i).toFixed(1) + ',' + y(v).toFixed(1)).join(' ');
+      const last = series[series.length - 1];
+      const lastValue = values[values.length - 1];
+      const monthAgoTime = new Date(last.date + 'T00:00:00').getTime() - 30 * 86400000;
+      const reference = series.filter(s => new Date(s.date + 'T00:00:00').getTime() <= monthAgoTime).pop() || series[0];
+      const delta = lastValue - pct(reference);
+      const fmt = v => v.toFixed(1).replace('.', ',');
+      const sign = delta > 0 ? '+' : '';
+      box.innerHTML =
+        '<div class="trend-now"><strong>' + fmt(lastValue) + '%</strong> dos documentos em dia hoje</div>' +
+        '<svg class="trend-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Documentos em dia: de ' + fmt(values[0]) + '% em ' + series[0].date + ' para ' + fmt(lastValue) + '% em ' + last.date + '">' +
+        '<polyline points="' + points + '" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>' +
+        '<circle cx="' + x(values.length - 1).toFixed(1) + '" cy="' + y(lastValue).toFixed(1) + '" r="3.5" fill="currentColor"/></svg>' +
+        '<div class="trend-axis"><span>' + formatDayMonth(new Date(series[0].date + 'T00:00:00')) + '</span><span>' + formatDayMonth(new Date(last.date + 'T00:00:00')) + '</span></div>' +
+        '<div class="trend-delta">' + sign + fmt(delta) + ' p.p. desde ' + formatDayMonth(new Date(reference.date + 'T00:00:00')) + ' · vencidos: ' + reference.expired + ' → ' + last.expired + ' · ausentes: ' + reference.missing + ' → ' + last.missing + '</div>';
+    }
+
     function computeRankings() {
+      renderAgenda();
+      renderTrend();
       // 1. Top Colaboradores Críticos
       const collabScores = [];
       peopleMap.forEach(p => {
@@ -3827,7 +4592,7 @@ export function buildDashboardHtml(
       const critEl = document.getElementById('rankingTopCrit');
       if (critEl) {
         if (topCrit.length === 0) {
-          critEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência crítica.</div>';
+          critEl.innerHTML = '<div style="font-size: 12px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência crítica.</div>';
         } else {
           const maxCrit = topCrit[0].count || 1;
           critEl.innerHTML = topCrit.map((c, idx) => {
@@ -3864,7 +4629,7 @@ export function buildDashboardHtml(
       const presEl = document.getElementById('rankingTopPresencial');
       if (presEl) {
         if (topPresencial.length === 0) {
-          presEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência presencial crítica.</div>';
+          presEl.innerHTML = '<div style="font-size: 12px;color:var(--text-muted);padding:4px 0;">Nenhum colaborador com pendência presencial crítica.</div>';
         } else {
           const maxPres = topPresencial[0].count || 1;
           presEl.innerHTML = topPresencial.map((c, idx) => {
@@ -3898,7 +4663,7 @@ export function buildDashboardHtml(
       const retestEl = document.getElementById('rankingTopRetest');
       if (retestEl) {
         if (topRetests.length === 0) {
-          retestEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhuma reprovação registrada no momento.</div>';
+          retestEl.innerHTML = '<div style="font-size: 12px;color:var(--text-muted);padding:4px 0;">Nenhuma reprovação registrada no momento.</div>';
         } else {
           const top5Retests = topRetests.slice(0, 5);
           const maxRetest = top5Retests[0].count || 1;
@@ -3938,7 +4703,7 @@ export function buildDashboardHtml(
       const inertiaEl = document.getElementById('rankingTopInertia');
       if (inertiaEl) {
         if (topInertia.length === 0) {
-          inertiaEl.innerHTML = '<div style="font-size:11px;color:var(--text-muted);padding:4px 0;">Nenhum aluno estagnado em 0%.</div>';
+          inertiaEl.innerHTML = '<div style="font-size: 12px;color:var(--text-muted);padding:4px 0;">Nenhum aluno estagnado em 0%.</div>';
         } else {
           const top5Inertia = topInertia.slice(0, 5);
           const maxInertia = top5Inertia[0].count || 1;
@@ -3960,18 +4725,21 @@ export function buildDashboardHtml(
 
     function switchNav(viewKey) {
       currentViewKey = viewKey;
-      document.querySelectorAll('.sidebar .nav-item').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.topbar .pill-opt').forEach(p => p.classList.remove('active'));
+      document.body.dataset.view = viewKey;
+      document.querySelectorAll('.topbar .pill-opt').forEach(p => {
+        p.classList.remove('active');
+        p.removeAttribute('aria-current');
+      });
       document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
 
       const views = ['cockpit', 'matrix', 'table', 'rpo', 'storz'];
       const idx = views.indexOf(viewKey);
 
-      const navs = document.querySelectorAll('.sidebar .nav-item');
-      if (navs[idx]) navs[idx].classList.add('active');
-
       const pills = document.querySelectorAll('.topbar .pill-opt');
-      if (pills[idx]) pills[idx].classList.add('active');
+      if (pills[idx]) {
+        pills[idx].classList.add('active');
+        pills[idx].setAttribute('aria-current', 'page');
+      }
 
       const view = document.getElementById('view-' + viewKey);
       if (view) view.classList.add('active');
@@ -4000,8 +4768,8 @@ export function buildDashboardHtml(
       const showMatrixTableBars = (viewKey === 'matrix' || viewKey === 'table');
       const globalKpis = document.querySelector('.kpi-row');
       const globalOmniBar = document.querySelector('.omni-bar');
-      if (globalKpis) globalKpis.style.display = showMatrixTableBars ? 'flex' : 'none';
-      if (globalOmniBar) globalOmniBar.style.display = showMatrixTableBars ? 'flex' : 'none';
+      if (globalKpis) globalKpis.classList.toggle('is-hidden', !showMatrixTableBars);
+      if (globalOmniBar) globalOmniBar.classList.toggle('is-hidden', !showMatrixTableBars);
 
       renderPresets(viewKey);
 
@@ -4375,7 +5143,7 @@ export function buildDashboardHtml(
       const elAptoSub = document.getElementById('cockpitKpiAptoSub');
       if (elAptoSub) {
         if (cockpitSegment === 'OFFICE') elAptoSub.innerText = 'Funções de gestão/suporte';
-        else elAptoSub.innerText = aptoPlenoCount + ' plenos · ' + alertaCount + ' atenção recert.';
+        else elAptoSub.innerText = aptoPlenoCount + ' plenos + ' + alertaCount + ' com vencimento em até 30 d';
       }
       const elAlerta = document.getElementById('cockpitKpiAlerta');
       if (elAlerta) elAlerta.innerText = alertaCount;
@@ -4415,11 +5183,13 @@ export function buildDashboardHtml(
         return true;
       });
 
-      // 8. Ordenar: Bloqueados primeiro, depois Alerta, depois Apto, depois Isento
+      // 8. Ordenar: Bloqueados (mais atrasado primeiro), depois aptos que vencem (mais perto primeiro), depois Apto, depois Isento
       const statusOrder = { BLOQUEADO: 1, ALERTA: 2, APTO: 3, ISENTO_CAMPO: 4 };
       filteredCards.sort((a, b) => {
         const diff = (statusOrder[a.health.status] || 99) - (statusOrder[b.health.status] || 99);
         if (diff !== 0) return diff;
+        const urgency = cockpitUrgency(a.health) - cockpitUrgency(b.health);
+        if (urgency !== 0) return urgency;
         return a.p.name.localeCompare(b.p.name);
       });
 
@@ -4442,7 +5212,7 @@ export function buildDashboardHtml(
         const statusLabels = {
           ALL: 'Todos os Status',
           APTO: 'Apenas Colaboradores Aptos',
-          ALERTA: 'Apenas Colaboradores em Alerta',
+          ALERTA: 'Apenas aptos com vencimento em até 30 dias',
           BLOQUEADO: 'Apenas Colaboradores Bloqueados',
           STORZ: 'Apenas Colaboradores em Treinamento',
         };
@@ -4552,8 +5322,8 @@ export function buildDashboardHtml(
         highlightsHtml = '<div class="cockpit-card-pills">' +
           pendencies.map(r => {
             const docName = docShortNames[r.docCode] || r.docName;
-            const tag = isVencido(r.statusEHS) ? 'Vencido' : 'Ausente';
-            return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + (r.detail || tag) + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
+            const tag = isVencido(r.statusEHS) ? overdueLabel(r) : 'Ausente';
+            return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + (dedupeDetail(r.detail) || tag) + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
           }).join('') +
           '</div>';
       } else if (health.status === 'ALERTA') {
@@ -4568,7 +5338,7 @@ export function buildDashboardHtml(
         if (health.alertItems && health.alertItems.length > 0) {
           health.alertItems.forEach(r => {
             const docName = docShortNames[r.docCode] || r.docName;
-            pills.push('<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + (r.detail || 'Vence em breve') + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (&le;30d)</span>');
+            pills.push('<span class="cockpit-card-pill pill-warning" title="' + r.docName + ' (' + (dedupeDetail(r.detail) || 'Vence em breve') + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' + docName + ' (' + expiresLabel(r) + ')</span>');
           });
         }
         highlightsHtml = '<div class="cockpit-card-pills">' + pills.join('') + '</div>';
@@ -4633,9 +5403,7 @@ export function buildDashboardHtml(
             '<div class="cockpit-progress-fill" style="width:' + health.complianceRate + '%;background:' + barColor + ';"></div>' +
           '</div>' +
         '</div>' +
-        highlightsHtml +
-        storzHtml +
-        specsHtml +
+        '<div class="cockpit-card-body">' + highlightsHtml + storzHtml + specsHtml + '</div>' +
         '<div class="cockpit-card-footer">' +
           '<button class="btn-cockpit-card-action" data-collab-name="' + escName + '" onclick="openCollabModal(this.dataset.collabName)">' +
             '<svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
@@ -4654,7 +5422,7 @@ export function buildDashboardHtml(
       });
 
       const headerRow = document.getElementById('matrixHeaderRow');
-      headerRow.innerHTML = '<th class="th-sticky group-collab" style="font-size:10px;">NOME &amp; CARGO</th>' + 
+      headerRow.innerHTML = '<th class="th-sticky group-collab" style="font-size: 12px;">NOME &amp; CARGO</th>' + 
         activeCols.map(c => '<th>' + (docShortNames[c] || 'Doc ' + c) + '</th>').join('');
 
       const tbody = document.getElementById('matrixBody');
@@ -4679,7 +5447,7 @@ export function buildDashboardHtml(
           '<div class="collab-avatar">' + initials + '</div>' +
           '<div style="min-width:0;flex:1;">' +
           '<div class="collab-title-row"><strong>' + p.name + '</strong>' + storzPill + '</div>' +
-          '<div style="font-size:10px;font-weight:500;color:var(--text-muted);">' + p.role + ' · ' + p.sector + '</div>' +
+          '<div style="font-size: 12px;font-weight:500;color:var(--text-muted);">' + p.role + ' · ' + p.sector + '</div>' +
           '</div></div></td>';
 
         activeCols.forEach(code => {
@@ -4689,6 +5457,159 @@ export function buildDashboardHtml(
 
         tr.innerHTML = html;
         tbody.appendChild(tr);
+      });
+    }
+
+    function daysOverdue(r) {
+      const m = dedupeDetail(r.detail).match(/h[aá] ([0-9]+) dias/);
+      return m ? parseInt(m[1], 10) : null;
+    }
+
+    function daysToExpire(r) {
+      const m = dedupeDetail(r.detail).match(/Vence em ([0-9]+) dia/);
+      return m ? parseInt(m[1], 10) : null;
+    }
+
+    function overdueLabel(r) {
+      const n = daysOverdue(r);
+      return n === null ? 'Vencido' : 'Vencido há ' + n + ' d';
+    }
+
+    function expiresLabel(r) {
+      const n = daysToExpire(r);
+      return n === null ? '&le;30d' : 'vence em ' + n + ' d';
+    }
+
+    function evidenceLink(r) {
+      const url = r.evidenceUrl || '';
+      if (url.indexOf('https://drive.google.com/') !== 0) return '';
+      return ' <a class="evidence-link" href="' + url.replace(/"/g, '&quot;') + '" target="_blank" rel="noopener noreferrer">Abrir no Drive</a>';
+    }
+
+    function cockpitUrgency(health) {
+      if (health.status === 'BLOQUEADO') {
+        const days = (health.expiredItems || []).map(daysOverdue).filter(n => n !== null);
+        return days.length ? -Math.max(...days) : 1;
+      }
+      if (health.status === 'ALERTA') {
+        const days = (health.alertItems || []).map(daysToExpire).filter(n => n !== null);
+        return days.length ? Math.min(...days) : 9999;
+      }
+      return 0;
+    }
+
+    const EVAL_PREFIX = /^(?:VENCIDO há \\d+ dias \\(\\d{2}\\/\\d{2}\\/\\d{4}\\)|(?:CRÍTICO|ALERTA [A-ZÉ]+): Vence em \\d+ dia(?:\\(s\\)|s)? \\(\\d{2}\\/\\d{2}\\/\\d{4}\\)|Válido até \\d{2}\\/\\d{2}\\/\\d{4})\\s*/;
+
+    function dedupeDetail(detail) {
+      const text = String(detail || '').trim();
+      const match = text.match(EVAL_PREFIX);
+      if (!match) return text;
+      let rest = text.slice(match[0].length);
+      while (EVAL_PREFIX.test(rest)) rest = rest.replace(EVAL_PREFIX, '');
+      return rest ? match[0].trim() + ' ' + rest : match[0].trim();
+    }
+
+    const TABLE_PAGE_SIZE = 150;
+    let tableLimit = TABLE_PAGE_SIZE;
+    let lastTableSig = '';
+    const STORZ_PAGE_SIZE = 200;
+    let storzLimit = STORZ_PAGE_SIZE;
+    let lastStorzSig = '';
+
+    function appendCountRow(tbody, colspan, shown, total, moreFn) {
+      const tr = document.createElement('tr');
+      tr.className = 'count-row';
+      const td = document.createElement('td');
+      td.colSpan = colspan;
+      td.className = 'count-cell';
+      const text = document.createElement('span');
+      text.textContent = 'Exibindo ' + shown + ' de ' + total + ' registros';
+      td.appendChild(text);
+      if (shown < total) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn-cockpit-action';
+        btn.textContent = 'Mostrar mais';
+        btn.addEventListener('click', moreFn);
+        td.appendChild(btn);
+      }
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+    }
+
+    function showMoreTableRows() {
+      tableLimit += TABLE_PAGE_SIZE;
+      if (lastTableArgs) renderTable(...lastTableArgs);
+    }
+
+    const RPO_PAGE_SIZE = 100;
+    let rpoLimit = RPO_PAGE_SIZE;
+    let lastRpoSig = '';
+
+    function showMoreRpoRows() {
+      rpoLimit += RPO_PAGE_SIZE;
+      renderRpoTable();
+    }
+
+    function showMoreStorzRows() {
+      storzLimit += STORZ_PAGE_SIZE;
+      renderAll();
+    }
+
+    let tableSortCol = 'PRIORITY';
+    let tableSortDir = 'ASC';
+    let lastTableArgs = null;
+
+    function tableRowPriority(r) {
+      if (isVencido(r.statusEHS)) return 0;
+      if (isAusente(r.statusEHS)) return 1;
+      if (isAVencer(r.statusEHS)) return 2;
+      if (isStorzActive(r)) return 3;
+      return 4;
+    }
+
+    function sortTableRows(rows) {
+      const dir = tableSortDir === 'ASC' ? 1 : -1;
+      const text = (a, b) => String(a || '').localeCompare(String(b || ''), 'pt-BR');
+      const expOf = r => (r.expirationDate ? new Date(r.expirationDate).getTime() : Number.MAX_SAFE_INTEGER);
+      if (tableSortCol === 'PRIORITY') {
+        const worst = new Map();
+        rows.forEach(r => {
+          const pr = tableRowPriority(r);
+          if (!worst.has(r.inspectorName) || pr < worst.get(r.inspectorName)) worst.set(r.inspectorName, pr);
+        });
+        rows.sort((a, b) =>
+          dir * (worst.get(a.inspectorName) - worst.get(b.inspectorName)) ||
+          text(a.inspectorName, b.inspectorName) ||
+          tableRowPriority(a) - tableRowPriority(b) ||
+          expOf(a) - expOf(b)
+        );
+        return;
+      }
+      const key = {
+        NAME: (a, b) => text(a.inspectorName, b.inspectorName),
+        SECTOR: (a, b) => text(a.sector, b.sector),
+        DOC: (a, b) => text(a.docName, b.docName),
+        MOD: (a, b) => text(a.modality || 'ONLINE', b.modality || 'ONLINE'),
+        EXP: (a, b) => expOf(a) - expOf(b)
+      }[tableSortCol];
+      rows.sort((a, b) => dir * key(a, b) || text(a.inspectorName, b.inspectorName) || text(a.docName, b.docName));
+    }
+
+    function toggleTableSort(col) {
+      if (tableSortCol === col) {
+        tableSortDir = tableSortDir === 'ASC' ? 'DESC' : 'ASC';
+      } else {
+        tableSortCol = col;
+        tableSortDir = 'ASC';
+      }
+      if (lastTableArgs) renderTable(...lastTableArgs);
+    }
+
+    function updateTableSortHeaders() {
+      document.querySelectorAll('#view-table th[data-sort]').forEach(th => {
+        if (th.dataset.sort === tableSortCol) th.setAttribute('aria-sort', tableSortDir === 'ASC' ? 'ascending' : 'descending');
+        else th.removeAttribute('aria-sort');
       });
     }
 
@@ -4714,38 +5635,55 @@ export function buildDashboardHtml(
         });
       });
 
+      lastTableArgs = [peopleList, q, st, docF, modF];
+      const tableSig = [q, st, docF, modF, rowsToDisplay.length].join('|');
+      if (tableSig !== lastTableSig) {
+        tableLimit = TABLE_PAGE_SIZE;
+        lastTableSig = tableSig;
+      }
+      sortTableRows(rowsToDisplay);
       lastFilteredTableRows = rowsToDisplay;
+      updateTableSortHeaders();
 
       if (rowsToDisplay.length === 0) {
         tbody.innerHTML = '<tr><td colspan="6" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum registro encontrado.</td></tr>';
         return;
       }
 
-      rowsToDisplay.slice(0, 150).forEach(r => {
+      let previousName = null;
+      rowsToDisplay.slice(0, tableLimit).forEach(r => {
         const tr = document.createElement('tr');
+        const isGroupStart = r.inspectorName !== previousName;
+        if (isGroupStart) tr.className = 'row-group-start';
+        previousName = r.inspectorName;
+        const sectorText = (r.role || 'Técnico') + ' · ' + (r.sector || 'Operações');
         const isPres = (r.modality || 'ONLINE') === 'PRESENCIAL';
         const modBadge = isPres
           ? '<span class="badge-modality presencial" title="Treinamento Prático / Exame Presencial — Exige Centro de Treinamento ou Clínica"><svg class="ico ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:11px;height:11px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Presencial</span>'
           : '<span class="badge-modality remoto" title="Treinamento Remoto — Cursado online via LMS Storz / EAD"><svg class="ico ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:11px;height:11px;"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Remoto</span>';
 
         tr.innerHTML = 
-          '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong></td>' +
-          '<td style="text-align:left;color:var(--text-muted);">' + (r.role || 'Técnico') + ' · ' + (r.sector || 'Operações') + '</td>' +
+          '<td style="text-align:left;">' + (isGroupStart ? '<strong>' + r.inspectorName + '</strong>' : '<span class="repeat-cell">' + r.inspectorName + '</span>') + '</td>' +
+          '<td style="text-align:left;color:var(--text-muted);">' + (isGroupStart ? sectorText : '<span class="repeat-cell">' + sectorText + '</span>') + '</td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td>' + modBadge + '</td>' +
           '<td>' + renderBadge(r) + '</td>' +
-          '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>';
+          '<td style="text-align:left;font-size: 12px;color:var(--text-muted);">' + dedupeDetail(r.detail) + evidenceLink(r) + '</td>';
         tbody.appendChild(tr);
       });
+      appendCountRow(tbody, 6, Math.min(tableLimit, rowsToDisplay.length), rowsToDisplay.length, showMoreTableRows);
     }
 
-    let rpoSubTab = 'ACTIONABLE_DIV';
+    let rpoSubTab = 'IMPACT';
     let rpoSelectedCollab = 'ALL';
     let rpoSelectedDoc = 'ALL';
-    let rpoSortCol = 'NAME';
-    let rpoSortDir = 'ASC';
+    let rpoSortCol = 'DIFF';
+    let rpoSortDir = 'DESC';
+    const rpoSortSelectInit = document.getElementById('rpoSortFilter');
+    if (rpoSortSelectInit) rpoSortSelectInit.value = 'DIFF_DESC';
 
     function isItemMatchingSubTab(item, sub) {
+      if (sub === 'IMPACT') return item.divergent && rpoFlipsStatus(item);
       if (sub === 'ACTIONABLE_DIV') return item.divergent && item.divergenceKind !== 'RPO_VALIDADO_PENDENTE_BACKUP';
       if (sub === 'PENDENTE_BACKUP') return item.divergent && item.divergenceKind === 'RPO_VALIDADO_PENDENTE_BACKUP';
       if (sub === 'ALL_DIV') return item.divergent;
@@ -4896,10 +5834,10 @@ export function buildDashboardHtml(
     function resetRpoFilters() {
       rpoSelectedCollab = 'ALL';
       rpoSelectedDoc = 'ALL';
-      rpoSortCol = 'NAME';
-      rpoSortDir = 'ASC';
+      rpoSortCol = 'DIFF';
+      rpoSortDir = 'DESC';
       const sortSelect = document.getElementById('rpoSortFilter');
-      if (sortSelect) sortSelect.value = 'NAME_ASC';
+      if (sortSelect) sortSelect.value = 'DIFF_DESC';
       updateRpoFilterDropdownOptions();
       updateSortHeaderIcons();
       renderRpoTable();
@@ -4935,12 +5873,12 @@ export function buildDashboardHtml(
       }
       const btnReset = document.getElementById('btnResetRpoFilters');
       if (btnReset) {
-        const isModified = (rpoSelectedCollab !== 'ALL' || rpoSelectedDoc !== 'ALL' || rpoSortCol !== 'NAME' || rpoSortDir !== 'ASC');
+        const isModified = (rpoSelectedCollab !== 'ALL' || rpoSelectedDoc !== 'ALL' || rpoSortCol !== 'DIFF' || rpoSortDir !== 'DESC');
         btnReset.style.display = isModified ? 'inline-flex' : 'none';
       }
 
       if (filtered.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhum registro de auditoria encontrado com os filtros atuais.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="7" style="padding:32px;color:var(--text-muted);text-align:center;">' + (rpoSubTab === 'IMPACT' ? 'Nenhuma divergência muda o status de alguém. Restam só acertos de digitação: veja Divergências de Ação.' : 'Nenhum registro de auditoria encontrado com os filtros atuais.') + '</td></tr>';
         return;
       }
 
@@ -4995,7 +5933,13 @@ export function buildDashboardHtml(
         return day + '/' + month + '/' + year;
       };
 
-      sorted.forEach(item => {
+      const rpoSig = [rpoSubTab, rpoSelectedCollab, rpoSelectedDoc, q, sorted.length].join('|');
+      if (rpoSig !== lastRpoSig) {
+        rpoLimit = RPO_PAGE_SIZE;
+        lastRpoSig = rpoSig;
+      }
+
+      sorted.slice(0, rpoLimit).forEach(item => {
         const tr = document.createElement('tr');
         
         let badgeHtml = '';
@@ -5029,12 +5973,12 @@ export function buildDashboardHtml(
         const storzExp = formatDate(item.storzExpiration);
         const trustedExp = item.trustedSource === 'STORZ' ? storzExp : driveExp;
         const trustedSourceBadge = item.trustedSource 
-          ? '<div style="font-size:10px;color:var(--text-muted);font-weight:600;">(' + item.trustedSource + ')</div>' 
+          ? '<div style="font-size: 12px;color:var(--text-muted);font-weight:600;">(' + item.trustedSource + ')</div>' 
           : '';
 
         const rpoExp = formatDate(item.rpoExpiration);
         const diffText = item.diffDays !== undefined 
-          ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#DC2626;' : 'color:#F59E0B;') + '">' + item.diffDays + ' d</span>'
+          ? '<span class="mono" style="font-weight:700;' + (item.diffDays > 30 ? 'color:#B91C1C;' : 'color:#B45309;') + '">' + item.diffDays + ' d</span>'
           : '<span style="color:var(--text-muted);">—</span>';
 
         let actionClass = 'action-rpo';
@@ -5054,15 +5998,16 @@ export function buildDashboardHtml(
 
         tr.innerHTML = 
           '<td style="text-align:left;"><strong>' + item.inspectorName + '</strong></td>' +
-          '<td style="text-align:left;"><strong>' + item.docName + '</strong> <span style="font-size:10px;color:var(--text-muted);">(Cód ' + item.docCode + ')</span></td>' +
+          '<td style="text-align:left;"><strong>' + item.docName + '</strong> <span style="font-size: 12px;color:var(--text-muted);">(Cód ' + item.docCode + ')</span></td>' +
           '<td>' + badgeHtml + '</td>' +
           '<td><span class="mono">' + trustedExp + '</span>' + trustedSourceBadge + '</td>' +
           '<td><span class="mono">' + rpoExp + '</span></td>' +
           '<td>' + diffText + '</td>' +
-          '<td style="text-align:left;">' + actionHtml + '<div style="font-size:10px;color:var(--text-muted);margin-top:2px;">' + item.detail + '</div></td>';
+          '<td style="text-align:left;">' + actionHtml + '<div style="font-size: 12px;color:var(--text-muted);margin-top:2px;">' + item.detail + '</div></td>';
 
         tbody.appendChild(tr);
       });
+      appendCountRow(tbody, 7, Math.min(rpoLimit, sorted.length), sorted.length, showMoreRpoRows);
     }
 
     let storzSubTab = 'ALL';
@@ -5105,9 +6050,9 @@ export function buildDashboardHtml(
       const now = new Date();
       const diffDays = Math.ceil((dlDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
       if (diffDays < 0) {
-        return '<span style="color:#DC2626;font-weight:700;">' + dlStr + '</span> <span style="color:#DC2626;font-size:10px;">(Expirado)</span>';
+        return '<span style="color:#DC2626;font-weight:700;">' + dlStr + '</span> <span style="color:#DC2626;font-size: 12px;">(Expirado)</span>';
       }
-      return '<span style="font-weight:600;">' + dlStr + '</span> <span style="color:var(--text-muted);font-size:10px;">(' + diffDays + 'd)</span>';
+      return '<span style="font-weight:600;">' + dlStr + '</span> <span style="color:var(--text-muted);font-size: 12px;">(' + diffDays + 'd)</span>';
     }
 
     function formatStorzPaceAndDetail(req, person, workloadHours, idealSlaDays) {
@@ -5135,11 +6080,11 @@ export function buildDashboardHtml(
         const certDate = new Date(cert.expirationDate);
         const certDateStr = certDate.toLocaleDateString('pt-BR');
         if (certDate < now) {
-          certAlertHtml = '<div style="margin-top:3px;color:#DC2626;font-weight:600;font-size:11px;">Alerta de ritmo: Certificado de campo já venceu em ' + certDateStr + '! Aluno com ' + prog + '% na Storz.</div>';
+          certAlertHtml = '<div style="margin-top:3px;color:#DC2626;font-weight:600;font-size: 12px;">Alerta de ritmo: Certificado de campo já venceu em ' + certDateStr + '! Aluno com ' + prog + '% na Storz.</div>';
         } else if (reqDate && req.courseDurationDays) {
           const dlDate = new Date(reqDate.getTime() + (Number(req.courseDurationDays) * 24 * 60 * 60 * 1000));
           if (certDate < dlDate) {
-            certAlertHtml = '<div style="margin-top:3px;color:#D97706;font-weight:600;font-size:11px;">Alerta de ritmo: Certificado de campo vence em ' + certDateStr + ', antes do prazo Storz (' + dlDate.toLocaleDateString('pt-BR') + ').</div>';
+            certAlertHtml = '<div style="margin-top:3px;color:#D97706;font-weight:600;font-size: 12px;">Alerta de ritmo: Certificado de campo vence em ' + certDateStr + ', antes do prazo Storz (' + dlDate.toLocaleDateString('pt-BR') + ').</div>';
           }
         }
       }
@@ -5166,10 +6111,10 @@ export function buildDashboardHtml(
           detail = '<strong style="color:#DC2626;">Risco iminente de reprovação:</strong> Restam ' + diasRestantes + ' dias para ' + Math.round(remainingHours) + 'h de curso (necessário <span style="text-decoration:underline;">' + hoursPerDayNeeded + 'h/dia</span> até ' + dlStr + ').';
         } else if (prog === 0) {
           isOutSideSla = true;
-          detail = '<strong style="color:#D97706;">Inércia de execução:</strong> 0% de progresso após ' + diasDesdeMatricula + ' dias de início (restam ' + diasRestantes + ' dias até ' + dlStr + ').';
+          detail = '<strong style="color:#B45309;">Inércia de execução:</strong> 0% de progresso após ' + diasDesdeMatricula + ' dias de início (restam ' + diasRestantes + ' dias até ' + dlStr + ').';
         } else if ((diasDesdeMatricula || 0) > idealSlaDays * 2) {
           isOutSideSla = true;
-          detail = '<strong style="color:#D97706;">Ritmo lento:</strong> ' + prog + '% concluído em ' + diasDesdeMatricula + ' dias (Meta SLA: ' + idealSlaDays + 'd para ' + workloadHours + 'h • Restam ' + diasRestantes + ' dias).';
+          detail = '<strong style="color:#B45309;">Ritmo lento:</strong> ' + prog + '% concluído em ' + diasDesdeMatricula + ' dias (Meta SLA: ' + idealSlaDays + 'd para ' + workloadHours + 'h • Restam ' + diasRestantes + ' dias).';
         } else {
           detail = 'Iniciado em ' + reqDateStr + ' (' + diasDesdeMatricula + 'd atrás) • ' + prog + '% concluído • Restam ' + diasRestantes + ' dias (Meta SLA: ' + idealSlaDays + 'd).';
         }
@@ -5178,7 +6123,7 @@ export function buildDashboardHtml(
           detail = 'Matriculado recentemente em ' + reqDateStr + ' • Aguardando primeiro acesso (Carga: ' + workloadHours + 'h • Meta SLA: ' + idealSlaDays + 'd).';
         } else if (diasDesdeMatricula !== null && diasDesdeMatricula <= 4) {
           isOutSideSla = true;
-          detail = '<strong style="color:#D97706;">Inércia de ' + diasDesdeMatricula + ' dias:</strong> Matriculado em ' + reqDateStr + ' sem primeiro acesso (Carga: ' + workloadHours + 'h • Meta SLA: ' + idealSlaDays + 'd).';
+          detail = '<strong style="color:#B45309;">Inércia de ' + diasDesdeMatricula + ' dias:</strong> Matriculado em ' + reqDateStr + ' sem primeiro acesso (Carga: ' + workloadHours + 'h • Meta SLA: ' + idealSlaDays + 'd).';
         } else {
           isOutSideSla = true;
           detail = '<strong style="color:#DC2626;">Alta inércia (' + diasDesdeMatricula + ' dias):</strong> Matriculado em ' + reqDateStr + ' e ainda não iniciou o curso (0% • Meta SLA: ' + idealSlaDays + 'd).';
@@ -5327,13 +6272,18 @@ export function buildDashboardHtml(
       });
 
       lastFilteredStorzRows = storzRecords;
+      const storzSig = [storzSubTab, storzProgFilter, docF, storzRecords.length].join('|');
+      if (storzSig !== lastStorzSig) {
+        storzLimit = STORZ_PAGE_SIZE;
+        lastStorzSig = storzSig;
+      }
 
       if (storzRecords.length === 0) {
         tbody.innerHTML = '<tr><td colspan="8" style="padding:32px;color:var(--text-muted);text-align:center;">Nenhuma matrícula encontrada com os filtros atuais.</td></tr>';
         return;
       }
 
-      storzRecords.slice(0, 200).forEach(r => {
+      storzRecords.slice(0, storzLimit).forEach(r => {
         const tr = document.createElement('tr');
         const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : (r.storzState === 'CONCLUIDO' ? 100 : 0);
         const progColor = prog === 100 ? '#10b981' : prog > 0 ? '#6366f1' : '#94a3b8';
@@ -5341,12 +6291,12 @@ export function buildDashboardHtml(
           '<div style="flex:1;height:6px;background:var(--border-color);border-radius:3px;overflow:hidden;">' +
           '<div style="width:' + prog + '%;height:100%;background:' + progColor + ';"></div>' +
           '</div>' +
-          '<span style="font-weight:700;font-size:11px;">' + prog + '%</span>' +
+          '<span style="font-weight:700;font-size: 12px;">' + prog + '%</span>' +
           '</div>';
 
         const dlHtml = r.storzDeadline 
-          ? '<span class="mono" style="font-size:11px;font-weight:600;">' + r.storzDeadline + '</span>'
-          : '<span style="color:var(--text-muted);font-size:11px;">—</span>';
+          ? '<span class="mono" style="font-size: 12px;font-weight:600;">' + r.storzDeadline + '</span>'
+          : '<span style="color:var(--text-muted);font-size: 12px;">—</span>';
 
         const situacaoUpper = ((r.rawSituacao || r.storzState || '')).toUpperCase();
         let stateBadge = '';
@@ -5361,21 +6311,22 @@ export function buildDashboardHtml(
         }
 
         const slaBadge = '<div style="display:inline-flex;flex-direction:column;align-items:center;gap:2px;">' +
-          '<span style="font-weight:700;font-size:11px;color:var(--text-main);">' + (r.workloadHours || 8) + 'h</span>' +
-          '<span style="font-size:10px;color:var(--text-muted);background:var(--bg-surface);padding:1px 5px;border-radius:4px;border:1px solid var(--border-color);">SLA ' + (r.idealSlaDays || 1) + 'd</span>' +
+          '<span style="font-weight:700;font-size: 12px;color:var(--text-main);">' + (r.workloadHours || 8) + 'h</span>' +
+          '<span style="font-size: 12px;color:var(--text-muted);background:var(--bg-surface);padding:1px 5px;border-radius:4px;border:1px solid var(--border-color);">SLA ' + (r.idealSlaDays || 1) + 'd</span>' +
           '</div>';
 
         tr.innerHTML = 
-          '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong><div style="font-size:10px;color:var(--text-muted);">' + (r.sector || 'Operações') + '</div></td>' +
+          '<td style="text-align:left;"><strong>' + r.inspectorName + '</strong><div style="font-size: 12px;color:var(--text-muted);">' + (r.sector || 'Operações') + '</div></td>' +
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td style="text-align:center;">' + slaBadge + '</td>' +
           '<td><span class="mono" style="font-weight:700;color:var(--brand-purple);">' + (r.storzRequestId || '—') + '</span></td>' +
           '<td>' + stateBadge + '</td>' +
           '<td>' + progHtml + '</td>' +
           '<td>' + dlHtml + '</td>' +
-          '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>';
+          '<td style="text-align:left;font-size: 12px;color:var(--text-muted);">' + r.detail + '</td>';
         tbody.appendChild(tr);
       });
+      appendCountRow(tbody, 8, Math.min(storzLimit, storzRecords.length), storzRecords.length, showMoreStorzRows);
     }
 
     function exportCurrentViewCsv() {
@@ -5422,7 +6373,7 @@ export function buildDashboardHtml(
         ].join(';'));
         csvContent = [headers.join(';'), ...rows].join(nl);
       } else {
-        const headers = ['Colaborador', 'Ramo / Setor', 'Cargo', 'Documento / Treinamento', 'Codigo', 'Modalidade', 'Status DO/EHS', 'Validade / Detalhes'];
+        const headers = ['Colaborador', 'Ramo / Setor', 'Cargo', 'Documento / Treinamento', 'Codigo', 'Modalidade', 'Status DO/EHS', 'Validade / Detalhes', 'Link do Drive'];
         const rows = (lastFilteredTableRows || []).map(r => [
           escapeCsv(r.inspectorName),
           escapeCsv(r.sector),
@@ -5431,7 +6382,8 @@ export function buildDashboardHtml(
           escapeCsv(r.docCode),
           escapeCsv((r.modality || 'ONLINE') === 'PRESENCIAL' ? 'Presencial' : 'Remoto'),
           escapeCsv(r.statusEHS),
-          escapeCsv(r.detail || '')
+          escapeCsv(dedupeDetail(r.detail || '')),
+          escapeCsv(r.evidenceUrl || '')
         ].join(';'));
         csvContent = [headers.join(';'), ...rows].join(nl);
       }
@@ -5553,11 +6505,11 @@ export function buildDashboardHtml(
 
       const isValidated = p.records.some(r => r.rpoAuditStatus === 'VALIDADO');
       const auditBadge = isValidated
-        ? ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE;vertical-align:middle;margin-left:8px;">RPO Validado</span>'
-        : ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;vertical-align:middle;margin-left:8px;">Pendente Revisão</span>';
+        ? ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size: 12px;font-weight:700;background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE;vertical-align:middle;margin-left:8px;">RPO Validado</span>'
+        : ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size: 12px;font-weight:700;background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;vertical-align:middle;margin-left:8px;">Pendente Revisão</span>';
       document.getElementById('modalCollabName').innerHTML = p.name + ' (' + p.role + ' - ' + p.sector + ')' + auditBadge;
       
-      let html = '<table class="matrix-table" style="font-size:12px;">' +
+      let html = '<table class="matrix-table responsive-table" style="font-size:12px;">' +
         '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th>Validade</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
 
       function getSortKey(r) {
@@ -5590,8 +6542,8 @@ export function buildDashboardHtml(
           '<td style="text-align:left;"><strong>' + r.docName + '</strong></td>' +
           '<td>' + modBadge + '</td>' +
           '<td>' + renderBadge(r) + '</td>' +
-          '<td style="text-align:center;font-family:monospace;font-size:11px;">' + expFormatted + '</td>' +
-          '<td style="text-align:left;font-size:11px;color:var(--text-muted);">' + r.detail + '</td>' +
+          '<td style="text-align:center;font-family:monospace;font-size: 12px;">' + expFormatted + '</td>' +
+          '<td style="text-align:left;font-size: 12px;color:var(--text-muted);">' + dedupeDetail(r.detail) + evidenceLink(r) + '</td>' +
           '</tr>';
       });
 
