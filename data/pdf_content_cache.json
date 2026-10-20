@@ -122125,10 +122125,10 @@
   },
   {
     "fileId": "1ziii276MzsxxkMVKGh5RvLtnRXb2nU-v",
-    "filename": "09 – Direção Defensiva – 28.08.2026 - PEDRO PAULO FERREIRA DE ALMEIDA.pdf",
+    "filename": "09 – Direção Defensiva – 28.08.2026 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-19T12:09:00.022Z",
+    "modifiedTime": "2026-10-20T09:28:32.045Z",
     "code": "09",
     "issueDate": "2026-09-21T03:00:00.000Z",
     "expirationDate": "2028-09-21T03:00:00.000Z",
@@ -122159,7 +122159,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
-        "extractedClause": "Data do arquivo: 09 – Direção Defensiva – 28.08.2026 - PEDRO PAULO FERREIRA DE ALMEIDA.pdf"
+        "extractedClause": "Data do arquivo: 09 – Direção Defensiva – 28.08.2026 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf"
       }
     ]
   },
@@ -189608,6 +189608,46 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-10 Básico",
         "extractedClause": "Data do arquivo: 12 – NR – 10 Básico (40h )10-10-2026 Wermeson De Oliveira Franco.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1N_JKhwfsrFAX65yu2ibBxshtJd8k9Ffv",
+    "filename": "09 – Direção Defensiva – 31.08.2026 - PEDRO PAULO FERREIRA DE ALMEIDA.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-20T09:28:33.383Z",
+    "code": "09",
+    "issueDate": "2026-09-18T03:00:00.000Z",
+    "expirationDate": "2028-09-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Direção Defensiva (via PDF) (Pág. 3)",
+    "extractedClause": "Assinou em 18 set 2026",
+    "documents": [
+      {
+        "code": "09",
+        "issueDate": "2026-09-18T03:00:00.000Z",
+        "expirationDate": "2028-09-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Direção Defensiva (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 18 set 2026"
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-08-31T03:00:00.000Z",
+        "expirationDate": "2028-08-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 09 – Direção Defensiva – 31.08.2026 - PEDRO PAULO FERREIRA DE ALMEIDA.pdf"
       }
     ]
   }

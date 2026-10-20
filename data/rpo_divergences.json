@@ -43,17 +43,17 @@
     "inspectorName": "PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA",
     "docCode": "09",
     "docName": "Direção Defensiva",
-    "driveExpiration": "2028-02-02T03:00:00.000Z",
+    "driveExpiration": "2028-09-21T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-28T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "RPO_VALIDADO_PENDENTE_BACKUP",
-    "direction": "RPO_NEWER",
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Curso validado na planilha RPO (28/08/2028), porém o Drive ainda possui registro anterior (02/02/2028).",
-    "diffDays": 208,
-    "recommendedAction": "Fazer upload do novo certificado no Drive (RPO já validado)"
+    "detail": "Drive mais recente que a RPO em 24 dia(s) (21/09/2028 no Drive vs 28/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 24,
+    "recommendedAction": "Atualizar data na RPO para 21/09/2028"
   },
   {
     "inspectorName": "PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA",
@@ -159,7 +159,7 @@
     "inspectorName": "PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA",
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
-    "driveExpiration": "2028-01-31T03:00:00.000Z",
+    "driveExpiration": "2028-08-28T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-02-08T12:00:00.000Z",
     "divergent": true,
@@ -167,9 +167,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": true,
-    "detail": "Drive mais recente que a RPO em 357 dia(s) (31/01/2028 no Drive vs 08/02/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 357,
-    "recommendedAction": "Atualizar data na RPO para 31/01/2028"
+    "detail": "Drive mais recente que a RPO em 567 dia(s) (28/08/2028 no Drive vs 08/02/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 567,
+    "recommendedAction": "Atualizar data na RPO para 28/08/2028"
   },
   {
     "inspectorName": "PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA",
@@ -13268,7 +13268,7 @@
     "inspectorName": "PEDRO PAULO FERREIRA DE ALMEIDA",
     "docCode": "09",
     "docName": "Direção Defensiva",
-    "driveExpiration": "2028-09-21T03:00:00.000Z",
+    "driveExpiration": "2028-09-18T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-31T12:00:00.000Z",
     "divergent": true,
@@ -13276,9 +13276,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 21 dia(s) (21/09/2028 no Drive vs 31/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 21,
-    "recommendedAction": "Atualizar data na RPO para 21/09/2028"
+    "detail": "Drive mais recente que a RPO em 18 dia(s) (18/09/2028 no Drive vs 31/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 18,
+    "recommendedAction": "Atualizar data na RPO para 18/09/2028"
   },
   {
     "inspectorName": "PEDRO PAULO FERREIRA DE ALMEIDA",
@@ -13388,7 +13388,7 @@
     "inspectorName": "PEDRO PAULO FERREIRA DE ALMEIDA",
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
-    "driveExpiration": "2028-08-28T03:00:00.000Z",
+    "driveExpiration": "2028-08-31T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-04-04T12:00:00.000Z",
     "divergent": true,
@@ -13396,9 +13396,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 512 dia(s) (28/08/2028 no Drive vs 04/04/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 512,
-    "recommendedAction": "Atualizar data na RPO para 28/08/2028"
+    "detail": "Drive mais recente que a RPO em 515 dia(s) (31/08/2028 no Drive vs 04/04/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 515,
+    "recommendedAction": "Atualizar data na RPO para 31/08/2028"
   },
   {
     "inspectorName": "PEDRO PAULO FERREIRA DE ALMEIDA",

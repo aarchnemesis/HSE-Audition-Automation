@@ -1,6 +1,6 @@
 {
-  "syncTimestamp": "2026-10-20T09:03:00.587Z",
-  "refDate": "2026-10-20T09:00:12.572Z",
+  "syncTimestamp": "2026-10-20T09:47:10.432Z",
+  "refDate": "2026-10-20T09:45:06.581Z",
   "driveFoldersCount": 99,
   "rpoActiveCount": 136,
   "rpoTotalCount": 367,
@@ -9,8 +9,8 @@
   "storzSource": "LIVE",
   "divergencesCount": 776,
   "divergencesByKind": {
-    "RPO_VALIDADO_PENDENTE_BACKUP": 43,
-    "DATA_DIVERGENTE": 618,
+    "RPO_VALIDADO_PENDENTE_BACKUP": 42,
+    "DATA_DIVERGENTE": 619,
     "SOMENTE_DRIVE": 89,
     "SOMENTE_RPO": 26
   },
