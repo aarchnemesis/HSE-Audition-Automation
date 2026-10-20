@@ -214,8 +214,11 @@ export class AuditTriangulator {
           refDate
         )
         status = evaluation.status
-        detail = cert.statusDetail
-          ? `${evaluation.detail} ${cert.statusDetail}`
+        const extraDetail = EHSEvaluator.stripEvaluationPrefix(
+          cert.statusDetail ?? ''
+        )
+        detail = extraDetail
+          ? `${evaluation.detail} ${extraDetail}`
           : evaluation.detail
 
         // CIPA (34) é eletivo e restrito a membros eleitos da gestão atual. Certificados

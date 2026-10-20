@@ -1,6 +1,21 @@
 import { EHSStatus } from '../models/Certificate.js'
 
+const EVALUATION_PREFIX =
+  /^(?:VENCIDO há \d+ dias \(\d{2}\/\d{2}\/\d{4}\)|(?:CRÍTICO|ALERTA [A-ZÉ]+): Vence em \d+ dia(?:\(s\)|s)? \(\d{2}\/\d{2}\/\d{4}\)|Válido até \d{2}\/\d{2}\/\d{4})\s*/
+
 export class EHSEvaluator {
+  /**
+   * Strips the leading evaluateDate text from an already persisted detail,
+   * keeping any extra note (e.g. "(Validado no RPO)").
+   */
+  static stripEvaluationPrefix(detail: string): string {
+    let rest = detail.trim()
+    while (EVALUATION_PREFIX.test(rest)) {
+      rest = rest.replace(EVALUATION_PREFIX, '')
+    }
+    return rest
+  }
+
   /**
    * Avalia a data de validade em relação a uma data de referência (padrão: hoje)
    * Aplicando a régua escalonada de auditoria EHS:

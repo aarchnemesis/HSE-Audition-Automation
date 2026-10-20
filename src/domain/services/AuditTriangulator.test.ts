@@ -6,6 +6,7 @@ import {
 } from '../models/Certificate.js'
 import { StorzRequest } from '../models/StorzRequest.js'
 import { AuditTriangulator } from './AuditTriangulator.js'
+import { EHSEvaluator } from './EHSEvaluator.js'
 
 const REF_DATE = new Date(2026, 7, 19)
 
@@ -443,5 +444,47 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.overallStatus).toBe('APTO')
     expect(result.expiredDocsCount).toBe(0)
     expect(result.validDocsCount).toBe(2)
+  })
+
+  it('does not repeat the validity detail when the certificate already carries it', () => {
+    const park: ParkRequirement = { ...PARK, requiredDocCodes: ['21'] }
+    const evaluated = EHSEvaluator.evaluateDate(FAR_FUTURE, REF_DATE)
+    const cert = {
+      ...makeCert('21', FAR_FUTURE),
+      statusDetail: `${evaluated.detail} (Validado no RPO)`,
+    }
+
+    const result = AuditTriangulator.performTripleAudit(
+      makeInspector([cert]),
+      park,
+      [],
+      REF_DATE
+    )
+
+    const detail = result.auditItems[0].detail
+    expect(detail.split(evaluated.detail)).toHaveLength(2)
+    expect(detail).toContain('(Validado no RPO)')
+  })
+
+  it('drops a stale evaluation text computed for another reference date', () => {
+    const park: ParkRequirement = { ...PARK, requiredDocCodes: ['21'] }
+    const expired = new Date(2026, 6, 25)
+    const stale = EHSEvaluator.evaluateDate(expired, new Date(2026, 9, 17))
+    const cert = {
+      ...makeCert('21', expired),
+      statusDetail: `${stale.detail} (Validado no RPO)`,
+    }
+
+    const result = AuditTriangulator.performTripleAudit(
+      makeInspector([cert]),
+      park,
+      [],
+      REF_DATE
+    )
+
+    const detail = result.auditItems[0].detail
+    expect(detail).toContain('VENCIDO há 25 dias')
+    expect(detail).not.toContain('há 84 dias')
+    expect(detail).toContain('(Validado no RPO)')
   })
 })

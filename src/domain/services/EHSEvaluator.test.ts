@@ -68,4 +68,32 @@ describe('EHSEvaluator.calculateExpirationFromIssue', () => {
     expect(exp.getMonth()).toBe(0)
     expect(exp.getDate()).toBe(15)
   })
+
+  describe('stripEvaluationPrefix', () => {
+    it('removes every generated evaluation prefix and keeps the extra note', () => {
+      expect(
+        EHSEvaluator.stripEvaluationPrefix(
+          'VENCIDO há 83 dias (25/07/2026) VENCIDO há 86 dias (25/07/2026) (Validado no RPO)'
+        )
+      ).toBe('(Validado no RPO)')
+      expect(
+        EHSEvaluator.stripEvaluationPrefix(
+          'ALERTA INICIAL: Vence em 32 dias (20/11/2026) | Reciclagem solicitada'
+        )
+      ).toBe('| Reciclagem solicitada')
+      expect(
+        EHSEvaluator.stripEvaluationPrefix(
+          'CRÍTICO: Vence em 3 dia(s) (01/09/2026)'
+        )
+      ).toBe('')
+    })
+
+    it('leaves unrelated details untouched', () => {
+      expect(
+        EHSEvaluator.stripEvaluationPrefix(
+          'ID Vitalício (Detectado via conteúdo GWO)'
+        )
+      ).toBe('ID Vitalício (Detectado via conteúdo GWO)')
+    })
+  })
 })
