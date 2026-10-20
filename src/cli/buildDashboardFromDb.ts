@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
+import { loadComplianceHistory } from '../domain/services/ComplianceHistory.js'
 import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 
 async function main() {
@@ -18,6 +19,9 @@ async function main() {
     rpoDivergences: snapshot.rpoDivergences,
     storzHistory: snapshot.storzRequests,
     sourceHealth: snapshot.sourceHealth,
+    complianceHistory: loadComplianceHistory(
+      path.join(process.cwd(), 'data', 'compliance_history.json')
+    ),
   })
 
   const publicDir = path.join(process.cwd(), 'public')

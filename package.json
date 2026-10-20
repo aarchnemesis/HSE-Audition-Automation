@@ -11,6 +11,7 @@
     "hse-report": "tsx src/cli/runHSEReportExporter.ts",
     "hse-dash": "tsx src/cli/runHSEReportExporter.ts --no-email",
     "build-dash": "tsx src/cli/buildDashboardFromDb.ts",
+    "backfill-history": "tsx src/cli/backfillComplianceHistory.ts",
     "test-gdrive": "tsx src/cli/testGoogleDriveApi.ts",
     "auth:drive": "tsx src/cli/runGoogleDriveAuth.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",

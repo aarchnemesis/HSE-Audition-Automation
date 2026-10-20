@@ -5,6 +5,7 @@ import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
 import { buildAgentBriefing } from '../domain/services/AgentBriefingBuilder.js'
+import { loadComplianceHistory } from '../domain/services/ComplianceHistory.js'
 import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 import { HSEDatabaseRepository } from '../domain/services/HSEDatabaseRepository.js'
 import { HSEFilterEngine } from '../domain/services/HSEFilterEngine.js'
@@ -103,6 +104,9 @@ async function main() {
     rpoDivergences: syncResult.rpoDivergences,
     storzHistory: syncResult.storzRequests,
     sourceHealth: syncResult.sourceHealth,
+    complianceHistory: loadComplianceHistory(
+      path.join(process.cwd(), 'data', 'compliance_history.json')
+    ),
   })
   fs.writeFileSync(dashboardPath, dashboardHtml)
   fs.writeFileSync(publicDashboardPath, dashboardHtml)

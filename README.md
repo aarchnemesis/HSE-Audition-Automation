@@ -22,6 +22,7 @@ HSE-Audition-Automation/
 │   └── drive_rpo_audit.yml            # Auditoria de divergencias de digitacao (seg, 04:30 BRT)
 ├── data/                              # Snapshots persistentes versionados no Git (SSOT)
 │   ├── hse_database.json              # Banco consolidado de conformidade EHS
+│   ├── compliance_history.json        # Foto diaria de conformidade (alimenta a tendencia do dashboard)
 │   ├── rpo_divergences.json           # Divergencias calculadas Drive/Storz x RPO
 │   ├── drive_inspectors_cache.json    # Cache local de pastas e certificados do Drive
 │   ├── rpo_inspectors_cache.json      # Cache local de colaboradores da RPO

@@ -8,6 +8,12 @@ import {
 } from '../models/Certificate.js'
 import { StorzRequest } from '../models/StorzRequest.js'
 import { TripleAuditResult } from './AuditTriangulator.js'
+import {
+  buildComplianceSnapshot,
+  loadComplianceHistory,
+  mergeComplianceHistory,
+  saveComplianceHistory,
+} from './ComplianceHistory.js'
 import { ELECTIVE_DOC_CODES, getTrainingModality } from './ComplianceEngine.js'
 import { matchesInspector } from './InspectorMatcher.js'
 import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
@@ -31,8 +37,16 @@ export interface HSEDatabaseRecord {
   storzProgressPercent?: number
   storzDeadline?: string
   detail: string
+  /** Link to the certificate in Google Drive, when the evidence comes from a Drive file */
+  evidenceUrl?: string
   rpoAuditStatus?: 'VALIDADO' | 'PENDENTE_REVISAO'
   lastUpdated: string
+}
+
+const DRIVE_FILE_URL_PREFIX = 'https://drive.google.com/'
+
+function toEvidenceUrl(sourcePath?: string): string | undefined {
+  return sourcePath?.startsWith(DRIVE_FILE_URL_PREFIX) ? sourcePath : undefined
 }
 
 export class HSEDatabaseRepository {
@@ -95,6 +109,9 @@ export class HSEDatabaseRepository {
             ? item.storzDeadline.toLocaleDateString('pt-BR')
             : undefined,
           detail: item.detail,
+          evidenceUrl: toEvidenceUrl(
+            inspector?.certificates.get(item.code)?.sourcePath
+          ),
           rpoAuditStatus:
             inspector?.rpoAuditStatus ||
             (RPOAuditStatusManager.isCollabValidated(audit.inspectorName)
@@ -129,6 +146,14 @@ export class HSEDatabaseRepository {
           persistentPath,
           JSON.stringify(records, null, 2),
           'utf-8'
+        )
+        const historyPath = path.join(dataDir, 'compliance_history.json')
+        saveComplianceHistory(
+          historyPath,
+          mergeComplianceHistory(
+            loadComplianceHistory(historyPath),
+            buildComplianceSnapshot(records, new Date())
+          )
         )
       } catch (e) {
         console.warn(

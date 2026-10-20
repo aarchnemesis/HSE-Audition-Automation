@@ -48,6 +48,7 @@ pnpm run triangulate               # run audit triangulation CLI
 pnpm run storz-audit               # run Storz scraping and audit CLI
 pnpm run hse-report                # generate consolidated HSE report & dashboard
 pnpm run drive-rpo-audit           # audit divergence between Drive/Storz and RPO
+pnpm run backfill-history          # rebuild data/compliance_history.json from the git history of the database
 pnpm run storz-history-report      # generate student training history report
 pnpm run test-gdrive               # test Google Drive API connection
 ```

@@ -56,6 +56,53 @@ describe('HSEDatabaseRepository.saveAuditSnapshot', () => {
     expect(records).toHaveLength(0)
   })
 
+  it('stores the Drive link as evidenceUrl and ignores local file paths', () => {
+    const dbPath = path.join(tmpDir, 'db.json')
+    const repo = new HSEDatabaseRepository(dbPath)
+    const inspector: Inspector = {
+      ...makeInspector(),
+      certificates: new Map([
+        [
+          '01',
+          {
+            code: '01',
+            name: 'ASO',
+            statusEHS: 'CONFORME',
+            sourcePath: 'https://drive.google.com/file/d/abc123/view',
+          },
+        ],
+        [
+          '10',
+          {
+            code: '10',
+            name: 'NR-01',
+            statusEHS: 'CONFORME',
+            sourcePath: 'C:\\certificados\\nr01.pdf',
+          },
+        ],
+      ]),
+    }
+    const item = (code: string, reqName: string) => ({
+      code,
+      reqName,
+      status: 'CONFORME' as const,
+      isModalityCompliant: true,
+      hasDriveDoc: true,
+      detail: 'Válido.',
+    })
+
+    repo.saveAuditSnapshot(
+      [makeAuditResult([item('01', 'ASO'), item('10', 'NR-01')])],
+      [inspector]
+    )
+    const byCode = new Map(repo.getAllRecords().map(r => [r.docCode, r]))
+
+    expect(byCode.get('01')?.evidenceUrl).toBe(
+      'https://drive.google.com/file/d/abc123/view'
+    )
+    expect(byCode.get('10')?.evidenceUrl).toBeUndefined()
+  })
+
   it('grava normalmente documento eletivo (Vestas) quando a pessoa TEM o certificado', () => {
     const dbPath = path.join(tmpDir, 'db.json')
     const repo = new HSEDatabaseRepository(dbPath)
