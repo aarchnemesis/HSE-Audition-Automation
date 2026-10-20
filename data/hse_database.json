@@ -113,12 +113,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-04-29T03:00:00.000Z",
+    "expirationDate": "2028-10-20T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 29/04/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1KPB_O4edlsLtx6iI9txb5YDLqvSaL8En/view",
+    "detail": "Válido até 20/10/2028 (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -2464,21 +2463,23 @@
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive.",
+    "expirationDate": "2027-09-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 29/09/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1CStTy0YX-wFObb23m06pU2nlMgg4-9Kc/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2488,11 +2489,11 @@
     "statusEHS": "AUSENTE",
     "detail": "Documento obrigatório não encontrado no Drive.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2506,11 +2507,11 @@
     "storzProgressPercent": 100,
     "detail": "Curso renovado e aprovado na Storz (604497) em 09/10/2026 — Válido até 09/10/2076 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2521,11 +2522,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 19/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2536,11 +2537,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 02/03/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2551,11 +2552,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 09/03/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2566,11 +2567,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 24/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2581,11 +2582,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 23/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2596,11 +2597,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 27/02/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2611,11 +2612,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 27/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2629,11 +2630,11 @@
     "storzProgressPercent": 100,
     "detail": "Válido até 14/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2644,11 +2645,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 27/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2663,11 +2664,11 @@
     "storzDeadline": "12/12/2026",
     "detail": "Válido até 18/03/2027 | Reciclagem já solicitada na Storz (601804 - Status: EM_ANDAMENTO).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2678,11 +2679,11 @@
     "statusEHS": "CONFORME",
     "detail": "Válido até 26/02/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2696,11 +2697,11 @@
     "storzProgressPercent": 100,
     "detail": "Válido até 13/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
@@ -2714,22 +2715,22 @@
     "storzProgressPercent": 100,
     "detail": "Válido até 15/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_19",
-    "inspectorName": "CARLOS HENRIQUE",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-10-14T12:00:00.000Z",
+    "expirationDate": "2028-10-16T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 14/10/2028",
+    "detail": "Válido até 16/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T13:47:59.778Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -21285,12 +21286,12 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2028-01-14T03:00:00.000Z",
+    "expirationDate": "2028-10-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 14/01/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1luVfIV5raRs71taoV8qb0OuSO2Zdjdmj/view",
+    "detail": "Válido até 16/10/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1mDeFvvClf14QTW8sD3j4ZTbexClwWiN-/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T17:47:16.434Z"
   },
   {
     "inspectorId": "rpo_88",
