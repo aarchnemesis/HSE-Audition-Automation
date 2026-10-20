@@ -2719,6 +2719,21 @@
     "lastUpdated": "2026-10-20T10:48:06.142Z"
   },
   {
+    "inspectorId": "rpo_19",
+    "inspectorName": "CARLOS HENRIQUE SOARES DA SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "expirationDate": "2028-10-14T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 14/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:47:18.466Z"
+  },
+  {
     "inspectorId": "rpo_20",
     "inspectorName": "DANIEL FERREIRA DA SILVA FILHO",
     "role": "TO",
@@ -16971,10 +16986,11 @@
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive.",
+    "expirationDate": "2034-05-16T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 16/05/2034",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-20T12:47:18.466Z"
   },
   {
     "inspectorId": "rpo_66",
@@ -17198,6 +17214,36 @@
     "detail": "Curso renovado e aprovado na Storz (604514) em 13/10/2026 — Válido até 13/10/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-10-16T13:51:31.693Z"
+  },
+  {
+    "inspectorId": "rpo_66",
+    "inspectorName": "SIMON DIAS DA SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "25",
+    "docName": "SIT (Vestas)",
+    "modality": "ONLINE",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:47:18.466Z"
+  },
+  {
+    "inspectorId": "rpo_66",
+    "inspectorName": "SIMON DIAS DA SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "26",
+    "docName": "ESO (Vestas)",
+    "modality": "ONLINE",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:47:18.466Z"
   },
   {
     "inspectorId": "rpo_66",
@@ -18205,10 +18251,11 @@
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive.",
+    "expirationDate": "2034-10-28T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 28/10/2034",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-20T12:47:18.466Z"
   },
   {
     "inspectorId": "rpo_70",

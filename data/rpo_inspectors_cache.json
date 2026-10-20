@@ -1382,6 +1382,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/10/2027"
       },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2028-10-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2028"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
@@ -8502,6 +8509,20 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/10/2028"
       },
+      "25": {
+        "code": "25",
+        "name": "SIT VESTAS",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
+      },
+      "26": {
+        "code": "26",
+        "name": "ESO VESTAS",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -8522,6 +8543,13 @@
         "expirationDate": "2028-10-15T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/10/2028"
+      },
+      "08": {
+        "code": "08",
+        "name": "CNH",
+        "expirationDate": "2034-05-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/05/2034"
       },
       "09": {
         "code": "09",
@@ -9144,6 +9172,13 @@
         "expirationDate": "2028-10-14T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 14/10/2028"
+      },
+      "08": {
+        "code": "08",
+        "name": "CNH",
+        "expirationDate": "2034-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2034"
       },
       "09": {
         "code": "09",
