@@ -3547,6 +3547,18 @@
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "rpoExpiration": "2028-10-14T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (14/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
     "docCode": "09",
     "docName": "Direção Defensiva",
     "rpoExpiration": "2028-10-07T12:00:00.000Z",
@@ -3738,6 +3750,30 @@
     "diffDays": 3,
     "detail": "Storz e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)"
+  },
+  {
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "docCode": "25",
+    "docName": "SIT (Vestas)",
+    "rpoExpiration": "2028-10-19T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (19/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+  },
+  {
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "docCode": "26",
+    "docName": "ESO (Vestas)",
+    "rpoExpiration": "2028-10-19T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (19/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
   },
   {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",

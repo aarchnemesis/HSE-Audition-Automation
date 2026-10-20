@@ -1243,9 +1243,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-08T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 11 dias (08/10/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "VENCIDO há 12 dias (08/10/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -10024,9 +10024,9 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-11T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 53 dias (11/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 52 dias (11/12/2026)",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -11130,9 +11130,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-28T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 40 dias (28/11/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 39 dias (28/11/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_47",
@@ -12679,9 +12679,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-05-06T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 166 dias (06/05/2026)",
+    "detail": "VENCIDO há 167 dias (06/05/2026)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_52",
@@ -14458,9 +14458,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-08T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 11 dias (08/10/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "VENCIDO há 12 dias (08/10/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_58",
@@ -17491,9 +17491,9 @@
     "modality": "ONLINE",
     "expirationDate": "2025-11-11T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 342 dias (11/11/2025) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "VENCIDO há 343 dias (11/11/2025) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_67",
@@ -18447,6 +18447,36 @@
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "25",
+    "docName": "SIT (Vestas)",
+    "modality": "ONLINE",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
+  },
+  {
+    "inspectorId": "rpo_70",
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "26",
+    "docName": "ESO (Vestas)",
+    "modality": "ONLINE",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
+  },
+  {
+    "inspectorId": "rpo_70",
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
@@ -18459,6 +18489,21 @@
     "evidenceUrl": "https://drive.google.com/file/d/13UDdPfI4NUQBhuYJEsngs7i0CYY2h5bN/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-10-20T10:48:06.142Z"
+  },
+  {
+    "inspectorId": "rpo_70",
+    "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "expirationDate": "2028-10-14T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 14/10/2028",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -20905,9 +20950,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-02T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 44 dias (02/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 43 dias (02/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_87",
@@ -22903,9 +22948,9 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-08T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 50 dias (08/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 49 dias (08/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T12:02:59.849Z"
   },
   {
     "inspectorId": "rpo_98",
