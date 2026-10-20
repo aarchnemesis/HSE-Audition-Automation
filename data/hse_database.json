@@ -7359,10 +7359,11 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-10-20T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 20/10/2027",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-20T14:48:10.242Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -10005,11 +10006,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2026-12-20T12:00:00.000Z",
+    "expirationDate": "2028-10-17T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 20/12/2026",
+    "detail": "Válido até 17/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T14:48:10.242Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -10020,11 +10021,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2026-12-27T12:00:00.000Z",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 27/12/2026",
+    "detail": "Válido até 19/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-20T14:48:10.242Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -10035,11 +10036,11 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2026-12-11T12:00:00.000Z",
-    "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 52 dias (11/12/2026)",
+    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 19/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T12:02:59.849Z"
+    "lastUpdated": "2026-10-20T14:48:10.242Z"
   },
   {
     "inspectorId": "rpo_43",

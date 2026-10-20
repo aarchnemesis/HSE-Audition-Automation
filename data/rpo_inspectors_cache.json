@@ -3654,6 +3654,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/07/2027"
       },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-10-20T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2027"
+      },
       "21": {
         "code": "21",
         "name": "NR 35",
@@ -4954,23 +4961,23 @@
       "12": {
         "code": "12",
         "name": "NR 10",
-        "expirationDate": "2026-12-20T12:00:00.000Z",
+        "expirationDate": "2028-10-17T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/12/2026"
+        "statusDetail": "Válido até 17/10/2028"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
-        "expirationDate": "2026-12-27T12:00:00.000Z",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/12/2026"
+        "statusDetail": "Válido até 19/10/2028"
       },
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2026-12-11T12:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 52 dias (11/12/2026)"
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
       },
       "16": {
         "code": "16",
@@ -5014,7 +5021,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/10/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_44",
@@ -7150,7 +7160,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/02/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_58",
