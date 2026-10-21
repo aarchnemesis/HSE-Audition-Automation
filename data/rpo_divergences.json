@@ -4981,14 +4981,14 @@
     "docName": "Direção Defensiva",
     "driveExpiration": "2028-10-21T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-02-06T12:00:00.000Z",
+    "rpoExpiration": "2028-08-28T12:00:00.000Z",
     "divergent": true,
     "divergenceKind": "DATA_DIVERGENTE",
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 623 dia(s) (21/10/2028 no Drive vs 06/02/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 623,
+    "detail": "Drive mais recente que a RPO em 54 dia(s) (21/10/2028 no Drive vs 28/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 54,
     "recommendedAction": "Atualizar data na RPO para 21/10/2028"
   },
   {
