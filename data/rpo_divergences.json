@@ -4979,13 +4979,17 @@
     "inspectorName": "FERNANDO TEODORO DE MORAIS NETO",
     "docCode": "09",
     "docName": "Direção Defensiva",
-    "driveExpiration": "2027-02-06T03:00:00.000Z",
+    "driveExpiration": "2028-10-21T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-02-06T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "Drive mais recente que a RPO em 623 dia(s) (21/10/2028 no Drive vs 06/02/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 623,
+    "recommendedAction": "Atualizar data na RPO para 21/10/2028"
   },
   {
     "inspectorName": "FERNANDO TEODORO DE MORAIS NETO",
@@ -5093,7 +5097,7 @@
     "inspectorName": "FERNANDO TEODORO DE MORAIS NETO",
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
-    "driveExpiration": "2027-02-06T03:00:00.000Z",
+    "driveExpiration": "2028-10-20T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-01-21T12:00:00.000Z",
     "divergent": true,
@@ -5101,9 +5105,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 16 dia(s) (06/02/2027 no Drive vs 21/01/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 16,
-    "recommendedAction": "Atualizar data na RPO para 06/02/2027"
+    "detail": "Drive mais recente que a RPO em 638 dia(s) (20/10/2028 no Drive vs 21/01/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 638,
+    "recommendedAction": "Atualizar data na RPO para 20/10/2028"
   },
   {
     "inspectorName": "FERNANDO TEODORO DE MORAIS NETO",

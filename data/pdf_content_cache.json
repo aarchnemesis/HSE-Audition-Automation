@@ -189679,5 +189679,45 @@
         "extractedClause": "período de 16 de Outubro de 2025 | Atualizado via nome: 16/10/2026"
       }
     ]
+  },
+  {
+    "fileId": "1R_iydQe76zlNGoYxTcNEUhPfiiKs8P7I",
+    "filename": "09 – Direção Defensiva – 20.10.2026 - FERNANDO TEODORO DE MORAIS NETO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-21T19:30:24.269Z",
+    "code": "09",
+    "issueDate": "2026-10-21T03:00:00.000Z",
+    "expirationDate": "2028-10-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Direção Defensiva (via PDF) (Pág. 3)",
+    "extractedClause": "Assinou em 21 out 2026",
+    "documents": [
+      {
+        "code": "09",
+        "issueDate": "2026-10-21T03:00:00.000Z",
+        "expirationDate": "2028-10-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Direção Defensiva (via PDF) (Pág. 3)",
+        "extractedClause": "Assinou em 21 out 2026"
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-10-20T03:00:00.000Z",
+        "expirationDate": "2028-10-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 09 – Direção Defensiva – 20.10.2026 - FERNANDO TEODORO DE MORAIS NETO.pdf"
+      }
+    ]
   }
 ]
