@@ -649,7 +649,7 @@
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2078-02-05T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-20T12:00:00.000Z",
+    "rpoExpiration": "2028-10-19T12:00:00.000Z",
     "divergent": false,
     "detail": "Drive e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
     "recommendedAction": "Nenhuma ação necessária (Consistente)"
@@ -753,11 +753,15 @@
     "docName": "NR-18 Integração EHS",
     "driveExpiration": "2027-02-05T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-31T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 5,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "rpoExpiration": "2028-10-19T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "RPO_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "RPO mais recente que o Drive em 622 dia(s) (19/10/2028 na RPO vs 05/02/2027 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 622,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "RAFAEL PEREIRA NUNES",
@@ -820,15 +824,15 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "driveExpiration": "2027-02-05T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "rpoExpiration": "2027-01-25T12:00:00.000Z",
+    "rpoExpiration": "2028-10-19T12:00:00.000Z",
     "divergent": true,
     "divergenceKind": "DATA_DIVERGENTE",
-    "direction": "DRIVE_NEWER",
+    "direction": "RPO_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 11 dia(s) (05/02/2027 no Drive vs 25/01/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 11,
-    "recommendedAction": "Atualizar data na RPO para 05/02/2027"
+    "detail": "RPO mais recente que o Drive em 622 dia(s) (19/10/2028 na RPO vs 05/02/2027 no Drive) — provável renovação registrada na RPO sem upload do novo documento de backup no Drive.",
+    "diffDays": 622,
+    "recommendedAction": "Checar documento físico e atualizar backup no Drive"
   },
   {
     "inspectorName": "RAFAEL PEREIRA NUNES",
