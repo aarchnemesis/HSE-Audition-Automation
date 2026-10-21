@@ -3647,6 +3647,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/03/2028"
       },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-10-20T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2028"
+      },
       "16": {
         "code": "16",
         "name": "GWO BST",
@@ -3660,6 +3667,13 @@
         "expirationDate": "2027-08-01T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/08/2027"
+      },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-10-20T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2028"
       },
       "19": {
         "code": "19",
