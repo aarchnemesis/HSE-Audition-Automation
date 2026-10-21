@@ -7966,6 +7966,16 @@
         "statusDetail": "VENCIDO há 629 dias (28/01/2025)",
         "sourcePath": "https://drive.google.com/file/d/1kX4MZBA3ti_s8OeHsg1FLTXqQhCFCh_y/view"
       },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "CONTRATO CLT FERNANDO TEODORO DE MORAIS NETO - Clicksign.pdf",
+        "issueDate": "2025-01-28T03:00:00.000Z",
+        "expirationDate": "2076-10-21T21:45:06.113Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1VMGSRJ5BqPF4FqZo6h64dbpz_izVWQqo/view"
+      },
       "09": {
         "code": "09",
         "name": "Doc 09",
@@ -8005,16 +8015,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/12/2026",
         "sourcePath": "https://drive.google.com/file/d/1H8CHLVXELFWEzHrOdSvwZ0g7UIPPXDxx/view"
-      },
-      "04": {
-        "code": "04",
-        "name": "Doc 04",
-        "filename": "40 – Contrato de Prestação de Serviço – SEM_DATA - FERNANDO TEODORO DE MORAIS NETO.pdf",
-        "issueDate": "2025-01-28T03:00:00.000Z",
-        "expirationDate": "2076-10-19T11:45:06.713Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/10/2076",
-        "sourcePath": "https://drive.google.com/file/d/1kX4MZBA3ti_s8OeHsg1FLTXqQhCFCh_y/view"
       },
       "05": {
         "code": "05",
@@ -14874,7 +14874,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) – SEM_DATA - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-21T21:00:14.762Z",
+        "expirationDate": "2076-10-21T21:45:06.113Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"
