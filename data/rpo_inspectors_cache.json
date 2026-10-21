@@ -455,7 +455,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-23T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (23/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 2 dia(s) (23/10/2026)"
       },
       "08": {
         "code": "08",
@@ -757,7 +757,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "32": {
         "code": "32",
@@ -771,7 +771,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-08T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 12 dias (08/10/2026)"
+        "statusDetail": "VENCIDO há 13 dias (08/10/2026)"
       },
       "08": {
         "code": "08",
@@ -1037,7 +1037,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-14T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 55 dias (14/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 54 dias (14/12/2026)"
       },
       "21": {
         "code": "21",
@@ -1079,7 +1079,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-12-18T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (18/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 58 dias (18/12/2026)"
       },
       "32": {
         "code": "32",
@@ -1093,7 +1093,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "08": {
         "code": "08",
@@ -1858,7 +1858,7 @@
         "name": "ELEV. JASO",
         "expirationDate": "2024-11-12T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 707 dias (12/11/2024)"
+        "statusDetail": "VENCIDO há 708 dias (12/11/2024)"
       },
       "32": {
         "code": "32",
@@ -2023,7 +2023,7 @@
         "name": "GWO ART",
         "expirationDate": "2026-10-16T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 4 dias (16/10/2026)"
+        "statusDetail": "VENCIDO há 5 dias (16/10/2026)"
       },
       "01": {
         "code": "01",
@@ -2537,7 +2537,7 @@
         "name": "NR 06",
         "expirationDate": "2026-12-10T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (10/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 50 dias (10/12/2026)"
       },
       "12": {
         "code": "12",
@@ -2705,14 +2705,14 @@
         "name": "NR 10",
         "expirationDate": "2026-11-11T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (11/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 21 dias (11/11/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-15T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 26 dias (15/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 25 dias (15/11/2026)"
       },
       "14": {
         "code": "14",
@@ -2859,7 +2859,7 @@
         "name": "NR 06",
         "expirationDate": "2026-12-03T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 44 dias (03/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 43 dias (03/12/2026)"
       },
       "12": {
         "code": "12",
@@ -2978,14 +2978,14 @@
         "name": "CNH",
         "expirationDate": "2026-08-27T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 54 dias (27/08/2026)"
+        "statusDetail": "VENCIDO há 55 dias (27/08/2026)"
       },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-10-25T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 5 dia(s) (25/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (25/10/2026)"
       }
     },
     "exemptDocCodes": [
@@ -3140,7 +3140,7 @@
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-10-25T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 5 dia(s) (25/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (25/10/2026)"
       }
     },
     "exemptDocCodes": [
@@ -3232,7 +3232,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-13T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 54 dias (13/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 53 dias (13/12/2026)"
       },
       "21": {
         "code": "21",
@@ -3288,7 +3288,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       },
       "08": {
         "code": "08",
@@ -3449,7 +3449,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-23T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (23/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 2 dia(s) (23/10/2026)"
       },
       "08": {
         "code": "08",
@@ -4256,7 +4256,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "21": {
         "code": "21",
@@ -4312,7 +4312,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       },
       "08": {
         "code": "08",
@@ -4438,14 +4438,14 @@
         "name": "SIT VESTAS",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "26": {
         "code": "26",
         "name": "ESO VESTAS",
         "expirationDate": "2026-11-23T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (23/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 33 dias (23/11/2026)"
       },
       "27": {
         "code": "27",
@@ -4466,7 +4466,7 @@
         "name": "ASO",
         "expirationDate": "2026-09-24T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 26 dias (24/09/2026)"
+        "statusDetail": "VENCIDO há 27 dias (24/09/2026)"
       },
       "08": {
         "code": "08",
@@ -4628,7 +4628,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-17T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 58 dias (17/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 57 dias (17/12/2026)"
       },
       "08": {
         "code": "08",
@@ -4772,14 +4772,14 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-30T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 41 dias (30/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 40 dias (30/11/2026)"
       },
       "01": {
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       },
       "08": {
         "code": "08",
@@ -5061,28 +5061,28 @@
         "name": "NR 01",
         "expirationDate": "2026-11-23T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (23/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 33 dias (23/11/2026)"
       },
       "11": {
         "code": "11",
         "name": "NR 06",
         "expirationDate": "2026-11-22T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 33 dias (22/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (22/11/2026)"
       },
       "12": {
         "code": "12",
         "name": "NR 10",
         "expirationDate": "2026-11-11T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (11/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 21 dias (11/11/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-15T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 26 dias (15/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 25 dias (15/11/2026)"
       },
       "14": {
         "code": "14",
@@ -5096,7 +5096,7 @@
         "name": "NR 12",
         "expirationDate": "2026-11-27T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 38 dias (27/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (27/11/2026)"
       },
       "16": {
         "code": "16",
@@ -5145,21 +5145,21 @@
         "name": "LOTO",
         "expirationDate": "2026-11-21T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (21/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (21/11/2026)"
       },
       "25": {
         "code": "25",
         "name": "SIT VESTAS",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "26": {
         "code": "26",
         "name": "ESO VESTAS",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "27": {
         "code": "27",
@@ -5230,14 +5230,14 @@
         "name": "NR 10",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       },
       "14": {
         "code": "14",
@@ -5258,14 +5258,14 @@
         "name": "GWO BST",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       },
       "18": {
         "code": "18",
@@ -5286,7 +5286,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-07-08T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 104 dias (08/07/2026)"
+        "statusDetail": "VENCIDO há 105 dias (08/07/2026)"
       },
       "21": {
         "code": "21",
@@ -5307,7 +5307,7 @@
         "name": "SIT VESTAS",
         "expirationDate": "2026-07-25T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 87 dias (25/07/2026)"
+        "statusDetail": "VENCIDO há 88 dias (25/07/2026)"
       },
       "26": {
         "code": "26",
@@ -5321,21 +5321,21 @@
         "name": "NR 07 - PS",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       },
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
         "expirationDate": "2026-08-07T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 74 dias (07/08/2026)"
+        "statusDetail": "VENCIDO há 75 dias (07/08/2026)"
       },
       "01": {
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "08": {
         "code": "08",
@@ -5496,8 +5496,8 @@
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-10-28T12:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 8 dias (28/10/2026)"
+        "statusEHS": "VENCE_07",
+        "statusDetail": "CRÍTICO: Vence em 7 dia(s) (28/10/2026)"
       },
       "08": {
         "code": "08",
@@ -5651,7 +5651,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-28T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 39 dias (28/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 38 dias (28/11/2026)"
       },
       "08": {
         "code": "08",
@@ -5799,7 +5799,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-12-14T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 55 dias (14/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 54 dias (14/12/2026)"
       },
       "32": {
         "code": "32",
@@ -5862,7 +5862,7 @@
         "name": "NR 10",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "13": {
         "code": "13",
@@ -5890,14 +5890,14 @@
         "name": "GWO BST",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
         "expirationDate": "2026-11-05T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 16 dias (05/11/2026)"
+        "statusEHS": "VENCE_15",
+        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (05/11/2026)"
       },
       "18": {
         "code": "18",
@@ -5910,8 +5910,8 @@
         "code": "19",
         "name": "NR 23",
         "expirationDate": "2026-11-05T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 16 dias (05/11/2026)"
+        "statusEHS": "VENCE_15",
+        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (05/11/2026)"
       },
       "20": {
         "code": "20",
@@ -5925,7 +5925,7 @@
         "name": "NR 35",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "22": {
         "code": "22",
@@ -5953,7 +5953,7 @@
         "name": "NR 07 - PS",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "28": {
         "code": "28",
@@ -5967,7 +5967,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-27T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 7 dia(s) (27/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 6 dia(s) (27/10/2026)"
       },
       "08": {
         "code": "08",
@@ -6073,7 +6073,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-15T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 56 dias (15/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 55 dias (15/12/2026)"
       },
       "21": {
         "code": "21",
@@ -6115,7 +6115,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-12-13T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 54 dias (13/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 53 dias (13/12/2026)"
       },
       "32": {
         "code": "32",
@@ -6129,7 +6129,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "08": {
         "code": "08",
@@ -6283,7 +6283,7 @@
         "name": "GWO ART",
         "expirationDate": "2026-05-06T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 167 dias (06/05/2026)"
+        "statusDetail": "VENCIDO há 168 dias (06/05/2026)"
       },
       "01": {
         "code": "01",
@@ -6437,7 +6437,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-03T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (03/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 13 dias (03/11/2026)"
       },
       "32": {
         "code": "32",
@@ -6451,7 +6451,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-23T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (23/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 2 dia(s) (23/10/2026)"
       },
       "08": {
         "code": "08",
@@ -6605,7 +6605,7 @@
         "name": "ELEV. JASO",
         "expirationDate": "2024-11-12T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 707 dias (12/11/2024)"
+        "statusDetail": "VENCIDO há 708 dias (12/11/2024)"
       },
       "01": {
         "code": "01",
@@ -6878,7 +6878,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-10-23T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (23/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 2 dia(s) (23/10/2026)"
       },
       "21": {
         "code": "21",
@@ -6920,7 +6920,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-10-14T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 6 dias (14/10/2026)"
+        "statusDetail": "VENCIDO há 7 dias (14/10/2026)"
       },
       "32": {
         "code": "32",
@@ -6934,7 +6934,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-23T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (23/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 2 dia(s) (23/10/2026)"
       },
       "08": {
         "code": "08",
@@ -7326,7 +7326,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-08T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 12 dias (08/10/2026)"
+        "statusDetail": "VENCIDO há 13 dias (08/10/2026)"
       },
       "08": {
         "code": "08",
@@ -7578,7 +7578,7 @@
         "name": "NR 18",
         "expirationDate": "2026-12-01T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 42 dias (01/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 41 dias (01/12/2026)"
       },
       "19": {
         "code": "19",
@@ -7606,7 +7606,7 @@
         "name": "LOTO",
         "expirationDate": "2026-11-19T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 30 dias (19/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (19/11/2026)"
       },
       "25": {
         "code": "25",
@@ -8367,7 +8367,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (07/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (07/11/2026)"
       },
       "21": {
         "code": "21",
@@ -8409,7 +8409,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-09T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (09/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (09/11/2026)"
       },
       "32": {
         "code": "32",
@@ -8422,8 +8422,8 @@
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-11-05T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 16 dias (05/11/2026)"
+        "statusEHS": "VENCE_15",
+        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (05/11/2026)"
       },
       "08": {
         "code": "08",
@@ -8702,7 +8702,7 @@
         "name": "SIT VESTAS",
         "expirationDate": "2025-11-11T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 343 dias (11/11/2025)"
+        "statusDetail": "VENCIDO há 344 dias (11/11/2025)"
       },
       "26": {
         "code": "26",
@@ -8836,7 +8836,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-10-19T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1 dias (19/10/2026)"
+        "statusDetail": "VENCIDO há 2 dias (19/10/2026)"
       },
       "21": {
         "code": "21",
@@ -8891,8 +8891,8 @@
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-10-20T12:00:00.000Z",
-        "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 0 dia(s) (20/10/2026)"
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 1 dias (20/10/2026)"
       },
       "08": {
         "code": "08",
@@ -9039,7 +9039,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-12T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (12/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (12/11/2026)"
       },
       "32": {
         "code": "32",
@@ -9053,7 +9053,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-21T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (21/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (21/11/2026)"
       },
       "08": {
         "code": "08",
@@ -9366,7 +9366,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "08": {
         "code": "08",
@@ -9569,21 +9569,21 @@
         "name": "NR 06",
         "expirationDate": "2026-10-01T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 19 dias (01/10/2026)"
+        "statusDetail": "VENCIDO há 20 dias (01/10/2026)"
       },
       "12": {
         "code": "12",
         "name": "NR 10",
         "expirationDate": "2026-11-12T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (12/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (12/11/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-08T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (08/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (08/11/2026)"
       },
       "14": {
         "code": "14",
@@ -9597,21 +9597,21 @@
         "name": "NR 12",
         "expirationDate": "2026-10-02T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 18 dias (02/10/2026)"
+        "statusDetail": "VENCIDO há 19 dias (02/10/2026)"
       },
       "16": {
         "code": "16",
         "name": "GWO BST",
         "expirationDate": "2026-11-08T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (08/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (08/11/2026)"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
         "expirationDate": "2026-11-08T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (08/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (08/11/2026)"
       },
       "18": {
         "code": "18",
@@ -9625,7 +9625,7 @@
         "name": "NR 23",
         "expirationDate": "2026-11-08T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (08/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (08/11/2026)"
       },
       "20": {
         "code": "20",
@@ -9646,21 +9646,21 @@
         "name": "SIT VESTAS",
         "expirationDate": "2026-07-25T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 87 dias (25/07/2026)"
+        "statusDetail": "VENCIDO há 88 dias (25/07/2026)"
       },
       "26": {
         "code": "26",
         "name": "ESO VESTAS",
         "expirationDate": "2026-07-26T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 86 dias (26/07/2026)"
+        "statusDetail": "VENCIDO há 87 dias (26/07/2026)"
       },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
         "expirationDate": "2026-11-08T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (08/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (08/11/2026)"
       },
       "28": {
         "code": "28",
@@ -10042,7 +10042,7 @@
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-22T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 33 dias (22/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (22/11/2026)"
       },
       "14": {
         "code": "14",
@@ -10091,7 +10091,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-05T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 46 dias (05/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 45 dias (05/12/2026)"
       },
       "21": {
         "code": "21",
@@ -10182,14 +10182,14 @@
         "name": "NR 01",
         "expirationDate": "2026-05-30T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 143 dias (30/05/2026)"
+        "statusDetail": "VENCIDO há 144 dias (30/05/2026)"
       },
       "11": {
         "code": "11",
         "name": "NR 06",
         "expirationDate": "2026-05-30T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 143 dias (30/05/2026)"
+        "statusDetail": "VENCIDO há 144 dias (30/05/2026)"
       },
       "12": {
         "code": "12",
@@ -10231,7 +10231,7 @@
         "name": "CNH",
         "expirationDate": "2026-02-25T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 237 dias (25/02/2026)"
+        "statusDetail": "VENCIDO há 238 dias (25/02/2026)"
       },
       "09": {
         "code": "09",
@@ -10377,14 +10377,14 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-05-02T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 171 dias (02/05/2026)"
+        "statusDetail": "VENCIDO há 172 dias (02/05/2026)"
       },
       "21": {
         "code": "21",
         "name": "NR 35",
         "expirationDate": "2026-06-05T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 137 dias (05/06/2026)"
+        "statusDetail": "VENCIDO há 138 dias (05/06/2026)"
       },
       "25": {
         "code": "25",
@@ -10667,7 +10667,7 @@
         "name": "NR 06",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       },
       "12": {
         "code": "12",
@@ -10818,7 +10818,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-02T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 43 dias (02/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 42 dias (02/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11022,7 +11022,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-11T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 52 dias (11/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (11/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11096,14 +11096,14 @@
         "name": "NR 12",
         "expirationDate": "2026-09-27T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 23 dias (27/09/2026)"
+        "statusDetail": "VENCIDO há 24 dias (27/09/2026)"
       },
       "18": {
         "code": "18",
         "name": "NR 18",
         "expirationDate": "2026-11-11T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (11/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 21 dias (11/11/2026)"
       },
       "19": {
         "code": "19",
@@ -11124,7 +11124,7 @@
         "name": "ASO",
         "expirationDate": "2026-09-30T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 20 dias (30/09/2026)"
+        "statusDetail": "VENCIDO há 21 dias (30/09/2026)"
       },
       "08": {
         "code": "08",
@@ -11226,7 +11226,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11430,7 +11430,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-16T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 57 dias (16/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 56 dias (16/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11483,7 +11483,7 @@
         "name": "NR 06",
         "expirationDate": "2026-12-15T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 56 dias (15/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 55 dias (15/12/2026)"
       },
       "12": {
         "code": "12",
@@ -11504,14 +11504,14 @@
         "name": "NR 12",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "18": {
         "code": "18",
         "name": "NR 18",
         "expirationDate": "2026-10-31T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 11 dias (31/10/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 10 dias (31/10/2026)"
       },
       "19": {
         "code": "19",
@@ -11525,7 +11525,7 @@
         "name": "NR 07 - PS",
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (07/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (07/11/2026)"
       },
       "01": {
         "code": "01",
@@ -11634,7 +11634,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-11T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 52 dias (11/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (11/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11887,7 +11887,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-08T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 49 dias (08/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 48 dias (08/12/2026)"
       },
       "08": {
         "code": "08",
@@ -11938,28 +11938,28 @@
         "name": "NR 10",
         "expirationDate": "2026-01-12T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 281 dias (12/01/2026)"
+        "statusDetail": "VENCIDO há 282 dias (12/01/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-01-19T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 274 dias (19/01/2026)"
+        "statusDetail": "VENCIDO há 275 dias (19/01/2026)"
       },
       "14": {
         "code": "14",
         "name": "NR 11",
         "expirationDate": "2026-01-05T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 288 dias (05/01/2026)"
+        "statusDetail": "VENCIDO há 289 dias (05/01/2026)"
       },
       "15": {
         "code": "15",
         "name": "NR 12",
         "expirationDate": "2026-01-23T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 270 dias (23/01/2026)"
+        "statusDetail": "VENCIDO há 271 dias (23/01/2026)"
       },
       "16": {
         "code": "16",
@@ -11980,7 +11980,7 @@
         "name": "NR 18",
         "expirationDate": "2026-01-05T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 288 dias (05/01/2026)"
+        "statusDetail": "VENCIDO há 289 dias (05/01/2026)"
       },
       "19": {
         "code": "19",
@@ -11994,7 +11994,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-01-27T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 266 dias (27/01/2026)"
+        "statusDetail": "VENCIDO há 267 dias (27/01/2026)"
       },
       "21": {
         "code": "21",
@@ -12029,7 +12029,7 @@
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-01-28T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 265 dias (28/01/2026)"
+        "statusDetail": "VENCIDO há 266 dias (28/01/2026)"
       }
     },
     "exemptDocCodes": [
@@ -12211,7 +12211,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-19T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 60 dias (19/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (19/12/2026)"
       }
     },
     "exemptDocCodes": [
@@ -12277,7 +12277,7 @@
         "name": "NR 17",
         "expirationDate": "2023-07-11T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1197 dias (11/07/2023)"
+        "statusDetail": "VENCIDO há 1198 dias (11/07/2023)"
       },
       "01": {
         "code": "01",
@@ -12858,14 +12858,14 @@
         "name": "NR 17",
         "expirationDate": "2023-12-20T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1035 dias (20/12/2023)"
+        "statusDetail": "VENCIDO há 1036 dias (20/12/2023)"
       },
       "21": {
         "code": "21",
         "name": "NR 35",
         "expirationDate": "2023-12-20T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1035 dias (20/12/2023)"
+        "statusDetail": "VENCIDO há 1036 dias (20/12/2023)"
       }
     },
     "exemptDocCodes": [
@@ -13055,7 +13055,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-12T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (12/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (12/11/2026)"
       },
       "08": {
         "code": "08",
@@ -13311,7 +13311,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-21T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (21/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (21/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -13503,7 +13503,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -13659,7 +13659,7 @@
         "name": "ASO",
         "expirationDate": "2026-10-16T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 4 dias (16/10/2026)"
+        "statusDetail": "VENCIDO há 5 dias (16/10/2026)"
       }
     },
     "exemptDocCodes": [
@@ -13787,7 +13787,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -13941,7 +13941,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-25T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (25/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (25/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -13980,7 +13980,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-17T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 58 dias (17/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 57 dias (17/12/2026)"
       },
       "09": {
         "code": "09",
@@ -14067,7 +14067,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -14107,7 +14107,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 15 dias (04/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (04/11/2026)"
       }
     },
     "exemptDocCodes": [
@@ -14259,7 +14259,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (07/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (07/11/2026)"
       },
       "21": {
         "code": "21",
@@ -14301,7 +14301,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-15T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 26 dias (15/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 25 dias (15/11/2026)"
       },
       "32": {
         "code": "32",
@@ -14315,7 +14315,7 @@
         "name": "ASO",
         "expirationDate": "2026-11-21T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 32 dias (21/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (21/11/2026)"
       },
       "08": {
         "code": "08",
@@ -14636,7 +14636,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-07T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 48 dias (07/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 47 dias (07/12/2026)"
       },
       "21": {
         "code": "21",
@@ -14692,7 +14692,7 @@
         "name": "ASO",
         "expirationDate": "2026-12-04T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 45 dias (04/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 44 dias (04/12/2026)"
       },
       "08": {
         "code": "08",
@@ -14747,7 +14747,7 @@
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (07/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (07/11/2026)"
       },
       "14": {
         "code": "14",
@@ -14761,7 +14761,7 @@
         "name": "NR 12",
         "expirationDate": "2026-12-10T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (10/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 50 dias (10/12/2026)"
       },
       "16": {
         "code": "16",
@@ -14838,14 +14838,14 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-11-03T12:00:00.000Z",
         "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (03/11/2026)"
+        "statusDetail": "ALERTA URGENTE: Vence em 13 dias (03/11/2026)"
       },
       "01": {
         "code": "01",
         "name": "ASO",
         "expirationDate": "2026-10-24T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (24/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (24/10/2026)"
       },
       "08": {
         "code": "08",
@@ -14859,7 +14859,7 @@
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-10-25T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 5 dia(s) (25/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (25/10/2026)"
       }
     },
     "exemptDocCodes": [
@@ -14894,7 +14894,7 @@
         "name": "NR 10",
         "expirationDate": "2026-12-05T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 46 dias (05/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 45 dias (05/12/2026)"
       },
       "13": {
         "code": "13",
@@ -14922,14 +14922,14 @@
         "name": "GWO BST",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "18": {
         "code": "18",
@@ -14943,14 +14943,14 @@
         "name": "NR 23",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "20": {
         "code": "20",
         "name": "NR33 [DATA]",
         "expirationDate": "2026-12-03T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 44 dias (03/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 43 dias (03/12/2026)"
       },
       "21": {
         "code": "21",
@@ -14985,7 +14985,7 @@
         "name": "NR 07 - PS",
         "expirationDate": "2026-11-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 37 dias (26/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 36 dias (26/11/2026)"
       },
       "28": {
         "code": "28",
@@ -15047,21 +15047,21 @@
         "name": "NR 06",
         "expirationDate": "2026-10-03T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 17 dias (03/10/2026)"
+        "statusDetail": "VENCIDO há 18 dias (03/10/2026)"
       },
       "12": {
         "code": "12",
         "name": "NR 10",
         "expirationDate": "2026-10-19T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1 dias (19/10/2026)"
+        "statusDetail": "VENCIDO há 2 dias (19/10/2026)"
       },
       "13": {
         "code": "13",
         "name": "NR 10 SEP",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       },
       "14": {
         "code": "14",
@@ -15082,14 +15082,14 @@
         "name": "GWO BST",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "18": {
         "code": "18",
@@ -15103,7 +15103,7 @@
         "name": "NR 23",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "20": {
         "code": "20",
@@ -15117,7 +15117,7 @@
         "name": "NR 35",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "22": {
         "code": "22",
@@ -15145,7 +15145,7 @@
         "name": "NR 07 - PS",
         "expirationDate": "2026-10-18T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 2 dias (18/10/2026)"
+        "statusDetail": "VENCIDO há 3 dias (18/10/2026)"
       },
       "28": {
         "code": "28",
@@ -15166,7 +15166,7 @@
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-10-25T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 5 dia(s) (25/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (25/10/2026)"
       }
     },
     "exemptDocCodes": [
@@ -15194,7 +15194,7 @@
         "name": "NR 06",
         "expirationDate": "2026-11-24T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 35 dias (24/11/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (24/11/2026)"
       },
       "12": {
         "code": "12",
@@ -15222,7 +15222,7 @@
         "name": "NR 12",
         "expirationDate": "2026-10-19T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1 dias (19/10/2026)"
+        "statusDetail": "VENCIDO há 2 dias (19/10/2026)"
       },
       "16": {
         "code": "16",
@@ -15243,7 +15243,7 @@
         "name": "NR 18",
         "expirationDate": "2026-11-18T12:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (18/11/2026)"
+        "statusDetail": "ALERTA MÉDIO: Vence em 28 dias (18/11/2026)"
       },
       "19": {
         "code": "19",
@@ -15257,7 +15257,7 @@
         "name": "NR33 [DATA]",
         "expirationDate": "2026-09-17T12:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 33 dias (17/09/2026)"
+        "statusDetail": "VENCIDO há 34 dias (17/09/2026)"
       },
       "21": {
         "code": "21",
@@ -15299,7 +15299,7 @@
         "name": "NR 33 SUP",
         "expirationDate": "2026-12-13T12:00:00.000Z",
         "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 54 dias (13/12/2026)"
+        "statusDetail": "ALERTA INICIAL: Vence em 53 dias (13/12/2026)"
       },
       "01": {
         "code": "01",
@@ -15320,7 +15320,7 @@
         "name": "DIREÇÃO DEFENSIVA",
         "expirationDate": "2026-10-25T12:00:00.000Z",
         "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 5 dia(s) (25/10/2026)"
+        "statusDetail": "CRÍTICO: Vence em 4 dia(s) (25/10/2026)"
       }
     },
     "exemptDocCodes": [
