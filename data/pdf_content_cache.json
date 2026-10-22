@@ -151210,30 +151210,30 @@
   },
   {
     "fileId": "1XPPmaQ5oGfEjwWK3yG6ypGFD3AGqaowR",
-    "filename": "13 – NR-10 SEP (F+R) – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+    "filename": "13 – NR-10 SEP (F+R) – 23.06.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
     "v": 2,
     "cv": 1,
-    "modifiedTime": "2026-10-19T12:10:42.887Z",
+    "modifiedTime": "2026-10-22T13:19:57.815Z",
     "code": "13",
-    "issueDate": "2026-05-05T03:00:00.000Z",
-    "expirationDate": "2028-05-05T03:00:00.000Z",
+    "issueDate": "2026-06-23T03:00:00.000Z",
+    "expirationDate": "2028-06-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 05/05/2028",
+    "statusDetail": "Válido até 23/06/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "NR-10 SEP",
-    "extractedClause": "Data do arquivo: 13 – NR-10 SEP (F+R) – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+    "extractedClause": "Data do arquivo: 13 – NR-10 SEP (F+R) – 23.06.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
     "documents": [
       {
         "code": "13",
-        "issueDate": "2026-05-05T03:00:00.000Z",
-        "expirationDate": "2028-05-05T03:00:00.000Z",
+        "issueDate": "2026-06-23T03:00:00.000Z",
+        "expirationDate": "2028-06-23T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/05/2028",
+        "statusDetail": "Válido até 23/06/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-10 SEP",
-        "extractedClause": "Data do arquivo: 13 – NR-10 SEP (F+R) – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
+        "extractedClause": "Data do arquivo: 13 – NR-10 SEP (F+R) – 23.06.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
       }
     ]
   },
@@ -189746,6 +189746,35 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CTPS Digital (via PDF) (Pág. 2)",
         "extractedClause": "Sorocaba/SP, 28 de janeiro de 2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1MQWLwgJQqftlTLEG_Dc4iLBPsIiboR5s",
+    "filename": "05 - Cartão de Vacina – 22.10.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-22T12:59:59.974Z",
+    "code": "05",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "expirationDate": "2076-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Cartão de Vacina / SUS",
+    "extractedClause": "FORTALEZACE VACINA HEPATITE B06/07/2026 | Atualizado via nome: 22/10/2026",
+    "documents": [
+      {
+        "code": "05",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "expirationDate": "2076-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Cartão de Vacina / SUS",
+        "extractedClause": "FORTALEZACE VACINA HEPATITE B06/07/2026 | Atualizado via nome: 22/10/2026"
       }
     ]
   }
