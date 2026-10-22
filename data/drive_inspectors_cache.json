@@ -14874,7 +14874,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) – SEM_DATA - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-22T13:45:07.249Z",
+        "expirationDate": "2076-10-22T14:00:10.830Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"
@@ -24807,12 +24807,12 @@
       "22": {
         "code": "22",
         "name": "Doc 22",
-        "filename": "22 – LOTO – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
-        "issueDate": "2026-05-05T03:00:00.000Z",
-        "expirationDate": "2028-05-05T03:00:00.000Z",
+        "filename": "04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2028-08-01T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/05/2028",
-        "sourcePath": "https://drive.google.com/file/d/1QicdZE9T7fyDatb-DRnGE0FTtlhNyglA/view"
+        "statusDetail": "Válido até 01/08/2028",
+        "sourcePath": "https://drive.google.com/file/d/1VNeinzKXof94yrZX62XCQjk3CC2Beg1M/view"
       },
       "23": {
         "code": "23",
@@ -24874,6 +24874,26 @@
         "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
         "sourcePath": "https://drive.google.com/file/d/1EgDWlFIaWgZoXIcSKiOlqrZdFnM2oYR0/view"
       },
+      "04.1": {
+        "code": "04.1",
+        "name": "Doc 04.1",
+        "filename": "04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2028-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2028",
+        "sourcePath": "https://drive.google.com/file/d/1VNeinzKXof94yrZX62XCQjk3CC2Beg1M/view"
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2076-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2076",
+        "sourcePath": "https://drive.google.com/file/d/1VNeinzKXof94yrZX62XCQjk3CC2Beg1M/view"
+      },
       "05": {
         "code": "05",
         "name": "Doc 05",
@@ -24923,16 +24943,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 25/05/2076",
         "sourcePath": "https://drive.google.com/file/d/1mpUoOIpAPxMBrbcjZ2WyOoY1JNJh33_f/view"
-      },
-      "04": {
-        "code": "04",
-        "name": "Doc 04",
-        "filename": "02 – Ordem de Serviço – 14.07.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
-        "issueDate": "2026-07-14T03:00:00.000Z",
-        "expirationDate": "2076-07-14T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/07/2076",
-        "sourcePath": "https://drive.google.com/file/d/1OOlDPw1grh_35-qYq20e33y1u7HLh2Nc/view"
       },
       "09": {
         "code": "09",

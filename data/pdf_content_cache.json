@@ -189777,5 +189777,56 @@
         "extractedClause": "FORTALEZACE VACINA HEPATITE B06/07/2026 | Atualizado via nome: 22/10/2026"
       }
     ]
+  },
+  {
+    "fileId": "1VNeinzKXof94yrZX62XCQjk3CC2Beg1M",
+    "filename": "04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-22T13:54:41.785Z",
+    "code": "04",
+    "issueDate": "2026-08-01T03:00:00.000Z",
+    "expirationDate": "2076-08-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/08/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CTPS Digital (via PDF) (Pág. 5)",
+    "extractedClause": "Data do arquivo: 04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2028-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO (via PDF) (Pág. 1)",
+        "extractedClause": "Data do arquivo: 04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
+      },
+      {
+        "code": "04.1",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2028-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "PREFIX",
+        "matchedTerm": "Aditivo ao Contrato (04.1) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
+      },
+      {
+        "code": "04",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2076-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CTPS Digital (via PDF) (Pág. 5)",
+        "extractedClause": "Data do arquivo: 04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
+      }
+    ]
   }
 ]
