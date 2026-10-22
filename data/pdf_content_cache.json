@@ -189828,5 +189828,80 @@
         "extractedClause": "Data do arquivo: 04.1 – Contrato – 01.08.2026 - RAMON RAMIRES COSTA CIRINO.pdf"
       }
     ]
+  },
+  {
+    "fileId": "18hp4Tp-HV0UETo_TephdNe5lQ4ghTyQH",
+    "filename": "NR 06 - 22-10-2026_Alison_Dos_Santos_Ribeiro_[STORZ]_-_NR6_.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-22T19:27:27.195Z",
+    "code": "11",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "expirationDate": "2076-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-06",
+    "extractedClause": "Data do arquivo: NR 06 - 22-10-2026_Alison_Dos_Santos_Ribeiro_[STORZ]_-_NR6_.pdf",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "expirationDate": "2076-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-06",
+        "extractedClause": "Data do arquivo: NR 06 - 22-10-2026_Alison_Dos_Santos_Ribeiro_[STORZ]_-_NR6_.pdf"
+      }
+    ]
+  },
+  {
+    "fileId": "1dfHdMAmrcHrvfTIke2OEoiJwJU-GdYdO",
+    "filename": "NR 23 Alison_Dos_Santos_Ribeiro PREVENçãO_E_PROTEçãO_CONTRA_INCêNDIOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-22T19:27:24.784Z",
+    "code": "19",
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-23",
+    "documents": [
+      {
+        "code": "19",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23"
+      }
+    ]
+  },
+  {
+    "fileId": "1bpOojANM__JLhh7YoasPWfr-vfkAI0wy",
+    "filename": "NR Alison_Dos_Santos_Ribeiro_PRIMEIROS_SOCORROS_NÍVEL_BÁSICO.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-22T19:27:23.131Z",
+    "code": "27",
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros",
+    "documents": [
+      {
+        "code": "27",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros"
+      }
+    ]
   }
 ]
