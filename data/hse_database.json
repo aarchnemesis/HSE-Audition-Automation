@@ -7320,10 +7320,11 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-23T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 23/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7429,6 +7430,21 @@
     "detail": "Válido até 02/04/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-10-20T10:48:06.142Z"
+  },
+  {
+    "inspectorId": "rpo_34",
+    "inspectorName": "FRANCISCO EVERSON BARBOSA VASCONCELOS",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "modality": "ONLINE",
+    "expirationDate": "2027-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2027",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -10012,10 +10028,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -10131,10 +10148,11 @@
     "docCode": "18",
     "docName": "NR-18 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -10190,10 +10208,26 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
+  },
+  {
+    "inspectorId": "rpo_43",
+    "inspectorName": "HERBENS GOMES DA SILVA",
+    "role": "INSPETOR",
+    "sector": "INTERNAS",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "modality": "ONLINE",
+    "expirationDate": "2027-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2027",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -14304,10 +14338,11 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -14318,10 +14353,11 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -14482,10 +14518,26 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 22/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-16T13:51:31.693Z"
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
+  },
+  {
+    "inspectorId": "rpo_57",
+    "inspectorName": "MÁRIO SÉRGIO CASTRO DE SOUSA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "modality": "ONLINE",
+    "expirationDate": "2027-10-23T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 23/10/2027",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-23T20:47:46.495Z"
   },
   {
     "inspectorId": "rpo_57",
