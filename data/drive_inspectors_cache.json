@@ -10733,6 +10733,44 @@
     "name": "SIMON DIAS DA SILVA",
     "role": "ASSISTENTE DE OPER",
     "certificates": {
+      "03": {
+        "code": "03",
+        "name": "Doc 03",
+        "filename": "03 – Ficha de Registro – Simon Dias da Silva.pdf",
+        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2076-10-23T14:45:08.156Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1654vrkBsbE0t8_wxSOWeoDtFU5mRb6nj/view"
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04 – Contrato – Simon Dias da Silva.pdf",
+        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2076-10-23T14:45:08.156Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1z-MQaVvnUtOzIGFPqGGoUwVUjcQcQsp7/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "08 – CNH - Simon Dias da Silva.pdf",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "sourcePath": "https://drive.google.com/file/d/1QemlNpEFv8Sw6IkOoM0SPcibr8OQMBGs/view"
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05 – Cartão de Vacina + Covid – Simon Dias da Silva.pdf",
+        "issueDate": "2024-05-29T03:00:00.000Z",
+        "expirationDate": "2076-10-23T14:45:08.156Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1qAmLRSs3CRv6qhkcjF5FNNc9JUUKZbHg/view"
+      },
       "01": {
         "code": "01",
         "name": "Doc 01",
@@ -14921,7 +14959,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) – SEM_DATA - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-23T14:00:16.386Z",
+        "expirationDate": "2076-10-23T14:45:08.156Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"

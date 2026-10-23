@@ -7012,13 +7012,12 @@
     "inspectorName": "SIMON DIAS DA SILVA",
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
+    "trustedSource": "DRIVE",
     "rpoExpiration": "2034-05-16T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_RPO",
-    "direction": "RPO_NEWER",
-    "isRpoValidated": false,
-    "detail": "Registro presente na planilha RPO (16/05/2034), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
-    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive"
+    "divergenceKind": "DRIVE_SEM_DATA",
+    "detail": "Certificado presente no Drive (08 – CNH - Simon Dias da Silva.pdf), porém data de validade não identificada no arquivo. RPO registra 16/05/2034.",
+    "recommendedAction": "Conferir data no documento físico anexado"
   },
   {
     "inspectorName": "SIMON DIAS DA SILVA",
