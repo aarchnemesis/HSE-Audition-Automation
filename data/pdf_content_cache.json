@@ -189903,5 +189903,364 @@
         "matchedTerm": "NR-07 Primeiros Socorros"
       }
     ]
+  },
+  {
+    "fileId": "1g4bbIN9mHFXqAagmzqkq0grg-MAHqADm",
+    "filename": "RG - Isabelle Luzia Gomes Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.304Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1jUOT19vdLBru-teadrLPJYHoxI8qbTDE",
+    "filename": "03 – Ficha de Registro – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:20:01.028Z",
+    "code": "03",
+    "issueDate": "2025-01-01T03:00:00.000Z",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Ficha de Registro (Pág. 1)",
+    "extractedClause": "CAUCAIA EstadoCE 01/01/2025",
+    "documents": [
+      {
+        "code": "03",
+        "issueDate": "2025-01-01T03:00:00.000Z",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Ficha de Registro (Pág. 1)",
+        "extractedClause": "CAUCAIA EstadoCE 01/01/2025"
+      }
+    ]
+  },
+  {
+    "fileId": "17epdTlXyBURHYqiJXDjew4fFgnD7DvV-",
+    "filename": "04 – Contrato – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:19:44.910Z",
+    "code": "04",
+    "issueDate": "2026-10-06T03:00:00.000Z",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "PREFIX",
+    "matchedTerm": "Contrato (04) (Pág. 1)",
+    "extractedClause": "Log gerado em 06 de outubro de 2026",
+    "documents": [
+      {
+        "code": "04",
+        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "PREFIX",
+        "matchedTerm": "Contrato (04) (Pág. 1)",
+        "extractedClause": "Log gerado em 06 de outubro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1igntp7ZEhH-oyBOS6xNusbQQFdy2ivoO",
+    "filename": "03 – Ficha de Registro (Separada) – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:19:34.643Z",
+    "code": "03",
+    "issueDate": "2026-10-06T03:00:00.000Z",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Ficha de Registro (Pág. 1)",
+    "extractedClause": "Log gerado em 06 de outubro de 2026",
+    "documents": [
+      {
+        "code": "03",
+        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Ficha de Registro (Pág. 1)",
+        "extractedClause": "Log gerado em 06 de outubro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1sI64uh0y7hWc0quOaGGoux2qQLXcnB9D",
+    "filename": "Comprovante de Endereço - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.398Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1N9aOutG7pGCydNNO24v-AH5ngURJF_pS",
+    "filename": "05 – Cartão de Vacina + Covid – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.387Z",
+    "code": "05",
+    "issueDate": "2025-07-03T03:00:00.000Z",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Cartão de Vacina / SUS (Pág. 2)",
+    "extractedClause": "CAUCAIACE VACINA INFLUENZA TRIVALENTE03/07/2025",
+    "documents": [
+      {
+        "code": "05",
+        "issueDate": "2025-07-03T03:00:00.000Z",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Cartão de Vacina / SUS (Pág. 2)",
+        "extractedClause": "CAUCAIACE VACINA INFLUENZA TRIVALENTE03/07/2025"
+      }
+    ]
+  },
+  {
+    "fileId": "1wOwLOv5bmRfxHZOiOQdiYe8KbwBb6xCy",
+    "filename": "Diploma (Ensino Médio) - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.371Z",
+    "code": "24",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Diploma Técnico",
+    "documents": [
+      {
+        "code": "24",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Diploma Técnico"
+      }
+    ]
+  },
+  {
+    "fileId": "1CsJub4UyOI8rXzkO7zQFj1VWY9QbILxG",
+    "filename": "RG - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.351Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "15zWIK65nk-06krn_gBUdbh-iCygeEwL0",
+    "filename": "Certidão de Casamento - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.351Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1QZ9QRx-S0IsRUo1UWO5EMS6EQZy2FEls",
+    "filename": "Certidão de Nascimento - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.335Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1NiyA0fIoJqkgEfJxe0oWOmzg_7aK629t",
+    "filename": "04 – CTPS Digital PI – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.335Z",
+    "code": "04",
+    "issueDate": "2026-01-15T03:00:00.000Z",
+    "expirationDate": "2076-10-23T13:45:08.864Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CTPS Digital (via PDF) (Pág. 1)",
+    "extractedClause": "terminado 15/01/2026",
+    "documents": [
+      {
+        "code": "04",
+        "issueDate": "2026-01-15T03:00:00.000Z",
+        "expirationDate": "2076-10-23T13:45:08.864Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CTPS Digital (via PDF) (Pág. 1)",
+        "extractedClause": "terminado 15/01/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1C65hKQvUXSIvyXOc3B20rP5uGUhv7H3u",
+    "filename": "Título - Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.288Z",
+    "code": null,
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1C641ClsHjTxFFwLQM8l8H4_uP15_oEAz",
+    "filename": "08 – CNH – Wermeson de Oliveira Franco.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:11:12.272Z",
+    "code": "08",
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CNH",
+    "documents": [
+      {
+        "code": "08",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CNH"
+      }
+    ]
+  },
+  {
+    "fileId": "1u_2Ba1vW4AhpUdEq1Dt2MPIZUbgoqXmZ",
+    "filename": "20 – NR – 33 (Vigia F+P) - 31.08.2026 - Francisco Davilo Marques de Sousa - Clicksign 1.pdf",
+    "v": 2,
+    "cv": 1,
+    "modifiedTime": "2026-10-23T13:23:02.116Z",
+    "code": "27",
+    "issueDate": "2026-08-31T03:00:00.000Z",
+    "expirationDate": "2028-08-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 7)",
+    "extractedClause": "Data do arquivo: 20 – NR – 33 (Vigia F+P) - 31.08.2026 - Francisco Davilo Marques de Sousa - Clicksign 1.pdf",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-08-31T03:00:00.000Z",
+        "expirationDate": "2027-08-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/08/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 2)",
+        "extractedClause": "Data do arquivo: 20 – NR – 33 (Vigia F+P) - 31.08.2026 - Francisco Davilo Marques de Sousa - Clicksign 1.pdf"
+      },
+      {
+        "code": "27",
+        "issueDate": "2026-08-31T03:00:00.000Z",
+        "expirationDate": "2028-08-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 7)",
+        "extractedClause": "Data do arquivo: 20 – NR – 33 (Vigia F+P) - 31.08.2026 - Francisco Davilo Marques de Sousa - Clicksign 1.pdf"
+      }
+    ]
   }
 ]
