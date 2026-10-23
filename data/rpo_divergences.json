@@ -17039,14 +17039,18 @@
     "inspectorName": "ITALO DE ABREU DUARTE",
     "docCode": "12",
     "docName": "NR-10 Básico",
-    "driveExpiration": "2028-08-24T03:00:00.000Z",
+    "driveExpiration": "2028-09-14T03:00:00.000Z",
     "storzExpiration": "2028-09-14T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-24T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)"
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": true,
+    "detail": "Drive mais recente que a RPO em 21 dia(s) (14/09/2028 no Drive vs 24/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 21,
+    "recommendedAction": "Atualizar data na RPO para 14/09/2028"
   },
   {
     "inspectorName": "ITALO DE ABREU DUARTE",
