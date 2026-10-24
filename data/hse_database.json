@@ -631,11 +631,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
-    "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 0 dia(s) (23/10/2026)",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 1 dias (23/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1G2kxjIPb5uVIcNTqU5GtfBqcf77HDSOF/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_13",
@@ -1519,10 +1519,10 @@
     "storzRequestId": "578343",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 35 dias (27/11/2026) | SOLICITADO NA STORZ (578343 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 34 dias (27/11/2026) | SOLICITADO NA STORZ (578343 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1gJd-jQoHzN-WE-z-6IRRMoAjqbrPwwgh/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1865,10 +1865,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/14ypWzD1jgEnhTJk60oH95vh8v3FQMioj/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -4962,10 +4962,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-09-05T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 48 dias (05/09/2026)",
+    "detail": "VENCIDO há 49 dias (05/09/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1jia7W0gDepHQTyvSJqEMi8h6EGlxx6fu/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -5604,10 +5604,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/14-LfmVtIWLStE59g7kBD-Gb3gXfpK52m/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5619,11 +5619,11 @@
     "docName": "ESO (Vestas)",
     "modality": "ONLINE",
     "expirationDate": "2026-11-23T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 31 dias (23/11/2026)",
+    "statusEHS": "VENCE_30",
+    "detail": "ALERTA MÉDIO: Vence em 30 dias (23/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/16vW09TbFs08zwgsGFMwnXZu-nEsCQewz/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5671,10 +5671,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-22T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 60 dias (22/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 59 dias (22/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1hfmv1R9djHNrPDsoj6-RkcMzPqJ_NxbT/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -5865,14 +5865,14 @@
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
     "expirationDate": "2026-12-23T03:00:00.000Z",
-    "statusEHS": "CONFORME",
+    "statusEHS": "VENCE_60",
     "storzRequestId": "576040",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 23/12/2026 | Reciclagem já solicitada na Storz (576040 - Status: SOLICITADO).",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (23/12/2026) | SOLICITADO NA STORZ (576040 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/11EwZyc8UxDMRdh1OUjVNsBjmUgxjCTjG/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-20T10:48:06.142Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -5949,10 +5949,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-04-16T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 190 dias (16/04/2026)",
+    "detail": "VENCIDO há 191 dias (16/04/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1-X4chma3G0IlxcnGxGEJDesyuTzTNgxp/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_30",
@@ -6256,10 +6256,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1H8CHLVXELFWEzHrOdSvwZ0g7UIPPXDxx/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_31",
@@ -6587,11 +6587,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
-    "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 0 dia(s) (23/10/2026)",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 1 dias (23/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Le_nI_YctbLMjKKL_u4NvT6NUV70FPrK/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -8364,10 +8364,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/19MkKmRdh7bhfCWsa3boMlz78CeMpAm2A/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -8578,10 +8578,10 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 3,
     "storzDeadline": "31/10/2026",
-    "detail": "ALERTA MÉDIO: Vence em 18 dias (10/11/2026) | EM ANDAMENTO NA STORZ (576043 - Progresso: 3%) [Prazo Storz: 31/10/2026] — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 17 dias (10/11/2026) | EM ANDAMENTO NA STORZ (576043 - Progresso: 3%) [Prazo Storz: 31/10/2026] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1hZvBc-MMDhvfIiV7I2Q_1L8v-MAT0vBw/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -8695,10 +8695,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-09-24T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 29 dias (24/09/2026)",
+    "detail": "VENCIDO há 30 dias (24/09/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1xeT7t0kDKEm45XyKS5_yFv9OQaPN_cqc/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -8968,10 +8968,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-24T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (24/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 31 dias (24/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1M5jOFlrvFoXPtW4A2iN-hVCRhFx_pTf6/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -8983,11 +8983,11 @@
     "docName": "ESO (Vestas)",
     "modality": "ONLINE",
     "expirationDate": "2026-11-23T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 31 dias (23/11/2026)",
+    "statusEHS": "VENCE_30",
+    "detail": "ALERTA MÉDIO: Vence em 30 dias (23/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Rol1wP-IyZbCk7nrvCwApFuIWasOWwFV/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -9019,10 +9019,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-17T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 55 dias (17/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 54 dias (17/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1ua8Wy9ynM_fofsO4rZggaUuQmgR3v2by/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_40",
@@ -9345,10 +9345,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/18CVt3zYmWCZ3EctOQNq10ur7K2kyDO1r/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10512,10 +10512,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/11TIZ-tRihlpWH553HEGCQArWgwQbFifN/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -10528,10 +10528,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/188yt1qAfWFf9qc5XO_FPl-1UhQjpFIrw/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -10563,10 +10563,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-24T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (24/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 31 dias (24/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1IrIadAcrImjW7ViIkJ_JBzY0RNYOsbGu/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10630,10 +10630,10 @@
     "storzRequestId": "583159",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 33 dias (25/11/2026) | SOLICITADO NA STORZ (583159 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 32 dias (25/11/2026) | SOLICITADO NA STORZ (583159 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1JgQzoAgUTChCw0JEUHmfNFxzlqIrPyJ7/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10700,10 +10700,10 @@
     "storzRequestId": "583172",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026) | SOLICITADO NA STORZ (583172 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026) | SOLICITADO NA STORZ (583172 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1ltzRtpUMJOFzapyw5pJQ0lTJaQ2eXe7J/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10719,10 +10719,10 @@
     "storzRequestId": "580045",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026) | SOLICITADO NA STORZ (580045 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026) | SOLICITADO NA STORZ (580045 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/180nGXgjF52zwLHgM0mQW-qg3rk__Aps8/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10757,10 +10757,10 @@
     "storzRequestId": "579435",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026) | SOLICITADO NA STORZ (579435 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026) | SOLICITADO NA STORZ (579435 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1G-S0klIvUDm4IT3KMwFBCQQMOWSeBy-K/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10777,10 +10777,10 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
     "storzDeadline": "05/12/2026",
-    "detail": "VENCIDO há 7 dias (16/10/2026) | EM ANDAMENTO NA STORZ (573694 - Progresso: 0%) [Prazo Storz: 05/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 16/10/2026, ANTES do prazo da Storz (05/12/2026)!",
+    "detail": "VENCIDO há 8 dias (16/10/2026) | EM ANDAMENTO NA STORZ (573694 - Progresso: 0%) [Prazo Storz: 05/12/2026]. ATENÇÃO AO RITMO: o certificado vence em 16/10/2026, ANTES do prazo da Storz (05/12/2026)!",
     "evidenceUrl": "https://drive.google.com/file/d/1iMrFPSg6yECuJtDJOfBtpEyO9brCQn86/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10831,10 +10831,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-25T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 90 dias (25/07/2026)",
+    "detail": "VENCIDO há 91 dias (25/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1IHrAxa379BVfeK_tUkCGLLngBX-TG-hK/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -10867,10 +10867,10 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 50,
     "storzDeadline": "29/11/2026",
-    "detail": "VENCIDO há 10 dias (13/10/2026) | EM ANDAMENTO NA STORZ (572536 - Progresso: 50%) [Prazo Storz: 29/11/2026]. ATENÇÃO AO RITMO: o certificado vence em 13/10/2026, ANTES do prazo da Storz (29/11/2026)!",
+    "detail": "VENCIDO há 11 dias (13/10/2026) | EM ANDAMENTO NA STORZ (572536 - Progresso: 50%) [Prazo Storz: 29/11/2026]. ATENÇÃO AO RITMO: o certificado vence em 13/10/2026, ANTES do prazo da Storz (29/11/2026)!",
     "evidenceUrl": "https://drive.google.com/file/d/15ddAj-BSYa688dlIxjWDgb8l7lzbitg8/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_46",
@@ -10883,10 +10883,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-28T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 5 dia(s) (28/10/2026)",
+    "detail": "CRÍTICO: Vence em 4 dia(s) (28/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1VBkGEeoqI79duzf5pvscNBik6_gab43F/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_46",
@@ -11838,10 +11838,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-27T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 4 dia(s) (27/10/2026)",
+    "detail": "CRÍTICO: Vence em 3 dia(s) (27/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1mil9jK0e8kkL26YBSyPT4kwUm9AZo7ZD/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -11982,10 +11982,10 @@
     "storzRequestId": "583168",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA MÉDIO: Vence em 29 dias (21/11/2026) | SOLICITADO NA STORZ (583168 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 28 dias (21/11/2026) | SOLICITADO NA STORZ (583168 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1aZoIGQakZ0ba9LawZ1NIQWmfntWRAgVB/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -12135,10 +12135,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-03-11T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 226 dias (11/03/2026)",
+    "detail": "VENCIDO há 227 dias (11/03/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1HzwFOiFYP7pdbyhoI6LM7NQC2_yuWWTC/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -12151,10 +12151,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (26/11/2026)",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1cAwCNFFS0ah4az43u9RDe53xnoj1eixg/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -12778,11 +12778,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
-    "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 0 dia(s) (23/10/2026)",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 1 dias (23/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1fTxXA6mGRTkK-cLf4VJ7Oef7ITaH11Rj/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_52",
@@ -13707,11 +13707,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
-    "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 0 dia(s) (23/10/2026)",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 1 dias (23/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1AZrAtUv3tfWEX8aXQ7Z0S4K-_wMamV5d/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_55",
@@ -15385,10 +15385,10 @@
     "storzRequestId": "579449",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 57 dias (19/12/2026) | SOLICITADO NA STORZ (579449 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (19/12/2026) | SOLICITADO NA STORZ (579449 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1F1x9b5ufFdS2MMf_Z4Eo3-DG_vAaIVyF/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_60",
@@ -16716,10 +16716,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-09-05T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 48 dias (05/09/2026)",
+    "detail": "VENCIDO há 49 dias (05/09/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1lk3pfW22IuMQ_fjU4Fg35bAUADTaEZE7/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -16751,10 +16751,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-05T03:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 13 dias (05/11/2026)",
+    "detail": "ALERTA URGENTE: Vence em 12 dias (05/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Nt6-6wwPy49wFuqCHpVoTwWSR4TpljSI/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -16949,10 +16949,10 @@
     "storzRequestId": "576041",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA MÉDIO: Vence em 26 dias (18/11/2026) | SOLICITADO NA STORZ (576041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 25 dias (18/11/2026) | SOLICITADO NA STORZ (576041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1A-tnsEpUkvsTzEA9ZdVNXQMmort8gy1X/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17032,10 +17032,10 @@
     "storzRequestId": "578338",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA MÉDIO: Vence em 21 dias (13/11/2026) | SOLICITADO NA STORZ (578338 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 20 dias (13/11/2026) | SOLICITADO NA STORZ (578338 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1ZS9aheeoi-sKHYXSiSveKHHtTUPQO5HJ/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17674,10 +17674,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-09T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 14 dias (09/10/2026)",
+    "detail": "VENCIDO há 15 dias (09/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1jC_qpefj_UDgcJo9qT_TaiQM4i9iza9z/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -17690,10 +17690,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-20T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 3 dias (20/10/2026)",
+    "detail": "VENCIDO há 4 dias (20/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1m1pQNiZRiy1EZur1V8K-pxJ8hLLcZe6E/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -17882,10 +17882,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-30T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 7 dia(s) (30/10/2026)",
+    "detail": "CRÍTICO: Vence em 6 dia(s) (30/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1azSi72qatDe9OPpSoX-A_SgWKS03DO3Y/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -18015,10 +18015,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-21T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 29 dias (21/11/2026)",
+    "detail": "ALERTA MÉDIO: Vence em 28 dias (21/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1GbX6_brSbYdy2R0HQT9HNYGJOG8wHFUN/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18297,10 +18297,10 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 50,
     "storzDeadline": "21/11/2026",
-    "detail": "ALERTA INICIAL: Vence em 42 dias (04/12/2026) | EM ANDAMENTO NA STORZ (578341 - Progresso: 50%) [Prazo Storz: 21/11/2026] — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 41 dias (04/12/2026) | EM ANDAMENTO NA STORZ (578341 - Progresso: 50%) [Prazo Storz: 21/11/2026] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1w8WiQSo87F2gyQ8tj-YsjPn4LqAf_No-/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18655,10 +18655,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-04T03:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 12 dias (04/11/2026)",
+    "detail": "ALERTA URGENTE: Vence em 11 dias (04/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Bh5QyPHremXOZ7NWo1-ik1asukRusV72/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19285,10 +19285,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-05-23T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 153 dias (23/05/2026)",
+    "detail": "VENCIDO há 154 dias (23/05/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1LuLlMv2Bdmy8my5C78nCUAhbFK543Zwu/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -19412,10 +19412,10 @@
     "storzRequestId": "572827",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 21 dias (02/10/2026) | SOLICITADO NA STORZ (572827 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 22 dias (02/10/2026) | SOLICITADO NA STORZ (572827 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1g0v7VXlR-vNU1CXHZaPQcj-wC_ANB4Mh/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -19431,10 +19431,10 @@
     "storzRequestId": "583175",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA MÉDIO: Vence em 28 dias (20/11/2026) | SOLICITADO NA STORZ (583175 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 27 dias (20/11/2026) | SOLICITADO NA STORZ (583175 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1IarNQdtIdOKKqdje-GH95cz0L2W2VlpR/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -19487,10 +19487,10 @@
     "storzRequestId": "574987",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA MÉDIO: Vence em 28 dias (20/11/2026) | SOLICITADO NA STORZ (574987 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA MÉDIO: Vence em 27 dias (20/11/2026) | SOLICITADO NA STORZ (574987 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1NaybEV-49DncES8pEevd0N_rQaN6k5cx/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -19538,10 +19538,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-25T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 90 dias (25/07/2026)",
+    "detail": "VENCIDO há 91 dias (25/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/19AOnOmxc0oYLB75tk8ZJ9uv22SKurNo3/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -19554,10 +19554,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-26T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 89 dias (26/07/2026)",
+    "detail": "VENCIDO há 90 dias (26/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Dy5vaDjq_GglluRdfCPt50OULHbgDdrp/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -20750,10 +20750,10 @@
     "storzRequestId": "607052",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 119 dias (26/06/2026) | SOLICITADO NA STORZ (607052 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 120 dias (26/06/2026) | SOLICITADO NA STORZ (607052 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1kX1xJJyL1_ylmPD9AaneZZozmHTRL_H7/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_80",
@@ -21266,10 +21266,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-09T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 47 dias (09/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 46 dias (09/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1kdVeWnLFqvEPxNB5XlbzxPTNCxhZZZfn/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_88",
@@ -21282,10 +21282,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-09-10T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 43 dias (10/09/2026)",
+    "detail": "VENCIDO há 44 dias (10/09/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/11wZQVr_BjxGBNCdyilz2B64yo2pVHVoI/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_88",
@@ -21483,10 +21483,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-17T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 55 dias (17/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 54 dias (17/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Rayb_4oe36ks_Rwo1186OibXHjbS-AUD/view",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_89",
@@ -21683,10 +21683,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-09-30T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 23 dias (30/09/2026)",
+    "detail": "VENCIDO há 24 dias (30/09/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1yh54MpPMJHsIuHmW0DTUlJjuHEGBFnXa/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -21798,10 +21798,10 @@
     "storzRequestId": "572905",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 26 dias (27/09/2026) | SOLICITADO NA STORZ (572905 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 27 dias (27/09/2026) | SOLICITADO NA STORZ (572905 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1_Y8cpbmPlzCFpCAq4q_vuzk8HOyw0ats/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_90",
@@ -21864,10 +21864,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-06T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 17 dias (06/10/2026)",
+    "detail": "VENCIDO há 18 dias (06/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1BNZfwmcB88UbsH3GUbZxfP29HWmZvsmz/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -21880,10 +21880,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Q3NFdoKAOPN3j7GdMCgh7zSgozZ9LyiV/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_91",
@@ -22686,10 +22686,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-11T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 49 dias (11/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 48 dias (11/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1nxN6vY3clC4n_7Rht6Si6WN32TuC4MSl/view",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-23T03:02:22.507Z"
+    "lastUpdated": "2026-10-24T03:02:36.742Z"
   },
   {
     "inspectorId": "rpo_95",
