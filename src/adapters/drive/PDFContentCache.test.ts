@@ -201,4 +201,34 @@ describe('PDFContentCache — versão da extração de data de emissão', () => 
     ])
     expect(cache.get('f')?.code).toBe('12')
   })
+
+  it('getAllDocuments filtra códigos alheios de documentos com prefixo específico (ex.: NR-35 em Ordem de Serviço)', () => {
+    const cache = load([])
+    const osEntry = entry({
+      fileId: 'os1',
+      filename: '02 – Ordem de Serviço – 21.05.2026 - Fulano.pdf',
+      code: '02',
+      documents: [
+        { code: '21', statusEHS: 'CONFORME', statusDetail: '', source: 'PDF_CONTENT' },
+        { code: '12', statusEHS: 'CONFORME', statusDetail: '', source: 'PDF_CONTENT' },
+        { code: '02', statusEHS: 'CONFORME', statusDetail: '', source: 'PDF_CONTENT' },
+      ],
+    })
+    const docs = cache.getAllDocuments(osEntry)
+    expect(docs.length).toBe(1)
+    expect(docs[0].code).toBe('02')
+
+    const elevEntry = entry({
+      fileId: 'elev1',
+      filename: '31 – Elevador (JASO) – 05.08.2026 - Beltrano.pdf',
+      code: '31',
+      documents: [
+        { code: '21', statusEHS: 'CONFORME', statusDetail: '', source: 'PDF_CONTENT' },
+        { code: '31', statusEHS: 'CONFORME', statusDetail: '', source: 'PDF_CONTENT' },
+      ],
+    })
+    const elevDocs = cache.getAllDocuments(elevEntry)
+    expect(elevDocs.length).toBe(1)
+    expect(elevDocs[0].code).toBe('31')
+  })
 })

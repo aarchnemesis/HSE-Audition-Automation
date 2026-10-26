@@ -3,6 +3,7 @@ import {
   calculateDocExpiration,
   getValidityYearsForCode,
   parseDateFromFilename,
+  parseDocCode,
 } from '../../adapters/drive/certificateFilenameParser.js'
 import {
   CertificateClassifier,
@@ -14,6 +15,90 @@ import { EHSEvaluator } from './EHSEvaluator.js'
 /**
  * Cria coletor de texto pagina a pagina para uso com pdf-parse (Fase 2).
  */
+/**
+ * Determina se um arquivo em PDF tem permissão para ser dividido em múltiplas normas independentes.
+ * Evita que documentos administrativos ou cursos específicos (ex.: Ordem de Serviço, Elevador JASO,
+ * LOTO, Diploma, Ficha de EPI) emitam normas alheias como NR-35 ou NR-10 apenas porque mencionam
+ * a norma em seu conteúdo programático ou nas cláusulas de segurança.
+ */
+export function isMultiNormAllowed(
+  filename: string,
+  overallCode?: string | null,
+  prefixCode?: string | null
+): boolean {
+  const fn = (filename || '').toLowerCase()
+
+  // 1. Pacotes GWO BST / WINDA (First Aid, Manual Handling, Fire Awareness, Working at Heights, WINDA ID)
+  if (
+    /\b(?:gwo|bst|winda)\b/i.test(fn) ||
+    overallCode === '16' ||
+    prefixCode === '16'
+  ) {
+    return true
+  }
+
+  // 2. Pacotes NR-10 Básico + SEP
+  if (
+    /\bsep\b/i.test(fn) &&
+    (/\bnr-?10\b/i.test(fn) || overallCode === '12' || prefixCode === '12')
+  ) {
+    return true
+  }
+
+  // 3. Pacotes Contrato + Aditivo (04/40 e 04.1/40.1)
+  if (
+    /aditiv/i.test(fn) &&
+    (/contrat/i.test(fn) ||
+      overallCode === '40' ||
+      overallCode === '04' ||
+      prefixCode === '04' ||
+      prefixCode === '40')
+  ) {
+    return true
+  }
+
+  // 4. Documentos individuais com prefixo padrão de catálogo (01, 02, 06, 21, 22, 31, etc.)
+  // São estritamente individuais e nunca devem ser fragmentados em normas diferentes.
+  if (prefixCode && DOC_CATALOG_MAP[prefixCode]) {
+    return false
+  }
+
+  // 5. Arquivos genéricos sem prefixo específico (ex.: "Certificados - Fulano.pdf")
+  return !prefixCode
+}
+
+export function getAllowedMultiNormCodes(
+  filename: string,
+  overallCode?: string | null,
+  prefixCode?: string | null
+): Set<string> | null {
+  const fn = (filename || '').toLowerCase()
+  if (
+    /\b(?:gwo|bst|winda)\b/i.test(fn) ||
+    overallCode === '16' ||
+    prefixCode === '16'
+  ) {
+    return new Set(['16', '17', '19', '21', '30', '32'])
+  }
+  if (
+    /\bsep\b/i.test(fn) &&
+    (/\bnr-?10\b/i.test(fn) || overallCode === '12' || prefixCode === '12')
+  ) {
+    return new Set(['12', '12.1', '13'])
+  }
+  if (
+    /aditiv/i.test(fn) &&
+    (/contrat/i.test(fn) ||
+      overallCode === '40' ||
+      overallCode === '04' ||
+      prefixCode === '04' ||
+      prefixCode === '40')
+  ) {
+    return new Set(['04', '04.1', '40', '40.1'])
+  }
+  return null
+}
+
 export function createPdfPageCollector(): {
   pages: string[]
   pagerender: (pageData: any) => Promise<string>
@@ -139,7 +224,10 @@ const DATE_CAPTURE_PATTERN =
  */
 export function parsePortugueseDate(raw: string): Date | null {
   if (!raw) return null
-  let cleaned = raw.replace(/[\x00\0]/g, ' ').trim().replace(/\s+/g, ' ')
+  let cleaned = raw
+    .replace(/[\x00\0]/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ')
 
   // Normaliza casos onde "de" ficou grudado no dia, no mês ou no ano (ex.: "11de Setembrode 2026")
   cleaned = cleaned
@@ -381,6 +469,19 @@ export class PDFContentInspector {
       return [overallResult]
     }
 
+    // Proteção SSOT: Se o arquivo é de uma norma específica e não é um pacote reconhecido de múltiplas normas,
+    // não deve dividi-lo em normas alheias (ex.: Ordem de Serviço ou Elevador JASO mencionando NR-35).
+    const prefixCode = parseDocCode(filename)
+    if (!isMultiNormAllowed(filename, overallResult.code, prefixCode)) {
+      return [overallResult]
+    }
+
+    const allowedCodes = getAllowedMultiNormCodes(
+      filename,
+      overallResult.code,
+      prefixCode
+    )
+
     // Analisa página a página para identificar se há normas distintas
     const pageResultsByCode = new Map<string, InspectedDocumentResult>()
 
@@ -399,6 +500,9 @@ export class PDFContentInspector {
       const pageCode = pageClassification.code
       if (!pageCode) continue
 
+      // Se há restrição de códigos permitidos para este pacote (ex.: GWO ou NR-10+SEP), ignora outros códigos
+      if (allowedCodes && !allowedCodes.has(pageCode)) continue
+
       // Extrai datas para a norma identificada nesta página
       const isContractDoc = ['40', '40.1', '04', '04.1'].includes(pageCode)
       const fnDate = parseDateFromFilename(filename)
@@ -406,12 +510,21 @@ export class PDFContentInspector {
         ? this.extractContractDates(pageText, pageCode, refDate)
         : this.extractCertificateDates(pageText, pageCode, refDate, fnDate)
 
-      // Reconciliação caso a página não traga data expressa no texto mas o nome do arquivo tenha
-      if (!pageCert && fnDate) {
+      // Reconciliação com data do nome do arquivo SOMENTE se for a mesma norma do arquivo como um todo
+      if (!pageCert && fnDate && pageCode === overallResult.code) {
         pageCert = {
           issueDate: fnDate,
           clause: `Data do arquivo: ${filename}`,
         }
+      }
+
+      // Uma página só pode ser considerada um certificado autônomo de norma distinta se trouxer sua própria data
+      if (
+        !pageCert?.issueDate &&
+        !pageCert?.expirationDate &&
+        pageCode !== overallResult.code
+      ) {
+        continue
       }
 
       let expDate: Date | undefined
@@ -453,7 +566,11 @@ export class PDFContentInspector {
         const windaItem: InspectedDocumentResult = {
           code: '30',
           issueDate: pageCert?.issueDate || overallResult.issueDate,
-          expirationDate: calculateDocExpiration('30', pageCert?.issueDate || overallResult.issueDate || refDate, refDate),
+          expirationDate: calculateDocExpiration(
+            '30',
+            pageCert?.issueDate || overallResult.issueDate || refDate,
+            refDate
+          ),
           statusEHS: 'CONFORME',
           statusDetail: 'ID Vitalício (Detectado via conteúdo GWO)',
           source: 'PDF_CONTENT',
@@ -510,7 +627,10 @@ export class PDFContentInspector {
     refDate: Date
   ): { issueDate?: Date; expirationDate?: Date; clause: string } | null {
     // Normaliza quebras de linha e múltiplos espaços
-    const clean = text.replace(/[\x00\0]/g, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
+    const clean = text
+      .replace(/[\x00\0]/g, ' ')
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/\s+/g, ' ')
 
     // Caso A: Cláusula de encerramento explícito:
     // Ex.: "encerrando-se em 08/01/2027", "encerrando- se em 11/05/2027"
@@ -651,7 +771,10 @@ export class PDFContentInspector {
     refDate: Date,
     filenameDate?: Date | null
   ): { issueDate?: Date; expirationDate?: Date; clause: string } | null {
-    const clean = text.replace(/[\x00\0]/g, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
+    const clean = text
+      .replace(/[\x00\0]/g, ' ')
+      .replace(/[\r\n]+/g, ' ')
+      .replace(/\s+/g, ' ')
 
     let explicitExpDate: Date | undefined
     let explicitIssueDate: Date | undefined
@@ -673,13 +796,17 @@ export class PDFContentInspector {
     }
 
     // 1.1 Apólices e certificados de seguro (ex: MAG Seguros / Mongeral Aegon / Porto): tabela com "Início de Vigência ... Término de Vigência ... DATA ... DATA"
-    const seguroTableRegex = /In[íi]cio\s*(?:de|da)?\s*Vig[êe]ncia.*?T[éèe]rmino\s*(?:de|da)?\s*Vig[êe]ncia.*?(\d{2}\/\d{2}\/\d{4}).*?(\d{2}\/\d{2}\/\d{4})/i
+    const seguroTableRegex =
+      /In[íi]cio\s*(?:de|da)?\s*Vig[êe]ncia.*?T[éèe]rmino\s*(?:de|da)?\s*Vig[êe]ncia.*?(\d{2}\/\d{2}\/\d{4}).*?(\d{2}\/\d{2}\/\d{4})/i
     const seguroTableMatch = clean.match(seguroTableRegex)
     if (seguroTableMatch) {
       const parsedInicio = parsePortugueseDate(seguroTableMatch[1])
       const parsedTermino = parsePortugueseDate(seguroTableMatch[2])
       if (parsedTermino) {
-        if (!explicitExpDate || parsedTermino.getTime() > explicitExpDate.getTime()) {
+        if (
+          !explicitExpDate ||
+          parsedTermino.getTime() > explicitExpDate.getTime()
+        ) {
           explicitExpDate = parsedTermino
           foundClause = seguroTableMatch[0].slice(0, 100)
         }
@@ -744,11 +871,19 @@ export class PDFContentInspector {
     for (const m of clean.matchAll(periodoRegex)) {
       const startParsed = parsePortugueseDate(m[1])
       if (startParsed) {
-        completionCandidates.push({ date: startParsed, clause: m[0], priority: 0 })
+        completionCandidates.push({
+          date: startParsed,
+          clause: m[0],
+          priority: 0,
+        })
       } else {
         const endParsed = parsePortugueseDate(m[2])
         if (endParsed) {
-          completionCandidates.push({ date: endParsed, clause: m[0], priority: 1 })
+          completionCandidates.push({
+            date: endParsed,
+            clause: m[0],
+            priority: 1,
+          })
         }
       }
     }
@@ -772,7 +907,9 @@ export class PDFContentInspector {
       explicitIssueDate = startCandidates[0].date
       foundClause = startCandidates[0].clause
     } else {
-      const directCandidates = completionCandidates.filter(c => c.priority === 1)
+      const directCandidates = completionCandidates.filter(
+        c => c.priority === 1
+      )
       if (directCandidates.length > 0) {
         directCandidates.sort((a, b) => b.date.getTime() - a.date.getTime())
         explicitIssueDate = directCandidates[0].date

@@ -507,5 +507,39 @@ describe('PDFContentInspector', () => {
       )
       expect(ymd(result.issueDate)).toEqual([2024, 10, 31])
     })
+
+    it('não extrai normas alheias (como NR-35) a partir de Ordem de Serviço ou Elevador JASO', () => {
+      const pageOs1 =
+        'ORDEM DE SERVIÇO SOBRE SEGURANÇA E SAÚDE NO TRABALHO\n' +
+        'Função: Inspetor de Qualidade.\n' +
+        'Obrigações: Cumprir NR-35 Trabalho em Altura e NR-10 Segurança em Eletricidade.\n' +
+        'Sorocaba, 21 de maio de 2026.'
+      const pageOs2 =
+        'Disposições Gerais da Ordem de Serviço.\n' +
+        'Assinatura do Empregado: Carlos Eduardo.'
+      const osResults = PDFContentInspector.inspectPages(
+        '02 – Ordem de Serviço – 21.05.2026 - CARLOS EDUARDO FERREIRA ALVES.pdf',
+        [pageOs1, pageOs2],
+        refDate
+      )
+      expect(osResults.length).toBe(1)
+      expect(osResults[0].code).toBe('02')
+      expect(osResults.some(r => r.code === '21')).toBe(false)
+      expect(osResults.some(r => r.code === '12')).toBe(false)
+
+      const pageElev1 =
+        'TREINAMENTO DE OPERADOR DE ELEVADOR CREMALHEIRA (JASO)\n' +
+        'Pré-requisito obrigatório: O colaborador deve possuir NR-35 Trabalho em Altura válido.\n' +
+        'Concluído em 05 de agosto de 2026.'
+      const pageElev2 = 'Conteúdo Programático do Treinamento de Elevador JASO.'
+      const elevResults = PDFContentInspector.inspectPages(
+        '31 – Elevador (JASO) – 05.08.2026 - EZEQUIEL CRUZ VIEIRA.pdf',
+        [pageElev1, pageElev2],
+        refDate
+      )
+      expect(elevResults.length).toBe(1)
+      expect(elevResults[0].code).toBe('31')
+      expect(elevResults.some(r => r.code === '21')).toBe(false)
+    })
   })
 })
