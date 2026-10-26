@@ -1,5 +1,7 @@
 import fs from 'fs'
 import path from 'path'
+import { DOC_CATALOG_MAP } from '../../domain/services/ComplianceEngine.js'
+import { parseDocCode } from './certificateFilenameParser.js'
 
 /**
  * Versão da extração de datas de Contrato/Aditivo (04, 04.1, 40, 40.1). Subir este número no mesmo
@@ -21,6 +23,56 @@ const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
 
 const SIGNATURE_CLAUSE =
   /assinou\s+em|log\s+gerado\s+em|^(?:Fortaleza|Caucaia|Sorocaba|Mossor[oó]|Parnamirim|S[aã]o\s+Paulo|Natal)\b/i
+
+export function getAllowedCodesForFile(
+  filename?: string,
+  primaryCode?: string | null
+): Set<string> | null {
+  const fn = (filename || '').toLowerCase()
+  const prefix = parseDocCode(filename || '')
+
+  if (
+    /\b(?:gwo|bst|winda)\b/i.test(fn) ||
+    primaryCode === '16' ||
+    prefix === '16'
+  ) {
+    return new Set(['16', '17', '19', '21', '30', '32'])
+  }
+  if (
+    /\bsep\b/i.test(fn) &&
+    (/\bnr-?10\b/i.test(fn) || primaryCode === '12' || prefix === '12')
+  ) {
+    return new Set(['12', '12.1', '13'])
+  }
+  if (
+    /aditiv/i.test(fn) &&
+    (/contrat/i.test(fn) ||
+      primaryCode === '40' ||
+      primaryCode === '04' ||
+      prefix === '04' ||
+      prefix === '40')
+  ) {
+    return new Set(['04', '04.1', '40', '40.1'])
+  }
+  if (prefix && DOC_CATALOG_MAP[prefix]) {
+    const set = new Set([prefix])
+    if (prefix === '21') set.add('21.1')
+    if (prefix === '21.1') set.add('21')
+    if (prefix === '20') set.add('20.1')
+    if (prefix === '20.1') set.add('20')
+    if (prefix === '15') set.add('15.1')
+    if (prefix === '15.1') set.add('15')
+    if (prefix === '06') set.add('06.1')
+    if (prefix === '06.1') set.add('06')
+    if (prefix === '40') set.add('40.1')
+    if (prefix === '40.1') set.add('40')
+    return set
+  }
+  if (primaryCode && DOC_CATALOG_MAP[primaryCode]) {
+    return new Set([primaryCode])
+  }
+  return null
+}
 
 export function isSignatureDateEntry(entry: CachedPDFEntry): boolean {
   return [
@@ -147,6 +199,32 @@ export class PDFContentCache {
                   continue
                 }
 
+                // Saneia entry.documents contra alucinação de normas alheias em páginas secundárias
+                const allowed = getAllowedCodesForFile(
+                  entry.filename,
+                  entry.code
+                )
+                if (allowed && entry.documents && entry.documents.length > 0) {
+                  const filtered = entry.documents.filter(
+                    d => d.code && allowed.has(d.code)
+                  )
+                  if (filtered.length !== entry.documents.length) {
+                    entry.documents = filtered.length > 0 ? filtered : undefined
+                    this.isDirty = true
+                  }
+                }
+                const prefix = parseDocCode(entry.filename || '')
+                if (
+                  prefix &&
+                  DOC_CATALOG_MAP[prefix] &&
+                  prefix !== '16' &&
+                  prefix !== '12' &&
+                  entry.code !== prefix
+                ) {
+                  entry.code = prefix
+                  this.isDirty = true
+                }
+
                 this.cache.set(entry.fileId, entry)
               }
             }
@@ -180,8 +258,16 @@ export class PDFContentCache {
    * Retorna todos os documentos associados a esta entrada de cache (seja individual ou lista da Fase 2).
    */
   getAllDocuments(entry: CachedPDFEntry): CachedPDFDocument[] {
+    const allowed = getAllowedCodesForFile(entry.filename, entry.code)
     if (entry.documents && entry.documents.length > 0) {
-      return entry.documents
+      if (allowed) {
+        const filtered = entry.documents.filter(
+          d => d.code && allowed.has(d.code)
+        )
+        if (filtered.length > 0) return filtered
+      } else {
+        return entry.documents
+      }
     }
     return [
       {
