@@ -1,4 +1,4 @@
-import { drive_v3, google, Auth } from 'googleapis'
+import { Auth, drive_v3, google } from 'googleapis'
 type OAuth2Client = Auth.OAuth2Client
 import pdfParse from 'pdf-parse'
 import { Certificate, Inspector } from '../../domain/models/Certificate.js'
@@ -14,6 +14,7 @@ import { TesseractOcrAdapter } from '../ocr/TesseractOcrAdapter.js'
 import {
   CONTRACT_EXTRACTOR_VERSION,
   PDFContentCache,
+  SIGNATURE_DATE_EXTRACTOR_VERSION,
 } from './PDFContentCache.js'
 import {
   calculateDocExpiration,
@@ -128,7 +129,8 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         if (entry.mimeType !== FOLDER_MIME || !entry.id || !entry.name) continue
 
         const folderName = entry.name
-        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(folderName.trim())) continue
+        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(folderName.trim()))
+          continue
         if (filterNames && filterNames.length > 0) {
           const matchesFilter = filterNames.some(fname =>
             folderName.toUpperCase().includes(fname.toUpperCase())
@@ -151,7 +153,14 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           BRANCH_EXCLUDED_FOLDER_NAMES[rootFolderId]
         )
 
-        inspectors.push({ id: entry.id, name, role, certificates })
+        inspectors.push({
+          id: entry.id,
+          name,
+          role,
+          certificates,
+          driveFolderId: entry.id,
+          driveFolderUrl: `https://drive.google.com/drive/folders/${entry.id}`,
+        })
       }
     }
 
@@ -174,7 +183,8 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
 
       if (entry.mimeType === FOLDER_MIME) {
         const lowerName = entry.name.toLowerCase().trim()
-        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(lowerName) || !entry.id) continue
+        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(lowerName) || !entry.id)
+          continue
         if (excludedFolderNames?.some(excluded => lowerName.includes(excluded)))
           continue
         await this.scanFolderRecursive(
@@ -269,6 +279,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
             filename,
             v: 2, // flag de versão da extração multi-norma (WINDA ID)
             cv: CONTRACT_EXTRACTOR_VERSION,
+            sv: SIGNATURE_DATE_EXTRACTOR_VERSION,
             modifiedTime: entry.modifiedTime || undefined,
             code: primaryDoc?.code || null,
             issueDate: primaryDoc?.issueDate?.toISOString(),

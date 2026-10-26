@@ -465,4 +465,47 @@ describe('PDFContentInspector', () => {
       expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2026-05-21')
     })
   })
+  describe('signature dates never override the filename date', () => {
+    const refDate = new Date(2026, 9, 20)
+    const ymd = (d?: Date) =>
+      d ? [d.getFullYear(), d.getMonth() + 1, d.getDate()] : undefined
+
+    it('uses the filename date instead of a later Clicksign log date', () => {
+      const result = PDFContentInspector.inspect(
+        '16 – GWO Primeiros Socorros (Rec) – 19.11.2024 - INOCENCIO ROCHA DE MOURA.pdf',
+        'CERTIFICADO GWO Primeiros Socorros concluido com sucesso. Log gerado em 26 de novembro de 2024. Versao v1.48.0.',
+        refDate
+      )
+      expect(ymd(result.issueDate)).toEqual([2024, 11, 19])
+      expect(ymd(result.expirationDate)).toEqual([2026, 11, 19])
+    })
+
+    it('uses the filename date instead of a later city signature date', () => {
+      const result = PDFContentInspector.inspect(
+        '16 – GWO Primeiros Socorros (Rec) – 19.11.2024 - INOCENCIO ROCHA DE MOURA.pdf',
+        'CERTIFICADO GWO Primeiros Socorros concluido com sucesso. Sorocaba, 26 de novembro de 2024. Instrutor responsavel.',
+        refDate
+      )
+      expect(ymd(result.issueDate)).toEqual([2024, 11, 19])
+      expect(ymd(result.expirationDate)).toEqual([2026, 11, 19])
+    })
+
+    it('falls back to the Clicksign log date when the filename has no date', () => {
+      const result = PDFContentInspector.inspect(
+        '16 – GWO Primeiros Socorros - INOCENCIO ROCHA DE MOURA.pdf',
+        'CERTIFICADO GWO Primeiros Socorros concluido com sucesso. Log gerado em 26 de novembro de 2024. Versao v1.48.0.',
+        refDate
+      )
+      expect(ymd(result.issueDate)).toEqual([2024, 11, 26])
+    })
+
+    it('keeps the explicit course start date from the text', () => {
+      const result = PDFContentInspector.inspect(
+        '12 – NR-10 Básico (F+R) – 31.10.2024 - ANTONIO CARVALHO JUNIOR.pdf',
+        'Concluiu com proficiencia o treinamento NR10 Basico no periodo de 31 de Outubro de 2024 a 12 de Novembro de 2024. Log gerado em 18 de novembro de 2024.',
+        refDate
+      )
+      expect(ymd(result.issueDate)).toEqual([2024, 10, 31])
+    })
+  })
 })

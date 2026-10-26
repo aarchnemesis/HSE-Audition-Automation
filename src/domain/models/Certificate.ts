@@ -47,6 +47,8 @@ export interface Inspector {
     lng?: number
   }
   certificates: Map<string, Certificate> // Mapeado pelo código ("01".."30")
+  driveFolderId?: string
+  driveFolderUrl?: string
   /** Códigos de documentos marcados como N/A na linha do colaborador no RPO (isentos/não aplicáveis) */
   exemptDocCodes?: string[]
   /** Status da auditoria manual no RPO: 'VALIDADO' (fundo branco / verificado) ou 'PENDENTE_REVISAO' (fundo laranja) */

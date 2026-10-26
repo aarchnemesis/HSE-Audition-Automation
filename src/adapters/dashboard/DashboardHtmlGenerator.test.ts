@@ -283,4 +283,17 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('--status-crit: #DC2626;')
     expect(html).toContain('--brand-coral: #DC2626;')
   })
+
+  it('deve conter estrutura para vincular pasta do Google Drive no prontuário do colaborador', () => {
+    const recordWithDrive: HSEDatabaseRecord = {
+      ...sampleRecords[0],
+      driveFolderUrl: 'https://drive.google.com/drive/folders/1234567890abcdef',
+    }
+    const html = buildDashboardHtml([recordWithDrive])
+    expect(html).toContain('id="modalCollabDriveAction"')
+    expect(html).toContain('driveFolderUrl')
+    expect(html).toContain('btn-collab-drive')
+    expect(html).toContain('Pasta no Drive')
+    expect(html).toContain('Sem pasta no Drive')
+  })
 })

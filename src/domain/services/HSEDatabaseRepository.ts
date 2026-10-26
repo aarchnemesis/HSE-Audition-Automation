@@ -8,13 +8,13 @@ import {
 } from '../models/Certificate.js'
 import { StorzRequest } from '../models/StorzRequest.js'
 import { TripleAuditResult } from './AuditTriangulator.js'
+import { ELECTIVE_DOC_CODES, getTrainingModality } from './ComplianceEngine.js'
 import {
   buildComplianceSnapshot,
   loadComplianceHistory,
   mergeComplianceHistory,
   saveComplianceHistory,
 } from './ComplianceHistory.js'
-import { ELECTIVE_DOC_CODES, getTrainingModality } from './ComplianceEngine.js'
 import { matchesInspector } from './InspectorMatcher.js'
 import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
@@ -39,6 +39,8 @@ export interface HSEDatabaseRecord {
   detail: string
   /** Link to the certificate in Google Drive, when the evidence comes from a Drive file */
   evidenceUrl?: string
+  /** Link to inspector folder in Google Drive */
+  driveFolderUrl?: string
   rpoAuditStatus?: 'VALIDADO' | 'PENDENTE_REVISAO'
   lastUpdated: string
 }
@@ -112,6 +114,15 @@ export class HSEDatabaseRepository {
           evidenceUrl: toEvidenceUrl(
             inspector?.certificates.get(item.code)?.sourcePath
           ),
+
+          driveFolderUrl:
+            inspector?.driveFolderUrl ||
+            (inspector?.id &&
+            inspector.id.length > 15 &&
+            !inspector.id.startsWith('rpo_')
+              ? `https://drive.google.com/drive/folders/${inspector.id}`
+              : undefined),
+
           rpoAuditStatus:
             inspector?.rpoAuditStatus ||
             (RPOAuditStatusManager.isCollabValidated(audit.inspectorName)

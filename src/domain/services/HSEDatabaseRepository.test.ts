@@ -103,6 +103,29 @@ describe('HSEDatabaseRepository.saveAuditSnapshot', () => {
     expect(byCode.get('10')?.evidenceUrl).toBeUndefined()
   })
 
+  it('stores driveFolderUrl on the records when available on the inspector', () => {
+    const dbPath = path.join(tmpDir, 'db.json')
+    const repo = new HSEDatabaseRepository(dbPath)
+    const inspector: Inspector = {
+      ...makeInspector(),
+      driveFolderUrl: 'https://drive.google.com/drive/folders/folder_xyz_123',
+    }
+    const item = {
+      code: '01',
+      reqName: 'ASO',
+      status: 'CONFORME' as const,
+      isModalityCompliant: true,
+      hasDriveDoc: true,
+      detail: 'Válido.',
+    }
+    repo.saveAuditSnapshot([makeAuditResult([item])], [inspector])
+    const records = repo.getAllRecords()
+    expect(records).toHaveLength(1)
+    expect(records[0].driveFolderUrl).toBe(
+      'https://drive.google.com/drive/folders/folder_xyz_123'
+    )
+  })
+
   it('grava normalmente documento eletivo (Vestas) quando a pessoa TEM o certificado', () => {
     const dbPath = path.join(tmpDir, 'db.json')
     const repo = new HSEDatabaseRepository(dbPath)

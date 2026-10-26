@@ -289,8 +289,8 @@ export class PDFContentInspector {
     }
 
     // 3. Extração para Certificados Normativos (NRs, GWO, ASO, Treinamentos)
-    let certResult = this.extractCertificateDates(text, code, refDate)
     const fnDate = parseDateFromFilename(filename)
+    let certResult = this.extractCertificateDates(text, code, refDate, fnDate)
 
     // Reconciliação com data do nome do arquivo (especialmente crucial para PDFs F+R - Formação + Reciclagem):
     // Se o nome do arquivo contém uma data mais recente que a data de emissão extraída do texto
@@ -401,12 +401,12 @@ export class PDFContentInspector {
 
       // Extrai datas para a norma identificada nesta página
       const isContractDoc = ['40', '40.1', '04', '04.1'].includes(pageCode)
+      const fnDate = parseDateFromFilename(filename)
       let pageCert = isContractDoc
         ? this.extractContractDates(pageText, pageCode, refDate)
-        : this.extractCertificateDates(pageText, pageCode, refDate)
+        : this.extractCertificateDates(pageText, pageCode, refDate, fnDate)
 
       // Reconciliação caso a página não traga data expressa no texto mas o nome do arquivo tenha
-      const fnDate = parseDateFromFilename(filename)
       if (!pageCert && fnDate) {
         pageCert = {
           issueDate: fnDate,
@@ -648,7 +648,8 @@ export class PDFContentInspector {
   private static extractCertificateDates(
     text: string,
     code: string | null,
-    refDate: Date
+    refDate: Date,
+    filenameDate?: Date | null
   ): { issueDate?: Date; expirationDate?: Date; clause: string } | null {
     const clean = text.replace(/[\x00\0]/g, ' ').replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ')
 
@@ -777,6 +778,13 @@ export class PDFContentInspector {
         explicitIssueDate = directCandidates[0].date
         if (!foundClause) foundClause = directCandidates[0].clause
       }
+    }
+
+    // A data do nome do arquivo é a data inicial padronizada; datas de assinatura (cidade/Clicksign)
+    // só servem de último recurso quando o nome não traz data.
+    if (!explicitIssueDate && filenameDate) {
+      explicitIssueDate = filenameDate
+      if (!foundClause) foundClause = 'Data do nome do arquivo'
     }
 
     // Ex. D: Assinatura de cidade no rodapé: "Fortaleza, 08 de Janeiro de 2026", "Sorocaba (SP), 29 de Março de 2023"

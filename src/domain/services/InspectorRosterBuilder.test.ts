@@ -195,5 +195,23 @@ describe('buildRoster', () => {
       expect(mergedCert?.expirationDate).toEqual(driveOldDate)
       expect(roster[0].inspector.rpoAuditStatus).toBe('PENDENTE_REVISAO')
     })
+
+    it('associa driveFolderUrl exclusivamente a partir da pasta varrida no Google Drive', () => {
+      const drive = [
+        inspector('FULANO DRIVE', 'IQ', [], {
+          driveFolderUrl: 'https://drive.google.com/drive/folders/drive123',
+        }),
+      ]
+      const rpo = [
+        inspector('FULANO DRIVE', 'IQ'),
+        inspector('FULANO SEM PASTA', 'IQ'),
+      ]
+
+      const roster = buildRoster(rpo, drive)
+      expect(roster[0].inspector.driveFolderUrl).toBe(
+        'https://drive.google.com/drive/folders/drive123'
+      )
+      expect(roster[1].inspector.driveFolderUrl).toBeUndefined()
+    })
   })
 })

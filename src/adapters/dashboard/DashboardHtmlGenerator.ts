@@ -31,10 +31,19 @@ export function buildDashboardHtml(
   const rpoDivergencesJson = JSON.stringify(extraData.rpoDivergences || [])
   const storzHistoryJson = JSON.stringify(extraData.storzHistory || [])
   const sourceHealthJson = JSON.stringify(extraData.sourceHealth || {})
-  const complianceHistoryJson = JSON.stringify(extraData.complianceHistory || [])
+  const complianceHistoryJson = JSON.stringify(
+    extraData.complianceHistory || []
+  )
   const now = new Date()
-  const auditDateStr = now.toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' })
-  const auditTimeStr = now.toLocaleTimeString('pt-BR', { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit' })
+  const auditDateStr = now.toLocaleDateString('pt-BR', {
+    timeZone: 'America/Sao_Paulo',
+  })
+  const auditTimeStr = now.toLocaleTimeString('pt-BR', {
+    timeZone: 'America/Sao_Paulo',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  })
   const auditFullDateTimeStr = `Sincronizado e auditado em ${auditDateStr} às ${auditTimeStr} (Horário de Brasília)`
 
   return `<!DOCTYPE html>
@@ -1438,6 +1447,23 @@ export function buildDashboardHtml(
     }
     .modal-head h3 { font-size: 14px; font-weight: 700; }
     .modal-close { background: none; border: none; color: #FFF; font-size: 18px; cursor: pointer; }
+    .btn-collab-drive {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      background: rgba(0, 210, 180, 0.12);
+      color: #00D2B4;
+      border: 1px solid rgba(0, 210, 180, 0.3);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .btn-collab-drive:hover {
+      background: rgba(0, 210, 180, 0.25);
+    }
     .modal-body { padding: 16px 20px; overflow-y: auto; flex: 1; }
 
     /* COCKPIT OPERACIONAL - EXECUTIVE STYLES */
@@ -3648,7 +3674,10 @@ export function buildDashboardHtml(
   <div class="modal-overlay" id="collabModal" onclick="closeModal(event)">
     <div class="modal-content" onclick="event.stopPropagation()">
       <div class="modal-head">
-        <h3 id="modalCollabName">Dossiê do Colaborador</h3>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0;flex:1;margin-right:12px;">
+          <h3 id="modalCollabName" style="margin:0;">Dossiê do Colaborador</h3>
+          <div id="modalCollabDriveAction"></div>
+        </div>
         <button class="modal-close" onclick="closeModal()">×</button>
       </div>
       <div class="modal-body" id="modalCollabContent"></div>
@@ -3741,10 +3770,22 @@ export function buildDashboardHtml(
           role: r.role || 'Técnico',
           sector: r.sector || 'Operações',
           rpoBranch: r.rpoBranch,
+          driveFolderUrl: r.driveFolderUrl,
           records: []
         });
       }
-      peopleMap.get(r.inspectorName).records.push(r);
+      const person = peopleMap.get(r.inspectorName);
+      if (r.driveFolderUrl && !person.driveFolderUrl) {
+        person.driveFolderUrl = r.driveFolderUrl;
+      }
+      person.records.push(r);
+    });
+
+    (rawRpoDivergences || []).forEach(d => {
+      if (d.driveFolderUrl && peopleMap.has(d.inspectorName)) {
+        const p = peopleMap.get(d.inspectorName);
+        if (!p.driveFolderUrl) p.driveFolderUrl = d.driveFolderUrl;
+      }
     });
 
     const sectorFilter = document.getElementById('sectorFilter');
@@ -5997,7 +6038,7 @@ export function buildDashboardHtml(
           : '<span class="action-pill action-ok">' + SVG_ICONS.check + 'Consistente</span>';
 
         tr.innerHTML = 
-          '<td style="text-align:left;"><strong>' + item.inspectorName + '</strong></td>' +
+          '<td style="text-align:left;"><span style="cursor:pointer;color:var(--brand-blue);" data-collab-name="' + (item.inspectorName || '').replace(/"/g, '&quot;') + '" onclick="openCollabModal(this.dataset.collabName)" title="Ver prontuário completo"><strong>' + item.inspectorName + '</strong></span>' + (item.driveFolderUrl ? ' <a href="' + item.driveFolderUrl.replace(/"/g, '&quot;') + '" target="_blank" rel="noopener noreferrer" title="Abrir pasta no Google Drive" style="color:#00D2B4;display:inline-flex;align-items:center;vertical-align:middle;margin-left:5px;"><svg style="width:12px;height:12px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>' : '') + '</td>' +
           '<td style="text-align:left;"><strong>' + item.docName + '</strong> <span style="font-size: 12px;color:var(--text-muted);">(Cód ' + item.docCode + ')</span></td>' +
           '<td>' + badgeHtml + '</td>' +
           '<td><span class="mono">' + trustedExp + '</span>' + trustedSourceBadge + '</td>' +
@@ -6508,6 +6549,23 @@ export function buildDashboardHtml(
         ? ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size: 12px;font-weight:700;background:#EEF2FF;color:#3730A3;border:1px solid #C7D2FE;vertical-align:middle;margin-left:8px;">RPO Validado</span>'
         : ' <span style="display:inline-block;padding:2px 8px;border-radius:12px;font-size: 12px;font-weight:700;background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;vertical-align:middle;margin-left:8px;">Pendente Revisão</span>';
       document.getElementById('modalCollabName').innerHTML = p.name + ' (' + p.role + ' - ' + p.sector + ')' + auditBadge;
+
+      const driveActionEl = document.getElementById('modalCollabDriveAction');
+      if (driveActionEl) {
+        if (p.driveFolderUrl) {
+          const safeUrl = p.driveFolderUrl.replace(/"/g, '&quot;');
+          driveActionEl.innerHTML = '<a href="' + safeUrl + '" target="_blank" rel="noopener noreferrer" class="btn-collab-drive" title="Abrir pasta de documentos no Google Drive">' +
+            '<svg style="width:13px;height:13px;display:inline-block;vertical-align:middle;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>' +
+            '<span>Pasta no Drive</span>' +
+            '<svg style="width:11px;height:11px;display:inline-block;vertical-align:middle;opacity:0.8;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>' +
+          '</a>';
+        } else {
+          driveActionEl.innerHTML = '<span style="display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:500;background:rgba(255,255,255,0.06);color:#94A3B8;border:1px solid rgba(255,255,255,0.1);" title="Pasta não vinculada no Google Drive">' +
+            '<svg style="width:12px;height:12px;display:inline-block;vertical-align:middle;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>' +
+            '<span>Sem pasta no Drive</span>' +
+          '</span>';
+        }
+      }
       
       let html = '<table class="matrix-table responsive-table" style="font-size:12px;">' +
         '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th>Validade</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
