@@ -42,6 +42,7 @@ export interface DriveRpoComparisonItem {
   detail: string
   diffDays?: number
   recommendedAction?: string
+  driveFolderUrl?: string
 }
 
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
@@ -81,6 +82,19 @@ export class DriveRpoAuditor {
         r => r.collaboratorCpf
       )
 
+      const driveFolderUrl =
+        driveInspector.driveFolderUrl ||
+        (driveInspector.id && !driveInspector.id.startsWith('rpo_')
+          ? `https://drive.google.com/drive/folders/${driveInspector.id}`
+          : undefined)
+
+      const pushItem = (item: DriveRpoComparisonItem) => {
+        items.push({
+          ...item,
+          driveFolderUrl: item.driveFolderUrl || driveFolderUrl,
+        })
+      }
+
       const codesToCheck =
         docCodes || this.unionOfCodes(driveInspector, rpoInspector)
 
@@ -105,7 +119,7 @@ export class DriveRpoAuditor {
 
         // Caso 1: Drive ou Storz tem data, mas RPO não tem nada registrado
         if (trustedExpiration && !rpoCert?.expirationDate) {
-          items.push({
+          pushItem({
             inspectorName: driveInspector.name,
             docCode: code,
             docName,
@@ -127,7 +141,7 @@ export class DriveRpoAuditor {
         // Caso 2: Certificado físico existe no Drive, mas SEM data de validade identificada
         if (driveCert && !driveCert.expirationDate && !storzExpiration) {
           if (rpoCert?.expirationDate) {
-            items.push({
+            pushItem({
               inspectorName: driveInspector.name,
               docCode: code,
               docName,
@@ -140,7 +154,7 @@ export class DriveRpoAuditor {
               recommendedAction: 'Conferir data no documento físico anexado',
             })
           } else {
-            items.push({
+            pushItem({
               inspectorName: driveInspector.name,
               docCode: code,
               docName,
@@ -162,7 +176,7 @@ export class DriveRpoAuditor {
             RPOAuditStatusManager.isCollabValidated(
               rpoInspector?.name || driveInspector.name
             )
-          items.push({
+          pushItem({
             inspectorName: driveInspector.name,
             docCode: code,
             docName,
@@ -189,7 +203,7 @@ export class DriveRpoAuditor {
         // ~17.500 dias, mesmo quando não há erro nenhum de digitação. Pra esses dois, só a
         // presença em ambas as fontes importa.
         if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
-          items.push({
+          pushItem({
             inspectorName: driveInspector.name,
             docCode: code,
             docName,
@@ -256,7 +270,7 @@ export class DriveRpoAuditor {
             recommendedAction = `Atualizar data na RPO para ${this.formatDate(trustedExpiration!)}`
           }
 
-          items.push({
+          pushItem({
             inspectorName: driveInspector.name,
             docCode: code,
             docName,
@@ -276,7 +290,7 @@ export class DriveRpoAuditor {
           continue
         }
 
-        items.push({
+        pushItem({
           inspectorName: driveInspector.name,
           docCode: code,
           docName,

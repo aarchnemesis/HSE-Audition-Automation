@@ -387,4 +387,21 @@ describe('DriveRpoAuditor.compare', () => {
     expect(result[0].divergenceKind).toBe('DATA_DIVERGENTE')
     expect(result[0].isRpoValidated).toBe(false)
   })
+
+  it('propaga o driveFolderUrl da pasta para os itens de auditoria', () => {
+    const drive = [
+      {
+        ...makeInspector('FULANO', [makeCert('01', new Date(2027, 0, 10))]),
+        driveFolderUrl: 'https://drive.google.com/drive/folders/test12345',
+      },
+    ]
+    const rpo = [
+      makeInspector('FULANO', [makeCert('01', new Date(2027, 2, 10))]),
+    ]
+    const result = DriveRpoAuditor.compare(drive, rpo)
+    expect(result.length).toBeGreaterThan(0)
+    expect(result[0].driveFolderUrl).toBe(
+      'https://drive.google.com/drive/folders/test12345'
+    )
+  })
 })

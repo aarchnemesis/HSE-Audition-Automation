@@ -10,7 +10,24 @@ import path from 'path'
  */
 export const CONTRACT_EXTRACTOR_VERSION = 1
 
+/**
+ * Versão da extração de data de emissão de certificados. Subir este número no mesmo commit de qualquer
+ * correção na prioridade das datas de emissão: no próximo sync, só as entradas cuja data veio de uma
+ * assinatura (cidade no rodapé ou log do Clicksign) são baixadas e re-inspecionadas.
+ */
+export const SIGNATURE_DATE_EXTRACTOR_VERSION = 1
+
 const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
+
+const SIGNATURE_CLAUSE =
+  /assinou\s+em|log\s+gerado\s+em|^(?:Fortaleza|Caucaia|Sorocaba|Mossor[oó]|Parnamirim|S[aã]o\s+Paulo|Natal)\b/i
+
+export function isSignatureDateEntry(entry: CachedPDFEntry): boolean {
+  return [
+    entry.extractedClause,
+    ...(entry.documents || []).map(d => d.extractedClause),
+  ].some(clause => SIGNATURE_CLAUSE.test(clause || ''))
+}
 
 export function isContractEntry(entry: CachedPDFEntry): boolean {
   return (
@@ -53,6 +70,8 @@ export interface CachedPDFEntry {
   v?: number
   /** Versão da extração de contrato (ver CONTRACT_EXTRACTOR_VERSION) */
   cv?: number
+  /** Versão da extração de data de emissão (ver SIGNATURE_DATE_EXTRACTOR_VERSION) */
+  sv?: number
 }
 
 export class PDFContentCache {
@@ -114,6 +133,15 @@ export class PDFContentCache {
                 if (
                   isContractEntry(entry) &&
                   (entry.cv ?? 0) < CONTRACT_EXTRACTOR_VERSION
+                ) {
+                  this.isDirty = true
+                  continue
+                }
+
+                // Data de emissão tirada de uma assinatura por uma versão anterior da lógica: re-inspeciona
+                if (
+                  isSignatureDateEntry(entry) &&
+                  (entry.sv ?? 0) < SIGNATURE_DATE_EXTRACTOR_VERSION
                 ) {
                   this.isDirty = true
                   continue

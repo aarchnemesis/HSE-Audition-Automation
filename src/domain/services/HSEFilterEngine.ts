@@ -90,6 +90,7 @@ export class HSEFilterEngine {
       { header: 'Progresso Storz (%)', key: 'storzProgress', width: 20 },
       { header: 'Prazo Limite Storz', key: 'storzDeadline', width: 20 },
       { header: 'Detalhes da Auditoria', key: 'detail', width: 55 },
+      { header: 'Pasta no Drive', key: 'driveFolderUrl', width: 20 },
     ]
 
     // Formatar Cabeçalho (Azul Escuro com Texto Branco)
@@ -120,7 +121,17 @@ export class HSEFilterEngine {
             : 'N/A',
         storzDeadline: rec.storzDeadline || 'N/A',
         detail: rec.detail,
+        driveFolderUrl: rec.driveFolderUrl || '',
       })
+
+      if (rec.driveFolderUrl) {
+        const driveCell = row.getCell('driveFolderUrl')
+        driveCell.value = {
+          text: 'Abrir Pasta ↗',
+          hyperlink: rec.driveFolderUrl,
+        }
+        driveCell.font = { color: { argb: '2563EB' }, underline: true }
+      }
 
       // Estilização da célula de Modalidade
       const modCell = row.getCell('modality')

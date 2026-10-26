@@ -80,7 +80,16 @@ export function buildRoster(
       mergedCertificates.set('40', { ...aditivo, code: '40' })
     }
 
+    const driveFolderId = driveMatch?.driveFolderId || driveMatch?.id
+    const driveFolderUrl =
+      driveMatch?.driveFolderUrl ||
+      (driveMatch?.id && !driveMatch.id.startsWith('rpo_')
+        ? `https://drive.google.com/drive/folders/${driveMatch.id}`
+        : undefined)
+
     const inspector: Inspector = {
+      driveFolderId,
+      driveFolderUrl,
       ...rpoInspector,
       rpoAuditStatus: auditStatus,
       location: driveMatch?.location,

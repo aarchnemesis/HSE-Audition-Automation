@@ -26,7 +26,12 @@ export function matchesInspector(
   if (inspector.cpf && candidateCpf) {
     return normalizeCpf(inspector.cpf) === normalizeCpf(candidateCpf)
   }
-  return normalizeName(candidateName).includes(normalizeName(inspector.name))
+  const normCandidate = normalizeName(candidateName)
+  const normInspector = normalizeName(inspector.name)
+  return (
+    normCandidate.includes(normInspector) ||
+    normInspector.includes(normCandidate)
+  )
 }
 
 export function findInspectorMatch<T>(

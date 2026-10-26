@@ -296,6 +296,7 @@ export class SmartsheetRPOAdapter implements IRPOExporter {
         sector: cellByTitle.get(SECTOR_COLUMN) as string | undefined,
         rpoBranch: findRpoBranch(row),
         windaId: cellByTitle.get(WINDA_COLUMN) as string | undefined,
+
         certificates,
         exemptDocCodes: exemptDocCodes.length > 0 ? exemptDocCodes : undefined,
       })

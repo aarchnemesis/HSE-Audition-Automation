@@ -169,8 +169,19 @@ export class HSEDataPipeline {
         (RPOAuditStatusManager.isCollabValidated(item.name)
           ? 'VALIDADO'
           : 'PENDENTE_REVISAO')
+      const driveFolderId =
+        item.driveFolderId ||
+        (item.id && !item.id.startsWith('rpo_') ? item.id : undefined)
+      const driveFolderUrl =
+        item.driveFolderUrl ||
+        (driveFolderId && driveFolderId.length > 15
+          ? `https://drive.google.com/drive/folders/${driveFolderId}`
+          : undefined)
+
       return {
         ...item,
+        driveFolderId,
+        driveFolderUrl,
         rpoAuditStatus,
         certificates: certsMap,
       }
@@ -361,6 +372,7 @@ export class HSEDataPipeline {
       { header: 'Divergente', key: 'divergent', width: 12 },
       { header: 'Tipo', key: 'divergenceKind', width: 18 },
       { header: 'Detalhes', key: 'detail', width: 60 },
+      { header: 'Pasta no Drive', key: 'driveFolderUrl', width: 20 },
     ]
 
     const headerRow = sheet.getRow(1)
@@ -392,6 +404,7 @@ export class HSEDataPipeline {
         divergent: item.divergent ? 'SIM' : 'NÃO',
         divergenceKind: item.divergenceKind || '',
         detail: item.detail,
+        driveFolderUrl: item.driveFolderUrl || '',
       })
 
       if (item.divergent) {
@@ -402,6 +415,14 @@ export class HSEDataPipeline {
           fgColor: { argb: 'FEE2E2' },
         }
         cell.font = { color: { argb: '991B1B' }, bold: true }
+      }
+      if (item.driveFolderUrl) {
+        const driveCell = row.getCell('driveFolderUrl')
+        driveCell.value = {
+          text: 'Abrir Pasta ↗',
+          hyperlink: item.driveFolderUrl,
+        }
+        driveCell.font = { color: { argb: '2563EB' }, underline: true }
       }
     }
 
@@ -754,6 +775,30 @@ export class HSEDataPipeline {
             `[HSEDataPipeline] Erro ao ler divergencias de ${p}:`,
             err
           )
+        }
+      }
+    }
+
+    const driveCache = this.loadDriveInspectorsCache(refDate)
+    if (driveCache.length > 0) {
+      for (const rec of records) {
+        if (!rec.driveFolderUrl) {
+          const match = driveCache.find(d =>
+            matchesInspector(d, rec.inspectorName)
+          )
+          if (match && match.driveFolderUrl) {
+            rec.driveFolderUrl = match.driveFolderUrl
+          }
+        }
+      }
+      for (const div of rpoDivergences) {
+        if (!div.driveFolderUrl) {
+          const match = driveCache.find(d =>
+            matchesInspector(d, div.inspectorName)
+          )
+          if (match && match.driveFolderUrl) {
+            div.driveFolderUrl = match.driveFolderUrl
+          }
         }
       }
     }
