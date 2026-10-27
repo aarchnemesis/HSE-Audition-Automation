@@ -23,6 +23,8 @@
     "portal-login": "tsx src/cli/runPortalLogin.ts",
     "portal-sessions": "tsx src/cli/runPortalSessions.ts",
     "veriduss-extract": "tsx src/cli/runVeridussExtract.ts",
+    "egestiona-extract": "tsx src/cli/runEgestionaExtract.ts",
+    "tdoc-extract": "tsx src/cli/runTdocExtract.ts",
     "agent:dashboard": "tsx src/cli/runAgentJob.ts dashboard",
     "agent:do": "tsx src/cli/runAgentJob.ts do-report",
     "agent:hse": "tsx src/cli/runAgentJob.ts hse-digest",
