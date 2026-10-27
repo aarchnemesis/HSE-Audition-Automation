@@ -141342,5 +141342,76 @@
         "extractedClause": "período de 15 de Setembro de 2025"
       }
     ]
+  },
+  {
+    "fileId": "1mDrm3NB89oTAGyRDMs-JhXnt2uWqoX2x",
+    "filename": "21 – NR-35 Trabalho em Altura GWO (F+R) – 02.09.2026 - DIEGO MENEZES NUNES COELHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T17:23:08.260Z",
+    "code": "30",
+    "issueDate": "2026-09-02T03:00:00.000Z",
+    "expirationDate": "2076-09-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+    "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador.",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-09-02T03:00:00.000Z",
+        "expirationDate": "2076-09-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-09-02T03:00:00.000Z",
+        "expirationDate": "2028-09-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
+        "extractedClause": "no dia 02 de Setembro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1ryoQaZBDFjWElbfSqEJ02DJ1elD3ifBt",
+    "filename": "21 – NR-35 Trabalho em Altura (F+R) – 02.09.2026 - DIEGO MENEZES NUNES COELHO.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T17:21:42.337Z",
+    "code": "21",
+    "issueDate": "2026-09-02T03:00:00.000Z",
+    "expirationDate": "2028-09-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "Concluido em 5 de Abril de 2024 | Atualizado via nome: 02/09/2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-09-02T03:00:00.000Z",
+        "expirationDate": "2028-09-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35",
+        "extractedClause": "Concluido em 5 de Abril de 2024 | Atualizado via nome: 02/09/2026"
+      }
+    ]
   }
 ]

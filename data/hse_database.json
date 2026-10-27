@@ -4004,10 +4004,10 @@
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
     "detail": "Válido até 02/09/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1KAnQFL9RrXbZoZZ0hwcPH9F02WBP7dpt/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1mDrm3NB89oTAGyRDMs-JhXnt2uWqoX2x/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NOJEoiOSYF73m3bew1-7m-kMkRjABkWg",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T17:47:57.438Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -12476,10 +12476,11 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-27T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 27/10/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T17:47:57.438Z"
   },
   {
     "inspectorId": "rpo_50",

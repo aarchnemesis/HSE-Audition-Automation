@@ -5621,7 +5621,23 @@
     "name": "JOCELEO ABREU VENÂNCIO",
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "certificates": {}
+    "windaId": "JA009226BR",
+    "certificates": {
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-10-27T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-08-26T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/08/2028"
+      }
+    }
   },
   {
     "id": "rpo_51",
