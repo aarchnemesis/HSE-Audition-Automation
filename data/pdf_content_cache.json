@@ -135518,16 +135518,16 @@
   },
   {
     "fileId": "16RtScdSblRTbqOuK61RBP7PRH_OUQzaa",
-    "filename": "06 – Ficha de EPI – 24.04.2028 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "filename": "06 – Ficha de EPI – 24.04.26 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-19T11:48:06.810Z",
+    "modifiedTime": "2026-10-27T14:07:21.643Z",
     "code": "06",
-    "issueDate": "2028-04-24T03:00:00.000Z",
-    "expirationDate": "2028-04-24T03:00:00.000Z",
+    "issueDate": "2026-04-24T03:00:00.000Z",
+    "expirationDate": "2027-04-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 24/04/2028",
+    "statusDetail": "Válido até 24/04/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Ficha de EPI / Checklist Altura",
@@ -135535,10 +135535,10 @@
     "documents": [
       {
         "code": "06",
-        "issueDate": "2028-04-24T03:00:00.000Z",
-        "expirationDate": "2028-04-24T03:00:00.000Z",
+        "issueDate": "2026-04-24T03:00:00.000Z",
+        "expirationDate": "2027-04-24T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/04/2028",
+        "statusDetail": "Válido até 24/04/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Ficha de EPI / Checklist Altura",
@@ -141160,6 +141160,186 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO NR-23",
         "extractedClause": "no dia 30de Setembro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "17eQFtW6JBPTddMok3Swimax0Y6x8qTGk",
+    "filename": "12.1 – Carta NR – 35 – 24.10.2026 - WERMESON DE OLIVEIRA FRANCO - Clicksign.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:18:48.551Z",
+    "code": "21.1",
+    "issueDate": "2026-10-24T03:00:00.000Z",
+    "expirationDate": "2028-10-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Carta NR-35 (sobrepôs prefixo 12.1)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "21.1",
+        "issueDate": "2026-10-24T03:00:00.000Z",
+        "expirationDate": "2028-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Carta NR-35 (sobrepôs prefixo 12.1)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1BPxmc3bqwJdMS7u2k5VHMD8v-J9b0OCB",
+    "filename": "12.1 – Carta NR – 12 – 24.10.2026 - WERMESON DE OLIVEIRA FRANCO - Clicksign.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:18:46.068Z",
+    "code": "15.1",
+    "issueDate": "2026-10-24T03:00:00.000Z",
+    "expirationDate": "2028-10-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Carta NR-12 (sobrepôs prefixo 12.1)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15.1",
+        "issueDate": "2026-10-24T03:00:00.000Z",
+        "expirationDate": "2028-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Carta NR-12 (sobrepôs prefixo 12.1)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1DGZfB2s12hmGRC1sg0allIyw2qdYQK1O",
+    "filename": "12.1 – Carta NR – 11 – 24.10.2026 - WERMESON DE OLIVEIRA FRANCO - Clicksign.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:18:43.387Z",
+    "code": "14",
+    "issueDate": "2026-10-24T03:00:00.000Z",
+    "expirationDate": "2028-10-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11 (sobrepôs prefixo 12.1)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-24T03:00:00.000Z",
+        "expirationDate": "2028-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11 (sobrepôs prefixo 12.1)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1fM0EBVworOZjauDiyNAXc3Am0X8mV0gb",
+    "filename": "12.1 – Carta NR – 33 – 24.10.2026 - WERMESON DE OLIVEIRA FRANCO - Clicksign (1).pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:18:40.574Z",
+    "code": "20.1",
+    "issueDate": "2026-10-24T03:00:00.000Z",
+    "expirationDate": "2028-10-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Carta NR-33 (sobrepôs prefixo 12.1)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "20.1",
+        "issueDate": "2026-10-24T03:00:00.000Z",
+        "expirationDate": "2028-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Carta NR-33 (sobrepôs prefixo 12.1)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1APcRES4Tq7t8pjAZaylkhzjMIm57mXon",
+    "filename": "12.1 – Carta NR – 10 – 24.10.2026 - WERMESON DE OLIVEIRA FRANCO - Clicksign.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:18:38.187Z",
+    "code": "12.1",
+    "issueDate": "2026-10-24T03:00:00.000Z",
+    "expirationDate": "2028-10-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Carta NR-10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12.1",
+        "issueDate": "2026-10-24T03:00:00.000Z",
+        "expirationDate": "2028-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Carta NR-10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1tNfCdSIkRIvY_lqEC7ImOvDANHkmfE5h",
+    "filename": "12 – NR-10 Básico (F) – 15.09.2025 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-27T14:40:29.609Z",
+    "code": "12",
+    "issueDate": "2025-09-15T03:00:00.000Z",
+    "expirationDate": "2027-09-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "período de 15 de Setembro de 2025",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2025-09-15T03:00:00.000Z",
+        "expirationDate": "2027-09-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "período de 15 de Setembro de 2025"
       }
     ]
   }
