@@ -127,6 +127,19 @@ describe('PORTAL_LOGIN_CONFIGS', () => {
     expect(getLoginConfig('egestiona-vestaslatam')?.confidence).toBe(
       'confirmed'
     )
+    // TDoc signs in through Keycloak for all three tenants with the same form.
+    for (const id of ['tdoc-sgre', 'tdoc-pegasus', 'tdoc-acciona-chile']) {
+      const config = getLoginConfig(id)
+      expect(config?.system).toBe('TDoc')
+      expect(config?.successUrlPattern?.test('https://wplatam.tdoc.es/')).toBe(
+        true
+      )
+      expect(
+        config?.successUrlPattern?.test(
+          'https://auth.tdoc.es/auth/realms/tdoc-api'
+        )
+      ).toBe(false)
+    }
     // Captcha / MFA portals must never get a form-filler config.
     for (const blocked of [
       'atlas-eletrosul',

@@ -52,7 +52,8 @@ pnpm run backfill-history          # rebuild data/compliance_history.json from t
 pnpm run storz-history-report      # generate student training history report
 pnpm run portal-report             # client-portal pendencies x project briefing, e-mails EHS and ops (--no-email for preview)
 pnpm run portal-coverage           # map every platform in the EHS credentials sheet vs. briefing and automation -> data/portais/portal_coverage.json
-pnpm run portal-login -- <id>      # log into a Tier-3 portal with sheet creds, save session to scratch/portais/sessions/<id>.session.json
+pnpm run portal-login -- <id>      # log into a Tier-3/TDoc portal with sheet creds, save session to scratch/portais/sessions/<id>.session.json
+pnpm run portal-sessions           # list saved portal sessions and whether each is still usable or must be re-logged
 pnpm run veriduss-extract          # pull the Veriduss (Goldwind) census over REST using a saved session -> data/portais/veriduss-goldwind.census.json
 pnpm run test-gdrive               # test Google Drive API connection
 ```

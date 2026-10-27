@@ -218,7 +218,7 @@ export const PORTAL_LOGIN_CONFIGS: Record<string, PortalLoginConfig> = {
       { selector: 'input[name="password"]', from: 'password' },
     ],
     submitSelector: 'button[type="submit"], input[type="submit"]',
-    successUrlPattern: /\/(?!login)/i,
+    successUrlPattern: /:8050\/(?!login)/i,
     confidence: 'derived',
   },
   'techsocial-cpfl': {
@@ -230,6 +230,46 @@ export const PORTAL_LOGIN_CONFIGS: Record<string, PortalLoginConfig> = {
     ],
     submitSelector: 'button[type="submit"], input[type="submit"]',
     successSelector: 'a[href*="logout"], a[href*="sair"]',
+    confidence: 'derived',
+  },
+  // TDoc signs in through Keycloak: the portal URL redirects to auth.tdoc.es, we fill the
+  // standard Keycloak form, and success is the redirect back to the tenant host. The document
+  // data itself is JSF (no REST), so this only produces the authenticated session; a JSF
+  // scraper reads the documents from it.
+  'tdoc-sgre': {
+    portalId: 'tdoc-sgre',
+    system: 'TDoc',
+    url: 'https://wplatam.tdoc.es/',
+    fields: [
+      { selector: '#username', from: 'username' },
+      { selector: '#password', from: 'password' },
+    ],
+    submitSelector: '#kc-login, input[name="login"]',
+    successUrlPattern: /\/\/(?!auth\.)[\w-]+\.tdoc\.es/i,
+    confidence: 'confirmed',
+  },
+  'tdoc-pegasus': {
+    portalId: 'tdoc-pegasus',
+    system: 'TDoc',
+    url: 'https://pegasus.tdoc.es/',
+    fields: [
+      { selector: '#username', from: 'username' },
+      { selector: '#password', from: 'password' },
+    ],
+    submitSelector: '#kc-login, input[name="login"]',
+    successUrlPattern: /\/\/(?!auth\.)[\w-]+\.tdoc\.es/i,
+    confidence: 'derived',
+  },
+  'tdoc-acciona-chile': {
+    portalId: 'tdoc-acciona-chile',
+    system: 'TDoc',
+    url: 'https://acciona-chile.tdoc.es/',
+    fields: [
+      { selector: '#username', from: 'username' },
+      { selector: '#password', from: 'password' },
+    ],
+    submitSelector: '#kc-login, input[name="login"]',
+    successUrlPattern: /\/\/(?!auth\.)[\w-]+\.tdoc\.es/i,
     confidence: 'derived',
   },
 }
