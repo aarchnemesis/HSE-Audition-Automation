@@ -1902,7 +1902,15 @@
     "name": "DRIELTON FRANCISCO DE ARAUJO SILVA",
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "certificates": {}
+    "certificates": {
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-08-26T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/08/2028"
+      }
+    }
   },
   {
     "id": "rpo_25",
@@ -5017,7 +5025,15 @@
     "name": "HENRIQUE ELANIO GOMES FERNANDES",
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "certificates": {}
+    "certificates": {
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-26T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2028"
+      }
+    }
   },
   {
     "id": "rpo_46",
