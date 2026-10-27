@@ -50,6 +50,7 @@ pnpm run hse-report                # generate consolidated HSE report & dashboar
 pnpm run drive-rpo-audit           # audit divergence between Drive/Storz and RPO
 pnpm run backfill-history          # rebuild data/compliance_history.json from the git history of the database
 pnpm run storz-history-report      # generate student training history report
+pnpm run portal-report             # client-portal pendencies x project briefing, e-mails EHS and ops (--no-email for preview)
 pnpm run test-gdrive               # test Google Drive API connection
 ```
 

@@ -9,3 +9,6 @@ scratch/
 package-lock.json
 google_oauth_client.json
 google_oauth_token.json
+
+# Raw portal snapshots from the first extractors (carry CPF); the normalized *.census.json is committed
+data/portais/*-census.json

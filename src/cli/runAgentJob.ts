@@ -15,6 +15,7 @@ const validJobs = [
   'hse-digest',
   'rpo-audit',
   'exec-dashboard',
+  'portal-report',
   'all',
 ] as const
 type AgentJob = (typeof validJobs)[number]
@@ -158,6 +159,13 @@ function runExecDashboard(): void {
   )
 }
 
+function runPortalReport(): void {
+  runCommand(
+    'npx tsx src/cli/runPortalPendencyReport.ts',
+    'Pendencias nos Portais de Clientes e Envio para EHS e Coordenacao'
+  )
+}
+
 async function main() {
   const jobArg = process.argv[2] as AgentJob | undefined
 
@@ -186,6 +194,9 @@ async function main() {
     console.log(
       '  exec-dashboard - Gera e envia e-mail executivo do dashboard para Marcelo e Leonardo'
     )
+    console.log(
+      '  portal-report  - Cruza portais de clientes com o Briefing de Projetos e envia para EHS e Coordenacao'
+    )
     console.log('  all            - Executa dashboard + do-report em sequencia')
     console.log(
       '================================================================================\n'
@@ -211,6 +222,9 @@ async function main() {
       break
     case 'exec-dashboard':
       runExecDashboard()
+      break
+    case 'portal-report':
+      runPortalReport()
       break
     case 'all':
       syncAndDeployDashboard()
