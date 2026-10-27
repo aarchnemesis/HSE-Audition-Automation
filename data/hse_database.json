@@ -9560,13 +9560,12 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2026-09-24T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 33 dias (24/09/2026)",
-    "evidenceUrl": "https://drive.google.com/file/d/1xeT7t0kDKEm45XyKS5_yFv9OQaPN_cqc/view",
+    "statusEHS": "INDETERMINADO",
+    "detail": "Data não informada ou formato inválido Data não informada ou formato inválido",
+    "evidenceUrl": "https://drive.google.com/file/d/1nj5UQTfD6yhbwi8AgxRzBOeks9RshkXp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nLJ_q8chzVh2dm-w8hRCPxOpERLXlpZo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T03:02:35.838Z"
+    "lastUpdated": "2026-10-27T09:47:43.460Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9731,16 +9730,16 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "expirationDate": "2028-09-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "580040",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 20/09/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1DcrpIqTsou59V31j1YcitsEE2WSPPpPJ/view",
+    "detail": "Válido até 30/09/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1uOv0NjS8O1rK-XFeoFxknES19wWZ158l/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nLJ_q8chzVh2dm-w8hRCPxOpERLXlpZo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T09:47:43.460Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9771,16 +9770,16 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "expirationDate": "2028-09-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "579431",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (579431) em 20/09/2026 — Válido até 20/09/2028 (aguardando upload no Drive).",
-    "evidenceUrl": "https://drive.google.com/file/d/1OCZL_kty94H7Mk2PDkqMumwwjfoTxJiu/view",
+    "detail": "Válido até 30/09/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1emEbpwonQxUGl7qO1yXqyBWSFdcbQNwA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nLJ_q8chzVh2dm-w8hRCPxOpERLXlpZo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T09:47:43.460Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9811,13 +9810,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2026-11-14T03:00:00.000Z",
-    "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 18 dias (14/11/2026)",
-    "evidenceUrl": "https://drive.google.com/file/d/1LHQd-L_xKVVfxKHkiweTCmIK22R2dzTE/view",
+    "expirationDate": "2028-09-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 29/09/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1kgzSot4iWh2ZTBkH58QXuTdA3HQNe9Rz/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nLJ_q8chzVh2dm-w8hRCPxOpERLXlpZo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T03:02:35.838Z"
+    "lastUpdated": "2026-10-27T09:47:43.460Z"
   },
   {
     "inspectorId": "rpo_41",
