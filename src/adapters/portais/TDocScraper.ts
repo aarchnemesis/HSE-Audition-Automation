@@ -25,7 +25,6 @@ export interface TDocSelectors {
   taskViewButton: (rowIndex: number) => string
   workersButton: string
   workersTableRows: string
-  workerViewButton: (rowIndex: number) => string
   docsTableRows: string
   backIcon: string
 }
@@ -44,18 +43,38 @@ export function defaultTDocSelectors(portalId: string): TDocSelectors {
     selectCompanyIcon: 'img[title="Seleccionar"]',
     tasksTableRows: '#tareas_list_form\\:tareasTable\\:tb tr',
     taskViewButton: i => `#tareas_list_form\\:tareasTable\\:${i}\\:j_id123`,
-    workersButton:
-      'input[value="Ver lista de funcionários"], #j_id239\\:j_id244',
+    workersButton: 'input[value="Ver lista de funcionários"]',
     workersTableRows:
       '#form_workers_list_table\\:Table_TrabajadoresDoc\\:tb tr',
-    workerViewButton: i =>
-      `#form_workers_list_table\\:Table_TrabajadoresDoc\\:${i}\\:j_id242`,
     docsTableRows: '#form_item_list_table\\:Table_Deliveries\\:tb tr',
     backIcon: 'img[title="Voltar"]',
   }
 }
 
 const STEP_TIMEOUT = 30000
+
+/**
+ * TDoc keeps the last opened task/worker in the server session and resumes it on entry, so a run
+ * can land deep inside a worker view with no task list in sight. Reset by going to the company
+ * task page first; only re-select the company (which can trigger the resume) if the task table is
+ * still absent.
+ */
+async function ensureTaskList(page: Page, sel: TDocSelectors): Promise<void> {
+  await page.goto(sel.tasksBackUrl, {
+    waitUntil: 'networkidle',
+    timeout: STEP_TIMEOUT,
+  })
+  if ((await page.locator(sel.tasksTableRows).count()) > 0) return
+  await page.goto(sel.tasksUrl, {
+    waitUntil: 'networkidle',
+    timeout: STEP_TIMEOUT,
+  })
+  const icon = page.locator(sel.selectCompanyIcon).first()
+  if (await icon.isVisible().catch(() => false)) {
+    await icon.click({ timeout: STEP_TIMEOUT })
+    await page.waitForTimeout(2500)
+  }
+}
 
 async function readRows(page: Page, selector: string): Promise<string[][]> {
   return page.evaluate(sel => {
@@ -101,16 +120,7 @@ export async function scrapeTdocCensus(
   const sel = options.selectors ?? defaultTDocSelectors(options.portalId)
   const log = options.log ?? (() => {})
 
-  await page.goto(sel.tasksUrl, {
-    waitUntil: 'networkidle',
-    timeout: STEP_TIMEOUT,
-  })
-  await page
-    .locator(sel.selectCompanyIcon)
-    .first()
-    .click({ timeout: STEP_TIMEOUT })
-  await page.waitForTimeout(2500)
-
+  await ensureTaskList(page, sel)
   const tasks = parseTaskRows(await readRows(page, sel.tasksTableRows))
   log(`${tasks.length} tarefas encontradas`)
   const capped = options.maxTasks ? tasks.slice(0, options.maxTasks) : tasks
@@ -124,7 +134,10 @@ export async function scrapeTdocCensus(
       await page.waitForTimeout(2000)
 
       const workersBtn = page.locator(sel.workersButton).first()
-      if (!(await workersBtn.isVisible().catch(() => false))) continue
+      if (!(await workersBtn.isVisible().catch(() => false))) {
+        log(`tarefa ${task.index}: botão de colaboradores não apareceu`)
+        continue
+      }
       await workersBtn.click({ timeout: STEP_TIMEOUT })
       await page.waitForTimeout(2000)
 
@@ -138,9 +151,11 @@ export async function scrapeTdocCensus(
 
       for (const { worker, idx } of workerRows) {
         try {
+          // Same pattern for a worker: double-click the row to open their document list.
           await page
-            .locator(sel.workerViewButton(idx))
-            .click({ timeout: STEP_TIMEOUT })
+            .locator(sel.workersTableRows)
+            .nth(idx)
+            .dblclick({ timeout: STEP_TIMEOUT })
           await page.waitForTimeout(2000)
           const docs = (await readRows(page, sel.docsTableRows))
             .map(docFromCells)

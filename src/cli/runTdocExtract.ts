@@ -46,6 +46,12 @@ async function main() {
         Number.isFinite(maxTasks) && maxTasks > 0 ? maxTasks : undefined,
       log: msg => console.log(`[TDoc] ${msg}`),
     })
+    if (census.workers.length === 0) {
+      console.warn(
+        '[TDoc] Raspagem vazia (0 colaboradores) — censo existente preservado, nada gravado.'
+      )
+      return
+    }
     const out = savePortalCensus(census)
     const docs = census.workers.reduce((n, w) => n + w.documents.length, 0)
     console.log(

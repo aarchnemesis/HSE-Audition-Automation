@@ -39,6 +39,12 @@ async function main() {
   const session = await launchAndLogin({ config, cred, headless: !headful })
   try {
     const census = await scrapeEgestionaCensus(session.page, { portalId })
+    if (census.workers.length === 0) {
+      console.warn(
+        '[eGestiona] Raspagem vazia (0 colaboradores) — censo existente preservado, nada gravado.'
+      )
+      return
+    }
     const out = savePortalCensus(census)
     const docs = census.workers.reduce((n, w) => n + w.documents.length, 0)
     console.log(

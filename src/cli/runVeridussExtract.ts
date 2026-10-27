@@ -35,6 +35,12 @@ async function main() {
     throw new Error('A sessão não contém cookies do domínio Veriduss.')
 
   const census = await extractVeridussCensus({ cookieHeader })
+  if (census.workers.length === 0) {
+    console.warn(
+      '[Veriduss] Raspagem vazia (0 colaboradores) — censo existente preservado, nada gravado.'
+    )
+    return
+  }
   const out = savePortalCensus(census)
   const docs = census.workers.reduce((n, w) => n + w.documents.length, 0)
   console.log(
