@@ -159,7 +159,15 @@
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "AF013866BR",
-    "certificates": {}
+    "certificates": {
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-27T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028"
+      }
+    }
   },
   {
     "id": "rpo_13",
