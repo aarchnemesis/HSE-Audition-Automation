@@ -1740,12 +1740,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-08-14T12:00:00.000Z",
+    "expirationDate": "2028-08-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 14/08/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 14/08/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1hUX24rLL55tRP3PSvPWO62Tl6GFa7gbj/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NJzEHdHw67V1k11ciit1ZUHKoC-dbqP9",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -2065,12 +2066,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-16T12:00:00.000Z",
+    "expirationDate": "2027-10-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 16/10/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 16/10/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1OuL2FW8qY0HX0P2UHPuO8rLq_nur23tQ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Ov1CMtXLsxHyOYYJl0bXjbURCzPWN1TM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -3030,12 +3032,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-02-26T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 26/02/2028",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KjR5W8S9pOC25A9C6XC2XJdrFvMSMbb5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -5262,12 +5263,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-01-06T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 06/01/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "expirationDate": "2026-10-24T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "detail": "VENCIDO há 3 dias (24/10/2026)",
+    "evidenceUrl": "https://drive.google.com/file/d/1SN509NDYZuChr_HugssoxbduBa78tTcd/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Wz-LD8Zem_aUHlkvXbDI6ahQNdzJsfF-",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_27",
@@ -6928,12 +6930,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-04-06T12:00:00.000Z",
+    "expirationDate": "2027-04-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/04/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 05/04/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1XuNuqJYxRCbl_O-NIIW802DGBZPmX2n4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1qdKRjX9SAPPDKk3duSGjsSkUVwRdkDhe",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -8222,11 +8225,10 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-08-30T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 30/08/2027",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_36",
@@ -8799,11 +8801,10 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-08-14T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 14/08/2028",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -11344,11 +11345,10 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-09-16T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 16/09/2028",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_46",
@@ -14182,12 +14182,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-09T12:00:00.000Z",
+    "expirationDate": "2027-10-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/10/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 09/10/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1cJ-xQsSgcrbET27QoM7HMXSA4j6dJDgh/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NY_LAS_sdiwQz4w_uj8JQBEGHeqcTJ18",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_55",
@@ -14829,9 +14830,10 @@
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
     "detail": "Curso renovado e aprovado na Storz (506879) em 21/05/2026 — Válido até 21/05/2028 (aguardando upload no Drive).",
+    "evidenceUrl": "https://drive.google.com/file/d/1ZdklcWoV-PRs2_XfKR-OOnFOLDxN_KsM/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/180V2gEbur5O7Q1-j4I81htwr1pMD8U3d",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -15806,12 +15808,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-24T12:00:00.000Z",
+    "expirationDate": "2027-10-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/10/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 24/10/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/18i_NKzkdj9k0hCUs_iwVpmncIm-OJrGp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nYVdr43m_0jtLVDtK-cOuUSGGguRDePD",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_60",
@@ -16086,11 +16089,10 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-11-08T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 08/11/2027",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-26T15:47:42.220Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_61",
@@ -16712,12 +16714,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-07-10T12:00:00.000Z",
+    "expirationDate": "2028-07-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 10/07/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 10/07/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1IUkUXlsTKHrcqjf5pYuABRH3YkbRmp1I/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1XS_KTTgdQFE_m8OpiL5AUD-Kf_6dG-J3",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_63",
@@ -17055,12 +17058,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-09T12:00:00.000Z",
+    "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/02/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 09/02/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1vYVZ5T-SfDsZk3HNcMoVuVpnTC5LyGrm/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1WUIKK37cbjyTTbt-oDQKjKvY3GY7zFFp",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -19012,12 +19016,11 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-07T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 07/02/2027",
+    "statusEHS": "AUSENTE",
+    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Qwyu14njJ2EdEJDjqzsPJOMtt0At2_Jc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -19337,12 +19340,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-10-09T12:00:00.000Z",
+    "expirationDate": "2027-10-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/10/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 09/10/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/19GXf6UtK4CSXLBQ4jbYCe-a5Rotl2wJf/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1SKFiH3l9aF5jccm9Rx3YgCEr4CD2d3L6",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -21231,12 +21235,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-01-24T12:00:00.000Z",
+    "expirationDate": "2027-01-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/01/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 23/01/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1gM6EUjVPE9Rfm6r-Gv-Dby1O-33NE64A/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1HofBYLu0wtxYRhlOyOAfMvpVETdFE7s0",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_78",
@@ -21906,12 +21911,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-07-23T12:00:00.000Z",
+    "expirationDate": "2028-07-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 23/07/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 23/07/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1aGwtve4G7wFUvIsObrOCF0lWWpeuEMYd/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1_5dXSi_MZ8GoiMx7kOD19hGPjKl8BQYR",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_80",
@@ -22212,12 +22218,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-03-04T12:00:00.000Z",
+    "expirationDate": "2028-03-04T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 04/03/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 04/03/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1nYNMNPldXbPCV9wQMDIBDbmsSkalPJHL/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1S2K2GPZcreulzBFeSWKL8azfo4e7kOXI",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_81",
@@ -22541,15 +22548,16 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-04-29T12:00:00.000Z",
+    "expirationDate": "2028-04-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "492244",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 29/04/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 29/04/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1mP2cBuJAr4PQdkNx3A5xtkHYE8VJnCmO/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n6ao9Df34hm674OuEYt8ItJXgbzZFScN",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -25512,12 +25520,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-01-13T12:00:00.000Z",
+    "expirationDate": "2028-01-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 13/01/2028 (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "Válido até 12/01/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1B-mL7L-E6dAIliC63V0lff8t4ElOMqeU/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1wYDmPose3GNJ2iQuyjXb7lUwDFxNfcd6",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-27T19:47:49.434Z"
   },
   {
     "inspectorId": "rpo_103",

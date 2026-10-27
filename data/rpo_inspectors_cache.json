@@ -85,13 +85,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-01-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -165,6 +158,7 @@
     "name": "ADENIO FRANCISCO DE SOUSA",
     "role": "INSPETOR",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "windaId": "AF013866BR",
     "certificates": {}
   },
   {
@@ -252,13 +246,6 @@
         "expirationDate": "2027-05-07T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/05/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-14T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/10/2027"
       },
       "22": {
         "code": "22",
@@ -407,13 +394,6 @@
         "expirationDate": "2027-09-19T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/09/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/10/2027"
       },
       "22": {
         "code": "22",
@@ -569,13 +549,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-03T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -723,13 +696,6 @@
         "expirationDate": "2026-12-26T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 60 dias (26/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-08-14T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/08/2028"
       },
       "22": {
         "code": "22",
@@ -885,13 +851,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/07/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-16T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -1045,13 +1004,6 @@
         "expirationDate": "2026-12-14T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 48 dias (14/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-02T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/09/2028"
       },
       "22": {
         "code": "22",
@@ -1207,13 +1159,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/07/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-04-12T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/04/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -1361,13 +1306,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 18/03/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-02-26T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/02/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -1507,13 +1445,6 @@
         "expirationDate": "2027-02-05T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 05/02/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-14T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/02/2027"
       },
       "22": {
         "code": "22",
@@ -1663,13 +1594,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 14/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-08-18T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/08/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -1817,13 +1741,6 @@
         "expirationDate": "2027-08-28T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/08/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-05-01T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/05/2028"
       },
       "22": {
         "code": "22",
@@ -1998,13 +1915,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 18/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-04-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/04/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -2159,13 +2069,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 17/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -2313,13 +2216,6 @@
         "expirationDate": "2027-01-09T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 09/01/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-01-06T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/01/2028"
       },
       "22": {
         "code": "22",
@@ -2469,13 +2365,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 10/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -2623,13 +2512,6 @@
         "expirationDate": "2027-07-06T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/07/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-07-08T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/07/2028"
       },
       "22": {
         "code": "22",
@@ -2785,13 +2667,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-22T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/09/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -2946,13 +2821,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 18/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -3101,13 +2969,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/04/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-04-06T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/04/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -3255,13 +3116,6 @@
         "expirationDate": "2026-12-13T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 47 dias (13/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-21T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027"
       },
       "22": {
         "code": "22",
@@ -3417,13 +3271,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/08/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/09/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -3578,13 +3425,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-26T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -3732,13 +3572,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-08-30T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/08/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -3864,13 +3697,6 @@
         "expirationDate": "2027-07-13T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/07/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-03T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027"
       },
       "22": {
         "code": "22",
@@ -4012,13 +3838,6 @@
         "expirationDate": "2027-12-23T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/12/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-08-14T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/08/2028"
       },
       "22": {
         "code": "22",
@@ -4167,13 +3986,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/08/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-02-03T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -4321,13 +4133,6 @@
         "expirationDate": "2026-11-04T12:00:00.000Z",
         "statusEHS": "VENCE_15",
         "statusDetail": "ALERTA URGENTE: Vence em 8 dias (04/11/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027"
       },
       "22": {
         "code": "22",
@@ -4483,13 +4288,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 05/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/09/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -4637,13 +4435,6 @@
         "expirationDate": "2026-12-25T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 59 dias (25/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-12-27T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/12/2027"
       },
       "22": {
         "code": "22",
@@ -4796,13 +4587,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-13T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -4950,13 +4734,6 @@
         "expirationDate": "2027-08-13T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/08/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-06-28T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/06/2028"
       },
       "22": {
         "code": "22",
@@ -5121,13 +4898,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-16T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/09/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -5246,13 +5016,6 @@
         "expirationDate": "2027-08-25T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 25/08/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/09/2028"
       },
       "22": {
         "code": "22",
@@ -5402,13 +5165,6 @@
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 111 dias (08/07/2026)"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-05-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/05/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -5556,13 +5312,6 @@
         "expirationDate": "2027-05-28T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/05/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-30T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/11/2027"
       },
       "22": {
         "code": "22",
@@ -5741,13 +5490,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 12/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-16T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/11/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -5895,13 +5637,6 @@
         "expirationDate": "2026-12-29T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/12/2026"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-07-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2027"
       },
       "22": {
         "code": "22",
@@ -6057,13 +5792,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/03/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2026-11-04T12:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 8 dias (04/11/2026)"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -6211,13 +5939,6 @@
         "expirationDate": "2026-12-15T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 49 dias (15/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-12-01T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2027"
       },
       "22": {
         "code": "22",
@@ -6373,13 +6094,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 11/02/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-09T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -6533,13 +6247,6 @@
         "expirationDate": "2027-09-07T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/09/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-27T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/10/2027"
       },
       "22": {
         "code": "22",
@@ -6695,13 +6402,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/05/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-31T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/01/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -6855,13 +6555,6 @@
         "expirationDate": "2027-09-12T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 12/09/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-04-16T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/04/2028"
       },
       "22": {
         "code": "22",
@@ -7017,13 +6710,6 @@
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 4 dias (23/10/2026)"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -7178,13 +6864,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/02/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/10/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -7325,13 +7004,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 21/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-08T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/11/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -7461,13 +7133,6 @@
       "20": {
         "code": "20",
         "name": "NR33 [DATA]",
-        "expirationDate": "2027-01-08T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/01/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
         "expirationDate": "2027-01-08T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/01/2027"
@@ -7626,13 +7291,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-07-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/07/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -7787,13 +7445,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-09T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -7941,13 +7592,6 @@
         "expirationDate": "2027-04-23T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/04/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-05-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/05/2028"
       },
       "22": {
         "code": "22",
@@ -8097,13 +7741,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/02/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-08-13T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/08/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -8251,13 +7888,6 @@
         "expirationDate": "2027-09-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/09/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-25T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/09/2028"
       },
       "22": {
         "code": "22",
@@ -8407,13 +8037,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 09/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-07T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -8561,13 +8184,6 @@
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_15",
         "statusDetail": "ALERTA URGENTE: Vence em 11 dias (07/11/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-13T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/11/2027"
       },
       "22": {
         "code": "22",
@@ -8722,13 +8338,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-07T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -8875,13 +8484,6 @@
         "expirationDate": "2027-10-14T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 14/10/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-09T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/10/2027"
       },
       "22": {
         "code": "22",
@@ -9030,13 +8632,6 @@
         "expirationDate": "2026-10-19T12:00:00.000Z",
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 8 dias (19/10/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-10-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/10/2027"
       },
       "22": {
         "code": "22",
@@ -9192,13 +8787,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-05-05T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/05/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -9351,13 +8939,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/10/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-07-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/07/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -9505,13 +9086,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/09/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-10T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/11/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -9614,6 +9188,13 @@
         "expirationDate": "2028-06-16T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/06/2028"
+      },
+      "09": {
+        "code": "09",
+        "name": "DIREÇÃO DEFENSIVA",
+        "expirationDate": "2028-10-26T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2028"
       }
     }
   },
@@ -9702,13 +9283,6 @@
         "expirationDate": "2027-02-04T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 04/02/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-01-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027"
       },
       "22": {
         "code": "22",
@@ -9864,13 +9438,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/07/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-09-03T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/09/2028"
-      },
       "25": {
         "code": "25",
         "name": "SIT VESTAS",
@@ -10012,13 +9579,6 @@
         "expirationDate": "2027-10-02T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 02/10/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-07-23T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2028"
       },
       "22": {
         "code": "22",
@@ -10168,13 +9728,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 17/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-03-04T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/03/2028"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -10322,13 +9875,6 @@
         "expirationDate": "2026-12-05T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 39 dias (05/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-04-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/04/2028"
       },
       "22": {
         "code": "22",
@@ -10480,7 +10026,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -10515,7 +10060,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -10609,13 +10153,6 @@
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 178 dias (02/05/2026)"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2026-06-05T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 144 dias (05/06/2026)"
-      },
       "25": {
         "code": "25",
         "name": "SIT VESTAS",
@@ -10700,7 +10237,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -10742,7 +10278,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -10793,13 +10328,6 @@
         "expirationDate": "2028-05-07T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/05/2028"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-05-06T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/05/2028"
       },
       "27": {
         "code": "27",
@@ -10868,7 +10396,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -10970,7 +10497,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11072,7 +10598,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11174,7 +10699,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11276,7 +10800,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11378,7 +10901,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11480,7 +11002,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11582,7 +11103,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11684,7 +11204,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11786,7 +11305,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11888,7 +11406,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -11990,7 +11507,6 @@
       "17",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12083,13 +11599,6 @@
         "expirationDate": "2027-02-11T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 11/02/2027"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-01-13T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2028"
       },
       "22": {
         "code": "22",
@@ -12226,13 +11735,6 @@
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 273 dias (27/01/2026)"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-12-22T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/12/2027"
-      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -12357,13 +11859,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/05/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-07-31T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/07/2027"
-      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -12486,7 +11981,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12533,7 +12027,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12567,7 +12060,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12608,7 +12100,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12650,7 +12141,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12691,7 +12181,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12732,7 +12221,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12773,7 +12261,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12814,7 +12301,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12855,7 +12341,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12896,7 +12381,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12943,7 +12427,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -12984,7 +12467,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13025,7 +12507,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13067,7 +12548,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13086,13 +12566,6 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2023-12-20T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1042 dias (20/12/2023)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
         "expirationDate": "2023-12-20T12:00:00.000Z",
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 1042 dias (20/12/2023)"
@@ -13148,7 +12621,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13189,7 +12661,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13230,7 +12701,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13264,7 +12734,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13311,7 +12780,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13353,7 +12821,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13394,7 +12861,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13447,7 +12913,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13488,7 +12953,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13520,7 +12984,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13561,7 +13024,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13602,7 +13064,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13643,7 +13104,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13678,7 +13138,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13712,7 +13171,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13753,7 +13211,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13794,7 +13251,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13827,7 +13283,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13868,7 +13323,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13909,7 +13363,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13950,7 +13403,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -13997,7 +13449,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14037,7 +13488,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14078,7 +13528,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14110,7 +13559,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14151,7 +13599,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14191,7 +13638,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14236,7 +13682,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14276,7 +13721,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14317,7 +13761,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14357,7 +13800,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14398,7 +13840,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14490,13 +13931,6 @@
         "expirationDate": "2026-11-07T12:00:00.000Z",
         "statusEHS": "VENCE_15",
         "statusDetail": "ALERTA URGENTE: Vence em 11 dias (07/11/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-24T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/11/2027"
       },
       "22": {
         "code": "22",
@@ -14592,7 +14026,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14632,7 +14065,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14671,7 +14103,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14711,7 +14142,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14777,7 +14207,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
@@ -14867,13 +14296,6 @@
         "expirationDate": "2026-12-07T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 41 dias (07/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-12-09T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/12/2027"
       },
       "22": {
         "code": "22",
@@ -15028,13 +14450,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-02-01T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -15181,13 +14596,6 @@
         "expirationDate": "2026-12-03T12:00:00.000Z",
         "statusEHS": "VENCE_60",
         "statusDetail": "ALERTA INICIAL: Vence em 37 dias (03/12/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2028-04-29T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/04/2028"
       },
       "22": {
         "code": "22",
@@ -15342,13 +14750,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 17/01/2027"
       },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2026-10-18T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 9 dias (18/10/2026)"
-      },
       "22": {
         "code": "22",
         "name": "LOTO",
@@ -15488,13 +14889,6 @@
         "expirationDate": "2026-09-17T12:00:00.000Z",
         "statusEHS": "VENCIDO",
         "statusDetail": "VENCIDO há 40 dias (17/09/2026)"
-      },
-      "21": {
-        "code": "21",
-        "name": "NR 35",
-        "expirationDate": "2027-11-27T12:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/11/2027"
       },
       "22": {
         "code": "22",
@@ -17412,7 +16806,6 @@
       "19",
       "20",
       "28",
-      "21",
       "22",
       "25",
       "26",
