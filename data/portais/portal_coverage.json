@@ -1,0 +1,1634 @@
+{
+  "refDate": "2026-10-27",
+  "portals": [
+    {
+      "portal": {
+        "id": "tdoc-sgre",
+        "name": "Siemens Gamesa (TDoc)",
+        "system": "TDoc",
+        "url": "https://wplatam.tdoc.es",
+        "hosts": [
+          "wplatam.tdoc.es"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "AUTOMATED",
+        "clients": [
+          "SGRE"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-26T17:20:39.920Z",
+        "workers": 18
+      },
+      "clients": [
+        {
+          "client": "SGRE",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 4,
+          "lastStart": "2026-10-15"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "veriduss-goldwind",
+        "name": "Goldwind (Veriduss)",
+        "system": "Veriduss",
+        "url": "https://goldwind.veriduss.com.br",
+        "hosts": [
+          "goldwind.veriduss.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "AUTOMATED",
+        "clients": [
+          "GOLDWIND"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-26T18:13:42.320Z",
+        "workers": 13
+      },
+      "clients": [
+        {
+          "client": "GOLDWIND",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-27"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "surisoft",
+        "name": "Suricatta (Surisoft)",
+        "system": "Surisoft",
+        "url": "https://www.surisoft.com.br",
+        "hosts": [
+          "www.surisoft.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "AUTOMATED",
+        "clients": [
+          "SERENA",
+          "GE VERNOVA"
+        ]
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-27T09:29:02.869Z",
+        "workers": 44
+      },
+      "clients": [
+        {
+          "client": "SERENA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-10"
+        },
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "egestiona-vestaslatam",
+        "name": "Vestas Latam (eGestiona)",
+        "system": "eGestiona",
+        "url": "https://vestaslatam.egestiona.com",
+        "hosts": [
+          "vestaslatam.egestiona.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "AUTOMATED",
+        "clients": [
+          "VESTAS CHILE",
+          "VESTAS ARGENTINA"
+        ]
+      },
+      "accessRows": 4,
+      "accessPending": 1,
+      "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-27T09:50:32.906Z",
+        "workers": 22
+      },
+      "clients": [
+        {
+          "client": "VESTAS CHILE",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-19"
+        },
+        {
+          "client": "VESTAS ARGENTINA",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-01-14"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "metacontratas",
+        "name": "Metacontratas (CPFL, Energimp, Ibitu, NAWP Chile)",
+        "system": "Metacontratas",
+        "url": "https://v4.metacontratas.com",
+        "hosts": [
+          "v4.metacontratas.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "ASSISTED_LOGIN",
+        "clients": [
+          "CPFL",
+          "ENERGIMP",
+          "IBITU",
+          "NAWP CHILE"
+        ],
+        "note": "Login exige reCAPTCHA"
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "CPFL",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-13"
+        },
+        {
+          "client": "ENERGIMP",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "nextStart": "2026-11-02"
+        },
+        {
+          "client": "IBITU",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-06-01"
+        },
+        {
+          "client": "NAWP CHILE",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 4,
+          "lastStart": "2026-10-12",
+          "nextStart": "2026-11-03"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "seyses-vestas-mx",
+        "name": "Vestas México (Seyses)",
+        "system": "Seyses",
+        "url": "https://egp.seyses.com",
+        "hosts": [
+          "egp.seyses.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "ASSISTED_LOGIN",
+        "clients": [
+          "VESTAS MEXICO"
+        ],
+        "note": "Login pede código enviado por e-mail"
+      },
+      "accessRows": 3,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "VESTAS MEXICO",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-24"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "seyses-statkraft",
+        "name": "Statkraft (Seyses)",
+        "system": "Seyses",
+        "url": "https://statkraft.seyses.com",
+        "hosts": [
+          "statkraft.seyses.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "ASSISTED_LOGIN",
+        "clients": [
+          "STATKRAFT"
+        ],
+        "note": "Login pede código enviado por e-mail"
+      },
+      "accessRows": 4,
+      "accessPending": 1,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "STATKRAFT",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "tdoc-pegasus",
+        "name": "Nordex / Acciona (TDoc Pegasus)",
+        "system": "TDoc",
+        "url": "https://pegasus.tdoc.es",
+        "hosts": [
+          "pegasus.tdoc.es"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "NORDEX ACCIONA",
+          "NAWP",
+          "EDF",
+          "CGN"
+        ],
+        "note": "Mesmo sistema do portal Siemens Gamesa"
+      },
+      "accessRows": 6,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "NORDEX ACCIONA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-18"
+        },
+        {
+          "client": "NAWP",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        },
+        {
+          "client": "EDF",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        },
+        {
+          "client": "CGN",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "tdoc-acciona-chile",
+        "name": "Acciona Chile (TDoc)",
+        "system": "TDoc",
+        "url": "https://acciona-chile.tdoc.es",
+        "hosts": [
+          "acciona-chile.tdoc.es",
+          "auth.tdoc.es"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ACCIONA CHILE"
+        ],
+        "note": "Mesmo sistema do portal Siemens Gamesa"
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ACCIONA CHILE",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "egestiona-goldwind",
+        "name": "Goldwind (eGestiona)",
+        "system": "eGestiona",
+        "url": "https://goldwind.egestiona.com",
+        "hosts": [
+          "goldwind.egestiona.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "GOLDWIND"
+        ],
+        "note": "Mesmo sistema do portal Vestas Latam"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "GOLDWIND",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-27"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "egestiona-voltalia",
+        "name": "Voltalia (eGestiona)",
+        "system": "eGestiona",
+        "url": "https://voltalia.egestiona.com",
+        "hosts": [
+          "voltalia.egestiona.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "VOLTALIA"
+        ],
+        "note": "Mesmo sistema do portal Vestas Latam"
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "VOLTALIA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-06-22"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "egestiona-edp",
+        "name": "EDP (eGestiona)",
+        "system": "eGestiona",
+        "url": "https://edprbr.egestiona.com",
+        "hosts": [
+          "edprbr.egestiona.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "EDP"
+        ],
+        "note": "Mesmo sistema do portal Vestas Latam"
+      },
+      "accessRows": 1,
+      "accessPending": 1,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "EDP",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "sercae-vestas",
+        "name": "Vestas Brasil (Sercae One)",
+        "system": "Sercae One",
+        "url": "https://brasil.sercaeone.com",
+        "hosts": [
+          "brasil.sercaeone.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "VESTAS"
+        ],
+        "note": "Plano contratado no portal não inclui gestão individual de colaboradores"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "VESTAS",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-08-17",
+          "nextStart": "2026-12-08"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "tesseg-sgt",
+        "name": "Tesseg SGT (GE Vernova, Pontal)",
+        "system": "Tesseg",
+        "url": "https://sgt.tesseg.com.br",
+        "hosts": [
+          "sgt.tesseg.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "GE VERNOVA",
+          "PONTAL"
+        ]
+      },
+      "accessRows": 4,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        },
+        {
+          "client": "PONTAL",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-03-28"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "datalife",
+        "name": "Datalife (Neoenergia, Enel, GE Vernova)",
+        "system": "Datalife",
+        "url": "https://appv3.datalife.global",
+        "hosts": [
+          "appv3.datalife.global"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "NEOENERGIA",
+          "ENEL",
+          "GE VERNOVA"
+        ]
+      },
+      "accessRows": 3,
+      "accessPending": 2,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "NEOENERGIA",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        },
+        {
+          "client": "ENEL",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-04-09"
+        },
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "complyworks-ge",
+        "name": "GE (ComplyWorks)",
+        "system": "ComplyWorks",
+        "url": "https://new.complyworks.com",
+        "hosts": [
+          "new.complyworks.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "GE VERNOVA"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "avgeo-renova",
+        "name": "Renova (AVGeo)",
+        "system": "AVGeo",
+        "url": "https://sistema.avgeo.com.br",
+        "hosts": [
+          "sistema.avgeo.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "RENOVA"
+        ]
+      },
+      "accessRows": 2,
+      "accessPending": 1,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "RENOVA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-09-08"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "dgtss-invenergy",
+        "name": "Invenergy (DGTSS)",
+        "system": "DGTSS",
+        "url": "https://invenergy.dgtss.com.br",
+        "hosts": [
+          "invenergy.dgtss.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "INVENERGY"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "INVENERGY",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "nextStart": "2026-11-03",
+          "lastStart": "2026-10-19"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "contractweb",
+        "name": "ContractWeb (Elera, Copel)",
+        "system": "ContractWeb",
+        "url": "https://newcontract.contractweb.com.br",
+        "hosts": [
+          "newcontract.contractweb.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ELERA",
+          "COPEL"
+        ]
+      },
+      "accessRows": 3,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ELERA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-06-03"
+        },
+        {
+          "client": "COPEL",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-05-12"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "contractweb-auren",
+        "name": "Auren (ContractWeb Votorantim)",
+        "system": "ContractWeb",
+        "url": "https://newcontract.votorantim.contractweb.com.br",
+        "hosts": [
+          "newcontract.votorantim.contractweb.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "AUREN"
+        ],
+        "note": "Um acesso por contrato (Araripe, Mandacaru, Caetés/Tucano/Alto Sertão II)"
+      },
+      "accessRows": 4,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "AUREN",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-05-25"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "wehandle-auren",
+        "name": "Auren (WeHandle)",
+        "system": "WeHandle",
+        "url": "https://sistema.wehandle.com.br",
+        "hosts": [
+          "sistema.wehandle.com.br",
+          "url1449.core.wehandle.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "AUREN"
+        ]
+      },
+      "accessRows": 11,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "AUREN",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-05-25"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "greenlegis",
+        "name": "Casa dos Ventos (Greenlegis)",
+        "system": "Greenlegis",
+        "url": "https://sistema.greenlegis.com.br",
+        "hosts": [
+          "sistema.greenlegis.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "CASA DOS VENTOS"
+        ]
+      },
+      "accessRows": 3,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "CASA DOS VENTOS",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "obrasoft",
+        "name": "Obrasoft (Rio Energy, Pontal)",
+        "system": "Obrasoft",
+        "url": "https://www.obrasoft.com.br",
+        "hosts": [
+          "www.obrasoft.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "RIO ENERGY",
+          "PONTAL"
+        ]
+      },
+      "accessRows": 4,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "RIO ENERGY",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        },
+        {
+          "client": "PONTAL",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-03-28"
+        }
+      ],
+      "activity": "DORMANT"
+    },
+    {
+      "portal": {
+        "id": "techsocial-cpfl",
+        "name": "CPFL (TechSocial)",
+        "system": "TechSocial",
+        "url": "https://cpfl-sym-supply.techsocial.com.br",
+        "hosts": [
+          "cpfl-sym-supply.techsocial.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "CPFL"
+        ],
+        "note": "Documentos trabalhistas"
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "CPFL",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-13"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "montreal-alianca",
+        "name": "Aliança trabalhista (Montreal)",
+        "system": "Montreal",
+        "url": "https://wwwx.montreal.com.br",
+        "hosts": [
+          "wwwx.montreal.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ALIANCA"
+        ],
+        "note": "Documentos trabalhistas"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ALIANCA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-03"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "atlas-eletrosul",
+        "name": "Eletrosul (Atlas Facilities)",
+        "system": "Atlas",
+        "url": "https://accounts.atlasfacilities.com.br",
+        "hosts": [
+          "accounts.atlasfacilities.com.br",
+          "gestao.atlasfacilities.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ELETROSUL"
+        ]
+      },
+      "accessRows": 3,
+      "accessPending": 1,
+      "missingCredentials": 1,
+      "clients": [
+        {
+          "client": "ELETROSUL",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "aestiete-aes",
+        "name": "AES (HHT)",
+        "system": "HHT",
+        "url": "https://hht.aestiete.com.br",
+        "hosts": [
+          "hht.aestiete.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "AES"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "AES",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "senior-aeris",
+        "name": "Aeris (FAP / Senior)",
+        "system": "Senior",
+        "url": "https://faponline.com.br",
+        "hosts": [
+          "faponline.com.br",
+          "platform.senior.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "AERIS"
+        ]
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "AERIS",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "tapfin-spic",
+        "name": "SPIC (TAPFIN)",
+        "system": "TAPFIN",
+        "url": "https://portal.tapfin.com.br",
+        "hosts": [
+          "portal.tapfin.com.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "SPIC"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "SPIC",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "dokify-elawan",
+        "name": "Elawan (Dokify)",
+        "system": "Dokify",
+        "url": "https://www.dokify.net",
+        "hosts": [
+          "www.dokify.net"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ELAWAN"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ELAWAN",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "adaptspro-weg",
+        "name": "WEG (Adapts Pro)",
+        "system": "Adapts Pro",
+        "url": "https://ged.adaptspro.com",
+        "hosts": [
+          "ged.adaptspro.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "WEG"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "WEG",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "sertras",
+        "name": "Sertras",
+        "system": "Sertras",
+        "url": "https://app.sertras.com",
+        "hosts": [
+          "app.sertras.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [],
+        "note": "Cliente não informado na base EHS"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    },
+    {
+      "portal": {
+        "id": "smartsheet-enel",
+        "name": "Enel (Smartsheet de acompanhamento)",
+        "system": "Smartsheet",
+        "url": "https://app.smartsheet.com",
+        "hosts": [
+          "app.smartsheet.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ENEL"
+        ],
+        "note": "Planilha do cliente com o status da documentação: legível pela API do Smartsheet se compartilhada com a conta da integração"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ENEL",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-04-09"
+        }
+      ],
+      "activity": "DORMANT"
+    },
+    {
+      "portal": {
+        "id": "sg3-copel",
+        "name": "Copel (SG3)",
+        "system": "SG3",
+        "url": "https://sg3.executiva.adm.br",
+        "hosts": [
+          "sg3.executiva.adm.br"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "COPEL"
+        ],
+        "obsolete": true,
+        "note": "Marcado como obsoleto na base EHS"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "COPEL",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-05-12"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-cubico",
+        "name": "Cubico (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://cubicoinvest.sharepoint.com",
+        "hosts": [
+          "cubicoinvest.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "CUBICO"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "CUBICO",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-cubico-uy",
+        "name": "Cubico Uruguai (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://filemanagement.sharepoint.com",
+        "hosts": [
+          "filemanagement.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "CUBICO URUGUAI"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "CUBICO URUGUAI",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-echoenergia",
+        "name": "Echoenergia (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://grupoequatorialenergia.sharepoint.com",
+        "hosts": [
+          "grupoequatorialenergia.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "ECHOENERGIA"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ECHOENERGIA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-06-29"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-vestas",
+        "name": "Vestas Brasil (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://vestas.sharepoint.com",
+        "hosts": [
+          "vestas.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "VESTAS"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "VESTAS",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-08-17",
+          "nextStart": "2026-12-08"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-nawp-peru",
+        "name": "NAWP Peru (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://nordex.sharepoint.com",
+        "hosts": [
+          "nordex.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "NAWP PERU"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "NAWP PERU",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 2,
+          "lastStart": "2026-10-19"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "sharepoint-alianca",
+        "name": "Aliança (SharePoint)",
+        "system": "SharePoint",
+        "url": "https://aliancageracaodeenergia-my.sharepoint.com",
+        "hosts": [
+          "aliancageracaodeenergia-my.sharepoint.com"
+        ],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "ALIANCA"
+        ]
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ALIANCA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-03"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "drive-links",
+        "name": "Link de Drive do cliente",
+        "system": "Google Drive",
+        "url": "",
+        "hosts": [],
+        "category": "DOCUMENTS",
+        "automation": "MANUAL",
+        "clients": [
+          "ESSENTIA ENERGIA",
+          "ELERA",
+          "SERRA DAS VACAS",
+          "EUROPEAN ENERGY"
+        ]
+      },
+      "accessRows": 4,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ESSENTIA ENERGIA",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        },
+        {
+          "client": "ELERA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-06-03"
+        },
+        {
+          "client": "SERRA DAS VACAS",
+          "activity": "DORMANT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-01-26"
+        },
+        {
+          "client": "EUROPEAN ENERGY",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "storz",
+        "name": "Storz (Sistema Escudo)",
+        "system": "Storz",
+        "url": "https://storz.sistemaescudo.com.br",
+        "hosts": [
+          "storz.sistemaescudo.com.br"
+        ],
+        "category": "TRAINING",
+        "automation": "AUTOMATED",
+        "clients": [],
+        "note": "Já lido pelo pipeline HSE (matrículas e conclusões)"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    },
+    {
+      "portal": {
+        "id": "winda",
+        "name": "WINDA (GWO)",
+        "system": "WINDA",
+        "url": "https://winda.globalwindsafety.org",
+        "hosts": [
+          "winda.globalwindsafety.org"
+        ],
+        "category": "TRAINING",
+        "automation": "NOT_AUTOMATED",
+        "clients": []
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    },
+    {
+      "portal": {
+        "id": "sgre-training",
+        "name": "Treinamentos Siemens Gamesa",
+        "system": "SGRE Training",
+        "url": "https://training.siemensgamesa.com",
+        "hosts": [
+          "training.siemensgamesa.com"
+        ],
+        "category": "TRAINING",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "SGRE"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "SGRE",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 4,
+          "lastStart": "2026-10-15"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "ge-training",
+        "name": "GE Vernova Wind Training",
+        "system": "GE Training",
+        "url": "https://gevernovawindtraining.com",
+        "hosts": [
+          "gevernovawindtraining.com"
+        ],
+        "category": "TRAINING",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "GE VERNOVA"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "kahuna-ge",
+        "name": "GE DCP (Kahuna)",
+        "system": "Kahuna",
+        "url": "https://gerenewableenergy.kahunaonline.com",
+        "hosts": [
+          "gerenewableenergy.kahunaonline.com"
+        ],
+        "category": "TRAINING",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "GE VERNOVA"
+        ],
+        "note": "Matriz de competências da GE"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "GE VERNOVA",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-10-05",
+          "nextStart": "2026-11-12"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "eletrobras-training",
+        "name": "Treinamentos Eletrobras",
+        "system": "Moodle",
+        "url": "https://integramaistreinamentos.eletrobras.com",
+        "hosts": [
+          "integramaistreinamentos.eletrobras.com"
+        ],
+        "category": "TRAINING",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "ELETROSUL"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "ELETROSUL",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
+        }
+      ],
+      "activity": "NO_PROJECTS"
+    },
+    {
+      "portal": {
+        "id": "forms-nordex-training",
+        "name": "Nordex: treinamento obrigatório (Forms)",
+        "system": "Microsoft Forms",
+        "url": "https://forms.cloud.microsoft",
+        "hosts": [
+          "forms.cloud.microsoft"
+        ],
+        "category": "TRAINING",
+        "automation": "MANUAL",
+        "clients": [
+          "NORDEX ACCIONA"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "NORDEX ACCIONA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-18"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "forms-sgre-training",
+        "name": "Siemens Gamesa: solicitação de treinamento (Forms)",
+        "system": "Microsoft Forms",
+        "url": "https://forms.cloud.microsoft",
+        "hosts": [
+          "forms.cloud.microsoft"
+        ],
+        "category": "TRAINING",
+        "automation": "MANUAL",
+        "clients": [
+          "SGRE"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 1,
+      "clients": [
+        {
+          "client": "SGRE",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 4,
+          "lastStart": "2026-10-15"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "surisoft-sit",
+        "name": "Serena SGA (crachás e integração)",
+        "system": "Surisoft",
+        "url": "https://sit.surisoft.com.br",
+        "hosts": [
+          "sit.surisoft.com.br"
+        ],
+        "category": "OTHER",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "SERENA"
+        ]
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "SERENA",
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-10"
+        }
+      ],
+      "activity": "RECENT"
+    },
+    {
+      "portal": {
+        "id": "ariba-vestas",
+        "name": "Vestas Ariba (compras)",
+        "system": "SAP Ariba",
+        "url": "https://mu.ariba.com",
+        "hosts": [
+          "mu.ariba.com",
+          "service.ariba.com"
+        ],
+        "category": "OTHER",
+        "automation": "NOT_AUTOMATED",
+        "clients": [
+          "VESTAS"
+        ]
+      },
+      "accessRows": 2,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": [
+        {
+          "client": "VESTAS",
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "lastStart": "2026-08-17",
+          "nextStart": "2026-12-08"
+        }
+      ],
+      "activity": "IN_FIELD"
+    },
+    {
+      "portal": {
+        "id": "mtr-sinir",
+        "name": "MTR SINIR (resíduos)",
+        "system": "SINIR",
+        "url": "https://mtr.sinir.gov.br",
+        "hosts": [
+          "mtr.sinir.gov.br"
+        ],
+        "category": "OTHER",
+        "automation": "NOT_AUTOMATED",
+        "clients": []
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    },
+    {
+      "portal": {
+        "id": "checklist-facil",
+        "name": "Checklist Fácil",
+        "system": "Checklist Fácil",
+        "url": "https://spa.checklistfacil.com.br",
+        "hosts": [
+          "spa.checklistfacil.com.br"
+        ],
+        "category": "OTHER",
+        "automation": "NOT_AUTOMATED",
+        "clients": []
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    },
+    {
+      "portal": {
+        "id": "portal-one",
+        "name": "Portal One (RC)",
+        "system": "Portal One",
+        "url": "https://134.65.235.39:8050",
+        "hosts": [
+          "134.65.235.39:8050"
+        ],
+        "category": "OTHER",
+        "automation": "NOT_AUTOMATED",
+        "clients": [],
+        "note": "Uso não identificado na base EHS"
+      },
+      "accessRows": 1,
+      "accessPending": 0,
+      "missingCredentials": 0,
+      "clients": []
+    }
+  ],
+  "clientsWithoutPortal": [
+    {
+      "client": "ENGIE",
+      "activity": "IN_FIELD",
+      "projectsInWindow": 1,
+      "nextStart": "2026-12-06",
+      "lastStart": "2026-01-19"
+    },
+    {
+      "client": "VESTAS R DOMINICANA",
+      "activity": "IN_FIELD",
+      "projectsInWindow": 2,
+      "lastStart": "2026-10-26"
+    },
+    {
+      "client": "SEMPRA",
+      "activity": "RECENT",
+      "projectsInWindow": 0,
+      "lastStart": "2026-07-27"
+    },
+    {
+      "client": "NAWP ARGENTINA",
+      "activity": "RECENT",
+      "projectsInWindow": 0,
+      "lastStart": "2026-08-31"
+    }
+  ],
+  "unmatchedRows": [
+    {
+      "client": "NEW ENERGY",
+      "channel": "N/A",
+      "host": "",
+      "status": "",
+      "hasCredentials": true
+    }
+  ]
+}

@@ -13,6 +13,8 @@ const sgre = {
   name: 'Siemens Gamesa (TDoc)',
   system: 'TDoc',
   url: 'https://wplatam.tdoc.es',
+  hosts: ['wplatam.tdoc.es'],
+  category: 'DOCUMENTS' as const,
   automation: 'AUTOMATED' as const,
   clients: ['SGRE'],
 }

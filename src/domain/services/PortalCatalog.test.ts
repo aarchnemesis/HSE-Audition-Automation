@@ -11,12 +11,14 @@ describe('clientKey', () => {
 })
 
 describe('portalsForClient', () => {
-  it('lists every portal a client uses', () => {
+  it('lists the live documentation channels of a client, not training or obsolete ones', () => {
     expect(portalsForClient('GE VERNOVA').map(p => p.id)).toEqual([
       'surisoft',
       'tesseg-sgt',
       'datalife',
+      'complyworks-ge',
     ])
+    expect(portalsForClient('COPEL').map(p => p.id)).toEqual(['contractweb'])
     expect(portalsForClient('ENGIE')).toEqual([])
   })
 
