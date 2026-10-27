@@ -20,6 +20,8 @@
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
     "portal-report": "tsx src/cli/runPortalPendencyReport.ts",
     "portal-coverage": "tsx src/cli/runPortalCoverage.ts",
+    "portal-login": "tsx src/cli/runPortalLogin.ts",
+    "veriduss-extract": "tsx src/cli/runVeridussExtract.ts",
     "agent:dashboard": "tsx src/cli/runAgentJob.ts dashboard",
     "agent:do": "tsx src/cli/runAgentJob.ts do-report",
     "agent:hse": "tsx src/cli/runAgentJob.ts hse-digest",
