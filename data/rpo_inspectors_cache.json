@@ -5396,6 +5396,20 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "JA009226BR",
     "certificates": {
+      "10": {
+        "code": "10",
+        "name": "NR 01",
+        "expirationDate": "2028-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028"
+      },
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028"
+      },
       "12": {
         "code": "12",
         "name": "NR 10",
@@ -5406,9 +5420,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2028-08-26T12:00:00.000Z",
+        "expirationDate": "2028-10-26T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/08/2028"
+        "statusDetail": "Válido até 26/10/2028"
       }
     }
   },
@@ -10855,9 +10869,9 @@
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2026-09-27T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 31 dias (27/09/2026)"
+        "expirationDate": "2028-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028"
       },
       "18": {
         "code": "18",
