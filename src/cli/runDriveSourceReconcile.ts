@@ -324,13 +324,22 @@ async function main() {
       })
       await sleep(args.delayMs)
 
-      // Supersede: move the stale SSOT original to Obsoletos.
+      // Supersede: move the stale SSOT original to Obsoletos. The original may live in a subfolder
+      // (e.g. 02.Treinamentos), so remove its REAL parents — assuming the collaborator root would
+      // leave the file with two parents and the API rejects that ("Increasing the number of
+      // parents is not allowed").
       if (a.kind === 'UPDATE_NEWER' && a.ssotFileId) {
         const obsoletos = await ensureObsoletos(drive, targetFolderId)
+        const current = await drive.files.get({
+          fileId: a.ssotFileId,
+          fields: 'parents',
+          supportsAllDrives: true,
+        })
+        const realParents = (current.data.parents || []).join(',')
         await drive.files.update({
           fileId: a.ssotFileId,
           addParents: obsoletos,
-          removeParents: targetFolderId,
+          removeParents: realParents,
           fields: 'id, parents',
           supportsAllDrives: true,
         })
