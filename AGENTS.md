@@ -48,6 +48,7 @@ pnpm run triangulate               # run audit triangulation CLI
 pnpm run storz-audit               # run Storz scraping and audit CLI
 pnpm run hse-report                # generate consolidated HSE report & dashboard
 pnpm run drive-rpo-audit           # audit divergence between Drive/Storz and RPO
+pnpm run drive-reconcile           # cross the second source (shared drive "TREINAMENTOS") against the SSOT; report-only by default, --execute copies missing/newer docs into the SSOT (canonical names, old->Obsoletos, undo log). Flags: --branch=01,02 --kinds=COPY_MISSING,UPDATE_NEWER,NEW_COLLAB --collaborator=NAME --limit=N
 pnpm run backfill-history          # rebuild data/compliance_history.json from the git history of the database
 pnpm run storz-history-report      # generate student training history report
 pnpm run portal-report             # client-portal pendencies x project briefing, e-mails EHS and ops (--no-email for preview)
