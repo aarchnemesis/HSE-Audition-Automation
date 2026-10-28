@@ -232,6 +232,18 @@ export const PORTAL_LOGIN_CONFIGS: Record<string, PortalLoginConfig> = {
     successSelector: 'a[href*="logout"], a[href*="sair"]',
     confidence: 'derived',
   },
+  surisoft: {
+    portalId: 'surisoft',
+    system: 'Surisoft',
+    url: 'https://www.surisoft.com.br/?ReturnUrl=%2Ffornecedor',
+    fields: [
+      { selector: '#Email', from: 'username' },
+      { selector: '#Password', from: 'password' },
+    ],
+    submitSelector: 'button[type="submit"]',
+    successUrlPattern: /surisoft\.com\.br\/(?:fornecedor|SQF)/i,
+    confidence: 'confirmed',
+  },
   // TDoc signs in through Keycloak: the portal URL redirects to auth.tdoc.es, we fill the
   // standard Keycloak form, and success is the redirect back to the tenant host. The document
   // data itself is JSF (no REST), so this only produces the authenticated session; a JSF

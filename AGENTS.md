@@ -57,6 +57,7 @@ pnpm run portal-sessions           # list saved portal sessions and whether each
 pnpm run veriduss-extract          # pull the Veriduss (Goldwind) census over REST using a saved session -> data/portais/veriduss-goldwind.census.json
 pnpm run egestiona-extract -- <id> # log into an eGestiona tenant and scrape its workforce grid (DPR/DPE/active) -> data/portais/<id>.census.json
 pnpm run tdoc-extract -- <id>      # log into a TDoc tenant (Keycloak) and scrape tasks/workers/documents -> data/portais/<id>.census.json
+pnpm run surisoft-extract          # log into Surisoft and pull each client's workforce via its internal document API -> data/portais/surisoft.census.json
 pnpm run test-gdrive               # test Google Drive API connection
 ```
 
