@@ -240,6 +240,14 @@ async function main() {
     : []
   const createdFolders = new Map<string, string>() // collabKey -> new folder id
 
+  // The filename date is the issue/start date (confirmed standard), except contracts whose date is
+  // the end date. A future start date is therefore a source typo and must not be allowed to
+  // supersede a real document — those are skipped and listed for manual review instead.
+  const DIRECT_EXPIRATION = new Set(['40', '40.1', '04', '04.1'])
+  const nowMs = Date.now()
+  const manualReview: Array<ReconAction & { branch: string; reason: string }> =
+    []
+
   let done = 0
   let ok = 0
   let err = 0
@@ -253,6 +261,23 @@ async function main() {
       !a.collabName.toUpperCase().includes(args.collaborator)
     )
       continue
+
+    // Guard: never supersede a real document based on a future (typo) start date.
+    if (
+      a.kind === 'UPDATE_NEWER' &&
+      a.src2DateIso &&
+      !DIRECT_EXPIRATION.has(a.code || '') &&
+      new Date(a.src2DateIso).getTime() > nowMs
+    ) {
+      manualReview.push({
+        ...(a as ReconAction & { branch: string }),
+        reason: 'data de início no futuro (provável typo)',
+      })
+      console.log(
+        `   [PULADO/REVISAR] ${a.collabName} | cód ${a.code} | ${a.src2FileName}`
+      )
+      continue
+    }
     done++
 
     try {
@@ -329,6 +354,17 @@ async function main() {
   }
 
   fs.writeFileSync(undoPath, JSON.stringify(undo, null, 2), 'utf8')
+  if (manualReview.length > 0) {
+    const mrPath = path.join(
+      process.cwd(),
+      'scratch',
+      'drive_update_manual_review.json'
+    )
+    fs.writeFileSync(mrPath, JSON.stringify(manualReview, null, 2), 'utf8')
+    console.log(
+      `[recon] ${manualReview.length} caso(s) pulado(s) p/ revisão manual (data futura): ${mrPath}`
+    )
+  }
   console.log(
     `\n[recon] Execução concluída. Processados ${done} | sucesso ${ok} | erro ${err}`
   )
