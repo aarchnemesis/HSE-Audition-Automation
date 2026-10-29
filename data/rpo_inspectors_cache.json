@@ -5141,16 +5141,16 @@
       "16": {
         "code": "16",
         "name": "GWO BST",
-        "expirationDate": "2026-11-18T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (18/11/2026)"
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2026-11-18T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (18/11/2026)"
+        "expirationDate": "2028-10-21T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/10/2028"
       },
       "18": {
         "code": "18",
@@ -5162,16 +5162,16 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2028-09-11T12:00:00.000Z",
+        "expirationDate": "2028-10-19T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 11/09/2028"
+        "statusDetail": "Válido até 19/10/2028"
       },
       "20": {
         "code": "20",
         "name": "NR33 [DATA]",
-        "expirationDate": "2026-07-08T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 113 dias (08/07/2026)"
+        "expirationDate": "2027-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027"
       },
       "22": {
         "code": "22",
@@ -5197,16 +5197,16 @@
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2026-11-18T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (18/11/2026)"
+        "expirationDate": "2028-10-19T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028"
       },
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
-        "expirationDate": "2026-08-07T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 83 dias (07/08/2026)"
+        "expirationDate": "2027-10-18T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/10/2027"
       },
       "01": {
         "code": "01",
