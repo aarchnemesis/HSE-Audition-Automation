@@ -4723,10 +4723,10 @@
     "expirationDate": "2026-10-17T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "detail": "VENCIDO há 12 dias (17/10/2026)",
-    "evidenceUrl": "https://drive.google.com/file/d/1pmo6e3vNY-Bd0KBbjz-lKa4XPfBTFTEs/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1ZFxm3-bwlT3sTJwlXGGn-u0t1-lLV7F5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Y9BNIlpviE45Gb1F84eb_mZCuuB0vGj-",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-29T03:02:46.365Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -7397,12 +7397,13 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-07-18T12:00:00.000Z",
+    "expirationDate": "2027-07-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 18/07/2027",
+    "detail": "Válido até 21/07/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/16bcsRXR8NQCYmdvJATTrIhm9_Vk1Co8r/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Xy5W4zef6fdajFkHNgg1kPnoFehGCx56",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -8350,13 +8351,13 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-09-03T03:00:00.000Z",
+    "expirationDate": "2027-09-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 03/09/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1_U62fNHzm4d70rngL6v9AeaG7U7dw3i4/view",
+    "detail": "Válido até 05/09/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1Ye_ZAvJAtbCC9vaiVytmHIcf2v9UVyX0/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1R3QDOY5zrQHSRJppxy-THBlGVumKHga3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-28T13:54:06.312Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_37",
@@ -8997,13 +8998,13 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-12-17T03:00:00.000Z",
+    "expirationDate": "2027-12-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 17/12/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1K1D80Di5JLu1fB7_3oXbO3rfv4MQ8mhl/view",
+    "detail": "Válido até 12/12/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1fPg_naM5E15Xz-aYfdkaXVc_BDmFSfch/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fO2YNjHXPa1bn3go_hyMv7r6xdSYNyhR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-28T13:54:06.312Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -12814,6 +12815,22 @@
     "lastUpdated": "2026-10-28T13:54:06.312Z"
   },
   {
+    "inspectorId": "rpo_50",
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "statusEHS": "INDETERMINADO",
+    "detail": "Data não informada ou formato inválido Data não informada ou formato inválido",
+    "evidenceUrl": "https://drive.google.com/file/d/1rQ1tgIB0074PEyXI6467noACxmP97SU3/view",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
+  },
+  {
     "inspectorId": "rpo_51",
     "inspectorName": "JOSE MARCOS LIMA DE MOURA",
     "role": "IQ",
@@ -13463,13 +13480,13 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-08-01T03:00:00.000Z",
+    "expirationDate": "2027-08-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 01/08/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1olHufZC7YuEOU94Ge8SrAnfPQWXed8FH/view",
+    "detail": "Válido até 05/08/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1wJP_BJSfSa_bfOI58NuvES1T6KoLQe9l/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Uuho6B6eZZ8m57bCbF-6YuHIXSWqWJcF",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -22872,12 +22889,13 @@
     "docCode": "32",
     "docName": "GWO ART",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-07-18T12:00:00.000Z",
+    "expirationDate": "2027-07-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 18/07/2027",
+    "detail": "Válido até 22/07/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1WlFx6-kEu3Jt271sEfRa1U6Xr5d0p7qM/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n6ao9Df34hm674OuEYt8ItJXgbzZFScN",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_85",
@@ -24480,10 +24498,10 @@
     "expirationDate": "2027-01-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "detail": "Válido até 15/01/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1QL5wnrZZkeCDxdj67sLnfYSNsRnD5bQ7/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1s0OvTirbKK_-D1nF_fYa1ftCU3DV6SA3/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NTP3DW-Npg3VhRVxRmP9hsImqOY5SuXr",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-27T16:02:23.041Z"
+    "lastUpdated": "2026-10-29T13:03:40.023Z"
   },
   {
     "inspectorId": "rpo_97",
