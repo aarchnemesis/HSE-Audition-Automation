@@ -5417,6 +5417,20 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/10/2028"
       },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-10-29T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028"
+      },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-10-26T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2027"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",

@@ -945,6 +945,32 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
   },
   {
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "docCode": "15",
+    "docName": "NR-12 Segurança em Máquinas",
+    "rpoExpiration": "2028-10-29T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (29/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
+  },
+  {
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "docCode": "20",
+    "docName": "NR-33 Espaço Confinado",
+    "rpoExpiration": "2027-10-26T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (26/10/2027), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
+  },
+  {
     "inspectorName": "HENRIQUE ELANIO GOMES FERNANDES",
     "docCode": "09",
     "docName": "Direção Defensiva",
