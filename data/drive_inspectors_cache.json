@@ -8636,6 +8636,16 @@
         "statusDetail": "ALERTA URGENTE: Vence em 8 dias (05/11/2026)",
         "sourcePath": "https://drive.google.com/file/d/1mBz4PEN0h4-YPo6u1K3S4Lt9jdftJ8YE/view"
       },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 – ASO – 09.09.2026 - JOSE MARCOS LIMA DE MOURA.(1).pdf",
+        "issueDate": "2026-09-09T03:00:00.000Z",
+        "expirationDate": "2027-09-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/09/2027",
+        "sourcePath": "https://drive.google.com/file/d/1Tlmi4NyxOaDslow-lalXvhC_Phy_AU-I/view"
+      },
       "02": {
         "code": "02",
         "name": "Doc 02",
@@ -8665,16 +8675,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 02/03/2028",
         "sourcePath": "https://drive.google.com/file/d/1sxhwW--H1WR04P31v1tfNVkgpIZhfEtr/view"
-      },
-      "01": {
-        "code": "01",
-        "name": "Doc 01",
-        "filename": "01 – ASO – 28.11.2025 - JOSE MARCOS LIMA DE MOURA.pdf",
-        "issueDate": "2025-11-28T03:00:00.000Z",
-        "expirationDate": "2026-11-28T03:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 40 dias (28/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1S6h24i8b6iwQMWtvHUq_zmby-TjFUq59/view"
       },
       "03": {
         "code": "03",
@@ -17400,7 +17400,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-29T11:00:15.900Z",
+        "expirationDate": "2076-10-29T11:45:08.560Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"

@@ -164526,5 +164526,33 @@
         "extractedClause": "Data do nome do arquivo"
       }
     ]
+  },
+  {
+    "fileId": "1Tlmi4NyxOaDslow-lalXvhC_Phy_AU-I",
+    "filename": "01 – ASO – 09.09.2026 - JOSE MARCOS LIMA DE MOURA.(1).pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-29T11:12:44.262Z",
+    "code": "01",
+    "issueDate": "2026-09-09T03:00:00.000Z",
+    "expirationDate": "2027-09-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-09T03:00:00.000Z",
+        "expirationDate": "2027-09-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
   }
 ]
