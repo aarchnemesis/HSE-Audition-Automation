@@ -165168,5 +165168,33 @@
         "extractedClause": "encerrando- se em 15/01/2027"
       }
     ]
+  },
+  {
+    "fileId": "1VXraBWuPKr-jO01jC8juNYn4QpVpxT1d",
+    "filename": "01 – ASO – 01_09_2026 - THAYNA NOGUEIRA TAVARES_ (1).pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-29T13:56:09.693Z",
+    "code": "01",
+    "issueDate": "2026-09-01T03:00:00.000Z",
+    "expirationDate": "2027-09-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2027-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
   }
 ]
