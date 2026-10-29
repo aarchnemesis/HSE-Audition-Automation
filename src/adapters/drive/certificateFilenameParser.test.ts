@@ -122,6 +122,13 @@ describe('calculateDocExpiration', () => {
     )
   })
 
+  it('CNH (08) usa validade de 10 anos sobre a emissão (não o default de 2 que marcava CNH recente como vencido)', () => {
+    const emitida = new Date(2021, 8, 10) // 10/09/2021 (emissão), passado em relação à REF_DATE
+    expect(calculateDocExpiration('08', emitida, REF_DATE)?.getFullYear()).toBe(
+      2031
+    )
+  })
+
   it('documentos permanentes e de evento-gatilho (02, 03, 04, 05, 10, 11, 23, 24, 30) têm validade vitalícia de 50 anos', () => {
     const issued = new Date(2020, 0, 1)
     const exp05 = calculateDocExpiration('05', issued, REF_DATE)
