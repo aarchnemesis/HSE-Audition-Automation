@@ -50,6 +50,7 @@ pnpm run hse-report                # generate consolidated HSE report & dashboar
 pnpm run drive-rpo-audit           # audit divergence between Drive/Storz and RPO
 pnpm run drive-reconcile           # cross the second source (shared drive "TREINAMENTOS") against the SSOT; report-only by default, --execute copies missing/newer docs into the SSOT (canonical names, old->Obsoletos, undo log). Flags: --branch=01,02 --kinds=COPY_MISSING,UPDATE_NEWER,NEW_COLLAB --collaborator=NAME --limit=N
 pnpm run drive-split-pessoal       # phase 2: classify every SSOT file personal vs training and move misfiled personal docs into each collaborator's "01. Documentos Pessoais" (created when missing). Report-only by default, --execute moves with real-parent fix + undo log. ASO(01) counts as personal by default (--no-aso to exclude); OS(02)/EPI(06) stay. Flags: --branch=01 --limit=N --delay=ms
+pnpm run drive-fix-doc041          # fixes leftover "<code> – Doc <code> – ..." placeholder titles (keeps the load-bearing leading code, swaps the title to canonical, e.g. 04.1 -> "Contrato de Trabalho CLT"; fills a SEM_DATA date from the content cache when available). Report-only by default; --execute renames with undo log.
 pnpm run backfill-history          # rebuild data/compliance_history.json from the git history of the database
 pnpm run storz-history-report      # generate student training history report
 pnpm run portal-report             # client-portal pendencies x project briefing, e-mails EHS and ops (--no-email for preview)
