@@ -4168,11 +4168,12 @@
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive.",
+    "statusEHS": "INDETERMINADO",
+    "detail": "Data não informada ou formato inválido Data não informada ou formato inválido",
+    "evidenceUrl": "https://drive.google.com/file/d/1iQO-B3iwjApRV6Ff7m6c25aw0icYIGC0/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-10-28T13:54:06.312Z"
+    "lastUpdated": "2026-10-29T14:47:56.944Z"
   },
   {
     "inspectorId": "rpo_24",

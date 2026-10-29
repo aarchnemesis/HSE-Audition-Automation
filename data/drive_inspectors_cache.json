@@ -1256,6 +1256,23 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/04/2028",
         "sourcePath": "https://drive.google.com/file/d/1S7gwViJCjwda2uREcM2JHOSvVBFmIEyF/view"
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05 – Cartão de Vacina + Covid – Drielton Francisco de Araujo Silva.pdf",
+        "expirationDate": "2076-10-29T14:45:08.856Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1M7r-1POYTrAbEbehq4kvqkdeLyR1lR35/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "CNH - Drielton Francisco de Araujo Silva.pdf",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "sourcePath": "https://drive.google.com/file/d/1iQO-B3iwjApRV6Ff7m6c25aw0icYIGC0/view"
       }
     },
     "driveFolderId": "1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz",
@@ -17438,7 +17455,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-29T14:00:12.469Z",
+        "expirationDate": "2076-10-29T14:45:08.856Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"

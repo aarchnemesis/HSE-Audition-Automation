@@ -959,6 +959,17 @@
   },
   {
     "inspectorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
+    "docCode": "08",
+    "docName": "CNH - Carteira de Habilitação",
+    "trustedSource": "DRIVE",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Certificado presente no Drive (CNH - Drielton Francisco de Araujo Silva.pdf), porém sem data identificada e sem registro na RPO.",
+    "recommendedAction": "Conferir data e incluir na RPO",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz"
+  },
+  {
+    "inspectorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
     "docCode": "09",
     "docName": "Direção Defensiva",
     "driveExpiration": "2028-04-22T03:00:00.000Z",
