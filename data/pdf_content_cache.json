@@ -166573,5 +166573,35 @@
         "extractedClause": "passa a vigorar de 21/01/2025 e terá duração de um ano"
       }
     ]
+  },
+  {
+    "fileId": "1Ut7PVmLC7wV5wgqI27mgdfu9KPhPRMPA",
+    "filename": "08 – CNH – 10.09.2021 - FRANCISCO FRANKLIN DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-28T13:40:23.060Z",
+    "code": "08",
+    "issueDate": "2021-09-10T03:00:00.000Z",
+    "expirationDate": "2031-09-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/09/2031",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CNH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "08",
+        "issueDate": "2021-09-10T03:00:00.000Z",
+        "expirationDate": "2031-09-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/09/2031",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CNH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
   }
 ]
