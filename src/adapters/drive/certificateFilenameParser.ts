@@ -32,6 +32,12 @@ export const EVENT_TRIGGERED_VALIDITY_YEARS = 50
 // cima). Diferente de todo o resto do catálogo, onde a data no nome costuma ser emissão/conclusão.
 const DIRECT_EXPIRATION_CODES = ['40', '40.1']
 
+// CNH (08) — Carteira de Habilitação: validade legal de ~10 anos (condutor < 50 anos). A data no
+// nome costuma ser a validade (futura, tratada como vencimento direto), mas quando vem a EMISSÃO
+// o default de 2 anos marcava um CNH recente como "vencido" por engano (ex.: emissão 2021 -> 2023).
+// 10 anos reproduz a validade real impressa no documento (emissão 2021 + 10 = 2031).
+const TEN_YEAR_VALIDITY_CODES = ['08']
+
 export function parseDateFromFilename(filename: string): Date | null {
   // Normaliza underscores para espaços para evitar quebra de boundary antes de nomes
   const normalized = filename.replace(/_/g, ' ')
@@ -94,6 +100,7 @@ export function parseDocCode(filename: string): string | null {
 export function getValidityYearsForCode(code: string): number {
   if (EVENT_TRIGGERED_ONLY_CODES.includes(code))
     return EVENT_TRIGGERED_VALIDITY_YEARS
+  if (TEN_YEAR_VALIDITY_CODES.includes(code)) return 10
   return ANNUAL_VALIDITY_CODES.includes(code) ? 1 : 2
 }
 
