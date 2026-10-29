@@ -141444,11 +141444,11 @@
   },
   {
     "fileId": "15sX8ntTppPRfZYz7fPJznyZ4jLxxXY7m",
-    "filename": "31 – Elevador (JASO) (F) – SEM_DATA - FRANCISCO FRANKLIN DA SILVA.pdf",
+    "filename": "31 – Elevador (JASO) (F) – 21.05.2026 - FRANCISCO FRANKLIN DA SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-28T13:41:25.425Z",
+    "modifiedTime": "2026-10-29T16:07:10.921Z",
     "code": "31",
     "issueDate": "2026-05-21T03:00:00.000Z",
     "expirationDate": "2028-05-21T03:00:00.000Z",
@@ -144015,11 +144015,11 @@
   },
   {
     "fileId": "1M4gRm5qnGbZQCn1jRFLiGEhQRAuPmg9G",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - MARIO SERGIO CASTRO DE SOUZA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 08.03.2024 - MARIO SERGIO CASTRO DE SOUZA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:21.002Z",
+    "modifiedTime": "2026-10-29T16:07:12.085Z",
     "code": "04.1",
     "issueDate": "2024-03-08T03:00:00.000Z",
     "expirationDate": "2026-03-08T03:00:00.000Z",
@@ -145253,12 +145253,12 @@
   },
   {
     "fileId": "1hDlPgKX9WU-DTT6_G5eFvpP1sQCeO-Y_",
-    "filename": "32 – GWO ART – SEM_DATA - WERMESON DE OLIVEIRA FRANCO.pdf",
+    "filename": "32 – GWO ART – 16.10.2026 - WERMESON DE OLIVEIRA FRANCO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-28T13:27:29.886Z",
-    "code": "32",
+    "modifiedTime": "2026-10-29T16:07:13.293Z",
+    "code": "30",
     "issueDate": "2026-10-16T03:00:00.000Z",
     "expirationDate": "2076-10-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
@@ -145281,24 +145281,24 @@
       },
       {
         "code": "32",
-        "issueDate": "2026-10-19T03:00:00.000Z",
-        "expirationDate": "2028-10-19T03:00:00.000Z",
+        "issueDate": "2026-10-16T03:00:00.000Z",
+        "expirationDate": "2028-10-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/10/2028",
+        "statusDetail": "Válido até 16/10/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO ART (via PDF) (Pág. 3)",
-        "extractedClause": "Assinou em 19 out 2026"
+        "matchedTerm": "GWO ART (Pág. 1)",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1E6fNw940TE4RLFuOKtPHKHrQSxmXquzt",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:22.240Z",
+    "modifiedTime": "2026-10-29T16:07:14.551Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -145307,7 +145307,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145318,17 +145318,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1v4ewJ1lUebTrY_C5_pMBESgYrD1JUDhS",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - LUANA QUEIROZ DE SOUSA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 23.10.2025 - LUANA QUEIROZ DE SOUSA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:23.441Z",
+    "modifiedTime": "2026-10-29T16:07:16.036Z",
     "code": "04.1",
     "issueDate": "2025-10-23T03:00:00.000Z",
     "expirationDate": "2027-10-23T03:00:00.000Z",
@@ -145337,7 +145337,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Log gerado em 23 de outubro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145348,7 +145348,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Log gerado em 23 de outubro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -145414,11 +145414,11 @@
   },
   {
     "fileId": "1Hrz9Rv-UTCB6xeYn6nlG3rJpavSUo0qB",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO THIAGO DE ABREU.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 18.12.2025 - FRANCISCO THIAGO DE ABREU.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:24.733Z",
+    "modifiedTime": "2026-10-29T16:07:17.383Z",
     "code": "04.1",
     "issueDate": "2025-12-18T03:00:00.000Z",
     "expirationDate": "2027-12-18T03:00:00.000Z",
@@ -145427,7 +145427,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 18 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145438,17 +145438,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 18 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1BuPf0DFZQeLY2h5rwdz3fm6vPkPky-2H",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - RAIMUNDO NONATO DE HOLANDA FILHO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 10.11.2025 - RAIMUNDO NONATO DE HOLANDA FILHO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:26.129Z",
+    "modifiedTime": "2026-10-29T16:07:18.707Z",
     "code": "04.1",
     "issueDate": "2025-11-10T03:00:00.000Z",
     "expirationDate": "2027-11-10T03:00:00.000Z",
@@ -145457,7 +145457,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 10 de Novembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145468,17 +145468,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 10 de Novembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1RVt10xKskeBiEVjESriLCjwGFsLIfzOQ",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - LUCAS JEAN GONÇALVES DE SOUZA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 28.10.2025 - LUCAS JEAN GONÇALVES DE SOUZA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:27.537Z",
+    "modifiedTime": "2026-10-29T16:07:19.980Z",
     "code": "04.1",
     "issueDate": "2025-10-28T03:00:00.000Z",
     "expirationDate": "2027-10-28T03:00:00.000Z",
@@ -145487,7 +145487,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 28 de Outubro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145498,7 +145498,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 28 de Outubro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -145534,11 +145534,11 @@
   },
   {
     "fileId": "1Yj-C7YAFLrmU7hu9Pprlo4XVJlJKl-3F",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - ADRIANO CIRILO GARCIA LIMA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 18.10.2024 - ADRIANO CIRILO GARCIA LIMA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:28.818Z",
+    "modifiedTime": "2026-10-29T16:07:21.361Z",
     "code": "04.1",
     "issueDate": "2024-10-18T03:00:00.000Z",
     "expirationDate": "2026-10-18T03:00:00.000Z",
@@ -145547,7 +145547,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 18 de outubro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145558,7 +145558,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 18 de outubro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -145714,11 +145714,11 @@
   },
   {
     "fileId": "1x_7Jz2fh7BYe80Gdm8i7mULzhXGY04jI",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - JOÃO BATISTA CRUZ DA SILVA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - JOÃO BATISTA CRUZ DA SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:30.228Z",
+    "modifiedTime": "2026-10-29T16:07:22.786Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -145727,7 +145727,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145738,7 +145738,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -145834,11 +145834,11 @@
   },
   {
     "fileId": "1ZwrPPsWvUi1rPcXMrn7JQDW2S1bOxoUG",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - JOAO ELIENAI RIBEIRO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 28.10.2025 - JOAO ELIENAI RIBEIRO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:33.034Z",
+    "modifiedTime": "2026-10-29T16:07:24.136Z",
     "code": "04.1",
     "issueDate": "2025-10-28T03:00:00.000Z",
     "expirationDate": "2027-10-28T03:00:00.000Z",
@@ -145847,7 +145847,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 28 de Outubro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -145858,7 +145858,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 28 de Outubro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146014,11 +146014,11 @@
   },
   {
     "fileId": "1mBz4PEN0h4-YPo6u1K3S4Lt9jdftJ8YE",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - JOSE MARCOS LIMA DE MOURA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - JOSE MARCOS LIMA DE MOURA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:34.277Z",
+    "modifiedTime": "2026-10-29T16:07:25.472Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -146027,7 +146027,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146038,7 +146038,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146516,12 +146516,12 @@
   },
   {
     "fileId": "174IuQFGGFYQnfKWUeiGwdiiGpw2t4ruI",
-    "filename": "32 – GWO ART – SEM_DATA - CARLOS HENRIQUE SOARES DA SILVA.pdf",
+    "filename": "32 – GWO ART – 15.10.2026 - CARLOS HENRIQUE SOARES DA SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-28T13:30:56.151Z",
-    "code": "32",
+    "modifiedTime": "2026-10-29T16:07:26.682Z",
+    "code": "30",
     "issueDate": "2026-10-15T03:00:00.000Z",
     "expirationDate": "2076-10-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
@@ -146544,14 +146544,14 @@
       },
       {
         "code": "32",
-        "issueDate": "2026-10-20T03:00:00.000Z",
-        "expirationDate": "2028-10-20T03:00:00.000Z",
+        "issueDate": "2026-10-15T03:00:00.000Z",
+        "expirationDate": "2028-10-15T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/10/2028",
+        "statusDetail": "Válido até 15/10/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO ART (via PDF) (Pág. 3)",
-        "extractedClause": "Assinou em 20 out 2026"
+        "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146647,11 +146647,11 @@
   },
   {
     "fileId": "1pUB6sqT4jGfiziamSdzE4CR7jYI2gF96",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO KELVIO TORRES ASSUNÇÃO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 01.12.2025 - FRANCISCO KELVIO TORRES ASSUNÇÃO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:35.505Z",
+    "modifiedTime": "2026-10-29T16:07:28.085Z",
     "code": "04.1",
     "issueDate": "2025-12-01T03:00:00.000Z",
     "expirationDate": "2027-12-01T03:00:00.000Z",
@@ -146660,7 +146660,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 1 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146671,7 +146671,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 1 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146707,11 +146707,11 @@
   },
   {
     "fileId": "103MTyT3GKVkowQVecQxCTXSXl7Lx6cOf",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - JONATAS CARLOS DA MOTA SANTOS.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 26.05.2025 - JONATAS CARLOS DA MOTA SANTOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:36.714Z",
+    "modifiedTime": "2026-10-29T16:07:30.293Z",
     "code": "04.1",
     "issueDate": "2025-05-26T03:00:00.000Z",
     "expirationDate": "2027-05-26T03:00:00.000Z",
@@ -146720,7 +146720,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 26 de Maio de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146731,17 +146731,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 26 de Maio de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1s7VDeW-9XUMBpZSON43znMg70zEZdFky",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FERNANDO TEODORO DE MORAIS NETO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 28.01.2025 - FERNANDO TEODORO DE MORAIS NETO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:37.913Z",
+    "modifiedTime": "2026-10-29T16:07:31.635Z",
     "code": "04.1",
     "issueDate": "2025-01-28T03:00:00.000Z",
     "expirationDate": "2027-01-28T03:00:00.000Z",
@@ -146750,7 +146750,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 28 de janeiro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146761,17 +146761,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 28 de janeiro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1NWDJ0vVxZUoNjrVP-H0cr6mUgtFVzuu1",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - LEANDRO CAMILO DE JESUS.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - LEANDRO CAMILO DE JESUS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:39.274Z",
+    "modifiedTime": "2026-10-29T16:07:32.796Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -146780,7 +146780,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146791,7 +146791,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146827,11 +146827,11 @@
   },
   {
     "fileId": "18xZQ5pAmgko3JGHsISBa3OcXvTvRKzNp",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FELIPE JARDEL SILVA CARVALHO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 11.12.2025 - FELIPE JARDEL SILVA CARVALHO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:40.431Z",
+    "modifiedTime": "2026-10-29T16:07:34.002Z",
     "code": "04.1",
     "issueDate": "2025-12-11T03:00:00.000Z",
     "expirationDate": "2027-12-11T03:00:00.000Z",
@@ -146840,7 +146840,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 11 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146851,17 +146851,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 11 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1XX9gKmktoiiJrgF3shJK_sDyuZi3rVug",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - THALITSON WILKSON PINTO NUNES.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 21.11.2025 - THALITSON WILKSON PINTO NUNES.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:41.681Z",
+    "modifiedTime": "2026-10-29T16:07:35.363Z",
     "code": "04.1",
     "issueDate": "2025-11-21T03:00:00.000Z",
     "expirationDate": "2027-11-21T03:00:00.000Z",
@@ -146870,7 +146870,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 21 de Novembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146881,17 +146881,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 21 de Novembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1_OjVrUcVdn-pgtDZnUCJbYDNQKDve7of",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - CAIO FELIPE RIBEIRO RODRIGUES.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - CAIO FELIPE RIBEIRO RODRIGUES.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:42.988Z",
+    "modifiedTime": "2026-10-29T16:07:36.653Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -146900,7 +146900,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146911,7 +146911,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -146947,11 +146947,11 @@
   },
   {
     "fileId": "1dCdkc_80MKzf1vAct7yr1zNJwhDZ16Oo",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - WILDEN ALVES FERREIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 10.11.2025 - WILDEN ALVES FERREIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:44.314Z",
+    "modifiedTime": "2026-10-29T16:07:37.985Z",
     "code": "04.1",
     "issueDate": "2025-11-10T03:00:00.000Z",
     "expirationDate": "2027-11-10T03:00:00.000Z",
@@ -146960,7 +146960,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 10 de Novembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -146971,7 +146971,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 10 de Novembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -147451,12 +147451,12 @@
   },
   {
     "fileId": "14gaUrYa0Y-95CyQf54ic1_bCO8vv_4_5",
-    "filename": "32 – GWO ART – SEM_DATA - SIMON DIAS DA SILVA.pdf",
+    "filename": "32 – GWO ART – 16.10.2026 - SIMON DIAS DA SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-28T13:28:05.871Z",
-    "code": "32",
+    "modifiedTime": "2026-10-29T16:07:45.707Z",
+    "code": "30",
     "issueDate": "2026-10-16T03:00:00.000Z",
     "expirationDate": "2076-10-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
@@ -147479,14 +147479,14 @@
       },
       {
         "code": "32",
-        "issueDate": "2026-10-19T03:00:00.000Z",
-        "expirationDate": "2028-10-19T03:00:00.000Z",
+        "issueDate": "2026-10-16T03:00:00.000Z",
+        "expirationDate": "2028-10-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/10/2028",
+        "statusDetail": "Válido até 16/10/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO ART (via PDF) (Pág. 3)",
-        "extractedClause": "Assinou em 19 out 2026"
+        "matchedTerm": "GWO ART (Pág. 1)",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -147552,11 +147552,11 @@
   },
   {
     "fileId": "1gc2I0xkS-NlxAq26rhpKElyYsyOsUYzv",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - RAFAEL ANDRADE BARBOSA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - RAFAEL ANDRADE BARBOSA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:45.559Z",
+    "modifiedTime": "2026-10-29T16:07:47.070Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -147565,7 +147565,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -147576,7 +147576,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -147612,11 +147612,11 @@
   },
   {
     "fileId": "1cxO8iKHYYX4RcWIYUMuRCuf1mFg5Y8jf",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO DAVILO MARQUES DE SOUSA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 25.03.2026 - FRANCISCO DAVILO MARQUES DE SOUSA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:46.831Z",
+    "modifiedTime": "2026-10-29T16:07:48.757Z",
     "code": "04.1",
     "issueDate": "2026-03-25T03:00:00.000Z",
     "expirationDate": "2028-03-25T03:00:00.000Z",
@@ -147625,7 +147625,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Assinou em 25 mar 2026",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -147636,7 +147636,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Assinou em 25 mar 2026"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -147762,11 +147762,11 @@
   },
   {
     "fileId": "1zXpqkCDJBaRniskG1WGoIrT47_pAvFt0",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - GERARDO LUCAS VIANA FILHO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 08.12.2025 - GERARDO LUCAS VIANA FILHO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:47.946Z",
+    "modifiedTime": "2026-10-29T16:07:49.980Z",
     "code": "04.1",
     "issueDate": "2025-12-08T03:00:00.000Z",
     "expirationDate": "2027-12-08T03:00:00.000Z",
@@ -147775,7 +147775,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 8 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -147786,17 +147786,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 8 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1t2QFpBLpEHbqFdiYAn6CNckjt1lZwVgp",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - CARLOS EDUARDO FERREIRA ALVES.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 26.05.2025 - CARLOS EDUARDO FERREIRA ALVES.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:49.186Z",
+    "modifiedTime": "2026-10-29T16:07:51.156Z",
     "code": "04.1",
     "issueDate": "2025-05-26T03:00:00.000Z",
     "expirationDate": "2027-05-26T03:00:00.000Z",
@@ -147805,7 +147805,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 26 de Maio de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -147816,7 +147816,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 26 de Maio de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148062,11 +148062,11 @@
   },
   {
     "fileId": "1iO0Lcg-5EkDfSSi4Ezewo1rAeJGpq5PO",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO LEONARDO DA SILVA FERREIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - FRANCISCO LEONARDO DA SILVA FERREIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:51.671Z",
+    "modifiedTime": "2026-10-29T16:07:52.413Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -148075,7 +148075,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148086,7 +148086,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148122,11 +148122,11 @@
   },
   {
     "fileId": "1JuEpbLLx3Gk5zP020jLJgBdHQREFup-m",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - IGOR MARTINS ROCHA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - IGOR MARTINS ROCHA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:52.958Z",
+    "modifiedTime": "2026-10-29T16:07:53.592Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -148135,7 +148135,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148146,17 +148146,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1XV0zje7jGVH_aJ9QDc7v3whvihXmLZyq",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - WANDERSON AVELINO DE SOUZA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 24.11.2025 - WANDERSON AVELINO DE SOUZA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:54.112Z",
+    "modifiedTime": "2026-10-29T16:07:54.687Z",
     "code": "04.1",
     "issueDate": "2025-11-24T03:00:00.000Z",
     "expirationDate": "2027-11-24T03:00:00.000Z",
@@ -148165,7 +148165,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 24 de Novembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148176,7 +148176,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 24 de Novembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148212,11 +148212,11 @@
   },
   {
     "fileId": "1MHfaGOKQsoion99TVWO5rkMil1aqH_Xw",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - CAIO VICTOR OLIVEIRA BALBINO.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 01.12.2025 - CAIO VICTOR OLIVEIRA BALBINO.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:55.657Z",
+    "modifiedTime": "2026-10-29T16:07:56.003Z",
     "code": "04.1",
     "issueDate": "2025-12-01T03:00:00.000Z",
     "expirationDate": "2027-12-01T03:00:00.000Z",
@@ -148225,7 +148225,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 1 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148236,7 +148236,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 1 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148302,11 +148302,11 @@
   },
   {
     "fileId": "1t2ggWWTMT6MmnspxrLVpQ9Facm0iK0_E",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - ANTONIO GEICIANO MENDES SERPA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 24.10.2025 - ANTONIO GEICIANO MENDES SERPA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:57.497Z",
+    "modifiedTime": "2026-10-29T16:07:57.416Z",
     "code": "04.1",
     "issueDate": "2025-10-24T03:00:00.000Z",
     "expirationDate": "2027-10-24T03:00:00.000Z",
@@ -148315,7 +148315,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Log gerado em 24 de outubro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148326,7 +148326,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Log gerado em 24 de outubro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148362,11 +148362,11 @@
   },
   {
     "fileId": "1Wr_uPeRG6rrQqnE7fKmdzO0DSPoiaRKl",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FLAVIO ALVES SANTANA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 08.12.2025 - FLAVIO ALVES SANTANA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:40:58.984Z",
+    "modifiedTime": "2026-10-29T16:07:58.908Z",
     "code": "04.1",
     "issueDate": "2025-12-08T03:00:00.000Z",
     "expirationDate": "2027-12-08T03:00:00.000Z",
@@ -148375,7 +148375,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 8 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148386,17 +148386,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 8 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1iv9-uEN9LTB25YZpufPM3LYpIvCdmWiz",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - EZEQUIEL CRUZ VIEIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - EZEQUIEL CRUZ VIEIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:00.281Z",
+    "modifiedTime": "2026-10-29T16:08:00.595Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -148405,7 +148405,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148416,7 +148416,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148512,11 +148512,11 @@
   },
   {
     "fileId": "1aVyUfy6wJGq5rySjLZFXsjLEmhUoCHq2",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO GEORGE MARTINS SILVA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - FRANCISCO GEORGE MARTINS SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:01.642Z",
+    "modifiedTime": "2026-10-29T16:08:01.986Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -148525,7 +148525,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148536,7 +148536,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148572,11 +148572,11 @@
   },
   {
     "fileId": "1i6S1VwgrCM9FpPNdvyLtth9CkQgQ1ciL",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - RAFAEL SIQUEIRA DA SILVA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 17.06.2025 - RAFAEL SIQUEIRA DA SILVA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:02.862Z",
+    "modifiedTime": "2026-10-29T16:08:03.163Z",
     "code": "04.1",
     "issueDate": "2025-06-17T03:00:00.000Z",
     "expirationDate": "2027-06-17T03:00:00.000Z",
@@ -148585,7 +148585,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 17 de Junho de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148596,7 +148596,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 17 de Junho de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148662,11 +148662,11 @@
   },
   {
     "fileId": "1U80XfP0kWmf5JEsi68RJxSnAJv1rKEU-",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - FRANCISCO VINICIUS SOUSA DOS SANTOS.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 03.01.2025 - FRANCISCO VINICIUS SOUSA DOS SANTOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:04.197Z",
+    "modifiedTime": "2026-10-29T16:08:04.597Z",
     "code": "04.1",
     "issueDate": "2025-01-03T03:00:00.000Z",
     "expirationDate": "2027-01-03T03:00:00.000Z",
@@ -148675,7 +148675,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 03 de janeiro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148686,7 +148686,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 03 de janeiro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148752,11 +148752,11 @@
   },
   {
     "fileId": "1H0qMY5gVDS2fo1D0Y5v5sEbvFEDyVkjr",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - VALDERSON DO NASCIMENTO FERREIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 24.10.2025 - VALDERSON DO NASCIMENTO FERREIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:05.395Z",
+    "modifiedTime": "2026-10-29T16:08:05.847Z",
     "code": "04.1",
     "issueDate": "2025-10-24T03:00:00.000Z",
     "expirationDate": "2027-10-24T03:00:00.000Z",
@@ -148765,7 +148765,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Log gerado em 24 de outubro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148776,17 +148776,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Log gerado em 24 de outubro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1wqVac1JjVQKo2cmGGEw565onjHIb3hfw",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - JUAN ILGNER MARINHO LIMA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 01.12.2025 - JUAN ILGNER MARINHO LIMA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:06.592Z",
+    "modifiedTime": "2026-10-29T16:08:07.138Z",
     "code": "04.1",
     "issueDate": "2025-12-01T03:00:00.000Z",
     "expirationDate": "2027-12-01T03:00:00.000Z",
@@ -148795,7 +148795,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba, 1 de Dezembro de 2025",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148806,7 +148806,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba, 1 de Dezembro de 2025"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148872,11 +148872,11 @@
   },
   {
     "fileId": "1YacZSr0JeEASVZU76OQynVCX2ciSfME2",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - ERVESON NASCIMENTO DOS SANTOS.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - ERVESON NASCIMENTO DOS SANTOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:07.754Z",
+    "modifiedTime": "2026-10-29T16:08:08.505Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -148885,7 +148885,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -148896,7 +148896,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -148992,11 +148992,11 @@
   },
   {
     "fileId": "1zqwgEXKSVbt8e_UJJ8dwfI0kRv64MNbM",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - ITALO DE ABREU DUARTE.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 20.02.2023 - ITALO DE ABREU DUARTE.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:09.136Z",
+    "modifiedTime": "2026-10-29T16:08:09.710Z",
     "code": "04.1",
     "issueDate": "2023-02-20T03:00:00.000Z",
     "expirationDate": "2025-02-20T03:00:00.000Z",
@@ -149005,7 +149005,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 20 de fevereiro de 2023",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -149016,7 +149016,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 20 de fevereiro de 2023"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -149082,11 +149082,11 @@
   },
   {
     "fileId": "1gj61w73t6SHYJHdYnxOidk_6-S4Rzbrf",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - DIEGO PATRICK SANCHES CAMPOS.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - DIEGO PATRICK SANCHES CAMPOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:10.369Z",
+    "modifiedTime": "2026-10-29T16:08:10.826Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -149095,7 +149095,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -149106,7 +149106,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -149142,11 +149142,11 @@
   },
   {
     "fileId": "1py7ACzVQ8qr4FSAC-fICj6udlqf-sJL5",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - ALLAN THIAGO RAMOS VEIGA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - ALLAN THIAGO RAMOS VEIGA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:11.785Z",
+    "modifiedTime": "2026-10-29T16:08:12.176Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -149155,7 +149155,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -149166,17 +149166,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1ldCUTeErvhozPeBJUfypvXXkNnDXZMmn",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - PHILIPE DE SOUZA ANDRADE.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 05.11.2024 - PHILIPE DE SOUZA ANDRADE.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:13.371Z",
+    "modifiedTime": "2026-10-29T16:08:13.566Z",
     "code": "04.1",
     "issueDate": "2024-11-05T03:00:00.000Z",
     "expirationDate": "2026-11-05T03:00:00.000Z",
@@ -149185,7 +149185,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 05 de novembro de 2024",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -149196,17 +149196,17 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 05 de novembro de 2024"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1dTI_6uGYv9UpLWG4dkG6yRbc5fcSVzF9",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - LEONARDO SIMON COSTA GAEM.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 25.07.2022 - LEONARDO SIMON COSTA GAEM.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:14.533Z",
+    "modifiedTime": "2026-10-29T16:08:14.861Z",
     "code": "04.1",
     "issueDate": "2022-07-25T03:00:00.000Z",
     "expirationDate": "2024-07-25T03:00:00.000Z",
@@ -149215,7 +149215,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "PREFIX",
     "matchedTerm": "Aditivo ao Contrato (04.1)",
-    "extractedClause": "Sorocaba/SP, 25 de Julho de 2022",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "04.1",
@@ -149226,7 +149226,7 @@
         "source": "PDF_CONTENT",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)",
-        "extractedClause": "Sorocaba/SP, 25 de Julho de 2022"
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
@@ -149862,11 +149862,11 @@
   },
   {
     "fileId": "1k2pMD5qTSRrFjHqQ7LgzSQ1F5Nd9DUYE",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - RAPHAEL AFONSO CARDOSO PEREIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 10.04.2025 - RAPHAEL AFONSO CARDOSO PEREIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:23.324Z",
+    "modifiedTime": "2026-10-29T16:08:16.262Z",
     "code": "04.1",
     "issueDate": "2025-04-10T03:00:00.000Z",
     "expirationDate": "2026-01-10T03:00:00.000Z",
@@ -150068,11 +150068,11 @@
   },
   {
     "fileId": "1-QqxrCSH806y0lUJuZaqm8HpS-r-kxqR",
-    "filename": "04.1 – Contrato de Trabalho CLT – SEM_DATA - KELVIN GARCIA DE OLIVEIRA.pdf",
+    "filename": "04.1 – Contrato de Trabalho CLT – 10.04.2025 - KELVIN GARCIA DE OLIVEIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T15:41:25.768Z",
+    "modifiedTime": "2026-10-29T16:08:17.758Z",
     "code": "04.1",
     "issueDate": "2025-04-10T03:00:00.000Z",
     "expirationDate": "2026-01-05T03:00:00.000Z",
