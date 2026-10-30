@@ -15,6 +15,7 @@
     "test-gdrive": "tsx src/cli/testGoogleDriveApi.ts",
     "auth:drive": "tsx src/cli/runGoogleDriveAuth.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
+    "drive-reconcile": "tsx src/cli/runDriveSourceReconcile.ts",
     "ocr:deep": "tsx src/cli/runDeepOcr.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
