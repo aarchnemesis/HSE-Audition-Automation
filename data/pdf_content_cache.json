@@ -99621,11 +99621,11 @@
   },
   {
     "fileId": "1wywCBXKyqwhRah37DCA6BelHWLbln6eW",
-    "filename": "02 – Ordem de Serviço – 10.11.2025 - WILDEN ALVES FERREIRA.pdf",
+    "filename": "Declaração de não Aplicabilidade de Requisito - WILDEN ALVES FERREIRA.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-16T11:30:18.543Z",
+    "modifiedTime": "2026-10-30T14:04:07.020Z",
     "code": "02",
     "issueDate": "2025-11-10T03:00:00.000Z",
     "expirationDate": "2075-11-10T03:00:00.000Z",
@@ -99633,9 +99633,20 @@
     "statusDetail": "Válido até 10/11/2075",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Ordem de Serviço",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Ordem de Serviço (via PDF) (Pág. 6)",
+    "extractedClause": "Assinou em 10 nov 2025",
     "documents": [
+      {
+        "code": "12",
+        "issueDate": "2025-11-10T03:00:00.000Z",
+        "expirationDate": "2027-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
+        "extractedClause": "Assinou em 10 nov 2025"
+      },
       {
         "code": "02",
         "issueDate": "2025-11-10T03:00:00.000Z",
@@ -99644,8 +99655,8 @@
         "statusDetail": "Válido até 10/11/2075",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Ordem de Serviço",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Ordem de Serviço (via PDF) (Pág. 6)",
+        "extractedClause": "Assinou em 10 nov 2025"
       }
     ]
   },
@@ -165141,11 +165152,11 @@
   },
   {
     "fileId": "1VXraBWuPKr-jO01jC8juNYn4QpVpxT1d",
-    "filename": "01 – ASO – 01_09_2026 - THAYNA NOGUEIRA TAVARES_ (1).pdf",
+    "filename": "01 – ASO – 01.09.2026 - THAYNA NOGUEIRA TAVARES.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-29T13:56:09.693Z",
+    "modifiedTime": "2026-10-30T14:08:25.160Z",
     "code": "01",
     "issueDate": "2026-09-01T03:00:00.000Z",
     "expirationDate": "2027-09-01T03:00:00.000Z",
@@ -166876,6 +166887,90 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID",
         "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1OmaFQdFs5Fn3BfZMlwQapyNmN9Bm7i9e",
+    "filename": "01 – ASO – 09.09.2026 - FRANCISCOO EVERTON BARBOSA VASCONCELOS-09-10-2026 (1) (1).pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T14:30:05.107Z",
+    "code": "01",
+    "issueDate": "2026-09-09T03:00:00.000Z",
+    "expirationDate": "2027-09-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/09/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-09-09T03:00:00.000Z",
+        "expirationDate": "2027-09-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/09/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
+  },
+  {
+    "fileId": "1dxsTjn1NMfgUiSkLyC9pyI7gfsqUpt2r",
+    "filename": "Arthdrone - Certificado - Raphael Afonso Cardoso Pereira.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T14:49:57.557Z",
+    "code": null,
+    "issueDate": "2026-02-11T03:00:00.000Z",
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "PDF_CONTENT",
+    "classificationSource": "NONE",
+    "extractedClause": "Sorocaba, 11 de fevereiro de 2026",
+    "documents": [
+      {
+        "code": null,
+        "issueDate": "2026-02-11T03:00:00.000Z",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "PDF_CONTENT",
+        "classificationSource": "NONE",
+        "extractedClause": "Sorocaba, 11 de fevereiro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1J8kLFBSP9sSEuRZyxCSzsHYOFa1XFmCd",
+    "filename": "13 – NR-10 SEP – 27.01.2026 - THIAGO LIMA SANTOS SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T14:29:23.994Z",
+    "code": "13",
+    "issueDate": "2026-01-27T03:00:00.000Z",
+    "expirationDate": "2028-01-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/01/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 SEP",
+    "extractedClause": "período de 24 de Janeiro de 2026 | Atualizado via nome: 27/01/2026",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-01-27T03:00:00.000Z",
+        "expirationDate": "2028-01-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/01/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP",
+        "extractedClause": "período de 24 de Janeiro de 2026 | Atualizado via nome: 27/01/2026"
       }
     ]
   }
