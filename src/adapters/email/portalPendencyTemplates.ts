@@ -37,7 +37,7 @@ export const CLEARANCE_LABEL: Record<Clearance, string> = {
   NOT_MONITORED: 'Portal sem leitura',
 }
 
-const CLEARANCE_COLORS: Record<Clearance, [string, string]> = {
+export const CLEARANCE_COLORS: Record<Clearance, [string, string]> = {
   CLEARED: ['#E4F3E9', '#1E7A4C'],
   WAITING_CLIENT: ['#E4EAF5', '#25386B'],
   BLOCKED: ['#FCE7E3', '#C1401F'],
@@ -45,7 +45,7 @@ const CLEARANCE_COLORS: Record<Clearance, [string, string]> = {
   NOT_MONITORED: ['#F1F5F9', '#475569'],
 }
 
-const ACTION_COLORS: Record<ActionKind, [string, string]> = {
+export const ACTION_COLORS: Record<ActionKind, [string, string]> = {
   RESUBMIT: ['#FCE7E3', '#C1401F'],
   UPLOAD_FROM_BASE: ['#E4F3E9', '#1E7A4C'],
   OBTAIN: ['#FDF0E6', '#B45A1E'],
@@ -535,6 +535,78 @@ export function buildEhsQueueBodyHtml(report: PortalPendencyReport): string {
     ${report.gaps.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 6px">Clientes com equipe escalada e portal sem leitura automática</h3>${gapsTable(report.gaps)}` : ''}
     <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:10px 14px;margin-top:16px;font-size:12px;color:#475569">
       <strong>[Planilha Anexa]:</strong> O arquivo <em>pendencias-portais-${report.refDate}.xlsx</em> em anexo contém a íntegra das 591 ações com links diretos do Google Drive para submissão imediata.
+    </div>
+  `
+}
+
+export function buildUnifiedPortalReportBodyHtml(
+  report: PortalPendencyReport,
+  ehsContact = 'equipe EHS'
+): string {
+  const monitored = report.projects.filter(p => p.monitored.length)
+  const urgent = monitored.filter(
+    p => (p.project.daysToStart ?? 0) <= report.window.urgentDays
+  )
+  const later = monitored.filter(
+    p => (p.project.daysToStart ?? 0) > report.window.urgentDays
+  )
+  const c = countClearances(report.projects)
+  const scheduled = report.actions.filter(a => a.priority < 3)
+  const countAction = (kind: ActionKind) =>
+    scheduled.filter(a => a.kind === kind).length
+
+  return `
+    <p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#25386B">Relatório Integrado: Prontidão Operacional &amp; Fila de Regularização de Portais</p>
+    <p style="margin:0 0 14px;font-size:12px;color:#64748B">Visão compartilhada para <strong>Coordenação de Operações</strong>, <strong>EHS</strong> e <strong>RH</strong> &middot; Referência: ${formatDay(report.refDate)}</p>
+
+    ${kpiTable([
+      ['Pessoas escaladas', c.total],
+      ['Liberadas', c.CLEARED, '#1E7A4C'],
+      ['Bloqueadas', c.BLOCKED, '#C1401F'],
+      ['Sem cadastro', c.NOT_REGISTERED, '#B45A1E'],
+      ['Em análise', c.WAITING_CLIENT, '#25386B'],
+    ])}
+
+    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:8px 12px;margin:-10px 0 16px;font-size:12px;color:#475569">
+      <strong>Fila de Ações EHS para pessoas escaladas:</strong> ${scheduled.length} ações prioritárias
+      (&middot; Reenviar: <strong style="color:#C1401F">${countAction('RESUBMIT')}</strong>
+      &middot; Subir da base: <strong style="color:#1E7A4C">${countAction('UPLOAD_FROM_BASE')}</strong>
+      &middot; Providenciar: <strong style="color:#B45A1E">${countAction('OBTAIN')}</strong>
+      &middot; Renovar: <strong style="color:#25386B">${countAction('RENEW')}</strong>)
+    </div>
+
+    ${buildExpiringAlertsHtml(report.expiringAlerts)}
+
+    ${urgent.length ? `
+      <h3 style="color:#25386B;font-size:14px;margin:20px 0 10px;border-bottom:2px solid #25386B;padding-bottom:4px;text-transform:uppercase;letter-spacing:0.5px">
+        1. Semáforo de Prontidão: Campanhas Ativas e Próximas (&le; ${report.window.urgentDays} dias)
+      </h3>
+      ${urgent.map(projectBlock).join('')}
+    ` : ''}
+
+    <h3 style="color:#25386B;font-size:14px;margin:20px 0 10px;border-bottom:2px solid #C1401F;padding-bottom:4px;text-transform:uppercase;letter-spacing:0.5px">
+      2. Fila EHS: Ações para Desbloqueio das Equipes Escaladas
+    </h3>
+    ${scheduled.length ? priorityByWorker(scheduled) : '<p style="color:#6B7A8D">Nenhuma pendência para quem está escalado nos portais monitorados.</p>'}
+
+    ${later.length ? `
+      <h3 style="color:#25386B;font-size:13px;margin:20px 0 8px;border-bottom:1px solid #E2E8F0;padding-bottom:4px;text-transform:uppercase;letter-spacing:0.5px">
+        Mobilizações Futuras (Próximas Semanas)
+      </h3>
+      ${laterProjectsTable(later)}
+    ` : ''}
+
+    ${report.gaps.length ? `
+      <h3 style="color:#25386B;font-size:13px;margin:20px 0 6px;border-bottom:1px solid #E2E8F0;padding-bottom:4px;text-transform:uppercase;letter-spacing:0.5px">
+        Clientes com Envio por E-mail / SharePoint (Sem Leitura Automática)
+      </h3>
+      <p style="margin:0 0 6px;font-size:12px;color:#6B7A8D">Acompanhamento manual alinhado diretamente entre Operações e EHS.</p>
+      ${gapsTable(report.gaps)}
+    ` : ''}
+
+    <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:6px;padding:12px 14px;margin-top:16px;font-size:12px;color:#166534">
+      <strong>Planilha Analítica em Anexo (<em>pendencias-portais-${report.refDate}.xlsx</em>):</strong><br>
+      Planilha com 4 abas completas: <em>'Prontidão por Projeto'</em>, <em>'Fila de Ações'</em> (com links diretos do Google Drive para upload imediato), <em>'Alertas Vencimento (30d)'</em> e <em>'Portais sem Leitura'</em>. Contato EHS: ${esc(ehsContact)}.
     </div>
   `
 }

@@ -3,6 +3,7 @@ import { PortalPendencyReport } from '../../domain/services/PortalPendencyReport
 import {
   buildEhsQueueBodyHtml,
   buildOpsReadinessBodyHtml,
+  buildUnifiedPortalReportBodyHtml,
   countClearances,
   displayName,
   shortTitle,
@@ -141,6 +142,20 @@ describe('buildEhsQueueBodyHtml', () => {
     expect(html).toContain('Reenviar')
     expect(html).toContain('Direção Defensiva</td>')
     expect(html).toContain('(6 dias)')
+    expect(html).not.toMatch(EMOJI)
+  })
+})
+
+describe('buildUnifiedPortalReportBodyHtml', () => {
+  const html = buildUnifiedPortalReportBodyHtml(report, 'ehs@arthwind.com.br')
+
+  it('combines operational readiness, EHS actions and uses no emoji', () => {
+    expect(html).toContain('Relatório Integrado')
+    expect(html).toContain('Joao Carlos Guardiano')
+    expect(html).toContain('Bloqueado')
+    expect(html).toContain('Reenviar')
+    expect(html).toContain('Direção Defensiva</td>')
+    expect(html).toContain('Planilha Analítica em Anexo')
     expect(html).not.toMatch(EMOJI)
   })
 })

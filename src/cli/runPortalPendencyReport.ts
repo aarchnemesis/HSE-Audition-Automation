@@ -7,6 +7,7 @@ import { wrapEmailHtml } from '../adapters/email/emailTemplates.js'
 import {
   buildEhsQueueBodyHtml,
   buildOpsReadinessBodyHtml,
+  buildUnifiedPortalReportBodyHtml,
   formatDay,
 } from '../adapters/email/portalPendencyTemplates.js'
 import { writePortalReportWorkbook } from '../adapters/excel/PortalReportWorkbook.js'
@@ -24,10 +25,24 @@ const refDateArg = arg('ref-date') || process.env.HSE_REF_DATE
 const REF_DATE = refDateArg ? new Date(refDateArg) : new Date()
 const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
+const SPLIT_EMAILS = process.argv.includes('--split')
+const IS_TEST = process.argv.includes('--test')
+const TEST_PREFIX = IS_TEST ? '[TESTE / VALIDAÇÃO] ' : ''
+
 const EHS_TO =
   arg('to-ehs') || process.env.PORTAL_EHS_EMAIL_TO || process.env.HSE_EMAIL_TO
 const OPS_TO =
   arg('to-ops') || process.env.PORTAL_OPS_EMAIL_TO || process.env.DO_EMAIL_TO
+const UNIFIED_TO =
+  arg('to') ||
+  process.env.PORTAL_UNIFIED_EMAIL_TO ||
+  Array.from(
+    new Set(
+      [EHS_TO, OPS_TO]
+        .filter(Boolean)
+        .flatMap(s => s!.split(',').map(e => e.trim()).filter(Boolean))
+    )
+  ).join(',')
 
 async function main() {
   console.log(
@@ -75,25 +90,51 @@ async function main() {
   console.log(`[PortalReport] Planilha gerada em: ${workbookPath}`)
 
   const day = formatDay(report.refDate)
-  const messages: (EmailMessage & { audience: string; envVar: string })[] = [
-    {
-      audience: 'ehs',
-      envVar: 'PORTAL_EHS_EMAIL_TO',
-      to: EHS_TO ?? '',
-      subject: `Portais de clientes: fila de documentação (${day})`,
-      htmlContent: buildEhsQueueBodyHtml(report),
-      attachments: [
-        { filename: `pendencias-portais-${stamp}.xlsx`, path: workbookPath },
-      ],
-    },
-    {
-      audience: 'coordenacao',
-      envVar: 'PORTAL_OPS_EMAIL_TO',
-      to: OPS_TO ?? '',
-      subject: `Prontidão documental das equipes nos clientes (${day})`,
-      htmlContent: buildOpsReadinessBodyHtml(report, EHS_TO || 'equipe EHS'),
-    },
-  ]
+  const messages: (EmailMessage & { audience: string; envVar: string })[] =
+    SPLIT_EMAILS
+      ? [
+          {
+            audience: 'ehs',
+            envVar: 'PORTAL_EHS_EMAIL_TO',
+            to: EHS_TO ?? '',
+            subject: `${TEST_PREFIX}Portais de clientes: fila de documentação (${day})`,
+            htmlContent: buildEhsQueueBodyHtml(report),
+            attachments: [
+              {
+                filename: `pendencias-portais-${stamp}.xlsx`,
+                path: workbookPath,
+              },
+            ],
+          },
+          {
+            audience: 'coordenacao',
+            envVar: 'PORTAL_OPS_EMAIL_TO',
+            to: OPS_TO ?? '',
+            subject: `${TEST_PREFIX}Prontidão documental das equipes nos clientes (${day})`,
+            htmlContent: buildOpsReadinessBodyHtml(
+              report,
+              EHS_TO || 'equipe EHS'
+            ),
+          },
+        ]
+      : [
+          {
+            audience: 'geral-unificado',
+            envVar: 'PORTAL_UNIFIED_EMAIL_TO',
+            to: UNIFIED_TO,
+            subject: `${TEST_PREFIX}Portais de clientes: prontidão de equipes e regularização documental (${day})`,
+            htmlContent: buildUnifiedPortalReportBodyHtml(
+              report,
+              EHS_TO || 'equipe EHS'
+            ),
+            attachments: [
+              {
+                filename: `pendencias-portais-${stamp}.xlsx`,
+                path: workbookPath,
+              },
+            ],
+          },
+        ]
 
   if (SKIP_EMAIL) {
     for (const m of messages) {
