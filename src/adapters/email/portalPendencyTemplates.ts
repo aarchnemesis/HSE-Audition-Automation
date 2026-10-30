@@ -149,6 +149,16 @@ function memberMissing(member: MemberReadiness): string {
 
 function projectBlock(p: ProjectReadiness): string {
   const ref = p.project
+  const allCleared =
+    p.members.length > 0 && p.members.every(m => m.clearance === 'CLEARED')
+
+  if (allCleared) {
+    return `<div style="border:1px solid #DCFCE7;background:#F0FDF4;border-radius:6px;padding:8px 12px;margin-bottom:8px">
+      <span style="color:#166534;font-weight:700">[LIBERADO] ${esc(ref.client)} · ${esc(ref.windfarm)}</span>
+      <span style="font-size:11px;color:#15803D"> · ${ref.wo ? `WO ${esc(ref.wo)} · ` : ''}${startLabel(ref)} · Equipe 100% Liberada (${p.members.length} colaboradores)</span>
+    </div>`
+  }
+
   const source = p.monitored.length
     ? p.monitored
         .map(m => `${esc(m.portal.name)}, dados de ${formatDay(m.capturedAt)}`)
@@ -175,6 +185,33 @@ function projectBlock(p: ProjectReadiness): string {
       <tbody>${rows}</tbody>
     </table>
   </div>`
+}
+
+function laterProjectsTable(projects: ProjectReadiness[]): string {
+  if (!projects.length) return ''
+  const rows = projects
+    .map(p => {
+      const ref = p.project
+      const cleared = p.members.filter(m => m.clearance === 'CLEARED').length
+      const total = p.members.length
+      const status =
+        total > 0 && cleared === total
+          ? `<span style="color:#166534;font-weight:600">Liberado (${cleared}/${total})</span>`
+          : `<span style="color:#9A3412;font-weight:600">${cleared}/${total} liberados</span>`
+
+      return `<tr>
+        <td><strong>${esc(ref.client)} · ${esc(ref.windfarm)}</strong>${ref.wo ? ` (WO ${esc(ref.wo)})` : ''}</td>
+        <td>${formatDay(ref.startDate, false)}</td>
+        <td>${total} pessoas</td>
+        <td>${status}</td>
+      </tr>`
+    })
+    .join('')
+
+  return `<table style="margin:0 0 16px">
+    <thead><tr><th>Projeto</th><th>Início</th><th>Equipe</th><th>Prontidão</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`
 }
 
 function gapReason(gap: CoverageGap): string {
@@ -245,112 +282,106 @@ export function buildExpiringAlertsHtml(alerts?: ExpiringDocAlert[]): string {
   const medium = normativos.filter(a => a.urgency === 'MEDIUM_30D')
 
   let normativosHtml = ''
-  if (normativos.length > 0) {
-    const rows = normativos
+  if (critical.length > 0) {
+    const rows = critical
       .map(a => {
-        const urgencyBadge =
-          a.urgency === 'CRITICAL_7D'
-            ? `<span style="background:#FEE2E2;color:#991B1B;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🔴 VENCE EM ${a.daysToExpiry}D</span>`
-            : a.urgency === 'HIGH_15D'
-              ? `<span style="background:#FFEDD5;color:#9A3412;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟠 VENCE EM ${a.daysToExpiry}D</span>`
-              : `<span style="background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟡 VENCE EM ${a.daysToExpiry}D</span>`
+        const urgencyBadge = `<span style="background:#FCE7E3;color:#C1401F;padding:2px 7px;border-radius:999px;font-weight:700;font-size:11px">[CRÍTICO] ${a.daysToExpiry}d</span>`
 
         return `<tr>
-          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+          <td>
             <strong>${esc(displayName(a.worker))}</strong><br>
             <span style="font-size:11px;color:#7C2D12">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
           </td>
-          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+          <td>
             <strong>${esc(a.docName)}</strong><br>
             <span style="font-size:11px;color:#9A3412">Validade: <strong>${formatDay(a.expirationDate)}</strong></span>
           </td>
-          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA;text-align:center">${urgencyBadge}</td>
-          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
-            <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.portalStatus || 'Aprovado')}</span><br>
-            <span style="font-size:11px;color:#B91C1C">⚠️ ${esc(a.risk)}</span><br>
-            <span style="font-size:11px;color:#047857">📋 <strong>Ação:</strong> ${esc(a.recommendedAction)}</span>
+          <td style="text-align:center">${urgencyBadge}</td>
+          <td>
+            <span style="font-size:11px;color:#B91C1C"><strong>Risco:</strong> ${esc(a.risk)}</span><br>
+            <span style="font-size:11px;color:#047857"><strong>Ação:</strong> ${esc(a.recommendedAction)}</span>
           </td>
         </tr>`
       })
       .join('')
 
     normativosHtml = `
-      <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:8px;padding:16px 20px;margin:20px 0 20px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="font-size:20px">⚠️</span>
-          <strong style="color:#9A3412;font-size:16px">ALERTA OPERACIONAL: CURSOS E EXAMES NORMATIVOS VENCENDO EM CAMPO (7, 15 E 30 DIAS)</strong>
+      <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:8px;padding:12px 16px;margin:16px 0">
+        <div style="margin-bottom:6px">
+          <strong style="color:#9A3412;font-size:14px">[ALERTA OPERACIONAL] CURSOS E EXAMES NORMATIVOS VENCENDO EM CAMPO (&le; 7 DIAS)</strong>
         </div>
-        <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#7C2D12">
-          <strong>Atenção EHS e Coordenação:</strong> Os colaboradores abaixo constam como aprovados hoje, mas possuem <strong>cursos ou ASO que vencem durante a operação ou nos próximos dias</strong>.
-          Se a reciclagem ou exame não forem realizados antes do vencimento, o cliente bloqueará o acesso no portão do parque, <strong>causando paralisação total das atividades</strong>.
+        <p style="margin:0 0 8px 0;font-size:12px;color:#7C2D12">
+          <strong>Atenção EHS e Coordenação:</strong> ${critical.length} curso(s)/ASO com <strong>vencimento em até 7 dias</strong> geram risco de paralisação ou bloqueio imediato na portaria do parque.
         </p>
-        <div style="font-size:12px;font-weight:600;margin-bottom:12px;color:#9A3412">
-          Resumo de Risco: 🔴 <strong>${critical.length} crítico(s) em até 7 dias</strong> | 🟠 <strong>${high.length} em até 15 dias</strong> | 🟡 <strong>${medium.length} em até 30 dias</strong>
-        </div>
-        <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #FDBA74;border-radius:6px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;margin:0 0 8px;font-size:11px;background:#FFFFFF;border:1px solid #FDBA74;border-radius:6px;overflow:hidden">
           <thead>
             <tr style="background:#FFEDD5;color:#7C2D12;text-align:left">
-              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Colaborador / Campanha</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Documento / Vencimento</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74;text-align:center">Prazo</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Status / Risco / Ação Necessária</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #FDBA74">Colaborador / Campanha</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #FDBA74">Documento / Validade</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #FDBA74;text-align:center">Prazo</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #FDBA74">Risco e Ação Necessária</th>
             </tr>
           </thead>
           <tbody>${rows}</tbody>
         </table>
+        <div style="font-size:11px;color:#9A3412;background:#FED7AA;padding:5px 8px;border-radius:4px">
+          <strong>Médio Prazo:</strong> Mais <strong>${high.length} itens vencem em até 15 dias</strong> e <strong>${medium.length} itens em até 30 dias</strong>. A relação nominal completa de todos os ${normativos.length} vencimentos está na aba <em>'Alertas Vencimento (30d)'</em> da planilha anexa.
+        </div>
       </div>
     `
   }
 
   let cadastraisHtml = ''
   if (cadastrais.length > 0) {
-    const rows = cadastrais
-      .map(a => {
-        const badge =
-          a.category === 'EXPERIENCIA_CLT'
-            ? `<span style="background:#DBEAFE;color:#1E40AF;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">ℹ️ EXPERIÊNCIA (45D)</span>`
-            : `<span style="background:#E0E7FF;color:#3730A3;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">ℹ️ REVALIDAÇÃO PORTAL</span>`
+    const byWorker = new Map<string, ExpiringDocAlert[]>()
+    for (const c of cadastrais) {
+      byWorker.set(c.worker, [...(byWorker.get(c.worker) || []), c])
+    }
+
+    const workerRows = Array.from(byWorker.entries())
+      .map(([worker, list]) => {
+        const first = list[0]
+        const docList = list.map(d => shortTitle(d.docName)).join(', ')
+        const isNovato = first.category === 'EXPERIENCIA_CLT'
+        const badge = isNovato
+          ? `<span style="background:#DBEAFE;color:#1E40AF;padding:2px 7px;border-radius:999px;font-weight:700;font-size:10px">EXPERIÊNCIA (45D)</span>`
+          : `<span style="background:#E0E7FF;color:#3730A3;padding:2px 7px;border-radius:999px;font-weight:700;font-size:10px">REVALIDAÇÃO ANUAL</span>`
 
         return `<tr>
-          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
-            <strong>${esc(displayName(a.worker))}</strong><br>
-            <span style="font-size:11px;color:#1E3A8A">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
+          <td>
+            <strong>${esc(displayName(worker))}</strong><br>
+            <span style="font-size:11px;color:#1E3A8A">${esc(first.client)} · ${esc(first.windfarm)}${first.wo ? ` (WO ${esc(first.wo)})` : ''}</span>
           </td>
-          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
-            <strong>${esc(a.docName)}</strong><br>
-            <span style="font-size:11px;color:#1E40AF">Prazo no portal: <strong>${formatDay(a.expirationDate)}</strong> (${a.daysToExpiry} dias)</span>
+          <td>
+            <span style="font-size:11px"><strong>${esc(docList)}</strong></span><br>
+            <span style="font-size:11px;color:#1E40AF">Prazo no portal: ${formatDay(first.expirationDate)} (${first.daysToExpiry} dias)</span>
           </td>
-          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE;text-align:center">${badge}</td>
-          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
-            <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.categoryLabel)}</span><br>
-            <span style="font-size:11px;color:#0369A1">📌 ${esc(a.risk)}</span><br>
-            <span style="font-size:11px;color:#15803D"><strong>Ação RH:</strong> ${esc(a.recommendedAction)}</span>
+          <td style="text-align:center">${badge}</td>
+          <td style="font-size:11px;color:#15803D">
+            <strong>Ação RH:</strong> ${esc(first.recommendedAction)}
           </td>
         </tr>`
       })
       .join('')
 
     cadastraisHtml = `
-      <div style="background:#EFF6FF;border:2px solid #3B82F6;border-radius:8px;padding:16px 20px;margin:20px 0 24px">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-          <span style="font-size:20px">ℹ️</span>
-          <strong style="color:#1E40AF;font-size:16px">AVISO RH: REVALIDAÇÃO CADASTRAL NO PORTAL DO CLIENTE (EXPERIÊNCIA CLT E E-SOCIAL)</strong>
+      <div style="background:#EFF6FF;border:2px solid #3B82F6;border-radius:8px;padding:12px 16px;margin:16px 0">
+        <div style="margin-bottom:6px">
+          <strong style="color:#1E40AF;font-size:14px">[AVISO RH] REVALIDAÇÕES CADASTRÁIS NO PORTAL DO CLIENTE (EXPERIÊNCIA CLT E E-SOCIAL)</strong>
         </div>
-        <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#1E3A8A">
-          <strong>Atenção RH e Coordenação:</strong> Os colaboradores abaixo são <strong>CLT ativos e regulares na Arthwind</strong>.
-          As datas registradas abaixo decorrem da exigência do portal do cliente (ex: Veriduss / Goldwind) correspondentes ao <strong>término do 1º período de experiência de 45 dias</strong> (novatos admitidos em 05/10/2026) ou de <strong>ciclo anual de renovação cadastral</strong>.
-          <strong>Não há irregularidade no vínculo de trabalho</strong>, porém a plataforma do cliente travará o crachá se o RH não anexar o Termo de Prorrogação ou extrato recente do e-Social antes do prazo.
+        <p style="margin:0 0 8px 0;font-size:12px;color:#1E3A8A">
+          Colaboradores CLT ativos e regulares. As datas no portal decorrem do <strong>término do 1º período de experiência (45d)</strong> de novatos (admitidos em 05/10/2026) ou de ciclo anual no Veriduss/Goldwind. Não há irregularidade contratual, mas requer envio de termo de prorrogação ou e-Social recente antes do prazo para evitar bloqueio automático na portaria.
         </p>
-        <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #93C5FD;border-radius:6px;overflow:hidden">
+        <table style="width:100%;border-collapse:collapse;margin:0;font-size:11px;background:#FFFFFF;border:1px solid #93C5FD;border-radius:6px;overflow:hidden">
           <thead>
             <tr style="background:#DBEAFE;color:#1E40AF;text-align:left">
-              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Colaborador / Campanha</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Documento no Portal</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD;text-align:center">Classificação</th>
-              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Detalhes e Ação Recomendada</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #93C5FD">Colaborador / Campanha</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #93C5FD">Documentos no Portal</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #93C5FD;text-align:center">Classificação</th>
+              <th style="padding:6px 8px;border-bottom:2px solid #93C5FD">Ação Recomendada (RH)</th>
             </tr>
           </thead>
-          <tbody>${rows}</tbody>
+          <tbody>${workerRows}</tbody>
         </table>
       </div>
     `
@@ -373,21 +404,23 @@ export function buildOpsReadinessBodyHtml(
   const c = countClearances(report.projects)
 
   return `
-    <p style="margin:0 0 6px;font-size:14px">Situação documental de cada pessoa escalada no Briefing de Projetos, conforme o portal do cliente.</p>
-    <p style="margin:0 0 18px;font-size:12px;color:#6B7A8D">Projetos iniciados nos últimos ${report.window.lookbackDays} dias e com início nos próximos ${report.window.lookaheadDays}. Referência: ${formatDay(report.refDate)}.</p>
+    <p style="margin:0 0 6px;font-size:14px">Resumo executivo de prontidão documental das equipes escaladas no Briefing.</p>
+    <p style="margin:0 0 16px;font-size:12px;color:#6B7A8D">Projetos com início nos últimos ${report.window.lookbackDays} dias e próximos ${report.window.lookaheadDays} dias. Referência: ${formatDay(report.refDate)}.</p>
     ${kpiTable([
       ['Pessoas escaladas', c.total],
       ['Liberadas', c.CLEARED, '#1E7A4C'],
       ['Bloqueadas', c.BLOCKED, '#C1401F'],
       ['Sem cadastro', c.NOT_REGISTERED, '#B45A1E'],
-      ['Aguardando cliente', c.WAITING_CLIENT],
-      ['Portal sem leitura', c.NOT_MONITORED, '#475569'],
+      ['Aguardando cliente', c.WAITING_CLIENT, '#25386B'],
+      ['Portal s/ leitura', c.NOT_MONITORED, '#475569'],
     ])}
     ${buildExpiringAlertsHtml(report.expiringAlerts)}
-    ${urgent.length ? `<h3 style="color:#25386B;font-size:15px;margin:0 0 10px">Em andamento ou começando em até ${report.window.urgentDays} dias</h3>${urgent.map(projectBlock).join('')}` : ''}
-    ${later.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 10px">Próximas semanas</h3>${later.map(projectBlock).join('')}` : ''}
+    ${urgent.length ? `<h3 style="color:#25386B;font-size:15px;margin:16px 0 10px">Campanhas em andamento ou iniciando em até ${report.window.urgentDays} dias</h3>${urgent.map(projectBlock).join('')}` : ''}
+    ${later.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 8px">Próximas semanas (mobilizações futuras)</h3>${laterProjectsTable(later)}` : ''}
     ${report.gaps.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 6px">Clientes cujo portal ainda não é lido automaticamente</h3><p style="margin:0 0 6px;font-size:12px;color:#6B7A8D">Para estes, confirmar a liberação com a equipe EHS.</p>${gapsTable(report.gaps)}` : ''}
-    <p style="margin:20px 0 0;font-size:12px;color:#6B7A8D">Bloqueado: falta documento obrigatório, ou ele foi reprovado ou venceu. Aguardando cliente: tudo enviado, o cliente ainda não analisou. Dúvidas sobre um documento: ${esc(ehsContact)}.</p>
+    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:10px 14px;margin-top:16px;font-size:12px;color:#475569">
+      <strong>[Planilha Anexa]:</strong> O arquivo <em>pendencias-portais-${report.refDate}.xlsx</em> contém o detalhamento individual completo por colaborador e projeto. Dúvidas: ${esc(ehsContact)}.
+    </div>
   `
 }
 
@@ -399,14 +432,12 @@ function actionDetail(a: PortalAction): string {
   if (a.note) parts.push(esc(a.note))
   if (a.evidence) {
     const label = `Base HSE: ${esc(a.evidence.docName)}${a.evidence.expiresOn ? ` até ${formatDay(a.evidence.expiresOn)}` : ''}`
-    parts.push(
-      a.evidence.url
-        ? `<a href="${esc(a.evidence.url)}" style="color:#1E7A4C">${label}</a>`
-        : label
-    )
+    parts.push(label)
   }
   return parts.join(' · ')
 }
+
+const MAX_ACTIONS_SHOWN_PER_WORKER = 3
 
 function priorityByWorker(actions: PortalAction[]): string {
   const groups = new Map<string, PortalAction[]>()
@@ -418,7 +449,9 @@ function priorityByWorker(actions: PortalAction[]): string {
     .map(list => {
       const first = list[0]
       const project = first.project!
-      const rows = list
+      const shown = list.slice(0, MAX_ACTIONS_SHOWN_PER_WORKER)
+      const remaining = list.length - shown.length
+      const rows = shown
         .map(
           a => `<tr>
           <td>${esc(shortTitle(a.document))}</td>
@@ -427,14 +460,18 @@ function priorityByWorker(actions: PortalAction[]): string {
         </tr>`
         )
         .join('')
+      const moreRow =
+        remaining > 0
+          ? `<tr><td colspan="3" style="color:#6B7A8D;font-size:11px;background:#F8FAFC;padding:6px 10px">+${remaining} outra(s) ação(ões) detalhada(s) na aba 'Fila de ações' da planilha anexa</td></tr>`
+          : ''
       return `<div class="group">
         <div class="group-header">
-          <strong>${esc(displayName(first.worker))}</strong><br>
+          <strong>${esc(displayName(first.worker))}</strong> (${list.length} pendência(s))<br>
           <span>${esc(first.portalName)} · ${esc(project.client)} / ${esc(project.windfarm)} · ${startLabel(project)}</span>
         </div>
         <table style="margin:0">
           <thead><tr><th style="width:40%">Documento</th><th style="width:20%">Ação</th><th>Detalhe</th></tr></thead>
-          <tbody>${rows}</tbody>
+          <tbody>${rows}${moreRow}</tbody>
         </table>
       </div>`
     })
@@ -477,24 +514,27 @@ export function buildEhsQueueBodyHtml(report: PortalPendencyReport): string {
     .size
 
   return `
-    <p style="margin:0 0 6px;font-size:14px">Pendências de documentação nos portais de clientes, começando por quem está escalado em projeto.</p>
-    <p style="margin:0 0 18px;font-size:12px;color:#6B7A8D">Referência: ${formatDay(report.refDate)}. Lista completa no anexo.</p>
+    <p style="margin:0 0 6px;font-size:14px">Resumo executivo da fila de documentação em portais de clientes (pessoas escaladas no Briefing).</p>
+    <p style="margin:0 0 16px;font-size:12px;color:#6B7A8D">Referência: ${formatDay(report.refDate)}. Planilha analítica completa em anexo.</p>
     ${kpiTable([
       ['Ações p/ escalados', scheduled.length],
       ['Reenviar', count('RESUBMIT'), '#C1401F'],
       ['Subir (já temos)', count('UPLOAD_FROM_BASE'), '#1E7A4C'],
       ['Providenciar', count('OBTAIN'), '#B45A1E'],
-      ['Renovar', count('RENEW')],
+      ['Renovar', count('RENEW'), '#25386B'],
     ])}
     ${buildExpiringAlertsHtml(report.expiringAlerts)}
-    <h3 style="color:#25386B;font-size:15px;margin:0 0 10px">Pessoas escaladas com pendência</h3>
+    <h3 style="color:#25386B;font-size:15px;margin:16px 0 10px">Pessoas escaladas com pendências</h3>
     ${scheduled.length ? priorityByWorker(scheduled) : '<p style="color:#6B7A8D">Nenhuma pendência para quem está escalado nos portais monitorados.</p>'}
-    <h3 style="color:#25386B;font-size:15px;margin:20px 0 10px">Situação por portal</h3>
+    <h3 style="color:#25386B;font-size:15px;margin:20px 0 10px">Situação consolidada por portal</h3>
     <table>
       <thead><tr><th>Portal</th><th style="text-align:center">Bloqueadas</th><th style="text-align:center">Reenviar</th><th style="text-align:center">Subir</th><th style="text-align:center">Provid.</th><th style="text-align:center">Renovar</th></tr></thead>
       <tbody>${portalRows}</tbody>
     </table>
-    <p style="margin:12px 0 0;font-size:13px">Sem projeto na janela: <strong>${backlog.length}</strong> ações para <strong>${backlogPeople}</strong> pessoas do RPO ativo.${offRoster.length ? ` Outras <strong>${offRoster.length}</strong> são de pessoas que não estão no RPO ativo (possível desligamento ou terceiro): avaliar se o cadastro no portal deve ser inativado.` : ''}</p>
+    <p style="margin:12px 0 0;font-size:13px">Sem projeto na janela: <strong>${backlog.length}</strong> ações para <strong>${backlogPeople}</strong> pessoas do RPO ativo.${offRoster.length ? ` Outras <strong>${offRoster.length}</strong> são de pessoas que não estão no RPO ativo: avaliar se o cadastro no portal deve ser inativado.` : ''}</p>
     ${report.gaps.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 6px">Clientes com equipe escalada e portal sem leitura automática</h3>${gapsTable(report.gaps)}` : ''}
+    <div style="background:#F8FAFC;border:1px solid #E2E8F0;border-radius:6px;padding:10px 14px;margin-top:16px;font-size:12px;color:#475569">
+      <strong>[Planilha Anexa]:</strong> O arquivo <em>pendencias-portais-${report.refDate}.xlsx</em> em anexo contém a íntegra das 591 ações com links diretos do Google Drive para submissão imediata.
+    </div>
   `
 }
