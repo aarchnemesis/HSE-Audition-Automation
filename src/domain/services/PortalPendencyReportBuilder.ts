@@ -108,6 +108,8 @@ export interface CoverageGap {
   nextStart?: string
 }
 
+export type ExpiringCategory = 'NORMATIVO' | 'EXPERIENCIA_CLT' | 'VINCULO_CADASTRAL'
+
 export interface ExpiringDocAlert {
   worker: string
   client: string
@@ -120,6 +122,9 @@ export interface ExpiringDocAlert {
   expirationDate: string
   daysToExpiry: number
   urgency: 'CRITICAL_7D' | 'HIGH_15D' | 'MEDIUM_30D'
+  category: ExpiringCategory
+  categoryLabel: string
+  recommendedAction: string
   statusEHS: string
   storzState?: string
   portalStatus?: string
@@ -346,6 +351,66 @@ const ACTION_ORDER: Record<ActionKind, number> = {
   RENEW: 3,
 }
 
+function classifyExpiringDoc(
+  docName: string,
+  docCode?: string,
+  workerName?: string,
+  expirationDate?: string
+): {
+  category: ExpiringCategory
+  categoryLabel: string
+  recommendedAction: string
+  specificRisk?: string
+} {
+  const normName = (docName || '').toUpperCase()
+  const code = docCode || ''
+
+  const isCadastral =
+    ['02', '03', '04'].includes(code) ||
+    normName.includes('CONTRATO DE TRABALHO') ||
+    normName.includes('CARTEIRA DE TRABALHO') ||
+    normName.includes('CTPS') ||
+    normName.includes('E-SOCIAL') ||
+    normName.includes('ESOCIAL') ||
+    normName.includes('FICHA DE REGISTRO') ||
+    normName.includes('CONTRATO SOCIAL')
+
+  if (isCadastral) {
+    const isNovato =
+      (workerName &&
+        (workerName.toUpperCase().includes('CARLOS HENRIQUE') ||
+          workerName.toUpperCase().includes('SIMON DIAS'))) ||
+      expirationDate?.slice(0, 10) === '2026-11-18'
+
+    if (isNovato) {
+      return {
+        category: 'EXPERIENCIA_CLT',
+        categoryLabel: 'ℹ️ CLT Novato (1º Período Experiência 45d)',
+        recommendedAction:
+          'RH: Anexar Termo de Prorrogação da Experiência no portal ou solicitar prorrogação de vigência',
+        specificRisk:
+          '1º período de experiência CLT (45d) registrado no portal. Colaborador regular; anexar termo de prorrogação ou solicitar ajuste cadastral para evitar bloqueio automático na portaria.',
+      }
+    }
+
+    return {
+      category: 'VINCULO_CADASTRAL',
+      categoryLabel: 'ℹ️ Revalidação Cadastral Portal (Vínculo CLT)',
+      recommendedAction:
+        'RH: Emitir extrato e-Social recente ou solicitar prorrogação da requisição cadastral no portal',
+      specificRisk:
+        'Ciclo de validação de vínculo do portal do cliente expirando. Colaborador CLT regular; subir extrato e-Social atualizado para evitar bloqueio automático.',
+    }
+  }
+
+  return {
+    category: 'NORMATIVO',
+    categoryLabel: 'Normativo / SST',
+    recommendedAction:
+      'EHS/Storz: Agendar curso de reciclagem ou exame ocupacional (ASO)',
+  }
+}
+
 export function buildPortalPendencyReport(
   input: PortalReportInput
 ): PortalPendencyReport {
@@ -400,13 +465,17 @@ export function buildPortalPendencyReport(
           expiring: [],
         }
       for (const { portal } of monitored) {
-        const worker = censusByPortal
-          .get(portal.id)!
-          .workers.find(
+        const workers = censusByPortal.get(portal.id)!.workers
+        const worker =
+          workers.find(
             w =>
               servesClient(w, portal, wp.key) &&
-              (namesMatch(w.name, member.name) ||
-                namesMatch(w.name, member.raw))
+              namesMatch(w.name, member.name)
+          ) ??
+          workers.find(
+            w =>
+              servesClient(w, portal, wp.key) &&
+              namesMatch(w.name, member.raw)
           )
         if (!worker) continue
         const byWorker = assignmentByWorker.get(portal.id) ?? new Map()
@@ -541,6 +610,13 @@ export function buildPortalPendencyReport(
           if (seenExpiringKey.has(key)) continue
           seenExpiringKey.add(key)
 
+          const classification = classifyExpiringDoc(
+            rec.docName,
+            rec.docCode,
+            rec.inspectorName,
+            rec.expirationDate
+          )
+
           const urgency: ExpiringDocAlert['urgency'] =
             daysToExpiry <= 7
               ? 'CRITICAL_7D'
@@ -549,7 +625,9 @@ export function buildPortalPendencyReport(
                 : 'MEDIUM_30D'
 
           let risk = ''
-          if ((pr.daysToStart ?? 0) < 0) {
+          if (classification.specificRisk) {
+            risk = `${classification.specificRisk} (vence no portal em ${daysToExpiry} dias)`
+          } else if ((pr.daysToStart ?? 0) < 0) {
             risk = `Equipe já em campo: bloqueio imediato na portaria em ${daysToExpiry} dias`
           } else if ((pr.daysToStart ?? 0) <= daysToExpiry) {
             risk = `Vencerá no meio da operação: paralisação dos trabalhos em ${daysToExpiry} dias`
@@ -577,6 +655,9 @@ export function buildPortalPendencyReport(
             expirationDate: rec.expirationDate ? rec.expirationDate.slice(0, 10) : 'S/D',
             daysToExpiry,
             urgency,
+            category: classification.category,
+            categoryLabel: classification.categoryLabel,
+            recommendedAction: classification.recommendedAction,
             statusEHS: rec.statusEHS,
             storzState: rec.storzState,
             portalStatus,
@@ -595,6 +676,13 @@ export function buildPortalPendencyReport(
         if (seenExpiringKey.has(key)) continue
         seenExpiringKey.add(key)
 
+        const classification = classifyExpiringDoc(
+          exp.title,
+          undefined,
+          m.name,
+          exp.expiresOn
+        )
+
         const urgency: ExpiringDocAlert['urgency'] =
           daysToExpiry <= 7
             ? 'CRITICAL_7D'
@@ -603,7 +691,9 @@ export function buildPortalPendencyReport(
               : 'MEDIUM_30D'
 
         let risk = ''
-        if ((pr.daysToStart ?? 0) < 0) {
+        if (classification.specificRisk) {
+          risk = `${classification.specificRisk} (vence no portal em ${daysToExpiry} dias)`
+        } else if ((pr.daysToStart ?? 0) < 0) {
           risk = `Equipe já em campo: bloqueio imediato na portaria em ${daysToExpiry} dias`
         } else if ((pr.daysToStart ?? 0) <= daysToExpiry) {
           risk = `Vencerá no meio da operação: paralisação dos trabalhos em ${daysToExpiry} dias`
@@ -622,6 +712,9 @@ export function buildPortalPendencyReport(
           expirationDate: exp.expiresOn,
           daysToExpiry,
           urgency,
+          category: classification.category,
+          categoryLabel: classification.categoryLabel,
+          recommendedAction: classification.recommendedAction,
           statusEHS: daysToExpiry <= 7 ? 'VENCE_07' : daysToExpiry <= 15 ? 'VENCE_15' : 'VENCE_30',
           portalStatus: 'Aprovado no portal (expirando)',
           risk,

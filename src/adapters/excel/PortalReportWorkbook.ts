@@ -129,6 +129,7 @@ export async function writePortalReportWorkbook(
     const alertsSheet = workbook.addWorksheet('Alertas Vencimento (30d)')
     alertsSheet.columns = [
       { header: 'Urgência', key: 'urgency', width: 22 },
+      { header: 'Tipo de Alerta', key: 'categoryLabel', width: 38 },
       { header: 'Dias para Vencer', key: 'daysToExpiry', width: 18 },
       { header: 'Colaborador', key: 'worker', width: 34 },
       { header: 'Cliente', key: 'client', width: 22 },
@@ -140,8 +141,9 @@ export async function writePortalReportWorkbook(
       { header: 'Data de Vencimento', key: 'expirationDate', width: 18 },
       { header: 'Status HSE', key: 'statusEHS', width: 14 },
       { header: 'Status no Portal', key: 'portalStatus', width: 30 },
+      { header: 'Ação Recomendada', key: 'recommendedAction', width: 45 },
       { header: 'Solicitação Storz', key: 'storzState', width: 20 },
-      { header: 'Risco Operacional', key: 'risk', width: 50 },
+      { header: 'Risco Operacional', key: 'risk', width: 55 },
     ]
 
     for (const a of report.expiringAlerts) {
@@ -152,6 +154,7 @@ export async function writePortalReportWorkbook(
             : a.urgency === 'HIGH_15D'
               ? '🟠 Vence em até 15 dias'
               : '🟡 Vence em até 30 dias',
+        categoryLabel: a.categoryLabel,
         daysToExpiry: a.daysToExpiry,
         worker: displayName(a.worker),
         client: a.client,
@@ -163,6 +166,7 @@ export async function writePortalReportWorkbook(
         expirationDate: formatDay(a.expirationDate),
         statusEHS: a.statusEHS,
         portalStatus: a.portalStatus || '',
+        recommendedAction: a.recommendedAction,
         storzState: a.storzState || 'NÃO SOLICITADO',
         risk: a.risk,
       })

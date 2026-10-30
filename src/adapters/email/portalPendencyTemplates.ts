@@ -237,63 +237,126 @@ export function countClearances(
 export function buildExpiringAlertsHtml(alerts?: ExpiringDocAlert[]): string {
   if (!alerts || !alerts.length) return ''
 
-  const critical = alerts.filter(a => a.urgency === 'CRITICAL_7D')
-  const high = alerts.filter(a => a.urgency === 'HIGH_15D')
-  const medium = alerts.filter(a => a.urgency === 'MEDIUM_30D')
+  const normativos = alerts.filter(a => a.category === 'NORMATIVO')
+  const cadastrais = alerts.filter(a => a.category !== 'NORMATIVO')
 
-  const rows = alerts
-    .map(a => {
-      const urgencyBadge =
-        a.urgency === 'CRITICAL_7D'
-          ? `<span style="background:#FEE2E2;color:#991B1B;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🔴 VENCE EM ${a.daysToExpiry}D</span>`
-          : a.urgency === 'HIGH_15D'
-            ? `<span style="background:#FFEDD5;color:#9A3412;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟠 VENCE EM ${a.daysToExpiry}D</span>`
-            : `<span style="background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟡 VENCE EM ${a.daysToExpiry}D</span>`
+  const critical = normativos.filter(a => a.urgency === 'CRITICAL_7D')
+  const high = normativos.filter(a => a.urgency === 'HIGH_15D')
+  const medium = normativos.filter(a => a.urgency === 'MEDIUM_30D')
 
-      return `<tr>
-        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
-          <strong>${esc(displayName(a.worker))}</strong><br>
-          <span style="font-size:11px;color:#7C2D12">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
-        </td>
-        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
-          <strong>${esc(a.docName)}</strong><br>
-          <span style="font-size:11px;color:#9A3412">Validade: <strong>${formatDay(a.expirationDate)}</strong></span>
-        </td>
-        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA;text-align:center">${urgencyBadge}</td>
-        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
-          <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.portalStatus || 'Aprovado')}</span><br>
-          <span style="font-size:11px;color:#B91C1C">⚠️ ${esc(a.risk)}</span>
-        </td>
-      </tr>`
-    })
-    .join('')
+  let normativosHtml = ''
+  if (normativos.length > 0) {
+    const rows = normativos
+      .map(a => {
+        const urgencyBadge =
+          a.urgency === 'CRITICAL_7D'
+            ? `<span style="background:#FEE2E2;color:#991B1B;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🔴 VENCE EM ${a.daysToExpiry}D</span>`
+            : a.urgency === 'HIGH_15D'
+              ? `<span style="background:#FFEDD5;color:#9A3412;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟠 VENCE EM ${a.daysToExpiry}D</span>`
+              : `<span style="background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟡 VENCE EM ${a.daysToExpiry}D</span>`
 
-  return `
-    <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:8px;padding:16px 20px;margin:20px 0 24px">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-        <span style="font-size:20px">⚠️</span>
-        <strong style="color:#9A3412;font-size:16px">ALERTA OPERACIONAL: DOCUMENTOS APROVADOS VENCENDO EM CAMPO (7, 15 E 30 DIAS)</strong>
+        return `<tr>
+          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+            <strong>${esc(displayName(a.worker))}</strong><br>
+            <span style="font-size:11px;color:#7C2D12">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
+          </td>
+          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+            <strong>${esc(a.docName)}</strong><br>
+            <span style="font-size:11px;color:#9A3412">Validade: <strong>${formatDay(a.expirationDate)}</strong></span>
+          </td>
+          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA;text-align:center">${urgencyBadge}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+            <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.portalStatus || 'Aprovado')}</span><br>
+            <span style="font-size:11px;color:#B91C1C">⚠️ ${esc(a.risk)}</span><br>
+            <span style="font-size:11px;color:#047857">📋 <strong>Ação:</strong> ${esc(a.recommendedAction)}</span>
+          </td>
+        </tr>`
+      })
+      .join('')
+
+    normativosHtml = `
+      <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:8px;padding:16px 20px;margin:20px 0 20px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:20px">⚠️</span>
+          <strong style="color:#9A3412;font-size:16px">ALERTA OPERACIONAL: CURSOS E EXAMES NORMATIVOS VENCENDO EM CAMPO (7, 15 E 30 DIAS)</strong>
+        </div>
+        <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#7C2D12">
+          <strong>Atenção EHS e Coordenação:</strong> Os colaboradores abaixo constam como aprovados hoje, mas possuem <strong>cursos ou ASO que vencem durante a operação ou nos próximos dias</strong>.
+          Se a reciclagem ou exame não forem realizados antes do vencimento, o cliente bloqueará o acesso no portão do parque, <strong>causando paralisação total das atividades</strong>.
+        </p>
+        <div style="font-size:12px;font-weight:600;margin-bottom:12px;color:#9A3412">
+          Resumo de Risco: 🔴 <strong>${critical.length} crítico(s) em até 7 dias</strong> | 🟠 <strong>${high.length} em até 15 dias</strong> | 🟡 <strong>${medium.length} em até 30 dias</strong>
+        </div>
+        <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #FDBA74;border-radius:6px;overflow:hidden">
+          <thead>
+            <tr style="background:#FFEDD5;color:#7C2D12;text-align:left">
+              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Colaborador / Campanha</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Documento / Vencimento</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74;text-align:center">Prazo</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Status / Risco / Ação Necessária</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
       </div>
-      <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#7C2D12">
-        <strong>Atenção EHS e Coordenação:</strong> Os colaboradores abaixo constam como <strong>aceitos/aprovados no portal do cliente</strong> (ou no RPO), mas estão com documentações que <strong>vencem durante a campanha ou nos próximos dias</strong>.
-        Se não forem renovados e atualizados antes do vencimento, o cliente bloqueará o acesso no portão do parque, <strong>causando perda do dia inteiro de trabalho da equipe</strong>.
-      </p>
-      <div style="font-size:12px;font-weight:600;margin-bottom:12px;color:#9A3412">
-        Resumo de Risco: 🔴 <strong>${critical.length} crítico(s) em até 7 dias</strong> | 🟠 <strong>${high.length} em até 15 dias</strong> | 🟡 <strong>${medium.length} em até 30 dias</strong>
+    `
+  }
+
+  let cadastraisHtml = ''
+  if (cadastrais.length > 0) {
+    const rows = cadastrais
+      .map(a => {
+        const badge =
+          a.category === 'EXPERIENCIA_CLT'
+            ? `<span style="background:#DBEAFE;color:#1E40AF;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">ℹ️ EXPERIÊNCIA (45D)</span>`
+            : `<span style="background:#E0E7FF;color:#3730A3;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">ℹ️ REVALIDAÇÃO PORTAL</span>`
+
+        return `<tr>
+          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
+            <strong>${esc(displayName(a.worker))}</strong><br>
+            <span style="font-size:11px;color:#1E3A8A">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
+          </td>
+          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
+            <strong>${esc(a.docName)}</strong><br>
+            <span style="font-size:11px;color:#1E40AF">Prazo no portal: <strong>${formatDay(a.expirationDate)}</strong> (${a.daysToExpiry} dias)</span>
+          </td>
+          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE;text-align:center">${badge}</td>
+          <td style="padding:8px 10px;border-bottom:1px solid #BFDBFE">
+            <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.categoryLabel)}</span><br>
+            <span style="font-size:11px;color:#0369A1">📌 ${esc(a.risk)}</span><br>
+            <span style="font-size:11px;color:#15803D"><strong>Ação RH:</strong> ${esc(a.recommendedAction)}</span>
+          </td>
+        </tr>`
+      })
+      .join('')
+
+    cadastraisHtml = `
+      <div style="background:#EFF6FF;border:2px solid #3B82F6;border-radius:8px;padding:16px 20px;margin:20px 0 24px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:20px">ℹ️</span>
+          <strong style="color:#1E40AF;font-size:16px">AVISO RH: REVALIDAÇÃO CADASTRAL NO PORTAL DO CLIENTE (EXPERIÊNCIA CLT E E-SOCIAL)</strong>
+        </div>
+        <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#1E3A8A">
+          <strong>Atenção RH e Coordenação:</strong> Os colaboradores abaixo são <strong>CLT ativos e regulares na Arthwind</strong>.
+          As datas registradas abaixo decorrem da exigência do portal do cliente (ex: Veriduss / Goldwind) correspondentes ao <strong>término do 1º período de experiência de 45 dias</strong> (novatos admitidos em 05/10/2026) ou de <strong>ciclo anual de renovação cadastral</strong>.
+          <strong>Não há irregularidade no vínculo de trabalho</strong>, porém a plataforma do cliente travará o crachá se o RH não anexar o Termo de Prorrogação ou extrato recente do e-Social antes do prazo.
+        </p>
+        <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #93C5FD;border-radius:6px;overflow:hidden">
+          <thead>
+            <tr style="background:#DBEAFE;color:#1E40AF;text-align:left">
+              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Colaborador / Campanha</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Documento no Portal</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD;text-align:center">Classificação</th>
+              <th style="padding:8px 10px;border-bottom:2px solid #93C5FD">Detalhes e Ação Recomendada</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
       </div>
-      <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #FDBA74;border-radius:6px;overflow:hidden">
-        <thead>
-          <tr style="background:#FFEDD5;color:#7C2D12;text-align:left">
-            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Colaborador / Campanha</th>
-            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Documento / Vencimento</th>
-            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74;text-align:center">Prazo</th>
-            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Status no Portal / Risco Operacional</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>
-  `
+    `
+  }
+
+  return normativosHtml + cadastraisHtml
 }
 
 export function buildOpsReadinessBodyHtml(
