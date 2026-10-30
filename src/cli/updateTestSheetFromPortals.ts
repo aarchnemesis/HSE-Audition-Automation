@@ -78,8 +78,11 @@ async function main() {
   const metacontratas: PortalWorker[] = fs.existsSync('data/portais/metacontratas.census.json')
     ? JSON.parse(fs.readFileSync('data/portais/metacontratas.census.json', 'utf-8')).workers || []
     : []
+  const dgtss: PortalWorker[] = fs.existsSync('data/portais/dgtss-invenergy.census.json')
+    ? JSON.parse(fs.readFileSync('data/portais/dgtss-invenergy.census.json', 'utf-8')).workers || []
+    : []
 
-  console.log(`[Censos Carregados] SGRE/T-Doc: ${tdoc.length} | Vestas/eGestiona: ${vestas.length} | Goldwind/Veriduss: ${goldwind.length} | GE/Surisoft: ${surisoft.length} | Metacontratas: ${metacontratas.length}`)
+  console.log(`[Censos Carregados] SGRE/T-Doc: ${tdoc.length} | Vestas/eGestiona: ${vestas.length} | Goldwind/Veriduss: ${goldwind.length} | GE/Surisoft: ${surisoft.length} | Metacontratas: ${metacontratas.length} | Invenergy/DGTSS: ${dgtss.length}`)
 
   // 2. Carregar a planilha de teste
   const auth = await getAuthorizedClient()
@@ -137,6 +140,8 @@ async function main() {
       cliUpper.includes('CPFL')
     ) {
       portalList = metacontratas
+    } else if (cliUpper.includes('INVENERGY')) {
+      portalList = dgtss
     }
 
     const currentObs = row.getCell(17).text?.trim() || ''

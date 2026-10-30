@@ -213,7 +213,7 @@ export const PORTALS: PortalInfo[] = [
     'Invenergy (DGTSS)',
     'DGTSS',
     ['invenergy.dgtss.com.br'],
-    'NOT_AUTOMATED',
+    'AUTOMATED',
     ['INVENERGY']
   ),
   portal(

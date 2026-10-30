@@ -31,6 +31,7 @@
     "tdoc-extract": "tsx src/cli/runTdocExtract.ts",
     "surisoft-extract": "tsx src/cli/runSurisoftExtract.ts",
     "metacontratas-extract": "tsx src/cli/runMetacontratasExtract.ts",
+    "dgtss-extract": "tsx src/cli/runDgtssExtract.ts",
     "agent:dashboard": "tsx src/cli/runAgentJob.ts dashboard",
     "agent:do": "tsx src/cli/runAgentJob.ts do-report",
     "agent:hse": "tsx src/cli/runAgentJob.ts hse-digest",

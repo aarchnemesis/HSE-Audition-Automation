@@ -604,7 +604,7 @@
           "invenergy.dgtss.com.br"
         ],
         "category": "DOCUMENTS",
-        "automation": "NOT_AUTOMATED",
+        "automation": "AUTOMATED",
         "clients": [
           "INVENERGY"
         ]
@@ -612,6 +612,10 @@
       "accessRows": 1,
       "accessPending": 0,
       "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-30T09:29:24.525Z",
+        "workers": 11
+      },
       "clients": [
         {
           "client": "INVENERGY",
