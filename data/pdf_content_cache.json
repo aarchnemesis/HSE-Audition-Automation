@@ -112962,31 +112962,31 @@
   },
   {
     "fileId": "11aYnpJiU1jsGm4jHowSSaDkUwXieX00i",
-    "filename": "02 – Ordem de Serviço – 08.12.2025 - THAYNA NOGUEIRA TAVARES.pdf",
+    "filename": "Declaração de não Aplicabilidade de Requisito - THAYNA NOGUEIRA TAVARES.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-19T12:13:31.680Z",
-    "code": "02",
+    "modifiedTime": "2026-10-30T13:48:19.169Z",
+    "code": "13",
     "issueDate": "2025-12-08T03:00:00.000Z",
-    "expirationDate": "2075-12-08T03:00:00.000Z",
+    "expirationDate": "2027-12-08T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 08/12/2075",
+    "statusDetail": "Válido até 08/12/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Ordem de Serviço",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "NR-10 SEP (via PDF)",
+    "extractedClause": "Sorocaba, 08 de Dezembro de 2025",
     "documents": [
       {
-        "code": "02",
+        "code": "13",
         "issueDate": "2025-12-08T03:00:00.000Z",
-        "expirationDate": "2075-12-08T03:00:00.000Z",
+        "expirationDate": "2027-12-08T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/12/2075",
+        "statusDetail": "Válido até 08/12/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Ordem de Serviço",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "NR-10 SEP (via PDF)",
+        "extractedClause": "Sorocaba, 08 de Dezembro de 2025"
       }
     ]
   },
@@ -120496,17 +120496,6 @@
     "matchedTerm": "Carta NR-10 (via PDF) (Pág. 2)",
     "extractedClause": "Assinou em 11 fev 2025",
     "documents": [
-      {
-        "code": "13",
-        "issueDate": "2025-02-04T03:00:00.000Z",
-        "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 SEP (via PDF) (Pág. 1)",
-        "extractedClause": "Sorocaba/SP, 04 de Fevereiro de 2025"
-      },
       {
         "code": "12.1",
         "issueDate": "2025-02-11T03:00:00.000Z",
@@ -130845,31 +130834,31 @@
   },
   {
     "fileId": "1BAjQmTMWDnISn5ynaI69SKljwwnYCqAP",
-    "filename": "02 – Ordem de Serviço – 05.11.2025 - DIEGO PATRICK SANCHES CAMPOS.pdf",
+    "filename": "Declaração de não Aplicabilidade de Requisito - DIEGO PATRICK SANCHES CAMPOS.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-10-19T11:44:24.236Z",
-    "code": "02",
+    "modifiedTime": "2026-10-30T13:58:13.838Z",
+    "code": "13",
     "issueDate": "2025-11-05T03:00:00.000Z",
-    "expirationDate": "2075-11-05T03:00:00.000Z",
+    "expirationDate": "2027-11-05T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 05/11/2075",
+    "statusDetail": "Válido até 05/11/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Ordem de Serviço",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "NR-10 SEP (via PDF)",
+    "extractedClause": "Sorocaba, 05 de Novembro de 2025",
     "documents": [
       {
-        "code": "02",
+        "code": "13",
         "issueDate": "2025-11-05T03:00:00.000Z",
-        "expirationDate": "2075-11-05T03:00:00.000Z",
+        "expirationDate": "2027-11-05T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/11/2075",
+        "statusDetail": "Válido até 05/11/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Ordem de Serviço",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "NR-10 SEP (via PDF)",
+        "extractedClause": "Sorocaba, 05 de Novembro de 2025"
       }
     ]
   },
@@ -166857,6 +166846,36 @@
         "source": "FILENAME",
         "classificationSource": "PREFIX",
         "matchedTerm": "Aditivo ao Contrato (04.1)"
+      }
+    ]
+  },
+  {
+    "fileId": "1gvBfjRK2Tas8kEPeB7YR27LOdtgC9zBa",
+    "filename": "30 – GWO WINDA – 14.10.2026 - FRANCISCO FRANKLIN DA SILVA.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T13:56:06.953Z",
+    "code": "30",
+    "issueDate": "2026-10-14T03:00:00.000Z",
+    "expirationDate": "2076-10-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/10/2076",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO WINDA ID",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2076-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2076",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   }

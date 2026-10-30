@@ -195,12 +195,12 @@
       "30": {
         "code": "30",
         "name": "Doc 30",
-        "filename": "16 – GWO Primeiros Socorros – 20.08.2024 - FRANCISCO FRANKLIN DA SILVA.pdf",
-        "issueDate": "2024-08-20T03:00:00.000Z",
-        "expirationDate": "2074-08-20T03:00:00.000Z",
+        "filename": "30 – GWO WINDA – 14.10.2026 - FRANCISCO FRANKLIN DA SILVA.pdf",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2076-10-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "sourcePath": "https://drive.google.com/file/d/18UKePqB0Rezy21Cly-R5O7XtJ8ymy3O3/view"
+        "statusDetail": "Válido até 14/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1gvBfjRK2Tas8kEPeB7YR27LOdtgC9zBa/view"
       },
       "31": {
         "code": "31",
@@ -12049,6 +12049,35 @@
         "statusDetail": "Válido até 25/03/2070",
         "sourcePath": "https://drive.google.com/file/d/1XhNqKrvIkOwk1v2qo12KfF6gH-h3g_ee/view"
       },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05 – Cartão de Vacina - MARIA BRUNA SOARES SANTOS.pdf",
+        "expirationDate": "2076-10-16T17:00:13.841Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1y1riSz7Hc_o2XXoaPUbvFrelYSGHstqh/view"
+      },
+      "03": {
+        "code": "03",
+        "name": "Doc 03",
+        "filename": "03 – Ficha de Registro – 16.10.2023 - MARIA BRUNA SOARES SANTOS.pdf",
+        "issueDate": "2023-10-16T03:00:00.000Z",
+        "expirationDate": "2073-10-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/10/2073",
+        "sourcePath": "https://drive.google.com/file/d/1Z3SbhSzMhRpYXY38Ml-J-UHthQPJEToT/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "08 – CNH – 18.06.2031 - MARIA BRUNA SOARES SANTOS.pdf",
+        "issueDate": "2031-06-18T03:00:00.000Z",
+        "expirationDate": "2031-06-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/06/2031",
+        "sourcePath": "https://drive.google.com/file/d/1DMKNp9NL8FBuZ0DfBzW5BDpy1xi98mLz/view"
+      },
       "15.1": {
         "code": "15.1",
         "name": "Doc 15.1",
@@ -12058,15 +12087,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/05/2027",
         "sourcePath": "https://drive.google.com/file/d/15dLtKZRBncn4lb_UfWL0J8nwSvCwl6QK/view"
-      },
-      "05": {
-        "code": "05",
-        "name": "Doc 05",
-        "filename": "05 – Cartão de Vacina - MARIA BRUNA SOARES SANTOS.pdf",
-        "expirationDate": "2076-10-16T17:00:13.841Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2076",
-        "sourcePath": "https://drive.google.com/file/d/1y1riSz7Hc_o2XXoaPUbvFrelYSGHstqh/view"
       },
       "21.1": {
         "code": "21.1",
@@ -12107,26 +12127,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/02/2028",
         "sourcePath": "https://drive.google.com/file/d/1qMWRzTEWGPRoEIu0vVd3mNtK51-_J7cL/view"
-      },
-      "03": {
-        "code": "03",
-        "name": "Doc 03",
-        "filename": "03 – Ficha de Registro – 16.10.2023 - MARIA BRUNA SOARES SANTOS.pdf",
-        "issueDate": "2023-10-16T03:00:00.000Z",
-        "expirationDate": "2073-10-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2073",
-        "sourcePath": "https://drive.google.com/file/d/1Z3SbhSzMhRpYXY38Ml-J-UHthQPJEToT/view"
-      },
-      "08": {
-        "code": "08",
-        "name": "Doc 08",
-        "filename": "08 – CNH – 18.06.2031 - MARIA BRUNA SOARES SANTOS.pdf",
-        "issueDate": "2031-06-18T03:00:00.000Z",
-        "expirationDate": "2031-06-18T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/06/2031",
-        "sourcePath": "https://drive.google.com/file/d/1DMKNp9NL8FBuZ0DfBzW5BDpy1xi98mLz/view"
       }
     },
     "driveFolderId": "1nYVdr43m_0jtLVDtK-cOuUSGGguRDePD",
@@ -17455,7 +17455,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-30T13:45:08.774Z",
+        "expirationDate": "2076-10-30T14:00:12.344Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"
@@ -18835,12 +18835,12 @@
       "13": {
         "code": "13",
         "name": "Doc 13",
-        "filename": "13 – NR-10 SEP (F+R) – 13.10.2025 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2025-10-13T03:00:00.000Z",
-        "expirationDate": "2027-10-13T03:00:00.000Z",
+        "filename": "Declaração de não Aplicabilidade de Requisito - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2025-12-08T03:00:00.000Z",
+        "expirationDate": "2027-12-08T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2027",
-        "sourcePath": "https://drive.google.com/file/d/1nLMXTIdUPuAUtrpDAsUwzk5X-BKirczR/view"
+        "statusDetail": "Válido até 08/12/2027",
+        "sourcePath": "https://drive.google.com/file/d/11aYnpJiU1jsGm4jHowSSaDkUwXieX00i/view"
       },
       "14": {
         "code": "14",
@@ -18992,75 +18992,6 @@
         "statusDetail": "VENCIDO há 17 dias (09/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1jC_qpefj_UDgcJo9qT_TaiQM4i9iza9z/view"
       },
-      "04.1": {
-        "code": "04.1",
-        "name": "Doc 04.1",
-        "filename": "04.1 – Contrato de Trabalho CLT – 09.10.2026 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2026-10-09T03:00:00.000Z",
-        "expirationDate": "2028-10-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/10/2028",
-        "sourcePath": "https://drive.google.com/file/d/141s4X_dHZ3cMTlpF3lQJQqZCV5a7bvYt/view"
-      },
-      "01": {
-        "code": "01",
-        "name": "Doc 01",
-        "filename": "01 – ASO – 01_09_2026 - THAYNA NOGUEIRA TAVARES_ (1).pdf",
-        "issueDate": "2026-09-01T03:00:00.000Z",
-        "expirationDate": "2027-09-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/09/2027",
-        "sourcePath": "https://drive.google.com/file/d/1VXraBWuPKr-jO01jC8juNYn4QpVpxT1d/view"
-      },
-      "03": {
-        "code": "03",
-        "name": "Doc 03",
-        "filename": "03.1 – Cartão CNPJ e QSA - THAYNA NOGUEIRA TAVARES.pdf",
-        "expirationDate": "2076-10-29T09:45:06.984Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/10/2076",
-        "sourcePath": "https://drive.google.com/file/d/1RlqNEAfjJO5Qny3pfCn4dpjO2VM5ipbk/view"
-      },
-      "07": {
-        "code": "07",
-        "name": "Doc 07",
-        "filename": "07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2026-12-06T03:00:00.000Z",
-        "expirationDate": "2026-12-06T03:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 48 dias (06/12/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1TVefB0hGdBcGAbJiDYoK7yXWnt3pc_ZW/view"
-      },
-      "02": {
-        "code": "02",
-        "name": "Doc 02",
-        "filename": "02 – Ordem de Serviço – 08.12.2025 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2025-12-08T03:00:00.000Z",
-        "expirationDate": "2075-12-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/12/2075",
-        "sourcePath": "https://drive.google.com/file/d/11aYnpJiU1jsGm4jHowSSaDkUwXieX00i/view"
-      },
-      "06": {
-        "code": "06",
-        "name": "Doc 06",
-        "filename": "06 – Ficha de EPI – 10.10.2027 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2027-10-10T03:00:00.000Z",
-        "expirationDate": "2027-10-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/10/2027",
-        "sourcePath": "https://drive.google.com/file/d/1DBaNHaIltwgyP9TmyHPxUEw6d493fqO2/view"
-      },
-      "05": {
-        "code": "05",
-        "name": "Doc 05",
-        "filename": "05 – Cartão de Vacina – 28.11.2023 - THAYNA NOGUEIRA TAVARES.pdf",
-        "issueDate": "2023-11-28T03:00:00.000Z",
-        "expirationDate": "2073-11-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/11/2073",
-        "sourcePath": "https://drive.google.com/file/d/14hsTp_CoEoUrXqiAAbjCM5z00a4rx2IX/view"
-      },
       "12.1": {
         "code": "12.1",
         "name": "Doc 12.1",
@@ -19110,6 +19041,75 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/10/2028",
         "sourcePath": "https://drive.google.com/file/d/15V364P2o0LiWJd_r88IZIt83mfrasnPR/view"
+      },
+      "04.1": {
+        "code": "04.1",
+        "name": "Doc 04.1",
+        "filename": "04.1 – Contrato de Trabalho CLT – 09.10.2026 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2026-10-09T03:00:00.000Z",
+        "expirationDate": "2028-10-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/10/2028",
+        "sourcePath": "https://drive.google.com/file/d/141s4X_dHZ3cMTlpF3lQJQqZCV5a7bvYt/view"
+      },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 – ASO – 01_09_2026 - THAYNA NOGUEIRA TAVARES_ (1).pdf",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2027-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2027",
+        "sourcePath": "https://drive.google.com/file/d/1VXraBWuPKr-jO01jC8juNYn4QpVpxT1d/view"
+      },
+      "03": {
+        "code": "03",
+        "name": "Doc 03",
+        "filename": "03.1 – Cartão CNPJ e QSA - THAYNA NOGUEIRA TAVARES.pdf",
+        "expirationDate": "2076-10-29T09:45:06.984Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2076",
+        "sourcePath": "https://drive.google.com/file/d/1RlqNEAfjJO5Qny3pfCn4dpjO2VM5ipbk/view"
+      },
+      "07": {
+        "code": "07",
+        "name": "Doc 07",
+        "filename": "07 – Seguro de Vida – 06.12.2026 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2026-12-06T03:00:00.000Z",
+        "expirationDate": "2026-12-06T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 48 dias (06/12/2026)",
+        "sourcePath": "https://drive.google.com/file/d/1TVefB0hGdBcGAbJiDYoK7yXWnt3pc_ZW/view"
+      },
+      "06": {
+        "code": "06",
+        "name": "Doc 06",
+        "filename": "06 – Ficha de EPI – 10.10.2027 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2027-10-10T03:00:00.000Z",
+        "expirationDate": "2027-10-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/10/2027",
+        "sourcePath": "https://drive.google.com/file/d/1DBaNHaIltwgyP9TmyHPxUEw6d493fqO2/view"
+      },
+      "02": {
+        "code": "02",
+        "name": "Doc 02",
+        "filename": "02 – Ordem de Serviço – 10.10.2025 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2025-10-10T03:00:00.000Z",
+        "expirationDate": "2075-10-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/10/2075",
+        "sourcePath": "https://drive.google.com/file/d/1q5PfpkQRH462FpobLhogKOV04nOHXoZb/view"
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "05 – Cartão de Vacina – 28.11.2023 - THAYNA NOGUEIRA TAVARES.pdf",
+        "issueDate": "2023-11-28T03:00:00.000Z",
+        "expirationDate": "2073-11-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/11/2073",
+        "sourcePath": "https://drive.google.com/file/d/14hsTp_CoEoUrXqiAAbjCM5z00a4rx2IX/view"
       },
       "08": {
         "code": "08",
@@ -26709,16 +26709,6 @@
         "statusDetail": "CRÍTICO: Vence em 7 dia(s) (05/11/2026)",
         "sourcePath": "https://drive.google.com/file/d/1gj61w73t6SHYJHdYnxOidk_6-S4Rzbrf/view"
       },
-      "02": {
-        "code": "02",
-        "name": "Doc 02",
-        "filename": "02 – Ordem de Serviço – 05.11.2025 - DIEGO PATRICK SANCHES CAMPOS.pdf",
-        "issueDate": "2025-11-05T03:00:00.000Z",
-        "expirationDate": "2075-11-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/11/2075",
-        "sourcePath": "https://drive.google.com/file/d/1BAjQmTMWDnISn5ynaI69SKljwwnYCqAP/view"
-      },
       "01": {
         "code": "01",
         "name": "Doc 01",
@@ -26728,16 +26718,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 02/06/2027",
         "sourcePath": "https://drive.google.com/file/d/1VquwrX9hH-9QT47_XBbuVxZmc9sHEzhr/view"
-      },
-      "06": {
-        "code": "06",
-        "name": "Doc 06",
-        "filename": "06 – Ficha de EPI (AVANTI - DBI-SALA- HONEYWELL) – 30.01.2028 - DIEGO PATRICK SANCHES CAMPOS.pdf",
-        "issueDate": "2028-01-30T03:00:00.000Z",
-        "expirationDate": "2028-01-30T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/01/2028",
-        "sourcePath": "https://drive.google.com/file/d/1Ww-hDWiuKTahZ-6dQ_E9l0BSE4aP6GT4/view"
       },
       "03": {
         "code": "03",
@@ -26767,6 +26747,36 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/12/2073",
         "sourcePath": "https://drive.google.com/file/d/1g_Yell8RstQu-sNPvi__GgBuTjdSVnjM/view"
+      },
+      "08": {
+        "code": "08",
+        "name": "Doc 08",
+        "filename": "08 – CNH – 13.10.2031 - DIEGO PATRICK SANCHES CAMPOS.pdf",
+        "issueDate": "2031-10-13T03:00:00.000Z",
+        "expirationDate": "2031-10-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2031",
+        "sourcePath": "https://drive.google.com/file/d/13s7YbcsvXIA_JBtO40am6lvwGJfE3d1b/view"
+      },
+      "02": {
+        "code": "02",
+        "name": "Doc 02",
+        "filename": "02 – Ordem de Serviço – 30.04.2025 - DIEGO PATRICK SANCHES CAMPOS.pdf",
+        "issueDate": "2025-04-30T03:00:00.000Z",
+        "expirationDate": "2075-04-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/04/2075",
+        "sourcePath": "https://drive.google.com/file/d/1pEvX0-VfNR6_k1U6WU2lZ9WAWtJcREpq/view"
+      },
+      "06": {
+        "code": "06",
+        "name": "Doc 06",
+        "filename": "06 – Ficha de EPI (AVANTI - DBI-SALA- HONEYWELL) – 30.01.2028 - DIEGO PATRICK SANCHES CAMPOS.pdf",
+        "issueDate": "2028-01-30T03:00:00.000Z",
+        "expirationDate": "2028-01-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/01/2028",
+        "sourcePath": "https://drive.google.com/file/d/1Ww-hDWiuKTahZ-6dQ_E9l0BSE4aP6GT4/view"
       },
       "20.1": {
         "code": "20.1",
@@ -26817,16 +26827,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/01/2028",
         "sourcePath": "https://drive.google.com/file/d/13J5NpBRzmoWugb8txNR9HwWWcH6uLC4q/view"
-      },
-      "08": {
-        "code": "08",
-        "name": "Doc 08",
-        "filename": "08 – CNH – 13.10.2031 - DIEGO PATRICK SANCHES CAMPOS.pdf",
-        "issueDate": "2031-10-13T03:00:00.000Z",
-        "expirationDate": "2031-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2031",
-        "sourcePath": "https://drive.google.com/file/d/13s7YbcsvXIA_JBtO40am6lvwGJfE3d1b/view"
       },
       "07": {
         "code": "07",
