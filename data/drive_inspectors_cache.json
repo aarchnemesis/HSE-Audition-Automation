@@ -3204,6 +3204,16 @@
         "statusDetail": "VENCIDO há 155 dias (27/05/2026)",
         "sourcePath": "https://drive.google.com/file/d/1wW7qhbolpjNHE7rYPAADDun24pCQdrot/view"
       },
+      "01": {
+        "code": "01",
+        "name": "Doc 01",
+        "filename": "01 – ASO – 31_07_2026 - RAIMUNDO NONATO DE HOLANDA FILHO_ (1).pdf",
+        "issueDate": "2026-07-31T03:00:00.000Z",
+        "expirationDate": "2027-07-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/07/2027",
+        "sourcePath": "https://drive.google.com/file/d/1AQGtC3Vdtf_dVGb4iJw_TeHXh6yx3_r5/view"
+      },
       "04.1": {
         "code": "04.1",
         "name": "Doc 04.1",
@@ -3233,16 +3243,6 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 10/11/2075",
         "sourcePath": "https://drive.google.com/file/d/1aP0padB30RbNyTd1AGxwEKbeYCg28tIE/view"
-      },
-      "01": {
-        "code": "01",
-        "name": "Doc 01",
-        "filename": "01 – ASO – 05.11.2025 - RAIMUNDO NONATO DE HOLANDA FILHO.pdf",
-        "issueDate": "2025-11-05T03:00:00.000Z",
-        "expirationDate": "2026-11-05T03:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (05/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1Nt6-6wwPy49wFuqCHpVoTwWSR4TpljSI/view"
       },
       "05": {
         "code": "05",
@@ -17465,7 +17465,7 @@
         "code": "10",
         "name": "Doc 10",
         "filename": "10 – NR-01 Integração (Pacote Treinamentos ZIP) - ALISSON MATEUS ALMEIDA DA COSTA.zip",
-        "expirationDate": "2076-10-30T18:00:16.605Z",
+        "expirationDate": "2076-10-30T18:45:07.837Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/10/2076",
         "sourcePath": "https://drive.google.com/file/d/1UuqM3Cv00BCQ8Decg5pmu7EayaxlOzU1/view"

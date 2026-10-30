@@ -167022,5 +167022,33 @@
         "extractedClause": "Data do nome do arquivo"
       }
     ]
+  },
+  {
+    "fileId": "1AQGtC3Vdtf_dVGb4iJw_TeHXh6yx3_r5",
+    "filename": "01 – ASO – 31_07_2026 - RAIMUNDO NONATO DE HOLANDA FILHO_ (1).pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T18:37:19.080Z",
+    "code": "01",
+    "issueDate": "2026-07-31T03:00:00.000Z",
+    "expirationDate": "2027-07-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/07/2027",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO",
+    "documents": [
+      {
+        "code": "01",
+        "issueDate": "2026-07-31T03:00:00.000Z",
+        "expirationDate": "2027-07-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/07/2027",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO"
+      }
+    ]
   }
 ]
