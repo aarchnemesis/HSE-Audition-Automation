@@ -16,9 +16,7 @@
     "auth:drive": "tsx src/cli/runGoogleDriveAuth.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
     "drive-reconcile": "tsx src/cli/runDriveSourceReconcile.ts",
-    "drive-split-pessoal": "tsx src/cli/runDrivePersonalDocsSplitReport.ts",
-    "drive-fix-doc041": "tsx src/cli/runDriveFixDoc041.ts",
-    "drive-undated-report": "tsx src/cli/runDriveUndatedReport.ts",
+
     "ocr:deep": "tsx src/cli/runDeepOcr.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
