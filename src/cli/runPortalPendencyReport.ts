@@ -26,7 +26,8 @@ const SKIP_EMAIL =
   process.argv.includes('--no-email') || process.env.SKIP_EMAIL === 'true'
 const EHS_TO =
   arg('to-ehs') || process.env.PORTAL_EHS_EMAIL_TO || process.env.HSE_EMAIL_TO
-const OPS_TO = arg('to-ops') || process.env.PORTAL_OPS_EMAIL_TO
+const OPS_TO =
+  arg('to-ops') || process.env.PORTAL_OPS_EMAIL_TO || process.env.DO_EMAIL_TO
 
 async function main() {
   console.log(
