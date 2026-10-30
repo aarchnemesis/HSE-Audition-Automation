@@ -79,12 +79,23 @@ export async function loadPortalCredentials(
     DEFAULT_PORTAL_ACCESS_SHEET_ID
 ): Promise<PortalCredential[]> {
   if (!apiToken) throw new Error('SMARTSHEET_API_TOKEN não definido')
-  const resp = await fetch(
-    `${SMARTSHEET_API_BASE}/sheets/${sheetId}?pageSize=500`,
-    { headers: { Authorization: `Bearer ${apiToken}` } }
-  )
-  if (!resp.ok) throw new Error(`Smartsheet API retornou ${resp.status}`)
-  return parseCredentialSheet((await resp.json()) as SheetResponse)
+  let lastError: any
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const resp = await fetch(
+        `${SMARTSHEET_API_BASE}/sheets/${sheetId}?pageSize=500`,
+        { headers: { Authorization: `Bearer ${apiToken}` } }
+      )
+      if (resp.ok) {
+        return parseCredentialSheet((await resp.json()) as SheetResponse)
+      }
+      lastError = new Error(`Smartsheet API retornou ${resp.status}`)
+    } catch (e) {
+      lastError = e
+    }
+    if (attempt < 3) await new Promise(r => setTimeout(r, 1500 * attempt))
+  }
+  throw lastError
 }
 
 export interface CredentialQuery {

@@ -1236,24 +1236,6 @@
     "team": "Nardel Delon"
   },
   {
-    "wo": "2023-0051-8",
-    "client": "SGRE",
-    "windfarm": "Complexo Eólico Santo Agostinho",
-    "scope": "Monitoramento",
-    "startDate": "2026-09-28",
-    "status": "Azul",
-    "team": "Francisco Davilo Marques de Sousa Carlos Eduardo Ferreira Alves João Carlos Guardiano[loto]"
-  },
-  {
-    "wo": "2024-0088-4",
-    "client": "SGRE",
-    "windfarm": "Complexo Eólico Ventos de São Vitor",
-    "scope": "Monitoramento",
-    "startDate": "2026-09-28",
-    "status": "Azul",
-    "team": "Pedro Paulo Ferreira de Almeida Leandro Camilo de Jesus [loto] Caio Victor Oliveira Balbino"
-  },
-  {
     "wo": "2026-0001-2",
     "client": "GE VERNOVA",
     "windfarm": "Complexo Eólico  dos Ventos II",
@@ -1297,15 +1279,6 @@
     "startDate": "2026-11-03",
     "status": "Azul",
     "team": "Francisco Elvison Pereira de Sousa (backup), Francisco Vinicius Sousa Dos Santos, Wanderson Avelino de Souza"
-  },
-  {
-    "wo": "2026-0046",
-    "client": "INVENERGY",
-    "windfarm": "Complexo Eólico Chapada Piauí",
-    "scope": "INTERNAS – INVESTIGATIVA",
-    "startDate": "2026-11-30",
-    "status": "Azul",
-    "team": "\"Francisco Vinicius Sousa Dos Santos Francisco Elvison Pereira de Sousa\", Francisco Leonardo Da Silva Ferreira, Jose Ricardo Braga Matos"
   },
   {
     "wo": "WOOPEN09",
@@ -1425,15 +1398,6 @@
     "team": "Nardel Delon Novais Rocha"
   },
   {
-    "wo": "2026-0042-SPDA",
-    "client": "ENERGIMP",
-    "windfarm": "Complexo Eólico Papagaios",
-    "scope": "SPDA",
-    "startDate": "2026-11-02",
-    "status": "Azul",
-    "team": "Sérgio Luiz Rosa Tavuencas"
-  },
-  {
     "wo": "2026-0043-SPDA",
     "client": "ENERGIMP",
     "windfarm": "Complexo Eólico Quixaba",
@@ -1441,5 +1405,75 @@
     "startDate": "2026-11-23",
     "status": "Azul",
     "team": "Nardel Delon Novais Rocha"
+  },
+  {
+    "wo": "2026-0046",
+    "client": "INVENERGY",
+    "windfarm": "Complexo Eólico Chapada Piauí",
+    "scope": "INTERNAS – INVESTIGATIVA",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Francisco Everson, WERMESON DE OLIVEIRA FRANCO Francisco Leonardo Da Silva Ferreira, Wanderson Avelino de Souza"
+  },
+  {
+    "wo": "2026-0051",
+    "client": "GOLDWIND",
+    "windfarm": "Complexo Eólico Serra da Palmeira",
+    "scope": "Monitoramento",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Carlos Henrique Soares da Silva, Fernando Teodoro De Morais Neto Simon Dias da Silva, MÁRIO SÉRGIO CASTRO DE SOUSA"
+  },
+  {
+    "wo": "2026-0042-SPDA",
+    "client": "ENERGIMP",
+    "windfarm": "Complexo Eólico Papagaios",
+    "scope": "SPDA",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Nardel Delon"
+  },
+  {
+    "wo": "2026-0049",
+    "client": "GE VERNOVA",
+    "windfarm": "Complexo Eólico Ventos da Bahia",
+    "scope": "Monitoramento",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Caio Felipe, Wilden"
+  },
+  {
+    "wo": "2023-0051-8",
+    "client": "SGRE",
+    "windfarm": "Complexo Eólico Santo Agostinho",
+    "scope": "Monitoramento",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Antonio Roberto dos Santos Nascimento Gabriel Lima Feitosa Edclei da Conceição Custódio"
+  },
+  {
+    "wo": "2024-0088-4",
+    "client": "SGRE",
+    "windfarm": "Complexo Eólico Ventos de São Vitor",
+    "scope": "Monitoramento",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Adriano Cirilo Garcia Lima Edward Thiago Herculano Ribeiro Adenilço Queiroz da Silva  [loto]"
+  },
+  {
+    "wo": "2024-0112-5",
+    "client": "SGRE",
+    "windfarm": "Complexo Eólico Tucano",
+    "scope": "Monitoramento",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Erveson Nascimento Dos Santos, Juan Ilgner Marinho Lima, Raimundo Nonato de Holanda Filho"
+  },
+  {
+    "client": "GE VERNOVA",
+    "windfarm": "Complexo Eólico Lagoa dos Ventos",
+    "startDate": "2026-11-03",
+    "status": "Azul",
+    "team": "Marcos Magalhães, Michel Platini Soares Barros, Rafael Pereira Nunes Francisco Jhon Hebson Rodrigues De Carvalho"
   }
 ]

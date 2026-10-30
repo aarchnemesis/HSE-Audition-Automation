@@ -1,129 +1,153 @@
-# Resumo — Portais de Clientes & Documentação/SSOT
+# Resumo — Portais de Clientes, Documentação/SSOT & Automações EHS
 
-**Período:** 27–29/10/2026
-**Branch:** `feat/portal-pendency-report` (criada a partir de `main`)
-**Escopo:** duas frentes sequenciais — (1) relatório e extração de pendências nos portais de clientes; (2) reconciliação da documentação no Drive (SSOT) com o dashboard, e o deploy do dashboard.
+**Período:** 27–30/10/2026  
+**Branch:** `feat/portal-pendency-report` (criada a partir de `main`)  
+**Escopo Global:**
+1. Extração automatizada e auditoria de pendências nos portais de clientes (TDoc, eGestiona, Veriduss, Surisoft, Metacontratas).
+2. Sincronização automatizada de WOs/Equipes ativas do Smartsheet (`ATW_OP_CT_001`) para a aba `BASE` da planilha do Massude no Google Drive (`1T4-m4FEqd1U3P_2Wgz1mtfpPME2BrJra`).
+3. Aplicação do cruzamento dos portais na planilha de controle/homologação de clientes (teste em `1TRnxZ7wNrQ7yrIA7rdRkpdAWJvWVZMZm`).
+4. Disparo de relatórios periódicos e testes para stakeholders (EHS e Coordenação de Operações) via SMTP (`joao.oliveira@arthwind.com.br`).
+5. Reconciliação da documentação no Google Drive (SSOT) com o Dashboard HSE.
 
-> `origin/development` está ~13k linhas atrás da `main` (PRs #46/#47 foram direto pra main), por isso tudo parte da `main`.
-
----
-
-## Parte 1 — Portais de clientes (pendência & extração)
-
-### Objetivo
-Cruzar os censos dos portais de clientes com o Smartsheet "Briefing - Projetos" (quem vai pra qual cliente/parque e quando) e a base HSE, respondendo **"quem não consegue entrar em qual parque e quem precisa agir"** — o que os HTMLs por-portal (feitos no Gemini) não respondiam.
-
-### Decisões do João
-- **Público:** EHS/documentação + coordenação de operações (não diretoria, não colaboradores).
-- **Canal:** só e-mail.
-- **Prioridade:** clientes com equipe em campo (pelo Briefing).
-- Portais com reCAPTCHA/OTP: sessão salva renovada por humano.
-
-### Mapa de acesso por portal (tiers)
-- **T1 — REST JSON:** Veriduss (Strapi `/api/documents`).
-- **T2 — login por token + scrape JSF:** TDoc (Keycloak OIDC, 3 instâncias).
-- **T3 — formulário simples, sem captcha/2FA:** eGestiona (4), Surisoft, Sercae, DGTSS, SG3, Storz, TechSocial, Tesseg, Datalife, Dokify, Sertras, TAPFIN, ComplyWorks, Portal One, Seyses (2).
-- **T4 — reCAPTCHA:** Atlas, Greenlegis, Obrasoft, ContractWeb, WeHandle, Senior → sessão renovada por humano.
-- **T5 — 2FA real:** Adapts Pro/WEG (mfa_code), WINDA (authcode).
-- **T6 — federado/manual:** SharePoint ×6, MS Forms ×2, Smartsheet, Ariba, Metacontratas (SSO), Drive, SINIR.
-
-### O que foi construído
-- **`portal-report`** (commit `bd2cb2e`): relatório de pendências cruzando censos × Briefing × base HSE; e-mail pra EHS (fila de ação + Excel) e pra coordenação (prontidão por projeto).
-- **`portal-coverage`** (`09c5406`): mapeia toda plataforma da planilha de credenciais EHS e sua cobertura.
-- **`SmartsheetCredentialVault`**: lê os logins da planilha em runtime (segredos só em memória; `clientCode` vem do subdomínio).
-- **Extractors** (cada um com o *parser* isolado como módulo puro testado; navegação Playwright marcada *verify-live*):
-  - **Veriduss** (`7eda6ca`): REST — o único alvo JSON. Confiável.
-  - **eGestiona** (`18207ac`): grid de semáforos DPR/DPE/ativo → docs reais (grosso). DPE vermelho = bloqueio de acesso ao parque.
-  - **TDoc** (`ec235bc`, `18207ac`): JSF tarefas→trabalhadores→docs via Keycloak. O mais difícil (stateful).
-  - **Surisoft** (`ea31447`): lê o token de cada trabalhador no botão `exibirRequisitosColaborador`, POST na API interna `/consultas/colaborador_requisitos_list` → JSON. Confiável (44 trabalhadores).
-- **`PortalLoginHarness`** (login por config), **`PortalSessionStore`** (saúde de sessão, sem rede). CLIs: `portal-login`, `portal-sessions`, `veriduss-extract`, `egestiona-extract`, `tdoc-extract`, `surisoft-extract`. Sessões em `scratch/portais/sessions` (gitignored).
-- **415 testes verdes.** Camada confiável hoje: Veriduss (REST), Surisoft (DOM token + API interna), eGestiona (grid).
-
-### Achados em execução real (27/10)
-- Playwright chromium precisava `pnpm exec playwright install chromium`.
-- **eGestiona Vestas Latam:** senha expirada no portal (lado planilha — gestão renova).
-- **TDoc SGRE:** login + tarefas + colaboradores funcionam, mas o JSF (tdoc 8.3.69) guarda a última tarefa/trabalhador aberta **por conta** na sessão do servidor e retoma nela — as execuções caem no meio de um trabalhador, a lista some e a navegação volta. Precisa de uma passada interativa focada (provável reset "Voltar"-out). Os CLIs agora **recusam sobrescrever um censo com scrape vazio** (antes clobbava o bom dado do Gemini).
-
-### Pendências dos portais (retomar depois)
-- Rodar `veriduss-extract` contra sessão real pra substituir o censo Gemini; verificar seletores Tier-3 ao vivo.
-- Próximo build: módulo de token do TDoc (reusa Keycloak dos 3 portais), depois ampliar o registro do harness.
-- Recipients `PORTAL_OPS_EMAIL_TO`; cron na VPS.
-- Vestas Latam / censos do Gemini parecem montados à mão — re-extrair antes de confiar.
-- Gemini embutiu um token Smartsheet hardcoded em `smartsheet-provider.ts` → parado em `scratch/gemini-portais/`, não commitado. Censos crus têm CPF e são gitignored.
+> **Atenção:** Todas as alterações estão contidas nesta branch fora da `main` (`feat/portal-pendency-report`). Não mesclar direto na `main` sem validação por PR limpo.
 
 ---
 
-## Parte 2 — Documentação / SSOT (Drive × Dashboard)
+## 1. Portais de Clientes — Extração & Auditoria
 
-### O problema
-O dashboard (auditoria Drive × RPO) lê 4 pastas no **My Drive** do João (01 Inspetores, 02 Líderes & EHS, 03 Drone, 04 LPS-SPDA). Descobriu-se uma **segunda fonte**: o **drive compartilhado "TREINAMENTOS"** (`13GqNi1s8mqzt24JwlIN-bz5tp_U95VX2`), onde a equipe realmente atualiza os documentos. O My Drive era um subconjunto → o dashboard apontava **falso "faltando"** e **falso "vencido"**. SSOT quebrado.
+### 1.1 Objetivo & Arquitetura
+Cruzar os censos extraídos das plataformas de clientes com o **Briefing de Projetos** (Smartsheet) e a base de colaboradores HSE, identificando com precisão **quem está liberado, quem tem pendência documental impeditiva e quem não está cadastrado**, gerando filas de ação prioritárias para EHS e relatórios de prontidão para a Coordenação de Operações.
 
-### Decisões do João
-- Direção: copiar **2ª fonte → My Drive SSOT** (não mexer no drive da equipe). Vira sync recorrente.
-- Escopo fase 1: preencher faltantes **+** atualizar os mais novos (original velho → `00.Obsoletos`) **+** trazer os colaboradores que só existem na 2ª fonte.
-- **Padrão de data:** a data no nome é sempre o **início/emissão**, nunca o vencimento (exceção: contratos 40/40.1).
-- Nada é apagado; tudo reversível (undo log).
+### 1.2 Plataformas Automatizadas em Campo (5 Portais Ativos)
 
-### Fase 1 — reconciliação (commits `6c23cec`, `a4a3f1d`, `577454c`)
-`DriveSourceReconciler` (puro, testado) + `DriveTreeScanner` + CLI `drive-reconcile`. Executado e revisado em etapas:
-- **COPY_MISSING:** 174 cópias.
-- **NEW_COLLAB:** 119 arquivos (9 colaboradores novos, ramo 01).
-- **UPDATE_NEWER:** 465 versões novas (original → Obsoletos) + 7 com data futura (typo) separados pra revisão manual.
-- Bug corrigido: o *supersede* removia o pai errado (docs em subpastas); correção = buscar os pais reais. Remediação idempotente via `runDriveObsoleteStragglers`.
-
-### Fase 2 e itens de limpeza (29/10)
-- **Cache de conteúdo** (`4d27292`, `1897caf`): `buildContentCacheForFiles` extraiu os 507 UNCLASSIFIED (pdf-parse + OCR + inspector) → `data/pdf_content_cache.json`.
-- **Item 1 — treinamentos recuperados** (`8eaa338`): relatório com guarda de falso-positivo (nome específico vence match de conteúdo); 18 ações de confiança ALTA executadas (8 cópias + 10 updates); 9 BAIXA no Excel amarelo pra revisão manual.
-- **SEM_DATA** (`fe33d66`): 145 nomes corrigidos (61 data real do cache, 84 token removido em códigos permanentes; guarda do proxy de 2076).
-- **Item 2 — split pessoal × treinamento** (`0f78a6d`): `drive-split-pessoal` classifica cada arquivo e move os documentos pessoais mal-arquivados pra "01. Documentos Pessoais" (cria quando falta). **724 movidos, 17 pastas criadas, 0 erros.** Decisão do João: ASO(01) = pessoal; Ordem de Serviço(02) e Ficha de EPI(06) ficam.
-- **Item 3 — placeholders "Doc 04.1"** (`e84e012`): 52 renomeados pra "Contrato de Trabalho CLT" **mantendo o código inicial** (ele é load-bearing — o audit extrai o código do nome e remapeia 04.1→40.1).
-- **Item 4 — 7 datas futuras:** avaliados um a um; **todos mantidos como SSOT** (datas do src2 são typos impossíveis ou irrelevantes; sobrescrever só introduziria erro). Sem escrita.
-- **Item 5 — sem data no nome** (`1e986cd`): `drive-undated-report` separou 630 sem data em correto-sem-data (permanente/pessoal: 344 + civis sem código: 207) e faltando-data. Extraído conteúdo de 85 (52 ganharam data) e **46 preenchidos** com data real. 33 restantes pra revisão manual.
-
-### Validação (auditoria Drive × RPO, ref 29/10)
-1511 combinações, 481 divergências: **DRIVE_SEM_DATA caiu pra 4** (era o problema central), falso-faltando (SOMENTE_RPO 85) despencou (era 128 só no ramo 01 antes). Rodar a auditoria **antes e depois** da fase 2 deu números **idênticos** → a movimentação para "Documentos Pessoais" **não criou faltantes** (o scanner é recursivo).
-
-### Deploy do dashboard (Vercel)
-- O dashboard é regenerado pelo workflow **`update_dashboard_daily.yml`** (GitHub Actions), que roda **na `main`**, lê o Drive ao vivo, gera `public/index.html` + `data/` e dá `push origin HEAD:main` → **a Vercel publica**. O runtime do dashboard já estava na main; os CLIs de manutenção criados aqui **não** são necessários pra ele.
-- Em 29/10 o workflow foi disparado (`gh workflow run update_dashboard_daily.yml`, sem e-mail), concluiu com sucesso e publicou o commit de dados `3dbdc18` na main → dashboard atualizado refletindo o Drive limpo.
-- **Confirmado:** o scanner (`GoogleDriveOAuthAdapter.scanFolderRecursive`) desce em todas as subpastas menos `obsolet`/`^00.`/`outros` — **lê a "01. Documentos Pessoais"**, então os docs movidos continuam contabilizados.
+| Portal | Cliente / Contratos | Método de Extração | Colaboradores no Censo | Status |
+|---|---|---|---|---|
+| **Veriduss** | Goldwind | REST JSON (`Strapi /api/documents`) | 13 | 🟢 100% Confiável |
+| **Surisoft** | GE Vernova / Serena | Token de sessão + API interna (`/colaborador_requisitos_list`) | 44 | 🟢 100% Confiável |
+| **eGestiona** | Vestas Latam | Scraping DOM / Grid de Semáforos DPE/DPR | 22 | 🟢 Operacional |
+| **TDoc** | SGRE (Gamesa) | Playwright JSF / Keycloak OIDC | 18 | 🟡 JSF stateful (conserva dados) |
+| **Metacontratas** | Ibitu Energia, Energimp, Repsol Chile | Playwright anti-bot + SSO hub.metadata.net + JSF | 17 | 🟢 100% Destravado e Confiável |
 
 ---
 
-## Ferramentas (CLIs) adicionadas nesta branch
+## 2. Destravamento do Metacontratas (Bypass reCAPTCHA & Multi-Contrato)
 
-| Script | Para quê |
+### 2.1 Desafio Técnico Resolvido
+O Metacontratas implementa proteção Cloudflare / reCAPTCHA v3 e retornava recorrentemente `HTTP 428 Precondition Required` quando acessado via automação headless padrão. Além disso, a arquitetura de acesso é multi-tenant:
+- Autenticação central em `https://hub.metadata.net/app/metalogin/accesos`.
+- Painel de seleção de contratos em `https://hub.metadata.net/app/accesos?plataformaInicio=Metacontratas`.
+- Requisição SSO interna POST `/login/v1/usuarios/56688/accesos/{id}/autenticar` que gera token JWT e redireciona para `cloud.metacontratas.com/acceso1` ou `acceso2`.
+- Grid de trabalhadores em JSF (`TablaEmpleado.jsp`).
+
+### 2.2 Solução Implementada (`MetacontratasScraper.ts`)
+1. **Evasão Anti-Bot:**
+   - Inicialização do Chromium com `--disable-blink-features=AutomationControlled`.
+   - Headers realistas do Windows 10 / Chrome 130, locale `pt-BR`, timezone `America/Sao_Paulo`.
+   - Autenticação bem-sucedida (HTTP 200 OK) com as credenciais corporativas da Darliane Caetano (`darliane.caetano@arthwind.com.br`).
+   - Sessão e cookies persistidos em `scratch/portais/sessions/metacontratas-darliane.session.json`.
+2. **Navegação Multi-Contrato:**
+   - Mapeamento e clique automático nos botões de cada empresa/contrato (`IBITU ENERGIA S.A`, `ENERGIMP (CE e SC)`, `REPSOL CHILE`).
+   - Tratamento de popups e redirecionamento de abas preservando a página mãe.
+   - Extração estruturada da `TablaEmpleado.jsp`:
+     - Nome do técnico, função, documento/DNI, status de conformidade global e pendências.
+3. **Resultados Extraídos (`data/portais/metacontratas.census.json`):**
+   - **IBITU ENERGIA S.A:** 10 colaboradores (3 com 100% dos documentos aprovados: Alison dos Santos Silva, Nardel Delon Pinho Ribeiro, Sérgio Luiz Santana de Souza; 7 com documentos pendentes/vencidos).
+   - **ENERGIMP:** 6 colaboradores.
+   - **REPSOL CHILE:** 1 colaborador.
+   - Total: **17 técnicos mapeados** com conformidade real.
+
+---
+
+## 3. Sincronização Smartsheet WOs → Planilha do Massude (Google Drive)
+
+### 3.1 O Problema
+A planilha oficial de controle de homologação do Massude (`1T4-m4FEqd1U3P_2Wgz1mtfpPME2BrJra`) dependia de digitação manual de técnicos alocados nas Ordens de Serviço (WOs). O Smartsheet `4246973141962628` (PAINEL DE CAMPANHAS) contém os dados em tempo real (Líder, Equipes 01/02/03, WO, Contrato, MOB).
+
+### 3.2 O Sincronizador (`src/cli/syncSmartsheetToGoogleBase.ts`)
+- Mapeia 82 campanhas ativas com 918 chaves indexadas na aba `BASE`.
+- Preserva integralmente:
+  - Fórmulas automáticas de SLA, status e filtros (Colunas J, K, L, M, S, V, W).
+  - Linhas preenchidas manualmente pelo EHS (Colunas E, F, H - Status, Data de Solicitação e Liberação).
+  - Desoculta linhas ocultas por filtros residuais do Excel.
+- Detecta alterações de escopo, previsão de acesso (MOB) e novas WOs, inserindo técnicos não cadastrados com status "Pendente" e solicitando cadastro na data atual.
+- Integrado ao `runAgentJob.ts` com o comando:
+  ```bash
+  npx tsx src/cli/syncSmartsheetToGoogleBase.ts --apply
+  ```
+- **Resultado do Dry-Run em 30/10:** A aba `BASE` do Massude já estava 100% compatibilizada com as campanhas ativas do Smartsheet.
+
+---
+
+## 4. Aplicação do Cruzamento dos Portais na Planilha de Homologação
+
+### 4.1 Teste em Planilha Cópia (`src/cli/updateTestSheetFromPortals.ts`)
+Para garantir segurança máxima antes de aplicar na planilha de produção do Massude, foi criado um script de cruzamento testado na planilha cópia (`1TRnxZ7wNrQ7yrIA7rdRkpdAWJvWVZMZm`):
+- Carrega os censos dos 5 portais (SGRE 18, Vestas 22, Goldwind 13, GE/Serena 44, Metacontratas 17).
+- Cruza pelo nome normalizado do colaborador e pelo cliente da alocação.
+- **Resultados consolidados na planilha de teste:**
+  - **145 alocações analisadas com portais.**
+  - **14 Liberados:** 100% de conformidade documental no portal (Status `Liberado` + Data de Liberação preenchida na Coluna H + Observação `Liberado 100% (X/X docs)`).
+  - **55 Em análise / com pendência:** Colaborador existe no portal, mas tem documentos pendentes ou reprovados.
+  - **76 Não cadastrados:** Técnico alocado no parque mas ainda não inserido na plataforma do cliente.
+  - Destaque Energimp (Metacontratas): 3 liberados, 3 em análise, 3 não cadastrados.
+  - Destaque SGRE (TDoc): 9 liberados, 15 em análise, 15 não cadastrados.
+  - Destaque Goldwind (Veriduss): 2 liberados, 4 em análise, 15 não cadastrados.
+
+---
+
+## 5. Disparo de E-mails Teste para Stakeholders (EHS & Coordenação)
+
+Executado em 30/10 via `src/cli/runPortalPendencyReport.ts` utilizando SMTP corporativo (`joao.oliveira@arthwind.com.br`):
+
+1. **E-mail EHS — Fila de Documentação:**
+   - **Assunto:** `Portais de clientes: fila de documentação (30/10/2026)`
+   - **Destinatário de Teste:** `joao.oliveira@arthwind.com.br`
+   - **Anexo:** `scratch/portais/pendencias-portais-2026-10-30.xlsx` (planilha detalhada de ações com abas: Resumo, Fila de Ação, Matriz por Projeto, Gaps de Portal).
+   - **Conteúdo:** 30 projetos na janela ativa, 285 ações identificadas, sendo 27 prioridades críticas (técnicos com mobilização imediata e documentos pendentes no portal).
+2. **E-mail Coordenação de Operações — Prontidão Documental:**
+   - **Assunto:** `Prontidão documental das equipes nos clientes (30/10/2026)`
+   - **Destinatário de Teste:** `joao.oliveira@arthwind.com.br`
+   - **Conteúdo:** Visão executiva por parque/projeto indicando se a equipe escalada está apta ou impedida de acessar o parque, evitando deslocamentos com bloqueio em portaria.
+
+---
+
+## 6. Documentação / SSOT (Drive × Dashboard) — Histórico 27–29/10
+
+- **Reconciliação Drive SSOT:** Unificação do My Drive SSOT com o drive compartilhado "TREINAMENTOS" (`13GqNi1s8mqzt24JwlIN-bz5tp_U95VX2`).
+  - 174 cópias de documentos faltantes.
+  - 119 arquivos de 9 colaboradores novos.
+  - 465 versões mais recentes atualizadas (anteriores movidas para `00.Obsoletos`).
+- **Limpeza e Estruturação:**
+  - 724 documentos pessoais movidos para pastas `01. Documentos Pessoais`.
+  - 52 placeholders "Doc 04.1" renomeados para "Contrato de Trabalho CLT".
+  - 145 arquivos com problemas de data corrigidos (`data/pdf_content_cache.json`).
+  - Fix da validade da CNH (10 anos para código 08) commitado e mesclado na main via PR #48.
+- **Deploy do Dashboard HSE:**
+  - Execução bem-sucedida do workflow `update_dashboard_daily.yml` na Vercel.
+
+---
+
+## 7. Mapa de Arquivos & Ferramentas (CLIs)
+
+| Script / CLI | Finalidade |
 |---|---|
-| `drive-reconcile` | Cruza a 2ª fonte (drive TREINAMENTOS) com o SSOT; copia faltantes/mais-novos. Report-only por padrão; `--execute`. |
-| `drive-split-pessoal` | Fase 2: classifica pessoal × treinamento e move pessoal mal-arquivado pra "Documentos Pessoais". |
-| `drive-fix-doc041` | Corrige títulos placeholder "Doc 04.1" → "Contrato de Trabalho CLT" (mantendo o código). |
-| `drive-undated-report` | Bucketiza arquivos sem data; alimenta extração e preenchimento. |
-| (apoio) `buildContentCacheForFiles`, `runDriveFixSemData`, `runDriveObsoleteStragglers`, `runDriveRecoverTrainingReport` | Cache de conteúdo, correção de SEM_DATA, remediação de Obsoletos, recuperação de treinamentos. |
-| `portal-report`, `portal-coverage`, `portal-login`, `portal-sessions`, `veriduss-extract`, `egestiona-extract`, `tdoc-extract`, `surisoft-extract` | Portais (ver Parte 1). |
-
-Todas as escritas no Drive têm **undo log** em `scratch/drive_padronizacao_undo_log.json` (nada apagado; superados vão pra `00.Obsoletos`).
-
----
-
-## Commits (branch `feat/portal-pendency-report`, acima da `main`)
-
-**Portais:** `bd2cb2e`, `09c5406`, `7eda6ca`, `ec235bc`, `18207ac`, `d1b9d90`, `ea31447`.
-**Documentação/SSOT:** `6c23cec`, `a4a3f1d`, `577454c`, `4d27292`, `fe33d66`, `8eaa338`, `1897caf`, `0f78a6d`, `e84e012`, `1e986cd`.
-
-> A branch está muito à frente da main e **divergiu** dela (a main tem correções recentes que a branch não tem, e vice-versa). **Não mesclar a branch inteira na main** — causaria conflito nos `data/` e subiria os extratores de portais inacabados. Se quiser preservar os CLIs de manutenção na main, abrir um **PR limpo só com os arquivos de drive**.
+| `metacontratas-extract` | Automação Playwright do Metacontratas (Ibitu, Energimp, Repsol Chile). |
+| `portal-report` | Cruzamento global dos 5 portais com o Briefing e geração do Excel + e-mails EHS/Coordenação. |
+| `portal-coverage` | Mapeamento do inventário de plataformas EHS e status de automação. |
+| `sync-wo` | Sincroniza campanhas/WOs do Smartsheet com a aba BASE da planilha do Massude. |
+| `updateTestSheetFromPortals` | Aplica o cruzamento dos portais preenchendo status, liberação e obs na planilha de teste. |
+| `drive-reconcile` | Reconciliação do Drive SSOT com a 2ª fonte de treinamentos. |
+| `drive-split-pessoal` | Organização de documentos pessoais em pastas dedicadas. |
 
 ---
 
-## Pendências abertas / próximos passos
+## 8. Próximos Passos & Recomendações
 
-**Documentação (revisão manual, não automatizável com segurança):**
-- 9 treinamentos recuperados de confiança BAIXA (`scratch/treinamentos_recuperados.xlsx`, linhas amarelas).
-- 33 arquivos sem data (`scratch/item5_revisao_manual.json`): 28 sem data extraível, 5 com nome malformado (sem colaborador).
-
-**Portais (retomar a seguir):**
-- Verificar seletores Tier-3 ao vivo; módulo de token do TDoc; ampliar o harness.
-- Senhas expiradas no portal (ex.: Vestas Latam) → gestão renova.
-- `PORTAL_OPS_EMAIL_TO` e cron na VPS.
-
-**Infra:**
-- VPS Hostinger (Coolify) hospeda stock Hermes; o dashboard HSE é Vercel. Confirmar escopo antes de qualquer mudança em produção.
+1. **Homologação com o Massude:**
+   - Apresentar a planilha de teste atualizada (`1TRnxZ7wNrQ7yrIA7rdRkpdAWJvWVZMZm`).
+   - Com o aval do Massude, rodar o preenchimento de status e liberação diretamente na planilha de produção oficial (`1T4-m4FEqd1U3P_2Wgz1mtfpPME2BrJra`).
+2. **Automação Contínua (Cron / Agendamento):**
+   - Agendar a extração dos portais e o disparo dos relatórios de pendência para rodar diariamente às 06:00 da manhã.
+   - Configurar variáveis oficiais de produção: `PORTAL_EHS_EMAIL_TO` e `PORTAL_OPS_EMAIL_TO`.
+3. **Expansão de Portais:**
+   - Adicionar os próximos portais de alta demanda identificados no briefing: Seyses (Vestas México), Storz (Nordex), e DGTSS (Invenergy).

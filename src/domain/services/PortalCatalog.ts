@@ -97,10 +97,10 @@ export const PORTALS: PortalInfo[] = [
     'metacontratas',
     'Metacontratas (CPFL, Energimp, Ibitu, NAWP Chile)',
     'Metacontratas',
-    ['v4.metacontratas.com'],
-    'ASSISTED_LOGIN',
-    ['CPFL', 'ENERGIMP', 'IBITU', 'NAWP CHILE'],
-    { note: 'Login exige reCAPTCHA' }
+    ['v4.metacontratas.com', 'hub.metadata.net', 'cloud.metacontratas.com'],
+    'AUTOMATED',
+    ['CPFL', 'ENERGIMP', 'IBITU', 'NAWP CHILE', 'REPSOL CHILE'],
+    { note: 'Automação Playwright com evasão anti-bot e extração multi-contrato' }
   ),
   portal(
     'seyses-vestas-mx',

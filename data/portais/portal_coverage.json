@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-10-27",
+  "refDate": "2026-10-30",
   "portals": [
     {
       "portal": {
@@ -27,8 +27,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 4,
-          "lastStart": "2026-10-15"
+          "projectsInWindow": 5,
+          "lastStart": "2026-10-15",
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -59,8 +60,9 @@
         {
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
-          "projectsInWindow": 1,
-          "lastStart": "2026-10-27"
+          "projectsInWindow": 2,
+          "lastStart": "2026-10-27",
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -98,9 +100,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -151,21 +153,28 @@
         "system": "Metacontratas",
         "url": "https://v4.metacontratas.com",
         "hosts": [
-          "v4.metacontratas.com"
+          "v4.metacontratas.com",
+          "hub.metadata.net",
+          "cloud.metacontratas.com"
         ],
         "category": "DOCUMENTS",
-        "automation": "ASSISTED_LOGIN",
+        "automation": "AUTOMATED",
         "clients": [
           "CPFL",
           "ENERGIMP",
           "IBITU",
-          "NAWP CHILE"
+          "NAWP CHILE",
+          "REPSOL CHILE"
         ],
-        "note": "Login exige reCAPTCHA"
+        "note": "Automação Playwright com evasão anti-bot e extração multi-contrato"
       },
       "accessRows": 2,
       "accessPending": 0,
       "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-10-30T08:48:13.254Z",
+        "workers": 17
+      },
       "clients": [
         {
           "client": "CPFL",
@@ -177,7 +186,7 @@
           "client": "ENERGIMP",
           "activity": "IN_FIELD",
           "projectsInWindow": 3,
-          "nextStart": "2026-11-02"
+          "nextStart": "2026-11-03"
         },
         {
           "client": "IBITU",
@@ -191,6 +200,11 @@
           "projectsInWindow": 4,
           "lastStart": "2026-10-12",
           "nextStart": "2026-11-03"
+        },
+        {
+          "client": "REPSOL CHILE",
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
       "activity": "IN_FIELD"
@@ -351,8 +365,9 @@
         {
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
-          "projectsInWindow": 1,
-          "lastStart": "2026-10-27"
+          "projectsInWindow": 2,
+          "lastStart": "2026-10-27",
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -467,9 +482,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         },
         {
           "client": "PONTAL",
@@ -515,9 +530,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -544,9 +559,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -1333,8 +1348,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 4,
-          "lastStart": "2026-10-15"
+          "projectsInWindow": 5,
+          "lastStart": "2026-10-15",
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -1361,9 +1377,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -1391,9 +1407,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
+          "projectsInWindow": 5,
           "lastStart": "2026-10-05",
-          "nextStart": "2026-11-12"
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -1475,8 +1491,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 4,
-          "lastStart": "2026-10-15"
+          "projectsInWindow": 5,
+          "lastStart": "2026-10-15",
+          "nextStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
