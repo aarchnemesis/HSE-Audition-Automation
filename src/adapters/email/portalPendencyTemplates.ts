@@ -4,6 +4,7 @@ import {
   Clearance,
   CoverageGap,
   DocIssue,
+  ExpiringDocAlert,
   MemberReadiness,
   PortalAction,
   PortalPendencyReport,
@@ -233,6 +234,68 @@ export function countClearances(
   return counts
 }
 
+export function buildExpiringAlertsHtml(alerts?: ExpiringDocAlert[]): string {
+  if (!alerts || !alerts.length) return ''
+
+  const critical = alerts.filter(a => a.urgency === 'CRITICAL_7D')
+  const high = alerts.filter(a => a.urgency === 'HIGH_15D')
+  const medium = alerts.filter(a => a.urgency === 'MEDIUM_30D')
+
+  const rows = alerts
+    .map(a => {
+      const urgencyBadge =
+        a.urgency === 'CRITICAL_7D'
+          ? `<span style="background:#FEE2E2;color:#991B1B;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🔴 VENCE EM ${a.daysToExpiry}D</span>`
+          : a.urgency === 'HIGH_15D'
+            ? `<span style="background:#FFEDD5;color:#9A3412;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟠 VENCE EM ${a.daysToExpiry}D</span>`
+            : `<span style="background:#FEF3C7;color:#92400E;padding:3px 8px;border-radius:999px;font-weight:700;font-size:11px">🟡 VENCE EM ${a.daysToExpiry}D</span>`
+
+      return `<tr>
+        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+          <strong>${esc(displayName(a.worker))}</strong><br>
+          <span style="font-size:11px;color:#7C2D12">${esc(a.client)} · ${esc(a.windfarm)}${a.wo ? ` (WO ${esc(a.wo)})` : ''}</span>
+        </td>
+        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+          <strong>${esc(a.docName)}</strong><br>
+          <span style="font-size:11px;color:#9A3412">Validade: <strong>${formatDay(a.expirationDate)}</strong></span>
+        </td>
+        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA;text-align:center">${urgencyBadge}</td>
+        <td style="padding:8px 10px;border-bottom:1px solid #FED7AA">
+          <span style="font-size:12px;font-weight:600;color:#1E3A8A">${esc(a.portalStatus || 'Aprovado')}</span><br>
+          <span style="font-size:11px;color:#B91C1C">⚠️ ${esc(a.risk)}</span>
+        </td>
+      </tr>`
+    })
+    .join('')
+
+  return `
+    <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:8px;padding:16px 20px;margin:20px 0 24px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+        <span style="font-size:20px">⚠️</span>
+        <strong style="color:#9A3412;font-size:16px">ALERTA OPERACIONAL: DOCUMENTOS APROVADOS VENCENDO EM CAMPO (7, 15 E 30 DIAS)</strong>
+      </div>
+      <p style="margin:0 0 10px 0;font-size:13px;line-height:1.5;color:#7C2D12">
+        <strong>Atenção EHS e Coordenação:</strong> Os colaboradores abaixo constam como <strong>aceitos/aprovados no portal do cliente</strong> (ou no RPO), mas estão com documentações que <strong>vencem durante a campanha ou nos próximos dias</strong>.
+        Se não forem renovados e atualizados antes do vencimento, o cliente bloqueará o acesso no portão do parque, <strong>causando perda do dia inteiro de trabalho da equipe</strong>.
+      </p>
+      <div style="font-size:12px;font-weight:600;margin-bottom:12px;color:#9A3412">
+        Resumo de Risco: 🔴 <strong>${critical.length} crítico(s) em até 7 dias</strong> | 🟠 <strong>${high.length} em até 15 dias</strong> | 🟡 <strong>${medium.length} em até 30 dias</strong>
+      </div>
+      <table style="width:100%;border-collapse:collapse;margin:0;font-size:12px;background:#FFFFFF;border:1px solid #FDBA74;border-radius:6px;overflow:hidden">
+        <thead>
+          <tr style="background:#FFEDD5;color:#7C2D12;text-align:left">
+            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Colaborador / Campanha</th>
+            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Documento / Vencimento</th>
+            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74;text-align:center">Prazo</th>
+            <th style="padding:8px 10px;border-bottom:2px solid #FDBA74">Status no Portal / Risco Operacional</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `
+}
+
 export function buildOpsReadinessBodyHtml(
   report: PortalPendencyReport,
   ehsContact: string
@@ -257,6 +320,7 @@ export function buildOpsReadinessBodyHtml(
       ['Aguardando cliente', c.WAITING_CLIENT],
       ['Portal sem leitura', c.NOT_MONITORED, '#475569'],
     ])}
+    ${buildExpiringAlertsHtml(report.expiringAlerts)}
     ${urgent.length ? `<h3 style="color:#25386B;font-size:15px;margin:0 0 10px">Em andamento ou começando em até ${report.window.urgentDays} dias</h3>${urgent.map(projectBlock).join('')}` : ''}
     ${later.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 10px">Próximas semanas</h3>${later.map(projectBlock).join('')}` : ''}
     ${report.gaps.length ? `<h3 style="color:#25386B;font-size:15px;margin:20px 0 6px">Clientes cujo portal ainda não é lido automaticamente</h3><p style="margin:0 0 6px;font-size:12px;color:#6B7A8D">Para estes, confirmar a liberação com a equipe EHS.</p>${gapsTable(report.gaps)}` : ''}
@@ -359,6 +423,7 @@ export function buildEhsQueueBodyHtml(report: PortalPendencyReport): string {
       ['Providenciar', count('OBTAIN'), '#B45A1E'],
       ['Renovar', count('RENEW')],
     ])}
+    ${buildExpiringAlertsHtml(report.expiringAlerts)}
     <h3 style="color:#25386B;font-size:15px;margin:0 0 10px">Pessoas escaladas com pendência</h3>
     ${scheduled.length ? priorityByWorker(scheduled) : '<p style="color:#6B7A8D">Nenhuma pendência para quem está escalado nos portais monitorados.</p>'}
     <h3 style="color:#25386B;font-size:15px;margin:20px 0 10px">Situação por portal</h3>

@@ -125,5 +125,50 @@ export async function writePortalReportWorkbook(
   }
   styleHeader(readiness)
 
+  if (report.expiringAlerts && report.expiringAlerts.length > 0) {
+    const alertsSheet = workbook.addWorksheet('Alertas Vencimento (30d)')
+    alertsSheet.columns = [
+      { header: 'Urgência', key: 'urgency', width: 22 },
+      { header: 'Dias para Vencer', key: 'daysToExpiry', width: 18 },
+      { header: 'Colaborador', key: 'worker', width: 34 },
+      { header: 'Cliente', key: 'client', width: 22 },
+      { header: 'Parque / Empreendimento', key: 'windfarm', width: 34 },
+      { header: 'WO', key: 'wo', width: 16 },
+      { header: 'Início da Campanha', key: 'startDate', width: 18 },
+      { header: 'Documento', key: 'docName', width: 40 },
+      { header: 'Código', key: 'docCode', width: 10 },
+      { header: 'Data de Vencimento', key: 'expirationDate', width: 18 },
+      { header: 'Status HSE', key: 'statusEHS', width: 14 },
+      { header: 'Status no Portal', key: 'portalStatus', width: 30 },
+      { header: 'Solicitação Storz', key: 'storzState', width: 20 },
+      { header: 'Risco Operacional', key: 'risk', width: 50 },
+    ]
+
+    for (const a of report.expiringAlerts) {
+      alertsSheet.addRow({
+        urgency:
+          a.urgency === 'CRITICAL_7D'
+            ? '🔴 Vence em até 7 dias'
+            : a.urgency === 'HIGH_15D'
+              ? '🟠 Vence em até 15 dias'
+              : '🟡 Vence em até 30 dias',
+        daysToExpiry: a.daysToExpiry,
+        worker: displayName(a.worker),
+        client: a.client,
+        windfarm: a.windfarm,
+        wo: a.wo || '',
+        startDate: formatDay(a.startDate),
+        docName: a.docName,
+        docCode: a.docCode || '',
+        expirationDate: formatDay(a.expirationDate),
+        statusEHS: a.statusEHS,
+        portalStatus: a.portalStatus || '',
+        storzState: a.storzState || 'NÃO SOLICITADO',
+        risk: a.risk,
+      })
+    }
+    styleHeader(alertsSheet)
+  }
+
   await workbook.xlsx.writeFile(filePath)
 }

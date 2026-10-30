@@ -108,6 +108,24 @@ export interface CoverageGap {
   nextStart?: string
 }
 
+export interface ExpiringDocAlert {
+  worker: string
+  client: string
+  windfarm: string
+  wo?: string
+  startDate?: string
+  daysToStart?: number
+  docName: string
+  docCode?: string
+  expirationDate: string
+  daysToExpiry: number
+  urgency: 'CRITICAL_7D' | 'HIGH_15D' | 'MEDIUM_30D'
+  statusEHS: string
+  storzState?: string
+  portalStatus?: string
+  risk: string
+}
+
 export interface PortalPendencyReport {
   refDate: string
   window: { lookbackDays: number; lookaheadDays: number; urgentDays: number }
@@ -115,6 +133,7 @@ export interface PortalPendencyReport {
   actions: PortalAction[]
   projects: ProjectReadiness[]
   gaps: CoverageGap[]
+  expiringAlerts: ExpiringDocAlert[]
 }
 
 export interface PortalReportInput {
@@ -499,6 +518,120 @@ export function buildPortalPendencyReport(
     gapsByClient.set(key, gap)
   }
 
+  const expiringAlerts: ExpiringDocAlert[] = []
+  const seenExpiringKey = new Set<string>()
+
+  for (const p of projects) {
+    const pr = p.project
+    for (const m of p.members) {
+      // 1. Verificar registros da base HSE
+      const memberRecs = input.baseRecords.filter(r => namesMatch(r.inspectorName, m.name))
+      for (const rec of memberRecs) {
+        let isExpiring = ['VENCE_07', 'VENCE_15', 'VENCE_30'].includes(rec.statusEHS)
+        let daysToExpiry = rec.expirationDate
+          ? daysBetween(refIso, rec.expirationDate.slice(0, 10))
+          : undefined
+
+        if (daysToExpiry !== undefined && daysToExpiry > 0 && daysToExpiry <= 30) {
+          isExpiring = true
+        }
+
+        if (isExpiring && daysToExpiry !== undefined) {
+          const key = `${pr.wo || pr.windfarm}|${rec.inspectorName}|${rec.docCode || rec.docName}`
+          if (seenExpiringKey.has(key)) continue
+          seenExpiringKey.add(key)
+
+          const urgency: ExpiringDocAlert['urgency'] =
+            daysToExpiry <= 7
+              ? 'CRITICAL_7D'
+              : daysToExpiry <= 15
+                ? 'HIGH_15D'
+                : 'MEDIUM_30D'
+
+          let risk = ''
+          if ((pr.daysToStart ?? 0) < 0) {
+            risk = `Equipe já em campo: bloqueio imediato na portaria em ${daysToExpiry} dias`
+          } else if ((pr.daysToStart ?? 0) <= daysToExpiry) {
+            risk = `Vencerá no meio da operação: paralisação dos trabalhos em ${daysToExpiry} dias`
+          } else {
+            risk = `Vencerá antes do início: impedimento no acesso ao parque`
+          }
+
+          const portalStatus = m.clearance === 'CLEARED'
+            ? 'Aprovado hoje no portal (risco iminente)'
+            : m.clearance === 'WAITING_CLIENT'
+              ? 'Em análise no cliente'
+              : m.clearance === 'NOT_REGISTERED'
+                ? 'Não cadastrado'
+                : 'Bloqueado'
+
+          expiringAlerts.push({
+            worker: rec.inspectorName,
+            client: pr.client,
+            windfarm: pr.windfarm,
+            wo: pr.wo,
+            startDate: pr.startDate,
+            daysToStart: pr.daysToStart,
+            docName: rec.docName,
+            docCode: rec.docCode,
+            expirationDate: rec.expirationDate ? rec.expirationDate.slice(0, 10) : 'S/D',
+            daysToExpiry,
+            urgency,
+            statusEHS: rec.statusEHS,
+            storzState: rec.storzState,
+            portalStatus,
+            risk,
+          })
+        }
+      }
+
+      // 2. Verificar pendências de vencimento detectadas diretamente pelo portal
+      for (const exp of m.expiring) {
+        if (!exp.expiresOn) continue
+        const daysToExpiry = daysBetween(refIso, exp.expiresOn)
+        if (daysToExpiry <= 0 || daysToExpiry > 30) continue
+
+        const key = `${pr.wo || pr.windfarm}|${m.name}|${exp.title}`
+        if (seenExpiringKey.has(key)) continue
+        seenExpiringKey.add(key)
+
+        const urgency: ExpiringDocAlert['urgency'] =
+          daysToExpiry <= 7
+            ? 'CRITICAL_7D'
+            : daysToExpiry <= 15
+              ? 'HIGH_15D'
+              : 'MEDIUM_30D'
+
+        let risk = ''
+        if ((pr.daysToStart ?? 0) < 0) {
+          risk = `Equipe já em campo: bloqueio imediato na portaria em ${daysToExpiry} dias`
+        } else if ((pr.daysToStart ?? 0) <= daysToExpiry) {
+          risk = `Vencerá no meio da operação: paralisação dos trabalhos em ${daysToExpiry} dias`
+        } else {
+          risk = `Vencerá antes do início: impedimento no acesso ao parque`
+        }
+
+        expiringAlerts.push({
+          worker: m.name,
+          client: pr.client,
+          windfarm: pr.windfarm,
+          wo: pr.wo,
+          startDate: pr.startDate,
+          daysToStart: pr.daysToStart,
+          docName: exp.title,
+          expirationDate: exp.expiresOn,
+          daysToExpiry,
+          urgency,
+          statusEHS: daysToExpiry <= 7 ? 'VENCE_07' : daysToExpiry <= 15 ? 'VENCE_15' : 'VENCE_30',
+          portalStatus: 'Aprovado no portal (expirando)',
+          risk,
+        })
+      }
+    }
+  }
+
+  expiringAlerts.sort((a, b) => a.daysToExpiry - b.daysToExpiry)
+
   return {
     refDate: refIso,
     window: { lookbackDays, lookaheadDays, urgentDays },
@@ -506,5 +639,6 @@ export function buildPortalPendencyReport(
     actions,
     projects,
     gaps: Array.from(gapsByClient.values()),
+    expiringAlerts,
   }
 }
