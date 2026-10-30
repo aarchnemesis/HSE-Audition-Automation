@@ -99637,17 +99637,6 @@
     "extractedClause": "Assinou em 10 nov 2025",
     "documents": [
       {
-        "code": "12",
-        "issueDate": "2025-11-10T03:00:00.000Z",
-        "expirationDate": "2027-11-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/11/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 Básico (via PDF) (Pág. 2)",
-        "extractedClause": "Assinou em 10 nov 2025"
-      },
-      {
         "code": "02",
         "issueDate": "2025-11-10T03:00:00.000Z",
         "expirationDate": "2075-11-10T03:00:00.000Z",
@@ -166971,6 +166960,66 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-10 SEP",
         "extractedClause": "período de 24 de Janeiro de 2026 | Atualizado via nome: 27/01/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "11oTBgXgVqLOgIwGbsOTzbSElaJgXlZxb",
+    "filename": "20 – NR-33 Vigia (R) – 03.09.2026 - THAYNA NOGUEIRA TAVARES - 03-09-2026 - Thayna Nogueira Tavares",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T15:19:56.093Z",
+    "code": "20",
+    "issueDate": "2026-09-03T03:00:00.000Z",
+    "expirationDate": "2027-09-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-09-03T03:00:00.000Z",
+        "expirationDate": "2027-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1KiJ7jxzCr2JkDBOOxc-t5hIv7ElcQzWR",
+    "filename": "40 – Contrato de Prestação de Serviço – 05.10.2027 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-10-30T15:33:36.969Z",
+    "code": "40",
+    "issueDate": "2027-10-05T03:00:00.000Z",
+    "expirationDate": "2027-10-05T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 05/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Contrato PJ",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "40",
+        "issueDate": "2027-10-05T03:00:00.000Z",
+        "expirationDate": "2027-10-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Contrato PJ",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   }
