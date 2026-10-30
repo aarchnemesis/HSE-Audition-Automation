@@ -101,6 +101,7 @@ Variaveis essenciais:
 - `DO_EMAIL_TO`: Destinatarios do relatorio de DO (Mayanna Gomes e Joao Oliveira).
 - `HSE_EMAIL_TO`: Destinatarios dos relatorios de EHS e auditoria RPO (Massude Afonso e Darliane Caetano).
 - `EXEC_EMAIL_TO`: Destinatarios da atualizacao executiva do dashboard (Marcelo Freitas e Leonardo Gaem).
+- PORTAL_UNIFIED_EMAIL_TO: Destinatarios do relatorio unificado de prontidao e portais de clientes (Massude, Darliane, Mayanna, Joao e Marcelo).
 
 ---
 
@@ -120,6 +121,9 @@ Caso deseje transferir os crons do GitHub Actions para um servidor proprio ou cr
 
 # 4. Relatorio Consolidado EHS & Auditoria RPO (Massude e Darliane) - Segunda-feira as 04:15 BRT (madrugada)
 15 4 * * 1 cd /caminho/do/projeto && pnpm run agent:hse >> scratch/hse_cron.log 2>&1
+
+# 5. Relatorio Integrado de Portais & Prontidao Operacional (EHS, Coordenacao e Diretoria) - Comeco e Fim de Turno (07:30 e 17:30 BRT, Segunda a Sexta)
+30 7,17 * * 1-5 cd /caminho/do/projeto && pnpm run agent:portais >> scratch/portais_cron.log 2>&1
 ```
 
 ---

@@ -164,6 +164,7 @@ function runExecDashboard(): void {
 }
 
 function runPortalReport(): void {
+  if (PUBLISH) alignWithOrigin()
   runCommand(
     'npx tsx src/cli/runPortalPendencyReport.ts',
     'Pendencias nos Portais de Clientes e Envio para EHS e Coordenacao'
