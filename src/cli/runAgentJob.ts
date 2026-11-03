@@ -15,6 +15,8 @@ const validJobs = [
   'hse-digest',
   'rpo-audit',
   'exec-dashboard',
+  'portal-report',
+  'sync-wo',
   'all',
 ] as const
 type AgentJob = (typeof validJobs)[number]
@@ -115,6 +117,9 @@ function publishDashboard(): void {
 function syncAndDeployDashboard(): void {
   if (PUBLISH) alignWithOrigin()
 
+  // Sincroniza WOs ativas do Smartsheet com a aba BASE do Google Drive (Controle do Massude)
+  runSyncWoBase()
+
   // Executa relatorio e dashboard sem disparo de e-mail desnecessario
   runCommand(
     'npx tsx src/cli/runHSEReportExporter.ts --no-email',
@@ -158,6 +163,21 @@ function runExecDashboard(): void {
   )
 }
 
+function runPortalReport(): void {
+  if (PUBLISH) alignWithOrigin()
+  runCommand(
+    'npx tsx src/cli/runPortalPendencyReport.ts',
+    'Pendencias nos Portais de Clientes e Envio para EHS e Coordenacao'
+  )
+}
+
+function runSyncWoBase(): void {
+  runCommand(
+    'npx tsx src/cli/syncSmartsheetToGoogleBase.ts --apply',
+    'Sincronizacao de WOs do Smartsheet para a aba BASE do Google Drive'
+  )
+}
+
 async function main() {
   const jobArg = process.argv[2] as AgentJob | undefined
 
@@ -186,6 +206,12 @@ async function main() {
     console.log(
       '  exec-dashboard - Gera e envia e-mail executivo do dashboard para Marcelo e Leonardo'
     )
+    console.log(
+      '  portal-report  - Cruza portais de clientes com o Briefing de Projetos e envia para EHS e Coordenacao'
+    )
+    console.log(
+      '  sync-wo        - Sincroniza tecnicos/WOs do Smartsheet na aba BASE da planilha do Massude'
+    )
     console.log('  all            - Executa dashboard + do-report em sequencia')
     console.log(
       '================================================================================\n'
@@ -211,6 +237,12 @@ async function main() {
       break
     case 'exec-dashboard':
       runExecDashboard()
+      break
+    case 'portal-report':
+      runPortalReport()
+      break
+    case 'sync-wo':
+      runSyncWoBase()
       break
     case 'all':
       syncAndDeployDashboard()

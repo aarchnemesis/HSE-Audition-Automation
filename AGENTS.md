@@ -48,8 +48,20 @@ pnpm run triangulate               # run audit triangulation CLI
 pnpm run storz-audit               # run Storz scraping and audit CLI
 pnpm run hse-report                # generate consolidated HSE report & dashboard
 pnpm run drive-rpo-audit           # audit divergence between Drive/Storz and RPO
+pnpm run drive-reconcile           # cross the second source (shared drive "TREINAMENTOS") against the SSOT; report-only by default, --execute copies missing/newer docs into the SSOT (canonical names, old->Obsoletos, undo log). Flags: --branch=01,02 --kinds=COPY_MISSING,UPDATE_NEWER,NEW_COLLAB --collaborator=NAME --limit=N
+pnpm run drive-split-pessoal       # phase 2: classify every SSOT file personal vs training and move misfiled personal docs into each collaborator's "01. Documentos Pessoais" (created when missing). Report-only by default, --execute moves with real-parent fix + undo log. ASO(01) counts as personal by default (--no-aso to exclude); OS(02)/EPI(06) stay. Flags: --branch=01 --limit=N --delay=ms
+pnpm run drive-fix-doc041          # fixes leftover "<code> – Doc <code> – ..." placeholder titles (keeps the load-bearing leading code, swaps the title to canonical, e.g. 04.1 -> "Contrato de Trabalho CLT"; fills a SEM_DATA date from the content cache when available). Report-only by default; --execute renames with undo log.
+pnpm run drive-undated-report      # read-only: buckets every SSOT file with no date in its name into CORRETO_SEM_DATA (permanent/personal codes + civil uncoded), FALTA_DATA_CACHE_OK (dated code, date already in cache), FALTA_DATA_PRECISA_EXTRAIR (dated code, needs download+OCR) and SEM_CODIGO. Writes undated_need_extract.json to feed buildContentCacheForFiles --input=, then runDriveFixSemData fills the dated ones. Date detection accepts . / - _ separators; codes are zero-padded.
 pnpm run backfill-history          # rebuild data/compliance_history.json from the git history of the database
 pnpm run storz-history-report      # generate student training history report
+pnpm run portal-report             # client-portal pendencies x project briefing, e-mails EHS and ops (--no-email for preview)
+pnpm run portal-coverage           # map every platform in the EHS credentials sheet vs. briefing and automation -> data/portais/portal_coverage.json
+pnpm run portal-login -- <id>      # log into a Tier-3/TDoc portal with sheet creds, save session to scratch/portais/sessions/<id>.session.json
+pnpm run portal-sessions           # list saved portal sessions and whether each is still usable or must be re-logged
+pnpm run veriduss-extract          # pull the Veriduss (Goldwind) census over REST using a saved session -> data/portais/veriduss-goldwind.census.json
+pnpm run egestiona-extract -- <id> # log into an eGestiona tenant and scrape its workforce grid (DPR/DPE/active) -> data/portais/<id>.census.json
+pnpm run tdoc-extract -- <id>      # log into a TDoc tenant (Keycloak) and scrape tasks/workers/documents -> data/portais/<id>.census.json
+pnpm run surisoft-extract          # log into Surisoft and pull each client's workforce via its internal document API -> data/portais/surisoft.census.json
 pnpm run test-gdrive               # test Google Drive API connection
 ```
 

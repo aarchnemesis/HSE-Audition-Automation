@@ -1,0 +1,2939 @@
+{
+  "portalId": "dgtss-invenergy",
+  "capturedAt": "2026-10-30T09:29:24.525Z",
+  "workers": [
+    {
+      "name": "ALISON DOS SANTOS RIBEIRO",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "ALLAN THIAGO RAMOS VEIGA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-02",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2029-09-21",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-24",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-19",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2026-05-08",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-14",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-28",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-20",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-17",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-24",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CONTRATO SOCIAL E ULTIMA ALTERAÇÃO",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-05",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2021-01-03",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "note": "APTO PARA ALTURA, ESPAÇO CONFINADO E ELETRICA. | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-24",
+          "note": "O DOCUMENTO CONTRATO DE TRABALHO NÃO É ACEITO COMO VINCULO EMPREGATÍCIO | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-22",
+          "note": "(1) FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO). (2) O TREINAMENTO NAO CONTÉM A CARGA HORÁRIA EXIGIDA DE FORMAÇÃO DE 6 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "REJECTED",
+          "expiresOn": "2026-01-19",
+          "note": "CERTIFICADO FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO) | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "REJECTED",
+          "expiresOn": "2028-09-20",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "BRUNO EDUARDO FERREIRA DE PAIVA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-11-16",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-26",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-06",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-06",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2023-04-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-17",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-17",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-16",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-17",
+          "note": "O TREINAMENTO NAO CONTÉM A CARGA HORÁRIA EXIGIDA DE FORMAÇÃO DE 6 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2026-02-12",
+          "note": "O DOCUMENTO NÃO APRESENTA A DOSE DA(S) VACINA(S) - 2 DOSES OU DOSE ÚNICA DA TRÍPLICE | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "REJECTED",
+          "expiresOn": "2027-02-22",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ELETRICA. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-10",
+          "note": "DE ACORDO COM GUIA DE INTEGRAÇÃO, A FICHA DEVE CONTER ASSINATURA DO COLABORADOR PARA CADA ITEM RECEBIDO. SE O CAMPO NÃO CONSTAR NO DOCUMENTO, A EMPRESA DEVE INCLUIR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2026-02-08",
+          "note": "O DOCUMENTO NÃO pertence ao COLABORADOR cadastrado | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "DANIEL FERNANDES PACHECO",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "DANIEL FERNANDES PACHECO",
+      "documents": [
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-16",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-16",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO PREVENCAO E PROTECAO CONTRA INCENDIOS",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-22",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "APPROVED",
+          "expiresOn": "2019-11-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-09",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-10",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2029-06-19",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2024-06-26",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-16",
+          "note": "O TREINAMENTO NAO CONTÉM A CARGA HORÁRIA EXIGIDA DE FORMAÇÃO DE 6 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-16",
+          "note": "O DOCUMENTO NÃO APRESENTA O MESMO CNPJ QUE O CADASTRO DA EMPRESA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-16",
+          "note": "O DOCUMENTO NÃO APRESENTA O MESMO CNPJ QUE O CADASTRO DA EMPRESA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-16",
+          "note": "O DOCUMENTO NÃO APRESENTA O MESMO CNPJ QUE O CADASTRO DA EMPRESA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-16",
+          "note": "O DOCUMENTO NÃO APRESENTA O MESMO CNPJ QUE O CADASTRO DA EMPRESA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "REJECTED",
+          "expiresOn": "2019-11-01",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2027-04-14",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-15",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-15",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2027-04-12",
+          "note": "DE ACORDO COM O GUIA DE INTEGRAÇÃO, COLABORADORES DE EMPRESAS SUBCONTRATADAS DEVEM SER CADASTRADOS DENTRO DA PRÓPRIA EMPRESA SUBCONTRATADA, COM O TIPO DE SERVIÇO SUBCONTRATADO. POR GENTILEZA, ENTRAR EM CONTATO COM O GESTOR DA EMPRESA PARA QUE ELE REALIZE O CADASTRO DA EMPRESA SUBCONTRATADA NO SISTEMA. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2027-06-20",
+          "note": "O TREINAMENTO NAO CONTÉM A CARGA HORÁRIA EXIGIDA DE FORMAÇÃO DE 6 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "REJECTED",
+          "expiresOn": "2027-11-29",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ELETRICA. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-28",
+          "note": "O CERTIFICADO TREINAMENTO PRIMEIROS SOCORROS NÃO CONTÉM A CARGA HORÁRIA MÍNIMA EXIGIDA DE FORMAÇÃO DE 8 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO PREVENCAO E PROTECAO CONTRA INCENDIOS",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-22",
+          "note": "O CERTIFICADO NÃO CONTÉM A CARGA HORÁRIA MÍNIMA EXIGIDA DE FORMAÇÃO DE 16 HORAS. O CERTIFICADO NÃO CONTÉM A CARGA HORÁRIA MÍNIMA EXIGIDA DE FORMAÇÃO DE 8 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "REJECTED",
+          "expiresOn": "2027-11-29",
+          "note": "(1)PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ELETRICA. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. (2)PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO MEI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO ELVISON PEREIRA DE SOUSA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "note": "FORMAÇÃO + RECICLAGEM | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-02",
+          "note": ". | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-25",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-27",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-26",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-22",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-20",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-14",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-25",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-19",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2023-12-01",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2024-01-01",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2023-12-01",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2023-01-03",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-02",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-01",
+          "note": "CERTIFICADO NÃO CONSTA NA ORDEM DE SERVIÇO. | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 SEP",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO LEONARDO DA SILVA FERREIRA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-16",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2029-09-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2029-09-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-12",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-12",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-19",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-19",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2029-09-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-02",
+          "note": ". | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-01",
+          "note": ". | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2024-06-14",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-01",
+          "note": ". | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-19",
+          "note": "O CERTIFICADO DEVE CONTER A ASSINATURA DO RESPONSÁVEL TÉCNICO OU INSTRUTOR ASSIM COMO SEUS DADOS DE IDENTIFICAÇÃO (NOME COMPLETO E NÚMERO DE REGISTRO NO CONSELHO DE CLASSE). | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-16",
+          "note": "CARTA DE ANUÊNCIA DECLARAÇÃO DE CAPACITAÇÃO E AUTORIZAÇÃO PROFISSIONAL, FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO). | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-20",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ALTURA. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "REJECTED",
+          "expiresOn": "2028-09-08",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ELETRICA. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-05",
+          "note": "(1) PARA APROVAÇÃO DO CERTIFICADO O ASO DEVE ESTAR APROVADO E COM DESCRIÇÃO DE APTO PARA TRABALHO EM ESPAÇO CONFINADO. POR GENTILEZA, ANEXAR NOVAMENTE O DOCUMENTO APÓS A REGULARIZAÇÃO DO ASO. (2) CERTIFICADO NÃO CONSTA NA ORDEM DE SERVIÇO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "REJECTED",
+          "expiresOn": "2026-09-24",
+          "note": "DOCUMENTO FORA DO PERIODO DE VIGENCIA - 1 ANO (COM BASE NO EXAME CLINICO). | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "REJECTED",
+          "expiresOn": "2027-09-19",
+          "note": "O CERTIFICADO DEVE CONTER A ASSINATURA DO RESPONSÁVEL TÉCNICO OU INSTRUTOR ASSIM COMO SEUS DADOS DE IDENTIFICAÇÃO (NOME COMPLETO E NÚMERO DE REGISTRO NO CONSELHO DE CLASSE). | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "REJECTED",
+          "expiresOn": "2024-11-01",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2024-03-15",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "REJECTED",
+          "expiresOn": "2024-11-01",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "REJECTED",
+          "expiresOn": "2024-10-02",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "REJECTED",
+          "expiresOn": "2026-10-27",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO VINICIUS SOUSA DOS SANTOS",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-21",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-19",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-22",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-23",
+          "note": "FORMAÇÃO + RECICLAGEM | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-02",
+          "note": ". | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2026-02-06",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - SUPERVISOR",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-30",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-13",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-04",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-16",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-30",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-14",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-19",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-30",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-31",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-30",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2024-04-10",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "CNH (de acordo com a categoria do veículo)",
+          "status": "APPROVED",
+          "expiresOn": "2024-04-10",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-21",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-19",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "REJECTED",
+          "expiresOn": "2027-04-26",
+          "note": "O DOCUMENTO NÃO PERTENCE AO COLABORADOR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-23",
+          "note": "CERTIFICADO NÃO CONSTA NA ORDEM DE SERVIÇO. | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "REJECTED",
+          "expiresOn": "2026-02-22",
+          "note": "DOCUMENTO FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO). | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "REJECTED",
+          "expiresOn": "2026-01-18",
+          "note": "CERTIFICADO FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO) | Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 SEP",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "ITALO DE ABREU DUARTE",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-12-05",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-21",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2026-02-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-18",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-05",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-12-05",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2026-02-05",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-09",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-04",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-30",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ANUÊNCIA NR 10",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-13",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-13",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-28",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-24",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2026-02-26",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-13",
+          "note": "aso apto para altura, eletricidade e espaço confinado | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "REJECTED",
+          "expiresOn": "2028-10-26",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "REJECTED",
+          "expiresOn": "2028-10-26",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "REJECTED",
+          "expiresOn": "2027-02-09",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "REJECTED",
+          "expiresOn": "2027-02-09",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "JOSE RICARDO BRAGA MATOS",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-11",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-22",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-06",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-07",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-07",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-18",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-22",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2023-01-05",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-07",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-20",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-07",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-24",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2023-06-12",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-27",
+          "note": "aso apto para altura, eletricidade e espaço confinado | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2026-05-01",
+          "note": "O DOCUMENTO NÃO APRESENTA A DOSE DA(S) VACINA(S) - 3 DOSES DE TÉTANO OU REFORÇO; | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2027-04-08",
+          "note": "DE ACORDO COM GUIA DE INTEGRAÇÃO, A FICHA DEVE CONTER ASSINATURA DO COLABORADOR PARA CADA ITEM RECEBIDO. SE O CAMPO NÃO CONSTAR NO DOCUMENTO, A EMPRESA DEVE INCLUIR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2026-02-21",
+          "note": "(1)FORA DO PERIODO DE VIGÊNCIA (VALIDADE DE 6 MESES). (2)O DOCUMENTO DEVE APRESENTAR ASSINATURA/VISTO DO COLABORADOR PARA CADA EQUIPAMENTO ENTREGUE. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-05",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "REJECTED",
+          "expiresOn": "2027-03-06",
+          "note": "CERTIFICADO NÃO CONSTA NA ORDEM DE SERVIÇO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-06",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "REJECTED",
+          "expiresOn": "2026-08-05",
+          "note": "DOCUMENTO FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO). | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2025-10-07",
+          "note": "O DOCUMENTO NÃO APRESENTA A DOSE DA(S) VACINA(S) - 3 DOSES DE TÉTANO OU REFORÇO; 3 DOSES DE HEPATITE B; FEBRE AMARELA | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "REJECTED",
+          "expiresOn": "2026-02-21",
+          "note": "CERTIFICADO FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO) | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "RAFAEL SIQUEIRA DA SILVA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-29",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-29",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-09",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-29",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-28",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-02",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-07",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-06",
+          "note": "formação | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-29",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-14",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-26",
+          "note": "aso apto para altura, eletricidade e espaço confinado | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2026-01-29",
+          "note": "(1) FORA DO PERIODO DE VIGENCIA (VALIDADE 1 ANO). (2) O TREINAMENTO NAO CONTÉM A CARGA HORÁRIA EXIGIDA DE FORMAÇÃO DE 6 HORAS. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "REJECTED",
+          "expiresOn": "2026-03-25",
+          "note": "A(S) VACINA(S) tríplice viral NÃO CONTEM O VISTO DE QUEM REALIZOU A VACINA. NESSE CASO, ANEXAR A CARTEIRA DE VACINAÇÃO DIGITAL. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    },
+    {
+      "name": "WANDERSON AVELINO DE SOUZA",
+      "role": "Técnico de Campo",
+      "client": "INVENERGY",
+      "contract": "ARTH WIND SERVICES",
+      "documents": [
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-06",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-07",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-21",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-21",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-11-23",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-06",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-07",
+          "note": "formação + reciclagem | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-01",
+          "note": "FORMAÇÃO + RECICLAGEM | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-06",
+          "note": "FORMAÇÃO + RECICLAGEM | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-07",
+          "note": "FORMAÇÃO + RECICLAGEM | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 01",
+          "status": "APPROVED",
+          "expiresOn": "2028-11-23",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-22",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-08",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-24",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-26",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-28",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-24",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-12",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-24",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-16",
+          "note": "FORMAÇÃO | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-04",
+          "note": "FORMAÇÃO | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-24",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-01",
+          "note": "Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-21",
+          "note": "ASO APTO PARA ALTURA, ESPAÇO CONFINADO E ELETRICIDADE | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-15",
+          "note": "DE ACORDO COM GUIA DE INTEGRAÇÃO, A FICHA DEVE CONTER ASSINATURA DO COLABORADOR PARA CADA ITEM RECEBIDO. SE O CAMPO NÃO CONSTAR NO DOCUMENTO, A EMPRESA DEVE INCLUIR. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-01",
+          "note": "(1)PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. (2)CERTIFICADO NÃO CONSTA NA ORDEM DE SERVIÇO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "REJECTED",
+          "expiresOn": "2028-07-07",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-CF",
+          "status": "REJECTED",
+          "expiresOn": "2028-07-07",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "GWO-PS",
+          "status": "REJECTED",
+          "expiresOn": "2028-07-07",
+          "note": "PARA APROVAÇÃO DO CERTIFICADO DE RECICLAGEM O CADASTRO DO COLABORADOR DEVE APRESENTAR O CERTIFICADO DE FORMAÇÃO APROVADO NO CADASTRO. POR GENTILEZA, ANEXAR NOVAMENTE O CERTIFICADO JUNTO AO CERTIFICADO DE FORMAÇÃO. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "REJECTED",
+          "expiresOn": "2026-11-15",
+          "note": "O DOCUMENTO DEVE APRESENTAR ASSINATURA/VISTO DO COLABORADOR PARA CADA EQUIPAMENTO ENTREGUE. | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-CF",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "GWO-PS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        }
+      ]
+    }
+  ]
+}
