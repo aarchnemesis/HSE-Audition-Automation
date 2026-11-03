@@ -788,7 +788,7 @@
           "cpfl-sym-supply.techsocial.com.br"
         ],
         "category": "DOCUMENTS",
-        "automation": "NOT_AUTOMATED",
+        "automation": "AUTOMATED",
         "clients": [
           "CPFL"
         ],
@@ -797,6 +797,10 @@
       "accessRows": 2,
       "accessPending": 0,
       "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-11-03T12:37:42.591Z",
+        "workers": 8
+      },
       "clients": [
         {
           "client": "CPFL",
