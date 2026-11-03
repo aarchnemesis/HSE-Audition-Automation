@@ -21,6 +21,7 @@
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
     "portal-report": "tsx src/cli/runPortalPendencyReport.ts",
+    "mcp:portais": "tsx src/cli/runPortalMcpServer.ts",
     "portal-coverage": "tsx src/cli/runPortalCoverage.ts",
     "portal-login": "tsx src/cli/runPortalLogin.ts",
     "portal-sessions": "tsx src/cli/runPortalSessions.ts",
@@ -48,10 +49,12 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "date-fns": "^3.6.0",
     "dotenv": "^17.4.2",
     "exceljs": "^4.4.0",
     "googleapis": "^176.0.0",
+    "mongodb": "^7.8.0",
     "nodemailer": "^6.10.1",
     "pdf-lib": "^1.17.1",
     "pdf-parse": "^1.1.4",
