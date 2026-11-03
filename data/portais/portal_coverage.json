@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-10-30",
+  "refDate": "2026-11-03",
   "portals": [
     {
       "portal": {
@@ -28,8 +28,7 @@
           "client": "SGRE",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-15",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -61,8 +60,7 @@
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
           "projectsInWindow": 2,
-          "lastStart": "2026-10-27",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -101,8 +99,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         }
       ],
       "activity": "IN_FIELD"
@@ -186,7 +184,8 @@
           "client": "ENERGIMP",
           "activity": "IN_FIELD",
           "projectsInWindow": 3,
-          "nextStart": "2026-11-03"
+          "nextStart": "2026-11-09",
+          "lastStart": "2026-11-03"
         },
         {
           "client": "IBITU",
@@ -198,8 +197,8 @@
           "client": "NAWP CHILE",
           "activity": "IN_FIELD",
           "projectsInWindow": 4,
-          "lastStart": "2026-10-12",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-15"
         },
         {
           "client": "REPSOL CHILE",
@@ -366,8 +365,7 @@
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
           "projectsInWindow": 2,
-          "lastStart": "2026-10-27",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -483,8 +481,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         },
         {
           "client": "PONTAL",
@@ -531,8 +529,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         }
       ],
       "activity": "IN_FIELD"
@@ -560,8 +558,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         }
       ],
       "activity": "IN_FIELD"
@@ -621,8 +619,7 @@
           "client": "INVENERGY",
           "activity": "IN_FIELD",
           "projectsInWindow": 3,
-          "nextStart": "2026-11-03",
-          "lastStart": "2026-10-19"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -735,7 +732,7 @@
           "CASA DOS VENTOS"
         ]
       },
-      "accessRows": 3,
+      "accessRows": 4,
       "accessPending": 0,
       "missingCredentials": 0,
       "clients": [
@@ -1353,8 +1350,7 @@
           "client": "SGRE",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-15",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
@@ -1382,8 +1378,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         }
       ],
       "activity": "IN_FIELD"
@@ -1412,8 +1408,8 @@
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-05",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03",
+          "nextStart": "2026-11-12"
         }
       ],
       "activity": "IN_FIELD"
@@ -1496,8 +1492,7 @@
           "client": "SGRE",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-10-15",
-          "nextStart": "2026-11-03"
+          "lastStart": "2026-11-03"
         }
       ],
       "activity": "IN_FIELD"
