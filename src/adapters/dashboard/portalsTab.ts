@@ -164,6 +164,37 @@ const PORTALS_TAB_SCRIPT = String.raw`
       var p = String(iso).slice(0, 10).split('-');
       return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : String(iso);
     }
+    function ptDateTime(iso) {
+      if (!iso) return '';
+      try {
+        var dt = new Date(iso);
+        if (isNaN(dt.getTime())) return ptDay(iso);
+        var day = String(dt.getDate()).padStart(2, '0');
+        var mo = String(dt.getMonth() + 1).padStart(2, '0');
+        var yr = dt.getFullYear();
+        var hr = String(dt.getHours()).padStart(2, '0');
+        var min = String(dt.getMinutes()).padStart(2, '0');
+        return day + '/' + mo + '/' + yr + ' às ' + hr + ':' + min;
+      } catch (e) {
+        return ptDay(iso);
+      }
+    }
+    function ptRelativeAge(iso) {
+      if (!iso) return '';
+      try {
+        var dt = new Date(iso);
+        var diffMs = Date.now() - dt.getTime();
+        if (diffMs < 0) return 'agora';
+        var min = Math.floor(diffMs / 60000);
+        if (min < 60) return min <= 1 ? 'há 1 min' : 'há ' + min + ' min';
+        var hr = Math.floor(min / 60);
+        if (hr < 24) return hr === 1 ? 'há 1 hora' : 'há ' + hr + ' horas';
+        var d = Math.floor(hr / 24);
+        return d === 1 ? 'há 1 dia' : 'há ' + d + ' dias';
+      } catch (e) {
+        return '';
+      }
+    }
     function ptStart(p) {
       if (p.daysToStart == null) return p.startDate ? 'início ' + ptDay(p.startDate) : 'sem data de início';
       if (p.daysToStart === 0) return 'inicia hoje';
@@ -292,7 +323,7 @@ const PORTALS_TAB_SCRIPT = String.raw`
       document.getElementById('ptPlatforms').innerHTML = d.platforms.map(function (p) {
         var st = p.status === 'ONLINE' ? ['LEITURA ATUAL', 'ok'] : ['DESATUALIZADA', 'warn'];
         return '<div class="pt-plat"><div class="pt-plat-name"><span>' + ptEsc(p.name) + '</span>' + ptBadge(st) + '</div>' +
-          '<div class="pt-plat-meta">' + ptEsc(PT_AUTOMATION[p.automation] || p.automation) + ' · lida em ' + ptDay(p.capturedAt) + ' (há ' + p.ageDays + ' d)</div>' +
+          '<div class="pt-plat-meta">' + ptEsc(PT_AUTOMATION[p.automation] || p.automation) + ' · extração em <strong>' + ptDateTime(p.capturedAt) + '</strong> (' + ptRelativeAge(p.capturedAt) + ')</div>' +
           '<div class="pt-plat-meta">' + p.collaboratorsCount + ' colaboradores · ' + p.cleared + ' liberados · ' + p.waiting + ' em análise · ' + p.blocked + ' bloqueados</div></div>';
       }).join('') || '<div class="pt-empty">Nenhuma plataforma lida.</div>';
     }
