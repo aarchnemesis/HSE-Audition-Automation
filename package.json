@@ -16,7 +16,6 @@
     "auth:drive": "tsx src/cli/runGoogleDriveAuth.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
     "drive-reconcile": "tsx src/cli/runDriveSourceReconcile.ts",
-
     "ocr:deep": "tsx src/cli/runDeepOcr.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
@@ -46,7 +45,9 @@
     "format": "biome format --write .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "portal:analyze-rejections": "tsx src/cli/runAnalyzeRejections.ts",
+    "portal:telegram-digest": "tsx src/cli/runPortalDailyDigestTelegram.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
