@@ -172,10 +172,17 @@ function runPortalReport(): void {
 }
 
 function runSyncWoBase(): void {
-  runCommand(
-    'npx tsx src/cli/syncSmartsheetToGoogleBase.ts --apply',
-    'Sincronizacao de WOs do Smartsheet para a aba BASE do Google Drive'
-  )
+  try {
+    runCommand(
+      'npx tsx src/cli/syncSmartsheetToGoogleBase.ts --apply',
+      'Sincronizacao de WOs do Smartsheet para a aba BASE do Google Drive'
+    )
+  } catch (err) {
+    console.warn(
+      '[AgentRunner] Aviso: falha ao sincronizar WOs com a aba BASE do Google Drive (escopo OAuth somente leitura). Prosseguindo com a geracao do dashboard.',
+      err
+    )
+  }
 }
 
 async function main() {
