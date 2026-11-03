@@ -2,6 +2,7 @@ import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
 import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
+import { loadPortalsDashboardData } from '../adapters/dashboard/PortalsDashboardLoader.js'
 import { DummyEmailService } from '../adapters/email/DummyEmailService.js'
 import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
 import { buildAgentBriefing } from '../domain/services/AgentBriefingBuilder.js'
@@ -107,6 +108,7 @@ async function main() {
     complianceHistory: loadComplianceHistory(
       path.join(process.cwd(), 'data', 'compliance_history.json')
     ),
+    portals: await loadPortalsDashboardData(syncResult.records),
   })
   fs.writeFileSync(dashboardPath, dashboardHtml)
   fs.writeFileSync(publicDashboardPath, dashboardHtml)

@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import { buildDashboardHtml } from '../adapters/dashboard/DashboardHtmlGenerator.js'
+import { loadPortalsDashboardData } from '../adapters/dashboard/PortalsDashboardLoader.js'
 import { loadComplianceHistory } from '../domain/services/ComplianceHistory.js'
 import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 
@@ -22,6 +23,7 @@ async function main() {
     complianceHistory: loadComplianceHistory(
       path.join(process.cwd(), 'data', 'compliance_history.json')
     ),
+    portals: await loadPortalsDashboardData(snapshot.records),
   })
 
   const publicDir = path.join(process.cwd(), 'public')

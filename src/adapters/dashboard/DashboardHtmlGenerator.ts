@@ -2,6 +2,13 @@ import { StorzRequest } from '../../domain/models/StorzRequest.js'
 import { ComplianceSnapshot } from '../../domain/services/ComplianceHistory.js'
 import { DriveRpoComparisonItem } from '../../domain/services/DriveRpoAuditor.js'
 import { HSEDatabaseRecord } from '../../domain/services/HSEDatabaseRepository.js'
+import { PortalsDashboardData } from '../../domain/services/PortalsDashboardData.js'
+import {
+  PORTALS_TAB_CSS,
+  PORTALS_TAB_HTML,
+  PORTALS_TAB_PILL,
+  buildPortalsTabScript,
+} from './portalsTab.js'
 
 export interface SourceHealthInfo {
   status: 'ONLINE' | 'CACHE' | 'WARNING' | 'OFFLINE'
@@ -21,6 +28,7 @@ export interface DashboardExtraData {
   storzHistory?: StorzRequest[]
   sourceHealth?: DashboardSourceHealth
   complianceHistory?: ComplianceSnapshot[]
+  portals?: PortalsDashboardData
 }
 
 export function buildDashboardHtml(
@@ -2555,7 +2563,7 @@ export function buildDashboardHtml(
       }
       .topbar .filter-group {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         width: 100%;
         height: auto;
         gap: 0;
@@ -2567,7 +2575,7 @@ export function buildDashboardHtml(
         min-height: 58px;
         margin: 0;
         padding: 6px 2px !important;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 1.15;
         text-align: center;
         white-space: normal;
@@ -2961,6 +2969,7 @@ export function buildDashboardHtml(
         break-inside: avoid !important;
       }
     }
+    ${PORTALS_TAB_CSS}
   </style>
 </head>
 <body>
@@ -2980,6 +2989,7 @@ export function buildDashboardHtml(
           <span class="pill-opt" onclick="switchNav('table')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Pendências</span>
           <span class="pill-opt" onclick="switchNav('rpo')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Auditoria RPO <span class="storz-badge-pill" id="rpoBadgeTab" style="background:#DC2626;display:none;">0</span></span>
           <span class="pill-opt" onclick="switchNav('storz')"><svg class="ico ico-sm ico-inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Storz <span class="storz-badge-pill" id="storzBadgeTab">0</span></span>
+          ${PORTALS_TAB_PILL}
         </div>
       </nav>
       <button class="cmdk-trigger" type="button" onclick="openCmdk()" aria-label="Buscar telas e colaboradores (Ctrl K)">
@@ -3499,6 +3509,8 @@ export function buildDashboardHtml(
           </div>
         </div>
       </div>
+
+      ${PORTALS_TAB_HTML}
 
       <!-- VIEW 4: STORZ -->
       <div id="view-storz" class="tab-view">
@@ -4075,7 +4087,8 @@ export function buildDashboardHtml(
       ['matrix', 'Matriz NRs', 'Qualificações por colaborador'],
       ['table', 'Pendências', 'Tabela analítica por documento'],
       ['rpo', 'Auditoria RPO', 'Divergências entre Drive, Storz e Smartsheet'],
-      ['storz', 'Storz', 'Matrículas e andamento dos cursos']
+      ['storz', 'Storz', 'Matrículas e andamento dos cursos'],
+      ['portais', 'Portais', 'Liberação das equipes nos portais dos clientes']
     ];
     let cmdkIndex = 0;
     let cmdkItems = [];
@@ -4216,7 +4229,7 @@ export function buildDashboardHtml(
       }
       const tag = e.target && e.target.tagName;
       if (open || e.ctrlKey || e.metaKey || e.altKey || tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
-      const idx = '12345'.indexOf(e.key);
+      const idx = '123456'.indexOf(e.key);
       if (idx >= 0 && e.key.length === 1) switchNav(CMDK_VIEWS[idx][0]);
     });
 
@@ -4778,6 +4791,7 @@ export function buildDashboardHtml(
 
     function switchNav(viewKey) {
       currentViewKey = viewKey;
+      if (viewKey !== 'portais') portaisCloseDrawer();
       document.body.dataset.view = viewKey;
       document.querySelectorAll('.topbar .pill-opt').forEach(p => {
         p.classList.remove('active');
@@ -4785,7 +4799,7 @@ export function buildDashboardHtml(
       });
       document.querySelectorAll('.tab-view').forEach(v => v.classList.remove('active'));
 
-      const views = ['cockpit', 'matrix', 'table', 'rpo', 'storz'];
+      const views = ['cockpit', 'matrix', 'table', 'rpo', 'storz', 'portais'];
       const idx = views.indexOf(viewKey);
 
       const pills = document.querySelectorAll('.topbar .pill-opt');
@@ -4815,6 +4829,9 @@ export function buildDashboardHtml(
         } else if (viewKey === 'storz') {
           heading.innerText = 'Painel de Gestão e Monitoramento de Treinamentos Storz';
           if (pageSub) pageSub.innerText = 'Acompanhamento de matrículas, cursos em andamento e histórico de capacitações';
+        } else if (viewKey === 'portais') {
+          heading.innerText = 'Portais de Clientes: Liberação das Equipes nos Parques';
+          if (pageSub) pageSub.innerText = 'Situação de cada colaborador nos portais dos clientes, recusas documentais e canais sem leitura automática';
         }
       }
 
@@ -4830,6 +4847,8 @@ export function buildDashboardHtml(
         updateRpoFilterDropdownOptions();
         updateSortHeaderIcons();
         renderRpoTable();
+      } else if (viewKey === 'portais') {
+        portaisRender();
       } else {
         renderAll();
       }
@@ -6632,6 +6651,7 @@ export function buildDashboardHtml(
     updateSortHeaderIcons();
     renderAll();
     switchNav('cockpit');
+${buildPortalsTabScript(extraData.portals)}
   </script>
 </body>
 </html>`
