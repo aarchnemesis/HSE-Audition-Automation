@@ -695,7 +695,7 @@ export class HSEDataPipeline {
           driveSource === 'LIVE'
             ? `Sincronizacao com Google Drive via OAuth (${driveInspectorsRaw.length} pastas de colaboradores lidas)`
             : `Fallback de cache ativado (${driveInspectorsRaw.length} pastas). ${driveErrorMessage ? `Erro na conexao: ${driveErrorMessage}` : ''}`,
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
       smartsheet: {
         status:
@@ -712,7 +712,7 @@ export class HSEDataPipeline {
           rpoSource === 'LIVE'
             ? `Sincronizacao OK com a planilha RPO via Smartsheet API (${activeRpoInspectors.length} ativos)`
             : `Fallback de cache ativado (${activeRpoInspectors.length} ativos). ${rpoErrorMessage ? `Erro na conexao: ${rpoErrorMessage}` : ''}`,
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
       storz: {
         status: storzSource === 'LIVE' ? 'ONLINE' : 'CACHE',
@@ -724,7 +724,7 @@ export class HSEDataPipeline {
           storzSource === 'LIVE'
             ? `Raspagem direta via Storz REST API efetuada com sucesso (${storzRequests.length} matriculas extraidas)`
             : `Fallback seguro ativado do cache local persistente (${storzRequests.length} matriculas)`,
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
     }
 
@@ -856,19 +856,19 @@ export class HSEDataPipeline {
         status: 'ONLINE',
         message: `${effectiveMetadata.driveFoldersCount || 'Snapshot'} pastas no Drive`,
         detail: 'Snapshot persistente carregado da base consolidada',
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
       smartsheet: {
         status: 'ONLINE',
         message: `${effectiveMetadata.rpoActiveCount || 'Snapshot'} pessoas ativas na RPO`,
         detail: 'Snapshot persistente carregado da base consolidada',
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
       storz: {
         status: effectiveMetadata.storzSource === 'LIVE' ? 'ONLINE' : 'CACHE',
         message: `${effectiveMetadata.storzRequestsCount || storzRequests.length} matriculas na Storz`,
         detail: 'Snapshot persistente carregado da base consolidada',
-        lastSync: refDate.toLocaleDateString('pt-BR'),
+        lastSync: refDate.toISOString(),
       },
     }
 
