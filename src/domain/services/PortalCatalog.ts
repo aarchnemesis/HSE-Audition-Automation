@@ -264,7 +264,7 @@ export const PORTALS: PortalInfo[] = [
     'CPFL (TechSocial)',
     'TechSocial',
     ['cpfl-sym-supply.techsocial.com.br'],
-    'NOT_AUTOMATED',
+    'AUTOMATED',
     ['CPFL'],
     { note: 'Documentos trabalhistas' }
   ),
