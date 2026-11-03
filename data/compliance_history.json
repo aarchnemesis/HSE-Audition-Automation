@@ -410,9 +410,41 @@
   {
     "date": "2026-10-30",
     "documents": 1478,
-    "onTime": 1321,
-    "expiringSoon": 63,
-    "expired": 27,
+    "onTime": 1325,
+    "expiringSoon": 62,
+    "expired": 24,
+    "missing": 67
+  },
+  {
+    "date": "2026-10-31",
+    "documents": 1478,
+    "onTime": 1324,
+    "expiringSoon": 61,
+    "expired": 26,
+    "missing": 67
+  },
+  {
+    "date": "2026-11-01",
+    "documents": 1478,
+    "onTime": 1324,
+    "expiringSoon": 61,
+    "expired": 26,
+    "missing": 67
+  },
+  {
+    "date": "2026-11-02",
+    "documents": 1478,
+    "onTime": 1324,
+    "expiringSoon": 61,
+    "expired": 26,
+    "missing": 67
+  },
+  {
+    "date": "2026-11-03",
+    "documents": 1478,
+    "onTime": 1323,
+    "expiringSoon": 62,
+    "expired": 26,
     "missing": 67
   }
 ]
