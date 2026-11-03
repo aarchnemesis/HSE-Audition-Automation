@@ -3988,6 +3988,18 @@ export function buildDashboardHtml(
       return hours < 48 ? Math.round(hours) + ' h' : Math.round(hours / 24) + ' dias';
     }
 
+    function parseSyncDate(val) {
+      if (!val) return null;
+      if (typeof val === 'string' && val.indexOf('/') === 2) {
+        var parts = val.split('/');
+        if (parts.length === 3) {
+          return new Date(parts[2] + '-' + parts[1] + '-' + parts[0]);
+        }
+      }
+      var d = new Date(val);
+      return isNaN(d.getTime()) ? null : d;
+    }
+
     function updateStaleBanner() {
       const banner = document.getElementById('staleBanner');
       if (!banner) return;
@@ -3997,7 +4009,7 @@ export function buildDashboardHtml(
       Object.keys(SOURCE_LABELS).forEach(key => {
         const info = sourceHealth && sourceHealth[key];
         if (!info) return;
-        const synced = info.lastSync ? new Date(info.lastSync) : null;
+        const synced = parseSyncDate(info.lastSync);
         if (synced && !isNaN(synced.getTime())) {
           const hours = (Date.now() - synced.getTime()) / 3600000;
           if (hours > STALE_HOURS) messages.push(SOURCE_LABELS[key] + ': última sincronização há ' + formatAge(hours));
