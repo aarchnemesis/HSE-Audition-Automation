@@ -154,11 +154,17 @@ export class VeridussRestClient {
   }
 
   async fetchCompanies(): Promise<VeridussCompany[]> {
-    const data = await this.getJson<
-      VeridussCompany[] | { data?: VeridussCompany[] }
-    >('/api/me/companies')
-    const list = Array.isArray(data) ? data : (data.data ?? [])
-    return list.filter(c => typeof c.id === 'number')
+    const data = await this.getJson<any>('/api/me/companies')
+    const list: any[] = Array.isArray(data) ? data : (data.data ?? [])
+    const companies: VeridussCompany[] = []
+    for (const item of list) {
+      if (typeof item.id === 'number') {
+        companies.push(item)
+      } else if (item.company && typeof item.company.id === 'number') {
+        companies.push({ id: item.company.id, name: item.company.name })
+      }
+    }
+    return companies
   }
 
   async fetchMemberDocuments(
