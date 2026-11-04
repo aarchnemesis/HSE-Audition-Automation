@@ -139,6 +139,7 @@ export async function scrapeSurisoftCensus(
         waitUntil: 'domcontentloaded',
         timeout: STEP_TIMEOUT,
       })
+      await page.waitForSelector('table tbody tr', { timeout: STEP_TIMEOUT })
       const row = page.locator(`tr:has-text("${client.searchQuery}")`).first()
       if ((await row.count()) === 0) {
         log(`cliente não encontrado: ${client.searchQuery}`)
