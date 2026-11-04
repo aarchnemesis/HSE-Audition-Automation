@@ -167050,5 +167050,125 @@
         "matchedTerm": "ASO"
       }
     ]
+  },
+  {
+    "fileId": "1bR0bNHGO0FGu18926w73HdGoKxdBzF-l",
+    "filename": "15 – NR-12 Segurança em Máquinas – 28.10.2026 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-11-04T09:16:21.665Z",
+    "code": "15",
+    "issueDate": "2026-10-28T03:00:00.000Z",
+    "expirationDate": "2028-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-10-28T03:00:00.000Z",
+        "expirationDate": "2028-10-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "11PsPhmNYyPSpLF8Ae9i8_wpjs__kmSaK",
+    "filename": "27 – NR-07 Primeiros Socorros – 29.10.2026 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-11-04T09:16:17.616Z",
+    "code": "27",
+    "issueDate": "2026-10-29T03:00:00.000Z",
+    "expirationDate": "2028-10-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-10-29T03:00:00.000Z",
+        "expirationDate": "2028-10-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "19Z-PZv_GbZWVeKeqrcVutLiXBX-UCRb4",
+    "filename": "10 – NR-01 Integração – 24.09.2025 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-11-04T09:16:15.807Z",
+    "code": "10",
+    "issueDate": "2025-09-24T03:00:00.000Z",
+    "expirationDate": "2075-09-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/09/2075",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2025-09-24T03:00:00.000Z",
+        "expirationDate": "2075-09-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2075",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1gQZpiooEXEbBSVkqJR6GBviowFNuEcMJ",
+    "filename": "19 – GWO NR-23 Combate a Incêndio – 25.11.2025 - FELIPE ALAN PEGHIN DOS SANTOS.pdf",
+    "v": 2,
+    "cv": 1,
+    "sv": 1,
+    "modifiedTime": "2026-11-04T09:16:13.830Z",
+    "code": "19",
+    "issueDate": "2025-11-25T03:00:00.000Z",
+    "expirationDate": "2027-11-25T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 25/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-23",
+    "extractedClause": "período de 25 de Setembro de 2025 | Atualizado via nome: 25/11/2025",
+    "documents": [
+      {
+        "code": "19",
+        "issueDate": "2025-11-25T03:00:00.000Z",
+        "expirationDate": "2027-11-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-23",
+        "extractedClause": "período de 25 de Setembro de 2025 | Atualizado via nome: 25/11/2025"
+      }
+    ]
   }
 ]

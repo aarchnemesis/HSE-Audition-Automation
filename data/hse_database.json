@@ -24782,12 +24782,13 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2027-09-26T12:00:00.000Z",
+    "expirationDate": "2075-09-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 26/09/2027",
+    "detail": "Válido até 24/09/2075",
+    "evidenceUrl": "https://drive.google.com/file/d/19Z-PZv_GbZWVeKeqrcVutLiXBX-UCRb4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1w1fkbgn-PbC10pOsQllKcGbeHRXeuE_D",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T09:19:30.497Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -24849,16 +24850,16 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2026-09-27T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
+    "expirationDate": "2028-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "572905",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 38 dias (27/09/2026) | SOLICITADO NA STORZ (572905 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
-    "evidenceUrl": "https://drive.google.com/file/d/1_Y8cpbmPlzCFpCAq4q_vuzk8HOyw0ats/view",
+    "detail": "Válido até 28/10/2028 | Reciclagem já solicitada na Storz (572905 - Status: SOLICITADO).",
+    "evidenceUrl": "https://drive.google.com/file/d/1bR0bNHGO0FGu18926w73HdGoKxdBzF-l/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1w1fkbgn-PbC10pOsQllKcGbeHRXeuE_D",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-04T03:02:52.312Z"
+    "lastUpdated": "2026-11-04T09:19:30.497Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -24889,12 +24890,13 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-09-22T12:00:00.000Z",
+    "expirationDate": "2027-11-25T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 22/09/2027",
+    "detail": "Válido até 25/11/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1gQZpiooEXEbBSVkqJR6GBviowFNuEcMJ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1w1fkbgn-PbC10pOsQllKcGbeHRXeuE_D",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T09:19:30.497Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -24905,13 +24907,13 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-19T03:00:00.000Z",
+    "expirationDate": "2028-10-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 19/01/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/15jwyhpShmcFDp2y9CxmqJ36E9ihAa9a7/view",
+    "detail": "Válido até 29/10/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/11PsPhmNYyPSpLF8Ae9i8_wpjs__kmSaK/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1w1fkbgn-PbC10pOsQllKcGbeHRXeuE_D",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T09:19:30.497Z"
   },
   {
     "inspectorId": "rpo_98",
