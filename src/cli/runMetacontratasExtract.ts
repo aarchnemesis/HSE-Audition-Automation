@@ -89,7 +89,7 @@ async function main() {
       console.log('[Metacontratas] Submetendo senha...')
       const passInput = page.locator('input[type="password"]')
       await passInput.fill(cred.password)
-      await page.click('button:has-text("Continuar"), button:has-text("Entrar")')
+      await page.click('button:has-text("Continuar"), button:has-text("Continue"), button:has-text("Entrar"), button[type="submit"]')
 
       console.log('[Metacontratas] Aguardando seleção de plataforma...')
       await page.waitForURL(/seleccion-plataforma|accesos/i, { timeout: 30000 })
