@@ -61,10 +61,38 @@ async function main() {
     )
     return
   }
-  for (const c of censuses)
+  // Trava de Integridade / Circuit Breaker de Freshness:
+  // Se o envio de e-mails estiver ativado (!SKIP_EMAIL), não permitimos dados defasados (> 20 horas ou de dias anteriores).
+  const ALLOW_STALE = process.argv.includes('--allow-stale') || process.env.ALLOW_STALE_PORTAL_CENSUS === 'true'
+  const maxAgeHours = 20
+  const nowMs = Date.now()
+  const staleCensuses: { portalId: string; ageHours: number; capturedAt: string }[] = []
+
+  for (const c of censuses) {
+    const ageHours = (nowMs - new Date(c.capturedAt).getTime()) / (1000 * 60 * 60)
     console.log(
-      `[PortalReport] ${c.portalId}: ${c.workers.length} colaboradores (dados de ${formatDay(c.capturedAt)})`
+      `[PortalReport] ${c.portalId}: ${c.workers.length} colaboradores (dados de ${formatDay(c.capturedAt)}, idade: ${ageHours.toFixed(1)}h)`
     )
+    if (ageHours > maxAgeHours) {
+      staleCensuses.push({ portalId: c.portalId, ageHours, capturedAt: c.capturedAt })
+    }
+  }
+
+  if (!SKIP_EMAIL && !ALLOW_STALE && staleCensuses.length > 0) {
+    const staleList = staleCensuses
+      .map(s => `${s.portalId} (${s.ageHours.toFixed(1)}h atrás, ${formatDay(s.capturedAt)})`)
+      .join(', ')
+    console.error(
+      `\n[PortalReport] 🚨 TRAVA DE INTEGRIDADE ATIVADA: Envio de e-mail CANCELADO!`
+    )
+    console.error(
+      `[PortalReport] Os seguintes portais estão com dados desatualizados (> ${maxAgeHours}h):\n[PortalReport] -> ${staleList}`
+    )
+    console.error(
+      `[PortalReport] Motivo: A política de conformidade não permite o envio de relatórios com censos defasados para a equipe.\n`
+    )
+    process.exit(1)
+  }
 
   const { projects, fromCache } = await loadProjectBriefing()
   console.log(
