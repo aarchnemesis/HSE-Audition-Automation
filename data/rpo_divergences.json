@@ -1136,10 +1136,11 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "trustedSource": "DRIVE",
+    "rpoExpiration": "2028-10-26T12:00:00.000Z",
     "divergent": true,
-    "divergenceKind": "SOMENTE_DRIVE",
-    "detail": "Certificado presente no Drive (13 – NR-10 SEP – SEM_DATA - JOCELEO ABREU VENÂNCIO.pdf), porém sem data identificada e sem registro na RPO.",
-    "recommendedAction": "Conferir data e incluir na RPO",
+    "divergenceKind": "DRIVE_SEM_DATA",
+    "detail": "Certificado presente no Drive (13 – NR-10 SEP – SEM_DATA - JOCELEO ABREU VENÂNCIO.pdf), porém data de validade não identificada no arquivo. RPO registra 26/10/2028.",
+    "recommendedAction": "Conferir data no documento físico anexado",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
   },
   {
@@ -1157,6 +1158,19 @@
   },
   {
     "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "docCode": "18",
+    "docName": "NR-18 Integração EHS",
+    "rpoExpiration": "2028-10-30T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (30/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
+  },
+  {
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "driveExpiration": "2027-10-29T03:00:00.000Z",
@@ -1166,6 +1180,32 @@
     "diffDays": 3,
     "detail": "Drive e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
+  },
+  {
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "rpoExpiration": "2027-10-26T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (26/10/2027), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
+  },
+  {
+    "inspectorName": "JOCELEO ABREU VENÂNCIO",
+    "docCode": "22",
+    "docName": "LOTO - Bloqueio e Etiquetagem",
+    "rpoExpiration": "2028-10-26T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (26/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1En9bZT1xSqcdirL_oQx1e_HM4LMuXJ82"
   },
   {
