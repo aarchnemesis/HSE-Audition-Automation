@@ -195,6 +195,41 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/11/2028"
       },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-11-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2028"
+      },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-11-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2028"
+      },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-11-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2027"
+      },
+      "22": {
+        "code": "22",
+        "name": "LOTO",
+        "expirationDate": "2028-11-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2028"
+      },
+      "28": {
+        "code": "28",
+        "name": "NR 33 SUP",
+        "expirationDate": "2027-11-01T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2027"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
