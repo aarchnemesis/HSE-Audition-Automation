@@ -1,19 +1,19 @@
 {
-  "syncTimestamp": "2026-11-04T17:00:57.213Z",
-  "refDate": "2026-11-04T17:00:40.777Z",
+  "syncTimestamp": "2026-11-04T17:45:50.716Z",
+  "refDate": "2026-11-04T17:45:35.050Z",
   "driveFoldersCount": 110,
   "rpoActiveCount": 144,
   "rpoTotalCount": 375,
   "ehsRosterCount": 93,
   "storzRequestsCount": 538,
   "storzSource": "LIVE",
-  "divergencesCount": 414,
+  "divergencesCount": 424,
   "divergencesByKind": {
     "DATA_DIVERGENTE": 145,
-    "SOMENTE_RPO": 66,
+    "SOMENTE_RPO": 76,
     "SOMENTE_DRIVE": 157,
     "DRIVE_SEM_DATA": 4,
     "RPO_VALIDADO_PENDENTE_BACKUP": 42
   },
-  "complianceTotalRecords": 1525
+  "complianceTotalRecords": 1526
 }

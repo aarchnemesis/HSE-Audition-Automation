@@ -1901,6 +1901,62 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "AF013866BR",
     "certificates": {
+      "10": {
+        "code": "10",
+        "name": "NR 01",
+        "expirationDate": "2028-10-29T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028"
+      },
+      "11": {
+        "code": "11",
+        "name": "NR 06",
+        "expirationDate": "2028-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028"
+      },
+      "12": {
+        "code": "12",
+        "name": "NR 10",
+        "expirationDate": "2028-10-27T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028"
+      },
+      "13": {
+        "code": "13",
+        "name": "NR 10 SEP",
+        "expirationDate": "2028-10-31T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2028"
+      },
+      "15": {
+        "code": "15",
+        "name": "NR 12",
+        "expirationDate": "2028-10-29T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028"
+      },
+      "18": {
+        "code": "18",
+        "name": "NR 18",
+        "expirationDate": "2028-10-31T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2028"
+      },
+      "20": {
+        "code": "20",
+        "name": "NR33 [DATA]",
+        "expirationDate": "2027-10-28T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2027"
+      },
+      "28": {
+        "code": "28",
+        "name": "NR 33 SUP",
+        "expirationDate": "2027-10-31T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
@@ -5540,6 +5596,13 @@
         "expirationDate": "2028-10-26T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/10/2028"
+      },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-11-04T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028"
       },
       "15": {
         "code": "15",
@@ -9369,6 +9432,13 @@
         "expirationDate": "2028-10-31T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/10/2028"
+      },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-11-04T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028"
       },
       "15": {
         "code": "15",
