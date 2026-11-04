@@ -2092,9 +2092,9 @@ export function buildDashboardHtml(
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 28px;
+        gap: 16px;
         height: 52px;
-        padding: 0 24px;
+        padding: 0 16px;
         background: #FFFFFF;
         border-bottom: 1px solid var(--card-border);
         flex-shrink: 0;
@@ -2102,16 +2102,17 @@ export function buildDashboardHtml(
       }
       .topbar-brand { display: flex; align-items: center; flex-shrink: 0; }
       .brand-logo-img { height: 22px; width: auto; object-fit: contain; }
-      .topbar-filters { align-self: stretch; flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+      .topbar-filters { align-self: stretch; flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
       .topbar-filters::-webkit-scrollbar { display: none; }
-      .topbar .filter-group { align-self: stretch; height: 100%; gap: 6px; }
+      .topbar .filter-group { align-self: stretch; height: 100%; gap: 4px; display: inline-flex; align-items: center; padding-right: 12px; }
       .topbar .pill-opt {
         height: 100%;
         display: inline-flex;
         align-items: center;
-        padding: 0 2px !important;
-        margin-right: 14px;
+        padding: 0 4px !important;
+        margin-right: 8px;
         border-bottom-width: 3px !important;
+        flex-shrink: 0;
       }
       .topbar .freshness-bar {
         padding: 0;
@@ -2126,8 +2127,13 @@ export function buildDashboardHtml(
     @media screen and (max-width: 1560px) {
       .topbar .source-pill.ok .source-status { display: none; }
     }
+    @media screen and (max-width: 1280px) {
+      .cmdk-trigger .kbd { display: none; }
+    }
     @media screen and (max-width: 1100px) {
       .topbar .source-name { display: none; }
+      .cmdk-trigger-label { display: none; }
+      .cmdk-trigger { padding: 0 8px; }
     }
 
     /* 4. COMMAND PALETTE */
