@@ -1,6 +1,6 @@
 {
   "portalId": "surisoft",
-  "capturedAt": "2026-11-03T11:45:53.498Z",
+  "capturedAt": "2026-11-04T12:10:37.201Z",
   "workers": [
     {
       "name": "JUAN ILGNER MARINHO LIMA",
@@ -10,7 +10,7 @@
       "documents": [
         {
           "title": "ASO",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-26",
           "required": true
         },
@@ -23,18 +23,6 @@
         {
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2026-12-13",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2026-12-15",
           "required": true
         },
         {
@@ -62,7 +50,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -73,27 +61,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-12-03",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2027-12-04",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "MISSING",
-          "expiresOn": "2027-12-03",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -162,7 +132,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-12-01",
           "required": true
@@ -174,9 +144,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "MISSING",
+          "expiresOn": "2027-12-03",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-03",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-13",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-15",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "MISSING",
+          "expiresOn": "2027-12-04",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -236,18 +236,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-28",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-02-04",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-01-02",
@@ -255,7 +243,7 @@
         },
         {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-20",
           "required": true
         },
@@ -272,7 +260,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -283,27 +271,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-21",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-24",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2028-09-15",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -372,7 +342,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-01-21",
           "required": true
@@ -384,9 +354,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-15",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-28",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-24",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -443,18 +443,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-25",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-08",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2028-03-31",
@@ -473,7 +461,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -484,27 +472,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-02-05",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-02-03",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-06-18",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -573,7 +543,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-02-03",
           "required": true
@@ -585,9 +555,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-18",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-25",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-08",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -638,27 +638,14 @@
         },
         {
           "title": "Capacitação Direção Defensiva",
-          "status": "REJECTED",
-          "expiresOn": "2026-10-25",
-          "note": "Não consta identificação e assinatura do responsável técnico do treinamento.",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-22",
           "required": true
         },
         {
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "APPROVED",
           "expiresOn": "2027-01-31",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-02",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-07-30",
           "required": true
         },
         {
@@ -686,7 +673,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -697,27 +684,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-17",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-16",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2028-08-22",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -786,7 +755,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-09-18",
           "required": true
@@ -798,9 +767,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-22",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-17",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-02",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-30",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-16",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -860,17 +859,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-04-21",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "expiresOn": "2027-04-16",
@@ -896,7 +884,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -907,27 +895,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-24",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-12",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "MISSING",
-          "expiresOn": "2027-04-09",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -990,7 +960,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-04-22",
           "required": true
@@ -1002,9 +972,38 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "MISSING",
+          "expiresOn": "2027-04-09",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-24",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-21",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-12",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -1064,18 +1063,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-11",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-07-06",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-09-24",
@@ -1100,7 +1087,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -1111,27 +1098,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2028-07-08",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-07-06",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2026-12-10",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -1200,7 +1169,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2028-07-06",
           "required": true
@@ -1212,9 +1181,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-10",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-08",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-11",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-06",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-06",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -1270,12 +1269,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "EXPIRING",
-          "expiresOn": "2026-11-04",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-02-03",
@@ -1294,7 +1287,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -1305,27 +1298,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-21",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-02-05",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-22",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -1388,9 +1363,33 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-04",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -1435,7 +1434,7 @@
       "documents": [
         {
           "title": "ASO",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-10-28",
           "required": true
         },
@@ -1449,18 +1448,6 @@
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "MISSING",
           "expiresOn": "2028-03-31",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "1999-01-01",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "1999-01-01",
           "required": true
         },
         {
@@ -1488,7 +1475,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -1499,27 +1486,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-12",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2027-11-11",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "1999-01-01",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -1588,7 +1557,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-11-10",
           "required": true
@@ -1600,9 +1569,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "1999-01-01",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-12",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "1999-01-01",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "1999-01-01",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "MISSING",
+          "expiresOn": "2027-11-11",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -1664,18 +1663,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "EXPIRING",
-          "expiresOn": "2026-11-23",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-01",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-08-22",
@@ -1694,7 +1681,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -1705,27 +1692,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-19",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-18",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-26",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -1794,7 +1763,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-11-16",
           "required": true
@@ -1806,9 +1775,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-26",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-19",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-23",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-18",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -1869,18 +1868,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2026-12-14",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2026-12-29",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-12-25",
@@ -1893,7 +1880,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -1904,27 +1891,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-07-24",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-12-30",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-12-18",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -1987,7 +1956,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-07-23",
           "required": true
@@ -1999,9 +1968,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-18",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-24",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-14",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-29",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-30",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -2059,16 +2058,6 @@
           "required": true
         },
         {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "required": true
@@ -2089,7 +2078,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -2099,24 +2088,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "MISSING",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -2174,7 +2148,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "MISSING",
           "required": true
         },
@@ -2184,9 +2158,34 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "MISSING",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -2251,7 +2250,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -2262,21 +2261,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-23",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "EXPIRING",
-          "expiresOn": "2026-11-01",
-          "required": true
         },
         {
           "title": "Carta de Anuência NR-10",
@@ -2327,9 +2314,21 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-01",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-23",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -2397,7 +2396,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -2408,21 +2407,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2028-01-28",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2028-01-30",
-          "required": true
         },
         {
           "title": "Carta de Anuência NR-10",
@@ -2473,9 +2460,21 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-30",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-28",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -2519,8 +2518,9 @@
       "documents": [
         {
           "title": "ASO",
-          "status": "EXPIRING",
+          "status": "REJECTED",
           "expiresOn": "2026-11-04",
+          "note": "Riscos ocupacionais não identificados no PCMSO apresentado (baixa demanda de trabalho (subcarga) e excesso de demandas (sobrecarga).",
           "required": true
         },
         {
@@ -2533,18 +2533,6 @@
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "APPROVED",
           "expiresOn": "2027-01-31",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Supervisor (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-07",
-          "required": true
-        },
-        {
-          "title": "Capacitação Espaço Confinado - Vigia e Trabalhador (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-09",
           "required": true
         },
         {
@@ -2572,7 +2560,7 @@
           "required": true
         },
         {
-          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist) - (Poderá ser aceita a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Operador de Equipamentos elevadores. (Hailo/Artama/Avanti/ Climb Assist)",
           "status": "MISSING",
           "required": false
         },
@@ -2583,27 +2571,9 @@
           "required": true
         },
         {
-          "title": "Capacitação Proteção e Combate a Incêndio (Treinamento NR-23) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-12",
-          "required": true
-        },
-        {
-          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga (Poderá ser aceito a Declaração de Não Aplicabilidade)",
+          "title": "Capacitação Supervisor de Rigging e/ou Supervisor de Amarração de Carga",
           "status": "MISSING",
           "required": false
-        },
-        {
-          "title": "Capacitação Trabalho em Altura (Treinamento NR-35) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-13",
-          "required": true
-        },
-        {
-          "title": "Capacitação Uso Adequado, Guarda e Conservação de EPIs (Treinamento NR-06) - (Em caso de reciclagem apresentar Admissional + Periódico).",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-23",
-          "required": true
         },
         {
           "title": "Carta de Anuência - Trabalhador, Vigia e Supervisor NR-33",
@@ -2672,7 +2642,7 @@
           "required": true
         },
         {
-          "title": "GWO/BST - Basic Safety Trainig (Primeiros Socorros, Combate à Incêndio, Trabalho em Altura e Manuseio Manual de Cargas)",
+          "title": "GWO/BST - Basic Safety Trainig (Módulo Completo)",
           "status": "APPROVED",
           "expiresOn": "2027-11-10",
           "required": true
@@ -2684,9 +2654,39 @@
           "required": true
         },
         {
-          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde. (Condutores de ambulância, Auxuliares de Enfermagem, Téc. Enfermagem e Enfermeiras).",
+          "title": "MAESTRO - Protocolo de Gerenciamento para Prestador de Serviço de Saúde",
           "status": "MISSING",
           "required": false
+        },
+        {
+          "title": "NR 06 - Capacitação Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-12",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Supervisor",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-07",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Capacitação Espaço Confinado - Vigia e Trabalhador",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-09",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Capacitação Trabalho em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-13",
+          "required": true
         },
         {
           "title": "Ordem de Serviço",
@@ -3171,7 +3171,7 @@
         },
         {
           "title": "Capacitação NR-06 (Uso, guarda e conservação de EPIs)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-04",
           "required": true
         },
@@ -3262,7 +3262,7 @@
         },
         {
           "title": "Capacitação NR-06 (Uso, guarda e conservação de EPIs)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-15",
           "required": true
         },
@@ -3505,7 +3505,7 @@
         },
         {
           "title": "Treinamento Admissional (Integração da Contratada)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-07",
           "required": true
         }
@@ -3716,7 +3716,7 @@
         },
         {
           "title": "Registro de Conselho de Classe",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-05",
           "required": true
         },
@@ -3746,7 +3746,7 @@
         },
         {
           "title": "Capacitação em Primeiros Socorros",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-10-28",
           "required": false
         },
@@ -3768,7 +3768,7 @@
         },
         {
           "title": "Carta de Anuência NR-10 (Risco Elétrico)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
@@ -3779,7 +3779,7 @@
         },
         {
           "title": "Certificado de Formação Profissional",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-17",
           "required": true
         },
@@ -3803,13 +3803,13 @@
         },
         {
           "title": "Curso NR-10 (favor atender primeiro ao item Carta de Anuência Nr-10)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
         {
           "title": "Curso NR-10 SEP",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-10-31",
           "required": false
         },
@@ -3837,19 +3837,19 @@
         },
         {
           "title": "Ficha de Registro ou Contrato de Prestação de Serviço (Favor atender primeiro o item CTPS)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-01",
           "required": true
         },
         {
           "title": "GWO - Global Wind Organisation",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-08",
           "required": false
         },
         {
           "title": "Instrução Formal sobre Riscos Elétricos",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": true
         },
@@ -4167,7 +4167,7 @@
       "documents": [
         {
           "title": "ASO válido (Favor atender primeiro o item CTPS)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-21",
           "required": true
         },
@@ -4540,7 +4540,7 @@
       "documents": [
         {
           "title": "ASO válido (Favor atender primeiro o item CTPS)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-26",
           "required": true
         },
@@ -4696,7 +4696,7 @@
         },
         {
           "title": "Capacitação em Combate a Incêndio",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": false
         },
@@ -5227,7 +5227,7 @@
         },
         {
           "title": "Capacitação NR-35 (Trabalho em Altura) - Favor atender primeiro o item Carta de Anuência NR-35",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-04",
           "required": false
         },
@@ -5525,7 +5525,7 @@
         },
         {
           "title": "Curso de Direção Defensiva",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-17",
           "required": false
         },
@@ -5821,7 +5821,7 @@
         },
         {
           "title": "Curso NR-33 Supervisor de Entrada",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-02",
           "required": false
         },
@@ -5887,43 +5887,43 @@
         },
         {
           "title": "Capacitação em Combate a Incêndio",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
         {
           "title": "Capacitação em Primeiros Socorros",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
         {
           "title": "Capacitação NR-06 (Uso, guarda e conservação de EPIs)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-19",
           "required": true
         },
         {
           "title": "Capacitação NR-35 (Trabalho em Altura) - Favor atender primeiro o item Carta de Anuência NR-35",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
         {
           "title": "Capacitação para Resgate NR-35 (Trabalho em Altura)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-12",
           "required": false
         },
         {
           "title": "Carta de Anuência NR-10 (Risco Elétrico)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-26",
           "required": false
         },
         {
           "title": "Carta de Anuência NR-35 (Trabalho em Altura)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-26",
           "required": false
         },
@@ -5953,13 +5953,13 @@
         },
         {
           "title": "Curso NR-10 (favor atender primeiro ao item Carta de Anuência Nr-10)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-10",
           "required": false
         },
         {
           "title": "Curso NR-10 SEP",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-14",
           "required": false
         },
@@ -5994,13 +5994,13 @@
         },
         {
           "title": "GWO - Global Wind Organisation",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-04",
           "required": false
         },
         {
           "title": "Instrução Formal sobre Riscos Elétricos",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-10",
           "required": true
         },
@@ -6017,7 +6017,7 @@
         },
         {
           "title": "Treinamento Admissional (Integração da Contratada)",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-21",
           "required": false
         }
