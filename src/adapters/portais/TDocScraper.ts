@@ -178,12 +178,7 @@ export async function scrapeTdocCensus(
     } catch (err) {
       log(`tarefa ${task.index} falhou: ${(err as Error).message}`)
     }
-    await page
-      .goto(sel.tasksBackUrl, {
-        waitUntil: 'networkidle',
-        timeout: STEP_TIMEOUT,
-      })
-      .catch(() => {})
+    await ensureTaskList(page, sel).catch(() => {})
   }
 
   return {
