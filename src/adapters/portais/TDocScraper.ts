@@ -60,19 +60,20 @@ const STEP_TIMEOUT = 30000
  * still absent.
  */
 async function ensureTaskList(page: Page, sel: TDocSelectors): Promise<void> {
-  await page.goto(sel.tasksBackUrl, {
-    waitUntil: 'networkidle',
-    timeout: STEP_TIMEOUT,
-  })
-  if ((await page.locator(sel.tasksTableRows).count()) > 0) return
   await page.goto(sel.tasksUrl, {
     waitUntil: 'networkidle',
     timeout: STEP_TIMEOUT,
-  })
+  }).catch(() => {})
   const icon = page.locator(sel.selectCompanyIcon).first()
   if (await icon.isVisible().catch(() => false)) {
-    await icon.click({ timeout: STEP_TIMEOUT })
+    await icon.click({ timeout: STEP_TIMEOUT }).catch(() => {})
     await page.waitForTimeout(2500)
+  }
+  if ((await page.locator(sel.tasksTableRows).count()) === 0) {
+    await page.goto(sel.tasksBackUrl, {
+      waitUntil: 'networkidle',
+      timeout: STEP_TIMEOUT,
+    }).catch(() => {})
   }
 }
 
