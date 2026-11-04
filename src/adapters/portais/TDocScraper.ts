@@ -151,12 +151,17 @@ export async function scrapeTdocCensus(
 
       for (const { worker, idx } of workerRows) {
         try {
-          // Same pattern for a worker: double-click the row to open their document list.
-          await page
-            .locator(sel.workersTableRows)
-            .nth(idx)
-            .dblclick({ timeout: STEP_TIMEOUT })
-          await page.waitForTimeout(2000)
+          // Click the worker's action view link or double-click the row
+          const workerLink = page.locator(`${sel.workersTableRows}:nth-child(${idx + 1}) a`).first()
+          if (await workerLink.isVisible().catch(() => false)) {
+            await workerLink.click({ timeout: STEP_TIMEOUT })
+          } else {
+            await page
+              .locator(sel.workersTableRows)
+              .nth(idx)
+              .dblclick({ timeout: STEP_TIMEOUT })
+          }
+          await page.waitForTimeout(2500)
           const docs = (await readRows(page, sel.docsTableRows))
             .map(docFromCells)
             .filter((d): d is NonNullable<typeof d> => d !== null)
