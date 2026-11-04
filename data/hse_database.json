@@ -4611,11 +4611,12 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-30T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 30/10/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T18:45:42.040Z"
   },
   {
     "inspectorId": "rpo_25",

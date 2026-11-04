@@ -1508,6 +1508,19 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz"
   },
   {
+    "inspectorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
+    "docCode": "22",
+    "docName": "LOTO - Bloqueio e Etiquetagem",
+    "rpoExpiration": "2028-10-30T12:00:00.000Z",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_RPO",
+    "direction": "RPO_NEWER",
+    "isRpoValidated": false,
+    "detail": "Registro presente na planilha RPO (30/10/2028), mas nenhum certificado no Drive nem curso concluído na Storz encontrado.",
+    "recommendedAction": "Checar documento físico e fazer upload do backup no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1Bifi0X_C4N2f9MuOFTy7gWboXLGh7mXz"
+  },
+  {
     "inspectorName": "WERMESON DE OLIVEIRA FRANCO",
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
