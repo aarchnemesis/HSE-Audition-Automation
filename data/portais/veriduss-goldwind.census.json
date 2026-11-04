@@ -1,11 +1,10 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-03T11:45:53.498Z",
+  "capturedAt": "2026-11-04T15:23:11.103Z",
   "workers": [
     {
       "name": "DANIEL FERNANDES PACHECO",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "CADASTRO DE PESSOA FÍSICA - CPF",
@@ -31,7 +30,7 @@
         },
         {
           "title": "TREINAMENTO DE PROTEÇÃO E COMBATE A INCÊNDIO - NR-23",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
@@ -50,15 +49,14 @@
           "title": "TREINAMENTO BÁSICO DE SEGURANÇA DO TRABALHO - INTEGRAÇÃO",
           "status": "REJECTED",
           "expiresOn": "2026-07-09",
-          "note": "Documento migrado de sistema anterior e importado como aprovado.",
+          "note": "Documento expirou automaticamente (expiresAt < agora). Envie um novo documento vigente.",
           "required": true
         }
       ]
     },
     {
       "name": "ALLAN THIAGO RAMOS VEIGA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
@@ -134,7 +132,7 @@
         },
         {
           "title": "FICHA DE EPI",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-19",
           "required": true
         },
@@ -205,7 +203,7 @@
         },
         {
           "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2027-04-28",
           "required": true
         }
@@ -213,8 +211,7 @@
     },
     {
       "name": "FERNANDO TEODORO DE MORAIS NETO",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 BÁSICO",
@@ -232,12 +229,6 @@
           "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
           "status": "APPROVED",
           "expiresOn": "2027-01-24",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
-          "status": "APPROVED",
-          "expiresOn": "2027-03-14",
           "required": true
         },
         {
@@ -364,13 +355,18 @@
           "status": "APPROVED",
           "expiresOn": "2027-10-21",
           "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-13",
+          "required": true
         }
       ]
     },
     {
       "name": "FRANCISCO GEORGE MARTINS SILVA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 SEP",
@@ -475,13 +471,6 @@
           "required": true
         },
         {
-          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
-          "status": "REJECTED",
-          "expiresOn": "2028-02-05",
-          "note": "Assinaturas da p.02 se encontram sobreposta, gentileza verificar.",
-          "required": true
-        },
-        {
           "title": "FICHA DE REGISTRO",
           "status": "APPROVED",
           "expiresOn": "2029-03-11",
@@ -521,13 +510,18 @@
           "title": "ORDEM DE SERVIÇO DE SEGURANÇA - OSS",
           "status": "APPROVED",
           "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-05",
+          "required": true
         }
       ]
     },
     {
       "name": "ITALO DE ABREU DUARTE",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "TREINAMENTO DE DIREÇÃO DEFENSIVA",
@@ -537,7 +531,7 @@
         },
         {
           "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 SEP",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-22",
           "required": true
         },
@@ -696,8 +690,7 @@
     },
     {
       "name": "JOSE MARCOS LIMA DE MOURA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "FICHA DE REGISTRO",
@@ -852,8 +845,7 @@
     },
     {
       "name": "FRANCISCO FRANKLIN DA SILVA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
@@ -919,13 +911,6 @@
           "title": "CARTA DE ANUÊNCIA - NR-35",
           "status": "APPROVED",
           "expiresOn": "2028-10-14",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
-          "status": "REJECTED",
-          "expiresOn": "2028-08-14",
-          "note": "Documento recusado em razão de: 1- Conteúdo programático não esta de acordo com a NR-35",
           "required": true
         },
         {
@@ -1011,13 +996,18 @@
           "status": "APPROVED",
           "expiresOn": "2027-10-14",
           "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-02",
+          "required": true
         }
       ]
     },
     {
       "name": "LUIS GUSTAVO ROSA DA SILVA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
@@ -1161,8 +1151,7 @@
     },
     {
       "name": "CARLOS HENRIQUE SOARES DA SILVA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
@@ -1202,21 +1191,9 @@
           "required": true
         },
         {
-          "title": "COMPROVANTE DE REGISTRO E-SOCIAL",
-          "status": "APPROVED",
-          "expiresOn": "2029-10-05",
-          "required": true
-        },
-        {
           "title": "CARTÃO DE VACINAS",
           "status": "APPROVED",
           "expiresOn": "2029-06-10",
-          "required": true
-        },
-        {
-          "title": "CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL - CTPS",
-          "status": "APPROVED",
-          "expiresOn": "2028-10-05",
           "required": true
         },
         {
@@ -1227,7 +1204,7 @@
         },
         {
           "title": "CONTRATO DE TRABALHO",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
@@ -1324,16 +1301,27 @@
         },
         {
           "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2028-10-23",
+          "required": true
+        },
+        {
+          "title": "CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL - CTPS",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-18",
+          "required": true
+        },
+        {
+          "title": "COMPROVANTE DE REGISTRO E-SOCIAL",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-18",
           "required": true
         }
       ]
     },
     {
       "name": "SIMON DIAS DA SILVA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
@@ -1398,7 +1386,7 @@
         },
         {
           "title": "COMPROVANTE DE REGISTRO E-SOCIAL",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
@@ -1416,19 +1404,19 @@
         },
         {
           "title": "CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL - CTPS",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
         {
           "title": "FICHA DE REGISTRO",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
         {
           "title": "CONTRATO DE TRABALHO",
-          "status": "EXPIRING",
+          "status": "APPROVED",
           "expiresOn": "2026-11-18",
           "required": true
         },
@@ -1488,17 +1476,15 @@
         },
         {
           "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
-          "status": "REJECTED",
+          "status": "APPROVED",
           "expiresOn": "2027-02-07",
-          "note": "Pendente assinatura do aluno. Pendente apresentar carta de autenticação das assinaturas digitais.",
           "required": true
         }
       ]
     },
     {
       "name": "RAMON RAMIRES COSTA CIRINO",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
@@ -1602,52 +1588,46 @@
           "required": true
         },
         {
-          "title": "CARTA DE ANUÊNCIA - NR-35",
-          "status": "REJECTED",
-          "expiresOn": "2028-10-22",
-          "note": "Gentileza informar na plataforma o vencimento do certificado referente a anuência.",
-          "required": true
-        },
-        {
-          "title": "CARTA DE ANUÊNCIA NR-10",
-          "status": "REJECTED",
-          "expiresOn": "2028-10-22",
-          "note": "Gentileza informar na plataforma o vencimento do certificado referente a anuência.",
-          "required": true
-        },
-        {
-          "title": "CARTA DE ANUÊNCIA - NR-33",
-          "status": "REJECTED",
-          "expiresOn": "2027-10-23",
-          "note": "Gentileza informar na plataforma o vencimento do certificado referente a anuência.",
-          "required": true
-        },
-        {
-          "title": "CARTA DE ANUÊNCIA - NR-11",
-          "status": "REJECTED",
-          "expiresOn": "2027-10-23",
-          "note": "Gentileza informar na plataforma o vencimento do certificado referente a anuência.",
+          "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-06",
           "required": true
         },
         {
           "title": "CARTA DE ANUÊNCIA - NR-12",
-          "status": "REJECTED",
-          "expiresOn": "2028-10-22",
-          "note": "Gentileza informar na plataforma o vencimento do certificado referente a anuência.",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-12",
           "required": true
         },
         {
-          "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
+          "title": "CARTA DE ANUÊNCIA - NR-11",
           "status": "APPROVED",
-          "expiresOn": "2027-07-06",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA - NR-33",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR-10",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-23",
           "required": true
         }
       ]
     },
     {
       "name": "MÁRIO SÉRGIO CASTRO DE SOUSA",
-      "role": "Operacional",
-      "contract": "Arthwind",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
           "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
@@ -1659,19 +1639,6 @@
           "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 BÁSICO",
           "status": "APPROVED",
           "expiresOn": "2028-10-17",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 SEP",
-          "status": "REJECTED",
-          "expiresOn": "2028-10-18",
-          "note": "Gentileza enviar certificado de formação junto ao periódico.",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-08",
           "required": true
         },
         {
@@ -1702,13 +1669,6 @@
           "title": "FICHA DE EPI",
           "status": "APPROVED",
           "expiresOn": "2027-01-21",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO BÁSICO DE SEGURANÇA DO TRABALHO - INTEGRAÇÃO",
-          "status": "REJECTED",
-          "expiresOn": "2028-10-21",
-          "note": "O treinamento deve atender minimamente o conteúdo previsto na NR-18 para a capacitação básica em segurança do trabalho: I. as condições e meio ambiente de trabalho; II. os riscos inerentes às atividades desenvolvidas; III. os equipamentos e proteção coletiva existentes no canteiro de obras; IV. o uso adequado dos equipamentos de proteção individual; V. o PGR do canteiro de obras",
           "required": true
         },
         {
@@ -1773,130 +1733,212 @@
         },
         {
           "title": "CARTA DE ANUÊNCIA NR-10",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2028-10-16",
           "required": true
         },
         {
           "title": "CARTA DE ANUÊNCIA - NR-35",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2027-11-08",
           "required": true
         },
         {
           "title": "CARTA DE ANUÊNCIA - NR-33",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2027-10-21",
           "required": true
         },
         {
           "title": "CARTA DE ANUÊNCIA - NR-11",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2027-04-10",
           "required": true
         },
         {
           "title": "SEGURO DE VIDA - INDIVIDUAL",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2026-12-06",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO BÁSICO DE SEGURANÇA DO TRABALHO - INTEGRAÇÃO",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-27",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-08",
           "required": true
         }
       ]
     },
     {
-      "name": "RAFAEL ALFREDO AGUIAR",
-      "role": "Operacional",
-      "contract": "Asset Tech",
+      "name": "THIAGO LIMA SANTOS SILVA",
+      "contract": "ARTH WIND TECHNOLOGIES S.A.",
       "documents": [
         {
-          "title": "ORDEM DE SERVIÇO DE SEGURANÇA - OSS",
-          "status": "REJECTED",
-          "expiresOn": "2027-10-19",
-          "note": "Aguardando ajuste nos programas. Reposte o documento após a aprovação dos programas.",
-          "required": true
-        },
-        {
-          "title": "FICHA DE EPI",
-          "status": "MISSING",
-          "expiresOn": "2027-01-06",
-          "required": true
-        },
-        {
           "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
-          "status": "MISSING",
-          "expiresOn": "2027-10-21",
-          "required": true
-        },
-        {
-          "title": "FICHA DE REGISTRO",
-          "status": "MISSING",
-          "expiresOn": "2028-10-27",
-          "required": true
-        },
-        {
-          "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
-          "status": "MISSING",
-          "expiresOn": "2031-05-05",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO DE DIREÇÃO DEFENSIVA",
           "status": "APPROVED",
-          "expiresOn": "2027-08-17",
+          "expiresOn": "2027-01-29",
           "required": true
         },
         {
-          "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 BÁSICO",
-          "status": "MISSING",
-          "expiresOn": "2028-08-28",
-          "required": true
-        },
-        {
-          "title": "CARTA DE ANUÊNCIA NR-10",
-          "status": "MISSING",
-          "expiresOn": "2028-01-06",
-          "required": true
-        },
-        {
-          "title": "FICHA DE EPI - EPI",
-          "status": "MISSING",
-          "expiresOn": "2027-01-06",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO BÁSICO DE SEGURANÇA DO TRABALHO - INTEGRAÇÃO",
-          "status": "MISSING",
-          "expiresOn": "2028-10-21",
-          "required": true
-        },
-        {
-          "title": "HABILITAÇÃO OU QUALIFICAÇÃO PROFISSIONAL",
-          "status": "MISSING",
-          "expiresOn": "2027-12-09",
-          "required": true
-        },
-        {
-          "title": "TREINAMENTO USO ADEQUADO, GUARDA E CONSERVAÇÃO DE EPIS - NR-06",
-          "status": "MISSING",
-          "expiresOn": "2028-10-19",
-          "required": true
-        },
-        {
-          "title": "CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL - CTPS",
-          "status": "MISSING",
-          "expiresOn": "2030-12-23",
-          "required": true
-        },
-        {
-          "title": "CADASTRO DE PESSOA FÍSICA - CPF",
-          "status": "MISSING",
-          "expiresOn": "2027-12-23",
+          "title": "ORDEM DE SERVIÇO DE SEGURANÇA - OSS",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-29",
           "required": true
         },
         {
           "title": "CONTRATO DE PRESTAÇÃO DE SERVIÇO ENTRE AS PARTES",
           "status": "APPROVED",
-          "expiresOn": "2030-10-09",
+          "expiresOn": "2027-05-11",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO BÁSICO DE SEGURANÇA DO TRABALHO - INTEGRAÇÃO",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-30",
+          "required": true
+        },
+        {
+          "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
+          "status": "APPROVED",
+          "expiresOn": "2032-02-15",
+          "required": true
+        },
+        {
+          "title": "CARTÃO DE VACINAS",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-27",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE VIDA - INDIVIDUAL",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-06",
+          "required": true
+        },
+        {
+          "title": "HABILITAÇÃO OU QUALIFICAÇÃO PROFISSIONAL",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-03",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-27",
+          "required": true
+        },
+        {
+          "title": "CADASTRO DE PESSOA FÍSICA - CPF",
+          "status": "APPROVED",
+          "expiresOn": "2032-02-15",
+          "required": true
+        },
+        {
+          "title": "CCMEI - CERTIFICADO DA CONDIÇÃO DE MICROEMPREENDEDOR INDIVIDUAL",
+          "status": "APPROVED",
+          "expiresOn": "2028-12-16",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE DIREÇÃO DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-31",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ALTURA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-02",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA - NR-35",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-02",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES EM ESPAÇO CONFINADO - NR-33",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-02",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA - NR-33",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-02",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO USO ADEQUADO, GUARDA E CONSERVAÇÃO DE EPIS - NR-06",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-29",
+          "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA ATIVIDADES COM ELETRICIDADE - NR-10 BÁSICO",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-01",
+          "required": true
+        },
+        {
+          "title": "CONTRIBUIÇÃO INSS (RPA)",
+          "status": "MISSING",
+          "expiresOn": "2028-01-01",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO PARA OPERAÇÃO DE MÁQUINAS E EQUIPAMENTOS - NR-12",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-01",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA - NR-12",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-02",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE PRIMEIROS SOCORROS",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-27",
+          "required": true
+        },
+        {
+          "title": "CARTÃO DE IDENTIFICAÇÃO PARA OPERADORES DE MÁQUINAS - NR-12",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-02",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR-10",
+          "status": "MISSING",
+          "expiresOn": "2028-02-02",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE PROTEÇÃO E COMBATE A INCÊNDIO - NR-23",
+          "status": "MISSING",
+          "expiresOn": "2028-02-28",
           "required": true
         }
       ]
