@@ -21924,11 +21924,12 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2027-10-28T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 28/10/2027",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ZYEy2h6dhnvw-ZPjpH3Fx2yoesHkhitd",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T13:45:44.422Z"
   },
   {
     "inspectorId": "rpo_79",
@@ -21956,11 +21957,28 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "expirationDate": "2028-10-31T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 31/10/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ZYEy2h6dhnvw-ZPjpH3Fx2yoesHkhitd",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-04T13:45:44.422Z"
+  },
+  {
+    "inspectorId": "rpo_79",
+    "inspectorName": "WILLAMES WAGNER DA SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "28",
+    "docName": "NR-33 Supervisor",
+    "modality": "ONLINE",
+    "expirationDate": "2027-10-31T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 31/10/2027",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1ZYEy2h6dhnvw-ZPjpH3Fx2yoesHkhitd",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-11-04T13:45:44.422Z"
   },
   {
     "inspectorId": "rpo_81",
