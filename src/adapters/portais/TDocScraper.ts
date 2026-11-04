@@ -42,7 +42,7 @@ export function defaultTDocSelectors(portalId: string): TDocSelectors {
     tasksBackUrl: `${base}/system/modules/model_4/companyManager/tasks/tasksCompany.jsf`,
     selectCompanyIcon: 'img[title="Seleccionar"]',
     tasksTableRows: '#tareas_list_form\\:tareasTable\\:tb tr',
-    taskViewButton: i => `#tareas_list_form\\:tareasTable\\:${i}\\:j_id123`,
+    taskViewButton: i => `#tareas_list_form\\:tareasTable\\:tb tr:nth-child(${i + 1}) img[title="Seleccionar"], #tareas_list_form\\:tareasTable\\:tb tr:nth-child(${i + 1}) a`,
     workersButton: 'input[value="Ver lista de funcionários"]',
     workersTableRows:
       '#form_workers_list_table\\:Table_TrabajadoresDoc\\:tb tr',
