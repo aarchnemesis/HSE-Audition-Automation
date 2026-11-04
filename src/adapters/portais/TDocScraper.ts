@@ -63,27 +63,14 @@ async function ensureTaskList(page: Page, sel: TDocSelectors): Promise<void> {
   // If tasks table is already visible, nothing to do
   if ((await page.locator(sel.tasksTableRows).count()) > 0) return
 
-  // Click on 'Tarefas' in navigation if present
-  const tarefasLink = page.locator('a:has-text("Tarefas")').first()
-  if (await tarefasLink.isVisible().catch(() => false)) {
-    await tarefasLink.click({ timeout: STEP_TIMEOUT }).catch(() => {})
-    await page.waitForTimeout(2500)
-    if ((await page.locator(sel.tasksTableRows).count()) > 0) return
-  }
-
-  // Go to general landing page and click 'Tarefas'
-  await page.goto('https://wplatam.tdoc.es/system/general.jsf', { waitUntil: 'domcontentloaded', timeout: STEP_TIMEOUT }).catch(() => {})
+  // Always go to tasksUrl (where selectCompanyIcon lives)
+  await page.goto(sel.tasksUrl, { waitUntil: 'domcontentloaded', timeout: STEP_TIMEOUT }).catch(() => {})
   await page.waitForTimeout(2000)
-  const menuTarefas = page.locator('a:has-text("Tarefas")').first()
-  if (await menuTarefas.isVisible().catch(() => false)) {
-    await menuTarefas.click({ timeout: STEP_TIMEOUT }).catch(() => {})
-    await page.waitForTimeout(2500)
-  }
 
   const icon = page.locator(sel.selectCompanyIcon).first()
   if (await icon.isVisible().catch(() => false)) {
-    await icon.click({ timeout: STEP_TIMEOUT }).catch(() => {})
-    await page.waitForTimeout(2500)
+    await icon.click({ timeout: STEP_TIMEOUT })
+    await page.waitForTimeout(3000)
   }
 }
 
