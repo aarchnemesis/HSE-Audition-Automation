@@ -163,15 +163,24 @@ def download_and_inspect_pdf(fid, access_token):
     url = f'https://www.googleapis.com/drive/v3/files/{fid}?alt=media&supportsAllDrives=true'
     req = urllib.request.Request(url, headers={'Authorization': f'Bearer {access_token}'})
     try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
+        with urllib.request.urlopen(req, timeout=20) as resp:
             data = resp.read()
         reader = pypdf.PdfReader(io.BytesIO(data))
         text = ''
-        for p in reader.pages[:5]:
-            text += (p.extract_text() or '') + '\n'
-        return text
+        num_pages = len(reader.pages)
+        for i in range(min(num_pages, 30)):
+            text += (reader.pages[i].extract_text() or '') + '\n'
+        
+        found_exp = None
+        for m in re.finditer(r'(?:encerrando[\s-]*se\s*em|t[eé]rmino\s*em|vig[eê]ncia\s*at[eé]|v[aá]lido\s*at[eé]|prazo\s*at[eé]|fim\s*em)\s*(\d{2})[\/\.-](\d{2})[\/\.-](\d{4})', text, re.IGNORECASE):
+            d, mth, y = int(m.group(1)), int(m.group(2)), int(m.group(3))
+            if 1 <= mth <= 12 and 1 <= d <= 31 and 2020 <= y <= 2040:
+                dt = datetime.datetime(y, mth, d)
+                if not found_exp or dt > found_exp:
+                    found_exp = dt
+        return text, found_exp
     except:
-        return ''
+        return '', None
 
 def parse_date_from_filename(filename):
     normalized = filename.replace('_', ' ')
@@ -218,7 +227,14 @@ def calculate_expiration(code, parsed_date, ref_date):
     if not parsed_date:
         return None
 
-    if code in DIRECT_EXPIRATION_CODES or parsed_date >= ref_date:
+    # Contratos de prestação de serviços (PJ) vigem tipicamente por 1 ano a contar da assinatura/emissão se não houver termo final explícito
+    if code in ['40', '40.1']:
+        if parsed_date >= ref_date:
+            return parsed_date
+        # Adiciona 1 ano de vigência padrão contratual
+        return add_years(parsed_date, 1)
+
+    if parsed_date >= ref_date:
         return parsed_date
 
     years = get_validity_years(code)
@@ -321,7 +337,9 @@ def scan_collaborator(collab_folder, branch_id, access_token):
                 else:
                     # Inspeciona texto se o nome for ambíguo (contrato, declaração, etc)
                     if any(w in iname.upper() for w in ['CONTRATO', 'DECLARA', 'VIA', '40', '04']):
-                        pdf_text = download_and_inspect_pdf(iid, access_token)
+                        pdf_text, content_exp = download_and_inspect_pdf(iid, access_token)
+                        if content_exp:
+                            exp_from_content = content_exp
 
                 code = classify_doc(iname, pdf_text, remap)
                 if not code and code_from_content:
