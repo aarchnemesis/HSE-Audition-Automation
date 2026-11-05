@@ -1964,11 +1964,14 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619345",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619345 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -1996,11 +1999,14 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619375",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619375 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -2011,11 +2017,14 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619378",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619378 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -11172,11 +11181,15 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "storzRequestId": "619336",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 0,
+    "storzDeadline": "04/01/2027",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619336 - Progresso: 0%) [Prazo Storz: 04/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:34:00.668Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11187,11 +11200,15 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "storzRequestId": "619338",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 16,
+    "storzDeadline": "04/01/2027",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619338 - Progresso: 16%) [Prazo Storz: 04/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:34:00.668Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11202,11 +11219,14 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619377",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619377 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:34:00.668Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11217,11 +11237,14 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619380",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619380 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:34:00.668Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -12599,11 +12622,14 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619335",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619335 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -12614,11 +12640,14 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619337",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619337 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -12629,11 +12658,14 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619376",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619376 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -12644,11 +12676,14 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "statusEHS": "AUSENTE",
-    "detail": "Documento obrigatório não encontrado no Drive nem solicitado na Storz.",
+    "statusEHS": "SOLICITADO_STORZ",
+    "storzRequestId": "619379",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619379 - Não iniciado / 0% de progresso).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -15801,14 +15836,11 @@
     "modality": "ONLINE",
     "expirationDate": "2075-10-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "618660",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 28/10/2075 | Reciclagem já solicitada na Storz (618660 - Status: SOLICITADO).",
+    "detail": "Válido até 28/10/2075",
     "evidenceUrl": "https://drive.google.com/file/d/1NI2V2NSNkZLLo2Se2KFyz2ricjn_4Wio/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1N43BXkEct5Q65YFyzveqmpozKC00tbLQ",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_61",
@@ -15872,14 +15904,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-10-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "618648",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 14/10/2027 | Reciclagem já solicitada na Storz (618648 - Status: SOLICITADO).",
+    "detail": "Válido até 14/10/2027",
     "evidenceUrl": "https://drive.google.com/file/d/1v3KNfayOI2SPlm0u_evpLM-qX_sAeEp2/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1N43BXkEct5Q65YFyzveqmpozKC00tbLQ",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_61",
@@ -15892,14 +15921,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-10-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "618649",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 22/10/2027 | Reciclagem já solicitada na Storz (618649 - Status: SOLICITADO).",
+    "detail": "Válido até 22/10/2027",
     "evidenceUrl": "https://drive.google.com/file/d/11-ufTkn981zttpgeu3e5cG4E-nL5V49a/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1N43BXkEct5Q65YFyzveqmpozKC00tbLQ",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_61",
@@ -16020,14 +16046,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-10-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "618646",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 13/10/2027 | Reciclagem já solicitada na Storz (618646 - Status: SOLICITADO).",
+    "detail": "Válido até 13/10/2027",
     "evidenceUrl": "https://drive.google.com/file/d/1oVq-xd8mo-ngnyWoI8Nj0mQ1ZV7Fjx-B/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1N43BXkEct5Q65YFyzveqmpozKC00tbLQ",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-05T19:47:07.116Z"
   },
   {
     "inspectorId": "rpo_61",
