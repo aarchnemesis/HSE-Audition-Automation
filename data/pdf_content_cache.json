@@ -169856,30 +169856,30 @@
   },
   {
     "fileId": "1fB_EaLJkYGyjZB1IO_xCisLu5mG0aKKq",
-    "filename": "Carteira Nacional de Vacinação Digital (1).pdf",
+    "filename": "05 – Cartão de Vacina + Covid – Willames Wagner da Silva.pdf",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-11-05T00:28:54.742Z",
+    "modifiedTime": "2026-11-05T13:54:29.636Z",
     "code": "05",
     "issueDate": "2024-06-21T03:00:00.000Z",
-    "expirationDate": "2076-11-05T11:00:37.624Z",
+    "expirationDate": "2074-06-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 05/11/2076",
+    "statusDetail": "Válido até 21/06/2074",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Cartão de Vacina / SUS (via PDF) (Pág. 2)",
+    "matchedTerm": "Cartão de Vacina / SUS",
     "extractedClause": "CAUCAIACE VACINA HEPATITE B21/06/2024",
     "documents": [
       {
         "code": "05",
         "issueDate": "2024-06-21T03:00:00.000Z",
-        "expirationDate": "2076-11-05T11:00:37.624Z",
+        "expirationDate": "2074-06-21T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/11/2076",
+        "statusDetail": "Válido até 21/06/2074",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Cartão de Vacina / SUS (via PDF) (Pág. 2)",
+        "matchedTerm": "Cartão de Vacina / SUS",
         "extractedClause": "CAUCAIACE VACINA HEPATITE B21/06/2024"
       }
     ]
@@ -299395,11 +299395,11 @@
   },
   {
     "fileId": "1CVEnyFxJhd5D4SUCHmZFqFOXFAHssx24",
-    "filename": "OSS_GHE03_ASSISTENTE_DE_OPERACOES_WILLAMES_WAGNER_DA_SILVA - Clicksign.pdf",
+    "filename": "02 – OS – 05.11.26 - Willames Wagner da Silva",
     "v": 2,
     "cv": 1,
     "sv": 1,
-    "modifiedTime": "2026-11-05T11:24:28.931Z",
+    "modifiedTime": "2026-11-05T13:59:19.789Z",
     "code": "12",
     "issueDate": "2026-11-05T03:00:00.000Z",
     "expirationDate": "2028-11-05T03:00:00.000Z",
@@ -299407,8 +299407,8 @@
     "statusDetail": "Válido até 05/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-10 Básico (via PDF)",
-    "extractedClause": "Assinou em 05 nov 2026",
+    "matchedTerm": "NR-10 Básico (via PDF) (sobrepôs prefixo 02)",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "12",
@@ -299418,8 +299418,8 @@
         "statusDetail": "Válido até 05/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 Básico (via PDF)",
-        "extractedClause": "Assinou em 05 nov 2026"
+        "matchedTerm": "NR-10 Básico (via PDF) (sobrepôs prefixo 02)",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
