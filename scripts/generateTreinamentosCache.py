@@ -4,10 +4,13 @@ import urllib.parse
 import os
 import re
 import datetime
+import pypdf
+import io
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 TOKEN_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/google_oauth_token.json'
 CLIENT_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/google_oauth_client.json'
+PDF_CACHE_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/data/pdf_content_cache.json'
 OUTPUT_DATA = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/data/drive_inspectors_cache.json'
 OUTPUT_SCRATCH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/drive_inspectors_cache.json'
 
@@ -83,6 +86,22 @@ DOC_CLASSIFICATION_RULES = [
     ('32',   r'(?:DOC\s*32|32|ART\b)'),
 ]
 
+# Carrega cache do PDFContentCache
+PDF_CONTENT_CACHE = {}
+if os.path.exists(PDF_CACHE_PATH):
+    try:
+        with open(PDF_CACHE_PATH, 'r', encoding='utf-8') as f:
+            raw_cache = json.load(f)
+            if isinstance(raw_cache, list):
+                for item in raw_cache:
+                    fid = item.get('fileId')
+                    if fid:
+                        PDF_CONTENT_CACHE[fid] = item
+    except Exception as e:
+        print('Aviso ao carregar pdf_content_cache:', e)
+
+print(f'Cache de PDFs carregado: {len(PDF_CONTENT_CACHE)} entradas.')
+
 def get_valid_token():
     with open(TOKEN_PATH, 'r', encoding='utf-8') as f:
         t = json.load(f)
@@ -139,6 +158,20 @@ def list_children(folder_id, access_token):
             print(f"Error listing children for {folder_id}: {e}")
             break
     return files
+
+def download_and_inspect_pdf(fid, access_token):
+    url = f'https://www.googleapis.com/drive/v3/files/{fid}?alt=media&supportsAllDrives=true'
+    req = urllib.request.Request(url, headers={'Authorization': f'Bearer {access_token}'})
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            data = resp.read()
+        reader = pypdf.PdfReader(io.BytesIO(data))
+        text = ''
+        for p in reader.pages[:5]:
+            text += (p.extract_text() or '') + '\n'
+        return text
+    except:
+        return ''
 
 def parse_date_from_filename(filename):
     normalized = filename.replace('_', ' ')
@@ -204,8 +237,29 @@ def evaluate_date(exp_date, ref_date):
     else:
         return 'CONFORME', f'Válido até {exp_date.strftime("%d/%m/%Y")}'
 
-def classify_doc(filename, remap=None):
+def classify_doc(filename, pdf_text="", remap=None):
     clean = filename.upper()
+    upper_text = pdf_text.upper() if pdf_text else ""
+
+    # Regra de exclusão de recibos e declarações acessórias de contrato
+    if 'DECLARAÇÃO DE RECEBIMENTO' in clean or 'RECEBIMENTO DA SEGUNDA VIA' in clean or \
+       'DECLARAÇÃO DE RECEBIMENTO' in upper_text or 'RECEBI UMA VIA DO CONTRATO' in upper_text:
+        return None # É apenas recibo acessório, não contrato/habilitação
+
+    # 1. Se houver inspeção de conteúdo em cache/texto
+    if 'ATESTADO DE SAÚDE OCUPACIONAL' in upper_text or 'ASO' in upper_text and 'EXAME' in upper_text:
+        return '01'
+    if 'ORDEM DE SERVIÇO' in upper_text or 'ORDEM DE SERVICO' in upper_text:
+        return '02'
+    if 'CONTRATO DE PRESTAÇÃO DE SERVIÇOS' in upper_text:
+        if 'ADITIVO' in upper_text or 'TERMO ADITIVO' in upper_text or 'ADITIVO' in clean:
+            return '40.1'
+        return '40'
+    if 'FICHA DE ENTREGA DE EQUIPAMENTO' in upper_text or 'FICHA DE EPI' in upper_text:
+        return '06'
+    if 'CARTEIRA NACIONAL DE HABILITAÇÃO' in upper_text or 'HABILITACAO' in upper_text:
+        return '08'
+
     code = None
     m = re.match(r'^([0-9]{2}(?:\.[0-9])?)\b', clean)
     if m:
@@ -251,15 +305,38 @@ def scan_collaborator(collab_folder, branch_id, access_token):
                 continue
 
             if iname.lower().endswith('.pdf') or imime == 'application/pdf':
-                code = classify_doc(iname, remap)
+                # 1. Checa se já temos inspeção de conteúdo em cache
+                cached_pdf = PDF_CONTENT_CACHE.get(iid)
+                pdf_text = ""
+                exp_from_content = None
+                code_from_content = None
+
+                if cached_pdf:
+                    code_from_content = cached_pdf.get('code')
+                    if cached_pdf.get('expirationDate'):
+                        try:
+                            exp_from_content = datetime.datetime.fromisoformat(cached_pdf['expirationDate'].replace('Z', '+00:00')).replace(tzinfo=None)
+                        except:
+                            pass
+                else:
+                    # Inspeciona texto se o nome for ambíguo (contrato, declaração, etc)
+                    if any(w in iname.upper() for w in ['CONTRATO', 'DECLARA', 'VIA', '40', '04']):
+                        pdf_text = download_and_inspect_pdf(iid, access_token)
+
+                code = classify_doc(iname, pdf_text, remap)
+                if not code and code_from_content:
+                    code = code_from_content
+
                 if not code:
                     continue
 
                 parsed_date = parse_date_from_filename(iname)
-                exp_date = calculate_expiration(code, parsed_date, REF_DATE)
-                status, detail = evaluate_date(exp_date, REF_DATE)
+                if exp_from_content:
+                    exp_date = exp_from_content
+                else:
+                    exp_date = calculate_expiration(code, parsed_date, REF_DATE)
 
-                # Se a data calculada for direta ou exp, issue date é calculada
+                status, detail = evaluate_date(exp_date, REF_DATE)
                 issue_date = parsed_date if parsed_date and parsed_date < REF_DATE else None
 
                 cert_obj = {
