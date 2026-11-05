@@ -18170,13 +18170,14 @@
     "expirationDate": "2027-01-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "613569",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 17/01/2027 | Reciclagem já solicitada na Storz (613569 - Status: SOLICITADO).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 12,
+    "storzDeadline": "04/01/2027",
+    "detail": "Válido até 17/01/2027 | Reciclagem já solicitada na Storz (613569 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1YTEGEW3XBGHQShgH-QcCTG9FoIFc02BO/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vZ0Jvl7owpIV-_pbqvOgW4dn0X320WNt",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-05T22:46:58.003Z"
   },
   {
     "inspectorId": "rpo_68",
