@@ -452,29 +452,45 @@ export class HSEDataPipeline {
     let driveSource: 'LIVE' | 'CACHE' = 'LIVE'
     let driveErrorMessage: string | null = null
 
-    try {
-      const driveAdapter = this.deps.driveAdapter || createDriveAdapter(refDate)
-      driveInspectorsRaw = await driveAdapter.getInspectors()
-      console.log(
-        `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) lida(s) ao vivo.`
-      )
-      if (driveInspectorsRaw.length > 0) {
-        this.saveDriveInspectorsCache(driveInspectorsRaw)
-      }
-    } catch (err: any) {
-      driveErrorMessage = err?.message || String(err)
-      console.warn(
-        `[HSEDataPipeline] Falha ao ler Drive ao vivo (${driveErrorMessage}). Tentando carregar cache local...`
-      )
-    }
+    const preferDriveCache =
+      process.env.HSE_PREFER_DRIVE_CACHE === 'true' ||
+      process.env.PREFER_CACHE === 'true'
 
-    if (driveInspectorsRaw.length === 0) {
+    if (preferDriveCache) {
       driveInspectorsRaw = this.loadDriveInspectorsCache(refDate)
       if (driveInspectorsRaw.length > 0) {
         driveSource = 'CACHE'
         console.log(
-          `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) carregada(s) do cache local.`
+          `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) carregada(s) do cache local (HSE_PREFER_DRIVE_CACHE=true).`
         )
+      }
+    }
+
+    if (driveInspectorsRaw.length === 0) {
+      try {
+        const driveAdapter = this.deps.driveAdapter || createDriveAdapter(refDate)
+        driveInspectorsRaw = await driveAdapter.getInspectors()
+        console.log(
+          `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) lida(s) ao vivo.`
+        )
+        if (driveInspectorsRaw.length > 0) {
+          this.saveDriveInspectorsCache(driveInspectorsRaw)
+        }
+      } catch (err: any) {
+        driveErrorMessage = err?.message || String(err)
+        console.warn(
+          `[HSEDataPipeline] Falha ao ler Drive ao vivo (${driveErrorMessage}). Tentando carregar cache local...`
+        )
+      }
+
+      if (driveInspectorsRaw.length === 0) {
+        driveInspectorsRaw = this.loadDriveInspectorsCache(refDate)
+        if (driveInspectorsRaw.length > 0) {
+          driveSource = 'CACHE'
+          console.log(
+            `[HSEDataPipeline] Drive: ${driveInspectorsRaw.length} pasta(s) carregada(s) do cache local.`
+          )
+        }
       }
     }
 

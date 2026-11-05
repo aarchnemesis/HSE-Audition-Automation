@@ -25,8 +25,8 @@ import { getAuthorizedClient } from './googleAuth.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
-const DRONE_ROOT_FOLDER_ID = '1fF0SHglnfs0ELKsekZVoAygwNyxQek3w' // 03 - Drone Insp. Equipamento
-const LPS_SPDA_ROOT_FOLDER_ID = '1B9hlkQIyCYPpp3ygcBrEX_ajKIC9h9Il' // 04 - LPS - SPDA
+const DRONE_ROOT_FOLDER_ID = '1xqXRRSN0Tapg_ACW9-kJhE0qRi4m_lZa' // 03 - Drone Insp. Equipamento
+const LPS_SPDA_ROOT_FOLDER_ID = '13Ot7fK8gotTYlLAZm0V9WtGbG0aRiBSI' // 04 - LPS - SPDA
 
 /**
  * Cada pasta de ramo pode ter sua PRÓPRIA numeração de documento — confirmado em 27/08/2026 contra
@@ -111,6 +111,8 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           'nextPageToken, files(id, name, mimeType, createdTime, modifiedTime)',
         pageSize: 1000,
         pageToken,
+        supportsAllDrives: true,
+        includeItemsFromAllDrives: true,
       })
       files.push(...(res.data.files || []))
       pageToken = res.data.nextPageToken || undefined
@@ -230,7 +232,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           try {
             const drive = await this.getDrive()
             const res = await drive.files.get(
-              { fileId: entry.id, alt: 'media' },
+              { fileId: entry.id, alt: 'media', supportsAllDrives: true },
               { responseType: 'arraybuffer' }
             )
             const buffer = Buffer.from(res.data as ArrayBuffer)
