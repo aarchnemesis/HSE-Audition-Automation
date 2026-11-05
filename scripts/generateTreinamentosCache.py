@@ -11,6 +11,8 @@ CLIENT_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratc
 OUTPUT_DATA = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/data/drive_inspectors_cache.json'
 OUTPUT_SCRATCH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/drive_inspectors_cache.json'
 
+REF_DATE = datetime.datetime(2026, 11, 5)
+
 BRANCHES = [
     ('1_0FUXX-hML_DOsYrakRxIBFq2a8w1lbB', '01 - Inspetores de Qualidade & Técnicos de Operações'),
     ('1eKTeGTWnwWl8Y2ND5wBKCLUK3ArxUwls', '02 - Líderes & EHS'),
@@ -32,6 +34,54 @@ EXCLUDED_FOLDER_NAMES = {
     '1xqXRRSN0Tapg_ACW9-kJhE0qRi4m_lZa': ['outros'],
     '13Ot7fK8gotTYlLAZm0V9WtGbG0aRiBSI': ['outros']
 }
+
+ANNUAL_VALIDITY_CODES = ['01', '06', '20', '28', '34']
+EVENT_TRIGGERED_ONLY_CODES = ['02', '03', '04', '05', '10', '11', '23', '24', '30']
+EVENT_TRIGGERED_VALIDITY_YEARS = 50
+DIRECT_EXPIRATION_CODES = ['40', '40.1']
+TEN_YEAR_VALIDITY_CODES = ['08']
+
+DOC_CLASSIFICATION_RULES = [
+    ('40.1', r'(?:DOC\s*40\.1|40\.1|ADITIVO)'),
+    ('40',   r'(?:DOC\s*40|40|CONTRATO)'),
+    ('01',   r'(?:DOC\s*01|01|ASO)'),
+    ('02',   r'(?:DOC\s*02|02|ORDEM\s*DE\s*SERVI[CÇ]O|OS\b)'),
+    ('03.1', r'(?:DOC\s*03\.1|03\.1|QSA|CNPJ)'),
+    ('03',   r'(?:DOC\s*03|03|FICHA\s*DE\s*REGISTRO)'),
+    ('04',   r'(?:DOC\s*04|04|CTPS)'),
+    ('05.2', r'(?:DOC\s*05\.2|05\.2|PLANO\s*DE\s*SA[UÚ]DE)'),
+    ('05',   r'(?:DOC\s*05|05|CART[AÃ]O\s*DE\s*VACINA|VACINA)'),
+    ('06',   r'(?:DOC\s*06|06|FICHA\s*DE\s*EPI)'),
+    ('07',   r'(?:DOC\s*07|07|SEGURO\s*DE\s*VIDA)'),
+    ('08',   r'(?:DOC\s*08|08|CNH)'),
+    ('09',   r'(?:DOC\s*09|09|DIRE[CÇ][AÃ]O\s*DEFENSIVA)'),
+    ('10',   r'(?:DOC\s*10|10|NR[-_\s]*01)'),
+    ('11',   r'(?:DOC\s*11|11|NR[-_\s]*06)'),
+    ('12.1', r'(?:DOC\s*12\.1|12\.1|CARTA\s*NR[-_\s]*10)'),
+    ('12',   r'(?:DOC\s*12|12|NR[-_\s]*10\s*B[AÁ]SICO)'),
+    ('13',   r'(?:DOC\s*13|13|NR[-_\s]*10\s*SEP)'),
+    ('14',   r'(?:DOC\s*14|14|NR[-_\s]*11|TALHA)'),
+    ('15.1', r'(?:DOC\s*15\.1|15\.1|CARTA\s*NR[-_\s]*12)'),
+    ('15',   r'(?:DOC\s*15|15|NR[-_\s]*12)'),
+    ('16',   r'(?:DOC\s*16|16|PRIMEIROS\s*SOCORROS|GWO\s*FA\b)'),
+    ('17',   r'(?:DOC\s*17|17|ERGONOMIA|CAR(?:GA)?\s*MANUAL|GWO\s*MH)'),
+    ('18',   r'(?:DOC\s*18|18|NR[-_\s]*18)'),
+    ('19',   r'(?:DOC\s*19|19|COMBATE\s*A\s*INC[EÊ]NDIO|GWO\s*FAW)'),
+    ('20.1', r'(?:DOC\s*20\.1|20\.1|CARTA\s*NR[-_\s]*33)'),
+    ('20',   r'(?:DOC\s*20|20|NR[-_\s]*33\s*ESP(?:A[CÇ]O)?\s*CONF(?:INADO)?|VIGIA)'),
+    ('21.1', r'(?:DOC\s*21\.1|21\.1|CARTA\s*NR[-_\s]*35)'),
+    ('21',   r'(?:DOC\s*21|21|NR[-_\s]*35|TRAB(?:ALHO)?\s*EM\s*ALTURA|GWO\s*WAH)'),
+    ('22',   r'(?:DOC\s*22|22|LOTO|BLOQUEIO)'),
+    ('23',   r'(?:DOC\s*23|23|CRT)'),
+    ('24',   r'(?:DOC\s*24|24|DIPLOMA)'),
+    ('25',   r'(?:DOC\s*25|25|SIT)'),
+    ('26',   r'(?:DOC\s*26|26|ESO|BTT)'),
+    ('27',   r'(?:DOC\s*27|27|NR[-_\s]*07|GWO\s*ART)'),
+    ('28',   r'(?:DOC\s*28|28|NR[-_\s]*33\s*SUPERVISOR|SUPERVISOR)'),
+    ('30',   r'(?:DOC\s*30|30|WINDA)'),
+    ('31',   r'(?:DOC\s*31|31|ELEVADOR)'),
+    ('32',   r'(?:DOC\s*32|32|ART\b)'),
+]
 
 def get_valid_token():
     with open(TOKEN_PATH, 'r', encoding='utf-8') as f:
@@ -90,49 +140,78 @@ def list_children(folder_id, access_token):
             break
     return files
 
-DOC_PATTERNS = [
-    ('40.1', r'(?:DOC\s*40\.1|40\.1|ADITIVO)', 0),
-    ('40',   r'(?:DOC\s*40|40|CONTRATO)', 0),
-    ('01',   r'(?:DOC\s*01|01|ASO)', 365),
-    ('02',   r'(?:DOC\s*02|02|ORDEM\s*DE\s*SERVI[CÇ]O|OS)', 365),
-    ('03',   r'(?:DOC\s*03|03|FICHA\s*DE\s*EPI)', 365),
-    ('07',   r'(?:DOC\s*07|07|CNH)', 1825),
-    ('08',   r'(?:DOC\s*08|08|DIRE[CÇ][AÃ]O\s*DEFENSIVA)', 730),
-    ('09',   r'(?:DOC\s*09|09|NR[-_\s]*01)', 730),
-    ('10',   r'(?:DOC\s*10|10|NR[-_\s]*06)', 365),
-    ('11',   r'(?:DOC\s*11|11|NR[-_\s]*10\s*SEP)', 730),
-    ('12',   r'(?:DOC\s*12|12|NR[-_\s]*10\s*B[AÁ]SICO)', 730),
-    ('13',   r'(?:DOC\s*13|13|NR[-_\s]*35)', 730),
-    ('14',   r'(?:DOC\s*14|14|NR[-_\s]*12)', 730),
-    ('15',   r'(?:DOC\s*15|15|NR[-_\s]*33)', 365),
-    ('16',   r'(?:DOC\s*16|16|PRIMEIROS\s*SOCORROS|GWO\s*FA)', 730),
-    ('17',   r'(?:DOC\s*17|17|TRABALHO\s*EM\s*ALTURA|GWO\s*WAH)', 730),
-    ('18',   r'(?:DOC\s*18|18|MANUSEIO\s*DE\s*CARGAS|GWO\s*MH)', 730),
-    ('19',   r'(?:DOC\s*19|19|COMBATE\s*A\s*INC[EÊ]NDIO|GWO\s*FAW)', 730),
-    ('20',   r'(?:DOC\s*20|20|ACESSO\s*POR\s*CORDAS|ABENDI|IRATA)', 1095),
-    ('21',   r'(?:DOC\s*21|21|OPERA[CÇ][AÃ]O\s*DE\s*GUINCHO)', 730),
-    ('22',   r'(?:DOC\s*22|22|PLATAFORMA\s*ELEVAT[OÓ]RIA|PEMT)', 730),
-    ('23',   r'(?:DOC\s*23|23|TALHA)', 730),
-    ('24',   r'(?:DOC\s*24|24|PTE)', 730),
-    ('25',   r'(?:DOC\s*25|25|RIGGER)', 730),
-    ('26',   r'(?:DOC\s*26|26|GWO\s*BTT)', 0),
-    ('27',   r'(?:DOC\s*27|27|GWO\s*ART)', 730),
-    ('28',   r'(?:DOC\s*28|28|GWO\s*SLS)', 730),
-    ('30',   r'(?:DOC\s*30|30|RAC[-_\s]*01)', 730),
-    ('31',   r'(?:DOC\s*31|31|RAC[-_\s]*02)', 730),
-    ('32',   r'(?:DOC\s*32|32|RAC[-_\s]*03)', 730),
-]
+def parse_date_from_filename(filename):
+    normalized = filename.replace('_', ' ')
+    m = re.search(r'(?:^|\D)(\d{2})[\s\.\/-](\d{2})[\s\.\/-](\d{2,4})(?:\D|$)', normalized)
+    if m:
+        day = int(m.group(1))
+        month = int(m.group(2))
+        year = int(m.group(3))
+        if year < 100: year += 2000
+        if 1 <= month <= 12 and 1 <= day <= 31 and 1990 <= year <= 2050:
+            try:
+                return datetime.datetime(year, month, day)
+            except:
+                pass
+    m2 = re.search(r'(?:^|\D)(\d{4})[\.\/-](\d{2})[\.\/-](\d{2})(?:\D|$)', normalized)
+    if m2:
+        year = int(m2.group(1))
+        month = int(m2.group(2))
+        day = int(m2.group(3))
+        if 1 <= month <= 12 and 1 <= day <= 31 and 1990 <= year <= 2050:
+            try:
+                return datetime.datetime(year, month, day)
+            except:
+                pass
+    return None
 
-def parse_doc(filename, remap=None):
-    clean = filename.upper()
-    
-    # Try exact leading code match: "16 - ", "01. ", "40.1 - "
-    leading_match = re.match(r'^([0-9]{2}(?:\.[0-9])?)\b', clean)
-    code = None
-    if leading_match:
-        code = leading_match.group(1)
+def get_validity_years(code):
+    if code in EVENT_TRIGGERED_ONLY_CODES: return EVENT_TRIGGERED_VALIDITY_YEARS
+    if code in TEN_YEAR_VALIDITY_CODES: return 10
+    if code in ANNUAL_VALIDITY_CODES: return 1
+    return 2
+
+def add_years(d, years):
+    try:
+        return d.replace(year=d.year + years)
+    except ValueError:
+        return d + (datetime.date(d.year + years, 1, 1) - datetime.date(d.year, 1, 1))
+
+def calculate_expiration(code, parsed_date, ref_date):
+    if code in EVENT_TRIGGERED_ONLY_CODES:
+        base = parsed_date or ref_date
+        return add_years(base, EVENT_TRIGGERED_VALIDITY_YEARS)
+
+    if not parsed_date:
+        return None
+
+    if code in DIRECT_EXPIRATION_CODES or parsed_date >= ref_date:
+        return parsed_date
+
+    years = get_validity_years(code)
+    return add_years(parsed_date, years)
+
+def evaluate_date(exp_date, ref_date):
+    if not exp_date:
+        return 'INDETERMINADO', ''
+    diff = (exp_date - ref_date).days
+    if diff < 0:
+        return 'VENCIDO', f'VENCIDO há {abs(diff)} dias ({exp_date.strftime("%d/%m/%Y")})'
+    elif diff <= 30:
+        return 'VENCE_30', f'ALERTA MÉDIO: Vence em {diff} dias ({exp_date.strftime("%d/%m/%Y")})'
+    elif diff <= 60:
+        return 'VENCE_60', f'ALERTA INICIAL: Vence em {diff} dias ({exp_date.strftime("%d/%m/%Y")})'
     else:
-        for c, pat, _ in DOC_PATTERNS:
+        return 'CONFORME', f'Válido até {exp_date.strftime("%d/%m/%Y")}'
+
+def classify_doc(filename, remap=None):
+    clean = filename.upper()
+    code = None
+    m = re.match(r'^([0-9]{2}(?:\.[0-9])?)\b', clean)
+    if m:
+        code = m.group(1)
+    else:
+        for c, pat in DOC_CLASSIFICATION_RULES:
             if re.search(pat, clean):
                 code = c
                 break
@@ -140,28 +219,7 @@ def parse_doc(filename, remap=None):
     if code and remap and code in remap:
         code = remap[code]
 
-    # Try date extraction: DD.MM.YYYY, DD_MM_YYYY, DD-MM-YYYY, YYYY-MM-DD
-    date_match = re.search(r'(\d{2})[.\-_/](\d{2})[.\-_/](\d{4})', filename)
-    exp_date = None
-    issue_date = None
-    if date_match:
-        d, m, y = date_match.groups()
-        try:
-            parsed = datetime.datetime(int(y), int(m), int(d))
-            # Assume date in filename is expiration if >= 2024, or issue date if older
-            if parsed.year >= 2025:
-                exp_date = parsed
-            else:
-                issue_date = parsed
-                # find validity period
-                for c, _, days in DOC_PATTERNS:
-                    if c == code and days > 0:
-                        exp_date = issue_date + datetime.timedelta(days=days)
-                        break
-        except:
-            pass
-
-    return code, issue_date, exp_date
+    return code
 
 def scan_collaborator(collab_folder, branch_id, access_token):
     collab_id = collab_folder['id']
@@ -193,31 +251,23 @@ def scan_collaborator(collab_folder, branch_id, access_token):
                 continue
 
             if iname.lower().endswith('.pdf') or imime == 'application/pdf':
-                code, issue, exp = parse_doc(iname, remap)
+                code = classify_doc(iname, remap)
                 if not code:
                     continue
 
-                status = 'INDETERMINADO'
-                detail = ''
-                now = datetime.datetime.now()
-                if exp:
-                    diff = (exp - now).days
-                    if diff < 0:
-                        status = 'VENCIDO'
-                        detail = f'Venceu em {exp.strftime("%d/%m/%Y")}'
-                    elif diff <= 30:
-                        status = 'VENCE_30'
-                        detail = f'Vence em {diff} dias ({exp.strftime("%d/%m/%Y")})'
-                    else:
-                        status = 'CONFORME'
-                        detail = f'Valido ate {exp.strftime("%d/%m/%Y")}'
+                parsed_date = parse_date_from_filename(iname)
+                exp_date = calculate_expiration(code, parsed_date, REF_DATE)
+                status, detail = evaluate_date(exp_date, REF_DATE)
+
+                # Se a data calculada for direta ou exp, issue date é calculada
+                issue_date = parsed_date if parsed_date and parsed_date < REF_DATE else None
 
                 cert_obj = {
                     'code': code,
                     'name': f'Doc {code}',
                     'filename': iname,
-                    'issueDate': issue.isoformat() if issue else None,
-                    'expirationDate': exp.isoformat() if exp else None,
+                    'issueDate': issue_date.strftime('%Y-%m-%dT03:00:00.000Z') if issue_date else None,
+                    'expirationDate': exp_date.strftime('%Y-%m-%dT03:00:00.000Z') if exp_date else None,
                     'statusEHS': status,
                     'statusDetail': detail,
                     'sourcePath': f'https://drive.google.com/file/d/{iid}/view'
@@ -227,9 +277,9 @@ def scan_collaborator(collab_folder, branch_id, access_token):
                 if not existing:
                     certificates[code] = cert_obj
                 else:
-                    if exp:
+                    if exp_date:
                         exist_exp = existing.get('expirationDate')
-                        if not exist_exp or exp.isoformat() > exist_exp:
+                        if not exist_exp or exp_date.isoformat() > exist_exp:
                             certificates[code] = cert_obj
 
     scan_recursive(collab_id)
@@ -269,11 +319,15 @@ def main():
                 try:
                     res = future.result()
                     all_inspectors.append(res)
-                    print(f'   + [{len(res["certificates"])} docs] {res["name"]} -> {res["driveFolderUrl"]}')
+                    conforme_count = sum(1 for c in res['certificates'].values() if c['statusEHS'] == 'CONFORME')
+                    print(f'   + [{len(res["certificates"])} docs | {conforme_count} OK] {res["name"]}')
                 except Exception as e:
                     print(f'   ! Erro ao escanear {fname}: {e}')
 
     print(f'\n>>> Total de colaboradores escaneados: {len(all_inspectors)}')
+    total_conforme = sum(sum(1 for c in i['certificates'].values() if c['statusEHS'] == 'CONFORME') for i in all_inspectors)
+    total_vencido = sum(sum(1 for c in i['certificates'].values() if c['statusEHS'] == 'VENCIDO') for i in all_inspectors)
+    print(f'>>> Resumo Geral: CONFORME={total_conforme} | VENCIDO={total_vencido}')
 
     for out_path in [OUTPUT_DATA, OUTPUT_SCRATCH]:
         os.makedirs(os.path.dirname(out_path), exist_ok=True)
