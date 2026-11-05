@@ -7,14 +7,13 @@
   "ehsRosterCount": 92,
   "storzRequestsCount": 538,
   "storzSource": "LIVE",
-  "divergencesCount": 459,
+  "divergencesCount": 405,
   "divergencesByKind": {
-    "SOMENTE_RPO": 99,
-    "SOMENTE_DRIVE": 134,
-    "DATA_DIVERGENTE": 166,
-    "RPO_VALIDADO_PENDENTE_BACKUP": 57,
-    "DRIVE_SEM_DATA": 2,
-    "SOMENTE_STORZ": 1
+    "SOMENTE_RPO": 53,
+    "DATA_DIVERGENTE": 150,
+    "SOMENTE_DRIVE": 159,
+    "RPO_VALIDADO_PENDENTE_BACKUP": 41,
+    "DRIVE_SEM_DATA": 2
   },
-  "complianceTotalRecords": 1520
+  "complianceTotalRecords": 1508
 }
