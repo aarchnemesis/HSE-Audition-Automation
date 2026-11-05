@@ -454,5 +454,13 @@
     "expiringSoon": 60,
     "expired": 23,
     "missing": 70
+  },
+  {
+    "date": "2026-11-05",
+    "documents": 1527,
+    "onTime": 1372,
+    "expiringSoon": 59,
+    "expired": 26,
+    "missing": 70
   }
 ]
