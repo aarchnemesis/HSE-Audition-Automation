@@ -117,6 +117,7 @@ export class StorzHttpScraper {
     const scrapedRequests: StorzRequest[] = []
 
     for (const collaboratorName of targets) {
+      await new Promise(r => setTimeout(r, 200))
       log(`🔍 Resolving collaborator: "${collaboratorName}" via REST API...`)
       const resolvedUser = await this.searchUserByName(
         collaboratorName,
@@ -330,27 +331,32 @@ export class StorzHttpScraper {
     session: StorzAuthSession
   ): Promise<{ handle: number; name: string } | null> {
     const searchName = collaboratorName.trim()
-    const searchRes = await fetch(
-      'https://api.sistemaescudo.com.br/v2/users/searchUsers',
-      {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${session.bearerToken}`,
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          ds_nome: searchName,
-          id_pessoa: session.handle,
-        }),
-      }
-    )
+    let searchJson: any
+    try {
+      const searchRes = await fetch(
+        'https://api.sistemaescudo.com.br/v2/users/searchUsers',
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${session.bearerToken}`,
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            ds_nome: searchName,
+            id_pessoa: session.handle,
+          }),
+        }
+      )
 
-    if (!searchRes.ok) {
+      if (!searchRes.ok) {
+        return null
+      }
+
+      searchJson = await searchRes.json()
+    } catch {
       return null
     }
-
-    const searchJson: any = await searchRes.json()
     const list: any[] = searchJson.data || []
     if (list.length === 0) return null
 
@@ -372,23 +378,28 @@ export class StorzHttpScraper {
     fd.append('saida', 'VIEW')
     fd.append('pessoa', String(handle))
 
-    const dossieRes = await fetch(
-      `https://storz.sistemaescudo.com.br/relatorios/dossie_do_aluno/index.php?elc=${elcToken}`,
-      {
-        method: 'POST',
-        headers: {
-          Cookie: cookies,
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: fd.toString(),
-      }
-    )
+    let html = ''
+    try {
+      const dossieRes = await fetch(
+        `https://storz.sistemaescudo.com.br/relatorios/dossie_do_aluno/index.php?elc=${elcToken}`,
+        {
+          method: 'POST',
+          headers: {
+            Cookie: cookies,
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: fd.toString(),
+        }
+      )
 
-    if (!dossieRes.ok) {
+      if (!dossieRes.ok) {
+        return null
+      }
+
+      html = await dossieRes.text()
+    } catch {
       return null
     }
-
-    const html = await dossieRes.text()
     // Strip tags to get clean inner text for parseDossieText
     const cleanText = html
       .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
