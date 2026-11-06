@@ -1564,16 +1564,16 @@
       "16": {
         "code": "16",
         "name": "GWO BST",
-        "expirationDate": "2027-02-14T12:00:00.000Z",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/02/2027"
+        "statusDetail": "Válido até 03/11/2028"
       },
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2027-02-14T12:00:00.000Z",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/02/2027"
+        "statusDetail": "Válido até 03/11/2028"
       },
       "18": {
         "code": "18",
@@ -1585,9 +1585,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2027-02-14T12:00:00.000Z",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/02/2027"
+        "statusDetail": "Válido até 03/11/2028"
       },
       "20": {
         "code": "20",
@@ -1620,9 +1620,9 @@
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2027-02-14T12:00:00.000Z",
+        "expirationDate": "2028-12-03T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/02/2027"
+        "statusDetail": "Válido até 03/12/2028"
       },
       "28": {
         "code": "28",
@@ -11623,9 +11623,9 @@
       "11": {
         "code": "11",
         "name": "NR 06",
-        "expirationDate": "2026-12-15T12:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 39 dias (15/12/2026)"
+        "expirationDate": "2028-10-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/10/2028"
       },
       "12": {
         "code": "12",
@@ -11644,16 +11644,16 @@
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2026-10-18T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 19 dias (18/10/2026)"
+        "expirationDate": "2028-10-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/10/2028"
       },
       "18": {
         "code": "18",
         "name": "NR 18",
-        "expirationDate": "2026-10-31T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 6 dias (31/10/2026)"
+        "expirationDate": "2028-10-10T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/10/2028"
       },
       "19": {
         "code": "19",
