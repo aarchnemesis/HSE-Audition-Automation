@@ -27,6 +27,18 @@
   },
   {
     "inspectorName": "ANTONIO ROGERIO DUARTE COSTA",
+    "docCode": "10",
+    "docName": "NR-01 Integração EHS",
+    "storzExpiration": "2076-11-06T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_STORZ",
+    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base na Storz",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC"
+  },
+  {
+    "inspectorName": "ANTONIO ROGERIO DUARTE COSTA",
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "driveExpiration": "2076-10-17T03:00:00.000Z",

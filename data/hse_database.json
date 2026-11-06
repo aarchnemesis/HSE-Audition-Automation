@@ -1964,15 +1964,15 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "expirationDate": "2076-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "619345",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 16,
-    "storzDeadline": "05/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619345 - Progresso: 16%) [Prazo Storz: 05/01/2027].",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso concluído e aprovado na Storz (619345) em 06/11/2026 — Válido até 06/11/2076 (aguardando upload no Drive).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T10:46:54.031Z"
+    "lastUpdated": "2026-11-06T12:47:03.458Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -22428,13 +22428,14 @@
     "expirationDate": "2074-10-01T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "583197",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 01/10/2074 | Reciclagem já solicitada na Storz (583197 - Status: SOLICITADO).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 66,
+    "storzDeadline": "05/01/2027",
+    "detail": "Válido até 01/10/2074 | Reciclagem já solicitada na Storz (583197 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1vhLB80shceA0tPQua4uubSytQVgVYZnV/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T11:46:48.283Z"
+    "lastUpdated": "2026-11-06T12:47:03.458Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22519,13 +22520,14 @@
     "expirationDate": "2026-10-28T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "583175",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 9 dias (28/10/2026) | SOLICITADO NA STORZ (583175 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 18,
+    "storzDeadline": "05/01/2027",
+    "detail": "VENCIDO há 9 dias (28/10/2026) | EM ANDAMENTO NA STORZ (583175 - Progresso: 18%) [Prazo Storz: 05/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 28/10/2026, ANTES do prazo da Storz (05/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1rj9VB7LwFtoAkY7ypsVSLhb7VkgRMkTj/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T03:02:15.165Z"
+    "lastUpdated": "2026-11-06T12:47:03.458Z"
   },
   {
     "inspectorId": "rpo_82",
