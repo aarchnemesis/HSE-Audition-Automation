@@ -8,13 +8,14 @@ import pypdf
 import io
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-TOKEN_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/google_oauth_token.json'
-CLIENT_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/google_oauth_client.json'
-PDF_CACHE_PATH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/data/pdf_content_cache.json'
-OUTPUT_DATA = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/data/drive_inspectors_cache.json'
-OUTPUT_SCRATCH = 'C:/Users/Arthwind/Documents/GitHub/HSE-Audition-Automation/scratch/drive_inspectors_cache.json'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TOKEN_PATH = os.path.join(BASE_DIR, 'scratch', 'google_oauth_token.json')
+CLIENT_PATH = os.path.join(BASE_DIR, 'scratch', 'google_oauth_client.json')
+PDF_CACHE_PATH = os.path.join(BASE_DIR, 'data', 'pdf_content_cache.json')
+OUTPUT_DATA = os.path.join(BASE_DIR, 'data', 'drive_inspectors_cache.json')
+OUTPUT_SCRATCH = os.path.join(BASE_DIR, 'scratch', 'drive_inspectors_cache.json')
 
-REF_DATE = datetime.datetime(2026, 11, 5)
+REF_DATE = datetime.datetime.now()
 
 BRANCHES = [
     ('1_0FUXX-hML_DOsYrakRxIBFq2a8w1lbB', '01 - Inspetores de Qualidade & Técnicos de Operações'),
@@ -103,15 +104,31 @@ if os.path.exists(PDF_CACHE_PATH):
 print(f'Cache de PDFs carregado: {len(PDF_CONTENT_CACHE)} entradas.')
 
 def get_valid_token():
-    with open(TOKEN_PATH, 'r', encoding='utf-8') as f:
-        t = json.load(f)
-    with open(CLIENT_PATH, 'r', encoding='utf-8') as f:
-        c = json.load(f)
-        creds = c.get('installed') or c.get('web')
+    client_id = os.environ.get('GOOGLE_OAUTH_CLIENT_ID')
+    client_secret = os.environ.get('GOOGLE_OAUTH_CLIENT_SECRET')
+    refresh_token = os.environ.get('GOOGLE_OAUTH_REFRESH_TOKEN')
 
-    refresh_token = t.get('refresh_token')
-    client_id = creds.get('client_id')
-    client_secret = creds.get('client_secret')
+    t = {}
+    if os.path.exists(TOKEN_PATH):
+        try:
+            with open(TOKEN_PATH, 'r', encoding='utf-8') as f:
+                t = json.load(f)
+                if not refresh_token:
+                    refresh_token = t.get('refresh_token')
+        except Exception:
+            pass
+
+    if os.path.exists(CLIENT_PATH) and (not client_id or not client_secret):
+        try:
+            with open(CLIENT_PATH, 'r', encoding='utf-8') as f:
+                c = json.load(f)
+                creds = c.get('installed') or c.get('web') or {}
+                if not client_id:
+                    client_id = creds.get('client_id')
+                if not client_secret:
+                    client_secret = creds.get('client_secret')
+        except Exception:
+            pass
 
     refresh_url = 'https://oauth2.googleapis.com/token'
     data = urllib.parse.urlencode({
@@ -126,8 +143,12 @@ def get_valid_token():
         new_token_data = json.loads(resp.read().decode('utf-8'))
         t['access_token'] = new_token_data['access_token']
 
-    with open(TOKEN_PATH, 'w', encoding='utf-8') as f:
-        json.dump(t, f, indent=2)
+    try:
+        os.makedirs(os.path.dirname(TOKEN_PATH), exist_ok=True)
+        with open(TOKEN_PATH, 'w', encoding='utf-8') as f:
+            json.dump(t, f, indent=2)
+    except Exception:
+        pass
 
     return t['access_token']
 
