@@ -6920,13 +6920,13 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "613534",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 30,
+    "storzProgressPercent": 40,
     "storzDeadline": "04/01/2027",
     "detail": "Válido até 11/10/2027 | Reciclagem já solicitada na Storz (613534 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1Ew37vnbVibedJKzyTLfoPytLvO8_O-Sp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T03:47:03.490Z"
+    "lastUpdated": "2026-11-06T04:02:09.309Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -20570,15 +20570,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-19T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "storzRequestId": "616712",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
-    "storzDeadline": "02/01/2027",
-    "detail": "VENCIDO há 18 dias (19/10/2026) | EM ANDAMENTO NA STORZ (616712 - Progresso: 0%) [Prazo Storz: 02/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 19/10/2026, ANTES do prazo da Storz (02/01/2027)!",
+    "detail": "VENCIDO há 18 dias (19/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1DLQDg4BcsGHw3fEzJsuvQrSMdnjUOoFk/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1MqqufZsNHsFqYUJyJq_gbTmI353Rmg4C",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T03:02:15.165Z"
+    "lastUpdated": "2026-11-06T04:02:09.309Z"
   },
   {
     "inspectorId": "rpo_75",
@@ -20659,14 +20655,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-08-25T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "572535",
-    "storzState": "CONCLUIDO",
-    "storzProgressPercent": 100,
     "detail": "Válido até 25/08/2027",
     "evidenceUrl": "https://drive.google.com/file/d/1_dNMlBz3d_vk8ZdXn_02epnv7K8Kv5MN/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1MqqufZsNHsFqYUJyJq_gbTmI353Rmg4C",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:34:00.668Z"
+    "lastUpdated": "2026-11-06T04:02:09.309Z"
   },
   {
     "inspectorId": "rpo_75",
@@ -20684,25 +20677,6 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1MqqufZsNHsFqYUJyJq_gbTmI353Rmg4C",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-11-05T11:46:48.283Z"
-  },
-  {
-    "inspectorId": "rpo_75",
-    "inspectorName": "VALDERSON DO NASCIMENTO FERREIRA",
-    "role": "IQ",
-    "sector": "INTERNAS",
-    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "docCode": "34",
-    "docName": "CIPA (NR-05)",
-    "modality": "ONLINE",
-    "expirationDate": "2027-06-08T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "storzRequestId": "516233",
-    "storzState": "CONCLUIDO",
-    "storzProgressPercent": 100,
-    "detail": "Curso concluído e aprovado na Storz (516233) em 08/06/2026 — Válido até 08/06/2027 (aguardando upload no Drive).",
-    "driveFolderUrl": "https://drive.google.com/drive/folders/1MqqufZsNHsFqYUJyJq_gbTmI353Rmg4C",
-    "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T10:45:41.606Z"
   },
   {
     "inspectorId": "rpo_76",
