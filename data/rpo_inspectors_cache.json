@@ -850,6 +850,13 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "RD071587BR",
     "certificates": {
+      "10": {
+        "code": "10",
+        "name": "NR 01",
+        "expirationDate": "2028-11-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028"
+      },
       "11": {
         "code": "11",
         "name": "NR 06",

@@ -31,10 +31,10 @@
     "docName": "NR-01 Integração EHS",
     "storzExpiration": "2076-11-06T03:00:00.000Z",
     "trustedSource": "STORZ",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_STORZ",
-    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base na Storz",
+    "rpoExpiration": "2028-11-06T12:00:00.000Z",
+    "divergent": false,
+    "detail": "Storz e RPO têm o documento — sem comparação de data (evento-gatilho, não periódico).",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC"
   },
   {
