@@ -9752,9 +9752,10 @@
     "trainingName": "[STORZ] - ATENDIMENTO PRé HOSPITALAR (PRIMEIROS SOCORROS) BáSICO",
     "modality": "PRESENCIAL",
     "requestDate": "2026-10-09T03:00:00.000Z",
-    "state": "EM_ANDAMENTO",
-    "rawSituacao": "Em andamento",
-    "progressPercent": 75,
+    "completionDate": "2026-11-06T03:00:00.000Z",
+    "state": "CONCLUIDO",
+    "rawSituacao": "Aprovado",
+    "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 14,
     "idealSlaDays": 2
