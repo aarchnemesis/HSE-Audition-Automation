@@ -1,11 +1,11 @@
 {
-  "syncTimestamp": "2026-11-06T04:02:09.579Z",
-  "refDate": "2026-11-06T04:00:33.785Z",
+  "syncTimestamp": "2026-11-06T04:46:59.595Z",
+  "refDate": "2026-11-06T04:45:24.245Z",
   "driveFoldersCount": 110,
   "rpoActiveCount": 143,
   "rpoTotalCount": 375,
   "ehsRosterCount": 92,
-  "storzRequestsCount": 659,
+  "storzRequestsCount": 664,
   "storzSource": "LIVE",
   "divergencesCount": 408,
   "divergencesByKind": {
@@ -16,5 +16,5 @@
     "RPO_VALIDADO_PENDENTE_BACKUP": 42,
     "DRIVE_SEM_DATA": 2
   },
-  "complianceTotalRecords": 1507
+  "complianceTotalRecords": 1508
 }
