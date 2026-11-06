@@ -62,7 +62,7 @@
           "activity": "IN_FIELD",
           "projectsInWindow": 8,
           "lastStart": "2026-10-26",
-          "nextStart": "2026-11-09"
+          "nextStart": "2026-11-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -360,7 +360,7 @@
           "activity": "IN_FIELD",
           "projectsInWindow": 8,
           "lastStart": "2026-10-26",
-          "nextStart": "2026-11-09"
+          "nextStart": "2026-11-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -496,7 +496,7 @@
           "appv3.datalife.global"
         ],
         "category": "DOCUMENTS",
-        "automation": "NOT_AUTOMATED",
+        "automation": "AUTOMATED",
         "clients": [
           "NEOENERGIA",
           "ENEL",
@@ -506,6 +506,10 @@
       "accessRows": 3,
       "accessPending": 2,
       "missingCredentials": 0,
+      "census": {
+        "capturedAt": "2026-11-06T18:28:17.869Z",
+        "workers": 6
+      },
       "clients": [
         {
           "client": "NEOENERGIA",

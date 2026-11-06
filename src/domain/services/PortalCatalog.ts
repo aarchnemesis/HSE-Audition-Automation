@@ -189,7 +189,7 @@ export const PORTALS: PortalInfo[] = [
     'Datalife (Neoenergia, Enel, GE Vernova)',
     'Datalife',
     ['appv3.datalife.global'],
-    'NOT_AUTOMATED',
+    'AUTOMATED',
     ['NEOENERGIA', 'ENEL', 'GE VERNOVA']
   ),
   portal(

@@ -47,7 +47,8 @@
     "test:watch": "vitest",
     "lint": "tsc --noEmit",
     "portal:analyze-rejections": "tsx src/cli/runAnalyzeRejections.ts",
-    "portal:telegram-digest": "tsx src/cli/runPortalDailyDigestTelegram.ts"
+    "portal:telegram-digest": "tsx src/cli/runPortalDailyDigestTelegram.ts",
+    "datalife-extract": "tsx src/cli/runDatalifeExtract.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
