@@ -30,6 +30,18 @@
   },
   {
     "inspectorName": "FRANCISCO WELLINGTON DA COSTA GOMES",
+    "docCode": "11",
+    "docName": "NR-06 Uso de EPI",
+    "storzExpiration": "2076-11-06T03:00:00.000Z",
+    "trustedSource": "STORZ",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_STORZ",
+    "detail": "Curso/certificado confirmado via Storz (conclusão de curso), mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base na Storz",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28"
+  },
+  {
+    "inspectorName": "FRANCISCO WELLINGTON DA COSTA GOMES",
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "rpoExpiration": "2026-12-06T12:00:00.000Z",

@@ -11328,15 +11328,15 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "statusEHS": "STORZ_EM_ANDAMENTO",
+    "expirationDate": "2076-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "619338",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 66,
-    "storzDeadline": "04/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619338 - Progresso: 66%) [Prazo Storz: 04/01/2027].",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso concluído e aprovado na Storz (619338) em 06/11/2026 — Válido até 06/11/2076 (aguardando upload no Drive).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T18:01:12.703Z"
+    "lastUpdated": "2026-11-06T18:34:02.583Z"
   },
   {
     "inspectorId": "rpo_45",
