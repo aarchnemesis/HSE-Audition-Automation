@@ -27,8 +27,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 6,
+          "lastStart": "2026-10-06",
+          "nextStart": "2026-11-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -59,8 +60,9 @@
         {
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
-          "projectsInWindow": 2,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 8,
+          "lastStart": "2026-10-26",
+          "nextStart": "2026-11-09"
         }
       ],
       "activity": "IN_FIELD"
@@ -77,8 +79,7 @@
         "category": "DOCUMENTS",
         "automation": "AUTOMATED",
         "clients": [
-          "SERENA",
-          "GE VERNOVA"
+          "SERENA"
         ]
       },
       "accessRows": 2,
@@ -91,16 +92,10 @@
       "clients": [
         {
           "client": "SERENA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-10"
-        },
-        {
-          "client": "GE VERNOVA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "lastStart": "2026-11-02",
+          "nextStart": "2026-11-09"
         }
       ],
       "activity": "IN_FIELD"
@@ -132,14 +127,14 @@
         {
           "client": "VESTAS CHILE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 1,
-          "lastStart": "2026-10-19"
+          "projectsInWindow": 6,
+          "lastStart": "2026-11-06",
+          "nextStart": "2026-11-18"
         },
         {
           "client": "VESTAS ARGENTINA",
-          "activity": "DORMANT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-01-14"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
       "activity": "IN_FIELD"
@@ -178,27 +173,27 @@
           "client": "CPFL",
           "activity": "IN_FIELD",
           "projectsInWindow": 1,
-          "lastStart": "2026-10-13"
+          "lastStart": "2026-10-10"
         },
         {
           "client": "ENERGIMP",
           "activity": "IN_FIELD",
           "projectsInWindow": 3,
-          "nextStart": "2026-11-09",
-          "lastStart": "2026-11-03"
+          "lastStart": "2026-10-31",
+          "nextStart": "2026-11-23"
         },
         {
           "client": "IBITU",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-06-01"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 6,
+          "lastStart": "2026-10-12",
+          "nextStart": "2026-11-09"
         },
         {
           "client": "NAWP CHILE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 4,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-15"
+          "projectsInWindow": 3,
+          "nextStart": "2026-11-09"
         },
         {
           "client": "REPSOL CHILE",
@@ -230,12 +225,11 @@
       "clients": [
         {
           "client": "VESTAS MEXICO",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-24"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -290,9 +284,9 @@
       "clients": [
         {
           "client": "NORDEX ACCIONA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-18"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 2,
+          "nextStart": "2026-11-30"
         },
         {
           "client": "NAWP",
@@ -310,7 +304,7 @@
           "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -364,8 +358,9 @@
         {
           "client": "GOLDWIND",
           "activity": "IN_FIELD",
-          "projectsInWindow": 2,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 8,
+          "lastStart": "2026-10-26",
+          "nextStart": "2026-11-09"
         }
       ],
       "activity": "IN_FIELD"
@@ -392,12 +387,11 @@
       "clients": [
         {
           "client": "VOLTALIA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-06-22"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -449,13 +443,12 @@
       "clients": [
         {
           "client": "VESTAS",
-          "activity": "IN_FIELD",
-          "projectsInWindow": 3,
-          "lastStart": "2026-08-17",
-          "nextStart": "2026-12-08"
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-17"
         }
       ],
-      "activity": "IN_FIELD"
+      "activity": "RECENT"
     },
     {
       "portal": {
@@ -480,15 +473,15 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "projectsInWindow": 3,
+          "lastStart": "2026-11-02",
+          "nextStart": "2027-01-04"
         },
         {
           "client": "PONTAL",
           "activity": "DORMANT",
           "projectsInWindow": 0,
-          "lastStart": "2026-03-28"
+          "lastStart": "2026-01-06"
         }
       ],
       "activity": "IN_FIELD"
@@ -523,14 +516,14 @@
           "client": "ENEL",
           "activity": "DORMANT",
           "projectsInWindow": 0,
-          "lastStart": "2026-04-09"
+          "lastStart": "2024-11-29"
         },
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "projectsInWindow": 3,
+          "lastStart": "2026-11-02",
+          "nextStart": "2027-01-04"
         }
       ],
       "activity": "IN_FIELD"
@@ -557,9 +550,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "projectsInWindow": 3,
+          "lastStart": "2026-11-02",
+          "nextStart": "2027-01-04"
         }
       ],
       "activity": "IN_FIELD"
@@ -585,12 +578,11 @@
       "clients": [
         {
           "client": "RENOVA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-09-08"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -618,8 +610,9 @@
         {
           "client": "INVENERGY",
           "activity": "IN_FIELD",
-          "projectsInWindow": 3,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 6,
+          "lastStart": "2026-11-02",
+          "nextStart": "2026-11-16"
         }
       ],
       "activity": "IN_FIELD"
@@ -646,18 +639,18 @@
       "clients": [
         {
           "client": "ELERA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-06-03"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-31"
         },
         {
           "client": "COPEL",
           "activity": "RECENT",
           "projectsInWindow": 0,
-          "lastStart": "2026-05-12"
+          "lastStart": "2026-06-01"
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -681,12 +674,11 @@
       "clients": [
         {
           "client": "AUREN",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-05-25"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -710,12 +702,11 @@
       "clients": [
         {
           "client": "AUREN",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-05-25"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -738,11 +729,12 @@
       "clients": [
         {
           "client": "CASA DOS VENTOS",
-          "activity": "NO_PROJECTS",
-          "projectsInWindow": 0
+          "activity": "IN_FIELD",
+          "projectsInWindow": 2,
+          "nextStart": "2026-11-16"
         }
       ],
-      "activity": "NO_PROJECTS"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -773,7 +765,7 @@
           "client": "PONTAL",
           "activity": "DORMANT",
           "projectsInWindow": 0,
-          "lastStart": "2026-03-28"
+          "lastStart": "2026-01-06"
         }
       ],
       "activity": "DORMANT"
@@ -806,7 +798,7 @@
           "client": "CPFL",
           "activity": "IN_FIELD",
           "projectsInWindow": 1,
-          "lastStart": "2026-10-13"
+          "lastStart": "2026-10-10"
         }
       ],
       "activity": "IN_FIELD"
@@ -833,12 +825,13 @@
       "clients": [
         {
           "client": "ALIANCA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-03"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "nextStart": "2027-01-04",
+          "lastStart": "2026-05-25"
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -1047,7 +1040,7 @@
           "client": "ENEL",
           "activity": "DORMANT",
           "projectsInWindow": 0,
-          "lastStart": "2026-04-09"
+          "lastStart": "2024-11-29"
         }
       ],
       "activity": "DORMANT"
@@ -1077,7 +1070,7 @@
           "client": "COPEL",
           "activity": "RECENT",
           "projectsInWindow": 0,
-          "lastStart": "2026-05-12"
+          "lastStart": "2026-06-01"
         }
       ],
       "activity": "RECENT"
@@ -1157,12 +1150,11 @@
       "clients": [
         {
           "client": "ECHOENERGIA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-06-29"
+          "activity": "NO_PROJECTS",
+          "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "NO_PROJECTS"
     },
     {
       "portal": {
@@ -1185,13 +1177,12 @@
       "clients": [
         {
           "client": "VESTAS",
-          "activity": "IN_FIELD",
-          "projectsInWindow": 3,
-          "lastStart": "2026-08-17",
-          "nextStart": "2026-12-08"
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-17"
         }
       ],
-      "activity": "IN_FIELD"
+      "activity": "RECENT"
     },
     {
       "portal": {
@@ -1215,8 +1206,8 @@
         {
           "client": "NAWP PERU",
           "activity": "IN_FIELD",
-          "projectsInWindow": 2,
-          "lastStart": "2026-10-19"
+          "projectsInWindow": 1,
+          "nextStart": "2026-11-16"
         }
       ],
       "activity": "IN_FIELD"
@@ -1242,12 +1233,13 @@
       "clients": [
         {
           "client": "ALIANCA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-03"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 3,
+          "nextStart": "2027-01-04",
+          "lastStart": "2026-05-25"
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -1276,9 +1268,9 @@
         },
         {
           "client": "ELERA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-06-03"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 1,
+          "lastStart": "2026-10-31"
         },
         {
           "client": "SERRA DAS VACAS",
@@ -1292,7 +1284,7 @@
           "projectsInWindow": 0
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -1353,8 +1345,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 6,
+          "lastStart": "2026-10-06",
+          "nextStart": "2026-11-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -1381,9 +1374,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "projectsInWindow": 3,
+          "lastStart": "2026-11-02",
+          "nextStart": "2027-01-04"
         }
       ],
       "activity": "IN_FIELD"
@@ -1411,9 +1404,9 @@
         {
           "client": "GE VERNOVA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03",
-          "nextStart": "2026-11-12"
+          "projectsInWindow": 3,
+          "lastStart": "2026-11-02",
+          "nextStart": "2027-01-04"
         }
       ],
       "activity": "IN_FIELD"
@@ -1466,12 +1459,12 @@
       "clients": [
         {
           "client": "NORDEX ACCIONA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-18"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 2,
+          "nextStart": "2026-11-30"
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -1495,8 +1488,9 @@
         {
           "client": "SGRE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
-          "lastStart": "2026-11-03"
+          "projectsInWindow": 6,
+          "lastStart": "2026-10-06",
+          "nextStart": "2026-11-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -1522,12 +1516,13 @@
       "clients": [
         {
           "client": "SERENA",
-          "activity": "RECENT",
-          "projectsInWindow": 0,
-          "lastStart": "2026-08-10"
+          "activity": "IN_FIELD",
+          "projectsInWindow": 5,
+          "lastStart": "2026-11-02",
+          "nextStart": "2026-11-09"
         }
       ],
-      "activity": "RECENT"
+      "activity": "IN_FIELD"
     },
     {
       "portal": {
@@ -1551,13 +1546,12 @@
       "clients": [
         {
           "client": "VESTAS",
-          "activity": "IN_FIELD",
-          "projectsInWindow": 3,
-          "lastStart": "2026-08-17",
-          "nextStart": "2026-12-08"
+          "activity": "RECENT",
+          "projectsInWindow": 0,
+          "lastStart": "2026-08-17"
         }
       ],
-      "activity": "IN_FIELD"
+      "activity": "RECENT"
     },
     {
       "portal": {
@@ -1617,29 +1611,16 @@
   ],
   "clientsWithoutPortal": [
     {
-      "client": "ENGIE",
-      "activity": "IN_FIELD",
-      "projectsInWindow": 1,
-      "nextStart": "2026-12-06",
-      "lastStart": "2026-01-19"
-    },
-    {
       "client": "VESTAS R DOMINICANA",
       "activity": "IN_FIELD",
-      "projectsInWindow": 2,
-      "lastStart": "2026-10-26"
+      "projectsInWindow": 1,
+      "lastStart": "2026-10-09"
     },
     {
-      "client": "SEMPRA",
+      "client": "AXIA - ELETROSUL",
       "activity": "RECENT",
       "projectsInWindow": 0,
-      "lastStart": "2026-07-27"
-    },
-    {
-      "client": "NAWP ARGENTINA",
-      "activity": "RECENT",
-      "projectsInWindow": 0,
-      "lastStart": "2026-08-31"
+      "lastStart": "2026-06-09"
     }
   ],
   "unmatchedRows": [

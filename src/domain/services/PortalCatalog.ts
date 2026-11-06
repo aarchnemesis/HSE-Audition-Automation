@@ -83,7 +83,7 @@ export const PORTALS: PortalInfo[] = [
     'Surisoft',
     ['www.surisoft.com.br'],
     'AUTOMATED',
-    ['SERENA', 'GE VERNOVA']
+    ['SERENA']
   ),
   portal(
     'egestiona-vestaslatam',
