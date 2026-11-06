@@ -495,6 +495,15 @@
     "team": "Raphael Afonso Cardoso Pereira"
   },
   {
+    "wo": "ATD-2026-0124",
+    "client": "GOLDWIND",
+    "windfarm": "Complexo Eólico Tanque Novo",
+    "scope": "EXTERNAS",
+    "startDate": "2026-11-07",
+    "status": "Amarelo",
+    "team": "Thiago Lima Santos Silva"
+  },
+  {
     "wo": "ATD-2026-0118",
     "client": "VESTAS CHILE",
     "windfarm": "Complexo Eólico Duqueco",
@@ -561,7 +570,7 @@
     "client": "GOLDWIND",
     "windfarm": "Complexo Eólico Mataraca",
     "scope": "EXTERNAS",
-    "startDate": "2026-11-09",
+    "startDate": "2026-11-30",
     "status": "Amarelo",
     "team": "Thiago Lima Santos Silva"
   },
@@ -570,7 +579,7 @@
     "client": "GOLDWIND",
     "windfarm": "Complexo Eólico Aquiraz",
     "scope": "EXTERNAS",
-    "startDate": "2026-11-09",
+    "startDate": "2026-11-30",
     "status": "Amarelo",
     "team": "Thiago Lima Santos Silva"
   },
@@ -579,16 +588,7 @@
     "client": "GOLDWIND",
     "windfarm": "Complexo Eólico Casa Nova",
     "scope": "EXTERNAS",
-    "startDate": "2026-11-09",
-    "status": "Amarelo",
-    "team": "Thiago Lima Santos Silva"
-  },
-  {
-    "wo": "WOOPEN232",
-    "client": "GOLDWIND",
-    "windfarm": "Complexo Eólico Tanque Novo",
-    "scope": "EXTERNAS",
-    "startDate": "2026-11-07",
+    "startDate": "2026-12-07",
     "status": "Amarelo",
     "team": "Thiago Lima Santos Silva"
   },
@@ -597,7 +597,7 @@
     "client": "GOLDWIND",
     "windfarm": "Complexo Eólico Lagoa do Barro",
     "scope": "EXTERNAS",
-    "startDate": "2026-12-07",
+    "startDate": "2026-12-14",
     "status": "Amarelo",
     "team": "Thiago Lima Santos Silva"
   },
