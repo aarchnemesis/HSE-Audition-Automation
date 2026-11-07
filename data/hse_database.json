@@ -7005,17 +7005,16 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-22T03:00:00.000Z",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "613534",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 93,
-    "storzDeadline": "04/01/2027",
-    "detail": "Válido até 22/01/2027 | Reciclagem já solicitada na Storz (613534 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (613534) em 06/11/2026 — Válido até 06/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1R9IlBxTskth-MHqy8mu8bUVdDbJf-Rit/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-07T01:02:13.201Z"
+    "lastUpdated": "2026-11-07T01:46:54.415Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7063,13 +7062,14 @@
     "expirationDate": "2027-01-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "613568",
-    "storzState": "SOLICITADO",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 31/01/2027 | Reciclagem já solicitada na Storz (613568 - Status: SOLICITADO).",
+    "storzDeadline": "05/01/2027",
+    "detail": "Válido até 31/01/2027 | Reciclagem já solicitada na Storz (613568 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1r-9-ZiCekMD4yufoaIEQm3HemOqactmE/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-07T01:46:54.415Z"
   },
   {
     "inspectorId": "rpo_32",
