@@ -1836,10 +1836,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-26T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 50 dias (26/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 49 dias (26/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1OLwcwGxacW4yBI0CfFCH5TEvTWi0mZwM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -1920,10 +1920,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-24T12:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 18 dias (24/11/2026)",
+    "detail": "ALERTA MÉDIO: Vence em 17 dias (24/11/2026)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1OLwcwGxacW4yBI0CfFCH5TEvTWi0mZwM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -2835,10 +2835,10 @@
     "storzRequestId": "596031",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 42 dias (18/12/2026) | SOLICITADO NA STORZ (596031 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 41 dias (18/12/2026) | SOLICITADO NA STORZ (596031 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -4507,11 +4507,11 @@
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
     "expirationDate": "2027-01-06T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 06/01/2027",
+    "statusEHS": "VENCE_60",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (06/01/2027)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -4524,10 +4524,10 @@
     "modality": "ONLINE",
     "expirationDate": "2024-11-12T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 724 dias (12/11/2024)",
+    "detail": "VENCIDO há 725 dias (12/11/2024)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -10893,10 +10893,10 @@
     "storzRequestId": "589422",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 54 dias (30/12/2026) | SOLICITADO NA STORZ (589422 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 53 dias (30/12/2026) | SOLICITADO NA STORZ (589422 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NPxObU2Ddf99YzztLVhX6sNpCiZ5LV0V",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -15270,10 +15270,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-05-06T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 184 dias (06/05/2026)",
+    "detail": "VENCIDO há 185 dias (06/05/2026)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1D-5nInBy6hmdqE8z70pI_F9lQD73jben",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_59",
@@ -17531,10 +17531,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-22T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 46 dias (22/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 45 dias (22/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DFFBonCuulRW47ZvDvQ0Q48Gfy9EI3MO",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_66",
@@ -18046,10 +18046,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-01T12:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 25 dias (01/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA MÉDIO: Vence em 24 dias (01/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1BxPYugHVKn9ZRj6RiBM3VICIMZ4lpEoR",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_67",
@@ -18118,10 +18118,10 @@
     "storzRequestId": "586660",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA URGENTE: Vence em 13 dias (19/11/2026) (Validado no RPO | Comprovante pendente no Drive) | SOLICITADO NA STORZ (586660 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA URGENTE: Vence em 12 dias (19/11/2026) (Validado no RPO | Comprovante pendente no Drive) | SOLICITADO NA STORZ (586660 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1BxPYugHVKn9ZRj6RiBM3VICIMZ4lpEoR",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_67",
@@ -19519,10 +19519,10 @@
     "storzRequestId": "607041",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 58 dias (03/01/2027) | SOLICITADO NA STORZ (607041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 57 dias (03/01/2027) | SOLICITADO NA STORZ (607041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -19827,10 +19827,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-09T12:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 3 dia(s) (09/11/2026)",
+    "detail": "CRÍTICO: Vence em 2 dia(s) (09/11/2026)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -20485,10 +20485,10 @@
     "modality": "ONLINE",
     "expirationDate": "2025-11-11T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 360 dias (11/11/2025) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "VENCIDO há 361 dias (11/11/2025) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DY4WISGgK4LRd7M6uAsaxlEpFOYKo1yU",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -24394,11 +24394,11 @@
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
     "expirationDate": "2027-01-06T12:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 06/01/2027",
+    "statusEHS": "VENCE_60",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (06/01/2027)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1riB8D6yph-Rvn0g2PaWjwJsLFH9yaOI9",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_94",
@@ -24428,10 +24428,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-02T12:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 26 dias (02/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA MÉDIO: Vence em 25 dias (02/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1gwOmrszXymgc4ACDmJrMdKnGx9wJZgfB",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -26079,10 +26079,10 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-07T12:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 1 dia(s) (07/11/2026)",
+    "detail": "CRÍTICO: Vence em 0 dia(s) (07/11/2026)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QdW_VNzoleTh9ke35E5X7d7nmy9r_4oS",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_102",
@@ -26300,10 +26300,10 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-02T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (02/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (02/01/2027)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sD-np2jvKjX57RZUnfcp4HQC2ChG64gA",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-06T17:02:25.364Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_103",
@@ -26551,10 +26551,10 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-08T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (08/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
+    "detail": "ALERTA INICIAL: Vence em 31 dias (08/12/2026) (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jVB6rjg0mrxtMJF_7DuLuXc7pP5uUn2k",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-06T12:02:22.431Z"
+    "lastUpdated": "2026-11-07T12:02:00.677Z"
   },
   {
     "inspectorId": "rpo_106",
