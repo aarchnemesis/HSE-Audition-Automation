@@ -11072,16 +11072,16 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2028-10-01T03:00:00.000Z",
+    "expirationDate": "2028-11-07T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "607013",
-    "storzState": "EM_ANDAMENTO",
+    "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 01/10/2028 | Reciclagem já solicitada na Storz (607013 - Status: EM_ANDAMENTO).",
+    "detail": "Curso renovado e aprovado na Storz (607013) em 07/11/2026 — Válido até 07/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1oT3k5X__TFtTVighxWx2dVeVpVOfrWCk/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-07T19:46:58.121Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -11209,13 +11209,14 @@
     "expirationDate": "2027-01-06T03:00:00.000Z",
     "statusEHS": "VENCE_60",
     "storzRequestId": "607045",
-    "storzState": "SOLICITADO",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 60 dias (06/01/2027) | SOLICITADO NA STORZ (607045 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzDeadline": "06/01/2027",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (06/01/2027) | EM ANDAMENTO NA STORZ (607045 - Progresso: 0%) [Prazo Storz: 06/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1TDa9PPCl9n1psSYddxxY9sDkRKuoGlfk/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-07T03:02:11.506Z"
+    "lastUpdated": "2026-11-07T19:46:58.121Z"
   },
   {
     "inspectorId": "rpo_44",
