@@ -463,12 +463,12 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "617093",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 21,
+    "storzProgressPercent": 28,
     "storzDeadline": "03/01/2027",
     "detail": "Válido até 01/11/2028 | Reciclagem já solicitada na Storz (617093 - Status: EM_ANDAMENTO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1hs_a_N5vvpIFEISytZ6i-CZInclA50uX",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-07T02:46:58.176Z"
+    "lastUpdated": "2026-11-08T18:46:58.400Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -14367,17 +14367,16 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2026-11-24T03:00:00.000Z",
-    "statusEHS": "VENCE_30",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "583158",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 76,
-    "storzDeadline": "06/01/2027",
-    "detail": "ALERTA MÉDIO: Vence em 16 dias (24/11/2026) | EM ANDAMENTO NA STORZ (583158 - Progresso: 76%) [Prazo Storz: 06/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (06/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (583158) em 08/11/2026 — Válido até 08/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1MKhvEkl81-Mwl0Hwwx9XmtOAVX1fVxhZ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-08T18:02:06.040Z"
+    "lastUpdated": "2026-11-08T18:46:58.400Z"
   },
   {
     "inspectorId": "rpo_56",
@@ -14448,13 +14447,14 @@
     "expirationDate": "2026-11-06T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "583168",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 2 dias (06/11/2026) | SOLICITADO NA STORZ (583168 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 18,
+    "storzDeadline": "07/01/2027",
+    "detail": "VENCIDO há 2 dias (06/11/2026) | EM ANDAMENTO NA STORZ (583168 - Progresso: 18%) [Prazo Storz: 07/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 06/11/2026, ANTES do prazo da Storz (07/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1itvKtGM5lVH3kXfybMwk4uSmhzi_1v1l/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-08T03:02:09.975Z"
+    "lastUpdated": "2026-11-08T18:46:58.400Z"
   },
   {
     "inspectorId": "rpo_56",
