@@ -14371,13 +14371,13 @@
     "statusEHS": "VENCE_30",
     "storzRequestId": "583158",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 56,
     "storzDeadline": "06/01/2027",
-    "detail": "ALERTA MÉDIO: Vence em 16 dias (24/11/2026) | EM ANDAMENTO NA STORZ (583158 - Progresso: 50%) [Prazo Storz: 06/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (06/01/2027)!",
+    "detail": "ALERTA MÉDIO: Vence em 16 dias (24/11/2026) | EM ANDAMENTO NA STORZ (583158 - Progresso: 56%) [Prazo Storz: 06/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (06/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1MKhvEkl81-Mwl0Hwwx9XmtOAVX1fVxhZ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-08T15:46:57.155Z"
+    "lastUpdated": "2026-11-08T17:02:05.679Z"
   },
   {
     "inspectorId": "rpo_56",
@@ -24722,13 +24722,13 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "613532",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 30,
+    "storzProgressPercent": 36,
     "storzDeadline": "31/12/2026",
     "detail": "Válido até 22/01/2027 | Reciclagem já solicitada na Storz (613532 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1KNEN4bl9_BaHelveH37AjSO3Su9YvItj/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-08T17:02:05.679Z"
   },
   {
     "inspectorId": "rpo_96",
