@@ -12471,13 +12471,13 @@
     "statusEHS": "VENCE_30",
     "storzRequestId": "583159",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 83,
     "storzDeadline": "06/01/2027",
-    "detail": "ALERTA MÉDIO: Vence em 16 dias (24/11/2026) | EM ANDAMENTO NA STORZ (583159 - Progresso: 50%) [Prazo Storz: 06/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (06/01/2027)!",
+    "detail": "ALERTA MÉDIO: Vence em 16 dias (24/11/2026) | EM ANDAMENTO NA STORZ (583159 - Progresso: 83%) [Prazo Storz: 06/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (06/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1sOFZqZOa3UrTfkv6Yh5bnhx_g3C_N4CT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlRgblQW3jQ6_S26aimmQiGyTLDfQr-P",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-08T23:02:07.965Z"
+    "lastUpdated": "2026-11-08T23:46:55.018Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -20936,17 +20936,16 @@
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
     "modality": "ONLINE",
-    "expirationDate": "2075-11-24T03:00:00.000Z",
+    "expirationDate": "2076-11-08T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "616346",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 16,
-    "storzDeadline": "03/01/2027",
-    "detail": "Válido até 24/11/2075 | Reciclagem já solicitada na Storz (616346 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (616346) em 08/11/2026 — Válido até 08/11/2076 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1E9TIy2DtUTlvWU074a68bxqU5Fj2kbPV/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ybCf1QPeLcW90DdD6ft3-gDTVq4ZNpCV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T18:13:18.054Z"
+    "lastUpdated": "2026-11-08T23:46:55.018Z"
   },
   {
     "inspectorId": "rpo_76",
