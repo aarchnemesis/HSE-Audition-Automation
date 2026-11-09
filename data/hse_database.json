@@ -12545,13 +12545,13 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "583172",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 31,
+    "storzProgressPercent": 43,
     "storzDeadline": "07/01/2027",
     "detail": "Válido até 19/10/2076 | Reciclagem já solicitada na Storz (583172 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1KPXewOTcb5jhKDulcF_ZHWTN0ZAVkD5E/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlRgblQW3jQ6_S26aimmQiGyTLDfQr-P",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T00:46:57.976Z"
+    "lastUpdated": "2026-11-09T02:02:01.596Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -14442,17 +14442,16 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "expirationDate": "2026-11-06T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "583168",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 68,
-    "storzDeadline": "07/01/2027",
-    "detail": "VENCIDO há 2 dias (06/11/2026) | EM ANDAMENTO NA STORZ (583168 - Progresso: 68%) [Prazo Storz: 07/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 06/11/2026, ANTES do prazo da Storz (07/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (583168) em 08/11/2026 — Válido até 08/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1itvKtGM5lVH3kXfybMwk4uSmhzi_1v1l/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-08T20:46:57.301Z"
+    "lastUpdated": "2026-11-09T02:02:01.596Z"
   },
   {
     "inspectorId": "rpo_56",
