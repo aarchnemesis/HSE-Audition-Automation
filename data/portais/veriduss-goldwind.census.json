@@ -1,6 +1,6 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-09T17:00:54.213Z",
+  "capturedAt": "2026-11-09T19:01:23.730Z",
   "workers": [
     {
       "name": "DANIEL FERNANDES PACHECO",
@@ -1619,9 +1619,8 @@
         },
         {
           "title": "FICHA DE REGISTRO",
-          "status": "REJECTED",
-          "expiresOn": "2030-05-04",
-          "note": "Gentileza postar somente o documento solicitado.",
+          "status": "MISSING",
+          "expiresOn": "2028-05-20",
           "required": true
         }
       ]
@@ -1979,13 +1978,6 @@
           "required": true
         },
         {
-          "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
-          "status": "REJECTED",
-          "expiresOn": "2027-11-03",
-          "note": "É necessário que seja feita a marcação na parte \"Aptidão específica para atividade de risco\" informando apto, inapto ou N/A para os riscos de altura, espaço confinado e elétrica.",
-          "required": true
-        },
-        {
           "title": "CARTEIRA NACIONAL DE HABILITAÇÃO - CNH",
           "status": "APPROVED",
           "expiresOn": "2031-08-10",
@@ -2061,6 +2053,18 @@
           "title": "CCMEI - CERTIFICADO DA CONDIÇÃO DE MICROEMPREENDEDOR INDIVIDUAL",
           "status": "MISSING",
           "expiresOn": "2030-12-14",
+          "required": true
+        },
+        {
+          "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
+          "status": "MISSING",
+          "expiresOn": "2027-11-03",
+          "required": true
+        },
+        {
+          "title": "CONTRIBUIÇÃO INSS (RPA)",
+          "status": "MISSING",
+          "expiresOn": "2026-12-09",
           "required": true
         }
       ]
