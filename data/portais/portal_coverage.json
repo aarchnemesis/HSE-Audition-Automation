@@ -52,7 +52,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T12:01:15.877Z",
+        "capturedAt": "2026-11-09T15:01:27.439Z",
         "workers": 14
       },
       "clients": [
@@ -93,7 +93,7 @@
           "client": "SERENA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-11-09",
+          "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
       ],
@@ -1520,7 +1520,7 @@
           "client": "SERENA",
           "activity": "IN_FIELD",
           "projectsInWindow": 5,
-          "lastStart": "2026-11-09",
+          "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
       ],
