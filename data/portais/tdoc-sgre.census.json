@@ -1,6 +1,6 @@
 {
   "portalId": "tdoc-sgre",
-  "capturedAt": "2026-11-04T12:34:45.913Z",
+  "capturedAt": "2026-11-09T10:00:28.307Z",
   "workers": [
     {
       "name": "João Carlos Guardiano",
@@ -16,17 +16,20 @@
         {
           "title": "Contrato trabalho",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Trein. NR10 Básico",
@@ -56,7 +59,7 @@
           "title": "Ficha EPI",
           "required": true,
           "status": "IN_REVIEW",
-          "note": "Enviado em 2026-10-22"
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Trein. Direção Defensiva",
@@ -79,7 +82,8 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -100,12 +104,14 @@
         {
           "title": "CTPS",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Ficha Registro Colaborador",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Foto 3x4 trabalhador",
@@ -115,7 +121,8 @@
         {
           "title": "Ordem Serviço",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Registro Conselho Classe",
@@ -149,13 +156,14 @@
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
         },
         {
           "title": "Antiqueda Avanti",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-04-07"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Perfil treinamento SGRE Manutenção",
@@ -229,8 +237,8 @@
         {
           "title": "Trein. NR10 SEP",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-12"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-04"
         },
         {
           "title": "Trein. NR33",
@@ -247,8 +255,8 @@
         {
           "title": "Ficha EPI",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-15"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-04"
         },
         {
           "title": "Trein. Direção Defensiva",
@@ -265,8 +273,8 @@
         {
           "title": "Checklist Diário EPI Altura",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-15"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-04"
         },
         {
           "title": "Autorização Espaço Confinado (NR33)",
@@ -307,7 +315,8 @@
         {
           "title": "Ordem Serviço",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-04"
         },
         {
           "title": "Registro Conselho Classe",
@@ -445,8 +454,8 @@
         {
           "title": "ASO",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-10-24"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-04"
         },
         {
           "title": "Checklist Diário EPI Altura",
@@ -764,202 +773,6 @@
       ]
     },
     {
-      "name": "GABRIEL LIMA FEITOSA",
-      "role": "INSPETOR DE QUALIDADE",
-      "contract": "SANTO AGOSTINHO",
-      "documents": [
-        {
-          "title": "Carteira Nácional Habilitação",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2032-05-12"
-        },
-        {
-          "title": "Contrato trabalho",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Autorização Instalações Elétricas (NR10)",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-20"
-        },
-        {
-          "title": "Autorização Trabalhos Verticais (NR35)",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-20"
-        },
-        {
-          "title": "Trein. NR10 Básico",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-09-21"
-        },
-        {
-          "title": "Trein. NR10 SEP",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-09-23"
-        },
-        {
-          "title": "Trein. NR33",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-08-13"
-        },
-        {
-          "title": "Trein. NR35",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-06-28"
-        },
-        {
-          "title": "Ficha EPI",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-03-24"
-        },
-        {
-          "title": "Trein. Direção Defensiva",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-02-24"
-        },
-        {
-          "title": "ASO",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-08-19"
-        },
-        {
-          "title": "Checklist Diário EPI Altura",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-03-24"
-        },
-        {
-          "title": "Autorização Espaço Confinado (NR33)",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-20"
-        },
-        {
-          "title": "Cartão de vacinação + COVID19",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Trein. Integração Admissional",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-09-22"
-        },
-        {
-          "title": "Trein. Segurança Máquinas/Equip.",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-09-22"
-        },
-        {
-          "title": "CTPS",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Ficha Registro Colaborador",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Foto 3x4 trabalhador",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Ordem Serviço",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Registro Conselho Classe",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "CPF-RG o DNI",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Trein. NR11/ Trein. talha da turbina",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-10-20"
-        },
-        {
-          "title": "Trein. Combate a Incêndio",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-05-19"
-        },
-        {
-          "title": "Trein. Primeiros socorros",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-05-19"
-        },
-        {
-          "title": "Autorização Formal NR12",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-20"
-        },
-        {
-          "title": "Antiqueda Avanti",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-10-18"
-        },
-        {
-          "title": "Perfil treinamento SGRE Manutenção",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-02-24"
-        },
-        {
-          "title": "Cert. GWO-BST",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-05-12"
-        },
-        {
-          "title": "Cert./Diploma Qualificação Técnica",
-          "required": true,
-          "status": "APPROVED"
-        },
-        {
-          "title": "Apolice Seguro Vida",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-06"
-        },
-        {
-          "title": "Trein. NR06 - EPIS",
-          "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2028-09-22"
-        },
-        {
-          "title": "E-mail externo SGRE",
-          "required": true,
-          "status": "IN_REVIEW",
-          "note": "DESAPARECIDO"
-        }
-      ]
-    },
-    {
       "name": "Francisco Davilo Marques de Sousa",
       "role": "Inspetor de Qualidade",
       "contract": "SANTO AGOSTINHO",
@@ -1006,8 +819,8 @@
         {
           "title": "Trein. NR35",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-13"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Ficha EPI",
@@ -1093,14 +906,14 @@
         {
           "title": "Trein. Combate a Incêndio",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-15"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Trein. Primeiros socorros",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-14"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Autorização Formal NR12",
@@ -1121,8 +934,8 @@
         {
           "title": "Cert. GWO-BST",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-13"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         },
         {
           "title": "Cert./Diploma Qualificação Técnica",
@@ -1318,6 +1131,202 @@
           "required": true,
           "status": "APPROVED",
           "expiresOn": "2028-09-15"
+        },
+        {
+          "title": "E-mail externo SGRE",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        }
+      ]
+    },
+    {
+      "name": "WILLAMES WAGNER DA SILVA",
+      "role": "ASSISTENTE DE OPERAÇÕES",
+      "contract": "SANTO AGOSTINHO",
+      "documents": [
+        {
+          "title": "Carteira Nácional Habilitação",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2032-07-12"
+        },
+        {
+          "title": "Contrato trabalho",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Autorização Instalações Elétricas (NR10)",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Autorização Trabalhos Verticais (NR35)",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. NR10 Básico",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "Trein. NR10 SEP",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "Trein. NR33",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-06"
+        },
+        {
+          "title": "Trein. NR35",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-06"
+        },
+        {
+          "title": "Ficha EPI",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        },
+        {
+          "title": "Trein. Direção Defensiva",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "ASO",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "Checklist Diário EPI Altura",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        },
+        {
+          "title": "Autorização Espaço Confinado (NR33)",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-06"
+        },
+        {
+          "title": "Cartão de vacinação + COVID19",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. Integração Admissional",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. Segurança Máquinas/Equip.",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2028-10-29"
+        },
+        {
+          "title": "CTPS",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Ficha Registro Colaborador",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Foto 3x4 trabalhador",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
+        },
+        {
+          "title": "Ordem Serviço",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "Registro Conselho Classe",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
+        },
+        {
+          "title": "CPF-RG o DNI",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. NR11/ Trein. talha da turbina",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2027-11-04"
+        },
+        {
+          "title": "Trein. Combate a Incêndio",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
+        },
+        {
+          "title": "Trein. Primeiros socorros",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-06"
+        },
+        {
+          "title": "Autorização Formal NR12",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Antiqueda Avanti",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        },
+        {
+          "title": "Perfil treinamento SGRE Manutenção",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        },
+        {
+          "title": "Cert. GWO-BST",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2028-06-13"
+        },
+        {
+          "title": "Cert./Diploma Qualificação Técnica",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
+        },
+        {
+          "title": "Apolice Seguro Vida",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-08"
+        },
+        {
+          "title": "Trein. NR06 - EPIS",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2028-10-28"
         },
         {
           "title": "E-mail externo SGRE",

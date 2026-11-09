@@ -69,7 +69,7 @@
     "scope": "INTERNAS – INVESTIGATIVA",
     "startDate": "2026-10-19",
     "status": "Verde",
-    "team": "Allan Thiago Ramos Veiga, Francisco Vinicius Sousa Dos Santos, Herbeson, Wanderson Avelino de Souza"
+    "team": "Allan Thiago Ramos Veiga, FRANCISCO EVERSON BARBOSA VASCONCELOS, Francisco Vinicius Sousa Dos Santos, Wanderson Avelino de Souza"
   },
   {
     "wo": "2024-0011-3",
@@ -123,7 +123,7 @@
     "scope": "INTERNAS – INVESTIGATIVA",
     "startDate": "2026-11-02",
     "status": "Verde",
-    "team": "Francisco Everson, Francisco Leonardo Da Silva Ferreira, WERMESON DE OLIVEIRA FRANCO, Wanderson Avelino de Souza, Ítalo Abreu"
+    "team": "FRANCISCO EVERSON BARBOSA VASCONCELOS, Francisco Leonardo Da Silva Ferreira, Rafael Siqueira Da Silva, WERMESON DE OLIVEIRA FRANCO, Wanderson Avelino de Souza, Ítalo Abreu"
   },
   {
     "wo": "2026-0049",
@@ -195,7 +195,7 @@
     "scope": "INTERNAS – INVESTIGATIVA",
     "startDate": "2026-11-16",
     "status": "Amarelo",
-    "team": "Francisco Vinicius Sousa Dos Santos, Herbes, Wanderson Avelino de Souza, Ítalo Abreu"
+    "team": "FRANCISCO EVERSON BARBOSA VASCONCELOS, Francisco Vinicius Sousa Dos Santos, Wanderson Avelino de Souza, Ítalo Abreu"
   },
   {
     "wo": "WOOPEN09",
@@ -205,42 +205,6 @@
     "startDate": "2026-11-16",
     "status": "Amarelo",
     "team": "Lucas Franklin Falcão Silva, Marcos Magalhães, Wanderson Avelino de Souza"
-  },
-  {
-    "wo": "2025-0075-2",
-    "client": "NAWP CHILE",
-    "windfarm": "Complexo Eólico Atacama",
-    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
-    "startDate": "2026-11-09",
-    "status": "Amarelo",
-    "team": "Eraldo Antonio de Moura, Lucas Andre de Sousa Ribeiro, Marcos Magalhães"
-  },
-  {
-    "wo": "WOOPEN20",
-    "client": "NAWP CHILE",
-    "windfarm": "Complexo Eólico Antofagasta",
-    "scope": "INTERNAS – INVESTIGATIVA",
-    "startDate": "2026-11-30",
-    "status": "Amarelo",
-    "team": "Eraldo Antonio de Moura, Francisco Fabricio Freire Barbosa, Lucas Andre de Sousa Ribeiro, Marcos Magalhães, Rafael Andrade Barbosa"
-  },
-  {
-    "wo": "WOOPEN21",
-    "client": "NAWP CHILE",
-    "windfarm": "Complexo Eólico Alena",
-    "scope": "INTERNAS – INVESTIGATIVA",
-    "startDate": "2027-03-01",
-    "status": "Amarelo",
-    "team": "Eraldo Antonio de Moura, Francisco Fabricio Freire Barbosa, Lucas Andre de Sousa Ribeiro, Marcos Magalhães, Rafael Andrade Barbosa"
-  },
-  {
-    "wo": "2025-0104-3",
-    "client": "COPEL",
-    "windfarm": "Complexo Eólico Brisa Potiguar",
-    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
-    "startDate": "2025-12-08",
-    "status": "Amarelo",
-    "team": ""
   },
   {
     "wo": "WOOPEN24",
@@ -261,6 +225,42 @@
     "team": "Igor Martins Rocha"
   },
   {
+    "wo": "2025-0075-2",
+    "client": "NAWP CHILE",
+    "windfarm": "Complexo Eólico Atacama",
+    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
+    "startDate": "2026-12-07",
+    "status": "Amarelo",
+    "team": "Francisco Fabricio Freire Barbosa, Marcos Magalhães, Rafael Andrade Barbosa"
+  },
+  {
+    "wo": "WOOPEN20",
+    "client": "NAWP CHILE",
+    "windfarm": "Complexo Eólico Antofagasta",
+    "scope": "INTERNAS – INVESTIGATIVA",
+    "startDate": "2027-01-04",
+    "status": "Amarelo",
+    "team": "Eraldo Antonio de Moura, Lucas Andre de Sousa Ribeiro, Marcos Magalhães"
+  },
+  {
+    "wo": "WOOPEN21",
+    "client": "NAWP CHILE",
+    "windfarm": "Complexo Eólico Alena",
+    "scope": "INTERNAS – INVESTIGATIVA",
+    "startDate": "2027-01-25",
+    "status": "Amarelo",
+    "team": "Francisco Fabricio Freire Barbosa, Marcos Magalhães, Rafael Andrade Barbosa"
+  },
+  {
+    "wo": "2025-0104-3",
+    "client": "COPEL",
+    "windfarm": "Complexo Eólico Brisa Potiguar",
+    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
+    "startDate": "2025-12-08",
+    "status": "Amarelo",
+    "team": ""
+  },
+  {
     "wo": "2026-0041-2",
     "client": "ALIANÇA",
     "windfarm": "Complexo Eólico Caetité Norte",
@@ -268,15 +268,6 @@
     "startDate": "2027-01-04",
     "status": "Amarelo",
     "team": ""
-  },
-  {
-    "wo": "2023-0026-3",
-    "client": "CPFL",
-    "windfarm": "Complexo Eólico Gameleira",
-    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
-    "startDate": "2026-08-28",
-    "status": "Amarelo",
-    "team": "Allan Thiago Ramos Veiga"
   },
   {
     "wo": "2023-0006-8",
