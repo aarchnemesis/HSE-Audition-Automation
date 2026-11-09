@@ -1,6 +1,6 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-09T19:01:23.730Z",
+  "capturedAt": "2026-11-09T21:02:19.595Z",
   "workers": [
     {
       "name": "DANIEL FERNANDES PACHECO",
@@ -1619,8 +1619,15 @@
         },
         {
           "title": "FICHA DE REGISTRO",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2028-05-20",
+          "required": true
+        },
+        {
+          "title": "COMPROVANTE DE REGISTRO E-SOCIAL",
+          "status": "REJECTED",
+          "expiresOn": "2027-05-04",
+          "note": "Gentileza postar o COMPROVANTE DE REGISTRO E-SOCIAL",
           "required": true
         }
       ]
@@ -2057,7 +2064,7 @@
         },
         {
           "title": "ATESTADO DE SAÚDE OCUPACIONAL - ASO",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2027-11-03",
           "required": true
         },
