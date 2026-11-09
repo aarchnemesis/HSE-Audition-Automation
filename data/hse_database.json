@@ -2032,14 +2032,15 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "SOLICITADO_STORZ",
+    "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619375",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619375 - Não iniciado / 0% de progresso).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "08/01/2027",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619375 - Progresso: 3%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T19:47:07.116Z"
+    "lastUpdated": "2026-11-09T20:02:18.604Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -10125,11 +10126,14 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-04T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 5 dias (04/11/2026)",
+    "storzRequestId": "621110",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "VENCIDO há 5 dias (04/11/2026) | SOLICITADO NA STORZ (621110 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1OxmudQKwDtbXuYaJakPvT239M-pSsTZF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T03:02:10.061Z"
+    "lastUpdated": "2026-11-09T20:02:18.604Z"
   },
   {
     "inspectorId": "rpo_41",
