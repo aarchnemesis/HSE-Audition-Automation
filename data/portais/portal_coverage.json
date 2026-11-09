@@ -20,7 +20,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T10:24:10.846Z",
+        "capturedAt": "2026-11-09T18:01:00.101Z",
         "workers": 7
       },
       "clients": [
@@ -52,7 +52,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T17:00:54.213Z",
+        "capturedAt": "2026-11-09T19:01:23.730Z",
         "workers": 14
       },
       "clients": [
@@ -85,7 +85,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T10:23:41.153Z",
+        "capturedAt": "2026-11-09T18:00:29.812Z",
         "workers": 44
       },
       "clients": [
@@ -171,7 +171,7 @@
         {
           "client": "CPFL",
           "activity": "IN_FIELD",
-          "projectsInWindow": 1,
+          "projectsInWindow": 3,
           "lastStart": "2026-10-10"
         },
         {
@@ -801,7 +801,7 @@
         {
           "client": "CPFL",
           "activity": "IN_FIELD",
-          "projectsInWindow": 1,
+          "projectsInWindow": 3,
           "lastStart": "2026-10-10"
         }
       ],
