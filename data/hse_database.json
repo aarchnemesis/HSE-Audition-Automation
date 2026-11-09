@@ -12810,14 +12810,15 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "SOLICITADO_STORZ",
+    "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619376",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619376 - Não iniciado / 0% de progresso).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "08/01/2027",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 3%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T19:47:07.116Z"
+    "lastUpdated": "2026-11-09T16:47:00.018Z"
   },
   {
     "inspectorId": "rpo_51",
