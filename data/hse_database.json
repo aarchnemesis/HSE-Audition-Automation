@@ -9954,13 +9954,14 @@
     "expirationDate": "2075-01-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606758",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 22/01/2075 | Reciclagem já solicitada na Storz (606758 - Status: SOLICITADO).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 16,
+    "storzDeadline": "08/01/2027",
+    "detail": "Válido até 22/01/2075 | Reciclagem já solicitada na Storz (606758 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1AW4r6u3M8DDPWS-FXez5C0fmnLiDfXkD/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T11:46:48.283Z"
+    "lastUpdated": "2026-11-09T18:32:05.880Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -26067,12 +26068,12 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2026-11-07T12:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 2 dias (07/11/2026)",
+    "expirationDate": "2028-11-06T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 06/11/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QdW_VNzoleTh9ke35E5X7d7nmy9r_4oS",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T12:02:19.852Z"
+    "lastUpdated": "2026-11-09T18:32:05.880Z"
   },
   {
     "inspectorId": "rpo_102",
