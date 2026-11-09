@@ -2413,9 +2413,9 @@
       "17": {
         "code": "17",
         "name": "NR 17",
-        "expirationDate": "2028-01-06T12:00:00.000Z",
+        "expirationDate": "2028-01-08T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/01/2028"
+        "statusDetail": "Válido até 08/01/2028"
       },
       "18": {
         "code": "18",
@@ -2427,9 +2427,9 @@
       "19": {
         "code": "19",
         "name": "NR 23",
-        "expirationDate": "2028-01-06T12:00:00.000Z",
+        "expirationDate": "2028-01-08T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/01/2028"
+        "statusDetail": "Válido até 08/01/2028"
       },
       "20": {
         "code": "20",
@@ -3094,9 +3094,9 @@
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
-        "expirationDate": "2026-10-25T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 15 dias (25/10/2026)"
+        "expirationDate": "2028-11-04T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028"
       }
     },
     "exemptDocCodes": [
