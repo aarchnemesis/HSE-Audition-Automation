@@ -1,6 +1,6 @@
 {
   "portalId": "dgtss-invenergy",
-  "capturedAt": "2026-11-04T06:01:17.934Z",
+  "capturedAt": "2026-11-09T10:25:47.674Z",
   "workers": [
     {
       "name": "ALISON DOS SANTOS RIBEIRO",
@@ -154,6 +154,108 @@
           "expiresOn": "2026-09-15",
           "note": "(1)FORA DO PERIODO DE VIGÊNCIA (VALIDADE DE 6 MESES). (2)DE ACORDO COM GUIA DE INTEGRAÇÃO, A FICHA DEVE CONTER ASSINATURA DO COLABORADOR PARA CADA ITEM RECEBIDO. SE O CAMPO NÃO CONSTAR NO DOCUMENTO, A EMPRESA DEVE INCLUIR. | Aprovador: AMANDA BERTONCINI",
           "required": true
+        },
+        {
+          "title": "ASO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "DOCUMENTO PESSOAL (RG/CPF/CNH/RNE)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE REGISTRO/CONTRATO SOCIAL/REQUERIMENTO DE EMPRESARIO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 35",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 10 BÁSICO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 12",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "ORDEM DE serviço (NR-1)",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CERTIFICADO NR 23 - BRIGADISTA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 06",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CTPS - CARTEIRA DE TRABALHO E PREVIDÊNCIA SOCIAL /CNPJ",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "CARTAO DE VACINA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE DIRECAO DEFENSIVA",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO PRIMEIROS SOCORROS",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
+        },
+        {
+          "title": "TREINAMENTO EM NR 33 - VIGIA E TRABALHADOR",
+          "status": "MISSING",
+          "required": true,
+          "note": "Documento pendente de anexação"
         }
       ]
     },
@@ -1528,6 +1630,13 @@
       "contract": "ARTH WIND SERVICES",
       "documents": [
         {
+          "title": "TREINAMENTO EM NR 18",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-04",
+          "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
           "title": "GWO-PS",
           "status": "APPROVED",
           "expiresOn": "2027-01-13",
@@ -1728,6 +1837,13 @@
           "status": "APPROVED",
           "expiresOn": "2026-12-19",
           "note": "Aprovador: MARIANA ZILLO",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2027-10-26",
+          "note": "O CERTIFICADO NR 01 NÃO CONTEM A CARGA HORÁRIA DE 6 HORAS DE TREINAMENTO. | Aprovador: MARIANA ZILLO",
           "required": true
         },
         {
@@ -2848,6 +2964,13 @@
           "status": "APPROVED",
           "expiresOn": "2026-11-21",
           "note": "ASO APTO PARA ALTURA, ESPAÇO CONFINADO E ELETRICIDADE | Aprovador: AMANDA BERTONCINI",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO DE INTEGRACAO",
+          "status": "REJECTED",
+          "expiresOn": "2027-11-05",
+          "note": "O CERTIFICADO NR 01 NÃO CONTEM A CARGA HORÁRIA DE 6 HORAS DE TREINAMENTO. | Aprovador: MARIANA ZILLO",
           "required": true
         },
         {

@@ -2,52 +2,52 @@
   "portalId": "datalife",
   "portalName": "Datalife (GE Vernova)",
   "system": "Datalife",
-  "capturedAt": "2026-11-06T18:28:17.869Z",
+  "capturedAt": "2026-11-09T10:32:21.488Z",
   "workers": [
     {
       "name": "ALLAN THIAGO RAMOS VEIGA",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) LAGOA DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
     },
     {
       "name": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) LAGOA DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
     },
     {
       "name": "FRANCISCO MARCOS DE SOUZA MAGALHAES",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) LAGOA DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
     },
     {
       "name": "MICHEL PLATINI SOARES BARROS",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) FONTE DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
     },
     {
       "name": "NYLLYS RODRIGUES MARTINS",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) LAGOA DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
     },
     {
       "name": "RAFAEL PEREIRA NUNES",
-      "status": "CLEARED",
-      "cleared": true,
+      "status": "BLOCKED",
+      "cleared": false,
       "plant": "(ENEL) LAGOA DOS VENTOS",
       "client": "GE VERNOVA",
       "documents": []
@@ -55,7 +55,7 @@
   ],
   "summary": {
     "totalWorkers": 6,
-    "clearedWorkers": 6,
-    "blockedWorkers": 0
+    "clearedWorkers": 0,
+    "blockedWorkers": 6
   }
 }
