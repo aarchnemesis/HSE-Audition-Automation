@@ -1,6 +1,6 @@
 {
   "portalId": "tdoc-sgre",
-  "capturedAt": "2026-11-09T10:24:10.846Z",
+  "capturedAt": "2026-11-09T18:01:00.101Z",
   "workers": [
     {
       "name": "João Carlos Guardiano",
@@ -273,8 +273,8 @@
         {
           "title": "Checklist Diário EPI Altura",
           "required": true,
-          "status": "IN_REVIEW",
-          "note": "Enviado em 2026-11-04"
+          "status": "APPROVED",
+          "expiresOn": "2027-11-04"
         },
         {
           "title": "Autorização Espaço Confinado (NR33)",
@@ -454,8 +454,8 @@
         {
           "title": "ASO",
           "required": true,
-          "status": "IN_REVIEW",
-          "note": "Enviado em 2026-11-04"
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24"
         },
         {
           "title": "Checklist Diário EPI Altura",

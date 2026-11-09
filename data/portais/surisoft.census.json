@@ -1,6 +1,6 @@
 {
   "portalId": "surisoft",
-  "capturedAt": "2026-11-09T10:23:41.153Z",
+  "capturedAt": "2026-11-09T18:00:29.812Z",
   "workers": [
     {
       "name": "JUAN ILGNER MARINHO LIMA",
@@ -26,21 +26,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-24",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "expiresOn": "2027-12-08",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-11-30",
           "required": true
         },
         {
@@ -179,6 +167,18 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-24",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-11-30",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-12-11",
@@ -236,21 +236,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-02",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2026-11-20",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-07",
           "required": true
         },
         {
@@ -389,6 +377,18 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-07",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-05-28",
@@ -440,12 +440,6 @@
           "title": "Capacitação Direção Defensiva",
           "status": "APPROVED",
           "expiresOn": "2028-07-07",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-03-31",
           "required": true
         },
         {
@@ -590,6 +584,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-31",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2028-05-06",
@@ -649,21 +649,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-23",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-09-10",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-03-29",
           "required": true
         },
         {
@@ -802,6 +790,18 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-23",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-29",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-04-29",
@@ -859,22 +859,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2027-04-16",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "expiresOn": "2027-04-16",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "REJECTED",
-          "expiresOn": "2020-04-10",
-          "note": "Pendente RG/CPF do colaborador",
           "required": true
         },
         {
@@ -1006,6 +993,19 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "expiresOn": "2027-04-16",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "REJECTED",
+          "expiresOn": "2020-04-10",
+          "note": "Pendente RG/CPF do colaborador",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2029-05-20",
@@ -1063,21 +1063,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-24",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-10-13",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-29",
           "required": true
         },
         {
@@ -1216,6 +1204,18 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-29",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2029-08-12",
@@ -1266,12 +1266,6 @@
           "title": "Capacitação Direção Defensiva",
           "status": "APPROVED",
           "expiresOn": "2027-02-12",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-02-03",
           "required": true
         },
         {
@@ -1392,6 +1386,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-05-21",
@@ -1451,21 +1451,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-19",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-10-23",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "1999-01-01",
           "required": true
         },
         {
@@ -1604,6 +1592,18 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "1999-01-01",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-10-28",
@@ -1660,12 +1660,6 @@
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "APPROVED",
           "expiresOn": "2026-10-12",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-22",
           "required": true
         },
         {
@@ -1810,6 +1804,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-22",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2030-05-25",
@@ -1865,12 +1865,6 @@
         {
           "title": "Capacitação Equipe de emergência e salvamento NR-33",
           "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-12-25",
           "required": true
         },
         {
@@ -2003,6 +1997,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-25",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2027-12-19",
@@ -2058,17 +2058,7 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "required": true
         },
@@ -2188,6 +2178,16 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "MISSING",
           "required": true
@@ -2235,12 +2235,6 @@
           "title": "Capacitação Direção Defensiva",
           "status": "APPROVED",
           "expiresOn": "2027-08-02",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-07-09",
           "required": true
         },
         {
@@ -2331,6 +2325,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-09",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2028-07-30",
@@ -2381,12 +2381,6 @@
           "title": "Capacitação Direção Defensiva",
           "status": "APPROVED",
           "expiresOn": "2028-01-31",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-01-23",
           "required": true
         },
         {
@@ -2477,6 +2471,12 @@
           "required": true
         },
         {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-23",
+          "required": true
+        },
+        {
           "title": "Ordem de Serviço",
           "status": "APPROVED",
           "expiresOn": "2028-01-30",
@@ -2535,21 +2535,9 @@
           "required": true
         },
         {
-          "title": "Capacitação NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-30",
-          "required": true
-        },
-        {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-11-03",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-25",
           "required": true
         },
         {
@@ -2685,6 +2673,18 @@
           "title": "NR 35 - Capacitação Trabalho em Altura",
           "status": "APPROVED",
           "expiresOn": "2027-11-13",
+          "required": true
+        },
+        {
+          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-30",
+          "required": true
+        },
+        {
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-25",
           "required": true
         },
         {
