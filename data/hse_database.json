@@ -9951,17 +9951,16 @@
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
     "modality": "ONLINE",
-    "expirationDate": "2075-01-22T03:00:00.000Z",
+    "expirationDate": "2076-11-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606758",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 16,
-    "storzDeadline": "08/01/2027",
-    "detail": "Válido até 22/01/2075 | Reciclagem já solicitada na Storz (606758 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (606758) em 09/11/2026 — Válido até 09/11/2076 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1AW4r6u3M8DDPWS-FXez5C0fmnLiDfXkD/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T18:32:05.880Z"
+    "lastUpdated": "2026-11-09T19:47:08.601Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10049,13 +10048,14 @@
     "expirationDate": "2027-01-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606892",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 22/01/2027 | Reciclagem já solicitada na Storz (606892 - Status: SOLICITADO).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 18,
+    "storzDeadline": "08/01/2027",
+    "detail": "Válido até 22/01/2027 | Reciclagem já solicitada na Storz (606892 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1D4LSxMuR_b3m1Ykk93nD6yLDIHJlV_YI/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T11:46:48.283Z"
+    "lastUpdated": "2026-11-09T19:47:08.601Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -11343,14 +11343,15 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "statusEHS": "SOLICITADO_STORZ",
+    "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619377",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Documento ausente no Drive, mas SOLICITADO NA STORZ (619377 - Não iniciado / 0% de progresso).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "08/01/2027",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619377 - Progresso: 3%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-05T19:47:07.116Z"
+    "lastUpdated": "2026-11-09T19:47:08.601Z"
   },
   {
     "inspectorId": "rpo_45",
