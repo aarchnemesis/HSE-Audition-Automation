@@ -1528,7 +1528,7 @@
     "requestDate": "2026-11-10T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 11,
+    "progressPercent": 19,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -7184,7 +7184,7 @@
     "requestDate": "2026-11-10T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 60,
+    "progressPercent": 67,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -8138,6 +8138,21 @@
     "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "621790",
+    "collaboratorName": "ALLAN THIAGO RAMOS VEIGA",
+    "collaboratorCpf": "226.947.508-93",
+    "trainingCode": "19",
+    "trainingName": "[STORZ-ARTHWIND] - PREVENçãO E PROTEçãO CONTRA INCêNDIOS",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:46:24.287Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
     "idealSlaDays": 1
   },
   {
