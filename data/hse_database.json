@@ -19745,11 +19745,14 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-09T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 1 dias (09/11/2026)",
+    "storzRequestId": "621404",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "VENCIDO há 1 dias (09/11/2026) | SOLICITADO NA STORZ (621404 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1beHwfHix-FIQpnX-iEIeIKJaoIhOAyf5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T03:02:18.922Z"
+    "lastUpdated": "2026-11-10T13:47:00.225Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -19830,10 +19833,13 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-09T12:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 1 dias (09/11/2026)",
+    "storzRequestId": "621416",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "VENCIDO há 1 dias (09/11/2026) | SOLICITADO NA STORZ (621416 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T12:02:08.653Z"
+    "lastUpdated": "2026-11-10T13:47:00.225Z"
   },
   {
     "inspectorId": "rpo_72",
