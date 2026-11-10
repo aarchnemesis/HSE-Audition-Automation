@@ -937,6 +937,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "621789",
+    "collaboratorName": "CAIO VICTOR OLIVEIRA BALBINO",
+    "collaboratorCpf": "072.252.663-65",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:30:50.423Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "596031",
     "collaboratorName": "CAIO VICTOR OLIVEIRA BALBINO",
     "collaboratorCpf": "072.252.663-65",
@@ -944,6 +959,21 @@
     "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
     "modality": "PRESENCIAL",
     "requestDate": "2026-09-29T21:02:27.706Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "621787",
+    "collaboratorName": "CAIO VICTOR OLIVEIRA BALBINO",
+    "collaboratorCpf": "072.252.663-65",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:30:50.423Z",
     "state": "SOLICITADO",
     "rawSituacao": "Não iniciado",
     "progressPercent": 0,
@@ -1315,6 +1345,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "621788",
+    "collaboratorName": "DIEGO MENEZES NUNES COELHO",
+    "collaboratorCpf": "078.393.563-38",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:30:53.855Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "572891",
     "collaboratorName": "DIEGO MENEZES NUNES COELHO",
     "collaboratorCpf": "078.393.563-38",
@@ -1483,7 +1528,7 @@
     "requestDate": "2026-11-10T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 3,
+    "progressPercent": 11,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -4937,7 +4982,7 @@
     "requestDate": "2026-11-09T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 3,
+    "progressPercent": 6,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
@@ -5419,6 +5464,36 @@
     "idealSlaDays": 1
   },
   {
+    "id": "621776",
+    "collaboratorName": "JOSÉ ORLANDO BARROS DA SILVA FILHO",
+    "collaboratorCpf": "105.643.134-24",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:31:16.906Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "621777",
+    "collaboratorName": "JOSÉ ORLANDO BARROS DA SILVA FILHO",
+    "collaboratorCpf": "105.643.134-24",
+    "trainingCode": "15",
+    "trainingName": "[ARTHWIND] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:31:16.906Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "533142",
     "collaboratorName": "JOSE RICARDO BRAGA MATOS",
     "collaboratorCpf": "076.578.733-45",
@@ -5622,6 +5697,36 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "621780",
+    "collaboratorName": "JUAN ILGNER MARINHO LIMA",
+    "collaboratorCpf": "628.228.953-09",
+    "trainingCode": "15",
+    "trainingName": "[ARTHWIND] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:31:18.272Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "621786",
+    "collaboratorName": "JUAN ILGNER MARINHO LIMA",
+    "collaboratorCpf": "628.228.953-09",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:31:18.272Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -6664,6 +6769,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "621781",
+    "collaboratorName": "PEDRO PAULO FERREIRA DE ALMEIDA",
+    "collaboratorCpf": "149.805.868-05",
+    "trainingCode": "15",
+    "trainingName": "[ARTHWIND] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T18:31:25.678Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "497598",
     "collaboratorName": "RAFAEL ANDRADE BARBOSA",
     "collaboratorCpf": "662.377.853-53",
@@ -7064,7 +7184,7 @@
     "requestDate": "2026-11-10T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 53,
+    "progressPercent": 60,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
