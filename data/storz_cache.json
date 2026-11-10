@@ -4707,6 +4707,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "621532",
+    "collaboratorName": "IGOR MARTINS ROCHA",
+    "collaboratorCpf": "065.934.633-88",
+    "trainingCode": "10",
+    "trainingName": "[STORZ] - NR1 - DISPOSIçõES GERAIS E GERENCIAMENTO DE RISCOS OCUPACIONAIS",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-10T14:45:57.688Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
     "id": "586627",
     "collaboratorName": "IGOR MARTINS ROCHA",
     "collaboratorCpf": "065.934.633-88",
@@ -7046,10 +7061,10 @@
     "trainingCode": "28",
     "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
     "modality": "PRESENCIAL",
-    "requestDate": "2026-11-10T13:46:12.988Z",
-    "state": "SOLICITADO",
-    "rawSituacao": "Não iniciado",
-    "progressPercent": 0,
+    "requestDate": "2026-11-10T03:00:00.000Z",
+    "state": "EM_ANDAMENTO",
+    "rawSituacao": "Em andamento",
+    "progressPercent": 3,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
