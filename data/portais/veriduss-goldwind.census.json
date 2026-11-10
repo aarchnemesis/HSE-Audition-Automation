@@ -1,6 +1,6 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-09T21:02:19.595Z",
+  "capturedAt": "2026-11-10T10:01:09.986Z",
   "workers": [
     {
       "name": "DANIEL FERNANDES PACHECO",
@@ -1629,6 +1629,12 @@
           "expiresOn": "2027-05-04",
           "note": "Gentileza postar o COMPROVANTE DE REGISTRO E-SOCIAL",
           "required": true
+        },
+        {
+          "title": "FICHA DE EPI",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-11",
+          "required": true
         }
       ]
     },
@@ -2058,7 +2064,7 @@
         },
         {
           "title": "CCMEI - CERTIFICADO DA CONDIÇÃO DE MICROEMPREENDEDOR INDIVIDUAL",
-          "status": "MISSING",
+          "status": "APPROVED",
           "expiresOn": "2030-12-14",
           "required": true
         },
