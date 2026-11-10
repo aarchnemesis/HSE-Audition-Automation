@@ -4811,9 +4811,9 @@
       "22": {
         "code": "22",
         "name": "LOTO",
-        "expirationDate": "2027-01-06T12:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 57 dias (06/01/2027)"
+        "expirationDate": "2028-11-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028"
       },
       "25": {
         "code": "25",
@@ -8328,9 +8328,9 @@
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2027-02-05T12:00:00.000Z",
+        "expirationDate": "2028-10-28T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027"
+        "statusDetail": "Válido até 28/10/2028"
       },
       "16": {
         "code": "16",
