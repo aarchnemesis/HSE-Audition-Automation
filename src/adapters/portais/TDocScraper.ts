@@ -1,28 +1,16 @@
+﻿import 'dotenv/config'
+import fs from 'fs'
+import path from 'path'
 import { Page } from 'playwright'
 import { PortalCensus } from '../../domain/models/PortalCensus.js'
 import { normalizeTdoc } from './LegacyCensusNormalizers.js'
-import {
-  TdocRawWorker,
-  docFromCells,
-  toTdocRawWorker,
-  workerFromCells,
-} from './TDocTableParser.js'
-
-// Navigation for the TDoc (JSF) document manager, per tenant (WPLATAM/SGRE, Pegasus, Acciona
-// Chile). Flow confirmed on WPLATAM (Gemini, 2026-10-26): select the company, list its tasks,
-// enter each task's worker list, open each worker to read the document table, go back.
-//
-// JSF renders volatile client ids (j_id123, j_id242, ...) for the per-row action buttons. They
-// drift between renders and versions, so they live in TDocSelectors and can be overridden on a
-// live run without touching code. Parsing is TDocTableParser; this file is only navigation and
-// degrades gracefully — a task or worker that fails is logged and skipped, not fatal.
+import { TdocDocEntry, TdocRawWorker } from './TDocTableParser.js'
 
 export interface TDocSelectors {
   tasksUrl: string
   tasksBackUrl: string
   selectCompanyIcon: string
   tasksTableRows: string
-  taskViewButton: (rowIndex: number) => string
   workersButton: string
   workersTableRows: string
   docsTableRows: string
@@ -42,73 +30,13 @@ export function defaultTDocSelectors(portalId: string): TDocSelectors {
     tasksBackUrl: `${base}/system/modules/model_4/companyManager/tasks/tasksCompany.jsf`,
     selectCompanyIcon: 'img[title="Seleccionar"]',
     tasksTableRows: '#tareas_list_form\\:tareasTable\\:tb tr',
-    taskViewButton: i => `#tareas_list_form\\:tareasTable\\:tb tr:nth-child(${i + 1}) a`,
     workersButton: 'input[value="Ver lista de funcionários"]',
-    workersTableRows:
-      '#form_workers_list_table\\:Table_TrabajadoresDoc\\:tb tr',
+    workersTableRows: '#form_workers_list_table\\:Table_TrabajadoresDoc\\:tb tr',
     docsTableRows: '#form_item_list_table\\:Table_Deliveries\\:tb tr',
-    backIcon: 'img[title="Voltar"]',
+    backIcon: 'img[title="Voltar"], img[title="Volver"]',
   }
 }
 
-const STEP_TIMEOUT = 30000
-
-/**
- * TDoc keeps the last opened task/worker in the server session and resumes it on entry, so a run
- * can land deep inside a worker view with no task list in sight. Reset by going to the company
- * task page first; only re-select the company (which can trigger the resume) if the task table is
- * still absent.
- */
-async function ensureTaskList(page: Page, sel: TDocSelectors): Promise<void> {
-  // If tasks table is already visible, nothing to do
-  if ((await page.locator(sel.tasksTableRows).count()) > 0) return
-
-  // First try direct navigation to tasksBackUrl
-  await page.goto(sel.tasksBackUrl, { waitUntil: 'domcontentloaded', timeout: STEP_TIMEOUT }).catch(() => {})
-  await page.waitForTimeout(2000)
-  if ((await page.locator(sel.tasksTableRows).count()) > 0) return
-
-  // If absent, select company on tasksUrl
-  await page.goto(sel.tasksUrl, { waitUntil: 'domcontentloaded', timeout: STEP_TIMEOUT }).catch(() => {})
-  await page.waitForTimeout(2000)
-  const icon = page.locator(sel.selectCompanyIcon).first()
-  if (await icon.isVisible().catch(() => false)) {
-    await icon.click({ timeout: STEP_TIMEOUT })
-    await page.waitForSelector(sel.tasksTableRows, { timeout: 15000 }).catch(() => {})
-    await page.waitForTimeout(2000)
-  }
-}
-
-async function readRows(page: Page, selector: string): Promise<string[][]> {
-  return page.evaluate(sel => {
-    const trs = Array.from(document.querySelectorAll(sel))
-    return trs.map(tr =>
-      Array.from(tr.querySelectorAll('td')).map(td =>
-        (td.textContent ?? '').replace(/\s+/g, ' ').trim()
-      )
-    )
-  }, selector)
-}
-
-interface TaskRow {
-  index: number
-  proprietario: string
-}
-
-export function parseTaskRows(rows: string[][]): TaskRow[] {
-  const tasks: TaskRow[] = []
-  rows.forEach((cells, index) => {
-    const id = (cells[1] ?? '').trim()
-    if (!id || /^id$/i.test(id)) return
-    tasks.push({ index, proprietario: (cells[8] ?? '').trim() })
-  })
-  return tasks
-}
-
-/**
- * Drives an already-authenticated TDoc page through every task and returns a census. `maxTasks`
- * caps the crawl for a quick run. The page must be logged in (use the login harness first).
- */
 export async function scrapeTdocCensus(
   page: Page,
   options: {
@@ -123,70 +51,152 @@ export async function scrapeTdocCensus(
   const sel = options.selectors ?? defaultTDocSelectors(options.portalId)
   const log = options.log ?? (() => {})
 
-  await ensureTaskList(page, sel)
-  const tasks = parseTaskRows(await readRows(page, sel.tasksTableRows))
-  log(`${tasks.length} tarefas encontradas`)
-  const capped = options.maxTasks ? tasks.slice(0, options.maxTasks) : tasks
+  await page.goto(sel.tasksUrl, { waitUntil: 'networkidle', timeout: 30000 })
+  await page.waitForTimeout(2000)
+  const icon = page.locator(sel.selectCompanyIcon).first()
+  if (await icon.isVisible().catch(() => false)) {
+    await icon.click({ timeout: 20000 })
+    await page.waitForTimeout(3000)
+  }
 
-  const rawWorkers: TdocRawWorker[] = []
-  for (const task of capped) {
+  const taskCount = await page.locator(sel.tasksTableRows).count()
+  log(`Tarefas encontradas na tabela: ${taskCount}`)
+
+  const tasksInfo: { index: number; name: string }[] = []
+  for (let i = 0; i < taskCount; i++) {
+    const rowText = await page.locator(sel.tasksTableRows).nth(i).innerText().catch(() => '')
+    const parts = rowText.split('\t').map(s => s.trim()).filter(Boolean)
+    const parque = parts[7] || parts[6] || parts[1] || `Tarefa_${i}`
+    tasksInfo.push({ index: i, name: parque })
+  }
+
+  const cappedTasks = options.maxTasks ? tasksInfo.slice(0, options.maxTasks) : tasksInfo
+  const rawWorkersMap = new Map<string, TdocRawWorker>()
+
+  for (const t of cappedTasks) {
     try {
-      await page
-        .locator(sel.taskViewButton(task.index))
-        .click({ timeout: STEP_TIMEOUT })
-      await page.waitForTimeout(2000)
+      log(`Processando Tarefa ${t.index}: ${t.name}...`)
+      const taskLink = page.locator(`${sel.tasksTableRows}:nth-child(${t.index + 1}) a`).first()
+      await taskLink.click({ timeout: 20000 })
+      await page.waitForTimeout(3000)
 
       const workersBtn = page.locator(sel.workersButton).first()
       if (!(await workersBtn.isVisible().catch(() => false))) {
-        log(`tarefa ${task.index}: botão de colaboradores não apareceu`)
+        log(`Botão colaboradores não visível na tarefa ${t.index}`)
+        const back = page.locator(sel.backIcon).first()
+        if (await back.isVisible().catch(() => false)) await back.click().catch(() => {})
         continue
       }
-      await workersBtn.click({ timeout: STEP_TIMEOUT })
-      await page.waitForTimeout(2000)
+      await workersBtn.click({ timeout: 20000 })
+      await page.waitForTimeout(3000)
 
-      const workerRows = (await readRows(page, sel.workersTableRows))
-        .map((cells, idx) => ({ worker: workerFromCells(cells), idx }))
-        .filter(
-          (w): w is { worker: NonNullable<typeof w.worker>; idx: number } =>
-            w.worker !== null
-        )
-      log(`tarefa ${task.index}: ${workerRows.length} colaboradores`)
+      const workerCount = await page.locator(sel.workersTableRows).count()
+      log(`Tarefa ${t.index} (${t.name}): ${workerCount} colaboradores`)
 
-      for (const { worker, idx } of workerRows) {
+      for (let wIdx = 0; wIdx < workerCount; wIdx++) {
         try {
-          // Click the worker's action view link or double-click the row
-          const workerLink = page.locator(`${sel.workersTableRows}:nth-child(${idx + 1}) a`).first()
-          if (await workerLink.isVisible().catch(() => false)) {
-            await workerLink.click({ timeout: STEP_TIMEOUT })
-          } else {
-            await page
-              .locator(sel.workersTableRows)
-              .nth(idx)
-              .dblclick({ timeout: STEP_TIMEOUT })
-          }
+          const rowData = await page.evaluate(idx => {
+            const tr = document.querySelectorAll('#form_workers_list_table\\:Table_TrabajadoresDoc\\:tb tr')[idx]
+            if (!tr) return null
+            const cells = Array.from(tr.querySelectorAll('td')).map(td => (td.textContent ?? '').replace(/\s+/g, ' ').trim())
+            return {
+              sobrenome1: cells[1] || '',
+              sobrenome2: cells[2] || '',
+              nome: cells[3] || '',
+              cpf: cells[4] || '',
+              cargo: cells[5] || ''
+            }
+          }, wIdx)
+
+          if (!rowData) continue
+          const fullName = `${rowData.nome} ${rowData.sobrenome1} ${rowData.sobrenome2}`.replace(/\s+/g, ' ').trim()
+          if (!fullName || fullName.length < 3 || /nombre|nome/i.test(fullName)) continue
+
+          const workerLink = page.locator(`${sel.workersTableRows}:nth-child(${wIdx + 1}) a`).first()
+          await workerLink.click({ timeout: 15000 })
           await page.waitForTimeout(2500)
-          const docs = (await readRows(page, sel.docsTableRows))
-            .map(docFromCells)
-            .filter((d): d is NonNullable<typeof d> => d !== null)
-          rawWorkers.push(toTdocRawWorker(worker, docs, task.proprietario))
-          const back = page.locator(sel.backIcon).first()
-          if (await back.isVisible().catch(() => false))
-            await back.click({ timeout: STEP_TIMEOUT }).catch(() => {})
-          else await page.goBack({ waitUntil: 'networkidle' }).catch(() => {})
-          await page.waitForTimeout(1500)
-        } catch (err) {
-          log(`colaborador ${idx} falhou: ${(err as Error).message}`)
+
+          const docCells = await page.evaluate(s => {
+            const trs = Array.from(document.querySelectorAll(s))
+            return trs.map(tr => Array.from(tr.querySelectorAll('td')).map(td => (td.textContent ?? '').replace(/\s+/g, ' ').trim()))
+          }, sel.docsTableRows)
+
+          const docsList: TdocDocEntry[] = []
+          for (const d of docCells) {
+            const docName = (d[1] || '').trim()
+            const docStatus = (d[2] || '').trim()
+            if (docName && !/^documento$/i.test(docName)) {
+              docsList.push({
+                documento: docName,
+                status: docStatus
+              })
+            }
+          }
+
+          if (!rawWorkersMap.has(fullName)) {
+            rawWorkersMap.set(fullName, {
+              nome: fullName,
+              cpf: rowData.cpf || undefined,
+              funcao: rowData.cargo || undefined,
+              proprietario: t.name,
+              pendencias: docsList
+            })
+          } else {
+            const existWorker = rawWorkersMap.get(fullName)!
+            for (const doc of docsList) {
+              if (!existWorker.pendencias.some(pd => pd.documento === doc.documento)) {
+                existWorker.pendencias.push(doc)
+              }
+            }
+          }
+
+          // Volta do trabalhador para a lista de colaboradores
+          const backFromWorker = page.locator(sel.backIcon).first()
+          if (await backFromWorker.isVisible().catch(() => false)) {
+            await backFromWorker.click({ timeout: 15000 })
+            await page.waitForTimeout(2000)
+          }
+        } catch (errColab: any) {
+          log(`Falha no colaborador [${wIdx}]: ${errColab.message}`)
+          const backErr = page.locator(sel.backIcon).first()
+          if (await backErr.isVisible().catch(() => false)) {
+            await backErr.click().catch(() => {})
+            await page.waitForTimeout(2000)
+          }
         }
       }
-    } catch (err) {
-      log(`tarefa ${task.index} falhou: ${(err as Error).message}`)
+
+      // Volta da lista de colaboradores para a tarefa
+      const backFromWorkers = page.locator(sel.backIcon).first()
+      if (await backFromWorkers.isVisible().catch(() => false)) {
+        await backFromWorkers.click({ timeout: 15000 })
+        await page.waitForTimeout(2000)
+      }
+
+      // Volta da tarefa para a lista de tarefas
+      const backToTasks = page.locator(sel.backIcon).first()
+      if (await backToTasks.isVisible().catch(() => false)) {
+        await backToTasks.click({ timeout: 15000 })
+        await page.waitForTimeout(3000)
+      }
+    } catch (e: any) {
+      log(`Erro na tarefa ${t.index}: ${e.message}`)
+      await page.goto(sel.tasksUrl, { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {})
+      const selIcon = page.locator(sel.selectCompanyIcon).first()
+      if (await selIcon.isVisible().catch(() => false)) {
+        await selIcon.click({ timeout: 20000 }).catch(() => {})
+        await page.waitForTimeout(3000)
+      }
     }
-    await ensureTaskList(page, sel).catch(() => {})
   }
+
+  const rawWorkersList = Array.from(rawWorkersMap.values())
+  const normalizedWorkers = normalizeTdoc(rawWorkersList, capturedAt)
+  log(`Censo TDoc finalizado: ${normalizedWorkers.length} colaboradores, ${normalizedWorkers.reduce((acc, w) => acc + w.documents.length, 0)} documentos.`)
 
   return {
     portalId: options.portalId,
     capturedAt,
-    workers: normalizeTdoc(rawWorkers, capturedAt),
+    workers: normalizedWorkers,
   }
 }
