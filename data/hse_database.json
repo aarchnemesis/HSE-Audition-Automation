@@ -2035,12 +2035,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619375",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 10,
+    "storzProgressPercent": 13,
     "storzDeadline": "08/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619375 - Progresso: 10%) [Prazo Storz: 08/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619375 - Progresso: 13%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T23:47:01.294Z"
+    "lastUpdated": "2026-11-10T00:47:05.959Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -11206,17 +11206,16 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-06T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
+    "expirationDate": "2028-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "607045",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 58,
-    "storzDeadline": "06/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 58 dias (06/01/2027) | EM ANDAMENTO NA STORZ (607045 - Progresso: 58%) [Prazo Storz: 06/01/2027] — o prazo que vale é o vencimento do documento.",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (607045) em 09/11/2026 — Válido até 09/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1TDa9PPCl9n1psSYddxxY9sDkRKuoGlfk/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-09T22:46:55.933Z"
+    "lastUpdated": "2026-11-10T00:47:05.959Z"
   },
   {
     "inspectorId": "rpo_44",
