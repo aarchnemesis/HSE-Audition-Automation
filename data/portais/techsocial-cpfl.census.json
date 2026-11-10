@@ -1,6 +1,6 @@
 {
   "portalId": "techsocial-cpfl",
-  "capturedAt": "2026-11-09T10:32:55.700Z",
+  "capturedAt": "2026-11-10T15:05:06.167Z",
   "workers": [
     {
       "name": "ADRIANO CIRILO GARCIA LIMA",
@@ -60,7 +60,7 @@
         },
         {
           "title": "NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-09-11",
           "required": true
         },
@@ -115,7 +115,7 @@
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -128,11 +128,6 @@
           "title": "Ficha de Registro",
           "status": "APPROVED",
           "expiresOn": "2026-02-24",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
           "required": true
         },
         {
@@ -158,117 +153,112 @@
       "documents": [
         {
           "title": "Carta de Anuência NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Identidade Nacional (RG)",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira Nacional de Habilitação",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR06",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR11",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ordem de serviço",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10 SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR12",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR18",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Trabalho e Previdência Social",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Contrato de Trabalho",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Termo de Opção pelo Benefício Vale-Transporte",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Registro",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Atestado de Saúde Ocupacional Admissional-Periódico",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Equipamento de Proteção Individual",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         }
       ]
@@ -281,117 +271,112 @@
       "documents": [
         {
           "title": "Carta de Anuência NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Identidade Nacional (RG)",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira Nacional de Habilitação",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR06",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR11",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ordem de serviço",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10 SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR12",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR18",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Trabalho e Previdência Social",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Contrato de Trabalho",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Termo de Opção pelo Benefício Vale-Transporte",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Registro",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Atestado de Saúde Ocupacional Admissional-Periódico",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Equipamento de Proteção Individual",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         }
       ]
@@ -416,7 +401,7 @@
         },
         {
           "title": "Carta de Anuência NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -445,7 +430,7 @@
         },
         {
           "title": "NR11",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -480,12 +465,12 @@
         },
         {
           "title": "NR18",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -502,7 +487,7 @@
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -515,11 +500,6 @@
           "title": "Ficha de Registro",
           "status": "APPROVED",
           "expiresOn": "2026-02-26",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
           "required": true
         },
         {
@@ -544,117 +524,112 @@
       "documents": [
         {
           "title": "Carta de Anuência NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carta de Anuência SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Identidade Nacional (RG)",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira Nacional de Habilitação",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR06",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR11",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ordem de serviço",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR10 SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR12",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR18",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Carteira de Trabalho e Previdência Social",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Contrato de Trabalho",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Termo de Opção pelo Benefício Vale-Transporte",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Registro",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Atestado de Saúde Ocupacional Admissional-Periódico",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Ficha de Equipamento de Proteção Individual",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         }
       ]
@@ -667,137 +642,132 @@
       "documents": [
         {
           "title": "Carta de Anuência NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carta de Anuência NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carta de Anuência NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carta de Anuência SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carteira de Identidade Nacional (RG)",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carteira Nacional de Habilitação",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR06",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR11",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR33",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Ordem de serviço",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR10 SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR12",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR18",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "NR35",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Carteira de Trabalho e Previdência Social",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Contrato de Trabalho",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
           "title": "Termo de Opção pelo Benefício Vale-Transporte",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Ficha de Registro",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
-          "required": true
-        },
-        {
           "title": "Atestado de Saúde Ocupacional Admissional-Periódico",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         },
         {
           "title": "Ficha de Equipamento de Proteção Individual",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-02-24",
           "required": true
         }
@@ -917,7 +887,7 @@
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -930,11 +900,6 @@
           "title": "Ficha de Registro",
           "status": "APPROVED",
           "expiresOn": "2026-07-16",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
           "required": true
         },
         {
@@ -960,7 +925,7 @@
       "documents": [
         {
           "title": "Carta de Anuência NR10",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-08-12",
           "required": true
         },
@@ -978,7 +943,7 @@
         },
         {
           "title": "Carta de Anuência SEP",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "expiresOn": "2026-08-12",
           "required": true
         },
@@ -1062,7 +1027,7 @@
         },
         {
           "title": "Lista de Integração de Segurança CPFL",
-          "status": "MISSING",
+          "status": "IN_REVIEW",
           "required": true
         },
         {
@@ -1075,11 +1040,6 @@
           "title": "Ficha de Registro",
           "status": "APPROVED",
           "expiresOn": "2026-02-25",
-          "required": true
-        },
-        {
-          "title": "Documentos Eventuais",
-          "status": "MISSING",
           "required": true
         },
         {

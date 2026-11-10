@@ -6,14 +6,17 @@ import {
   PortalWorker,
 } from '../../domain/models/PortalCensus.js'
 
-function mapStatus(statusText: string): PortalDocStatus {
+/** Returns undefined when the portal text matches no known dialect, so callers can flag it. */
+function mapStatus(statusText: string): PortalDocStatus | undefined {
   const norm = statusText.toUpperCase()
   if (norm.includes('REPROVADO') || norm.includes('RECUSADO')) return 'REJECTED'
-  if (norm.includes('APROVADO')) return 'APPROVED'
+  if (norm.includes('VENCIDO') || norm.includes('EXPIRADO')) return 'EXPIRED'
+  if (norm.includes('APROVADO') || /(^|[\s,;:])(VÁLIDO|VALIDO|OK)($|[\s,;:.])/.test(norm)) return 'APPROVED'
+  if (norm.includes('NÃO AVALIADO') || norm.includes('NAO AVALIADO')) return 'IN_REVIEW'
   if (norm.includes('EM ANÁLISE') || norm.includes('EM ANALISE') || norm.includes('AGUARDANDO')) return 'IN_REVIEW'
   if (norm.includes('NÃO ANEXADO') || norm.includes('NAO ANEXADO') || norm.includes('PENDENTE')) return 'MISSING'
-  if (norm.includes('DISPENSADO')) return 'WAIVED'
-  return 'MISSING'
+  if (norm.includes('DISPENSADO') || norm.includes('NÃO APLICÁVEL') || norm.includes('NAO APLICAVEL')) return 'WAIVED'
+  return undefined
 }
 
 function parseDate(text: string): string | undefined {
@@ -64,7 +67,7 @@ export async function scrapeTechSocialCensus(
         const docRows = Array.from(container.querySelectorAll('tbody tr, table tr'))
         for (const dr of docRows) {
           const cells = Array.from(dr.querySelectorAll('td, th')).map(c => c.innerText.trim())
-          if (cells.length >= 2 && cells[0] && !cells[0].includes('Documentos de') && !cells[0].includes('Inserção')) {
+          if (cells.length >= 2 && cells[0] && !cells[0].includes('Documentos de') && !cells[0].includes('Inserção') && !/Inser[cç][aã]o\s+Status/i.test(cells.slice(1).join(' '))) {
             const rawDetails = cells.slice(1).join('\n')
             docs.push({
               title: cells[0],
@@ -88,19 +91,30 @@ export async function scrapeTechSocialCensus(
 
   log(`Extraídos ${rawWorkers.length} colaboradores brutos da página.`)
 
+  const unmapped = new Map<string, number>()
   const workers: PortalWorker[] = rawWorkers
     .filter(w => w.name && w.name.length > 3)
     .map(w => {
       const documents: PortalDocument[] = w.docs.map(d => {
         const cleanTitle = d.title.replace(/^\d+[\.\s\-]+/, '').trim()
-        const status = mapStatus(d.statusText)
+        const mapped = mapStatus(d.statusText)
+        if (!mapped) {
+          const key = d.statusText.replace(/\s+/g, ' ').slice(0, 80)
+          unmapped.set(key, (unmapped.get(key) ?? 0) + 1)
+        }
+        const status: PortalDocStatus = mapped ?? 'MISSING'
         const dateMatch = parseDate(d.dateText)
 
         return {
           title: cleanTitle,
           status,
           expiresOn: dateMatch && dateMatch !== 'Indeterminado' ? dateMatch : undefined,
-          note: status === 'REJECTED' ? 'Documento reprovado no TechSocial CPFL' : undefined,
+          note:
+            status === 'REJECTED'
+              ? 'Documento reprovado no TechSocial CPFL'
+              : mapped
+                ? undefined
+                : `Status não reconhecido no portal: "${d.statusText.replace(/\s+/g, ' ').slice(0, 80)}"`,
           required: true
         }
       })
@@ -114,6 +128,7 @@ export async function scrapeTechSocialCensus(
       }
     })
 
+  for (const [text, n] of unmapped) log(`ATENÇÃO: ${n}x status não mapeado: "${text}"`)
   log(`Processados ${workers.length} colaboradores normalizados.`)
 
   return {

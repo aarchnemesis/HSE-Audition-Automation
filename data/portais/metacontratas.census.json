@@ -1,6 +1,6 @@
 {
   "portalId": "metacontratas",
-  "capturedAt": "2026-11-03T11:45:53.498Z",
+  "capturedAt": "2026-11-10T13:51:28.105Z",
   "workers": [
     {
       "name": "JOAO BATISTA C. DA SILVA",
@@ -8,8 +8,164 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-15",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-12",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-24",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-03",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-03",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-05-16",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-30",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-21",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-29",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-13",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-30",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -20,8 +176,159 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-13",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-13",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-19",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-02",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-02",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2036-02-27",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-22",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-09",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -32,8 +339,95 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
           "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Certificado de Condição de Microempreendedor Individual – MEI",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Apólice de Seguro de Vida - Apresentar Apólice + comprovante de pagto MEI/PJ/Estágio",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-07",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-17",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-08-07",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-07",
           "required": true
         }
       ]
@@ -44,8 +438,95 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
           "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-11",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Apólice de Seguro de Vida - Apresentar Apólice + comprovante de pagto MEI/PJ/Estágio",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-07",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-31",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2032-12-07",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-11",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-13",
           "required": true
         }
       ]
@@ -56,8 +537,159 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-13",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-25",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2033-01-04",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-11",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -68,8 +700,95 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
           "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Apólice de Seguro de Vida - Apresentar Apólice + comprovante de pagto MEI/PJ/Estágio",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-07",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-11",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-07-13",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-02",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-09",
           "required": true
         }
       ]
@@ -80,8 +799,159 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-19",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2035-07-01",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-31",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-15",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-07",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-07",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -92,8 +962,159 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-02",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2031-10-14",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-24",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-29",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-20",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -104,8 +1125,159 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-30",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-19",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-29",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-15",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-17",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-05",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-04",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -116,8 +1288,361 @@
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-28",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR12 - Elaborado por profissional legalmente habilitado/qualificado",
+          "status": "REJECTED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2036-05-09",
+          "required": true
+        },
+        {
+          "title": "Cópia do RG e CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para TRAVA-QUEDAS AVANTI/HONEYWELL quando aplicável para o cargo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-23",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-03",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-07",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 23 Combate à Incêndio - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-23",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Artama Modelo do elevador – A 400 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Utilização Elevadores da Avanti Modelo do elevador – Pegasus L/XL 08hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FELIPE ALAN P. DOS SANTOS",
+      "role": "CONTRATADO PJ - INSPETOR DE EQUIPAMENTOS",
+      "contract": "ENERGIMP (CE)",
+      "documents": [
+        {
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-01",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-03",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2031-08-11",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-25",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-29",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MARIA BRUNA S. SANTOS",
+      "role": "CLT - INSPETOR DE QUALIDADE (SOLO)",
+      "contract": "ENERGIMP (CE)",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-17",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2031-06-19",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-03",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-18",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-21",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-07",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-06",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-23",
           "required": true
         }
       ]
@@ -128,8 +1653,102 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
           "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-27",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-16",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-08-07",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-03",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "EXPIRED",
+          "expiresOn": "2025-01-09",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-11",
           "required": true
         }
       ]
@@ -140,8 +1759,132 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
           "status": "APPROVED",
+          "expiresOn": "2027-09-02",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas) - Utilizar modelo do cliente download ao lado",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-30",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2033-01-04",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-24",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-24",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento para Talha Elétrica NR11/NR12 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-13",
           "required": true
         }
       ]
@@ -152,8 +1895,347 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
           "status": "APPROVED",
+          "expiresOn": "2027-09-08",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-03",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas) - Utilizar modelo do cliente download ao lado",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-10",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2032-12-28",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-08",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-30",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-18",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-14",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-15",
+          "required": true
+        },
+        {
+          "title": "Treinamento para Talha Elétrica NR11/NR12 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-14",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "KELVIN GARCIA DE OLIVEIRA",
+      "role": "CONTRATADO PJ - INSPETOR DE EQUIPAMENTOS (DRONE)",
+      "contract": "ENERGIMP (CE)",
+      "documents": [
+        {
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-16",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-19",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2035-01-16",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-29",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-24",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "THIAGO LIMA S. SILVA",
+      "role": "CONTRATADO PJ - INSPETOR DE EQUIPAMENTOS",
+      "contract": "ENERGIMP (CE)",
+      "documents": [
+        {
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
           "required": true
         }
       ]
@@ -164,8 +2246,215 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
           "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-01",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-11",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-07-13",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-09",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-23",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "THAYNA NOGUEIRA TAVARES",
+      "role": "CONTRATADO PJ - INSPETOR DE QUALIDADE (SOLO)",
+      "contract": "ENERGIMP (CE)",
+      "documents": [
+        {
+          "title": "Cartão CNPJ MEI ou PESSOA JURÍDICA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Consulta Quadro de Sócios e Administradores(QSA) ou Cópia Contrato Social ou Requerimento de Empresário",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Contrato de Prestação de Serviços (assinado entre as partes) Contratante x MEI/Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2036-01-10",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-02",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-20",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-01",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-09",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-13",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-31",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-05",
           "required": true
         }
       ]
@@ -176,8 +2465,142 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
           "status": "APPROVED",
+          "expiresOn": "2027-09-15",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-19",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas) - Utilizar modelo do cliente download ao lado",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-10",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-09-04",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Diploma Formação Superior/Qualificação Profissional (Frente e verso do documento no mesmo pdf)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-09",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro Profissional CREA/TST/COREN/CRQ/CRBIO/CFT/CRT (apresentar registro conforme função/profissão)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-22",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-14",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-16",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-24",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-28",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-20",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-25",
+          "required": true
+        },
+        {
+          "title": "Treinamento para Talha Elétrica NR11/NR12 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-24",
           "required": true
         }
       ]
@@ -188,20 +2611,987 @@
       "contract": "ENERGIMP (CE)",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
+          "title": "ASO - Atestado de Saúde Ocupacional de acordo com a Função e PCMSO segundo item NR07 - 7.5.19.1",
           "status": "APPROVED",
+          "expiresOn": "2026-11-26",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR10.8.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência formal da empresa - Conforme obrigatoriedade prevista na NR35.4 - Elaborado por representante da empresa",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinação (vacina obrigatória: Tétano) - Em situação REGULAR",
+          "status": "APPROVED",
+          "required": false
+        },
+        {
+          "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-10",
+          "required": true
+        },
+        {
+          "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas) - Utilizar modelo do cliente download ao lado",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-11",
+          "required": true
+        },
+        {
+          "title": "CNH (A, B, C, D, E) de acordo com função exercida - ATENÇÃO PARA CATEGORIA DA CNH de acordo com veículo à ser conduzido",
+          "status": "APPROVED",
+          "expiresOn": "2034-11-27",
+          "required": true
+        },
+        {
+          "title": "Cópia do CPF - Documento Oficial de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS Digital – Contrato de Trabalho com registro Atual Aberto ou Consulta Contratual do Trabalhador do e-Social",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de EPI devidamente preenchida, assinada e atualizada - Com evidência de entrega dos EPIs recomendados para a função conforme PGR **ATENÇÃO para EPIs de riscos elétricos",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-10",
+          "required": true
+        },
+        {
+          "title": "FRE - Ficha de Registro Atualizada - devidamente assinada entre as partes",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ordem de Serviço conforme NR 01 - Devidamente assinado pelo colaborador",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional Básico em Segurança do Trabalho ou NR18 - 04hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento de Integração em parque - Formulário padrão Energimp",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Treinamento Direção Segura 04hs - (Certificado + Conteúdo programático)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-08",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 06 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-05",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 10 SEP - 40hs - Em caso de Reciclagem apresentar juntamente curso inicial de 40hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-12",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 11 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-10",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 12 (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-29",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 33 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno. Conteúdo e carga horária conforme ANEXO III e Quadro 1.",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-18",
+          "required": true
+        },
+        {
+          "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-18",
+          "required": true
+        },
+        {
+          "title": "Treinamento para Talha Elétrica NR11/NR12 - (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-10",
           "required": true
         }
       ]
     },
     {
-      "name": "Francisco Fabricio Freire Barbosa Francisco Fabricio",
+      "name": "RAFAEL ANDRADE BARBOSA",
       "role": "CLT - INSPETOR DE QUALIDADE",
       "contract": "REPSOL CHILE",
       "documents": [
         {
-          "title": "Conformidade Geral Metacontratas",
-          "status": "PENDING",
+          "title": "CÉDULA DE IDENTIDAD CHILENA, VISA TEMPORARIA O DE TRABAJO",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE COMPETENCIA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO INDIVIDUAL DE TRABAJO (DEPENDIENTES) O CONTRATO A HONORARIOS (INDEPENDIENTES)",
+          "status": "APPROVED",
+          "expiresOn": "2052-03-22",
+          "required": true
+        },
+        {
+          "title": "Cualificación/Autorización eléctrica",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CURSO TEORICO / PRACTICO MANEJO A LA DEFENSIVA Y CONDUCCIÓN 4X4 EN ALTA MONTAÑA",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-24",
+          "required": true
+        },
+        {
+          "title": "EXAMEN DE ALCOHOL Y DROGAS",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PRE-OCUPACIONAL U OCUPACIONAL DEL TRABAJADOR (CON ANTIGÜEDAD DE 2 AÑOS COMO MAXIMO)",
+          "status": "APPROVED",
+          "expiresOn": "2031-07-24",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PSICOSENSOTECNICO RIGUROSO PARA VEHICULO LIVIANO O PESADO PARA OPERADOR DE MAQUINARIA",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "FINIQUITO DE TERMINO DE CONTRATO DE TRABAJO ANEXO TRASLADO O CONSTANCIA EN LA INSPECCION DEL TRABAJO.",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Formación Uso Elevador",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "FORMACION DE PREVENCION DE RIESGOS LABORALES BASICA",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-01",
+          "required": true
+        },
+        {
+          "title": "Formación Específica riesgo eléctrico 614 (HV/LV)/Turbina",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-02-11",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Alturas. Rescate y Evacuación",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-12",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Cargas o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-12",
+          "required": false
+        },
+        {
+          "title": "Formación GWO Incendios o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-10",
+          "required": true
+        },
+        {
+          "title": "Formación GWO PPAA o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-16",
+          "required": true
+        },
+        {
+          "title": "Formación LOTO especifica NORDEX",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "HOJA DE VIDA DE CONDUCTOR",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "Inducción H&S Turbina",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inspección de EPIS Eléctricos",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-08",
+          "required": true
+        },
+        {
+          "title": "Inspección EPIS altura (NORDEX)",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-08",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR (VEHICULOS MENORES)",
+          "status": "APPROVED",
+          "expiresOn": "2032-06-23",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR OPERADORES",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE INFORMACION DE RIESGOS LABORALES (IRL) Y MEDIO AMBIENTE ESPECIFICOS DE LA OBRA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE CHARLA DE INDUCCION DEL PROPIETARIOS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DE ELEMENTOS PROTECCION PERSONAL (EPP/EPI)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DEL REGLAMENTO INTERNO DE ORDEN, HIGIENE Y SEGURIDAD A LOS TRABAJADORES (RIHS-RIOHYS)",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-17",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE ACCIDENTES PARA TRABAJADORES INDEPENDIENTES (LEY 16.744 ACHS, MUTUAL, ISL)",
+          "status": "APPROVED",
+          "expiresOn": "2031-10-23",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO ELVISON ELVISON PEREIRA DE SOUSA",
+      "role": "INSPETOR DE QUALIDADE",
+      "contract": "REPSOL CHILE",
+      "documents": [
+        {
+          "title": "CÉDULA DE IDENTIDAD CHILENA, VISA TEMPORARIA O DE TRABAJO",
+          "status": "IN_REVIEW",
+          "expiresOn": "2031-07-15",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE COMPETENCIA",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CONTRATO INDIVIDUAL DE TRABAJO (DEPENDIENTES) O CONTRATO A HONORARIOS (INDEPENDIENTES)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2052-03-22",
+          "required": true
+        },
+        {
+          "title": "Cualificación/Autorización eléctrica",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CURSO TEORICO / PRACTICO MANEJO A LA DEFENSIVA Y CONDUCCIÓN 4X4 EN ALTA MONTAÑA",
+          "status": "IN_REVIEW",
+          "expiresOn": "2028-04-15",
+          "required": true
+        },
+        {
+          "title": "EXAMEN DE ALCOHOL Y DROGAS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PRE-OCUPACIONAL U OCUPACIONAL DEL TRABAJADOR (CON ANTIGÜEDAD DE 2 AÑOS COMO MAXIMO)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2031-09-02",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PSICOSENSOTECNICO RIGUROSO PARA VEHICULO LIVIANO O PESADO PARA OPERADOR DE MAQUINARIA",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "FINIQUITO DE TERMINO DE CONTRATO DE TRABAJO ANEXO TRASLADO O CONSTANCIA EN LA INSPECCION DEL TRABAJO.",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "Formación Uso Elevador",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "FORMACION DE PREVENCION DE RIESGOS LABORALES BASICA",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-08-18",
+          "required": true
+        },
+        {
+          "title": "Formación Específica riesgo eléctrico 614 (HV/LV)/Turbina",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Alturas. Rescate y Evacuación",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-29",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Cargas o standard similar",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-25",
+          "required": false
+        },
+        {
+          "title": "Formación GWO Incendios o standard similar",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-25",
+          "required": true
+        },
+        {
+          "title": "Formación GWO PPAA o standard similar",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "Formación LOTO especifica NORDEX",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "HOJA DE VIDA DE CONDUCTOR",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inducción H&S Turbina",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inspección de EPIS Eléctricos",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-24",
+          "required": true
+        },
+        {
+          "title": "Inspección EPIS altura (NORDEX)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-24",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR (VEHICULOS MENORES)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2033-11-04",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR OPERADORES",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE INFORMACION DE RIESGOS LABORALES (IRL) Y MEDIO AMBIENTE ESPECIFICOS DE LA OBRA",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE CHARLA DE INDUCCION DEL PROPIETARIOS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DE ELEMENTOS PROTECCION PERSONAL (EPP/EPI)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-10-19",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DEL REGLAMENTO INTERNO DE ORDEN, HIGIENE Y SEGURIDAD A LOS TRABAJADORES (RIHS-RIOHYS)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2028-10-26",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE ACCIDENTES PARA TRABAJADORES INDEPENDIENTES (LEY 16.744 ACHS, MUTUAL, ISL)",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Eraldo Antonio de Moura",
+      "role": "CLT - TÉCNICO EM OPERAÇÃO",
+      "contract": "REPSOL CHILE",
+      "documents": [
+        {
+          "title": "CÉDULA DE IDENTIDAD CHILENA, VISA TEMPORARIA O DE TRABAJO",
+          "status": "APPROVED",
+          "expiresOn": "2031-09-10",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE COMPETENCIA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO INDIVIDUAL DE TRABAJO (DEPENDIENTES) O CONTRATO A HONORARIOS (INDEPENDIENTES)",
+          "status": "APPROVED",
+          "expiresOn": "2051-04-17",
+          "required": true
+        },
+        {
+          "title": "Cualificación/Autorización eléctrica",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CURSO TEORICO / PRACTICO MANEJO A LA DEFENSIVA Y CONDUCCIÓN 4X4 EN ALTA MONTAÑA",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-17",
+          "required": true
+        },
+        {
+          "title": "EXAMEN DE ALCOHOL Y DROGAS",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PRE-OCUPACIONAL U OCUPACIONAL DEL TRABAJADOR (CON ANTIGÜEDAD DE 2 AÑOS COMO MAXIMO)",
+          "status": "APPROVED",
+          "expiresOn": "2030-09-24",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PSICOSENSOTECNICO RIGUROSO PARA VEHICULO LIVIANO O PESADO PARA OPERADOR DE MAQUINARIA",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "FINIQUITO DE TERMINO DE CONTRATO DE TRABAJO ANEXO TRASLADO O CONSTANCIA EN LA INSPECCION DEL TRABAJO.",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-08",
+          "required": false
+        },
+        {
+          "title": "Formación Uso Elevador",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-27",
+          "required": true
+        },
+        {
+          "title": "FORMACION DE PREVENCION DE RIESGOS LABORALES BASICA",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-27",
+          "required": true
+        },
+        {
+          "title": "Formación Específica riesgo eléctrico 614 (HV/LV)/Turbina",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Alturas. Rescate y Evacuación",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-05",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Cargas o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-06",
+          "required": false
+        },
+        {
+          "title": "Formación GWO Incendios o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-06",
+          "required": true
+        },
+        {
+          "title": "Formación GWO PPAA o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-06",
+          "required": true
+        },
+        {
+          "title": "Formación LOTO especifica NORDEX",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "HOJA DE VIDA DE CONDUCTOR",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "Inducción H&S Turbina",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inspección de EPIS Eléctricos",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-08-05",
+          "required": true
+        },
+        {
+          "title": "Inspección EPIS altura (NORDEX)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-08-05",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR (VEHICULOS MENORES)",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR OPERADORES",
+          "status": "EXPIRED",
+          "expiresOn": "2026-10-27",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE INFORMACION DE RIESGOS LABORALES (IRL) Y MEDIO AMBIENTE ESPECIFICOS DE LA OBRA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE CHARLA DE INDUCCION DEL PROPIETARIOS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DE ELEMENTOS PROTECCION PERSONAL (EPP/EPI)",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-30",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DEL REGLAMENTO INTERNO DE ORDEN, HIGIENE Y SEGURIDAD A LOS TRABAJADORES (RIHS-RIOHYS)",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-04",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE ACCIDENTES PARA TRABAJADORES INDEPENDIENTES (LEY 16.744 ACHS, MUTUAL, ISL)",
+          "status": "APPROVED",
+          "expiresOn": "2031-07-30",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Francisco Fabricio Freire Barbosa",
+      "role": "CLT - INSPETOR DE QUALIDADE",
+      "contract": "REPSOL CHILE",
+      "documents": [
+        {
+          "title": "CÉDULA DE IDENTIDAD CHILENA, VISA TEMPORARIA O DE TRABAJO",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-26",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE COMPETENCIA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO INDIVIDUAL DE TRABAJO (DEPENDIENTES) O CONTRATO A HONORARIOS (INDEPENDIENTES)",
+          "status": "APPROVED",
+          "expiresOn": "2052-03-22",
+          "required": true
+        },
+        {
+          "title": "Cualificación/Autorización eléctrica",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CURSO TEORICO / PRACTICO MANEJO A LA DEFENSIVA Y CONDUCCIÓN 4X4 EN ALTA MONTAÑA",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-17",
+          "required": true
+        },
+        {
+          "title": "EXAMEN DE ALCOHOL Y DROGAS",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PRE-OCUPACIONAL U OCUPACIONAL DEL TRABAJADOR (CON ANTIGÜEDAD DE 2 AÑOS COMO MAXIMO)",
+          "status": "APPROVED",
+          "expiresOn": "2030-05-14",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PSICOSENSOTECNICO RIGUROSO PARA VEHICULO LIVIANO O PESADO PARA OPERADOR DE MAQUINARIA",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "FINIQUITO DE TERMINO DE CONTRATO DE TRABAJO ANEXO TRASLADO O CONSTANCIA EN LA INSPECCION DEL TRABAJO.",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-08",
+          "required": false
+        },
+        {
+          "title": "Formación Uso Elevador",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-27",
+          "required": true
+        },
+        {
+          "title": "FORMACION DE PREVENCION DE RIESGOS LABORALES BASICA",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-07",
+          "required": true
+        },
+        {
+          "title": "Formación Específica riesgo eléctrico 614 (HV/LV)/Turbina",
+          "status": "IN_REVIEW",
+          "expiresOn": "2028-09-03",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Alturas. Rescate y Evacuación",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Cargas o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": false
+        },
+        {
+          "title": "Formación GWO Incendios o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "Formación GWO PPAA o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "Formación LOTO especifica NORDEX",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "HOJA DE VIDA DE CONDUCTOR",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "Inducción H&S Turbina",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inspección de EPIS Eléctricos",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "Inspección EPIS altura (NORDEX)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR (VEHICULOS MENORES)",
+          "status": "APPROVED",
+          "expiresOn": "2032-09-17",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR OPERADORES",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE INFORMACION DE RIESGOS LABORALES (IRL) Y MEDIO AMBIENTE ESPECIFICOS DE LA OBRA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE CHARLA DE INDUCCION DEL PROPIETARIOS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DE ELEMENTOS PROTECCION PERSONAL (EPP/EPI)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DEL REGLAMENTO INTERNO DE ORDEN, HIGIENE Y SEGURIDAD A LOS TRABAJADORES (RIHS-RIOHYS)",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-24",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE ACCIDENTES PARA TRABAJADORES INDEPENDIENTES (LEY 16.744 ACHS, MUTUAL, ISL)",
+          "status": "APPROVED",
+          "expiresOn": "2031-07-30",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Lucas Andre de Sousa Ribeiro",
+      "role": "CLT - INSPETOR DE QUALIDADE",
+      "contract": "REPSOL CHILE",
+      "documents": [
+        {
+          "title": "CÉDULA DE IDENTIDAD CHILENA, VISA TEMPORARIA O DE TRABAJO",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-14",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE COMPETENCIA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO INDIVIDUAL DE TRABAJO (DEPENDIENTES) O CONTRATO A HONORARIOS (INDEPENDIENTES)",
+          "status": "APPROVED",
+          "expiresOn": "2052-03-22",
+          "required": true
+        },
+        {
+          "title": "Cualificación/Autorización eléctrica",
+          "status": "IN_REVIEW",
+          "required": true
+        },
+        {
+          "title": "CURSO TEORICO / PRACTICO MANEJO A LA DEFENSIVA Y CONDUCCIÓN 4X4 EN ALTA MONTAÑA",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-15",
+          "required": true
+        },
+        {
+          "title": "EXAMEN DE ALCOHOL Y DROGAS",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-10",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PRE-OCUPACIONAL U OCUPACIONAL DEL TRABAJADOR (CON ANTIGÜEDAD DE 2 AÑOS COMO MAXIMO)",
+          "status": "APPROVED",
+          "expiresOn": "2030-08-22",
+          "required": true
+        },
+        {
+          "title": "EXAMEN PSICOSENSOTECNICO RIGUROSO PARA VEHICULO LIVIANO O PESADO PARA OPERADOR DE MAQUINARIA",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "FINIQUITO DE TERMINO DE CONTRATO DE TRABAJO ANEXO TRASLADO O CONSTANCIA EN LA INSPECCION DEL TRABAJO.",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-08",
+          "required": false
+        },
+        {
+          "title": "Formación Uso Elevador",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-29",
+          "required": true
+        },
+        {
+          "title": "FORMACION DE PREVENCION DE RIESGOS LABORALES BASICA",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-04",
+          "required": true
+        },
+        {
+          "title": "Formación Específica riesgo eléctrico 614 (HV/LV)/Turbina",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-01-17",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Alturas. Rescate y Evacuación",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-08",
+          "required": true
+        },
+        {
+          "title": "Formación GWO Cargas o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-09",
+          "required": false
+        },
+        {
+          "title": "Formación GWO Incendios o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-09",
+          "required": true
+        },
+        {
+          "title": "Formación GWO PPAA o standard similar",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-06",
+          "required": true
+        },
+        {
+          "title": "Formación LOTO especifica NORDEX",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "HOJA DE VIDA DE CONDUCTOR",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "Inducción H&S Turbina",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": true
+        },
+        {
+          "title": "Inspección de EPIS Eléctricos",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-07-15",
+          "required": true
+        },
+        {
+          "title": "Inspección EPIS altura (NORDEX)",
+          "status": "IN_REVIEW",
+          "expiresOn": "2027-07-15",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR (VEHICULOS MENORES)",
+          "status": "APPROVED",
+          "expiresOn": "2034-08-05",
+          "required": true
+        },
+        {
+          "title": "LICENCIA DE CONDUCIR OPERADORES",
+          "status": "EXPIRED",
+          "expiresOn": "2026-08-11",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE INFORMACION DE RIESGOS LABORALES (IRL) Y MEDIO AMBIENTE ESPECIFICOS DE LA OBRA",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE CHARLA DE INDUCCION DEL PROPIETARIOS",
+          "status": "MISSING",
+          "note": "Sem documento enviado (status \"-\" no portal).",
+          "required": false
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DE ELEMENTOS PROTECCION PERSONAL (EPP/EPI)",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-10",
+          "required": true
+        },
+        {
+          "title": "REGISTRO DE ENTREGA DEL REGLAMENTO INTERNO DE ORDEN, HIGIENE Y SEGURIDAD A LOS TRABAJADORES (RIHS-RIOHYS)",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-24",
+          "required": true
+        },
+        {
+          "title": "SEGURO DE ACCIDENTES PARA TRABAJADORES INDEPENDIENTES (LEY 16.744 ACHS, MUTUAL, ISL)",
+          "status": "APPROVED",
+          "expiresOn": "2031-10-30",
           "required": true
         }
       ]
