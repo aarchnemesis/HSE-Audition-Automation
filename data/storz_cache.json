@@ -128,7 +128,7 @@
     "requestDate": "2026-11-11T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 15,
+    "progressPercent": 23,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -142,7 +142,7 @@
     "requestDate": "2026-11-11T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 10,
+    "progressPercent": 25,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -1565,6 +1565,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622183",
+    "collaboratorName": "DIEGO MENEZES NUNES COELHO",
+    "collaboratorCpf": "078.393.563-38",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:45:50.438Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "612254",
     "collaboratorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
     "collaboratorCpf": "125.128.364-01",
@@ -2261,6 +2276,36 @@
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
+  },
+  {
+    "id": "622204",
+    "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
+    "collaboratorCpf": "219.001.688-63",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:45:53.406Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622188",
+    "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
+    "collaboratorCpf": "219.001.688-63",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:45:53.406Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
   },
   {
     "id": "496963",
@@ -3057,6 +3102,21 @@
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
+  },
+  {
+    "id": "622187",
+    "collaboratorName": "FERNANDO TEODORO DE MORAIS NETO",
+    "collaboratorCpf": "609.992.853-78",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:45:57.879Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
   },
   {
     "id": "572884",
@@ -4032,6 +4092,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622192",
+    "collaboratorName": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
+    "collaboratorCpf": "078.323.783-95",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:03.044Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "573816",
     "collaboratorName": "FRANCISCO LEONARDO DA SILVA FERREIRA",
     "collaboratorCpf": "058.815.073-80",
@@ -4235,6 +4310,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622199",
+    "collaboratorName": "FRANCISCO LEONARDO DA SILVA FERREIRA",
+    "collaboratorCpf": "058.815.073-80",
+    "trainingCode": "14",
+    "trainingName": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAçãO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:03.793Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -4794,6 +4884,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622206",
+    "collaboratorName": "IGOR MARTINS ROCHA",
+    "collaboratorCpf": "065.934.633-88",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:07.755Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "581685",
     "collaboratorName": "IGOR MARTINS ROCHA",
     "collaboratorCpf": "065.934.633-88",
@@ -4810,6 +4915,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622189",
+    "collaboratorName": "IGOR MARTINS ROCHA",
+    "collaboratorCpf": "065.934.633-88",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:07.755Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "583157",
     "collaboratorName": "IGOR MARTINS ROCHA",
     "collaboratorCpf": "065.934.633-88",
@@ -4820,6 +4940,21 @@
     "completionDate": "2026-11-09T03:00:00.000Z",
     "state": "CANCELADO",
     "rawSituacao": "Reprovado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622167",
+    "collaboratorName": "IGOR MARTINS ROCHA",
+    "collaboratorCpf": "065.934.633-88",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:07.755Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
     "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 16,
@@ -5015,6 +5150,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622181",
+    "collaboratorName": "INOCENCIO ROCHA DE MOURA",
+    "collaboratorCpf": "605.547.163-99",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:08.442Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "583159",
     "collaboratorName": "INOCENCIO ROCHA DE MOURA",
     "collaboratorCpf": "605.547.163-99",
@@ -5026,6 +5176,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622168",
+    "collaboratorName": "INOCENCIO ROCHA DE MOURA",
+    "collaboratorCpf": "605.547.163-99",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:08.442Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -5258,6 +5423,21 @@
     "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
     "modality": "PRESENCIAL",
     "requestDate": "2026-11-05T18:33:00.286Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622194",
+    "collaboratorName": "JOÃO CARLOS GUARDIANO DA SILVA",
+    "collaboratorCpf": "087.879.664-92",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:09.812Z",
     "state": "SOLICITADO",
     "rawSituacao": "Não iniciado",
     "progressPercent": 0,
@@ -5742,6 +5922,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622182",
+    "collaboratorName": "JOSE RICARDO BRAGA MATOS",
+    "collaboratorCpf": "076.578.733-45",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:12.536Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "583158",
     "collaboratorName": "JOSE RICARDO BRAGA MATOS",
     "collaboratorCpf": "076.578.733-45",
@@ -5753,6 +5948,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622169",
+    "collaboratorName": "JOSE RICARDO BRAGA MATOS",
+    "collaboratorCpf": "076.578.733-45",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:12.536Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -5785,6 +5995,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622208",
+    "collaboratorName": "JOSE RICARDO BRAGA MATOS",
+    "collaboratorCpf": "076.578.733-45",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:12.536Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -6592,6 +6817,36 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622186",
+    "collaboratorName": "MICHEL PLATINI SOARES BARROS",
+    "collaboratorCpf": "061.237.413-06",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:19.176Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622203",
+    "collaboratorName": "MICHEL PLATINI SOARES BARROS",
+    "collaboratorCpf": "061.237.413-06",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:19.176Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "573662",
     "collaboratorName": "NYLLYS RODRIGUES MARTINS",
     "collaboratorCpf": "063.257.573-51",
@@ -7012,6 +7267,36 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622195",
+    "collaboratorName": "RAFAEL ANDRADE BARBOSA",
+    "collaboratorCpf": "662.377.853-53",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:22.060Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622207",
+    "collaboratorName": "RAFAEL ANDRADE BARBOSA",
+    "collaboratorCpf": "662.377.853-53",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:22.060Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "573701",
     "collaboratorName": "RAFAEL PEREIRA NUNES",
     "collaboratorCpf": "070.281.263-31",
@@ -7124,6 +7409,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622164",
+    "collaboratorName": "RAFAEL PEREIRA NUNES",
+    "collaboratorCpf": "070.281.263-31",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:22.752Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "606995",
     "collaboratorName": "RAFAEL PEREIRA NUNES",
     "collaboratorCpf": "070.281.263-31",
@@ -7135,6 +7435,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622185",
+    "collaboratorName": "RAFAEL PEREIRA NUNES",
+    "collaboratorCpf": "070.281.263-31",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:22.752Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -7169,6 +7484,21 @@
     "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622205",
+    "collaboratorName": "RAFAEL PEREIRA NUNES",
+    "collaboratorCpf": "070.281.263-31",
+    "trainingCode": "15",
+    "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:22.752Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
     "idealSlaDays": 1
   },
   {
@@ -7262,6 +7592,36 @@
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
+  },
+  {
+    "id": "622162",
+    "collaboratorName": "RAFAEL SIQUEIRA DA SILVA",
+    "collaboratorCpf": "604.418.673-32",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:23.639Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622193",
+    "collaboratorName": "RAFAEL SIQUEIRA DA SILVA",
+    "collaboratorCpf": "604.418.673-32",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:23.639Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
   },
   {
     "id": "576041",
@@ -8561,6 +8921,21 @@
     "idealSlaDays": 2
   },
   {
+    "id": "622180",
+    "collaboratorName": "ANTONIO CARVALHO JÚNIOR",
+    "collaboratorCpf": "918.282.873-34",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:30.228Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "574972",
     "collaboratorName": "ANTONIO CARVALHO JÚNIOR",
     "collaboratorCpf": "918.282.873-34",
@@ -8966,6 +9341,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
+    "id": "622191",
+    "collaboratorName": "ITALO DE ABREU DUARTE",
+    "collaboratorCpf": "073.760.693-21",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:32.315Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
@@ -9556,6 +9946,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622196",
+    "collaboratorName": "ANTONIO CARLOS PEREIRA",
+    "collaboratorCpf": "410.991.253-91",
+    "trainingCode": "13",
+    "trainingName": "[STORZ] - NR10 - CURSO COMPLEMENTAR - SEGURANçA NO SISTORZA ELéTRICO DE POTêNCIA (SEP) E EM SUAS PROXIMIDADES (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T03:00:00.000Z",
+    "state": "EM_ANDAMENTO",
+    "rawSituacao": "Em andamento",
+    "progressPercent": 3,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
+  },
+  {
     "id": "597386",
     "collaboratorName": "BRUNO EDUARDO FERREIRA DE PAIVA",
     "collaboratorCpf": "066.419.676-46",
@@ -10110,6 +10515,21 @@
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
+  },
+  {
+    "id": "622163",
+    "collaboratorName": "NARDEL DELON NOVAIS ROCHA",
+    "collaboratorCpf": "219.924.268-48",
+    "trainingCode": "12",
+    "trainingName": "[STORZ] - NR10 - CURSO BáSICO - SEGURANçA EM INSTALAçõES E SERVIçOS COM ELETRICIDADE (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:46:41.754Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 16,
+    "idealSlaDays": 2
   },
   {
     "id": "573646",
