@@ -1,4 +1,6 @@
 import 'dotenv/config'
+import fs from 'fs'
+import path from 'path'
 import { savePortalCensus } from '../adapters/portais/PortalCensusStore.js'
 import {
   closeSession,
@@ -51,6 +53,20 @@ async function main() {
         '[TDoc] Raspagem vazia (0 colaboradores) — censo existente preservado, nada gravado.'
       )
       return
+    }
+    // A flaky run (JSF navigation drifting) can return a fraction of the workers. Never overwrite a
+    // fuller census with a much smaller one unless explicitly forced.
+    const prevPath = path.join(process.cwd(), 'data', 'portais', `${portalId}.census.json`)
+    if (!process.argv.includes('--force') && fs.existsSync(prevPath)) {
+      const prev = JSON.parse(fs.readFileSync(prevPath, 'utf-8'))
+      const prevCount = prev.workers?.length ?? 0
+      if (prevCount > 0 && census.workers.length < prevCount * 0.8) {
+        console.warn(
+          `[TDoc] Censo incompleto (${census.workers.length} colaboradores vs ${prevCount} anteriores) — nada gravado. Use --force para sobrescrever.`
+        )
+        process.exitCode = 2
+        return
+      }
     }
     const out = savePortalCensus(census)
     const docs = census.workers.reduce((n, w) => n + w.documents.length, 0)
