@@ -3,6 +3,7 @@ import os from 'os'
 import path from 'path'
 import { describe, expect, it } from 'vitest'
 import {
+  applyHolderCheck,
   isImageBuffer,
   isPdfBuffer,
 } from '../../adapters/drive/GoogleDriveOAuthAdapter.js'
@@ -10,8 +11,10 @@ import {
   CONTENT_EXTRACTOR_VERSION,
   PDFContentCache,
 } from '../../adapters/drive/PDFContentCache.js'
+import { EHSEvaluator, PERMANENT_DETAIL } from './EHSEvaluator.js'
 import {
   PDFContentInspector,
+  checkHolder,
   dateAppearsInText,
   filenameDivergences,
   outranks,
@@ -19,6 +22,73 @@ import {
 } from './PDFContentInspector.js'
 
 const REF = new Date(2026, 10, 11)
+
+describe('checkHolder', () => {
+  const roster = ['FULANO DE TAL SOUZA', 'BELTRANO PEREIRA NUNES']
+  it('accepts the holder name, with or without accents and spaces', () => {
+    expect(
+      checkHolder('Certifico que Fulano de Tal Souza', roster[0], roster)
+    ).toEqual({ status: 'OK' })
+    expect(
+      checkHolder('Certifico que FulanodeTalSouza', roster[0], roster)
+    ).toEqual({ status: 'OK' })
+  })
+  it('flags a document that belongs to another collaborator', () => {
+    expect(
+      checkHolder('Certifico que BELTRANO PEREIRA NUNES', roster[0], roster)
+    ).toEqual({ status: 'OUTRA_PESSOA', other: 'BELTRANO PEREIRA NUNES' })
+  })
+  it('reports when no known name is printed', () => {
+    expect(checkHolder('Certificado de curso', roster[0], roster)).toEqual({
+      status: 'NAO_ENCONTRADO',
+    })
+  })
+  it('turns a read document of another person into a blocking NAO_LIDO', () => {
+    const item = applyHolderCheck(
+      {
+        code: '17',
+        statusEHS: 'CONFORME',
+        statusDetail: '',
+        source: 'PDF_CONTENT',
+      },
+      '17 - NR-17 - FULANO.pdf',
+      { status: 'OUTRA_PESSOA', other: 'BELTRANO PEREIRA NUNES' }
+    )
+    expect(item.statusEHS).toBe('NAO_LIDO')
+    expect(item.statusDetail).toContain('pertence a outra pessoa')
+  })
+})
+
+describe('course date vs signature date', () => {
+  it('uses the printed course date when the extractor picked a later signature log', () => {
+    const item = PDFContentInspector.inspectPages(
+      '17 - NR - 17 Car. Manual Peso (GWO) - 30.09.26 - FULANO DE TAL',
+      [
+        'Certificado. Certifico que Fulano de Tal participou do Curso GWO/BST Módulo Manuseio Manual de Cargas no dia 30de Setembro de 2026. Treinamento válido por 02 (Dois) anos.',
+        'Conteúdo programático do módulo.',
+        'Assinaturas FULANO DE TAL Assinou em 02 out 2026 às 12:23:16',
+      ],
+      REF
+    ).find(i => i.code === '17')
+    expect(item?.issueDate?.getDate()).toBe(30)
+    expect(item?.issueDate?.getMonth()).toBe(8)
+  })
+})
+
+describe('permanent documents', () => {
+  it('are CONFORME without an expiry date', () => {
+    expect(EHSEvaluator.evaluateForCode('05', undefined, REF)).toEqual({
+      status: 'CONFORME',
+      detail: PERMANENT_DETAIL,
+    })
+    const result = PDFContentInspector.inspect(
+      '04 - CTPS Digital - FULANO DE TAL.pdf',
+      'CARTEIRA DE TRABALHO DIGITAL FULANO DE TAL contrato de trabalho admissão registrada',
+      REF
+    )
+    expect(result.expirationDate).toBeUndefined()
+  })
+})
 
 const NR01_AS_ASO_NAME =
   '01 - NR01 DISPOSIÇÕES GERAIS - 22.11.24 -FULANO DE TAL'

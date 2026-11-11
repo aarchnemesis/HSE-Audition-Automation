@@ -1,5 +1,8 @@
 import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
-import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
+import {
+  EHSEvaluator,
+  PERMANENT_DOC_CODES,
+} from '../../domain/services/EHSEvaluator.js'
 
 // Baseado no "Guia de Treinamentos Normativos SST" (ARTH-Wind SSMA, v2.0, ago/2026).
 // '05' (Cartão de Vacina / SUS) é documento permanente / pessoal e NÃO possui periodicidade anual.
@@ -13,18 +16,7 @@ const ANNUAL_VALIDITY_CODES = ['01', '06', '20', '28', '34']
 // - 10 (NR-01 Integração EHS) e 11 (NR-06 Uso de EPI): retreinados apenas por gatilho de evento
 // - 23 (CRT - Conselho de Técnicos) e 24 (Diploma Técnico): registro e titulação permanentes
 // - 30 (GWO WINDA ID): identificação única e vitalícia do profissional na GWO
-// Todos esses usam validade de 50 anos como proxy de documento permanente / CONFORME.
-export const EVENT_TRIGGERED_ONLY_CODES = [
-  '02',
-  '03',
-  '04',
-  '05',
-  '10',
-  '11',
-  '23',
-  '24',
-  '30',
-]
+export const EVENT_TRIGGERED_ONLY_CODES = PERMANENT_DOC_CODES
 export const EVENT_TRIGGERED_VALIDITY_YEARS = 50
 
 // Contrato PJ (40) e Aditivo ao Contrato (40.1) — confirmado pelo usuário em 27/08/2026: a data
@@ -109,12 +101,7 @@ export function calculateDocExpiration(
   parsedDate: Date | null,
   refDate: Date
 ): Date | undefined {
-  if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
-    return EHSEvaluator.calculateExpirationFromIssue(
-      parsedDate || refDate,
-      EVENT_TRIGGERED_VALIDITY_YEARS
-    )
-  }
+  if (EVENT_TRIGGERED_ONLY_CODES.includes(code)) return undefined
 
   if (!parsedDate) return undefined
 

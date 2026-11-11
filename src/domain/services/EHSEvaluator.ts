@@ -3,7 +3,35 @@ import { EHSStatus } from '../models/Certificate.js'
 const EVALUATION_PREFIX =
   /^(?:VENCIDO há \d+ dias \(\d{2}\/\d{2}\/\d{4}\)|(?:CRÍTICO|ALERTA [A-ZÉ]+): Vence em \d+ dia(?:\(s\)|s)? \(\d{2}\/\d{2}\/\d{4}\)|Válido até \d{2}\/\d{2}\/\d{4})\s*/
 
+export const PERMANENT_DOC_CODES = [
+  '02',
+  '03',
+  '04',
+  '05',
+  '10',
+  '11',
+  '23',
+  '24',
+  '30',
+]
+
+export const PERMANENT_DETAIL = 'Documento permanente — sem vencimento'
+
+export function isPermanentDocCode(code: string | null | undefined): boolean {
+  return Boolean(code && PERMANENT_DOC_CODES.includes(code))
+}
+
 export class EHSEvaluator {
+  static evaluateForCode(
+    code: string | null | undefined,
+    expirationDate: Date | null | undefined,
+    refDate: Date = new Date()
+  ): { status: EHSStatus; detail: string } {
+    if (isPermanentDocCode(code))
+      return { status: 'CONFORME', detail: PERMANENT_DETAIL }
+    return EHSEvaluator.evaluateDate(expirationDate, refDate)
+  }
+
   /**
    * Strips the leading evaluateDate text from an already persisted detail,
    * keeping any extra note (e.g. "(Validado no RPO)").

@@ -295,7 +295,11 @@ export class ComplianceEngine {
         }
       }
 
-      const evaluation = EHSEvaluator.evaluateDate(cert.expirationDate, refDate)
+      const evaluation = EHSEvaluator.evaluateForCode(
+        code,
+        cert.expirationDate,
+        refDate
+      )
       let status = evaluation.status
       let detail = evaluation.detail
 

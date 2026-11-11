@@ -19,7 +19,7 @@ export const CONTRACT_EXTRACTOR_VERSION = 1
  */
 export const SIGNATURE_DATE_EXTRACTOR_VERSION = 1
 
-export const CONTENT_EXTRACTOR_VERSION = 3
+export const CONTENT_EXTRACTOR_VERSION = 4
 
 const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
 
@@ -125,6 +125,11 @@ export interface CachedPDFEntry {
   extractedClause?: string
   md5?: string
   ev?: number
+  holder?: {
+    key: string
+    status: 'OK' | 'NAO_ENCONTRADO' | 'OUTRA_PESSOA'
+    other?: string
+  }
   /** Lista de múltiplos documentos/normas identificados no mesmo PDF (Fase 2) */
   documents?: CachedPDFDocument[]
   /** Versão do motor de extração */
