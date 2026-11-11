@@ -23,6 +23,17 @@ describe('namesMatch', () => {
   })
 })
 
+describe('namesMatch: briefing quirks', () => {
+  it('ignores the "Backup" prefix the briefing puts on reserve technicians', () => {
+    expect(namesMatch('Backup Allan Veiga', 'ALLAN THIAGO RAMOS VEIGA')).toBe(true)
+    expect(namesMatch('Backup Italo Abreu', 'ITALO DE ABREU DUARTE')).toBe(true)
+  })
+
+  it('folds CK/K drift (Francklin / Franklin)', () => {
+    expect(namesMatch('Francisco Francklin', 'FRANCISCO FRANKLIN DA SILVA')).toBe(true)
+  })
+})
+
 describe('splitTeam', () => {
   it('splits on the separators the briefing uses and drops annotations', () => {
     expect(

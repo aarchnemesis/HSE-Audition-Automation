@@ -1,6 +1,8 @@
 const PARTICLES = new Set(['DE', 'DA', 'DO', 'DOS', 'DAS', 'E'])
+/** Role words the briefing prefixes to a person ("Backup Allan Veiga"): not part of the name. */
+const ROLE_WORDS = new Set(['BACKUP', 'RESERVA'])
 
-/** Folds the spellings that drift between sheets: SOUZA/SOUSA, MENEZES/MENESES, MATTOS/MATOS. */
+/** Folds the spellings that drift between sheets: SOUZA/SOUSA, MENEZES/MENESES, MATTOS/MATOS, CK/K. */
 export function nameTokens(name: string): string[] {
   return name
     .normalize('NFD')
@@ -8,11 +10,12 @@ export function nameTokens(name: string): string[] {
     .toUpperCase()
     .replace(/[^A-Z]+/g, ' ')
     .split(' ')
-    .filter(t => t && !PARTICLES.has(t))
+    .filter(t => t && !PARTICLES.has(t) && !ROLE_WORDS.has(t))
     .map(t =>
       t
         .replace(/Z/g, 'S')
         .replace(/Y/g, 'I')
+        .replace(/CK/g, 'K') // Francklin / Franklin
         .replace(/(.)\1+/g, '$1')
     )
 }

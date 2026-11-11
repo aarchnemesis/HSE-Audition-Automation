@@ -51,15 +51,21 @@ export async function scrapeTdocCensus(
   const sel = options.selectors ?? defaultTDocSelectors(options.portalId)
   const log = options.log ?? (() => {})
 
-  await page.goto(sel.tasksUrl, { waitUntil: 'networkidle', timeout: 30000 })
-  await page.waitForTimeout(2000)
-  const icon = page.locator(sel.selectCompanyIcon).first()
-  if (await icon.isVisible().catch(() => false)) {
-    await icon.click({ timeout: 20000 })
-    await page.waitForTimeout(3000)
+  // The task list sometimes renders late or not at all (0 rows seen on a flaky run), so open it with a
+  // few retries and wait for the rows instead of a fixed sleep.
+  let taskCount = 0
+  for (let attempt = 1; attempt <= 3 && taskCount === 0; attempt++) {
+    await page.goto(sel.tasksUrl, { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {})
+    await page.waitForTimeout(2000)
+    const icon = page.locator(sel.selectCompanyIcon).first()
+    if (await icon.isVisible().catch(() => false)) {
+      await icon.click({ timeout: 20000 }).catch(() => {})
+    }
+    await page.waitForSelector(sel.tasksTableRows, { timeout: 15000 }).catch(() => {})
+    await page.waitForTimeout(1500)
+    taskCount = await page.locator(sel.tasksTableRows).count()
+    if (taskCount === 0) log(`Lista de tarefas vazia (tentativa ${attempt}/3).`)
   }
-
-  const taskCount = await page.locator(sel.tasksTableRows).count()
   log(`Tarefas encontradas na tabela: ${taskCount}`)
 
   const tasksInfo: { index: number; name: string }[] = []

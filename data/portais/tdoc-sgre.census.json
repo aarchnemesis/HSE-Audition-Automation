@@ -1,6 +1,6 @@
 {
   "portalId": "tdoc-sgre",
-  "capturedAt": "2026-11-10T11:03:49.162Z",
+  "capturedAt": "2026-11-11T09:57:31.693Z",
   "workers": [
     {
       "name": "João Carlos Guardiano",
@@ -34,8 +34,8 @@
         {
           "title": "Trein. NR10 Básico",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-01-16"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR10 SEP",
@@ -243,8 +243,8 @@
         {
           "title": "Trein. NR33",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-16"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR35",
@@ -984,14 +984,14 @@
         {
           "title": "Trein. NR10 Básico",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-01-02"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR10 SEP",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-20"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR33",
@@ -1365,22 +1365,26 @@
         {
           "title": "Contrato trabalho",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Contrato trabalho",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
@@ -1491,12 +1495,14 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -1521,14 +1527,14 @@
         {
           "title": "Trein. Segurança Máquinas/Equip.",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-27"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. Segurança Máquinas/Equip.",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-27"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "CTPS",
@@ -1619,12 +1625,14 @@
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Perfil treinamento SGRE Manutenção",
@@ -2012,8 +2020,8 @@
         {
           "title": "Trein. NR06 - EPIS",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-31"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR10 Básico",
@@ -2036,7 +2044,8 @@
         {
           "title": "Trein. NR33",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR35",
@@ -2089,17 +2098,20 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
@@ -2257,7 +2269,8 @@
         {
           "title": "Antiqueda MILLER GLIDELOC",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Apolice Seguro Vida",
@@ -2320,8 +2333,8 @@
         {
           "title": "Checklist Diário EPI Altura",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2027-09-11"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Contrato trabalho",
@@ -2337,8 +2350,8 @@
         {
           "title": "Ficha EPI",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-15"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Ficha Registro Colaborador",
@@ -2505,7 +2518,8 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -2569,7 +2583,8 @@
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Perfil treinamento SGRE Manutenção",
@@ -2632,7 +2647,8 @@
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
@@ -2654,8 +2670,8 @@
         {
           "title": "Trein. NR33",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-12-29"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR35",
@@ -2690,7 +2706,8 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -2754,7 +2771,8 @@
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Perfil treinamento SGRE Manutenção",
@@ -2876,7 +2894,8 @@
         {
           "title": "ASO",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Checklist Diário EPI Altura",
@@ -2919,7 +2938,8 @@
         {
           "title": "Ordem Serviço",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Registro Conselho Classe",
@@ -3057,8 +3077,8 @@
         {
           "title": "ASO",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-26"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Checklist Diário EPI Altura",
@@ -3234,8 +3254,8 @@
         {
           "title": "ASO",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-26"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Checklist Diário EPI Altura",
@@ -3427,7 +3447,8 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -3442,8 +3463,8 @@
         {
           "title": "Trein. Segurança Máquinas/Equip.",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-24"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "CTPS",
@@ -3519,7 +3540,8 @@
         {
           "title": "Antiqueda MILLER GLIDELOC",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR06 - EPIS",
@@ -3566,7 +3588,8 @@
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
@@ -3763,7 +3786,8 @@
         {
           "title": "Autorização Instalações Elétricas (NR10)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Autorização Trabalhos Verticais (NR35)",
@@ -3785,12 +3809,14 @@
         {
           "title": "Trein. NR33",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. NR35",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Ficha EPI",
@@ -3819,7 +3845,8 @@
         {
           "title": "Autorização Espaço Confinado (NR33)",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cartão de vacinação + COVID19",
@@ -3829,13 +3856,14 @@
         {
           "title": "Trein. Integração Admissional",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Trein. Segurança Máquinas/Equip.",
           "required": true,
-          "status": "APPROVED",
-          "expiresOn": "2026-11-27"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "CTPS",
@@ -3883,7 +3911,8 @@
         {
           "title": "Autorização Formal NR12",
           "required": true,
-          "status": "APPROVED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Perfil treinamento SGRE Manutenção",
@@ -3894,7 +3923,8 @@
         {
           "title": "Cert. GWO-BST",
           "required": true,
-          "status": "REJECTED"
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-10"
         },
         {
           "title": "Cert./Diploma Qualificação Técnica",

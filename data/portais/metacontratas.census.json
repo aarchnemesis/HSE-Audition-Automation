@@ -1,6 +1,6 @@
 {
   "portalId": "metacontratas",
-  "capturedAt": "2026-11-10T13:51:28.105Z",
+  "capturedAt": "2026-11-11T09:33:30.160Z",
   "workers": [
     {
       "name": "JOAO BATISTA C. DA SILVA",
@@ -444,7 +444,7 @@
         },
         {
           "title": "Certidão Negativa da Receita Federal e Dívida Ativa da União - MEI",
-          "status": "APPROVED",
+          "status": "EXPIRED",
           "expiresOn": "2026-11-11",
           "required": false
         },
@@ -795,7 +795,7 @@
     },
     {
       "name": "EMERSON PALLOTTA RIBEIRO",
-      "role": "CLT - INSPETOR DE QUALIDADE SR (SOLO)",
+      "role": "CLT - INSPETOR DE QUALIDADE SR",
       "contract": "IBITU ENERGIA S.A",
       "documents": [
         {
@@ -821,26 +821,26 @@
         },
         {
           "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-19",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-19",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-19",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-19",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
@@ -881,8 +881,8 @@
         },
         {
           "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
@@ -934,8 +934,8 @@
         },
         {
           "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
-          "status": "EXPIRED",
-          "expiresOn": "2026-11-07",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
@@ -984,26 +984,26 @@
         },
         {
           "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Avanti realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Certificado de Inspeção/Ensaio anual do Trava-quedas Honeywell realizado pelo fabricante ou empresa qualificada - Mencionar nº de SÉRIE na Ficha de EPI",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Check List de Inspeção dos Kit’s Trabalho em Altura (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
           "title": "Check List de Inspeção dos Kit’s Trabalho em Altura Honeywell (cinto tipo paraquedista, talabarte em “Y” com ABS, trava-quedas), realizado por profissional capacitado em inspeção de EPI’s",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
@@ -1044,8 +1044,8 @@
         },
         {
           "title": "Treinamento de Evacuação/Abandono de Turbina Eólica (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
-          "status": "EXPIRED",
-          "expiresOn": "2026-10-16",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
@@ -1097,8 +1097,8 @@
         },
         {
           "title": "Treinamento NR 35 - 08hs (Certificado + Conteúdo) com nome, qualificação e assinaturas dos Instrutores e do Responsável Técnico + assinatura do aluno",
-          "status": "EXPIRED",
-          "expiresOn": "2026-11-10",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
           "required": true
         },
         {
