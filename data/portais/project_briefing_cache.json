@@ -69,7 +69,7 @@
     "scope": "INTERNAS – INVESTIGATIVA",
     "startDate": "2026-10-19",
     "status": "Verde",
-    "team": "Allan Thiago Ramos Veiga, FRANCISCO EVERSON BARBOSA VASCONCELOS, Francisco Vinicius Sousa Dos Santos, Wanderson Avelino de Souza"
+    "team": "Allan Thiago Ramos Veiga, Francisco Vinicius Sousa Dos Santos, Herbens"
   },
   {
     "wo": "2024-0011-3",
@@ -99,15 +99,6 @@
     "team": "Backup Allan Veiga, Backup Italo Abreu, Backup Ítalo Abreu, Carlos Henrique Soares da Silva, Fernando Teodoro De Morais Neto, Francisco Francklin, Francisco George Martins Silva, José Marcos Moura, MÁRIO SÉRGIO CASTRO DE SOUSA, Simon Dias da Silva, Ítalo Abreu"
   },
   {
-    "wo": "2026-0043",
-    "client": "VESTAS R. DOMINICANA",
-    "windfarm": "Complexo Eólico Guzmancitos I",
-    "scope": "Investigativa",
-    "startDate": "2026-10-09",
-    "status": "Verde",
-    "team": "Antonio Rafael dos Santos, Igor Martins Rocha, Italo Abreu"
-  },
-  {
     "wo": "2026-0056",
     "client": "GE VERNOVA",
     "windfarm": "Complexo Eólico Lagoa dos Ventos",
@@ -129,7 +120,7 @@
     "wo": "2026-0049",
     "client": "GE VERNOVA",
     "windfarm": "Complexo Eólico Ventos da Bahia",
-    "scope": "INTERNAS – INVESTIGATIVA",
+    "scope": "INTERNAS – MONITORAMENTO ROBÔ",
     "startDate": "2026-11-02",
     "status": "Verde",
     "team": "Caio Felipe Ribeiro Rodrigues, Marcos Magalhães, Wilden Alves Ferreira"
@@ -150,7 +141,7 @@
     "scope": "Monitoramento",
     "startDate": "2025-10-29",
     "status": "Amarelo",
-    "team": "Allan Thiago Ramos Veiga, Antonio Roberto dos Santos Nascimento, Carlos Eduardo Ferreira Alves, Edclei da Conceição Custódio, Francisco Davilo Marques de Sousa, Gabriel Lima Feitosa, João Carlos Guardiano"
+    "team": "Allan Thiago Ramos Veiga, Antonio Roberto dos Santos Nascimento, Carlos Eduardo Ferreira Alves, Edclei da Conceição Custódio, Francisco Davilo Marques de Sousa, João Carlos Guardiano, Williames"
   },
   {
     "wo": "2024-0088-5",
@@ -171,15 +162,6 @@
     "team": "Allan Thiago Ramos Veiga, David Kelson de Souza Loyola, Diego Menezes, Erveson Nascimento Dos Santos, José Orlando Barros da Silva Filho, Juan Ilgner Marinho Lima, Raimundo Nonato de Holanda Filho"
   },
   {
-    "wo": "2026-0055",
-    "client": "SERENA",
-    "windfarm": "Complexo Eólico Gargaú",
-    "scope": "MEDIÇÃO DE GAP – DINÂMICO",
-    "startDate": "2026-11-16",
-    "status": "Amarelo",
-    "team": "Allan Thiago Ramos Veiga, Francisco Elvison Pereira de Sousa, Francisco Francklin"
-  },
-  {
     "wo": "2026-0047 PAD",
     "client": "SERENA",
     "windfarm": "Complexo Eólico Goodnight II",
@@ -195,7 +177,7 @@
     "scope": "INTERNAS – INVESTIGATIVA",
     "startDate": "2026-11-16",
     "status": "Amarelo",
-    "team": "FRANCISCO EVERSON BARBOSA VASCONCELOS, Francisco Vinicius Sousa Dos Santos, Wanderson Avelino de Souza, Ítalo Abreu"
+    "team": "Francisco Vinicius Sousa Dos Santos, Herbens, Wanderson Avelino de Souza, Ítalo Abreu"
   },
   {
     "wo": "WOOPEN09",
@@ -321,7 +303,7 @@
     "scope": "Monitoramento",
     "startDate": "2025-12-04",
     "status": "Amarelo",
-    "team": "Carlos Eduardo Ferreira Alves, Francisco Davilo Marques de Sousa, João Carlos Guardiano"
+    "team": "Allan Thiago Ramos Veiga, Carlos Eduardo Ferreira Alves, Francisco Davilo Marques de Sousa, João Carlos Guardiano"
   },
   {
     "wo": "2025-0020-3",
@@ -330,7 +312,7 @@
     "scope": "Investigativa",
     "startDate": "2026-01-21",
     "status": "Amarelo",
-    "team": "Carlos Eduardo Ferreira Alves, Francisco Davilo Marques de Sousa, João Carlos Guardiano"
+    "team": "Allan Thiago Ramos Veiga, Carlos Eduardo Ferreira Alves, Francisco Davilo Marques de Sousa, João Carlos Guardiano"
   },
   {
     "wo": "2026-0050",
@@ -339,7 +321,7 @@
     "scope": "INTERNAS – MONITORAMENTO ROBÔ",
     "startDate": "2025-03-17",
     "status": "Amarelo",
-    "team": ""
+    "team": "Allan Thiago Ramos Veiga"
   },
   {
     "wo": "2025-0050-2",
@@ -491,7 +473,7 @@
     "windfarm": "Complexo Eólico Tanque Novo",
     "scope": "EXTERNAS",
     "startDate": "2026-11-07",
-    "status": "Amarelo",
+    "status": "Verde",
     "team": "Thiago Lima Santos Silva"
   },
   {
@@ -1045,7 +1027,7 @@
     "client": "IBITU",
     "windfarm": "Complexo Eólico Caldeirão",
     "scope": "AUDITORIA – REPARO",
-    "startDate": "2026-11-09",
+    "startDate": "2026-11-23",
     "status": "Amarelo",
     "team": "?, Diego Patrick"
   },
@@ -1054,7 +1036,7 @@
     "client": "IBITU",
     "windfarm": "Complexo Eólico Riachão",
     "scope": "AUDITORIA – REPARO",
-    "startDate": "2026-11-09",
+    "startDate": "2026-11-23",
     "status": "Amarelo",
     "team": "?, Diego Patrick"
   },
@@ -1063,7 +1045,7 @@
     "client": "CASA DOS VENTOS",
     "windfarm": "Complexo Eólico Dom Inocencio",
     "scope": "AUDITORIA – RECEBIMENTO",
-    "startDate": "2026-11-16",
+    "startDate": "2026-11-30",
     "status": "Amarelo",
     "team": "?, Diego Menezes, Diego Patrick, Maria Bruna Soares Santos, Thayná Nogueira Tavares"
   },
@@ -1072,7 +1054,7 @@
     "client": "CASA DOS VENTOS",
     "windfarm": "Complexo Eólico Tianguá",
     "scope": "AUDITORIA – RECEBIMENTO",
-    "startDate": "2026-12-07",
+    "startDate": "2026-11-30",
     "status": "Amarelo",
     "team": "Diego Menezes, Diego Patrick, Elias dos Santos Rodrigues, Wilden"
   },

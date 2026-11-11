@@ -128,7 +128,7 @@
     "requestDate": "2026-11-11T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 3,
+    "progressPercent": 15,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -142,7 +142,7 @@
     "requestDate": "2026-11-11T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 3,
+    "progressPercent": 10,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -688,6 +688,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622153",
+    "collaboratorName": "ANTONIO ROBERTO DOS SANTOS NASCIMENTO",
+    "collaboratorCpf": "086.924.633-02",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:27.013Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
     "id": "619345",
     "collaboratorName": "ANTÔNIO ROGERIO DUARTE COSTA",
     "collaboratorCpf": "083.966.113-43",
@@ -1165,6 +1180,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622154",
+    "collaboratorName": "DANIEL FERREIRA DA SILVA FILHO",
+    "collaboratorCpf": "116.582.966-56",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:31.087Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
@@ -2170,6 +2200,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622142",
+    "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
+    "collaboratorCpf": "219.001.688-63",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:35.162Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
     "id": "606996",
     "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
     "collaboratorCpf": "219.001.688-63",
@@ -2361,6 +2406,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622151",
+    "collaboratorName": "EMERSON PALLOTTA RIBEIRO",
+    "collaboratorCpf": "220.269.698-92",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:35.853Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
     "id": "514658",
     "collaboratorName": "ERALDO ANTÔNIO DE MOURA",
     "collaboratorCpf": "008.709.254-90",
@@ -2482,6 +2542,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622152",
+    "collaboratorName": "ERALDO ANTÔNIO DE MOURA",
+    "collaboratorCpf": "008.709.254-90",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:36.626Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
@@ -3822,6 +3897,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622150",
+    "collaboratorName": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
+    "collaboratorCpf": "078.323.783-95",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:44.367Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
     "id": "606892",
     "collaboratorName": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
     "collaboratorCpf": "078.323.783-95",
@@ -5013,7 +5103,7 @@
     "requestDate": "2026-11-09T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 6,
+    "progressPercent": 10,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
@@ -5568,6 +5658,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622149",
+    "collaboratorName": "JOSE RICARDO BRAGA MATOS",
+    "collaboratorCpf": "076.578.733-45",
+    "trainingCode": "11",
+    "trainingName": "[STORZ] - NR6 - EPIS E EPCS (EQUIPAMENTOS DE PROTEçãO INDIVIDUAL E COLETIVA)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T14:01:54.131Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 4,
     "idealSlaDays": 1
@@ -9524,7 +9629,7 @@
     "requestDate": "2026-11-01T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 43,
+    "progressPercent": 50,
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
