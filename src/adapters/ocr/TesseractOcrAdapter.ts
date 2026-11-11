@@ -57,7 +57,7 @@ export class TesseractOcrAdapter {
 
   static async extractTextFromScannedPdf(
     pdfBuffer: Buffer,
-    maxPages = 10
+    maxPages = 4
   ): Promise<string[]> {
     await this.assertAvailable()
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'hse_ocr_'))
@@ -108,7 +108,11 @@ export class TesseractOcrAdapter {
     const { stdout } = await execFileAsync(
       'tesseract',
       [imgPath, 'stdout', '--oem', '1', '-l', LANGS],
-      { timeout: PAGE_TIMEOUT_MS, maxBuffer: 16 * 1024 * 1024 }
+      {
+        timeout: PAGE_TIMEOUT_MS,
+        maxBuffer: 16 * 1024 * 1024,
+        env: { ...process.env, OMP_THREAD_LIMIT: '1' },
+      }
     )
     return stdout || ''
   }
