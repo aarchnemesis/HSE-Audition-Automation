@@ -52,7 +52,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T15:00:57.612Z",
+        "capturedAt": "2026-11-11T16:01:07.630Z",
         "workers": 13
       },
       "clients": [
@@ -61,7 +61,7 @@
           "activity": "IN_FIELD",
           "projectsInWindow": 8,
           "lastStart": "2026-11-09",
-          "nextStart": "2026-11-30"
+          "nextStart": "2026-11-23"
         }
       ],
       "activity": "IN_FIELD"
@@ -360,7 +360,7 @@
           "activity": "IN_FIELD",
           "projectsInWindow": 8,
           "lastStart": "2026-11-09",
-          "nextStart": "2026-11-30"
+          "nextStart": "2026-11-23"
         }
       ],
       "activity": "IN_FIELD"
