@@ -226,17 +226,16 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-25T03:00:00.000Z",
+    "expirationDate": "2027-11-11T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "613583",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 23,
-    "storzDeadline": "10/01/2027",
-    "detail": "Válido até 25/01/2027 | Reciclagem já solicitada na Storz (613583 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (613583) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1jJAUyKN7OtMKbSXk6fJgMR_9EeVyMcnc/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sV6VCgfCfrPYtopOJK_5khk5PVNky79G",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-11T14:47:12.393Z"
+    "lastUpdated": "2026-11-11T17:03:14.399Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -12861,12 +12860,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619376",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 36,
+    "storzProgressPercent": 43,
     "storzDeadline": "08/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 36%) [Prazo Storz: 08/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 43%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T16:47:20.757Z"
+    "lastUpdated": "2026-11-11T17:03:14.399Z"
   },
   {
     "inspectorId": "rpo_51",
