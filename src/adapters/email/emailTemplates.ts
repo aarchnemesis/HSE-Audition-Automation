@@ -4,7 +4,7 @@ export const EMAIL_TITLE = 'Alerta EHS - Documentação'
 
 export function badgeClassFor(status: string): string {
   if (status === 'AUSENTE') return 'badge-ausente'
-  if (status === 'VENCIDO') return 'badge-vencido'
+  if (status === 'VENCIDO' || status === 'NAO_LIDO') return 'badge-vencido'
   if (['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(status))
     return 'badge-atenção'
   if (status === 'SOLICITADO_STORZ') return 'badge-storz'
@@ -14,6 +14,7 @@ export function badgeClassFor(status: string): string {
 
 export function statusLabelFor(status: string): string {
   if (status === 'AUSENTE') return '⚪ Ausente'
+  if (status === 'NAO_LIDO') return '✘ Não lido'
   if (status === 'VENCIDO') return '✘ Vencido'
   if (status === 'VENCE_07') return '⚠️ <7d'
   if (status === 'VENCE_15') return '⏳ <15d'

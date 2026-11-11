@@ -6,7 +6,6 @@ import {
 export interface CensusFile {
   id: string
   name: string
-  /** Folder names between the collaborator root and the file. */
   path: string[]
   mimeType: string
   size?: number
@@ -19,7 +18,6 @@ export interface CensusCollaborator {
   name: string
   folderId: string
   files: CensusFile[]
-  /** Every sub-folder path under the collaborator root, empty folders included. */
   folders: string[][]
 }
 
@@ -79,7 +77,6 @@ export interface CensusSummary {
   crossCollaboratorDuplicates: { md5: string; owners: string[] }[]
 }
 
-/** Repo catalog codes for the Book's mandatory core (letters 41-44 are 12.1/15.1/20.1/21.1 here). */
 export const CORE_CODES = [
   '01',
   '02',
@@ -121,7 +118,6 @@ export function isObsoletePath(path: string[]): boolean {
   return path.some(seg => OBSOLETE_FOLDER.test(seg.trim()))
 }
 
-/** BLOQUEADO includes the exact corte+60 day, per the agreed rule. */
 export function classifyBand(expires: Date, refDate: Date): DocBand {
   const days = Math.floor((expires.getTime() - refDate.getTime()) / 86_400_000)
   if (days < 0) return 'VENCIDO'

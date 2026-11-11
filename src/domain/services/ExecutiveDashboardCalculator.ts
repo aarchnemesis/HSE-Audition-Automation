@@ -117,8 +117,8 @@ export function getCollabOperationalHealth(person: {
       } else {
         expiredItems.push(r)
       }
-    } else if (r.statusEHS === 'AUSENTE') {
-      missingItems.push({ docCode: code, statusEHS: 'AUSENTE' })
+    } else if (r.statusEHS === 'AUSENTE' || r.statusEHS === 'NAO_LIDO') {
+      missingItems.push({ docCode: code, statusEHS: r.statusEHS })
     } else if (
       ['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(r.statusEHS)
     ) {

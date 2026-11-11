@@ -10,10 +10,6 @@ import {
   summarize,
 } from '../domain/services/DriveCensusAnalyzer.js'
 
-// Read-only census of every collaborator folder in every branch root (HSE_DRIVE_FOLDER_ID):
-// walks all sub-folders (obsolete ones included), records name/size/md5 of each file and measures
-// the real standardization gap. Output goes to scratch/drive-census/ (gitignored: personal data).
-
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 const CONCURRENCY = 4
 

@@ -3827,7 +3827,7 @@ export function buildDashboardHtml(
     }
 
     function isAusente(st) {
-      return st === 'AUSENTE';
+      return st === 'AUSENTE' || st === 'NAO_LIDO';
     }
 
     function isStorzActive(r) {
@@ -3868,6 +3868,8 @@ export function buildDashboardHtml(
         mainBadge = '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.alert + '&lt;7d</span>';
       } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
         mainBadge = '<span class="badge storz" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.cap + 'Storz</span>';
+      } else if (r.statusEHS === 'NAO_LIDO') {
+        mainBadge = '<span class="badge danger" title="' + (dedupeDetail(r.detail) || 'Arquivo no Drive sem leitura válida: o nome do arquivo não é aceito como prova') + '">' + SVG_ICONS.x + 'Não lido</span>';
       } else if (r.statusEHS === 'AUSENTE') {
         mainBadge = '<span class="badge ausente" title="' + (dedupeDetail(r.detail) || 'Não encontrado no Drive') + '">' + SVG_ICONS.minus + 'Ausente</span>';
       } else if (r.statusEHS === 'VENCIDO') {
@@ -5400,7 +5402,7 @@ export function buildDashboardHtml(
         highlightsHtml = '<div class="cockpit-card-pills">' +
           pendencies.map(r => {
             const docName = docShortNames[r.docCode] || r.docName;
-            const tag = isVencido(r.statusEHS) ? overdueLabel(r) : 'Ausente';
+            const tag = isVencido(r.statusEHS) ? overdueLabel(r) : r.statusEHS === 'NAO_LIDO' ? 'Não lido' : 'Ausente';
             return '<span class="cockpit-card-pill pill-danger" title="' + r.docName + ' (' + (dedupeDetail(r.detail) || tag) + ')"><svg class="ico ico-inline ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>' + docName + ' (' + tag + ')</span>';
           }).join('') +
           '</div>';
@@ -6608,7 +6610,7 @@ export function buildDashboardHtml(
         '<thead><tr><th style="text-align:left;">Treinamento / Documento</th><th>Modalidade</th><th>Status</th><th>Validade</th><th style="text-align:left;">Detalhes</th></tr></thead><tbody>';
 
       function getSortKey(r) {
-        if (r.statusEHS === 'VENCIDO' || r.statusEHS === 'AUSENTE') {
+        if (r.statusEHS === 'VENCIDO' || isAusente(r.statusEHS)) {
           return r.expirationDate ? new Date(r.expirationDate).getTime() : 0;
         }
         if (r.expirationDate) {

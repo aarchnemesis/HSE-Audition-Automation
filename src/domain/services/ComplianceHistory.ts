@@ -44,7 +44,7 @@ export function buildComplianceSnapshot(
       snapshot.expiringSoon++
     } else if (statusEHS === 'VENCIDO') {
       snapshot.expired++
-    } else if (statusEHS === 'AUSENTE') {
+    } else if (statusEHS === 'AUSENTE' || statusEHS === 'NAO_LIDO') {
       snapshot.missing++
     }
   }

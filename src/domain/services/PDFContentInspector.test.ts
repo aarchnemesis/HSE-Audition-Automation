@@ -146,16 +146,18 @@ describe('PDFContentInspector', () => {
       expect(result.statusEHS).toBe('VENCIDO') // Maio 2026 < refDate Setembro 2026
     })
 
-    it('deve fazer fallback suave para o nome do arquivo se o texto for vazio/imagem', () => {
+    it('marca NAO_LIDO, sem datas do nome, quando o texto é vazio/imagem', () => {
       const text = ''
       const filename =
         '14 – NR – 11 Uso de Talha – 24.06.24 – JOSE MARCELO MAGALHAES SOUSA - Clicksign.pdf'
       const result = PDFContentInspector.inspect(filename, text, refDate)
 
       expect(result.code).toBe('14')
-      expect(result.source).toBe('FILENAME')
-      expect(result.issueDate?.getFullYear()).toBe(2024)
-      expect(result.expirationDate?.getFullYear()).toBe(2026)
+      expect(result.statusEHS).toBe('NAO_LIDO')
+      expect(result.issueDate).toBeUndefined()
+      expect(result.expirationDate).toBeUndefined()
+      expect(result.statusDetail).toContain('BLOQUEADO — NÃO LIDO')
+      expect(result.statusDetail).toContain('não é aceito como prova')
     })
 
     it('deve extrair data e classificar corretamente certificado GWO BST Combate a Incêndio (COMB)', () => {
@@ -265,7 +267,7 @@ describe('PDFContentInspector', () => {
       expect(result.statusEHS).toBe('CONFORME')
     })
 
-    it('deve conciliar com data mais recente no nome do arquivo quando o texto só contiver formação antiga', () => {
+    it('não aceita a reciclagem que só o nome afirma: vale a formação impressa no texto', () => {
       const text = `
         Página 1: [Documento digitalizado / imagem sem texto legível]
         Página 2:
@@ -278,12 +280,24 @@ describe('PDFContentInspector', () => {
       const result = PDFContentInspector.inspect(filename, text, refDate)
 
       expect(result.code).toBe('12')
+      expect(result.issueDate?.getFullYear()).toBe(2023)
+      expect(result.expirationDate?.getFullYear()).toBe(2025)
+      expect(result.statusEHS).toBe('VENCIDO')
+    })
+
+    it('usa a reciclagem do nome quando a mesma data está impressa no texto (F+R)', () => {
+      const text = `
+        CERTIFICADO DE FORMAÇÃO INICIAL. Concluido em 16 de Outubro de 2023.
+        CERTIFICADO DE RECICLAGEM. Realizado em 09/10/2025.
+        Treinamento válido por 02 (Dois) anos.
+      `
+      const filename =
+        '12 – NR – 10 Básico (F+R) – 09.10.2025 - Thayna Nogueira Tavares.pdf'
+      const result = PDFContentInspector.inspect(filename, text, refDate)
+
       expect(result.issueDate?.getFullYear()).toBe(2025)
-      expect(result.issueDate?.getMonth()).toBe(9) // Outubro
+      expect(result.issueDate?.getMonth()).toBe(9)
       expect(result.issueDate?.getDate()).toBe(9)
-      expect(result.expirationDate?.getFullYear()).toBe(2027)
-      expect(result.expirationDate?.getMonth()).toBe(9)
-      expect(result.statusEHS).toBe('CONFORME')
     })
 
     it('deve extrair multiplas normas distintas em PDF multi-paginas (ex.: GWO BST completo)', () => {
@@ -381,13 +395,21 @@ describe('PDFContentInspector', () => {
         2025 07 24
       `
       const filename = 'Wermeson de Oliveira Franco - SOS.pdf'
-      const results = PDFContentInspector.inspectPages(filename, [page], refDate)
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page],
+        refDate
+      )
 
       expect(results.length).toBe(1)
       expect(results[0].code).toBe('16')
       expect(results[0].statusEHS).toBe('CONFORME')
-      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2025-07-24')
-      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2027-07-24')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe(
+        '2025-07-24'
+      )
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe(
+        '2027-07-24'
+      )
     })
 
     it('deve extrair data de aditivo contratual com espaco em encerrando- se em documento multipaginas', () => {
@@ -411,7 +433,8 @@ describe('PDFContentInspector', () => {
         Sorocaba/SP, 11 de maio de 2026.
         Clicksign b55fc124-18a1-413c-9d3a-b7f0ee87570a
       `
-      const filename = '04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf'
+      const filename =
+        '04 – Contrato +Aditivo– 11.05.2026 - Thiago Lima Santos Silva.pdf.pdf'
       const results = PDFContentInspector.inspectPages(
         filename,
         [page1, page2, page24, page25],
@@ -421,9 +444,15 @@ describe('PDFContentInspector', () => {
       const aditivoDoc = results.find(r => r.code === '40.1')
       expect(aditivoDoc).toBeDefined()
       expect(aditivoDoc?.statusEHS).toBe('CONFORME')
-      expect(aditivoDoc?.expirationDate?.toISOString().slice(0, 10)).toBe('2027-05-11')
-      expect(aditivoDoc?.issueDate?.toISOString().slice(0, 10)).toBe('2026-05-11')
-      expect(aditivoDoc?.extractedClause).toContain('encerrando- se em 11/05/2027')
+      expect(aditivoDoc?.expirationDate?.toISOString().slice(0, 10)).toBe(
+        '2027-05-11'
+      )
+      expect(aditivoDoc?.issueDate?.toISOString().slice(0, 10)).toBe(
+        '2026-05-11'
+      )
+      expect(aditivoDoc?.extractedClause).toContain(
+        'encerrando- se em 11/05/2027'
+      )
 
       // Garante que ARTH WIND na pagina 2 nao gerou falso positivo de GWO ART (32)
       const gwoDoc = results.find(r => r.code === '32')
@@ -439,14 +468,23 @@ describe('PDFContentInspector', () => {
         Periodicidade do pagamento Início de Vigência Término de Vigência
         MENSAL 07/06/2026 00:00 06/12/2026 23:59
       `
-      const filename = '07 – Seguro de Vida – SEM_DATA - THAYNA NOGUEIRA TAVARES.pdf'
-      const results = PDFContentInspector.inspectPages(filename, [page], new Date('2026-10-19T00:00:00Z'))
+      const filename =
+        '07 – Seguro de Vida – SEM_DATA - THAYNA NOGUEIRA TAVARES.pdf'
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page],
+        new Date('2026-10-19T00:00:00Z')
+      )
 
       expect(results.length).toBe(1)
       expect(results[0].code).toBe('07')
       expect(results[0].statusEHS).toBe('VENCE_60')
-      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2026-06-07')
-      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2026-12-06')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe(
+        '2026-06-07'
+      )
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe(
+        '2026-12-06'
+      )
     })
 
     it('deve extrair inicio e fim da vigencia de seguro viagem Coris (caso Felipe Bispo)', () => {
@@ -457,12 +495,20 @@ describe('PDFContentInspector', () => {
         Número de bilhete: BZCORS03572381
       `
       const filename = 'SEGURO CORIS_FELIPE RODRIGUES BISPO2026-04.pdf'
-      const results = PDFContentInspector.inspectPages(filename, [page], new Date('2026-10-19T00:00:00Z'))
+      const results = PDFContentInspector.inspectPages(
+        filename,
+        [page],
+        new Date('2026-10-19T00:00:00Z')
+      )
 
       expect(results.length).toBe(1)
       expect(results[0].code).toBe('07')
-      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe('2026-04-22')
-      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe('2026-05-21')
+      expect(results[0].issueDate?.toISOString().slice(0, 10)).toBe(
+        '2026-04-22'
+      )
+      expect(results[0].expirationDate?.toISOString().slice(0, 10)).toBe(
+        '2026-05-21'
+      )
     })
   })
   describe('signature dates never override the filename date', () => {
