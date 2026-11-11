@@ -278,7 +278,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
     }
 
     const cached = cache.get(fileId, entry.modifiedTime || undefined, md5)
-    if (cached && (cached.ev ?? 0) >= CONTENT_EXTRACTOR_VERSION) {
+    if (cached) {
       return cache.getAllDocuments(cached).map(doc => ({
         code: doc.code,
         issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,

@@ -43,6 +43,12 @@ function summarize(inspectors: Inspector[]) {
 
 async function main() {
   const force = process.argv.includes('--force')
+  const only = process.argv
+    .find(a => a.startsWith('--only='))
+    ?.slice('--only='.length)
+    .split(',')
+    .map(s => s.trim())
+    .filter(Boolean)
   const roots = (process.env.HSE_DRIVE_FOLDER_ID ?? '')
     .split(',')
     .map(s => s.trim())
@@ -58,7 +64,16 @@ async function main() {
   const inspectors = await new GoogleDriveOAuthAdapter(
     roots,
     refDate
-  ).getInspectors()
+  ).getInspectors(only)
+
+  if (only?.length) {
+    for (const insp of inspectors)
+      for (const cert of insp.certificates.values())
+        console.log(
+          `${insp.name} | ${cert.code} | ${cert.statusEHS} | ${cert.readSource} | ${cert.filename} | ${cert.statusDetail}${cert.divergences?.length ? ` | DIVERGÊNCIA: ${cert.divergences.join('; ')}` : ''}`
+        )
+    return
+  }
 
   const pipeline = new HSEDataPipeline()
   const previous = pipeline.loadDriveInspectorsCache(refDate)
