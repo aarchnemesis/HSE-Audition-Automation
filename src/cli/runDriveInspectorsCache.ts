@@ -1,25 +1,41 @@
 import 'dotenv/config'
 import fs from 'fs'
 import path from 'path'
-import { GoogleDriveOAuthAdapter } from '../adapters/drive/GoogleDriveOAuthAdapter.js'
+import {
+  GoogleDriveOAuthAdapter,
+  HOLDER_NOT_FOUND,
+} from '../adapters/drive/GoogleDriveOAuthAdapter.js'
+import { SmtpEmailService } from '../adapters/email/SmtpEmailService.js'
+import {
+  DocumentIssue,
+  UNREAD_EMAIL_DEFAULT_TO,
+  buildUnreadDocumentsEmail,
+} from '../adapters/email/unreadDocumentsEmail.js'
 import { TesseractOcrAdapter } from '../adapters/ocr/TesseractOcrAdapter.js'
-import { Inspector } from '../domain/models/Certificate.js'
+import { Certificate, Inspector } from '../domain/models/Certificate.js'
 import { DOC_CATALOG_MAP } from '../domain/services/ComplianceEngine.js'
 import { HSEDataPipeline } from '../domain/services/HSEDataPipeline.js'
 
-interface UnreadItem {
-  collaborator: string
-  folderUrl?: string
-  code: string
-  document: string
-  file?: string
-  fileUrl?: string
+function issueOf(
+  insp: Inspector,
+  cert: Certificate,
   reason: string
+): DocumentIssue {
+  return {
+    collaborator: insp.name,
+    folderUrl: insp.driveFolderUrl,
+    code: cert.code,
+    document: DOC_CATALOG_MAP[cert.code] ?? cert.code,
+    file: cert.filename,
+    fileUrl: cert.sourcePath,
+    reason,
+  }
 }
 
 function summarize(inspectors: Inspector[]) {
   const bySource: Record<string, number> = {}
-  const unread: UnreadItem[] = []
+  const unread: DocumentIssue[] = []
+  const holderWarnings: DocumentIssue[] = []
   let divergent = 0
   for (const insp of inspectors) {
     for (const cert of insp.certificates.values()) {
@@ -27,22 +43,17 @@ function summarize(inspectors: Inspector[]) {
       bySource[src] = (bySource[src] ?? 0) + 1
       if (cert.divergences?.length) divergent++
       if (cert.statusEHS === 'NAO_LIDO')
-        unread.push({
-          collaborator: insp.name,
-          folderUrl: insp.driveFolderUrl,
-          code: cert.code,
-          document: DOC_CATALOG_MAP[cert.code] ?? cert.code,
-          file: cert.filename,
-          fileUrl: cert.sourcePath,
-          reason: cert.statusDetail ?? '',
-        })
+        unread.push(issueOf(insp, cert, cert.statusDetail ?? ''))
+      if (cert.divergences?.includes(HOLDER_NOT_FOUND))
+        holderWarnings.push(issueOf(insp, cert, HOLDER_NOT_FOUND))
     }
   }
-  return { bySource, unread, divergent }
+  return { bySource, unread, holderWarnings, divergent }
 }
 
 async function main() {
   const force = process.argv.includes('--force')
+  const sendEmail = process.argv.includes('--email')
   const only = process.argv
     .find(a => a.startsWith('--only='))
     ?.slice('--only='.length)
@@ -90,14 +101,19 @@ async function main() {
   }
 
   pipeline.saveDriveInspectorsCache(inspectors)
-  const { bySource, unread, divergent } = summarize(inspectors)
+  const { bySource, unread, holderWarnings, divergent } = summarize(inspectors)
 
   const outDir = path.join(process.cwd(), 'scratch')
   fs.mkdirSync(outDir, { recursive: true })
   fs.writeFileSync(
     path.join(outDir, 'drive_unread_documents.json'),
     JSON.stringify(
-      { generatedAt: new Date().toISOString(), refDate, unread },
+      {
+        generatedAt: new Date().toISOString(),
+        refDate,
+        unread,
+        holderWarnings,
+      },
       null,
       2
     )
@@ -105,11 +121,25 @@ async function main() {
 
   const minutes = ((Date.now() - started) / 60000).toFixed(1)
   console.log(
-    `[drive-cache] ${inspectors.length} colaboradores em ${minutes} min | origem: ${JSON.stringify(bySource)} | ${unread.length} documentos NÃO LIDOS | ${divergent} com nome divergente do conteúdo`
+    `[drive-cache] ${inspectors.length} colaboradores em ${minutes} min | origem: ${JSON.stringify(bySource)} | ${unread.length} NÃO LIDOS | ${holderWarnings.length} sem o nome do titular | ${divergent} com nome divergente do conteúdo`
   )
-  console.log(
-    '[drive-cache] Lista de NÃO LIDOS por colaborador: scratch/drive_unread_documents.json'
-  )
+
+  if (sendEmail && (unread.length || holderWarnings.length)) {
+    const smtp = SmtpEmailService.fromEnv()
+    if (!smtp) {
+      console.error('[drive-cache] SMTP não configurado: e-mail não enviado.')
+      process.exitCode = 1
+      return
+    }
+    const { subject, html } = buildUnreadDocumentsEmail({
+      refDate,
+      unread,
+      holderWarnings,
+    })
+    const to = process.env.HSE_UNREAD_EMAIL_TO || UNREAD_EMAIL_DEFAULT_TO
+    const result = await smtp.sendEmail({ to, subject, htmlContent: html })
+    if (!result.success) process.exitCode = 1
+  }
 }
 
 main().catch(err => {

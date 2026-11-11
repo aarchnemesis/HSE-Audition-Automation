@@ -8,11 +8,15 @@ import {
 } from '../../domain/models/Certificate.js'
 import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
 import {
+  HolderCheck,
   InspectedDocumentResult,
   PDFContentInspector,
+  checkHolder,
   createPdfPageCollector,
   filenameDivergences,
+  notReadDetail,
   outranks,
+  personNameTokens,
   readSourceOf,
 } from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
@@ -32,6 +36,41 @@ import { getAuthorizedClient } from './googleAuth.js'
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
 const MIN_TEXT_CHARS = 50
+
+interface HolderContext {
+  name: string
+  roster: string[]
+}
+
+export const HOLDER_NOT_FOUND =
+  'O nome do colaborador não aparece no documento: conferir se o arquivo é dele'
+
+export function collaboratorName(folderName: string): string {
+  return folderName.split(/[-–—_]/)[0].trim()
+}
+
+export function applyHolderCheck(
+  item: InspectedDocumentResult,
+  filename: string,
+  holderCheck?: HolderCheck
+): InspectedDocumentResult {
+  if (
+    holderCheck?.status !== 'OUTRA_PESSOA' ||
+    readSourceOf(item) === 'NAO_LIDO'
+  )
+    return item
+  return {
+    code: item.code,
+    statusEHS: 'NAO_LIDO',
+    statusDetail: notReadDetail(
+      filename,
+      `o documento pertence a outra pessoa (${holderCheck.other})`
+    ),
+    source: 'FILENAME',
+    classificationSource: item.classificationSource,
+    matchedTerm: item.matchedTerm,
+  }
+}
 
 export function isPdfBuffer(buffer: Buffer): boolean {
   return buffer.subarray(0, 1024).includes('%PDF-')
@@ -140,59 +179,62 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
   }
 
   async getInspectors(filterNames?: string[]): Promise<Inspector[]> {
-    const inspectors: Inspector[] = []
-
+    const folders: { rootFolderId: string; entry: drive_v3.Schema$File }[] = []
     for (const rootFolderId of this.rootFolderIds) {
-      const topLevel = await this.listChildren(rootFolderId)
-
-      for (const entry of topLevel) {
+      for (const entry of await this.listChildren(rootFolderId)) {
         if (entry.mimeType !== FOLDER_MIME || !entry.id || !entry.name) continue
-
-        const folderName = entry.name
-        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(folderName.trim()))
+        if (/obsolet|obesoleto|0bsoleto|^00\./i.test(entry.name.trim()))
           continue
-        if (filterNames && filterNames.length > 0) {
-          const matchesFilter = filterNames.some(fname =>
-            folderName.toUpperCase().includes(fname.toUpperCase())
-          )
-          if (!matchesFilter) continue
-        }
-
-        const nameParts = folderName.split(/[-–—_]/)
-        const name = nameParts[0].trim()
-        const role =
-          nameParts.length > 1 && nameParts.slice(1).join(' - ').trim()
-            ? nameParts.slice(1).join(' - ').trim()
-            : 'TÉCNICO / INSPETOR'
-
-        const certificates = new Map<string, Certificate>()
-        await this.scanFolderRecursive(
-          entry.id,
-          certificates,
-          BRANCH_CODE_REMAP[rootFolderId],
-          BRANCH_EXCLUDED_FOLDER_NAMES[rootFolderId]
-        )
-
-        inspectors.push({
-          id: entry.id,
-          name,
-          role,
-          certificates,
-          driveFolderId: entry.id,
-          driveFolderUrl: `https://drive.google.com/drive/folders/${entry.id}`,
-        })
+        folders.push({ rootFolderId, entry })
       }
     }
+    const roster = folders.map(f => collaboratorName(f.entry.name as string))
 
-    // Persiste cache atualizado de PDFs lidos em disco
+    const inspectors: Inspector[] = []
+    for (const { rootFolderId, entry } of folders) {
+      const folderName = entry.name as string
+      if (
+        filterNames?.length &&
+        !filterNames.some(f =>
+          folderName.toUpperCase().includes(f.toUpperCase())
+        )
+      )
+        continue
+
+      const nameParts = folderName.split(/[-–—_]/)
+      const name = nameParts[0].trim()
+      const role =
+        nameParts.length > 1 && nameParts.slice(1).join(' - ').trim()
+          ? nameParts.slice(1).join(' - ').trim()
+          : 'TÉCNICO / INSPETOR'
+
+      const certificates = new Map<string, Certificate>()
+      await this.scanFolderRecursive(
+        entry.id as string,
+        certificates,
+        { name, roster },
+        BRANCH_CODE_REMAP[rootFolderId],
+        BRANCH_EXCLUDED_FOLDER_NAMES[rootFolderId]
+      )
+
+      inspectors.push({
+        id: entry.id as string,
+        name,
+        role,
+        certificates,
+        driveFolderId: entry.id as string,
+        driveFolderUrl: `https://drive.google.com/drive/folders/${entry.id}`,
+      })
+    }
+
     PDFContentCache.getInstance().save()
-
     return inspectors
   }
 
   private async scanFolderRecursive(
     folderId: string,
     certificates: Map<string, Certificate>,
+    holder: HolderContext,
     codeRemap?: Record<string, string>,
     excludedFolderNames?: string[]
   ): Promise<void> {
@@ -210,6 +252,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         await this.scanFolderRecursive(
           entry.id,
           certificates,
+          holder,
           codeRemap,
           excludedFolderNames
         )
@@ -218,11 +261,12 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
 
       if (!entry.id) continue
       const filename = entry.name
-      const inspectedList = await this.inspectFile(entry)
+      const { items, holderCheck } = await this.inspectFile(entry, holder)
       const filenameCode = CertificateClassifier.classify(filename).code
       const filenameDate = parseDateFromFilename(filename)
 
-      for (const inspected of inspectedList) {
+      for (const original of items) {
+        const inspected = applyHolderCheck(original, filename, holderCheck)
         let code = inspected.code
         if (!code) continue
 
@@ -235,6 +279,17 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         }
 
         const readSource = readSourceOf(inspected)
+        const divergences = filenameDivergences(
+          inspected,
+          filenameCode,
+          filenameDate
+        )
+        if (
+          holderCheck?.status === 'NAO_ENCONTRADO' &&
+          readSource !== 'NAO_LIDO'
+        )
+          divergences.push(HOLDER_NOT_FOUND)
+
         const cert: Certificate = {
           code,
           name: `Doc ${code}`,
@@ -245,11 +300,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           statusDetail: inspected.statusDetail,
           sourcePath: `https://drive.google.com/file/d/${entry.id}/view`,
           readSource,
-          divergences: filenameDivergences(
-            inspected,
-            filenameCode,
-            filenameDate
-          ),
+          divergences,
         }
 
         const existing = certificates.get(code)
@@ -259,39 +310,51 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
   }
 
   private async inspectFile(
-    entry: drive_v3.Schema$File
-  ): Promise<InspectedDocumentResult[]> {
+    entry: drive_v3.Schema$File,
+    holder: HolderContext
+  ): Promise<{ items: InspectedDocumentResult[]; holderCheck?: HolderCheck }> {
     const filename = entry.name as string
     const fileId = entry.id as string
     const mime = entry.mimeType || ''
     const cache = PDFContentCache.getInstance()
     const md5 = entry.md5Checksum || undefined
-
-    if (mime.startsWith('application/vnd.google-apps')) {
-      return [
+    const holderKey = personNameTokens(holder.name).join(' ')
+    const notRead = (reason: string) => ({
+      items: [
         PDFContentInspector.notReadResult(
           filename,
           CertificateClassifier.classify(filename),
-          'é um documento nativo do Google (Docs/Planilhas), não o PDF do documento'
+          reason
         ),
-      ]
-    }
+      ],
+    })
+
+    if (mime.startsWith('application/vnd.google-apps'))
+      return notRead(
+        'é um documento nativo do Google (Docs/Planilhas), não o PDF do documento'
+      )
 
     const cached = cache.get(fileId, entry.modifiedTime || undefined, md5)
-    if (cached) {
-      return cache.getAllDocuments(cached).map(doc => ({
-        code: doc.code,
-        issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,
-        expirationDate: doc.expirationDate
-          ? new Date(doc.expirationDate)
-          : undefined,
-        statusEHS: doc.statusEHS,
-        statusDetail: doc.statusDetail,
-        source: doc.source,
-        classificationSource: doc.classificationSource,
-        matchedTerm: doc.matchedTerm,
-        extractedClause: doc.extractedClause,
-      }))
+    if (
+      cached?.ev === CONTENT_EXTRACTOR_VERSION &&
+      cached.holder?.key === holderKey
+    ) {
+      return {
+        holderCheck: cached.holder,
+        items: cache.getAllDocuments(cached).map(doc => ({
+          code: doc.code,
+          issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,
+          expirationDate: doc.expirationDate
+            ? new Date(doc.expirationDate)
+            : undefined,
+          statusEHS: doc.statusEHS,
+          statusDetail: doc.statusDetail,
+          source: doc.source,
+          classificationSource: doc.classificationSource,
+          matchedTerm: doc.matchedTerm,
+          extractedClause: doc.extractedClause,
+        })),
+      }
     }
 
     let buffer: Buffer
@@ -303,13 +366,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       )
       buffer = Buffer.from(res.data as ArrayBuffer)
     } catch (err: any) {
-      return [
-        PDFContentInspector.notReadResult(
-          filename,
-          CertificateClassifier.classify(filename),
-          `o download do arquivo falhou (${err?.message || err})`
-        ),
-      ]
+      return notRead(`o download do arquivo falhou (${err?.message || err})`)
     }
 
     let pages: string[] = []
@@ -327,44 +384,62 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         pages = [await TesseractOcrAdapter.extractTextFromImage(buffer)]
         ocrUsed = true
       } else {
-        return [
-          PDFContentInspector.notReadResult(
-            filename,
-            CertificateClassifier.classify(filename),
-            `o arquivo não é PDF nem imagem (tipo ${mime || 'desconhecido'})`
-          ),
-        ]
+        return notRead(
+          `o arquivo não é PDF nem imagem (tipo ${mime || 'desconhecido'})`
+        )
       }
     } catch (err: any) {
       if (err instanceof OcrUnavailableError) throw err
-      return [
-        PDFContentInspector.notReadResult(
-          filename,
-          CertificateClassifier.classify(filename),
-          `o arquivo está corrompido ou protegido (${err?.message || err})`
-        ),
-      ]
+      return notRead(
+        `o arquivo está corrompido ou protegido (${err?.message || err})`
+      )
     }
 
-    const inspectedList = PDFContentInspector.inspectPages(
-      filename,
-      pages,
-      this.refDate
-    ).map(item =>
-      ocrUsed && item.source === 'PDF_CONTENT'
-        ? { ...item, source: 'IMAGE_FALLBACK' as const }
-        : item
+    const inspect = () =>
+      PDFContentInspector.inspectPages(filename, pages, this.refDate).map(
+        item =>
+          ocrUsed && item.source === 'PDF_CONTENT'
+            ? { ...item, source: 'IMAGE_FALLBACK' as const }
+            : item
+      )
+    let items = inspect()
+
+    if (
+      !ocrUsed &&
+      isPdfBuffer(buffer) &&
+      items.every(item => item.statusEHS === 'NAO_LIDO')
+    ) {
+      try {
+        const ocrPages =
+          await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
+        pages = pages.map((text, i) => `${text}\n${ocrPages[i] ?? ''}`)
+        ocrUsed = true
+        items = inspect()
+      } catch (err) {
+        if (err instanceof OcrUnavailableError) throw err
+      }
+    }
+
+    const holderCheck = checkHolder(
+      pages.join('\n'),
+      holder.name,
+      holder.roster
     )
 
-    const primaryDoc =
-      [...inspectedList].sort((a, b) => {
-        if (a.code === '40.1' && b.code === '40') return -1
-        if (b.code === '40.1' && a.code === '40') return 1
-        return (
-          (b.expirationDate?.getTime() ?? 0) -
-          (a.expirationDate?.getTime() ?? 0)
-        )
-      })[0] || inspectedList[0]
+    const primaryDoc = items.reduce<InspectedDocumentResult | undefined>(
+      (best, item) => {
+        if (!best) return item
+        if (item.code === '40.1' && best.code === '40') return item
+        if (best.code === '40.1' && item.code === '40') return best
+        const asCert = (d: InspectedDocumentResult) => ({
+          readSource: readSourceOf(d),
+          expirationDate: d.expirationDate,
+          issueDate: d.issueDate,
+        })
+        return outranks(asCert(item), asCert(best)) ? item : best
+      },
+      undefined
+    )
 
     cache.set({
       fileId,
@@ -375,6 +450,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       ev: CONTENT_EXTRACTOR_VERSION,
       md5,
       modifiedTime: entry.modifiedTime || undefined,
+      holder: { key: holderKey, ...holderCheck },
       code: primaryDoc?.code || null,
       issueDate: primaryDoc?.issueDate?.toISOString(),
       expirationDate: primaryDoc?.expirationDate?.toISOString(),
@@ -384,7 +460,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       classificationSource: primaryDoc?.classificationSource,
       matchedTerm: primaryDoc?.matchedTerm,
       extractedClause: primaryDoc?.extractedClause,
-      documents: inspectedList.map(item => ({
+      documents: items.map(item => ({
         code: item.code,
         issueDate: item.issueDate?.toISOString(),
         expirationDate: item.expirationDate?.toISOString(),
@@ -396,7 +472,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         extractedClause: item.extractedClause,
       })),
     })
-    return inspectedList
+    return { items, holderCheck }
   }
 
   async getInspectorById(id: string): Promise<Inspector | null> {

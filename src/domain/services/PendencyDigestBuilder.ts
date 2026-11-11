@@ -31,7 +31,10 @@ export function buildPendencyDigest(
 
     // Documento eletivo (ex.: SIT/ESO Vestas) ausente não é uma pendência ativa — só aparece
     // na planilha pra visibilidade, não gera alerta por e-mail.
-    if (rec.statusEHS === 'AUSENTE' && ELECTIVE_DOC_CODES.has(rec.docCode))
+    if (
+      (rec.statusEHS === 'AUSENTE' || rec.statusEHS === 'NAO_LIDO') &&
+      ELECTIVE_DOC_CODES.has(rec.docCode)
+    )
       continue
 
     let group = groupsByName.get(rec.inspectorName)

@@ -7,7 +7,7 @@ import {
   STORZ_SEARCHABLE_DOC_CODES,
   getTrainingModality,
 } from './ComplianceEngine.js'
-import { EHSEvaluator } from './EHSEvaluator.js'
+import { EHSEvaluator, isPermanentDocCode } from './EHSEvaluator.js'
 import { findInspectorMatch } from './InspectorMatcher.js'
 
 export const MISSING_IN_DRIVE =
@@ -141,6 +141,7 @@ export class AuditTriangulator {
       // ou quando a conclusão na Storz é mais recente que o documento existente no Drive (renovação).
       const preferStorz =
         Boolean(completedReq && storzExpDate) &&
+        !(isPermanentDocCode(code) && cert && cert.statusEHS !== 'NAO_LIDO') &&
         (!cert ||
           !cert.expirationDate ||
           storzExpDate!.getTime() > cert.expirationDate.getTime())
@@ -175,11 +176,18 @@ export class AuditTriangulator {
       }
 
       if (preferStorz && storzExpDate) {
-        effectiveExpiration = storzExpDate
-        const evaluation = EHSEvaluator.evaluateDate(storzExpDate, refDate)
+        const permanent = isPermanentDocCode(code)
+        effectiveExpiration = permanent ? undefined : storzExpDate
+        const evaluation = EHSEvaluator.evaluateForCode(
+          code,
+          storzExpDate,
+          refDate
+        )
         status = evaluation.status
         const completionStr = storzCompletionDate?.toLocaleDateString('pt-BR')
-        const expStr = storzExpDate.toLocaleDateString('pt-BR')
+        const validity = permanent
+          ? 'documento permanente, sem vencimento'
+          : `Válido até ${storzExpDate.toLocaleDateString('pt-BR')}`
 
         // CIPA (34) é eletivo e restrito a membros eleitos da gestão atual. Certificados
         // de gestões anteriores são registros históricos e não geram pendência/bloqueio.
@@ -196,8 +204,8 @@ export class AuditTriangulator {
           validCount++
           if (!detail) {
             detail = cert
-              ? `Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
-              : `Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — Válido até ${expStr} (aguardando upload no Drive).`
+              ? `Curso renovado e aprovado na Storz (${completedReq!.id}) em ${completionStr} — ${validity} (aguardando upload no Drive).`
+              : `Curso concluído e aprovado na Storz (${completedReq!.id}) em ${completionStr} — ${validity} (aguardando upload no Drive).`
           }
         } else if (status === 'VENCIDO') {
           expiredCount++
@@ -213,12 +221,13 @@ export class AuditTriangulator {
       } else if (cert && cert.statusEHS === 'NAO_LIDO') {
         status = 'NAO_LIDO'
         detail = cert.statusDetail ?? ''
-        missingCount++
+        if (!electiveCodes.has(code)) missingCount++
         if (activeReq)
           detail += ` | Solicitado na Storz (${activeReq.id} - ${activeReq.state}).`
       } else if (cert) {
         effectiveExpiration = cert.expirationDate
-        const evaluation = EHSEvaluator.evaluateDate(
+        const evaluation = EHSEvaluator.evaluateForCode(
+          code,
           cert.expirationDate,
           refDate
         )

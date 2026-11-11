@@ -387,7 +387,6 @@ export class PDFContentInspector {
     if (
       certResult?.issueDate &&
       rawFnDate &&
-      !fnDate &&
       code &&
       SIGNATURE_DATE_CLAUSE.test(certResult.clause || '')
     ) {
@@ -451,7 +450,11 @@ export class PDFContentInspector {
               ? calculateDocExpiration(code, certResult.issueDate, refDate)
               : undefined)
 
-      const evalResult = EHSEvaluator.evaluateDate(finalExpDate, refDate)
+      const evalResult = EHSEvaluator.evaluateForCode(
+        code,
+        finalExpDate,
+        refDate
+      )
       return {
         code,
         issueDate: certResult.issueDate,
@@ -467,7 +470,11 @@ export class PDFContentInspector {
 
     if (code && EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
       const expirationDate = calculateDocExpiration(code, null, refDate)
-      const evalResult = EHSEvaluator.evaluateDate(expirationDate, refDate)
+      const evalResult = EHSEvaluator.evaluateForCode(
+        code,
+        expirationDate,
+        refDate
+      )
       return {
         code,
         expirationDate,
@@ -496,6 +503,17 @@ export class PDFContentInspector {
     filename: string,
     pages: string[],
     refDate: Date = new Date()
+  ): InspectedDocumentResult[] {
+    const text = (pages ?? []).join('\n')
+    return this.inspectPagesRaw(filename, pages, refDate).map(item =>
+      preferCourseDateOverSignature(item, filename, text, refDate)
+    )
+  }
+
+  private static inspectPagesRaw(
+    filename: string,
+    pages: string[],
+    refDate: Date
   ): InspectedDocumentResult[] {
     if (!pages || pages.length === 0) {
       return [this.inspect(filename, '', refDate)]
@@ -590,7 +608,7 @@ export class PDFContentInspector {
         expDate = overallResult.expirationDate
       }
 
-      const evalRes = EHSEvaluator.evaluateDate(expDate, refDate)
+      const evalRes = EHSEvaluator.evaluateForCode(pageCode, expDate, refDate)
       const pageItem: InspectedDocumentResult = {
         code: pageCode,
         issueDate: pageCert?.issueDate || overallResult.issueDate,
@@ -1156,6 +1174,114 @@ export function outranks(
     (candidate.expirationDate?.getTime() ?? 0) >
     (current.expirationDate?.getTime() ?? 0)
   )
+}
+
+export function preferCourseDateOverSignature(
+  item: InspectedDocumentResult,
+  filename: string,
+  text: string,
+  refDate: Date
+): InspectedDocumentResult {
+  const course = parseDateFromFilename(filename)
+  if (
+    !item.code ||
+    !item.issueDate ||
+    !course ||
+    !SIGNATURE_DATE_CLAUSE.test(item.extractedClause || '') ||
+    !dateAppearsInText(course, text)
+  )
+    return item
+  const gapDays = (item.issueDate.getTime() - course.getTime()) / 86_400_000
+  if (gapDays <= 0 || gapDays > SIGNATURE_GAP_MAX_DAYS) return item
+  const courseExp = calculateDocExpiration(item.code, course, refDate)
+  const expirationDate =
+    item.expirationDate && courseExp && item.expirationDate < courseExp
+      ? item.expirationDate
+      : courseExp
+  const evaluation = EHSEvaluator.evaluateForCode(
+    item.code,
+    expirationDate,
+    refDate
+  )
+  return {
+    ...item,
+    issueDate: course,
+    expirationDate,
+    statusEHS: evaluation.status,
+    statusDetail: evaluation.detail,
+    extractedClause: `Data do curso impressa no documento (${course.toLocaleDateString('pt-BR')}), anterior à assinatura`,
+  }
+}
+
+export type HolderStatus = 'OK' | 'NAO_ENCONTRADO' | 'OUTRA_PESSOA'
+
+export interface HolderCheck {
+  status: HolderStatus
+  other?: string
+}
+
+const NAME_PARTICLES = new Set(['DE', 'DA', 'DO', 'DOS', 'DAS', 'E'])
+
+function normalizeForNames(text: string): string {
+  return ` ${text
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toUpperCase()
+    .replace(/[^A-Z]+/g, ' ')
+    .trim()} `
+}
+
+export function personNameTokens(name: string): string[] {
+  return normalizeForNames(name)
+    .trim()
+    .split(' ')
+    .filter(t => t.length >= 2 && !NAME_PARTICLES.has(t))
+}
+
+function nameMatchScore(
+  spaced: string,
+  compact: string,
+  tokens: string[]
+): number {
+  if (!tokens.length) return 0
+  const [first, ...surnames] = tokens
+  const has = (t: string) => spaced.includes(` ${t} `)
+  if (has(first)) return 1 + surnames.filter(has).length
+  const last = surnames[surnames.length - 1]
+  return last &&
+    first.length >= 4 &&
+    last.length >= 4 &&
+    compact.includes(first) &&
+    compact.includes(last)
+    ? 2
+    : 0
+}
+
+export function checkHolder(
+  text: string,
+  holderName: string,
+  roster: string[]
+): HolderCheck {
+  const spaced = normalizeForNames(text)
+  const compact = spaced.replace(/ /g, '')
+  const holderTokens = personNameTokens(holderName)
+  const holderKey = holderTokens.join(' ')
+  const holderScore = nameMatchScore(spaced, compact, holderTokens)
+  const holderOk = holderTokens.length < 2 ? holderScore >= 1 : holderScore >= 2
+
+  let best: { name: string; score: number } | undefined
+  for (const other of roster) {
+    const tokens = personNameTokens(other)
+    if (tokens.length < 3 || tokens.join(' ') === holderKey) continue
+    const score = nameMatchScore(spaced, compact, tokens)
+    if (score >= 3 && (!best || score > best.score))
+      best = { name: other, score }
+  }
+
+  if (holderOk && (!best || holderScore >= best.score)) return { status: 'OK' }
+  if (best && holderTokens.length >= 2)
+    return { status: 'OUTRA_PESSOA', other: best.name }
+  return holderOk ? { status: 'OK' } : { status: 'NAO_ENCONTRADO' }
 }
 
 export function evidencedFilenameDate(
