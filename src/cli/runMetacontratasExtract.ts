@@ -64,7 +64,13 @@ async function main() {
       }).catch(() => null)
       await page.waitForTimeout(4000)
 
-      if (page.url().includes('accesos') && !page.url().includes('login')) {
+      // The hub keeps the /accesos URL even after the session expired (it just renders the login
+      // form), so a live session is only proven by the contract cards actually being on screen.
+      const cardsShown = await page
+        .waitForSelector('button:has-text("IBITU"), button:has-text("ENERGIMP")', { timeout: 15000 })
+        .then(() => true)
+        .catch(() => false)
+      if (cardsShown) {
         console.log('[Metacontratas] Sessão persistida válida! Pulando etapa de login.')
         needsLogin = false
       }

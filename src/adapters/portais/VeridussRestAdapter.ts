@@ -36,6 +36,28 @@ export interface VeridussDocument {
   docTypeObject?: { name?: string } | null
   approvals?: VeridussApproval[]
   company?: { id?: number; name?: string } | null
+  /** Not confirmed against the live API: the UI marks workers 'Inativo'; tolerate the likely shapes. */
+  memberActive?: boolean
+  memberStatus?: string
+  member?: { active?: boolean; status?: string } | null
+}
+
+export interface VeridussMember {
+  id: number
+  name?: string
+  status?: string
+  cpf?: string | null
+  jobTitle?: string | null
+}
+
+export interface VeridussRequiredItem {
+  docType?: { name?: string }
+  canonicalStatus?: string
+  document?: {
+    expiresAt?: string | null
+    latestRejection?: { comments?: string } | null
+    approvals?: VeridussApproval[]
+  } | null
 }
 
 export interface VeridussCompany {
@@ -49,9 +71,16 @@ const STATUS_MAP: Record<string, PortalDocStatus> = {
   submitted: 'IN_REVIEW',
   in_review: 'IN_REVIEW',
   in_approval: 'IN_REVIEW',
+  pending_review: 'IN_REVIEW',
   pending_approval: 'IN_REVIEW',
   waived: 'WAIVED',
   exempt: 'WAIVED',
+  expired: 'EXPIRED',
+  overdue: 'EXPIRED',
+  expiring: 'APPROVED', // 'A vencer' in the UI: still valid, EXPIRING is derived from the date
+  expiring_soon: 'APPROVED',
+  to_expire: 'APPROVED',
+  dispensed: 'WAIVED',
 }
 
 function docStatus(raw?: string): PortalDocStatus {
@@ -80,6 +109,12 @@ function toDocument(doc: VeridussDocument): PortalDocument {
   }
 }
 
+/** Inactive members are not billed/required by the portal ("Cobrança documental suspensa"). */
+function isInactiveMember(doc: VeridussDocument): boolean {
+  if (doc.memberActive === false || doc.member?.active === false) return true
+  return /inativ|inactive/i.test(doc.memberStatus ?? doc.member?.status ?? '')
+}
+
 /** Pure: Strapi member documents -> a PortalCensus. Drops non-member docs and unnamed workers. */
 export function mapVeridussCensus(
   docs: VeridussDocument[],
@@ -91,6 +126,7 @@ export function mapVeridussCensus(
     if (doc.entityType !== 'member') continue
     const name = (doc.memberName ?? '').trim()
     if (!name || /^desconhecid/i.test(name)) continue
+    if (isInactiveMember(doc)) continue
     const key = name.toUpperCase()
     const worker =
       byWorker.get(key) ??
@@ -108,6 +144,57 @@ export function mapVeridussCensus(
     byWorker.set(key, worker)
   }
   return { portalId, capturedAt, workers: [...byWorker.values()] }
+}
+
+
+const CANONICAL_MAP: Record<string, PortalDocStatus> = {
+  approved: 'APPROVED',
+  expiring: 'APPROVED', // still valid: EXPIRING is derived from the date, not trusted from the portal
+  waived: 'WAIVED',
+  expired: 'EXPIRED',
+  rejected: 'REJECTED',
+  pending_review: 'IN_REVIEW',
+  missing_upload: 'MISSING',
+}
+
+/**
+ * Pure: members + their required-status items -> a PortalCensus. Inactive members are dropped (the
+ * portal suspends their billing and requirements), and waived requirements stay WAIVED instead of
+ * surfacing a stale rejected upload as a blocker.
+ */
+export function mapVeridussRequiredCensus(
+  members: { member: VeridussMember; items: VeridussRequiredItem[]; company?: string }[],
+  portalId: string,
+  capturedAt: string
+): PortalCensus {
+  const workers: PortalWorker[] = []
+  for (const { member, items, company } of members) {
+    const name = (member.name ?? '').trim()
+    if (!name || member.status === 'inactive') continue
+    workers.push({
+      name,
+      role: member.jobTitle || undefined,
+      contract: company || undefined,
+      documents: items.map(it => {
+        const status = CANONICAL_MAP[it.canonicalStatus ?? ''] ?? 'MISSING'
+        const rej = it.document?.latestRejection?.comments ??
+          it.document?.approvals?.filter(a => /reject/i.test(a.status ?? '')).pop()?.comments
+        return {
+          title: (it.docType?.name ?? 'Documento').trim(),
+          status,
+          expiresOn: parsePortalDate(it.document?.expiresAt),
+          note:
+            status === 'REJECTED'
+              ? (rej ?? '').replace(/\s+/g, ' ').trim() || undefined
+              : CANONICAL_MAP[it.canonicalStatus ?? ''] === undefined
+                ? `Status não mapeado: ${it.canonicalStatus ?? 'n/d'}`
+                : undefined,
+          required: true,
+        } satisfies PortalDocument
+      }),
+    })
+  }
+  return { portalId, capturedAt, workers }
 }
 
 export interface StorageState {
@@ -167,6 +254,42 @@ export class VeridussRestClient {
     return companies
   }
 
+  /** Company members with their portal status (`active`/`inactive`), CPF and job title. */
+  async fetchMembers(companyId: number, pageSize = 100): Promise<VeridussMember[]> {
+    const all: VeridussMember[] = []
+    let page = 1
+    let pageCount = 1
+    do {
+      const q =
+        `/api/company-members?companyId=${companyId}&filters[company][id][$eq]=${companyId}` +
+        `&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=name:asc`
+      const res = await this.getJson<{
+        data?: VeridussMember[]
+        meta?: { pagination?: { pageCount?: number } }
+      }>(q)
+      pageCount = res.meta?.pagination?.pageCount ?? 1
+      for (const m of res.data ?? []) all.push(m)
+      page++
+    } while (page <= pageCount)
+    return all
+  }
+
+  /**
+   * The portal's own per-member requirement list: every required document type with its canonical
+   * status (approved/expiring/waived/rejected/pending_review/missing_upload/expired). This is what
+   * the portal UI shows, so waived requirements (client exemptions) and never-uploaded documents are
+   * correct, unlike the raw /api/documents feed.
+   */
+  async fetchRequiredStatuses(
+    companyId: number,
+    memberId: number
+  ): Promise<VeridussRequiredItem[]> {
+    const res = await this.getJson<{ data?: { items?: VeridussRequiredItem[] } }>(
+      `/api/documents/required-statuses/member/${memberId}?companyId=${companyId}`
+    )
+    return res.data?.items ?? []
+  }
+
   async fetchMemberDocuments(
     companyId: number,
     pageSize = 100
@@ -200,14 +323,32 @@ export async function extractVeridussCensus(options: {
     options.cookieHeader,
     options.baseUrl ?? DEFAULT_VERIDUSS_BASE_URL
   )
-  const companyIds =
-    options.companyIds ?? (await client.fetchCompanies()).map(c => c.id)
+  const companies = options.companyIds
+    ? options.companyIds.map(id => ({ id, name: undefined as string | undefined }))
+    : (await client.fetchCompanies()).map(c => ({ id: c.id, name: c.name }))
+  const portalId = options.portalId ?? 'veriduss-goldwind'
+  const capturedAt = options.capturedAt ?? new Date().toISOString()
+
+  // Preferred path: the portal's own per-member requirement view.
+  try {
+    const rows: { member: VeridussMember; items: VeridussRequiredItem[]; company?: string }[] = []
+    for (const c of companies) {
+      for (const member of await client.fetchMembers(c.id)) {
+        if (member.status === 'inactive') continue
+        rows.push({ member, items: await client.fetchRequiredStatuses(c.id, member.id), company: c.name })
+      }
+    }
+    if (rows.length > 0) return mapVeridussRequiredCensus(rows, portalId, capturedAt)
+  } catch (err) {
+    console.warn(
+      '[Veriduss] required-statuses indisponível, usando /api/documents:',
+      err instanceof Error ? err.message : err
+    )
+  }
+
+  // Fallback: raw document feed.
   const docs: VeridussDocument[] = []
-  for (const id of companyIds)
-    for (const d of await client.fetchMemberDocuments(id)) docs.push(d)
-  return mapVeridussCensus(
-    docs,
-    options.portalId ?? 'veriduss-goldwind',
-    options.capturedAt ?? new Date().toISOString()
-  )
+  for (const c of companies)
+    for (const d of await client.fetchMemberDocuments(c.id)) docs.push(d)
+  return mapVeridussCensus(docs, portalId, capturedAt)
 }
