@@ -10139,13 +10139,13 @@
     "statusEHS": "VENCIDO",
     "storzRequestId": "621110",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 3,
+    "storzProgressPercent": 19,
     "storzDeadline": "08/01/2027",
-    "detail": "VENCIDO há 6 dias (04/11/2026) | EM ANDAMENTO NA STORZ (621110 - Progresso: 3%) [Prazo Storz: 08/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 04/11/2026, ANTES do prazo da Storz (08/01/2027)!",
+    "detail": "VENCIDO há 6 dias (04/11/2026) | EM ANDAMENTO NA STORZ (621110 - Progresso: 19%) [Prazo Storz: 08/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 04/11/2026, ANTES do prazo da Storz (08/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1OxmudQKwDtbXuYaJakPvT239M-pSsTZF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T00:46:58.932Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -19766,13 +19766,14 @@
     "expirationDate": "2026-11-09T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "621404",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 1 dias (09/11/2026) | SOLICITADO NA STORZ (621404 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "09/01/2027",
+    "detail": "VENCIDO há 1 dias (09/11/2026) | EM ANDAMENTO NA STORZ (621404 - Progresso: 3%) [Prazo Storz: 09/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 09/11/2026, ANTES do prazo da Storz (09/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1beHwfHix-FIQpnX-iEIeIKJaoIhOAyf5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T00:46:58.932Z"
   },
   {
     "inspectorId": "rpo_72",
