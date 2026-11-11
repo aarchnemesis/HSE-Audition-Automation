@@ -1,6 +1,6 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-11T17:01:12.204Z",
+  "capturedAt": "2026-11-11T19:00:48.123Z",
   "workers": [
     {
       "name": "ALLAN THIAGO RAMOS VEIGA",
@@ -379,11 +379,6 @@
           "required": true
         },
         {
-          "title": "CARTÃO DE IDENTIFICAÇÃO PARA OPERADORES DE MÁQUINAS - NR-12",
-          "status": "MISSING",
-          "required": true
-        },
-        {
           "title": "CARTÃO DE VACINAS",
           "status": "APPROVED",
           "expiresOn": "2030-11-05",
@@ -420,7 +415,8 @@
         },
         {
           "title": "HABILITAÇÃO OU QUALIFICAÇÃO PROFISSIONAL",
-          "status": "MISSING",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-24",
           "required": true
         },
         {
@@ -431,7 +427,8 @@
         },
         {
           "title": "SEGURO DE VIDA - INDIVIDUAL",
-          "status": "MISSING",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-06",
           "required": true
         },
         {
@@ -448,7 +445,9 @@
         },
         {
           "title": "TREINAMENTO DE PRIMEIROS SOCORROS",
-          "status": "MISSING",
+          "status": "REJECTED",
+          "expiresOn": "2028-10-28",
+          "note": "Pendente conteúdo programático",
           "required": true
         },
         {
@@ -489,7 +488,13 @@
         },
         {
           "title": "TREINAMENTO USO ADEQUADO, GUARDA E CONSERVAÇÃO DE EPIS - NR-06",
-          "status": "MISSING",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-26",
+          "required": true
+        },
+        {
+          "title": "CARTÃO DE IDENTIFICAÇÃO PARA OPERADORES DE MÁQUINAS - NR-12",
+          "status": "WAIVED",
           "required": true
         }
       ]
