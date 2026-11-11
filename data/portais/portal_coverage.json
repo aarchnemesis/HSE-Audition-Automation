@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-11-10",
+  "refDate": "2026-11-11",
   "portals": [
     {
       "portal": {
@@ -20,8 +20,8 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-10T11:03:49.162Z",
-        "workers": 24
+        "capturedAt": "2026-11-11T11:58:46.235Z",
+        "workers": 23
       },
       "clients": [
         {
@@ -52,8 +52,8 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-10T11:01:44.541Z",
-        "workers": 14
+        "capturedAt": "2026-11-11T10:53:16.783Z",
+        "workers": 13
       },
       "clients": [
         {
@@ -92,7 +92,7 @@
         {
           "client": "SERENA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
+          "projectsInWindow": 4,
           "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
@@ -164,8 +164,8 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-03T11:45:53.498Z",
-        "workers": 17
+        "capturedAt": "2026-11-11T10:53:54.933Z",
+        "workers": 26
       },
       "clients": [
         {
@@ -185,7 +185,7 @@
           "client": "IBITU",
           "activity": "IN_FIELD",
           "projectsInWindow": 6,
-          "lastStart": "2026-11-09",
+          "lastStart": "2026-10-12",
           "nextStart": "2026-11-23"
         },
         {
@@ -507,7 +507,7 @@
       "accessPending": 2,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T10:32:21.488Z",
+        "capturedAt": "2026-11-11T12:09:20.471Z",
         "workers": 6
       },
       "clients": [
@@ -607,7 +607,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T10:25:47.674Z",
+        "capturedAt": "2026-11-11T12:02:47.789Z",
         "workers": 11
       },
       "clients": [
@@ -735,7 +735,7 @@
           "client": "CASA DOS VENTOS",
           "activity": "IN_FIELD",
           "projectsInWindow": 2,
-          "nextStart": "2026-11-16"
+          "nextStart": "2026-11-30"
         }
       ],
       "activity": "IN_FIELD"
@@ -794,7 +794,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-09T10:32:55.700Z",
+        "capturedAt": "2026-11-11T12:09:55.029Z",
         "workers": 8
       },
       "clients": [
@@ -1519,7 +1519,7 @@
         {
           "client": "SERENA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
+          "projectsInWindow": 4,
           "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
@@ -1612,12 +1612,6 @@
     }
   ],
   "clientsWithoutPortal": [
-    {
-      "client": "VESTAS R DOMINICANA",
-      "activity": "IN_FIELD",
-      "projectsInWindow": 1,
-      "lastStart": "2026-10-09"
-    },
     {
       "client": "AXIA - ELETROSUL",
       "activity": "RECENT",
