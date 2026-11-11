@@ -76,6 +76,18 @@ export async function scrapeTdocCensus(
   for (const t of cappedTasks) {
     try {
       log(`Processando Tarefa ${t.index}: ${t.name}...`)
+      // JSF keeps view state and the "back" icons can leave us off the task list (flaky run: the
+      // 7th row never showed up). Only when the row is missing, reopen a clean task list.
+      if ((await page.locator(sel.tasksTableRows).count()) <= t.index) {
+        log(`Lista de tarefas fora de lugar antes da tarefa ${t.index}; recarregando.`)
+        await page.goto(sel.tasksUrl, { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {})
+        const selIconR = page.locator(sel.selectCompanyIcon).first()
+        if (await selIconR.isVisible().catch(() => false)) {
+          await selIconR.click({ timeout: 20000 }).catch(() => {})
+        }
+        await page.waitForSelector(sel.tasksTableRows, { timeout: 20000 }).catch(() => {})
+        await page.waitForTimeout(2000)
+      }
       const taskLink = page.locator(`${sel.tasksTableRows}:nth-child(${t.index + 1}) a`).first()
       await taskLink.click({ timeout: 20000 })
       await page.waitForTimeout(3000)
