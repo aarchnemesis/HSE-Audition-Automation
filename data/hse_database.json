@@ -318,12 +318,12 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "613588",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 75,
+    "storzProgressPercent": 82,
     "storzDeadline": "10/01/2027",
     "detail": "Válido até 25/01/2027 | Reciclagem já solicitada na Storz (613588 - Status: EM_ANDAMENTO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sV6VCgfCfrPYtopOJK_5khk5PVNky79G",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-11T17:47:13.228Z"
+    "lastUpdated": "2026-11-11T18:32:15.219Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -498,11 +498,12 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador. Também não há solicitação na Storz.",
+    "expirationDate": "2028-11-03T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 03/11/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1hs_a_N5vvpIFEISytZ6i-CZInclA50uX",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-11T18:32:15.219Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -513,11 +514,12 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador. Também não há solicitação na Storz.",
+    "expirationDate": "2028-11-06T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 06/11/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1hs_a_N5vvpIFEISytZ6i-CZInclA50uX",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-11T18:32:15.219Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -12875,12 +12877,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619376",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 60,
     "storzDeadline": "08/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 50%) [Prazo Storz: 08/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 60%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T17:47:13.228Z"
+    "lastUpdated": "2026-11-11T18:32:15.219Z"
   },
   {
     "inspectorId": "rpo_51",
