@@ -231,11 +231,11 @@
     "storzRequestId": "613583",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (613583) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (613583) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622542 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/1jJAUyKN7OtMKbSXk6fJgMR_9EeVyMcnc/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sV6VCgfCfrPYtopOJK_5khk5PVNky79G",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-11T17:03:14.399Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -318,12 +318,12 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "613588",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 60,
+    "storzProgressPercent": 75,
     "storzDeadline": "10/01/2027",
     "detail": "Válido até 25/01/2027 | Reciclagem já solicitada na Storz (613588 - Status: EM_ANDAMENTO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sV6VCgfCfrPYtopOJK_5khk5PVNky79G",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-11T16:02:58.802Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_11",
@@ -3753,11 +3753,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 24/02/2027",
+    "storzRequestId": "622545",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 24/02/2027 | Reciclagem já solicitada na Storz (622545 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/18BJQGZQ0k_b8p7yWMUoHIaHvGP0vhSVt/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3838,10 +3841,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-02T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 02/02/2027",
+    "storzRequestId": "622560",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 02/02/2027 | Reciclagem já solicitada na Storz (622560 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -4526,10 +4532,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-06T12:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 56 dias (06/01/2027)",
+    "storzRequestId": "622559",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "ALERTA INICIAL: Vence em 56 dias (06/01/2027) | SOLICITADO NA STORZ (622559 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T12:02:20.571Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -5791,10 +5800,10 @@
     "storzRequestId": "607037",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (607037) em 28/10/2026 — Válido até 28/10/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (607037) em 28/10/2026 — Válido até 28/10/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622540 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IGKip57FbhiUb2ZqPjPGcxCLA01dWKpo",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -5875,10 +5884,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-07T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 07/02/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "storzRequestId": "622562",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 07/02/2027 (Validado no RPO | Comprovante pendente no Drive) | Reciclagem já solicitada na Storz (622562 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IGKip57FbhiUb2ZqPjPGcxCLA01dWKpo",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -7589,10 +7601,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-08T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 08/02/2027",
+    "storzRequestId": "622564",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 08/02/2027 | Reciclagem já solicitada na Storz (622564 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1mFozhnA97vHIu6ynPfhq0GL1hg-xTdcJ",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_33",
@@ -7856,11 +7871,11 @@
     "storzRequestId": "578371",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (578371) em 31/10/2026 — Válido até 31/10/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (578371) em 31/10/2026 — Válido até 31/10/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622538 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/17GmaKmFk-3ha_9gNkQymHRVul7MR6RYu/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -12860,12 +12875,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619376",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 43,
+    "storzProgressPercent": 50,
     "storzDeadline": "08/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 43%) [Prazo Storz: 08/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619376 - Progresso: 50%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T17:03:14.399Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -13337,10 +13352,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-11T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/02/2027",
+    "storzRequestId": "622566",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 11/02/2027 | Reciclagem já solicitada na Storz (622566 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1YU6P2S0ZDqCeIf2k5GSY8_nfTzTnhZQj",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_52",
@@ -14882,14 +14900,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-10-21T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "586644",
-    "storzState": "CONCLUIDO",
+    "storzRequestId": "622539",
+    "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 21/10/2027",
+    "detail": "Válido até 21/10/2027 | Reciclagem já solicitada na Storz (622539 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/1Ktq23jqWNIlkNJBV9oEn3FU_Wn8F8kUz/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -14973,10 +14991,10 @@
     "storzRequestId": "586647",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (586647) em 21/10/2026 — Válido até 21/10/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (586647) em 21/10/2026 — Válido até 21/10/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622558 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -15224,10 +15242,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-11T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 11/02/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "storzRequestId": "622548",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 11/02/2027 (Validado no RPO | Comprovante pendente no Drive) | Reciclagem já solicitada na Storz (622548 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1D-5nInBy6hmdqE8z70pI_F9lQD73jben",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_58",
@@ -15308,10 +15329,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-07T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 07/02/2027",
+    "storzRequestId": "622563",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 07/02/2027 | Reciclagem já solicitada na Storz (622563 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1D-5nInBy6hmdqE8z70pI_F9lQD73jben",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_58",
@@ -16857,10 +16881,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-23T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 23/02/2027 (Validado no RPO | Comprovante pendente no Drive)",
+    "storzRequestId": "622551",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 23/02/2027 (Validado no RPO | Comprovante pendente no Drive) | Reciclagem já solicitada na Storz (622551 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DYTcUDR_79TGAeW1786nPX2wruIlOljk",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_63",
@@ -17539,10 +17566,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-06T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 06/02/2027",
+    "storzRequestId": "622561",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 06/02/2027 | Reciclagem já solicitada na Storz (622561 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -18820,11 +18850,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 16/02/2027",
+    "storzRequestId": "622550",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 16/02/2027 | Reciclagem já solicitada na Storz (622550 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/17D5p56EkkmoFvkBz9vscuXMw70Tez6Ij/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18908,10 +18941,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-15T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 15/02/2027",
+    "storzRequestId": "622567",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 15/02/2027 | Reciclagem já solicitada na Storz (622567 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -19820,11 +19856,11 @@
     "storzRequestId": "621404",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (621404) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (621404) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622537 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/1beHwfHix-FIQpnX-iEIeIKJaoIhOAyf5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T04:02:11.430Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -19905,13 +19941,13 @@
     "modality": "ONLINE",
     "expirationDate": "2027-11-10T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "storzRequestId": "621416",
-    "storzState": "CONCLUIDO",
+    "storzRequestId": "622557",
+    "storzState": "SOLICITADO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 10/11/2027",
+    "detail": "Válido até 10/11/2027 | Reciclagem já solicitada na Storz (622557 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1flgBlKcdteQknzwQneYz2ZUSwVUe4n01",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T12:15:56.082Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -21289,10 +21325,10 @@
     "storzRequestId": "578341",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (578341) em 30/10/2026 — Válido até 30/10/2027 (aguardando upload no Drive).",
+    "detail": "Curso renovado e aprovado na Storz (578341) em 30/10/2026 — Válido até 30/10/2027 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622565 - Status: SOLICITADO).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ybCf1QPeLcW90DdD6ft3-gDTVq4ZNpCV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_76",
@@ -22517,11 +22553,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-05-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 10/05/2027",
+    "storzRequestId": "622543",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 10/05/2027 | Reciclagem já solicitada na Storz (622543 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/18W2v1EG8OZLyNaqEEIMj5QQw51DxYQng/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_81",
@@ -23843,11 +23882,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-09T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 59 dias (09/01/2027)",
+    "storzRequestId": "622547",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "ALERTA INICIAL: Vence em 59 dias (09/01/2027) | SOLICITADO NA STORZ (622547 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1c_odTIYBIxuBl9mNq5dxJqZqctg7Uhwi/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NJnZ40IuEcIqjABonS5apgTOLiwQoYOz",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-11T03:02:17.663Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_85",
@@ -26846,11 +26888,14 @@
     "modality": "ONLINE",
     "expirationDate": "2027-09-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 27/09/2027",
+    "storzRequestId": "622549",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "Válido até 27/09/2027 | Reciclagem já solicitada na Storz (622549 - Status: SOLICITADO).",
     "evidenceUrl": "https://drive.google.com/file/d/1i0u5C7bZiiGnLnZA7z_sKd_IKmkhN8u4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jVB6rjg0mrxtMJF_7DuLuXc7pP5uUn2k",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-11T17:47:13.228Z"
   },
   {
     "inspectorId": "rpo_106",

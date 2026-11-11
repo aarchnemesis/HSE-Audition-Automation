@@ -135,6 +135,20 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622542",
+    "collaboratorName": "ADENILÇO QUEIROZ DA SILVA",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:41.998Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "613588",
     "collaboratorName": "ADENILÇO QUEIROZ DA SILVA",
     "trainingCode": "28",
@@ -143,7 +157,7 @@
     "requestDate": "2026-11-11T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 60,
+    "progressPercent": 75,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -1201,6 +1215,36 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622545",
+    "collaboratorName": "DANIEL FERREIRA DA SILVA FILHO",
+    "collaboratorCpf": "116.582.966-56",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:49.355Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622560",
+    "collaboratorName": "DANIEL FERREIRA DA SILVA FILHO",
+    "collaboratorCpf": "116.582.966-56",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:49.355Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "514657",
     "collaboratorName": "DAVID KELSON DE SOUZA LOYOLA",
     "collaboratorCpf": "049.629.781-36",
@@ -1579,6 +1623,21 @@
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
+  },
+  {
+    "id": "622559",
+    "collaboratorName": "DIEGO MENEZES NUNES COELHO",
+    "collaboratorCpf": "078.393.563-38",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:50.674Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
   },
   {
     "id": "612254",
@@ -2263,6 +2322,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622540",
+    "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
+    "collaboratorCpf": "219.001.688-63",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:53.375Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "613567",
     "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
     "collaboratorCpf": "219.001.688-63",
@@ -2307,6 +2381,21 @@
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
+  },
+  {
+    "id": "622562",
+    "collaboratorName": "ELIAS DOS SANTOS RODRIGUES",
+    "collaboratorCpf": "219.001.688-63",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:53.375Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
   },
   {
     "id": "496963",
@@ -2954,6 +3043,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622564",
+    "collaboratorName": "FELIPE DOS SANTOS CASTRO",
+    "collaboratorCpf": "608.241.473-08",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:56.806Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "578371",
     "collaboratorName": "FERNANDO TEODORO DE MORAIS NETO",
     "collaboratorCpf": "609.992.853-78",
@@ -2965,6 +3069,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622538",
+    "collaboratorName": "FERNANDO TEODORO DE MORAIS NETO",
+    "collaboratorCpf": "609.992.853-78",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:45:57.434Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -5269,7 +5388,7 @@
     "requestDate": "2026-11-09T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 43,
+    "progressPercent": 50,
     "courseDurationDays": 60,
     "workloadHours": 40,
     "idealSlaDays": 5
@@ -5445,6 +5564,21 @@
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
+  },
+  {
+    "id": "622566",
+    "collaboratorName": "JOÃO CARLOS GUARDIANO DA SILVA",
+    "collaboratorCpf": "087.879.664-92",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:11.159Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
   },
   {
     "id": "612253",
@@ -6048,6 +6182,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622539",
+    "collaboratorName": "JUAN ILGNER MARINHO LIMA",
+    "collaboratorCpf": "628.228.953-09",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:14.697Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "586647",
     "collaboratorName": "JUAN ILGNER MARINHO LIMA",
     "collaboratorCpf": "628.228.953-09",
@@ -6059,6 +6208,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622558",
+    "collaboratorName": "JUAN ILGNER MARINHO LIMA",
+    "collaboratorCpf": "628.228.953-09",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:14.697Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -6217,6 +6381,36 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622548",
+    "collaboratorName": "LEANDRO CAMILO DE JESUS",
+    "collaboratorCpf": "017.374.344-74",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:15.329Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622563",
+    "collaboratorName": "LEANDRO CAMILO DE JESUS",
+    "collaboratorCpf": "017.374.344-74",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:15.329Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -6566,6 +6760,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622551",
+    "collaboratorName": "MARIA BRUNA SOARES SANTOS",
+    "collaboratorCpf": "068.028.053-75",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:18.795Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "608217",
     "collaboratorName": "MÁRIO SÉRGIO CASTRO DE SOUSA",
     "collaboratorCpf": "074.839.463-00",
@@ -6840,6 +7049,21 @@
     "trainingName": "[STORZ] - NR12 - SEGURANçA NO TRABALHO EM MáQUINAS E EQUIPAMENTOS (GERAL) (PERIóDICO)",
     "modality": "PRESENCIAL",
     "requestDate": "2026-11-11T14:46:19.176Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622561",
+    "collaboratorName": "MICHEL PLATINI SOARES BARROS",
+    "collaboratorCpf": "061.237.413-06",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:20.293Z",
     "state": "SOLICITADO",
     "rawSituacao": "Não iniciado",
     "progressPercent": 0,
@@ -7298,6 +7522,36 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622550",
+    "collaboratorName": "RAFAEL ANDRADE BARBOSA",
+    "collaboratorCpf": "662.377.853-53",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:22.999Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622567",
+    "collaboratorName": "RAFAEL ANDRADE BARBOSA",
+    "collaboratorCpf": "662.377.853-53",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:22.999Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "573701",
     "collaboratorName": "RAFAEL PEREIRA NUNES",
     "collaboratorCpf": "070.281.263-31",
@@ -7657,6 +7911,21 @@
     "idealSlaDays": 1
   },
   {
+    "id": "622537",
+    "collaboratorName": "RAIMUNDO NONATO DE HOLANDA FILHO",
+    "collaboratorCpf": "082.676.543-21",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:25.357Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
     "id": "578338",
     "collaboratorName": "RAIMUNDO NONATO DE HOLANDA FILHO",
     "collaboratorCpf": "082.676.543-21",
@@ -7684,6 +7953,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622557",
+    "collaboratorName": "RAIMUNDO NONATO DE HOLANDA FILHO",
+    "collaboratorCpf": "082.676.543-21",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:25.357Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -8079,6 +8363,21 @@
     "state": "CONCLUIDO",
     "rawSituacao": "Aprovado",
     "progressPercent": 100,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622565",
+    "collaboratorName": "WANDERSON AVELINO DE SOUZA",
+    "collaboratorCpf": "074.628.393-85",
+    "trainingCode": "28",
+    "trainingName": "[STORZ] - NR33 SUPERVISOR (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:28.877Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -8653,6 +8952,21 @@
     "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 4,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622543",
+    "collaboratorName": "ALLAN THIAGO RAMOS VEIGA",
+    "collaboratorCpf": "226.947.508-93",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:32.942Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
     "idealSlaDays": 1
   },
   {
@@ -9326,6 +9640,21 @@
     "state": "CANCELADO",
     "rawSituacao": "Reprovado",
     "progressPercent": 30,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
+  },
+  {
+    "id": "622547",
+    "collaboratorName": "ITALO DE ABREU DUARTE",
+    "collaboratorCpf": "073.760.693-21",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:35.788Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -10849,6 +11178,21 @@
     "courseDurationDays": 60,
     "workloadHours": 16,
     "idealSlaDays": 2
+  },
+  {
+    "id": "622549",
+    "collaboratorName": "JOSÉ MARCELO MAGALHÃES SOUSA",
+    "collaboratorCpf": "019.444.083-47",
+    "trainingCode": "20",
+    "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
+    "modality": "PRESENCIAL",
+    "requestDate": "2026-11-11T17:46:47.934Z",
+    "state": "SOLICITADO",
+    "rawSituacao": "Não iniciado",
+    "progressPercent": 0,
+    "courseDurationDays": 60,
+    "workloadHours": 8,
+    "idealSlaDays": 1
   },
   {
     "id": "497862",
