@@ -1238,24 +1238,23 @@ export function personNameTokens(name: string): string[] {
     .filter(t => t.length >= 2 && !NAME_PARTICLES.has(t))
 }
 
-function containsName(
+function nameMatchScore(
   spaced: string,
   compact: string,
-  tokens: string[],
-  minSurnames: number
-): boolean {
-  if (tokens.length < 2) return false
+  tokens: string[]
+): number {
+  if (!tokens.length) return 0
   const [first, ...surnames] = tokens
   const has = (t: string) => spaced.includes(` ${t} `)
-  if (has(first) && surnames.filter(has).length >= minSurnames) return true
+  if (has(first)) return 1 + surnames.filter(has).length
   const last = surnames[surnames.length - 1]
-  return (
-    minSurnames <= 1 &&
+  return last &&
     first.length >= 4 &&
     last.length >= 4 &&
     compact.includes(first) &&
     compact.includes(last)
-  )
+    ? 2
+    : 0
 }
 
 export function checkHolder(
@@ -1266,15 +1265,23 @@ export function checkHolder(
   const spaced = normalizeForNames(text)
   const compact = spaced.replace(/ /g, '')
   const holderTokens = personNameTokens(holderName)
-  if (containsName(spaced, compact, holderTokens, 1)) return { status: 'OK' }
   const holderKey = holderTokens.join(' ')
+  const holderScore = nameMatchScore(spaced, compact, holderTokens)
+  const holderOk = holderTokens.length < 2 ? holderScore >= 1 : holderScore >= 2
+
+  let best: { name: string; score: number } | undefined
   for (const other of roster) {
     const tokens = personNameTokens(other)
-    if (tokens.join(' ') === holderKey) continue
-    if (containsName(spaced, compact, tokens, 2))
-      return { status: 'OUTRA_PESSOA', other }
+    if (tokens.length < 3 || tokens.join(' ') === holderKey) continue
+    const score = nameMatchScore(spaced, compact, tokens)
+    if (score >= 3 && (!best || score > best.score))
+      best = { name: other, score }
   }
-  return { status: 'NAO_ENCONTRADO' }
+
+  if (holderOk && (!best || holderScore >= best.score)) return { status: 'OK' }
+  if (best && holderTokens.length >= 2)
+    return { status: 'OUTRA_PESSOA', other: best.name }
+  return holderOk ? { status: 'OK' } : { status: 'NAO_ENCONTRADO' }
 }
 
 export function evidencedFilenameDate(

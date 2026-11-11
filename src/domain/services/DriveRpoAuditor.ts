@@ -8,7 +8,7 @@ import {
   DOC_CATALOG_MAP,
   STORZ_SEARCHABLE_DOC_CODES,
 } from './ComplianceEngine.js'
-import { EHSEvaluator } from './EHSEvaluator.js'
+import { EHSEvaluator, isPermanentDocCode } from './EHSEvaluator.js'
 import { findInspectorMatch, matchesInspector } from './InspectorMatcher.js'
 import { RPOAuditStatusManager } from './RPOAuditStatusManager.js'
 
@@ -99,7 +99,11 @@ export class DriveRpoAuditor {
         docCodes || this.unionOfCodes(driveInspector, rpoInspector)
 
       for (const code of codesToCheck) {
-        const driveCert = driveInspector.certificates.get(code)
+        const rawDriveCert = driveInspector.certificates.get(code)
+        const driveCert =
+          rawDriveCert && rawDriveCert.statusEHS !== 'NAO_LIDO'
+            ? rawDriveCert
+            : undefined
         const rpoCert = rpoInspector?.certificates.get(code)
         const storzExpiration = this.estimateStorzExpiration(
           code,
@@ -116,6 +120,25 @@ export class DriveRpoAuditor {
         if (!driveCert && !storzExpiration && !rpoCert?.expirationDate) continue
 
         const docName = DOC_CATALOG_MAP[code] || `Documento Código ${code}`
+
+        if (driveCert && isPermanentDocCode(code)) {
+          pushItem({
+            inspectorName: driveInspector.name,
+            docCode: code,
+            docName,
+            trustedSource: 'DRIVE',
+            rpoExpiration: rpoCert?.expirationDate,
+            divergent: !rpoCert,
+            ...(rpoCert ? {} : { divergenceKind: 'SOMENTE_DRIVE' as const }),
+            detail: rpoCert
+              ? 'Drive e RPO têm o documento — documento permanente, sem comparação de data.'
+              : 'Documento permanente presente no Drive, sem registro na RPO.',
+            recommendedAction: rpoCert
+              ? 'Nenhuma ação necessária (Consistente)'
+              : 'Incluir na RPO com base no Drive',
+          })
+          continue
+        }
 
         // Caso 1: Drive ou Storz tem data, mas RPO não tem nada registrado
         if (trustedExpiration && !rpoCert?.expirationDate) {

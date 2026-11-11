@@ -38,6 +38,17 @@ describe('checkHolder', () => {
       checkHolder('Certifico que BELTRANO PEREIRA NUNES', roster[0], roster)
     ).toEqual({ status: 'OUTRA_PESSOA', other: 'BELTRANO PEREIRA NUNES' })
   })
+  it('a stronger match of another collaborator beats a weak holder match', () => {
+    const team = ['FRANCISCO SILVA LIMA', 'FRANCISCO PEREIRA SILVA NUNES']
+    expect(
+      checkHolder('Certifico que FRANCISCO PEREIRA SILVA NUNES', team[0], team)
+    ).toEqual({ status: 'OUTRA_PESSOA', other: team[1] })
+  })
+  it('never blocks a single-word holder as another person', () => {
+    expect(
+      checkHolder('Certifico que BELTRANO PEREIRA NUNES', 'FULANO', roster)
+    ).toEqual({ status: 'NAO_ENCONTRADO' })
+  })
   it('reports when no known name is printed', () => {
     expect(checkHolder('Certificado de curso', roster[0], roster)).toEqual({
       status: 'NAO_ENCONTRADO',

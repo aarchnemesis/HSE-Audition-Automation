@@ -409,11 +409,15 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       isPdfBuffer(buffer) &&
       items.every(item => item.statusEHS === 'NAO_LIDO')
     ) {
-      const ocrPages =
-        await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
-      pages = pages.map((text, i) => `${text}\n${ocrPages[i] ?? ''}`)
-      ocrUsed = true
-      items = inspect()
+      try {
+        const ocrPages =
+          await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
+        pages = pages.map((text, i) => `${text}\n${ocrPages[i] ?? ''}`)
+        ocrUsed = true
+        items = inspect()
+      } catch (err) {
+        if (err instanceof OcrUnavailableError) throw err
+      }
     }
 
     const holderCheck = checkHolder(
@@ -422,15 +426,20 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       holder.roster
     )
 
-    const primaryDoc =
-      [...items].sort((a, b) => {
-        if (a.code === '40.1' && b.code === '40') return -1
-        if (b.code === '40.1' && a.code === '40') return 1
-        return (
-          (b.expirationDate?.getTime() ?? 0) -
-          (a.expirationDate?.getTime() ?? 0)
-        )
-      })[0] || items[0]
+    const primaryDoc = items.reduce<InspectedDocumentResult | undefined>(
+      (best, item) => {
+        if (!best) return item
+        if (item.code === '40.1' && best.code === '40') return item
+        if (best.code === '40.1' && item.code === '40') return best
+        const asCert = (d: InspectedDocumentResult) => ({
+          readSource: readSourceOf(d),
+          expirationDate: d.expirationDate,
+          issueDate: d.issueDate,
+        })
+        return outranks(asCert(item), asCert(best)) ? item : best
+      },
+      undefined
+    )
 
     cache.set({
       fileId,

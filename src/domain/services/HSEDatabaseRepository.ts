@@ -85,7 +85,10 @@ export class HSEDatabaseRepository {
         // Eletivo (SIT/ESO Vestas) e ausente: revisado em 25/08/2026 — não é pra apontar em lugar
         // nenhum (Excel, dashboard, e-mail), nem como "visibilidade". É um treinamento muito
         // específico do parque Vestas, a maioria da equipe nunca vai precisar dele.
-        if (item.status === 'AUSENTE' && ELECTIVE_DOC_CODES.has(item.code))
+        if (
+          (item.status === 'AUSENTE' || item.status === 'NAO_LIDO') &&
+          ELECTIVE_DOC_CODES.has(item.code)
+        )
           continue
 
         const record: Omit<HSEDatabaseRecord, 'lastUpdated'> = {

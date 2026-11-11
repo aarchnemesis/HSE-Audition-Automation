@@ -221,7 +221,7 @@ export class AuditTriangulator {
       } else if (cert && cert.statusEHS === 'NAO_LIDO') {
         status = 'NAO_LIDO'
         detail = cert.statusDetail ?? ''
-        missingCount++
+        if (!electiveCodes.has(code)) missingCount++
         if (activeReq)
           detail += ` | Solicitado na Storz (${activeReq.id} - ${activeReq.state}).`
       } else if (cert) {
