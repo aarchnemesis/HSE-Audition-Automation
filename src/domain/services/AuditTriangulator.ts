@@ -10,6 +10,9 @@ import {
 import { EHSEvaluator } from './EHSEvaluator.js'
 import { findInspectorMatch } from './InspectorMatcher.js'
 
+export const MISSING_IN_DRIVE =
+  'BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador.'
+
 export interface TripleAuditResult {
   inspectorName: string
   parkName: string
@@ -207,6 +210,12 @@ export class AuditTriangulator {
         if (activeReq) {
           detail += ` | Próxima reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
         }
+      } else if (cert && cert.statusEHS === 'NAO_LIDO') {
+        status = 'NAO_LIDO'
+        detail = cert.statusDetail ?? ''
+        missingCount++
+        if (activeReq)
+          detail += ` | Solicitado na Storz (${activeReq.id} - ${activeReq.state}).`
       } else if (cert) {
         effectiveExpiration = cert.expirationDate
         const evaluation = EHSEvaluator.evaluateDate(
@@ -285,11 +294,10 @@ export class AuditTriangulator {
             detail =
               'Documento eletivo/monitorado não encontrado no Drive — não é cobrado como pendência.'
           } else if (STORZ_SEARCHABLE_DOC_CODES.has(code)) {
-            detail =
-              'Documento obrigatório não encontrado no Drive nem solicitado na Storz.'
+            detail = `${MISSING_IN_DRIVE} Também não há solicitação na Storz.`
             missingCount++
           } else {
-            detail = 'Documento obrigatório não encontrado no Drive.'
+            detail = MISSING_IN_DRIVE
             missingCount++
           }
         }
@@ -301,6 +309,9 @@ export class AuditTriangulator {
 
       if (!isModalityCompliant) {
         detail += ` ALERTA MODALIDADE: Requerido ${requiredModality}, mas certificado é ${actualModality}`
+      }
+      if (cert?.divergences?.length) {
+        detail += ` | ATENÇÃO, nome do arquivo diverge do conteúdo: ${cert.divergences.join('; ')}.`
       }
 
       return {

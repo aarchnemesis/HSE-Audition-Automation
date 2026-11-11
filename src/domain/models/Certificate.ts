@@ -9,6 +9,9 @@ export type EHSStatus =
   | 'STORZ_EM_ANDAMENTO'
   | 'INDETERMINADO'
   | 'AUSENTE'
+  | 'NAO_LIDO'
+
+export type ReadSource = 'CONTENT' | 'OCR' | 'NAO_LIDO'
 
 export type TrainingModality = 'PRESENCIAL' | 'ONLINE' | 'HIBRIDO'
 
@@ -24,6 +27,8 @@ export interface Certificate {
   storzRequestId?: string // ID da solicitação ativa na Storz (se houver)
   storzRequestState?: string // Estado da solicitação Storz (ex: "EM_ANDAMENTO")
   sourcePath?: string // Caminho absoluto do arquivo no Drive
+  readSource?: ReadSource
+  divergences?: string[]
 }
 
 export interface Inspector {

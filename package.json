@@ -16,6 +16,8 @@
     "auth:drive": "tsx src/cli/runGoogleDriveAuth.ts",
     "drive-rpo-audit": "tsx src/cli/runDriveRpoAudit.ts",
     "drive-reconcile": "tsx src/cli/runDriveSourceReconcile.ts",
+    "drive-cache": "tsx src/cli/runDriveInspectorsCache.ts",
+    "drive-census": "tsx src/cli/runDriveCensus.ts",
     "ocr:deep": "tsx src/cli/runDeepOcr.ts",
     "storz-history-report": "tsx src/cli/runStorzHistoryReport.ts",
     "exec-dashboard-email": "tsx src/cli/runExecutiveDashboardEmail.ts",
@@ -71,8 +73,5 @@
     "typescript": "^5.9.3",
     "vitest": "^1.6.1"
   },
-  "onlyBuiltDependencies": [
-    "@biomejs/biome",
-    "esbuild"
-  ]
+  "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
 }

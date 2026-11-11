@@ -285,6 +285,16 @@ export class ComplianceEngine {
         }
       }
 
+      if (cert.statusEHS === 'NAO_LIDO') {
+        missingCount++
+        return {
+          code,
+          reqName,
+          status: 'NAO_LIDO' as EHSStatus,
+          detail: cert.statusDetail ?? '',
+        }
+      }
+
       const evaluation = EHSEvaluator.evaluateDate(cert.expirationDate, refDate)
       let status = evaluation.status
       let detail = evaluation.detail

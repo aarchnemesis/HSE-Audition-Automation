@@ -349,9 +349,12 @@ export class PDFContentInspector {
     )
     const code = classification.code
 
-    // Se o PDF for um scan/imagem pura sem OCR, faz fallback direto para metadados de nome
     if (isScannedImage) {
-      return this.inspectFromFilenameFallback(filename, classification, refDate)
+      return this.notReadResult(
+        filename,
+        classification,
+        'o PDF não tem texto legível (nem após OCR)'
+      )
     }
 
     // 2. Extração para Contratos PJ e Termos Aditivos (Códigos 40 e 40.1, ou 04 e 04.1 em pastas de piloto)
@@ -377,8 +380,33 @@ export class PDFContentInspector {
     }
 
     // 3. Extração para Certificados Normativos (NRs, GWO, ASO, Treinamentos)
-    const fnDate = parseDateFromFilename(filename)
+    const fnDate = evidencedFilenameDate(filename, text)
     let certResult = this.extractCertificateDates(text, code, refDate, fnDate)
+
+    const rawFnDate = parseDateFromFilename(filename)
+    if (
+      certResult?.issueDate &&
+      rawFnDate &&
+      !fnDate &&
+      code &&
+      SIGNATURE_DATE_CLAUSE.test(certResult.clause || '')
+    ) {
+      const gapDays =
+        (certResult.issueDate.getTime() - rawFnDate.getTime()) / 86_400_000
+      if (gapDays > 0 && gapDays <= SIGNATURE_GAP_MAX_DAYS) {
+        const stricterExp = calculateDocExpiration(code, rawFnDate, refDate)
+        certResult = {
+          issueDate: rawFnDate,
+          expirationDate:
+            certResult.expirationDate &&
+            stricterExp &&
+            certResult.expirationDate < stricterExp
+              ? certResult.expirationDate
+              : stricterExp,
+          clause: `${certResult.clause} | Data do curso (anterior à assinatura) tomada do nome por ser mais restritiva: ${rawFnDate.toLocaleDateString('pt-BR')}`,
+        }
+      }
+    }
 
     // Reconciliação com data do nome do arquivo (especialmente crucial para PDFs F+R - Formação + Reciclagem):
     // Se o nome do arquivo contém uma data mais recente que a data de emissão extraída do texto
@@ -437,8 +465,25 @@ export class PDFContentInspector {
       }
     }
 
-    // 4. Se não conseguiu datas expressas no texto, utiliza fallback de data do nome do arquivo
-    return this.inspectFromFilenameFallback(filename, classification, refDate)
+    if (code && EVENT_TRIGGERED_ONLY_CODES.includes(code)) {
+      const expirationDate = calculateDocExpiration(code, null, refDate)
+      const evalResult = EHSEvaluator.evaluateDate(expirationDate, refDate)
+      return {
+        code,
+        expirationDate,
+        statusEHS: evalResult.status,
+        statusDetail: evalResult.detail,
+        source: 'PDF_CONTENT',
+        classificationSource: classification.source,
+        matchedTerm: classification.matchedTerm,
+      }
+    }
+
+    return this.notReadResult(
+      filename,
+      classification,
+      'o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento'
+    )
   }
 
   /**
@@ -505,7 +550,7 @@ export class PDFContentInspector {
 
       // Extrai datas para a norma identificada nesta página
       const isContractDoc = ['40', '40.1', '04', '04.1'].includes(pageCode)
-      const fnDate = parseDateFromFilename(filename)
+      const fnDate = evidencedFilenameDate(filename, pageText)
       let pageCert = isContractDoc
         ? this.extractContractDates(pageText, pageCode, refDate)
         : this.extractCertificateDates(pageText, pageCode, refDate, fnDate)
@@ -998,29 +1043,125 @@ export class PDFContentInspector {
   }
 
   /**
-   * Fallback quando o PDF não possui camada de texto ou é imagem escaneada.
    */
-  private static inspectFromFilenameFallback(
+  static notReadResult(
     filename: string,
     classification: ClassificationResult,
-    refDate: Date
+    reason: string
   ): InspectedDocumentResult {
-    const code = classification.code
-    const parsedDate = parseDateFromFilename(filename)
-    const expirationDate = code
-      ? calculateDocExpiration(code, parsedDate, refDate)
-      : undefined
-    const evalResult = EHSEvaluator.evaluateDate(expirationDate, refDate)
-
     return {
-      code,
-      issueDate: parsedDate || undefined,
-      expirationDate,
-      statusEHS: evalResult.status,
-      statusDetail: evalResult.detail,
+      code: classification.code,
+      statusEHS: 'NAO_LIDO',
+      statusDetail: notReadDetail(filename, reason),
       source: 'FILENAME',
       classificationSource: classification.source,
       matchedTerm: classification.matchedTerm,
     }
   }
+}
+
+export function notReadDetail(filename: string, reason: string): string {
+  return `BLOQUEADO — NÃO LIDO: ${reason}. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo ("${filename}") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.`
+}
+
+const SIGNATURE_DATE_CLAUSE =
+  /assinou\s+em|log\s+gerado\s+em|^(?:Fortaleza|Caucaia|Sorocaba|Mossor[oó]|Parnamirim|S[aã]o\s+Paulo|Natal)\b/i
+const SIGNATURE_GAP_MAX_DAYS = 60
+
+const PT_MONTHS = [
+  'janeiro',
+  'fevereiro',
+  'março',
+  'abril',
+  'maio',
+  'junho',
+  'julho',
+  'agosto',
+  'setembro',
+  'outubro',
+  'novembro',
+  'dezembro',
+]
+
+export function dateAppearsInText(date: Date, text: string): boolean {
+  const d = date.getDate()
+  const m = date.getMonth() + 1
+  const y = date.getFullYear()
+  const dd = String(d).padStart(2, '0')
+  const mm = String(m).padStart(2, '0')
+  const yy = String(y).slice(2)
+  const sep = '\\s*[./-]\\s*'
+  const day = `0?${d}`
+  const month = `0?${m}`
+  const numeric = new RegExp(
+    `(?<!\\d)${day}${sep}${month}${sep}(?:${y}|${yy})(?!\\d)|(?<!\\d)${y}${sep}${mm}${sep}${dd}(?!\\d)`
+  )
+  const normalized = text.toLowerCase().replace(/\s+/g, ' ')
+  const written = new RegExp(
+    `(?<!\\d)${day}º?\\s*(?:de\\s*)?${PT_MONTHS[m - 1].replace('ç', '[çc]')}\\s*(?:de\\s*)?${y}`
+  )
+  return numeric.test(normalized) || written.test(normalized)
+}
+
+export function readSourceOf(
+  item: InspectedDocumentResult
+): 'CONTENT' | 'OCR' | 'NAO_LIDO' {
+  if (item.statusEHS === 'NAO_LIDO' || item.source === 'FILENAME')
+    return 'NAO_LIDO'
+  return item.source === 'IMAGE_FALLBACK' ? 'OCR' : 'CONTENT'
+}
+
+const fmt = (d: Date) => d.toLocaleDateString('pt-BR')
+
+export function filenameDivergences(
+  item: InspectedDocumentResult,
+  filenameCode: string | null,
+  filenameDate: Date | null
+): string[] {
+  if (readSourceOf(item) === 'NAO_LIDO') return []
+  const out: string[] = []
+  if (filenameCode && item.code && filenameCode !== item.code)
+    out.push(
+      `Nome do arquivo indica código ${filenameCode}, o conteúdo é ${item.code} (${DOC_CATALOG_MAP[item.code] ?? item.code})`
+    )
+  if (filenameDate && item.issueDate) {
+    const days = Math.abs(
+      (filenameDate.getTime() - item.issueDate.getTime()) / 86_400_000
+    )
+    if (days >= 1)
+      out.push(
+        `Data no nome (${fmt(filenameDate)}) difere da data impressa no documento (${fmt(item.issueDate)})`
+      )
+  }
+  return out
+}
+
+function rank(cert: {
+  readSource?: string
+  expirationDate?: Date
+  issueDate?: Date
+}): number {
+  if (cert.readSource === 'NAO_LIDO') return 0
+  return cert.expirationDate || cert.issueDate ? 2 : 1
+}
+
+export function outranks(
+  candidate: { readSource?: string; expirationDate?: Date; issueDate?: Date },
+  current: { readSource?: string; expirationDate?: Date; issueDate?: Date }
+): boolean {
+  const a = rank(candidate)
+  const b = rank(current)
+  if (a !== b) return a > b
+  return (
+    (candidate.expirationDate?.getTime() ?? 0) >
+    (current.expirationDate?.getTime() ?? 0)
+  )
+}
+
+export function evidencedFilenameDate(
+  filename: string,
+  text: string
+): Date | null {
+  const date = parseDateFromFilename(filename)
+  return date && dateAppearsInText(date, text) ? date : null
 }

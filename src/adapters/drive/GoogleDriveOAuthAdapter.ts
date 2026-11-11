@@ -1,29 +1,47 @@
 import { Auth, drive_v3, google } from 'googleapis'
 type OAuth2Client = Auth.OAuth2Client
 import pdfParse from 'pdf-parse'
-import { Certificate, Inspector } from '../../domain/models/Certificate.js'
+import {
+  Certificate,
+  EHSStatus,
+  Inspector,
+} from '../../domain/models/Certificate.js'
 import { CertificateClassifier } from '../../domain/services/CertificateClassifier.js'
-import { EHSEvaluator } from '../../domain/services/EHSEvaluator.js'
 import {
   InspectedDocumentResult,
   PDFContentInspector,
   createPdfPageCollector,
+  filenameDivergences,
+  outranks,
+  readSourceOf,
 } from '../../domain/services/PDFContentInspector.js'
 import { IDocumentProvider } from '../../ports/IDocumentProvider.js'
-import { TesseractOcrAdapter } from '../ocr/TesseractOcrAdapter.js'
 import {
+  OcrUnavailableError,
+  TesseractOcrAdapter,
+} from '../ocr/TesseractOcrAdapter.js'
+import {
+  CONTENT_EXTRACTOR_VERSION,
   CONTRACT_EXTRACTOR_VERSION,
   PDFContentCache,
   SIGNATURE_DATE_EXTRACTOR_VERSION,
 } from './PDFContentCache.js'
-import {
-  calculateDocExpiration,
-  parseDateFromFilename,
-  parseDocCode,
-} from './certificateFilenameParser.js'
+import { parseDateFromFilename } from './certificateFilenameParser.js'
 import { getAuthorizedClient } from './googleAuth.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
+
+const MIN_TEXT_CHARS = 50
+
+export function isPdfBuffer(buffer: Buffer): boolean {
+  return buffer.subarray(0, 1024).includes('%PDF-')
+}
+
+export function isImageBuffer(buffer: Buffer): boolean {
+  const jpeg = buffer[0] === 0xff && buffer[1] === 0xd8
+  const png = buffer.subarray(0, 4).toString('hex') === '89504e47'
+  return jpeg || png
+}
 
 const DRONE_ROOT_FOLDER_ID = '1xqXRRSN0Tapg_ACW9-kJhE0qRi4m_lZa' // 03 - Drone Insp. Equipamento
 const LPS_SPDA_ROOT_FOLDER_ID = '13Ot7fK8gotTYlLAZm0V9WtGbG0aRiBSI' // 04 - LPS - SPDA
@@ -108,7 +126,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       const res = await drive.files.list({
         q: `'${folderId}' in parents and trashed = false`,
         fields:
-          'nextPageToken, files(id, name, mimeType, createdTime, modifiedTime)',
+          'nextPageToken, files(id, name, mimeType, createdTime, modifiedTime, md5Checksum, size)',
         pageSize: 1000,
         pageToken,
         supportsAllDrives: true,
@@ -198,143 +216,11 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         continue
       }
 
+      if (!entry.id) continue
       const filename = entry.name
-      const isPdf =
-        filename.toLowerCase().endsWith('.pdf') ||
-        entry.mimeType === 'application/pdf'
-
-      let inspectedList: InspectedDocumentResult[] = []
-
-      if (isPdf && entry.id) {
-        const cache = PDFContentCache.getInstance()
-        const cached = cache.get(entry.id, entry.modifiedTime || undefined)
-
-        if (cached) {
-          const cachedDocs = cache.getAllDocuments(cached)
-          inspectedList = cachedDocs.map(doc => ({
-            code: doc.code,
-            issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,
-            expirationDate: doc.expirationDate
-              ? new Date(doc.expirationDate)
-              : undefined,
-            statusEHS: doc.statusEHS,
-            statusDetail: doc.statusDetail,
-            source: doc.source,
-            classificationSource: doc.classificationSource,
-            matchedTerm: doc.matchedTerm,
-            extractedClause: doc.extractedClause,
-          }))
-        } else {
-          let pdfPages: string[] = []
-          let pdfText = ''
-          let ocrUsed = false
-
-          try {
-            const drive = await this.getDrive()
-            const res = await drive.files.get(
-              { fileId: entry.id, alt: 'media', supportsAllDrives: true },
-              { responseType: 'arraybuffer' }
-            )
-            const buffer = Buffer.from(res.data as ArrayBuffer)
-            const { pages, pagerender } = createPdfPageCollector()
-            const parsed = await pdfParse(buffer, { pagerender })
-            pdfPages = pages
-            pdfText = parsed.text || ''
-
-            // Fase 3: Se o PDF for um scan puro (sem texto digital legível), aplica OCR
-            if (pdfText.replace(/\s+/g, '').length < 30) {
-              const ocrPages =
-                await TesseractOcrAdapter.extractTextFromScannedPdf(buffer, 2)
-              const ocrCombined = ocrPages.join('\n\n')
-              if (ocrCombined.replace(/\s+/g, '').length >= 30) {
-                pdfPages = ocrPages
-                pdfText = ocrCombined
-                ocrUsed = true
-              }
-            }
-          } catch (err: any) {
-            console.warn(
-              `[GoogleDriveOAuthAdapter] Falha ao extrair texto do PDF ${filename} (${entry.id}):`,
-              err?.message || err
-            )
-          }
-
-          // Fase 2: Inspeção modular página a página (multi-certificados)
-          inspectedList = PDFContentInspector.inspectPages(
-            filename,
-            pdfPages,
-            this.refDate
-          )
-
-          // Seleciona o documento mais representativo para os campos de topo do cache
-          const primaryDoc =
-            [...inspectedList].sort((a, b) => {
-              if (a.code === '40.1' && b.code === '40') return -1
-              if (b.code === '40.1' && a.code === '40') return 1
-              const timeA = a.expirationDate ? a.expirationDate.getTime() : 0
-              const timeB = b.expirationDate ? b.expirationDate.getTime() : 0
-              return timeB - timeA
-            })[0] || inspectedList[0]
-
-          cache.set({
-            fileId: entry.id,
-            filename,
-            v: 2, // flag de versão da extração multi-norma (WINDA ID)
-            cv: CONTRACT_EXTRACTOR_VERSION,
-            sv: SIGNATURE_DATE_EXTRACTOR_VERSION,
-            modifiedTime: entry.modifiedTime || undefined,
-            code: primaryDoc?.code || null,
-            issueDate: primaryDoc?.issueDate?.toISOString(),
-            expirationDate: primaryDoc?.expirationDate?.toISOString(),
-            statusEHS: primaryDoc?.statusEHS || 'INDETERMINADO',
-            statusDetail: primaryDoc?.statusDetail || '',
-            source: ocrUsed
-              ? 'IMAGE_FALLBACK'
-              : primaryDoc?.source || 'PDF_CONTENT',
-            classificationSource: primaryDoc?.classificationSource,
-            matchedTerm: primaryDoc?.matchedTerm,
-            extractedClause: primaryDoc?.extractedClause,
-            documents: inspectedList.map(item => ({
-              code: item.code,
-              issueDate: item.issueDate?.toISOString(),
-              expirationDate: item.expirationDate?.toISOString(),
-              statusEHS: item.statusEHS,
-              statusDetail: item.statusDetail,
-              source: ocrUsed ? 'IMAGE_FALLBACK' : item.source,
-              classificationSource: item.classificationSource,
-              matchedTerm: item.matchedTerm,
-              extractedClause: item.extractedClause,
-            })),
-          })
-        }
-      } else {
-        const classification = CertificateClassifier.classify(filename)
-        const parsedDate = parseDateFromFilename(filename)
-        const expirationDate = classification.code
-          ? calculateDocExpiration(
-              classification.code,
-              parsedDate,
-              this.refDate
-            )
-          : undefined
-        const evalResult = EHSEvaluator.evaluateDate(
-          expirationDate,
-          this.refDate
-        )
-
-        inspectedList = [
-          {
-            code: classification.code,
-            issueDate: parsedDate || undefined,
-            expirationDate,
-            statusEHS: evalResult.status,
-            statusDetail: evalResult.detail,
-            source: 'FILENAME',
-            classificationSource: classification.source,
-            matchedTerm: classification.matchedTerm,
-          },
-        ]
-      }
+      const inspectedList = await this.inspectFile(entry)
+      const filenameCode = CertificateClassifier.classify(filename).code
+      const filenameDate = parseDateFromFilename(filename)
 
       for (const inspected of inspectedList) {
         let code = inspected.code
@@ -348,30 +234,169 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
           code = codeRemap[code]
         }
 
+        const readSource = readSourceOf(inspected)
         const cert: Certificate = {
           code,
           name: `Doc ${code}`,
           filename,
           issueDate: inspected.issueDate,
           expirationDate: inspected.expirationDate,
-          statusEHS: inspected.statusEHS as any,
+          statusEHS: inspected.statusEHS as EHSStatus,
           statusDetail: inspected.statusDetail,
-          sourcePath: entry.id
-            ? `https://drive.google.com/file/d/${entry.id}/view`
-            : undefined,
+          sourcePath: `https://drive.google.com/file/d/${entry.id}/view`,
+          readSource,
+          divergences: filenameDivergences(
+            inspected,
+            filenameCode,
+            filenameDate
+          ),
         }
 
         const existing = certificates.get(code)
-        if (
-          !existing ||
-          (inspected.expirationDate &&
-            (!existing.expirationDate ||
-              inspected.expirationDate > existing.expirationDate))
-        ) {
-          certificates.set(code, cert)
-        }
+        if (!existing || outranks(cert, existing)) certificates.set(code, cert)
       }
     }
+  }
+
+  private async inspectFile(
+    entry: drive_v3.Schema$File
+  ): Promise<InspectedDocumentResult[]> {
+    const filename = entry.name as string
+    const fileId = entry.id as string
+    const mime = entry.mimeType || ''
+    const cache = PDFContentCache.getInstance()
+    const md5 = entry.md5Checksum || undefined
+
+    if (mime.startsWith('application/vnd.google-apps')) {
+      return [
+        PDFContentInspector.notReadResult(
+          filename,
+          CertificateClassifier.classify(filename),
+          'é um documento nativo do Google (Docs/Planilhas), não o PDF do documento'
+        ),
+      ]
+    }
+
+    const cached = cache.get(fileId, entry.modifiedTime || undefined, md5)
+    if (cached) {
+      return cache.getAllDocuments(cached).map(doc => ({
+        code: doc.code,
+        issueDate: doc.issueDate ? new Date(doc.issueDate) : undefined,
+        expirationDate: doc.expirationDate
+          ? new Date(doc.expirationDate)
+          : undefined,
+        statusEHS: doc.statusEHS,
+        statusDetail: doc.statusDetail,
+        source: doc.source,
+        classificationSource: doc.classificationSource,
+        matchedTerm: doc.matchedTerm,
+        extractedClause: doc.extractedClause,
+      }))
+    }
+
+    let buffer: Buffer
+    try {
+      const drive = await this.getDrive()
+      const res = await drive.files.get(
+        { fileId, alt: 'media', supportsAllDrives: true },
+        { responseType: 'arraybuffer' }
+      )
+      buffer = Buffer.from(res.data as ArrayBuffer)
+    } catch (err: any) {
+      return [
+        PDFContentInspector.notReadResult(
+          filename,
+          CertificateClassifier.classify(filename),
+          `o download do arquivo falhou (${err?.message || err})`
+        ),
+      ]
+    }
+
+    let pages: string[] = []
+    let ocrUsed = false
+    try {
+      if (isPdfBuffer(buffer)) {
+        const collector = createPdfPageCollector()
+        await pdfParse(buffer, { pagerender: collector.pagerender })
+        pages = collector.pages
+        if (pages.join('').replace(/\s+/g, '').length < MIN_TEXT_CHARS) {
+          pages = await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
+          ocrUsed = true
+        }
+      } else if (isImageBuffer(buffer)) {
+        pages = [await TesseractOcrAdapter.extractTextFromImage(buffer)]
+        ocrUsed = true
+      } else {
+        return [
+          PDFContentInspector.notReadResult(
+            filename,
+            CertificateClassifier.classify(filename),
+            `o arquivo não é PDF nem imagem (tipo ${mime || 'desconhecido'})`
+          ),
+        ]
+      }
+    } catch (err: any) {
+      if (err instanceof OcrUnavailableError) throw err
+      return [
+        PDFContentInspector.notReadResult(
+          filename,
+          CertificateClassifier.classify(filename),
+          `o arquivo está corrompido ou protegido (${err?.message || err})`
+        ),
+      ]
+    }
+
+    const inspectedList = PDFContentInspector.inspectPages(
+      filename,
+      pages,
+      this.refDate
+    ).map(item =>
+      ocrUsed && item.source === 'PDF_CONTENT'
+        ? { ...item, source: 'IMAGE_FALLBACK' as const }
+        : item
+    )
+
+    const primaryDoc =
+      [...inspectedList].sort((a, b) => {
+        if (a.code === '40.1' && b.code === '40') return -1
+        if (b.code === '40.1' && a.code === '40') return 1
+        return (
+          (b.expirationDate?.getTime() ?? 0) -
+          (a.expirationDate?.getTime() ?? 0)
+        )
+      })[0] || inspectedList[0]
+
+    cache.set({
+      fileId,
+      filename,
+      v: 2,
+      cv: CONTRACT_EXTRACTOR_VERSION,
+      sv: SIGNATURE_DATE_EXTRACTOR_VERSION,
+      ev: CONTENT_EXTRACTOR_VERSION,
+      md5,
+      modifiedTime: entry.modifiedTime || undefined,
+      code: primaryDoc?.code || null,
+      issueDate: primaryDoc?.issueDate?.toISOString(),
+      expirationDate: primaryDoc?.expirationDate?.toISOString(),
+      statusEHS: primaryDoc?.statusEHS || 'NAO_LIDO',
+      statusDetail: primaryDoc?.statusDetail || '',
+      source: primaryDoc?.source || 'FILENAME',
+      classificationSource: primaryDoc?.classificationSource,
+      matchedTerm: primaryDoc?.matchedTerm,
+      extractedClause: primaryDoc?.extractedClause,
+      documents: inspectedList.map(item => ({
+        code: item.code,
+        issueDate: item.issueDate?.toISOString(),
+        expirationDate: item.expirationDate?.toISOString(),
+        statusEHS: item.statusEHS,
+        statusDetail: item.statusDetail,
+        source: item.source,
+        classificationSource: item.classificationSource,
+        matchedTerm: item.matchedTerm,
+        extractedClause: item.extractedClause,
+      })),
+    })
+    return inspectedList
   }
 
   async getInspectorById(id: string): Promise<Inspector | null> {

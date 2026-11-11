@@ -19,7 +19,11 @@ export const CONTRACT_EXTRACTOR_VERSION = 1
  */
 export const SIGNATURE_DATE_EXTRACTOR_VERSION = 1
 
+export const CONTENT_EXTRACTOR_VERSION = 3
+
 const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
+
+const FILENAME_DATE_CLAUSE = /Data do arquivo:|Atualizado via nome/
 
 const SIGNATURE_CLAUSE =
   /assinou\s+em|log\s+gerado\s+em|^(?:Fortaleza|Caucaia|Sorocaba|Mossor[oó]|Parnamirim|S[aã]o\s+Paulo|Natal)\b/i
@@ -29,7 +33,10 @@ export function getAllowedCodesForFile(
   primaryCode?: string | null
 ): Set<string> | null {
   const fn = (filename || '').toLowerCase()
-  const prefix = parseDocCode(filename || '')
+  const prefix =
+    primaryCode && DOC_CATALOG_MAP[primaryCode]
+      ? primaryCode
+      : parseDocCode(filename || '')
 
   if (
     /\b(?:gwo|bst|winda)\b/i.test(fn) ||
@@ -116,6 +123,8 @@ export interface CachedPDFEntry {
   classificationSource?: 'SEMANTIC' | 'PREFIX' | 'NONE'
   matchedTerm?: string
   extractedClause?: string
+  md5?: string
+  ev?: number
   /** Lista de múltiplos documentos/normas identificados no mesmo PDF (Fase 2) */
   documents?: CachedPDFDocument[]
   /** Versão do motor de extração */
@@ -213,16 +222,16 @@ export class PDFContentCache {
                     this.isDirty = true
                   }
                 }
-                const prefix = parseDocCode(entry.filename || '')
                 if (
-                  prefix &&
-                  DOC_CATALOG_MAP[prefix] &&
-                  prefix !== '16' &&
-                  prefix !== '12' &&
-                  entry.code !== prefix
+                  (entry.ev ?? 0) < CONTENT_EXTRACTOR_VERSION &&
+                  [entry, ...(entry.documents ?? [])].some(
+                    d =>
+                      d.source === 'FILENAME' ||
+                      FILENAME_DATE_CLAUSE.test(d.extractedClause || '')
+                  )
                 ) {
-                  entry.code = prefix
                   this.isDirty = true
+                  continue
                 }
 
                 this.cache.set(entry.fileId, entry)
@@ -238,11 +247,16 @@ export class PDFContentCache {
     }
   }
 
-  get(fileId: string, modifiedTime?: string): CachedPDFEntry | null {
+  get(
+    fileId: string,
+    modifiedTime?: string,
+    md5?: string
+  ): CachedPDFEntry | null {
     const entry = this.cache.get(fileId)
     if (!entry) return null
 
-    // Se tivermos modifiedTime para conferir e eles forem diferentes, cache está desatualizado
+    if (md5 && entry.md5) return entry.md5 === md5 ? entry : null
+
     if (
       modifiedTime &&
       entry.modifiedTime &&

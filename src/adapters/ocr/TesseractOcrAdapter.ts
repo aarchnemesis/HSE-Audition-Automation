@@ -6,99 +6,110 @@ import { promisify } from 'util'
 
 const execFileAsync = promisify(execFile)
 
-export class TesseractOcrAdapter {
-  private static isAvailable: boolean | null = null
+const DPI = '300'
+const LANGS = 'por+eng'
+const PAGE_TIMEOUT_MS = 120_000
 
-  /**
-   * Verifica se os binarios do sistema pdftoppm e tesseract estao disponiveis no PATH.
-   */
-  static async checkAvailability(): Promise<boolean> {
-    if (this.isAvailable !== null) return this.isAvailable
-    try {
-      await execFileAsync('pdftoppm', ['-v'])
-      await execFileAsync('tesseract', ['--version'])
-      this.isAvailable = true
-    } catch {
-      this.isAvailable = false
+export class OcrUnavailableError extends Error {
+  constructor(detail: string) {
+    super(
+      `OCR indisponível (${detail}). Instale: apt install tesseract-ocr tesseract-ocr-por poppler-utils`
+    )
+    this.name = 'OcrUnavailableError'
+  }
+}
+
+export class TesseractOcrAdapter {
+  private static availability: Promise<void> | null = null
+
+  static assertAvailable(): Promise<void> {
+    if (!this.availability) {
+      this.availability = (async () => {
+        try {
+          await execFileAsync('pdftoppm', ['-v'])
+        } catch {
+          throw new OcrUnavailableError('pdftoppm ausente')
+        }
+        let langs: string
+        try {
+          const { stdout, stderr } = await execFileAsync('tesseract', [
+            '--list-langs',
+          ])
+          langs = `${stdout}\n${stderr}`
+        } catch {
+          throw new OcrUnavailableError('tesseract ausente')
+        }
+        if (!/^por$/m.test(langs))
+          throw new OcrUnavailableError('modelo "por" do tesseract ausente')
+      })()
     }
-    return this.isAvailable
+    return this.availability
   }
 
-  /**
-   * Executa OCR nas primeiras paginas (padrao ate 2 paginas) de um buffer de PDF.
-   * Retorna um array de strings com o texto extraido de cada pagina.
-   */
+  static async checkAvailability(): Promise<boolean> {
+    try {
+      await this.assertAvailable()
+      return true
+    } catch {
+      return false
+    }
+  }
+
   static async extractTextFromScannedPdf(
     pdfBuffer: Buffer,
-    maxPages: number = 2
+    maxPages = 10
   ): Promise<string[]> {
-    const available = await this.checkAvailability()
-    if (!available) {
-      return []
-    }
-
+    await this.assertAvailable()
     const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'hse_ocr_'))
     const pdfPath = path.join(tmpDir, 'document.pdf')
-    const imgPrefix = path.join(tmpDir, 'page')
-
     try {
       fs.writeFileSync(pdfPath, pdfBuffer)
-
-      // 1. Converter primeiras paginas do PDF para imagens PNG a 150 DPI
-      await execFileAsync('pdftoppm', [
-        '-png',
-        '-r',
-        '150',
-        '-f',
-        '1',
-        '-l',
-        String(maxPages),
-        pdfPath,
-        imgPrefix,
-      ])
-
-      // 2. Localizar imagens geradas ordenadas por pagina
-      const files = fs
+      await execFileAsync(
+        'pdftoppm',
+        [
+          '-png',
+          '-r',
+          DPI,
+          '-f',
+          '1',
+          '-l',
+          String(maxPages),
+          pdfPath,
+          path.join(tmpDir, 'page'),
+        ],
+        { timeout: PAGE_TIMEOUT_MS * maxPages }
+      )
+      const images = fs
         .readdirSync(tmpDir)
         .filter(f => f.startsWith('page-') && f.endsWith('.png'))
         .sort()
-
-      const pageTexts: string[] = []
-
-      // 3. Executar tesseract para cada imagem
-      for (const imgFile of files) {
-        const imgPath = path.join(tmpDir, imgFile)
-        try {
-          const { stdout } = await execFileAsync('tesseract', [
-            imgPath,
-            'stdout',
-            '--oem',
-            '1',
-            '-l',
-            'eng',
-          ])
-          pageTexts.push(stdout || '')
-        } catch (err: any) {
-          console.warn(
-            `[TesseractOcrAdapter] Falha de OCR na pagina ${imgFile}:`,
-            err?.message || err
-          )
-          pageTexts.push('')
-        }
-      }
-
-      return pageTexts
-    } catch (err: any) {
-      console.warn(
-        `[TesseractOcrAdapter] Falha geral ao processar PDF para OCR:`,
-        err?.message || err
-      )
-      return []
+      const pages: string[] = []
+      for (const img of images)
+        pages.push(await this.ocrImage(path.join(tmpDir, img)))
+      return pages
     } finally {
-      // Limpeza segura dos arquivos temporarios
-      try {
-        fs.rmSync(tmpDir, { recursive: true, force: true })
-      } catch {}
+      fs.rmSync(tmpDir, { recursive: true, force: true })
     }
+  }
+
+  static async extractTextFromImage(imageBuffer: Buffer): Promise<string> {
+    await this.assertAvailable()
+    const tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'hse_ocr_'))
+    try {
+      const imgPath = path.join(tmpDir, 'image')
+      fs.writeFileSync(imgPath, imageBuffer)
+      return await this.ocrImage(imgPath)
+    } finally {
+      fs.rmSync(tmpDir, { recursive: true, force: true })
+    }
+  }
+
+  private static async ocrImage(imgPath: string): Promise<string> {
+    const { stdout } = await execFileAsync(
+      'tesseract',
+      [imgPath, 'stdout', '--oem', '1', '-l', LANGS],
+      { timeout: PAGE_TIMEOUT_MS, maxBuffer: 16 * 1024 * 1024 }
+    )
+    return stdout || ''
   }
 }

@@ -139,6 +139,7 @@ export class HSEFilterEngine {
         const isPresencialAlert = [
           'VENCIDO',
           'AUSENTE',
+          'NAO_LIDO',
           'VENCE_07',
           'VENCE_15',
           'VENCE_30',
@@ -175,7 +176,11 @@ export class HSEFilterEngine {
           fgColor: { argb: 'FEF9C3' },
         }
         statusCell.font = { color: { argb: '854D0E' }, bold: true }
-      } else if (rec.statusEHS === 'VENCIDO' || rec.statusEHS === 'AUSENTE') {
+      } else if (
+        rec.statusEHS === 'VENCIDO' ||
+        rec.statusEHS === 'AUSENTE' ||
+        rec.statusEHS === 'NAO_LIDO'
+      ) {
         statusCell.fill = {
           type: 'pattern',
           pattern: 'solid',
