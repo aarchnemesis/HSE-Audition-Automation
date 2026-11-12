@@ -258,6 +258,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/11/2027"
       },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2028-11-10T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2028"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
@@ -2041,12 +2048,33 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/10/2028"
       },
+      "16": {
+        "code": "16",
+        "name": "GWO BST",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/11/2028"
+      },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2028-11-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028"
+      },
       "18": {
         "code": "18",
         "name": "NR 18",
         "expirationDate": "2028-10-31T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/10/2028"
+      },
+      "19": {
+        "code": "19",
+        "name": "NR 23",
+        "expirationDate": "2028-11-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028"
       },
       "20": {
         "code": "20",
@@ -2061,6 +2089,13 @@
         "expirationDate": "2028-10-30T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/10/2028"
+      },
+      "27": {
+        "code": "27",
+        "name": "NR 07 - PS",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/11/2028"
       },
       "28": {
         "code": "28",
@@ -5090,6 +5125,34 @@
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "HE303914BR",
     "certificates": {
+      "16": {
+        "code": "16",
+        "name": "GWO BST",
+        "expirationDate": "2028-11-05T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/11/2028"
+      },
+      "17": {
+        "code": "17",
+        "name": "NR 17",
+        "expirationDate": "2028-11-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028"
+      },
+      "19": {
+        "code": "19",
+        "name": "NR 23",
+        "expirationDate": "2028-11-06T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028"
+      },
+      "27": {
+        "code": "27",
+        "name": "NR 07 - PS",
+        "expirationDate": "2028-11-03T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/11/2028"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
