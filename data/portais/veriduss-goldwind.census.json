@@ -1,6 +1,6 @@
 {
   "portalId": "veriduss-goldwind",
-  "capturedAt": "2026-11-12T13:00:39.618Z",
+  "capturedAt": "2026-11-12T20:01:09.728Z",
   "workers": [
     {
       "name": "ALLAN THIAGO RAMOS VEIGA",
@@ -410,7 +410,9 @@
         },
         {
           "title": "FICHA DE EPI",
-          "status": "MISSING",
+          "status": "REJECTED",
+          "expiresOn": "2027-02-10",
+          "note": "Gentileza informar a validade de 3 meses de acordo com o último epi entregue.",
           "required": true
         },
         {
@@ -445,9 +447,8 @@
         },
         {
           "title": "TREINAMENTO DE PRIMEIROS SOCORROS",
-          "status": "REJECTED",
+          "status": "APPROVED",
           "expiresOn": "2028-10-28",
-          "note": "Pendente conteúdo programático",
           "required": true
         },
         {
@@ -1712,9 +1713,7 @@
         },
         {
           "title": "COMPROVANTE DE REGISTRO E-SOCIAL",
-          "status": "REJECTED",
-          "expiresOn": "2027-05-04",
-          "note": "Gentileza postar o COMPROVANTE DE REGISTRO E-SOCIAL",
+          "status": "APPROVED",
           "required": true
         },
         {
