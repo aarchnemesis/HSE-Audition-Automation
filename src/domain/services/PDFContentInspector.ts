@@ -184,6 +184,9 @@ const PORTUGUESE_MONTHS: Record<string, number> = {
   dec: 11,
 }
 
+/** End date for a contract signed "por prazo indeterminado": it has no end, so it never expires. */
+export const INDEFINITE_CONTRACT_END = new Date(2099, 11, 31)
+
 const NUMBER_WORDS: Record<string, number> = {
   um: 1,
   uma: 1,
@@ -819,6 +822,19 @@ export class PDFContentInspector {
             clause: prorrogarMatch[0],
           }
         }
+      }
+    }
+
+    // Caso F: contrato CLT "válido por tempo indeterminado" / "por prazo indeterminado". Sem esta
+    // cláusula o contrato caía na regra de certificado e vencia na própria data de assinatura
+    // (60 contratos "VENCIDO" em nov/2026). Fica por último para que um término explícito vença.
+    const indeterminadoMatch = clean.match(
+      /(?:por|a)\s+(?:tempo|prazo)\s+indeterminado/i
+    )
+    if (indeterminadoMatch) {
+      return {
+        expirationDate: INDEFINITE_CONTRACT_END,
+        clause: `Contrato por prazo indeterminado ("${indeterminadoMatch[0]}")`,
       }
     }
 

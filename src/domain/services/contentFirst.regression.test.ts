@@ -96,6 +96,18 @@ describe('course date vs signature date', () => {
   })
 })
 
+describe('CLT contract signed for an indefinite term', () => {
+  it('does not expire on the signature date', () => {
+    const result = PDFContentInspector.inspect(
+      '40 – Contrato de Prestação de Serviço – 05.11.2024 - FULANO DE TAL.pdf',
+      'CONTRATO INDIVIDUAL DE TRABALHO firmado por prazo indeterminado. PRAZO DE DURAÇÃO DO CONTRATO CLÁUSULA TERCEIRA – O presente Contrato é válido por tempo indeterminado. Sorocaba, 05 de novembro de 2024. FULANO DE TAL',
+      REF
+    )
+    expect(result.statusEHS).toBe('CONFORME')
+    expect(result.expirationDate?.getFullYear()).toBe(2099)
+  })
+})
+
 describe('permanent documents', () => {
   it('are CONFORME without an expiry date', () => {
     expect(EHSEvaluator.evaluateForCode('05', undefined, REF)).toEqual({
