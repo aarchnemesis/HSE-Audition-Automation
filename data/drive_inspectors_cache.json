@@ -291,7 +291,7 @@
       "19": {
         "code": "19",
         "name": "Doc 19",
-        "filename": "Drielton Francisco de Araújo Silva - ASSINADO incendio.pdf",
+        "filename": "19 – NR – 23 C. Incêndio (GWO) – 06.11.26 – Drielton Francisco de Araújo Silva.",
         "issueDate": "2026-11-06T03:00:00.000Z",
         "expirationDate": "2028-11-06T03:00:00.000Z",
         "statusEHS": "CONFORME",
@@ -351,14 +351,14 @@
       "30": {
         "code": "30",
         "name": "Doc 30",
-        "filename": "17 – NR – 17 Car. Manual Peso (GWO) – 06.11.26 - Drielton Francisco de Araújo Silva. ",
+        "filename": "19 – NR – 23 C. Incêndio (GWO) – 06.11.26 – Drielton Francisco de Araújo Silva.",
         "issueDate": "2026-11-06T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "sourcePath": "https://drive.google.com/file/d/13aB6UCz1jViR7Kjfeb5lcfYd6GIZWtIU/view",
+        "sourcePath": "https://drive.google.com/file/d/1X_vimSfVKwLKdRUhbfmLBihyUNyTJ8lT/view",
         "readSource": "CONTENT",
         "divergences": [
-          "Nome do arquivo indica código 17, o conteúdo é 30 (GWO WINDA ID)"
+          "Nome do arquivo indica código 19, o conteúdo é 30 (GWO WINDA ID)"
         ]
       },
       "01": {
@@ -394,7 +394,7 @@
       "09": {
         "code": "09",
         "name": "Doc 09",
-        "filename": "09 – Direção Defensiva (08 horas) –  22.04.2026 - DRIELTON FRANCISCO DE ARAUJO SILVA",
+        "filename": "09 – Direção Defensiva (08 horas) –  26.10.2026 - DRIELTON FRANCISCO DE ARAUJO SILVA",
         "issueDate": "2026-10-27T03:00:00.000Z",
         "expirationDate": "2028-10-27T03:00:00.000Z",
         "statusEHS": "CONFORME",
@@ -402,7 +402,7 @@
         "sourcePath": "https://drive.google.com/file/d/1qKllR4P2oJ27b3Y3dl6efJsGmn0kZ810/view",
         "readSource": "CONTENT",
         "divergences": [
-          "Data no nome (22/04/2026) difere da data impressa no documento (27/10/2026)"
+          "Data no nome (26/10/2026) difere da data impressa no documento (27/10/2026)"
         ]
       }
     },
@@ -1113,12 +1113,10 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.10.26 – Adenio Francisco de Sousa.pdf",
-        "issueDate": "2026-10-19T03:00:00.000Z",
-        "expirationDate": "2027-10-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/10/2027",
+        "statusEHS": "NAO_LIDO",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – Adenio Francisco de Sousa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
         "sourcePath": "https://drive.google.com/file/d/1zABVYVGsPc1kceTpfd5nolBZc3lxymdx/view",
-        "readSource": "OCR",
+        "readSource": "NAO_LIDO",
         "divergences": []
       },
       "09": {
@@ -2375,19 +2373,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "04.1": {
-        "code": "04.1",
-        "name": "Doc 04.1",
-        "filename": "04_CONTRATO-ADITIVO-UNICO_EMI-NA_VAL-NA_FRANCISCO-FRANKLIN-DA-SILVA.pdf",
-        "expirationDate": "2099-12-31T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/12/2099",
-        "sourcePath": "https://drive.google.com/file/d/1r8POcaWQ9pbw8DSLqvigFCuKQbePdMvG/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Nome do arquivo indica código 40.1, o conteúdo é 04.1 (04.1)"
-        ]
-      },
       "04": {
         "code": "04",
         "name": "Doc 04",
@@ -2396,6 +2381,17 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/12/2099",
         "sourcePath": "https://drive.google.com/file/d/1VrFmhJMCQUzqOm6iR5WcqM6bgVyrbVlZ/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
+      "40.1": {
+        "code": "40.1",
+        "name": "Doc 40.1",
+        "filename": "04_CONTRATO-ADITIVO-UNICO_EMI-NA_VAL-NA_FRANCISCO-FRANKLIN-DA-SILVA.pdf",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/12/2099",
+        "sourcePath": "https://drive.google.com/file/d/1r8POcaWQ9pbw8DSLqvigFCuKQbePdMvG/view",
         "readSource": "CONTENT",
         "divergences": []
       },
@@ -31116,8 +31112,8 @@
         "filename": "04.1 - Aditivo Contratual - 07.02.2025 - Joao Victor Costa Campos - Clicksign.pdf",
         "issueDate": "2025-02-07T03:00:00.000Z",
         "expirationDate": "2027-02-07T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (07/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1g_frLU5wOkouT3p6z0tvqJdfd8Iegn0h/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -34648,6 +34644,18 @@
           "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
         ]
       },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2024-07-01_VAL-NA_SERGIO-LUIZ-ROSA-TAVUENCAS.pdf",
+        "issueDate": "2024-07-01T03:00:00.000Z",
+        "expirationDate": "2024-08-01T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 833 dias (01/08/2024)",
+        "sourcePath": "https://drive.google.com/file/d/1VCNOxuvSshJ9LZMpZVCq2RMbSZnVV2kF/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
       "02": {
         "code": "02",
         "name": "Doc 02",
@@ -34916,6 +34924,17 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1KsvABqA6JdclzyFZF83wdYZNjn2wipr0/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2025-01-09_VAL-NA_KELVIN-GARCIA-DE-OLIVEIRA.pdf",
+        "issueDate": "2025-01-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1lYZmjAQpgAZa9bp46_BlF4BUrrnoN6A6/view",
         "readSource": "CONTENT",
         "divergences": []
       },
@@ -35472,6 +35491,17 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2023-03-06_VAL-NA_ALISON-DOS-SANTOS-RIBEIRO.pdf",
+        "issueDate": "2023-03-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1NXUAuDZW1s4DKIeioOWjYBx68cmHHWrZ/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
       "02": {
         "code": "02",
         "name": "Doc 02",
@@ -35733,16 +35763,25 @@
       "40.1": {
         "code": "40.1",
         "name": "Doc 40.1",
-        "filename": "40.1 – Aditivo ao Contrato – 13.01.2027 - RAPHAEL AFONSO CARDOSO PEREIRA.pdf",
-        "issueDate": "2025-01-15T03:00:00.000Z",
-        "expirationDate": "2027-01-13T03:00:00.000Z",
+        "filename": "04_CONTRATO-ADITIVO-UNICO_EMI-2025-04-10_VAL-NA_RAPHAEL-AFONSO-CARDOSO-PEREIRA.pdf",
+        "issueDate": "2025-04-10T03:00:00.000Z",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
-        "sourcePath": "https://drive.google.com/file/d/1fznUvC1LNNMeew_0SIdCnfjtpiggv1Pj/view",
+        "statusDetail": "Válido até 31/12/2099",
+        "sourcePath": "https://drive.google.com/file/d/15jdfaBEblJ18-q47r7m8FXQCKhE4u8aH/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (13/01/2027) difere da data impressa no documento (15/01/2025)"
-        ]
+        "divergences": []
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2025-01-15_VAL-NA_RAPHAEL-AFONSO-CARDOSO-PEREIRA.pdf",
+        "issueDate": "2025-01-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1BHqywi3G2zOb4hGWurs1tM0CWiOWo0Sl/view",
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -36011,6 +36050,17 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1AK7qC4M9lPffx6w4rp_RAZBaVMXSppq1/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2023-11-28_VAL-NA_ANTONIO-CARLOS-PEREIRA.pdf",
+        "issueDate": "2023-11-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1Icj6sv1aI9_M789HB-H0INXgWS0Jo5__/view",
         "readSource": "CONTENT",
         "divergences": []
       },
@@ -37367,6 +37417,17 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2026-03-12_VAL-NA_THIAGO-AUGUSTO-DE-PAULA-PEPE.pdf",
+        "issueDate": "2026-03-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1jzsT6e1UT50p-A_rs3-R5u4HWYWBQK7-/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
       "02": {
         "code": "02",
         "name": "Doc 02",
@@ -37629,6 +37690,17 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 06/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1olDPT-X-d1bdCRR6q3QFTbHqb76yBWp3/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
+      "04": {
+        "code": "04",
+        "name": "Doc 04",
+        "filename": "04_CONTRATO-CTPS-UNICO_EMI-2026-09-30_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+        "issueDate": "2026-09-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1UtxX-KnRpq-tIKfM4CqGma_Y1ovWMWr0/view",
         "readSource": "CONTENT",
         "divergences": []
       },
