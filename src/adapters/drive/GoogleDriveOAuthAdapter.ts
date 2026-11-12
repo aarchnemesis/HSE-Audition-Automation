@@ -57,6 +57,8 @@ import { getAuthorizedClient } from './googleAuth.js'
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
 const MIN_TEXT_CHARS = 50
+/** Página com menos texto que isto num PDF que tem texto é tratada como imagem e vai para o OCR. */
+const SPARSE_PAGE_CHARS = 120
 
 interface HolderContext {
   name: string
@@ -454,14 +456,21 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       )
     let items = inspect()
 
+    // Certificados F+R costumam juntar a formação em texto com a reciclagem escaneada (página-imagem
+    // com só "PERIÓDICO" no texto). Sem OCR nessas páginas a leitura só via a formação e vencia antes.
+    const sparsePage = pages.findIndex(
+      (p, i) => i < 12 && p.replace(/\s+/g, '').length < SPARSE_PAGE_CHARS
+    )
     if (
       !ocrUsed &&
       isPdfBuffer(buffer) &&
-      items.every(item => item.statusEHS === 'NAO_LIDO')
+      (items.every(item => item.statusEHS === 'NAO_LIDO') || sparsePage >= 0)
     ) {
       try {
-        const ocrPages =
-          await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
+        const ocrPages = await TesseractOcrAdapter.extractTextFromScannedPdf(
+          buffer,
+          Math.min(Math.max(pages.length, 4), 12)
+        )
         pages = pages.map((text, i) => `${text}\n${ocrPages[i] ?? ''}`)
         ocrUsed = true
         items = inspect()

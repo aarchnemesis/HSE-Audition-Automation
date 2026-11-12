@@ -33,6 +33,7 @@ export const CLEARANCE_LABEL: Record<Clearance, string> = {
   CLEARED: 'Liberado',
   WAITING_CLIENT: 'Aguardando cliente',
   BLOCKED: 'Bloqueado',
+  INCOMPLETE: 'Leitura incompleta do portal',
   NOT_REGISTERED: 'Sem cadastro no portal',
   NOT_MONITORED: 'Portal sem leitura',
 }
@@ -41,6 +42,7 @@ export const CLEARANCE_COLORS: Record<Clearance, [string, string]> = {
   CLEARED: ['#E4F3E9', '#1E7A4C'],
   WAITING_CLIENT: ['#E4EAF5', '#25386B'],
   BLOCKED: ['#FCE7E3', '#C1401F'],
+  INCOMPLETE: ['#FEF3C7', '#92400E'],
   NOT_REGISTERED: ['#FDF0E6', '#B45A1E'],
   NOT_MONITORED: ['#F1F5F9', '#475569'],
 }
@@ -249,9 +251,10 @@ export function countClearances(
   const rank: Record<Clearance, number> = {
     BLOCKED: 0,
     NOT_REGISTERED: 1,
-    WAITING_CLIENT: 2,
-    NOT_MONITORED: 3,
-    CLEARED: 4,
+    INCOMPLETE: 2,
+    WAITING_CLIENT: 3,
+    NOT_MONITORED: 4,
+    CLEARED: 5,
   }
   // A person on two projects counts once, by their worst situation.
   for (const p of projects)
@@ -264,6 +267,7 @@ export function countClearances(
     CLEARED: 0,
     WAITING_CLIENT: 0,
     BLOCKED: 0,
+    INCOMPLETE: 0,
     NOT_REGISTERED: 0,
     NOT_MONITORED: 0,
   }

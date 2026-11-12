@@ -19,6 +19,7 @@ export type PortalCollaboratorStatus =
   | 'CLEARED'
   | 'WAITING_CLIENT'
   | 'BLOCKED'
+  | 'INCOMPLETE'
   | 'NOT_REGISTERED'
   | 'NOT_MONITORED'
 export type PortalDocView =
@@ -46,6 +47,8 @@ export interface PortalsCollaboratorView {
   name: string
   portal?: string
   overallStatus: PortalCollaboratorStatus
+  /** Por que a leitura do portal não basta para liberar (INCOMPLETE) */
+  incompleteReason?: string
   documents: PortalsDocumentView[]
 }
 
@@ -74,6 +77,10 @@ export interface PortalsPlatformView {
   cleared: number
   waiting: number
   blocked: number
+  /** Colaboradores com leitura incompleta neste portal */
+  incomplete: number
+  /** Documentos por colaborador que o portal costuma devolver */
+  typicalDocs: number
 }
 
 export interface PortalsManualGap {
@@ -181,6 +188,7 @@ export function buildPortalsDashboardData(
         name: m.name,
         portal: m.portalName,
         overallStatus: m.clearance satisfies Clearance,
+        ...(m.incompleteReason ? { incompleteReason: m.incompleteReason } : {}),
         documents: issues.map(i =>
           docFromIssue(i, actionByKey.get(actionKey(m.name, i.title)))
         ),
@@ -222,13 +230,15 @@ export function buildPortalsDashboardData(
       id: s.portal.id,
       name: s.portal.name,
       automation: s.portal.automation,
-      status: ageDays <= CENSUS_FRESH_DAYS ? 'ONLINE' : 'STALE',
+      status: ageDays <= CENSUS_FRESH_DAYS && !s.stale ? 'ONLINE' : 'STALE',
       capturedAt: s.capturedAt,
       ageDays,
       collaboratorsCount: s.workers,
       cleared: s.cleared,
       waiting: s.waiting,
       blocked: s.blocked,
+      incomplete: s.incomplete,
+      typicalDocs: s.typicalDocs,
     }
   })
 

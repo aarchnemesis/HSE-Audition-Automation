@@ -144,7 +144,7 @@ const PORTALS_TAB_SCRIPT = String.raw`
     /* ===== Portais de Clientes: client logic ===== */
     var PT = { q: '', client: 'ALL', status: 'ALL', win: 'ALL', onlyBlocked: false, sel: -1, lastFocus: null, shown: [] };
     var PT_PROJ = { OK: ['LIBERADO', 'ok'], WAITING: ['EM ANÁLISE', 'info'], ATTENTION: ['PENDÊNCIA', 'warn'], BLOCKED: ['BLOQUEADO', 'crit'] };
-    var PT_COLLAB = { CLEARED: ['LIBERADO', 'ok'], WAITING_CLIENT: ['EM ANÁLISE', 'info'], BLOCKED: ['BLOQUEADO', 'crit'], NOT_REGISTERED: ['SEM CADASTRO', 'warn'], NOT_MONITORED: ['NÃO MONITORADO', 'na'] };
+    var PT_COLLAB = { CLEARED: ['LIBERADO', 'ok'], WAITING_CLIENT: ['EM ANÁLISE', 'info'], BLOCKED: ['BLOQUEADO', 'crit'], INCOMPLETE: ['LEITURA INCOMPLETA', 'warn'], NOT_REGISTERED: ['SEM CADASTRO', 'warn'], NOT_MONITORED: ['NÃO MONITORADO', 'na'] };
     var PT_DOC = { APPROVED: ['APROVADO', 'ok'], IN_REVIEW: ['EM ANÁLISE', 'info'], EXPIRING: ['A VENCER', 'warn'], MISSING: ['AUSENTE', 'crit'], EXPIRED: ['VENCIDO', 'crit'], REJECTED: ['RECUSADO', 'crit'] };
     var PT_AUTOMATION = { AUTOMATED: 'Automático', ASSISTED_LOGIN: 'Login assistido', NOT_AUTOMATED: 'Sem automação', MANUAL: 'Manual' };
 
@@ -282,12 +282,12 @@ const PORTALS_TAB_SCRIPT = String.raw`
           '<div class="pt-item-top"><strong>' + ptEsc(p.projectName) + '</strong><span class="pt-badges">' + badges + '</span></div>' +
           '<div class="pt-item-sub">' + ptEsc(p.client) + ' · ' + ptEsc(plat) + ' · ' + ptEsc(ptStart(p)) + '</div>' +
           '<div class="pt-meter" aria-hidden="true"><i class="m-ok" style="width:' + w(c.cleared) + '"></i><i class="m-wait" style="width:' + w(c.waiting) + '"></i><i class="m-crit" style="width:' + w(c.blocked) + '"></i><i class="m-other" style="width:' + w(c.other) + '"></i></div>' +
-          '<div class="pt-item-foot">' + c.cleared + ' de ' + p.collaborators.length + ' liberados' + (c.blocked ? ' · ' + c.blocked + ' bloqueado(s)' : '') + (c.waiting ? ' · ' + c.waiting + ' em análise' : '') + (c.other ? ' · ' + c.other + ' sem leitura' : '') + '</div>' +
+          '<div class="pt-item-foot">' + c.cleared + ' de ' + p.collaborators.length + ' liberados' + (c.blocked ? ' · ' + c.blocked + ' bloqueado(s)' : '') + (c.waiting ? ' · ' + c.waiting + ' em análise' : '') + (c.other ? ' · ' + c.other + ' sem leitura ou incompletos' : '') + '</div>' +
           '</button>';
       }).join('');
     }
 
-    var PT_COLLAB_RANK = { BLOCKED: 0, NOT_REGISTERED: 1, WAITING_CLIENT: 2, NOT_MONITORED: 3, CLEARED: 4 };
+    var PT_COLLAB_RANK = { BLOCKED: 0, NOT_REGISTERED: 1, INCOMPLETE: 2, WAITING_CLIENT: 3, NOT_MONITORED: 4, CLEARED: 5 };
 
     function ptRenderCollabs(idxs) {
       var title = document.getElementById('ptCollabTitle');
@@ -313,7 +313,7 @@ const PORTALS_TAB_SCRIPT = String.raw`
         }).join('');
         if (c.documents.length > 3) chips += '<span class="pt-doc-chip">+' + (c.documents.length - 3) + '</span>';
         var head = '<div class="pt-item-top"><strong>' + ptEsc(c.name) + '</strong><span class="pt-badges">' + ptBadge(PT_COLLAB[c.overallStatus]) + '</span></div>' +
-          '<div class="pt-item-sub">' + ptEsc(c.portal || 'sem portal') + '</div>' + (chips ? '<div class="pt-docs">' + chips + '</div>' : '');
+          '<div class="pt-item-sub">' + ptEsc(c.portal || 'sem portal') + (c.incompleteReason ? ' · ' + ptEsc(c.incompleteReason) : '') + '</div>' + (chips ? '<div class="pt-docs">' + chips + '</div>' : '');
         if (!c.documents.length) return '<div class="pt-item is-static">' + head + '</div>';
         return '<button type="button" class="pt-item" onclick="portaisOpenDrawer(' + PT.sel + ',' + x.ci + ')">' + head + '</button>';
       }).join('');
@@ -324,7 +324,8 @@ const PORTALS_TAB_SCRIPT = String.raw`
         var st = p.status === 'ONLINE' ? ['LEITURA ATUAL', 'ok'] : ['DESATUALIZADA', 'warn'];
         return '<div class="pt-plat"><div class="pt-plat-name"><span>' + ptEsc(p.name) + '</span>' + ptBadge(st) + '</div>' +
           '<div class="pt-plat-meta">' + ptEsc(PT_AUTOMATION[p.automation] || p.automation) + ' · extração em <strong>' + ptDateTime(p.capturedAt) + '</strong> (' + ptRelativeAge(p.capturedAt) + ')</div>' +
-          '<div class="pt-plat-meta">' + p.collaboratorsCount + ' colaboradores · ' + p.cleared + ' liberados · ' + p.waiting + ' em análise · ' + p.blocked + ' bloqueados</div></div>';
+          '<div class="pt-plat-meta">' + p.collaboratorsCount + ' colaboradores · ' + p.cleared + ' liberados · ' + p.waiting + ' em análise · ' + p.blocked + ' bloqueados' + (p.incomplete ? ' · <strong>' + p.incomplete + ' com leitura incompleta</strong>' : '') + '</div>' +
+          '<div class="pt-plat-meta">O robô traz em média ' + p.typicalDocs + ' documento(s) por pessoa' + (p.typicalDocs <= 1 ? ': leitura do portal não confiável' : '') + '</div></div>';
       }).join('') || '<div class="pt-empty">Nenhuma plataforma lida.</div>';
     }
 

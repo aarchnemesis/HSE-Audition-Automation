@@ -29,6 +29,8 @@ export type Clearance =
   | 'CLEARED'
   | 'WAITING_CLIENT'
   | 'BLOCKED'
+  /** Leitura do portal incompleta: censo velho ou bem menos documentos que o normal do portal */
+  | 'INCOMPLETE'
   | 'NOT_REGISTERED'
   | 'NOT_MONITORED'
 
@@ -77,6 +79,8 @@ export interface MemberReadiness {
   resolved: boolean
   clearance: Clearance
   portalName?: string
+  /** Por que a leitura do portal não basta para liberar (só com INCOMPLETE) */
+  incompleteReason?: string
   blockers: DocIssue[]
   waiting: DocIssue[]
   expiring: DocIssue[]
@@ -97,6 +101,11 @@ export interface PortalSummary {
   cleared: number
   waiting: number
   blocked: number
+  /** Colaboradores com leitura incompleta (ver INCOMPLETE) */
+  incomplete: number
+  /** Documentos por colaborador que este portal costuma devolver (mediana do censo) */
+  typicalDocs: number
+  stale: boolean
   actions: Record<ActionKind, number>
 }
 
@@ -175,15 +184,50 @@ export function effectiveStatus(
 
 interface WorkerState {
   clearance: Exclude<Clearance, 'NOT_REGISTERED' | 'NOT_MONITORED'>
+  incompleteReason?: string
   blockers: DocIssue[]
   waiting: DocIssue[]
   expiring: DocIssue[]
 }
 
+/** Censo com mais dias que isto não serve para liberar ninguém. */
+export const CENSUS_STALE_DAYS = 2
+
+/**
+ * Régua de completude de um censo: um robô de portal pode varrer só parte das pessoas ou trazer só
+ * parte dos documentos de cada uma, e o resto da cadeia não pode tratar isso como "tudo aprovado".
+ */
+export interface CensusCompleteness {
+  stale: boolean
+  ageDays: number
+  /** Mediana de documentos distintos por colaborador neste censo */
+  typicalDocs: number
+  /** Abaixo disto a leitura do colaborador é parcial */
+  minDocs: number
+}
+
+export function censusCompleteness(
+  census: PortalCensus,
+  refIso: string
+): CensusCompleteness {
+  const counts = census.workers
+    .map(w => new Set(w.documents.map(d => d.title)).size)
+    .sort((a, b) => a - b)
+  const typicalDocs = counts.length ? counts[Math.floor(counts.length / 2)] : 0
+  const ageDays = Math.max(0, daysBetween(census.capturedAt.slice(0, 10), refIso))
+  return {
+    stale: ageDays > CENSUS_STALE_DAYS,
+    ageDays,
+    typicalDocs,
+    minDocs: Math.max(1, Math.floor(typicalDocs / 2)),
+  }
+}
+
 function evaluateWorker(
   worker: PortalWorker,
   refIso: string,
-  expiringDays: number
+  expiringDays: number,
+  completeness?: CensusCompleteness
 ): WorkerState {
   const blockers: DocIssue[] = []
   const waiting: DocIssue[] = []
@@ -209,12 +253,24 @@ function evaluateWorker(
     else if (status === 'IN_REVIEW') waiting.push(issue)
     else if (status === 'EXPIRING') expiring.push(issue)
   }
-  const clearance = blockers.length
+  let clearance: WorkerState['clearance'] = blockers.length
     ? 'BLOCKED'
     : waiting.length
       ? 'WAITING_CLIENT'
       : 'CLEARED'
-  return { clearance, blockers, waiting, expiring }
+  let incompleteReason: string | undefined
+  // Bloqueio lido continua bloqueio; o que não pode é liberar com leitura parcial.
+  if (completeness && clearance !== 'BLOCKED') {
+    const docs = new Set(worker.documents.map(d => d.title)).size
+    if (completeness.stale)
+      incompleteReason = `Censo do portal com ${completeness.ageDays} dias; a situação pode ter mudado`
+    else if (docs < completeness.minDocs)
+      incompleteReason = docs === 0
+        ? 'O robô não trouxe nenhum documento desta pessoa'
+        : `O robô trouxe ${docs} documento(s); o normal neste portal é ${completeness.typicalDocs}`
+    if (incompleteReason) clearance = 'INCOMPLETE'
+  }
+  return { clearance, incompleteReason, blockers, waiting, expiring }
 }
 
 function servesClient(
@@ -424,6 +480,9 @@ export function buildPortalPendencyReport(
   const censusByPortal = new Map(
     input.censuses.filter(c => getPortal(c.portalId)).map(c => [c.portalId, c])
   )
+  const completenessByPortal = new Map(
+    [...censusByPortal.values()].map(c => [c.portalId, censusCompleteness(c, refIso)])
+  )
   const roster = [
     ...new Set([
       ...input.baseRecords.map(r => r.inspectorName),
@@ -491,7 +550,7 @@ export function buildPortalPendencyReport(
           name: member.name,
           resolved: member.resolved,
           portalName: portal.name,
-          ...evaluateWorker(worker, refIso, expiringDays),
+          ...evaluateWorker(worker, refIso, expiringDays, completenessByPortal.get(portal.id)),
         }
       }
       return {
@@ -524,12 +583,16 @@ export function buildPortalPendencyReport(
       cleared: 0,
       waiting: 0,
       blocked: 0,
+      incomplete: 0,
+      typicalDocs: completenessByPortal.get(census.portalId)!.typicalDocs,
+      stale: completenessByPortal.get(census.portalId)!.stale,
       actions: { RESUBMIT: 0, UPLOAD_FROM_BASE: 0, OBTAIN: 0, RENEW: 0 },
     }
     for (const worker of census.workers) {
-      const state = evaluateWorker(worker, refIso, expiringDays)
+      const state = evaluateWorker(worker, refIso, expiringDays, completenessByPortal.get(census.portalId))
       if (state.clearance === 'CLEARED') summary.cleared++
       else if (state.clearance === 'WAITING_CLIENT') summary.waiting++
+      else if (state.clearance === 'INCOMPLETE') summary.incomplete++
       else summary.blocked++
 
       const project = assignmentByWorker.get(portal.id)?.get(worker.name)
