@@ -19,7 +19,7 @@ export const CONTRACT_EXTRACTOR_VERSION = 3
  */
 export const SIGNATURE_DATE_EXTRACTOR_VERSION = 1
 
-export const CONTENT_EXTRACTOR_VERSION = 6
+export const CONTENT_EXTRACTOR_VERSION = 7
 
 const CONTRACT_CODES = ['04', '04.1', '40', '40.1']
 

@@ -53,6 +53,9 @@ import {
 } from './PDFContentCache.js'
 import { parseDateFromFilename } from './certificateFilenameParser.js'
 import { getAuthorizedClient } from './googleAuth.js'
+import { PrometheusReader } from '../llm/PrometheusReader.js'
+import { codeForLlmDocument, mapLlmDocument } from '../../domain/services/LlmReadingMapper.js'
+import { namesMatch } from '../../domain/services/PersonNameMatcher.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
@@ -239,6 +242,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
     )
 
     PDFContentCache.getInstance().save()
+    PrometheusReader.save()
     return results
   }
 
@@ -492,11 +496,71 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       }
     }
 
-    const holderCheck = checkHolder(
+    let holderCheck = checkHolder(
       pages.join('\n'),
       holder.name,
       holder.roster
     )
+
+    // Arquivos duvidosos vão para os leitores do Prometheus (Book seção 8). O que A e B concordam
+    // substitui a leitura das regras; divergência mantém as regras e fica registrada no cache da IA.
+    if (PrometheusReader.enabled() && pages.join('').trim().length > 0) {
+      const fnCode = CertificateClassifier.classify(filename).code
+      const fnDate = parseDateFromFilename(filename)
+      const sameDay = (a?: Date, b?: Date | null) => !!a && !!b && Math.abs(a.getTime() - b.getTime()) < 2 * 86_400_000
+      const doubtful =
+        items.every(i => i.statusEHS === 'NAO_LIDO') ||
+        holderCheck.status !== 'OK' ||
+        items.length > 1 ||
+        /F\s*[+&-]\s*R|RECICL|PERI[OÓ]DIC/i.test(filename) ||
+        (!!fnCode && !items.some(i => i.code === fnCode)) ||
+        (!!fnDate && !items.some(i => sameDay(i.issueDate, fnDate) || sameDay(i.expirationDate, fnDate)))
+      if (doubtful) {
+        const ruleItems = items.filter(i => i.statusEHS !== 'NAO_LIDO' && i.code)
+        const reading = await PrometheusReader.read(md5 || fileId, pages, a =>
+          ruleItems.length > 0 &&
+          a.every(d => d.titular_nome === 'ausente' || namesMatch(d.titular_nome, holder.name)) &&
+          ruleItems.every(r =>
+            a.some(d => codeForLlmDocument(d) === r.code && sameDay(r.issueDate, d.data_conclusao && d.data_conclusao !== 'ausente' ? new Date(`${d.data_conclusao}T03:00:00Z`) : null))
+          )
+        )
+        if (reading.agreed && reading.consensus?.length) {
+          const mapped = reading.consensus
+            .map(d => mapLlmDocument(d, new Date(), 'Leitura Prometheus: leitores A e B concordam'))
+            .filter((x): x is InspectedDocumentResult => !!x)
+          // Por código, vale o documento mais novo (formação + reciclagem no mesmo PDF).
+          const byCode = new Map<string, InspectedDocumentResult>()
+          for (const m of mapped) {
+            const prev = byCode.get(m.code!)
+            if (!prev || (m.issueDate?.getTime() ?? 0) > (prev.issueDate?.getTime() ?? 0)) byCode.set(m.code!, m)
+          }
+          // Combinação com as regras (não substituição): o modelo corrige data e curso de
+          // treinamentos; contratos, aditivos, WINDA e documentos sem data lida ficam com as regras.
+          const KEEP_RULES = /^(04|04\.1|40|40\.1|30|03|05)$/
+          const usable = [...byCode.values()].filter(
+            m => !KEEP_RULES.test(m.code!) && m.statusEHS !== 'INDETERMINADO' && (m.issueDate || m.expirationDate)
+          )
+          if (usable.length) {
+            const llmCodes = new Set(usable.map(m => m.code))
+            const merged = items.filter(r => {
+              if (llmCodes.has(r.code!)) return false // o modelo trouxe a data deste código
+              if (r.statusEHS === 'NAO_LIDO') return false
+              // Treinamento que o modelo diz que não está neste PDF (ex.: "SEP" que é Básico) sai.
+              return KEEP_RULES.test(r.code ?? '') || !/^(0[19]|1\d|2[0-9]|3[12]|12\.1|15\.1|20\.1|21\.1)$/.test(r.code ?? '')
+            })
+            items = [...merged, ...usable]
+          }
+          const titular = reading.consensus[0].titular_nome
+          if (titular && titular !== 'ausente') {
+            if (namesMatch(titular, holder.name)) holderCheck = { status: 'OK' }
+            else {
+              const other = holder.roster.find(r => namesMatch(r, titular))
+              holderCheck = other ? { status: 'OUTRA_PESSOA', other } : { status: 'NAO_ENCONTRADO' }
+            }
+          }
+        }
+      }
+    }
 
     const primaryDoc = items.reduce<InspectedDocumentResult | undefined>(
       (best, item) => {
