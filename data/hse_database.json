@@ -10041,13 +10041,14 @@
     "expirationDate": "2027-02-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "622192",
-    "storzState": "SOLICITADO",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 10/02/2027 | Reciclagem já solicitada na Storz (622192 - Status: SOLICITADO).",
+    "storzDeadline": "10/01/2027",
+    "detail": "Válido até 10/02/2027 | Reciclagem já solicitada na Storz (622192 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1QsTR-kZJbMRDZUc9KhIvkrqqokGp4-pA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T14:47:12.393Z"
+    "lastUpdated": "2026-11-12T02:47:01.892Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10176,17 +10177,16 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2026-11-04T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
+    "expirationDate": "2027-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "621110",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 73,
-    "storzDeadline": "08/01/2027",
-    "detail": "VENCIDO há 7 dias (04/11/2026) | EM ANDAMENTO NA STORZ (621110 - Progresso: 73%) [Prazo Storz: 08/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 04/11/2026, ANTES do prazo da Storz (08/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (621110) em 11/11/2026 — Válido até 11/11/2027 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1OxmudQKwDtbXuYaJakPvT239M-pSsTZF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T00:47:03.150Z"
+    "lastUpdated": "2026-11-12T02:47:01.892Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -14795,13 +14795,13 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "621786",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
+    "storzProgressPercent": 21,
     "storzDeadline": "10/01/2027",
     "detail": "Válido até 30/11/2027 | Reciclagem já solicitada na Storz (621786 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1d19kVYPor1I08kYiW5CP_1BFeivLYq-i/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T21:47:13.320Z"
+    "lastUpdated": "2026-11-12T02:47:01.892Z"
   },
   {
     "inspectorId": "rpo_57",
