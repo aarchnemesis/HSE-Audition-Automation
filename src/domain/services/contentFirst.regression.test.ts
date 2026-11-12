@@ -106,6 +106,14 @@ describe('CLT contract signed for an indefinite term', () => {
     expect(result.statusEHS).toBe('CONFORME')
     expect(result.expirationDate?.getFullYear()).toBe(2099)
   })
+  it('treats a CLT trial contract as ongoing after its 45 days', () => {
+    const result = PDFContentInspector.inspect(
+      '40 – Contrato de Prestação de Serviço – 24.02.2025 - FULANO DE TAL.pdf',
+      'CONTRATO DE EXPERIÊNCIA 1 - O Empregado trabalhará para a Empregadora. O prazo deste contrato é de 45 dias, com inicio em 24/02/2025 e término em 09/04/2025. FULANO DE TAL',
+      REF
+    )
+    expect(result.statusEHS).toBe('CONFORME')
+  })
 })
 
 describe('permanent documents', () => {

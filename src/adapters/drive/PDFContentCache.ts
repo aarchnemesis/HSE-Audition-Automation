@@ -10,7 +10,7 @@ import { parseDocCode } from './certificateFilenameParser.js'
  * junto), sem precisar apagar entradas do cache na mão.
  * Separado do `v` do GWO porque aquele gate testa `v !== 2` e quebraria com um bump global.
  */
-export const CONTRACT_EXTRACTOR_VERSION = 2
+export const CONTRACT_EXTRACTOR_VERSION = 3
 
 /**
  * Versão da extração de data de emissão de certificados. Subir este número no mesmo commit de qualquer

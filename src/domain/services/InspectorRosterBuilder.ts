@@ -1,4 +1,4 @@
-import { Inspector } from '../models/Certificate.js'
+import { Certificate, Inspector } from '../models/Certificate.js'
 import {
   EmployeeProfile,
   classifyEmployeeProfile,
@@ -75,9 +75,25 @@ export function buildRoster(
     // contrato, e quando acaba o aditivo caso tenha o contrato e o aditivo". Mantém o código '40'
     // (é o que requiredDocCodes cobra) mas com a data/detalhe do aditivo, que é sempre a mais
     // recente/válida das duas.
-    const aditivo = mergedCertificates.get('40.1')
-    if (aditivo) {
-      mergedCertificates.set('40', { ...aditivo, code: '40' })
+    // The newest term wins among every contract file in the folder: aditivos are often saved as
+    // "04.1" outside the Drone/LPS folders (no 40.1 remap there), and a folder can hold an old
+    // 40.1 next to a newer 04.1 aditivo. Taking only 40.1 left 18 up-to-date PJ contracts as VENCIDO
+    // (nov/2026). Only files named contrato/aditivo count, so a CTPS or other "04.x" never does.
+    const contractCodes = ['40', '40.1', '04', '04.1']
+    const isContractFile = (c: Certificate) =>
+      /contrat|aditivo/i.test(`${c.filename ?? ''} ${c.name ?? ''}`) ||
+      c.code === '40' ||
+      c.code === '40.1'
+    const contracts = contractCodes
+      .map(code => mergedCertificates.get(code))
+      .filter((c): c is Certificate => !!c && !!c.expirationDate && isContractFile(c))
+    const latest = contracts.reduce<Certificate | undefined>(
+      (best, c) =>
+        !best || new Date(c.expirationDate!) > new Date(best.expirationDate!) ? c : best,
+      undefined
+    )
+    if (latest && (mergedCertificates.has('40') || mergedCertificates.has('40.1'))) {
+      mergedCertificates.set('40', { ...latest, code: '40' })
     }
 
     const driveFolderId = driveMatch?.driveFolderId || driveMatch?.id

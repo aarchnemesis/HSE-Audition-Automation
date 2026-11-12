@@ -698,6 +698,16 @@ export class PDFContentInspector {
       .replace(/[\r\n]+/g, ' ')
       .replace(/\s+/g, ' ')
 
+    // Contrato de experiência CLT (45/90 dias): passado o período ele segue por prazo indeterminado
+    // (CLT art. 451), então o "término em" da experiência não é vencimento do vínculo.
+    const experienciaMatch = clean.match(/contrato\s+de\s+experi[eê]ncia/i)
+    if (experienciaMatch) {
+      return {
+        expirationDate: INDEFINITE_CONTRACT_END,
+        clause: 'Contrato de experiência CLT: segue por prazo indeterminado após o período',
+      }
+    }
+
     // Caso A: Cláusula de encerramento explícito:
     // Ex.: "encerrando-se em 08/01/2027", "encerrando- se em 11/05/2027"
     const encerramentoRegex = new RegExp(
