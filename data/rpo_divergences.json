@@ -4916,13 +4916,17 @@
     "inspectorName": "PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA",
     "docCode": "09",
     "docName": "Direção Defensiva",
-    "driveExpiration": "2028-08-28T03:00:00.000Z",
+    "driveExpiration": "2028-09-21T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2028-08-28T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": true,
+    "detail": "Drive mais recente que a RPO em 24 dia(s) (21/09/2028 no Drive vs 28/08/2028 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 24,
+    "recommendedAction": "Atualizar data na RPO para 21/09/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1BxPYugHVKn9ZRj6RiBM3VICIMZ4lpEoR"
   },
   {
@@ -10222,6 +10226,18 @@
     "diffDays": 0,
     "detail": "Drive e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN"
+  },
+  {
+    "inspectorName": "FRANCISCO LEONARDO DA SILVA FERREIRA",
+    "docCode": "31",
+    "docName": "Elevador (JASO)",
+    "driveExpiration": "2028-05-19T03:00:00.000Z",
+    "trustedSource": "DRIVE",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN"
   },
   {
