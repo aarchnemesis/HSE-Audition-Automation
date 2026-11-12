@@ -2044,12 +2044,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619375",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 56,
+    "storzProgressPercent": 60,
     "storzDeadline": "08/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619375 - Progresso: 56%) [Prazo Storz: 08/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619375 - Progresso: 60%) [Prazo Storz: 08/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T23:47:06.128Z"
+    "lastUpdated": "2026-11-12T00:02:55.514Z"
   },
   {
     "inspectorId": "rpo_17",
