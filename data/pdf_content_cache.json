@@ -99056,16 +99056,6 @@
     "extractedClause": "Fortaleza, 16de Julho de 2026",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-07-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2026-07-16T03:00:00.000Z",
         "expirationDate": "2028-07-16T03:00:00.000Z",
@@ -99101,16 +99091,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 2)",
     "extractedClause": "Fortaleza, 17de Julho de 2026",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-07-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2026-07-17T03:00:00.000Z",
@@ -105226,16 +105206,6 @@
     "extractedClause": "completou com aprovação no dia 29 DE NOVEMBRO DE 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-11-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-11-29T03:00:00.000Z",
         "expirationDate": "2027-11-29T03:00:00.000Z",
@@ -105307,16 +105277,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "completou com aprovação no dia 29 DE NOVEMBRO DE 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-11-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-11-29T03:00:00.000Z",
@@ -115970,20 +115930,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1e87sGYSVCpHgHho8tr2NOkfUpLYXofQn",
@@ -124549,17 +124496,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO NR-17 (via PDF) (Pág. 2)",
         "extractedClause": "Assinou em 12 set 2026"
-      },
-      {
-        "code": "09",
-        "issueDate": "2026-09-12T03:00:00.000Z",
-        "expirationDate": "2028-09-12T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Direção Defensiva (via PDF) (Pág. 3)",
-        "extractedClause": "Assinou em 12 set 2026"
       }
     ]
   },
@@ -126988,20 +126924,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1WczChLU_IX4xYzoCz5OOFGNxCuzhMrGL",
@@ -128442,20 +128365,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "Data do nome do arquivo",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "Data do nome do arquivo"
-      }
-    ]
+    "extractedClause": "Data do nome do arquivo"
   },
   {
     "fileId": "1t1WwXzZyeD-cMqJW0UaW8i1UYlCJW_-8",
@@ -129649,16 +129559,6 @@
     "extractedClause": "Assinou em 26 jan 2026",
     "documents": [
       {
-        "code": "11",
-        "issueDate": "2026-01-26T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-06 (via PDF) (Pág. 1)",
-        "extractedClause": "Assinou em 26 jan 2026"
-      },
-      {
         "code": "06",
         "issueDate": "2026-01-26T03:00:00.000Z",
         "expirationDate": "2027-01-26T03:00:00.000Z",
@@ -130088,20 +129988,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "10P0M1yMzNSsT-lSAkhWmgFE_riVEZZP4",
@@ -130126,16 +130013,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 29 mai 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-05-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-05-29T03:00:00.000Z",
@@ -130208,16 +130085,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: 71e3d0e8 719b-482f-9b04 25da32af683e 2025 05 27",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-05-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-05-27T03:00:00.000Z",
@@ -134833,16 +134700,6 @@
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
         "expirationDate": "2027-06-02T03:00:00.000Z",
@@ -134914,16 +134771,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
@@ -136204,20 +136051,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1lmGct6d528ZAg1tYL8_RecQUbkl03ct9",
@@ -141699,16 +141533,6 @@
     "extractedClause": "Data de Conclusão: ecb50fee-5023 48fa-ab04 0d3994d79e1f 2025 06 01",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-06-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-06-01T03:00:00.000Z",
         "expirationDate": "2027-06-01T03:00:00.000Z",
@@ -141744,16 +141568,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 03 jun 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-03T03:00:00.000Z",
@@ -147319,16 +147133,6 @@
     "extractedClause": "Data de Conclusão: 8fa49d17-f87e-405c-b82e-40a79e3323bf 2025 07 16 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-16T03:00:00.000Z",
         "expirationDate": "2027-07-16T03:00:00.000Z",
@@ -147364,16 +147168,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: e87f7b0d-1428 4557-b8d8-eb9a37d024f3 2025 07 17 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-17T03:00:00.000Z",
@@ -147411,16 +147205,6 @@
     "extractedClause": "Assinou em 23 jul 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-23T03:00:00.000Z",
         "expirationDate": "2027-07-23T03:00:00.000Z",
@@ -147456,16 +147240,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 23 jul 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-23T03:00:00.000Z",
@@ -151872,20 +151646,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "Fortaleza, 09de Outubrode 2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-09T03:00:00.000Z",
-        "expirationDate": "2028-10-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "Fortaleza, 09de Outubrode 2026"
-      }
-    ]
+    "extractedClause": "Fortaleza, 09de Outubrode 2026"
   },
   {
     "fileId": "16eFJpWX0LhQNqNYwRGRzg228CIKBib9x",
@@ -151910,16 +151671,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: 1c9d7bd2-d118 4bb9 8bb7 44641baac209 2025 06 01",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-01T03:00:00.000Z",
@@ -151956,16 +151707,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 02 jun 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
@@ -158277,20 +158018,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1Tc23PLEsiOaEypT2z-Pcf-aRvK7hX2GQ",
@@ -159706,16 +159434,6 @@
     "extractedClause": "Assinou em 21 jul 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-21T03:00:00.000Z",
         "expirationDate": "2027-07-21T03:00:00.000Z",
@@ -159751,16 +159469,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: 2bbf0 8 2129 4cdf-af86 52dec4774a94 2025 07 17 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-17T03:00:00.000Z",
@@ -159798,16 +159506,6 @@
     "extractedClause": "Data de Conclusão: 09fbcf37-c49f-4ca0-a005-cd23d2e1f602 2025 07 16 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-16T03:00:00.000Z",
         "expirationDate": "2027-07-16T03:00:00.000Z",
@@ -159843,16 +159541,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 21 jul 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-21T03:00:00.000Z",
@@ -168323,16 +168011,6 @@
     "extractedClause": "Caucaia, 24de Setembro de 2026",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-09-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2026-09-24T03:00:00.000Z",
         "expirationDate": "2028-09-24T03:00:00.000Z",
@@ -169249,20 +168927,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1ImowK2K7A_IkKv76J6OXqr2ch5K2iYyb",
@@ -172993,20 +172658,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1k2ZwT2kpPP2qIymnU42D9Ytv2ab6pSWR",
@@ -173707,14 +173359,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
-        "code": "31",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO) (via PDF) (Pág. 1)"
       }
     ]
   },
@@ -174757,20 +174401,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1de8XztDEarJqQwILGj9HEXKO_brxWvSr",
@@ -176279,20 +175910,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "15H8TU7lbgbAP_m5SbZMtG0zZ91HVyBez",
@@ -176317,16 +175935,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
@@ -176363,16 +175971,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
@@ -177523,20 +177121,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1rHhPIDv3xQUe9yTXTG3dRlS_oo9-TdYr",
@@ -180235,20 +179820,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1g8T-HX5tVbFcIIATrRnUEiu9PjxDk8Fc",
@@ -181435,20 +181007,7 @@
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "IMAGE_FALLBACK",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1pzHcJdcHVq4JcEVMD9bVpgeLo_ulfAdR",
@@ -185078,16 +184637,6 @@
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
         "expirationDate": "2027-06-02T03:00:00.000Z",
@@ -185159,16 +184708,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "completou com aprovação no dia 02 de junho de 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-02T03:00:00.000Z",
@@ -189033,20 +188572,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1F2njRAMLSX17VbJ9FEUkwpWZqyRiWGLS",
@@ -190174,20 +189700,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1yWwuVvjX7t-8-8kqpeOFNqdQNcooI3V1",
@@ -195631,16 +195144,6 @@
     "extractedClause": "Data de Conclusão: c9881321 5ce0 4263 92de-71376e3c527d 2025 07 16 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-16T03:00:00.000Z",
         "expirationDate": "2027-07-16T03:00:00.000Z",
@@ -195676,16 +195179,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: 88534989-fea0 48a5-b0fb-97bd3055c9eb 2025 07 17 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-17T03:00:00.000Z",
@@ -195723,16 +195216,6 @@
     "extractedClause": "Assinou em 22 jul 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-22T03:00:00.000Z",
         "expirationDate": "2027-07-22T03:00:00.000Z",
@@ -195768,16 +195251,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 21 jul 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-21T03:00:00.000Z",
@@ -196030,16 +195503,6 @@
     "matchedTerm": "Ficha de EPI / Checklist Altura (via PDF) (Pág. 2)",
     "extractedClause": "Assinou em 27 jan 2026",
     "documents": [
-      {
-        "code": "11",
-        "issueDate": "2026-01-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-06 (via PDF) (Pág. 1)",
-        "extractedClause": "Assinou em 27 jan 2026"
-      },
       {
         "code": "06",
         "issueDate": "2026-01-27T03:00:00.000Z",
@@ -197473,16 +196936,6 @@
     "extractedClause": "Data de Conclusão: 500683d4-d10e-4855 9876 0e759a77ca67 2025 05 27",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-05-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-05-27T03:00:00.000Z",
         "expirationDate": "2027-05-27T03:00:00.000Z",
@@ -197518,16 +196971,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 29 mai 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-05-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-05-29T03:00:00.000Z",
@@ -201791,16 +201234,6 @@
     "extractedClause": "Data de Conclusão: 2025 06 25",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-06-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-06-25T03:00:00.000Z",
         "expirationDate": "2027-06-25T03:00:00.000Z",
@@ -201836,16 +201269,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: 09d1ea9a-1be7 411d-9494-de5590b879b1 2025 06 25 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-06-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-06-25T03:00:00.000Z",
@@ -201883,16 +201306,6 @@
     "extractedClause": "Data de Conclusão: c0ddeab6 22ef-4bfb-b402 7b450b17654b 2025 06 26 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-06-26T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-06-26T03:00:00.000Z",
         "expirationDate": "2027-06-26T03:00:00.000Z",
@@ -201928,16 +201341,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 02 jul 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-02T03:00:00.000Z",
@@ -252591,16 +251994,6 @@
     "extractedClause": "Assinou em 21 jul 2025",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-21T03:00:00.000Z",
         "expirationDate": "2027-07-21T03:00:00.000Z",
@@ -252706,16 +252099,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Assinou em 22 jul 2025",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-22T03:00:00.000Z",
@@ -252851,16 +252234,6 @@
     "extractedClause": "Data de Conclusão: 88534989-fea0 48a5-b0fb-97bd3055c9eb 2025 07 17 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2025-07-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "32",
         "issueDate": "2025-07-17T03:00:00.000Z",
         "expirationDate": "2027-07-17T03:00:00.000Z",
@@ -252932,16 +252305,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 1)",
     "extractedClause": "Data de Conclusão: c9881321 5ce0 4263 92de-71376e3c527d 2025 07 16 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2025-07-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2025-07-16T03:00:00.000Z",

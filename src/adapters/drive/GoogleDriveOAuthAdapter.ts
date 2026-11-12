@@ -1,5 +1,26 @@
+import fs from 'fs'
+import path from 'path'
 import { Auth, drive_v3, google } from 'googleapis'
 type OAuth2Client = Auth.OAuth2Client
+
+/** Holder checked by a person (data/drive_holder_overrides.json), keyed by Drive file id. It wins
+ * over the automatic name check: "titular" when OCR could not read the name, "outra" for a file
+ * filed in the wrong collaborator's folder. */
+type HolderOverride = { owner: 'titular' | 'outra'; name?: string }
+let holderOverrides: Record<string, HolderOverride> | undefined
+function holderOverride(fileId: string): HolderOverride | undefined {
+  if (!holderOverrides) {
+    try {
+      holderOverrides = JSON.parse(
+        fs.readFileSync(path.join(process.cwd(), 'data', 'drive_holder_overrides.json'), 'utf8')
+      )
+    } catch {
+      holderOverrides = {}
+    }
+  }
+  const o = holderOverrides![fileId]
+  return o && (o.owner === 'titular' || o.owner === 'outra') ? o : undefined
+}
 import pdfParse from 'pdf-parse'
 import {
   Certificate,
@@ -282,7 +303,14 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
 
       if (!entry.id) continue
       const filename = entry.name
-      const { items, holderCheck } = await this.inspectFile(entry, holder)
+      const inspectedFile = await this.inspectFile(entry, holder)
+      const { items } = inspectedFile
+      const override = holderOverride(entry.id)
+      const holderCheck: HolderCheck | undefined = override
+        ? override.owner === 'titular'
+          ? { status: 'OK' }
+          : { status: 'OUTRA_PESSOA', other: `${override.name ?? 'outra pessoa'}, conferido manualmente` }
+        : inspectedFile.holderCheck
       const filenameCode = CertificateClassifier.classify(filename).code
       const filenameDate = parseDateFromFilename(filename)
 
