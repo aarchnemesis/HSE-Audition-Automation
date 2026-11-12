@@ -290,3 +290,16 @@ describe('PDFContentCache content-first rules', () => {
     expect(cache.get('d', undefined, 'old')?.code).toBe('10')
   })
 })
+
+describe('Book EHS file names', () => {
+  it('maps the Book sigla back to the internal code, cartas included', async () => {
+    const { CertificateClassifier } = await import('./CertificateClassifier.js')
+    const { parseDateFromFilename } = await import('../../adapters/drive/certificateFilenameParser.js')
+    const name = '44_CARTA-NR35-UNICO_EMI-2025-12-18_VAL-2026-12-18_FLAVIO-ALVES-SANTANA.pdf'
+    expect(CertificateClassifier.classify(name).code).toBe('21.1')
+    expect(CertificateClassifier.classify('08_CNH-UNICO_EMI-NA_VAL-2034-09-03_FULANO.pdf').code).toBe('08')
+    expect(CertificateClassifier.classify('21_NR35-RECICLAGEM_EMI-2026-07-06_VAL-2028-07-06_ADRIANO-CIRILO-GARCIA-LIMA.pdf').code).toBe('21')
+    expect(parseDateFromFilename(name)?.getFullYear()).toBe(2025)
+    expect(parseDateFromFilename('08_CNH-UNICO_EMI-NA_VAL-2034-09-03_FULANO.pdf')).toBeNull()
+  })
+})

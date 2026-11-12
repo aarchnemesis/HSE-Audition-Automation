@@ -307,6 +307,21 @@ const SEMANTIC_RULES: Array<{
 const WINDA_PDF_REGEX =
   /\b(?:REGISTRO\s+(?:NO\s+)?WINDA|PERFIL\s+(?:DO\s+)?(?:PARTICIPANTE\s+)?WINDA|WINDA\s+PROFILE|WINDA\s+REGISTRATION)\b/i
 
+/** Book de Padronização EHS (seção 2): CC_DOCUMENTO-TIPO_EMI-AAAA-MM-DD_VAL-AAAA-MM-DD_NOME.pdf */
+export const BOOK_NAME_REGEX =
+  /^(\d{2})_([A-Z0-9]+(?:-[A-Z0-9]+)*?)-(FORMACAO|RECICLAGEM|ADM|PER|MRO|RT|DEM|UNICO)_EMI-(?:\d{4}-\d{2}-\d{2}|NA)_VAL-/
+
+/** Sigla do Book -> código interno do Drive/dashboard (mesmo mapa de src/cli/runBookRenamePlan.ts). */
+export const BOOK_DOC_TO_CODE: Record<string, string> = {
+  ASO: '01', 'OS-SST': '02', 'FICHA-REGISTRO': '03', 'CONTRATO-CTPS': '04', CONTRATO: '40',
+  'CONTRATO-ADITIVO': '40.1', VACINA: '05', 'FICHA-EPI': '06', 'SEGURO-VIDA': '07', CNH: '08',
+  'DIRECAO-DEFENSIVA': '09', NR01: '10', NR06: '11', NR10: '12', 'NR10-SEP': '13', NR11: '14',
+  NR12: '15', 'GWO-FA': '16', 'GWO-MH': '17', NR18: '18', 'GWO-FAW': '19', NR33: '20',
+  'NR33-SUPERVISOR': '28', NR35: '21', LOTO: '22', SIT: '25', ESO: '26', WINDA: '30',
+  'GWO-ART': '32', 'CARTA-NR10': '12.1', 'CARTA-NR12': '15.1', 'CARTA-NR33': '20.1',
+  'CARTA-NR35': '21.1',
+}
+
 export class CertificateClassifier {
   /**
    * Classifica um arquivo a partir de seu nome (e opcionalmente texto interno extraído de PDF).
@@ -324,6 +339,17 @@ export class CertificateClassifier {
     // Frequentemente prefixado com "34 - Passaporte" por técnicos, colidindo com o código interno da CIPA.
     if (/\b(?:pas+aporte|passport)\b/i.test(filename)) {
       return { code: null, confidence: 'NONE', source: 'NONE' }
+    }
+
+    // 0.1 Nome no padrão do Book EHS (CC_DOC-TIPO_EMI-..._VAL-..._NOME.pdf). Volta para o código
+    // interno pela sigla, não pelo número: as cartas mudaram de 12.1/15.1/20.1/21.1 para 41-44.
+    // Fonte SEMANTIC de propósito, para o remap de pasta (Drone/LPS) não renumerar um código já certo.
+    const book = BOOK_NAME_REGEX.exec(filename)
+    if (book) {
+      const code = BOOK_DOC_TO_CODE[book[2]]
+      return code
+        ? { code, confidence: 'HIGH', source: 'SEMANTIC', matchedTerm: `Book EHS ${book[1]}_${book[2]}` }
+        : { code: null, confidence: 'NONE', source: 'NONE' }
     }
 
     // 1. Caso o arquivo comece com DATA (ex.: 27 08 2026, 30-08-2026, 2026-08-27)

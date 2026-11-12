@@ -31,6 +31,10 @@ const DIRECT_EXPIRATION_CODES = ['40', '40.1']
 const TEN_YEAR_VALIDITY_CODES = ['08']
 
 export function parseDateFromFilename(filename: string): Date | null {
+  // Padrão do Book EHS: a data do nome é a EMI; "EMI-NA" (ex.: CNH) não tem data de emissão.
+  const book = /_EMI-(\d{4})-(\d{2})-(\d{2})_VAL-|_EMI-NA_VAL-/.exec(filename)
+  if (book) return book[1] ? new Date(+book[1], +book[2] - 1, +book[3]) : null
+
   // Normaliza underscores para espaços para evitar quebra de boundary antes de nomes
   const normalized = filename.replace(/_/g, ' ')
 
