@@ -24,7 +24,7 @@ export interface StorzScrapeResult {
   log: string[]
 }
 
-interface StorzAuthSession {
+export interface StorzAuthSession {
   handle: number
   elcToken: string
   bearerToken: string
@@ -218,6 +218,15 @@ export class StorzHttpScraper {
 
     log(`✅ Scrape complete. Total records gathered: ${scrapedRequests.length}`)
     return scrapedRequests
+  }
+
+  /** Sessão autenticada (cookies, elc e bearer) para outras leituras, como os certificados. */
+  async login(
+    user = process.env.STORZ_USER,
+    pass = process.env.STORZ_PASS
+  ): Promise<StorzAuthSession> {
+    if (!user || !pass) throw new Error('STORZ_USER/STORZ_PASS não configurados')
+    return this.authenticate(user, pass)
   }
 
   private async authenticate(
