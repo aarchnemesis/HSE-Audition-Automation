@@ -1,7 +1,7 @@
 import { EHSStatus } from '../models/Certificate.js'
 
 const EVALUATION_PREFIX =
-  /^(?:VENCIDO há \d+ dias \(\d{2}\/\d{2}\/\d{4}\)|(?:CRÍTICO|ALERTA [A-ZÉ]+): Vence em \d+ dia(?:\(s\)|s)? \(\d{2}\/\d{2}\/\d{4}\)|Válido até \d{2}\/\d{2}\/\d{4})\s*/
+  /^(?:VENCIDO há \d+ dias \(\d{2}\/\d{2}\/\d{4}\)|(?:CRÍTICO|ALERTA [A-ZÉ]+|PROGRAMAR): Vence em \d+ dia(?:\(s\)|s)? \(\d{2}\/\d{2}\/\d{4}\)|Válido até \d{2}\/\d{2}\/\d{4})\s*/
 
 export const PERMANENT_DOC_CODES = [
   '02',
@@ -93,6 +93,12 @@ export class EHSEvaluator {
       return {
         status: 'VENCE_60',
         detail: `ALERTA INICIAL: Vence em ${daysLeft} dias (${formattedExpDate})`,
+      }
+    } else if (daysLeft <= 90) {
+      // Book de Padronização EHS (Armando, 10/11/2026): 61-90 dias = PROGRAMAR.
+      return {
+        status: 'VENCE_90',
+        detail: `PROGRAMAR: Vence em ${daysLeft} dias (${formattedExpDate})`,
       }
     } else {
       return {

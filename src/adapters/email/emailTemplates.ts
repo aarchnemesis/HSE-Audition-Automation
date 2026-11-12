@@ -20,6 +20,7 @@ export function statusLabelFor(status: string): string {
   if (status === 'VENCE_15') return '⏳ <15d'
   if (status === 'VENCE_30') return '⏳ <30d'
   if (status === 'VENCE_60') return '⏳ <60d'
+  if (status === 'VENCE_90') return '📅 Programar'
   if (status === 'SOLICITADO_STORZ') return '🎓 Storz'
   if (status === 'STORZ_EM_ANDAMENTO') return '🎓 Storz (Andamento)'
   if (status === 'CONFORME') return '✔ Em Dia'

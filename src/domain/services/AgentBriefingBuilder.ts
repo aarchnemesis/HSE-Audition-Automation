@@ -19,7 +19,8 @@ import {
 export const AGENT_BRIEFING_VERSION = 1
 
 const FRONTLINE_ROLES = ['IQ', 'IE', 'TO']
-const SOON_STATUSES = ['VENCE_07', 'VENCE_15', 'VENCE_30']
+// Book EHS: menos de 60 dias já bloqueia; "vai bloquear" é a faixa PROGRAMAR (61-90 dias).
+const SOON_STATUSES = ['VENCE_90']
 const DAY_MS = 24 * 60 * 60 * 1000
 /** Gravidade para ordenar matrículas fora do ritmo: a primeira da lista é a mais urgente. */
 const PACE_SEVERITY: TrainingPaceCategory[] = [
@@ -214,13 +215,9 @@ export function buildAgentBriefing(
       })
     }
 
-    // alertItems deixa o ASO de fora de propósito; aqui ele conta, porque ASO vencido bloqueia
-    const soon = [
-      ...health.alertItems.filter(r => SOON_STATUSES.includes(r.statusEHS)),
-      ...person.records.filter(
-        r => r.docCode === '01' && SOON_STATUSES.includes(r.statusEHS)
-      ),
-    ]
+    const soon = health.alertItems.filter(r =>
+      SOON_STATUSES.includes(r.statusEHS)
+    )
     if (soon.length > 0)
       blockingSoon.push({ ...base, items: soon.map(docItem) })
   }

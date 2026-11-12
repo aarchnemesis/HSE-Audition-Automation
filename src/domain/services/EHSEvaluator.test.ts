@@ -54,7 +54,14 @@ describe('EHSEvaluator.evaluateDate', () => {
     expect(EHSEvaluator.evaluateDate(daysFromRef(60), REF).status).toBe(
       'VENCE_60'
     )
+    // Book EHS: 61-90 dias = PROGRAMAR
     expect(EHSEvaluator.evaluateDate(daysFromRef(61), REF).status).toBe(
+      'VENCE_90'
+    )
+    expect(EHSEvaluator.evaluateDate(daysFromRef(90), REF).status).toBe(
+      'VENCE_90'
+    )
+    expect(EHSEvaluator.evaluateDate(daysFromRef(91), REF).status).toBe(
       'CONFORME'
     )
   })

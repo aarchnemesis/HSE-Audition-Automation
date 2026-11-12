@@ -79,13 +79,12 @@ describe('buildAgentBriefing', () => {
     ])
   })
 
-  it('aponta quem vai ser bloqueado pelo ASO, que o alerta do executivo ignora', () => {
+  it('aponta quem entra na faixa PROGRAMAR do ASO (vai bloquear em menos de 60 dias)', () => {
     const records = dronePilot('CAIO', {
-      '01': { statusEHS: 'VENCE_07', expirationDate: '2026-10-20' },
+      '01': { statusEHS: 'VENCE_90', expirationDate: '2026-10-20' },
     })
     const { fieldReadiness } = buildAgentBriefing(records, [], { refDate: REF })
 
-    expect(fieldReadiness.frontline.aptoPlenoCount).toBe(1)
     expect(fieldReadiness.blockingSoon).toEqual([
       expect.objectContaining({
         name: 'CAIO',

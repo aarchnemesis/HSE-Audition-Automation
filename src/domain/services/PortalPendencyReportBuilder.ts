@@ -226,6 +226,7 @@ function servesClient(
 }
 
 const VALID_BASE_STATUSES = new Set([
+  'VENCE_90',
   'CONFORME',
   'VENCE_60',
   'VENCE_30',

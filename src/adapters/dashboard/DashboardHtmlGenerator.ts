@@ -3251,9 +3251,9 @@ export function buildDashboardHtml(
             <div class="cockpit-kpi-sub" id="cockpitKpiAptoSub">Plenos e a vencer</div>
           </div>
 
-          <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores com treinamentos vencendo em até 30 dias">
+          <div class="cockpit-kpi-card alerta" onclick="filterCockpitStatus('ALERTA')" style="cursor:pointer;" title="Filtrar colaboradores liberados com renovação a programar (61 a 90 dias, Book EHS)">
             <div class="cockpit-kpi-top">
-              <span class="cockpit-kpi-label" style="color:#B45309;">Aptos que vencem em at&eacute; 30 d &middot; pessoas</span>
+              <span class="cockpit-kpi-label" style="color:#B45309;">Aptos a programar (61–90 d) &middot; pessoas</span>
               <span class="cockpit-kpi-icon"><svg class="ico ico-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
             </div>
             <div class="cockpit-kpi-val mono" id="cockpitKpiAlerta" style="color:#B45309;">0</div>
@@ -3345,7 +3345,7 @@ export function buildDashboardHtml(
               <span class="cockpit-filter-label">Filtrar por Status:</span>
               <button class="cockpit-chip active" id="cockpitChip-ALL" onclick="filterCockpitStatus('ALL')">Todos (<span id="cockpitChipTotalCount">0</span>)</button>
               <button class="cockpit-chip chip-apto" id="cockpitChip-APTO" onclick="filterCockpitStatus('APTO')">Aptos (<span id="cockpitChipAptoCount">0</span>)</button>
-              <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Aptos &middot; vencem em &le;30 d (<span id="cockpitChipAlertaCount">0</span>)</button>
+              <button class="cockpit-chip chip-alerta" id="cockpitChip-ALERTA" onclick="filterCockpitStatus('ALERTA')">Aptos &middot; programar 61–90 d (<span id="cockpitChipAlertaCount">0</span>)</button>
               <button class="cockpit-chip chip-bloqueado" id="cockpitChip-BLOQUEADO" onclick="filterCockpitStatus('BLOQUEADO')">Bloqueados (<span id="cockpitChipBloqueadoCount">0</span>)</button>
               <button class="cockpit-chip chip-storz" id="cockpitChip-STORZ" onclick="filterCockpitStatus('STORZ')">Em Treinamento (<span id="cockpitChipStorzCount">0</span>)</button>
             </div>
@@ -3815,11 +3815,16 @@ export function buildDashboardHtml(
     });
 
     function isConforme(st) {
-      return st === 'CONFORME' || st === 'INDETERMINADO';
+      return st === 'CONFORME' || st === 'INDETERMINADO' || st === 'VENCE_90';
     }
 
+    // Book EHS: < 60 dias bloqueia como vencido (NC-03); 61-90 dias = PROGRAMAR (liberado, alerta).
     function isAVencer(st) {
       return st === 'VENCE_60' || st === 'VENCE_30' || st === 'VENCE_15' || st === 'VENCE_07';
+    }
+
+    function isProgramar(st) {
+      return st === 'VENCE_90';
     }
 
     function isVencido(st) {
@@ -3858,14 +3863,12 @@ export function buildDashboardHtml(
       let mainBadge = '';
       if (r.statusEHS === 'CONFORME') {
         mainBadge = '<span class="badge ok" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.check + 'Em Dia</span>';
-      } else if (r.statusEHS === 'VENCE_60') {
-        mainBadge = '<span class="badge warn" style="background:rgba(37,99,235,0.1); color:#2563EB;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;60d</span>';
-      } else if (r.statusEHS === 'VENCE_30') {
-        mainBadge = '<span class="badge warn" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;30d</span>';
-      } else if (r.statusEHS === 'VENCE_15') {
-        mainBadge = '<span class="badge warn" style="background:#FEF3C7; color:#D97706; font-weight:800;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + '&lt;15d</span>';
-      } else if (r.statusEHS === 'VENCE_07') {
-        mainBadge = '<span class="badge warn" style="background:#FEE2E2; color:#DC2626; font-weight:800;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.alert + '&lt;7d</span>';
+      } else if (r.statusEHS === 'VENCE_90') {
+        mainBadge = '<span class="badge warn" style="background:rgba(37,99,235,0.1); color:#2563EB;" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + 'Programar</span>';
+      } else if (r.statusEHS === 'VENCE_60' || r.statusEHS === 'VENCE_30') {
+        mainBadge = '<span class="badge danger" title="Bloqueado (Book EHS NC-03: vence em menos de 60 dias). ' + dedupeDetail(r.detail) + '">' + SVG_ICONS.clock + 'Bloq. &lt;' + (r.statusEHS === 'VENCE_60' ? '60' : '30') + 'd</span>';
+      } else if (r.statusEHS === 'VENCE_15' || r.statusEHS === 'VENCE_07') {
+        mainBadge = '<span class="badge danger" style="font-weight:800;" title="Bloqueado (Book EHS NC-03: vence em menos de 60 dias). ' + dedupeDetail(r.detail) + '">' + SVG_ICONS.alert + 'Bloq. &lt;' + (r.statusEHS === 'VENCE_15' ? '15' : '7') + 'd</span>';
       } else if (r.statusEHS === 'SOLICITADO_STORZ' || r.statusEHS === 'STORZ_EM_ANDAMENTO') {
         mainBadge = '<span class="badge storz" title="' + dedupeDetail(r.detail) + '">' + SVG_ICONS.cap + 'Storz</span>';
       } else if (r.statusEHS === 'NAO_LIDO') {
@@ -5089,9 +5092,9 @@ export function buildDashboardHtml(
         } else if (isAusente(r.statusEHS)) {
           missingItems.push(r);
         } else if (isAVencer(r.statusEHS)) {
-          if (code !== '01') {
-            alertItems.push(r);
-          }
+          expiredItems.push(r);
+        } else if (isProgramar(r.statusEHS)) {
+          alertItems.push(r);
           compliantCount++;
         } else if (isConforme(r.statusEHS)) {
           compliantCount++;
@@ -5223,7 +5226,7 @@ export function buildDashboardHtml(
       const elAptoSub = document.getElementById('cockpitKpiAptoSub');
       if (elAptoSub) {
         if (cockpitSegment === 'OFFICE') elAptoSub.innerText = 'Funções de gestão/suporte';
-        else elAptoSub.innerText = aptoPlenoCount + ' plenos + ' + alertaCount + ' com vencimento em até 30 d';
+        else elAptoSub.innerText = aptoPlenoCount + ' plenos + ' + alertaCount + ' a programar (61–90 d)';
       }
       const elAlerta = document.getElementById('cockpitKpiAlerta');
       if (elAlerta) elAlerta.innerText = alertaCount;
@@ -5292,7 +5295,7 @@ export function buildDashboardHtml(
         const statusLabels = {
           ALL: 'Todos os Status',
           APTO: 'Apenas Colaboradores Aptos',
-          ALERTA: 'Apenas aptos com vencimento em até 30 dias',
+          ALERTA: 'Apenas aptos com renovação a programar (61 a 90 dias)',
           BLOQUEADO: 'Apenas Colaboradores Bloqueados',
           STORZ: 'Apenas Colaboradores em Treinamento',
         };

@@ -1,5 +1,6 @@
 export type EHSStatus =
   | 'CONFORME'
+  | 'VENCE_90' // Book EHS: PROGRAMAR (61-90 dias), liberado com renovação agendada
   | 'VENCE_60'
   | 'VENCE_30'
   | 'VENCE_15'
