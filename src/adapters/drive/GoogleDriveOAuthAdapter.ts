@@ -190,17 +190,41 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
     }
     const roster = folders.map(f => collaboratorName(f.entry.name as string))
 
-    const inspectors: Inspector[] = []
-    for (const { rootFolderId, entry } of folders) {
-      const folderName = entry.name as string
-      if (
-        filterNames?.length &&
-        !filterNames.some(f =>
-          folderName.toUpperCase().includes(f.toUpperCase())
+    const selected = folders.filter(
+      ({ entry }) =>
+        !filterNames?.length ||
+        filterNames.some(f =>
+          (entry.name as string).toUpperCase().includes(f.toUpperCase())
         )
-      )
-        continue
+    )
+    // Collaborator folders are independent, so read several at once (Drive download and OCR are the
+    // slow parts). Results keep folder order. HSE_DRIVE_CONCURRENCY=1 restores the sequential read.
+    const concurrency = Math.max(1, Number(process.env.HSE_DRIVE_CONCURRENCY) || 4)
+    const results: Inspector[] = new Array(selected.length)
+    let next = 0
+    let done = 0
+    const worker = async () => {
+      while (next < selected.length) {
+        const i = next++
+        results[i] = await this.readCollaboratorFolder(selected[i], roster)
+        done++
+        console.log(`[drive-cache] ${done}/${selected.length} ${results[i].name}`)
+      }
+    }
+    await Promise.all(
+      Array.from({ length: Math.min(concurrency, selected.length) }, worker)
+    )
 
+    PDFContentCache.getInstance().save()
+    return results
+  }
+
+  private async readCollaboratorFolder(
+    { rootFolderId, entry }: { rootFolderId: string; entry: drive_v3.Schema$File },
+    roster: string[]
+  ): Promise<Inspector> {
+    {
+      const folderName = entry.name as string
       const nameParts = folderName.split(/[-–—_]/)
       const name = nameParts[0].trim()
       const role =
@@ -217,18 +241,15 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         BRANCH_EXCLUDED_FOLDER_NAMES[rootFolderId]
       )
 
-      inspectors.push({
+      return {
         id: entry.id as string,
         name,
         role,
         certificates,
         driveFolderId: entry.id as string,
         driveFolderUrl: `https://drive.google.com/drive/folders/${entry.id}`,
-      })
+      }
     }
-
-    PDFContentCache.getInstance().save()
-    return inspectors
   }
 
   private async scanFolderRecursive(
