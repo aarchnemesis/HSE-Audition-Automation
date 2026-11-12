@@ -1429,12 +1429,12 @@
       "14": {
         "code": "14",
         "name": "Doc 14",
-        "filename": " 14 – NR – 11 Uso de Talha - 20.10.2026 - Francisco Everson Barbosa Vasconcelos",
+        "filename": "14 – NR – 11 Uso de Talha - 20-10-2026 - Francisco Everson Barbosa Vasconcelos",
         "issueDate": "2026-10-20T03:00:00.000Z",
         "expirationDate": "2028-10-20T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/10/2028",
-        "sourcePath": "https://drive.google.com/file/d/1zvoUDY_EPeNBs99UxIcZDig2hEGYxK-U/view",
+        "sourcePath": "https://drive.google.com/file/d/1w_XLVvvmZOiu09SNsmSE6jiquaZx9k8v/view",
         "readSource": "CONTENT",
         "divergences": []
       },
@@ -5880,16 +5880,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "05": {
-        "code": "05",
-        "name": "Doc 05",
-        "filename": "05 – Cartão de Vacina – SEM_DATA - SIMON DIAS DA SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (CARLOS HENRIQUE SOARES DA SILVA, conferido manualmente). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"05 – Cartão de Vacina – SEM_DATA - SIMON DIAS DA SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/1oM_qJ-lSxTz-rTmHfdAn7-VL5ZwwEMuT/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
-      },
       "03": {
         "code": "03",
         "name": "Doc 03",
@@ -5908,6 +5898,16 @@
         "statusEHS": "NAO_LIDO",
         "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CNH.jpg\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
         "sourcePath": "https://drive.google.com/file/d/1EeezJyScZBMVA7UMICssR0d1rpofIldq/view",
+        "readSource": "NAO_LIDO",
+        "divergences": []
+      },
+      "05": {
+        "code": "05",
+        "name": "Doc 05",
+        "filename": "Carteira_Nacional_de_Vacinacao_Digital.pdf",
+        "statusEHS": "NAO_LIDO",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (CARLOS HENRIQUE SOARES DA SILVA). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"Carteira_Nacional_de_Vacinacao_Digital.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "sourcePath": "https://drive.google.com/file/d/19M2GDEctdaSBmzerTDnz6xg4JLgDoSWB/view",
         "readSource": "NAO_LIDO",
         "divergences": []
       },
@@ -6979,16 +6979,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "09": {
-        "code": "09",
-        "name": "Doc 09",
-        "filename": "09 – Direção Defensiva (08 horas) – 28.08.28 – Pedro Paulo Ferreira de Almeida- Clicksign.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA, conferido manualmente). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"09 – Direção Defensiva (08 horas) – 28.08.28 – Pedro Paulo Ferreira de Almeida- Clicksign.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/1e87sGYSVCpHgHho8tr2NOkfUpLYXofQn/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
-      },
       "20.1": {
         "code": "20.1",
         "name": "Doc 20.1",
@@ -7389,14 +7379,16 @@
       "09": {
         "code": "09",
         "name": "Doc 09",
-        "filename": "09 – Direção Defensiva – 28.08.2026 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
-        "issueDate": "2026-08-28T03:00:00.000Z",
-        "expirationDate": "2028-08-28T03:00:00.000Z",
+        "filename": "09 – Direção Defensiva (08 horas) – 28.08.28 – Pedro Paulo Ferreira de Almeida- Clicksign.pdf",
+        "issueDate": "2026-09-21T03:00:00.000Z",
+        "expirationDate": "2028-09-21T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/08/2028",
-        "sourcePath": "https://drive.google.com/file/d/1GpiIrxbRw-Dq6bDEaRZk2_sbrdkvvv-5/view",
+        "statusDetail": "Válido até 21/09/2028",
+        "sourcePath": "https://drive.google.com/file/d/1e87sGYSVCpHgHho8tr2NOkfUpLYXofQn/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "Data no nome (28/08/2028) difere da data impressa no documento (21/09/2026)"
+        ]
       },
       "15.1": {
         "code": "15.1",
@@ -17950,6 +17942,18 @@
           "Nome do arquivo indica código 16, o conteúdo é 30 (GWO WINDA ID)"
         ]
       },
+      "31": {
+        "code": "31",
+        "name": "Doc 31",
+        "filename": "31 – Elevador (JASO) – SEM_DATA - FRANCISCO GEORGE MARTINS SILVA.pdf",
+        "issueDate": "2026-05-19T03:00:00.000Z",
+        "expirationDate": "2028-05-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/05/2028",
+        "sourcePath": "https://drive.google.com/file/d/15guk3wH64aYvjETe2uRt2U5ylz9QfvIu/view",
+        "readSource": "OCR",
+        "divergences": []
+      },
       "40": {
         "code": "40",
         "name": "Doc 40",
@@ -19181,16 +19185,6 @@
           "Data no nome (04/02/2026) difere da data impressa no documento (13/03/2024)"
         ]
       },
-      "31": {
-        "code": "31",
-        "name": "Doc 31",
-        "filename": "31 – Elevador (JASO) – SEM_DATA - FRANCISCO GEORGE MARTINS SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (FRANCISCO LEONARDO DA SILVA FERREIRA, conferido manualmente). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"31 – Elevador (JASO) – SEM_DATA - FRANCISCO GEORGE MARTINS SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/15guk3wH64aYvjETe2uRt2U5ylz9QfvIu/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
-      },
       "40": {
         "code": "40",
         "name": "Doc 40",
@@ -19576,16 +19570,6 @@
         "statusDetail": "Válido até 24/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1ptjsnmpfK0TWIlfnp3-bJMb-FAOVp-nq/view",
         "readSource": "CONTENT",
-        "divergences": []
-      },
-      "28": {
-        "code": "28",
-        "name": "Doc 28",
-        "filename": "20 – NR – 33 (Supervisor F+R) –  23.09.2026 - Francisco Fabricio Freire Barbosa.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (FRANCISCO ELVISON PEREIRA DE SOUSA, conferido manualmente). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"20 – NR – 33 (Supervisor F+R) –  23.09.2026 - Francisco Fabricio Freire Barbosa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/1Nd7ThY7K-1WFEO38YEarkDeUGktdXCFX/view",
-        "readSource": "NAO_LIDO",
         "divergences": []
       },
       "29": {
@@ -23874,16 +23858,6 @@
         "statusDetail": "Válido até 18/10/2028",
         "sourcePath": "https://drive.google.com/file/d/1lM_CS2M6gC5HLJhRztmcvrQRzW9BId1Z/view",
         "readSource": "CONTENT",
-        "divergences": []
-      },
-      "14": {
-        "code": "14",
-        "name": "Doc 14",
-        "filename": "14 – NR – 11 Uso de Talha - 20-10-2026 - Francisco Everson Barbosa Vasconcelos",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o documento pertence a outra pessoa (FRANCISCO EVERSON BARBOSA VASCONCELOS, conferido manualmente). Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"14 – NR – 11 Uso de Talha - 20-10-2026 - Francisco Everson Barbosa Vasconcelos\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/1w_XLVvvmZOiu09SNsmSE6jiquaZx9k8v/view",
-        "readSource": "NAO_LIDO",
         "divergences": []
       },
       "15": {
