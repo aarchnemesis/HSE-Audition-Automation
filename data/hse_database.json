@@ -346,11 +346,12 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador.",
+    "statusEHS": "NAO_LIDO",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – Adenio Francisco de Sousa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/1zABVYVGsPc1kceTpfd5nolBZc3lxymdx/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1hs_a_N5vvpIFEISytZ6i-CZInclA50uX",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -969,11 +970,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO- 23.10.2025 - ANTONIO GEICIANO MENDES SERPA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "evidenceUrl": "https://drive.google.com/file/d/1ud0mTdYI4mvbSvaQniuRIhJFkJlnJf7w/view",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 16.10.26 – Antonio Geiciano Mendes Serpa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/1vle9A04yPXw1c0exunJRzH1XZ7eBudQK/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nQitf9TfjFvKOlbJbhNqymJlodO49lVj",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_14",
@@ -2405,10 +2406,10 @@
     "expirationDate": "2027-10-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "detail": "Válido até 16/10/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1JEbsg3kWbxKERTVgae-sB8ZtqLfMu0KD/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1sQgjdN4b0jFbqDPUBq3nLUxk9Xk-HBIr/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1Tepm7w-wV0blavDTr3qDYiOIUsJ-_sAW",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_18",
@@ -4479,11 +4480,12 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador.",
+    "statusEHS": "NAO_LIDO",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – Drielton Francisco de Araujo Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/1LM9IYOCcVEHs5JjaEp73yek8KVRY8kt5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4627,11 +4629,13 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador. Também não há solicitação na Storz.",
+    "expirationDate": "2028-11-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 03/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1LB1Hyo_ROJ3ioPY65gkJIuweSD7Y5sPL/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4642,11 +4646,13 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador. Também não há solicitação na Storz.",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 06/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/13aB6UCz1jViR7Kjfeb5lcfYd6GIZWtIU/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4677,16 +4683,16 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-10-29T03:00:00.000Z",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "612343",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 29/10/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1ZPzdCPGyixBfwuBo2tnPT761mIl3ivXM/view",
+    "detail": "Válido até 06/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1X_vimSfVKwLKdRUhbfmLBihyUNyTJ8lT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -4717,11 +4723,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador. Também não há solicitação na Storz.",
+    "expirationDate": "2028-11-05T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 05/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1-GWKAza6Vw9fTWtWyZ0AA3JTJcaewY2t/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_25",
@@ -10103,13 +10111,13 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "expirationDate": "2026-09-24T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 49 dias (24/09/2026)",
-    "evidenceUrl": "https://drive.google.com/file/d/1q3Xn36smH4C6rzRq1DdIdg5pzZZvSYUZ/view",
+    "expirationDate": "2027-09-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 21/09/2027",
+    "evidenceUrl": "https://drive.google.com/file/d/1JHtVQGe6FUqFY3dszDTlqiMAIXf7hFRV/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10142,10 +10150,10 @@
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
     "detail": "Documento permanente — sem vencimento Documento permanente — sem vencimento",
-    "evidenceUrl": "https://drive.google.com/file/d/1l-ixUD5f8957S4KX0NJLwwoECuYXO-DF/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1r8E6RRmDQAYT5cx-O99Qmo0cZaQOBWWp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10160,11 +10168,11 @@
     "storzRequestId": "583190",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Documento permanente — sem vencimento Documento permanente — sem vencimento | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (22/01/2024) difere da data impressa no documento (13/11/2024).",
-    "evidenceUrl": "https://drive.google.com/file/d/1mIxLbEYEQEyzBSQlzQhOsWjeFAp0PPfM/view",
+    "detail": "Documento permanente — sem vencimento Documento permanente — sem vencimento",
+    "evidenceUrl": "https://drive.google.com/file/d/135N0gsrE0-CMLN97ZjOHin1A8IvEpOYG/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10201,10 +10209,10 @@
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
     "detail": "Curso renovado e aprovado na Storz (581684) em 17/09/2026 — Válido até 17/09/2028 (aguardando upload no Drive).",
-    "evidenceUrl": "https://drive.google.com/file/d/1Hty-Vc6FmwWa9iEPpb6s4eEzWAvzLqd4/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1tJoGOZ629yw3VFmpNLpnij0LVhqKmopA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10790,11 +10798,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 19.12.2025 - FRANCISCO VINICIUS SOUSA DOS SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "evidenceUrl": "https://drive.google.com/file/d/1IFIYfrNdJGa0Ww5Qzh-rNFaLOTG92xrl/view",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 17.10.26 – Francisco Vinicius Sousa dos Santos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/15XafG7Mina39qC0PuiROxJH-Ujdj3-LY/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -14357,10 +14365,10 @@
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
     "detail": "Curso renovado e aprovado na Storz (571466) em 21/09/2026 — Válido até 21/09/2027 (aguardando upload no Drive).",
-    "evidenceUrl": "https://drive.google.com/file/d/1Z6c3ucvL7lkNL9PoW2Bl74nwl3jlwuMn/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1vD3hIlLwo2j7ziAMNluj5_JVYzHCEfhA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_56",
@@ -18743,11 +18751,11 @@
     "storzRequestId": "606993",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (606993) em 23/10/2026 — Válido até 23/10/2028 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622164 - Status: SOLICITADO).",
+    "detail": "Curso renovado e aprovado na Storz (606993) em 23/10/2026 — Válido até 23/10/2028 (aguardando upload no Drive). | Próxima reciclagem já solicitada na Storz (622164 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1aTYiA4pQkdV6tkQ5wqdQN8gQWHVKq89N/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ABjHM_c_rwPojp4twTsd4WLW91R4nMOh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T14:47:12.393Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -20235,10 +20243,10 @@
     "expirationDate": "2027-10-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "detail": "Válido até 09/10/2027",
-    "evidenceUrl": "https://drive.google.com/file/d/1DZyGf89TQToLzIuplpnsLjNPUT4rkrWQ/view",
+    "evidenceUrl": "https://drive.google.com/file/d/1xSjtwjgLAJp1mN6UscUVah2rm7WK4HBR/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DY4WISGgK4LRd7M6uAsaxlEpFOYKo1yU",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_74",
@@ -25864,13 +25872,13 @@
     "docCode": "40",
     "docName": "Contrato de Prestação de Serviço (PJ)",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-13T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 62 dias (13/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (13/01/2027) difere da data impressa no documento (15/01/2025).",
-    "evidenceUrl": "https://drive.google.com/file/d/1fznUvC1LNNMeew_0SIdCnfjtpiggv1Pj/view",
+    "expirationDate": "2099-12-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 31/12/2099",
+    "evidenceUrl": "https://drive.google.com/file/d/15jdfaBEblJ18-q47r7m8FXQCKhE4u8aH/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QdW_VNzoleTh9ke35E5X7d7nmy9r_4oS",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T12:04:10.652Z"
+    "lastUpdated": "2026-11-12T14:10:55.380Z"
   },
   {
     "inspectorId": "rpo_103",
