@@ -9113,11 +9113,11 @@
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
     "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 05.12.2025 - FRANCISCO FRANKLIN DA SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "evidenceUrl": "https://drive.google.com/file/d/1GpTdO2XUSPBqEcBe8eDFBw0DoywSWyu1/view",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 14.10.26 – Francisco Franklin da Silva\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/19uTGODiVjp5NZ49GVba5zN0E2OiX2B5o/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -11378,11 +11378,12 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador.",
+    "statusEHS": "NAO_LIDO",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – HENRIQUE ELANIO GOMES FERNANDES.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/1mz8Yut5bmvSkTIXBLFrEDQg-zIsePme6/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pRgc04-u4d9Kunxi_JMpF3gqMRDjewW5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_47",
@@ -11974,13 +11975,14 @@
     "expirationDate": "2026-11-11T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "622167",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 1 dias (11/11/2026) | SOLICITADO NA STORZ (622167 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 16,
+    "storzDeadline": "11/01/2027",
+    "detail": "VENCIDO há 1 dias (11/11/2026) | EM ANDAMENTO NA STORZ (622167 - Progresso: 16%) [Prazo Storz: 11/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 11/11/2026, ANTES do prazo da Storz (11/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1T3tBLy80kqL8Fwjbkl9tgzTvNTUHqfI2/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T03:02:29.113Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -13167,11 +13169,12 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "AUSENTE",
-    "detail": "BLOQUEADO — AUSENTE: não existe nenhum arquivo deste documento na pasta do colaborador no Drive. Ação do responsável: salvar o PDF do documento na pasta do colaborador.",
+    "statusEHS": "NAO_LIDO",
+    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – JOCELEO ABREU VENANCIO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "evidenceUrl": "https://drive.google.com/file/d/1_SUheznA4A8bFhpDRVWzjHFkUkTHhcK4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nv1bnQRiAGS4gwbg_Pal6L1zZWbzO_G8",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T10:46:57.181Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_53",
@@ -14563,17 +14566,16 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-11-30T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "621786",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 21,
-    "storzDeadline": "10/01/2027",
-    "detail": "Válido até 30/11/2027 | Reciclagem já solicitada na Storz (621786 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (621786) em 12/11/2026 — Válido até 12/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1d19kVYPor1I08kYiW5CP_1BFeivLYq-i/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T02:47:01.892Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -14588,13 +14590,13 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "621780",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
+    "storzProgressPercent": 12,
     "storzDeadline": "10/01/2027",
     "detail": "Válido até 29/11/2027 | Reciclagem já solicitada na Storz (621780 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1lnrb7YxyfxHH5uigUgseRu-g0KjXZUTf/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T21:47:13.320Z"
+    "lastUpdated": "2026-11-12T16:05:05.854Z"
   },
   {
     "inspectorId": "rpo_57",
