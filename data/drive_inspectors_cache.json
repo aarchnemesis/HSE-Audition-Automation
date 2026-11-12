@@ -395,15 +395,13 @@
         "code": "09",
         "name": "Doc 09",
         "filename": "09 – Direção Defensiva (08 horas) –  26.10.2026 - DRIELTON FRANCISCO DE ARAUJO SILVA",
-        "issueDate": "2026-10-27T03:00:00.000Z",
-        "expirationDate": "2028-10-27T03:00:00.000Z",
+        "issueDate": "2026-10-26T03:00:00.000Z",
+        "expirationDate": "2028-10-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/10/2028",
+        "statusDetail": "Válido até 26/10/2028",
         "sourcePath": "https://drive.google.com/file/d/1qKllR4P2oJ27b3Y3dl6efJsGmn0kZ810/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (26/10/2026) difere da data impressa no documento (27/10/2026)"
-        ]
+        "divergences": []
       }
     },
     "driveFolderId": "1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
@@ -563,6 +561,20 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "21": {
+        "code": "21",
+        "name": "Doc 21",
+        "filename": "2025 GWO FA - Joceleo Abreu Venâncio pdf-D4Sign.pdf",
+        "issueDate": "2025-03-30T03:00:00.000Z",
+        "expirationDate": "2027-03-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/03/2027",
+        "sourcePath": "https://drive.google.com/file/d/1zQC3tVQHuJmkYCD1fYV5n_JyEbNH3vIK/view",
+        "readSource": "OCR",
+        "divergences": [
+          "Nome do arquivo indica código 16, o conteúdo é 21 (NR-35 / GWO Working at Heights)"
+        ]
+      },
       "22": {
         "code": "22",
         "name": "Doc 22",
@@ -614,10 +626,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.10.26 – JOCELEO ABREU VENANCIO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – JOCELEO ABREU VENANCIO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1_SUheznA4A8bFhpDRVWzjHFkUkTHhcK4/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "OCR",
         "divergences": []
       },
       "09": {
@@ -1133,10 +1147,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.10.26 – Adenio Francisco de Sousa.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – Adenio Francisco de Sousa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1zABVYVGsPc1kceTpfd5nolBZc3lxymdx/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "OCR",
         "divergences": []
       },
       "09": {
@@ -1412,11 +1428,11 @@
         "code": "04",
         "name": "Doc 04",
         "filename": "04 – Contrato – Mario Sergio Castro de Souza.pdf",
-        "issueDate": "2026-10-16T03:00:00.000Z",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
+        "statusDetail": "Válido até 31/12/2099",
         "sourcePath": "https://drive.google.com/file/d/1uXKG6Xp4ejSUYPas4RvXSJl2dlAQ9EI3/view",
-        "readSource": "CONTENT",
+        "readSource": "OCR",
         "divergences": []
       },
       "04.1": {
@@ -1696,12 +1712,12 @@
       "04": {
         "code": "04",
         "name": "Doc 04",
-        "filename": "04 – CTPS Digital PI – Francisco Everson Barbosa Vasconcelos.pdf",
-        "issueDate": "2022-01-26T03:00:00.000Z",
+        "filename": "04 – Contrato – Francisco Everson Barbosa Vasconcelos.pdf",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "sourcePath": "https://drive.google.com/file/d/1ksj2SalDvph1f4Y9v2ByeFbKuiIZUnjj/view",
-        "readSource": "CONTENT",
+        "statusDetail": "Válido até 31/12/2099",
+        "sourcePath": "https://drive.google.com/file/d/1R6gbOUrdpSo-GDfkK6v6lceO_E67Xf3J/view",
+        "readSource": "OCR",
         "divergences": []
       },
       "01": {
@@ -1709,7 +1725,7 @@
         "name": "Doc 01",
         "filename": "01 – ASO – 09.10.2026 - FRANCISCO EVERSON BARBOSA VASCONCELOS.pdf",
         "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 09.09.2026 - FRANCISCO EVERSON BARBOSA VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 09.10.2026 - FRANCISCO EVERSON BARBOSA VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
         "sourcePath": "https://drive.google.com/file/d/1yY1Dh3Sg03jtki0JRYYjLctsod3tWaeb/view",
         "readSource": "NAO_LIDO",
         "divergences": []
@@ -4919,8 +4935,8 @@
         "filename": "12_NR10-FORMACAO_EMI-2025-02-07_VAL-2027-02-07_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-07T03:00:00.000Z",
         "expirationDate": "2027-02-07T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (07/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1lWHEt1RuFKWKtHeLXHFFWV4CD2w-w4e1/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -4967,8 +4983,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-02-04_VAL-2027-02-04_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1gA_JfbnY4Yw2SmE5nqqlR95hHObsjvxn/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -4979,8 +4995,8 @@
         "filename": "17_GWO-MH-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1kONTeXJR7w_q8IucBQA0xiFMzE0pqCsA/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -4991,8 +5007,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-02-02_VAL-2026-02-02_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-02T03:00:00.000Z",
         "expirationDate": "2027-02-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 82 dias (02/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/13toE157RoaGUklr-IlIZ-PzKEK6D-cyF/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5003,8 +5019,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1B933UMydjkePm2jq19tSlscwP9rhfVpI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5027,8 +5043,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-02-07_VAL-2027-02-07_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-07T03:00:00.000Z",
         "expirationDate": "2027-02-07T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (07/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1p1YCoeQYka7FKpXjZZmpfX61VTdxIjrF/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5039,8 +5055,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-02-03_VAL-2026-02-03_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1y4I_iIDsn6ReMve2Di5dXqn6-2e6jRZV/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5793,8 +5809,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-02-04_VAL-2027-02-04_SIMON-DIAS-DA-SILVA.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1IYWu5qBABblO7ELj6hr611A_5dAfKNOm/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5817,8 +5833,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 04.02.2025 - Simon Dias da Silva",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1nf2XzvXFlx2oyrBPacwojTbgUF3tLKeY/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -5952,11 +5968,11 @@
         "code": "04",
         "name": "Doc 04",
         "filename": "04 – CTPS Digital – SEM_DATA - SIMON DIAS DA SILVA.pdf",
-        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
+        "statusDetail": "Válido até 31/12/2099",
         "sourcePath": "https://drive.google.com/file/d/1hZ3nLHF7GhlSVJhJHDJnX80IVv0RJh5S/view",
-        "readSource": "CONTENT",
+        "readSource": "OCR",
         "divergences": []
       },
       "03": {
@@ -6027,8 +6043,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-02-10_VAL-2027-02-10_RAFAEL-ANDRADE-BARBOSA.pdf",
         "issueDate": "2025-02-10T03:00:00.000Z",
         "expirationDate": "2027-02-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 90 dias (10/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1SLJM3cAnp6atPlpkHIPECzHcNcnHABJQ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6153,8 +6169,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-17_VAL-2026-01-17_RAFAEL-ANDRADE-BARBOSA.pdf",
         "issueDate": "2025-01-17T03:00:00.000Z",
         "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (17/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1bIONRuZEFHReBlwo-cQqYTrQKTeKZ7ZC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6446,8 +6462,8 @@
         "filename": "12_NR10-FORMACAO_EMI-2025-01-24_VAL-2027-01-24_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-01-24T03:00:00.000Z",
         "expirationDate": "2027-01-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (24/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1aTYiA4pQkdV6tkQ5wqdQN8gQWHVKq89N/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6458,8 +6474,8 @@
         "filename": "13_NR10-SEP-FORMACAO_EMI-2025-01-30_VAL-2027-01-30_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-01-30T03:00:00.000Z",
         "expirationDate": "2027-01-30T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (30/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1K-lUw-GoeBl5iFPjmlrWySP3hoG6hCJz/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6482,8 +6498,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-02-01_VAL-2026-02-01_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1URsZkabG3Y3fyS5tyczyDrIkW1bNvsD5/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6591,8 +6607,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-25_VAL-2027-01-25_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-01-25T03:00:00.000Z",
         "expirationDate": "2027-01-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 74 dias (25/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1upMUD1nrFxkjxdxy9K1ipAhwPrYVsRUf/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6603,8 +6619,8 @@
         "filename": "26_ESO-FORMACAO_EMI-2025-01-25_VAL-2027-01-25_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-01-25T03:00:00.000Z",
         "expirationDate": "2027-01-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 74 dias (25/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1fE-KNekC22v5CgJdQE9pBQ1cfWhQc_c8/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6663,8 +6679,8 @@
         "filename": "44_CARTA-NR35-UNICO_EMI-2025-02-03_VAL-2026-02-03_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1uTxnt3AQ1y9-V0c3HXLFEmVGOId-7D-d/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6675,8 +6691,8 @@
         "filename": "43_CARTA-NR33-UNICO_EMI-2025-02-03_VAL-2026-02-03_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1sjNb73NUt3e14faae8usss6eoNSjcCr4/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6687,8 +6703,8 @@
         "filename": "42_CARTA-NR12-UNICO_EMI-2025-02-03_VAL-2026-02-03_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1BjTfKKg_0RbrtgBsjYFxSmRevAdCIp5i/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6699,8 +6715,8 @@
         "filename": "41_CARTA-NR10-UNICO_EMI-2025-02-03_VAL-2026-02-03_RAFAEL-PEREIRA-NUNES.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1lEYX09bKWCQy_ATXUQ45_MRilQHIeTgi/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6755,8 +6771,8 @@
         "filename": "06 – Ficha de EPI – 05.02.2028 - RAFAEL PEREIRA NUNES.pdf",
         "issueDate": "2026-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1byeAiiij3uQ_9K0XY-DDJbCtDC2PYBKR/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -6869,8 +6885,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-17_VAL-2026-01-17_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf",
         "issueDate": "2025-01-17T03:00:00.000Z",
         "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (17/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1YTEGEW3XBGHQShgH-QcCTG9FoIFc02BO/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6905,8 +6921,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-25_VAL-2026-01-25_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf",
         "issueDate": "2025-01-25T03:00:00.000Z",
         "expirationDate": "2027-01-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 74 dias (25/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1d3dxM3mPo9Xg36l1BTRgamQ85I5PXCN8/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -6953,8 +6969,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-19_VAL-2026-01-19_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1aApTxJn4XUo0T5Zl4HDtDOMxFz_xfKCs/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -7127,8 +7143,8 @@
         "filename": "06 – Ficha de EPI – 26.01.2028 - PEDRO PAULO FERREIRA DE ALMEIDA.pdf",
         "issueDate": "2026-01-28T03:00:00.000Z",
         "expirationDate": "2027-01-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (28/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/18U2s2z1NBtdRMUP9OoENPdbrv6jw5jFM/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -7240,8 +7256,8 @@
         "filename": "16 – Primeiros Socorros (GWO) – 09.02.2025 - Pedro Eduardo de Oliveira Cavalcanti Silva.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/14xtQDalNE_SKVDbXnURAKtsEndPNHh2e/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -7252,8 +7268,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) –  09.02.2025 - Pedro Eduardo de Oliveira Cavalcanti Silva - Clicksign.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1eF9q2jmvf0Igl5kcW2cCUGRA21tp3wdd/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -7276,8 +7292,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 09.02.2025 – Pedro Eduardo de Oliveira Cavalcanti Silva.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1n80dErTqMvJoSRA_1zu7rOjZp54xM4ml/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -7300,8 +7316,8 @@
         "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO) – 09.02.2025 - Pedro Eduardo de Oliveira Cavalcanti Silva - Clicksign.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1aFng1UMCTcawp6iWwmGekv6e3Uht2SIg/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -7536,8 +7552,8 @@
         "filename": "06 – Ficha de EPI – 22.01.2028 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
         "issueDate": "2026-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-QQRtgl1P_P1DuUiFxg7FmdKNQFC39Wf/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -7689,8 +7705,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-13_VAL-2026-01-13_NYLLYS-RODRIGUES-MARTINS.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1wgErTWyaYw2W_Sm8Rn64jyT0LHnoN-0T/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8041,8 +8057,8 @@
         "filename": "13 – NR-10 SEP (F+R) – 13.01.2025 - MICHEL PLATINI SOARES BARROS.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Jih8U3Px8le_VPTpaUya7mMUj-hda7hG/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -8067,8 +8083,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-02-01_VAL-2026-02-01_MICHEL-PLATINI-SOARES-BARROS.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1xHcF1EpvO2iM1r9tWYfqlbCbHYlH-gA7/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8079,8 +8095,8 @@
         "filename": "16 – Primeiros Socorros (GWO) – 09.02.2025 - Michel Platini Soares Barros - Clicksign.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1gfsZF7pXX6WDcXBkrXQdR49Jg2uGCgpD/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8091,8 +8107,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) – 09.02.2025 - Michel Platini Soares Barros - Clicksign.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1FBhAt29XYUzxfwFpqGe-qhXKrGYBQgZa/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8115,8 +8131,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 09.02.2025 – Michel Platini Soares Barros.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1vqx7t7OBW7tXv0eL1Vs11cpr4FLv5SNZ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8139,8 +8155,8 @@
         "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO) – 09.02.2025 -  Michel Platini Soares Barros - Clicksign.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1GO9nOsWrTySFsWUS3lcaHp2jnjw9RNLJ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -8209,8 +8225,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-02-06_VAL-2027-02-06_MICHEL-PLATINI-SOARES-BARROS.pdf",
         "issueDate": "2026-02-06T03:00:00.000Z",
         "expirationDate": "2027-02-06T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 86 dias (06/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ISZpOrFj4E6-F8v9bW4giNOG7XLeI_aO/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -9981,8 +9997,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-13_VAL-2027-01-13_LUCAS-ANDRE-DE-SOUSA-RIBEIRO.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/17L-61OQtVtKF01oMnQQ1gizmskpgQAGq/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -9993,8 +10009,8 @@
         "filename": "13_NR10-SEP-RECICLAGEM_EMI-2025-01-17_VAL-2027-01-17_LUCAS-ANDRE-DE-SOUSA-RIBEIRO.pdf",
         "issueDate": "2025-01-17T03:00:00.000Z",
         "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (17/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1sX5qG6CWk1S_yk0IxgxF8juTzXGCuxt2/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -10053,8 +10069,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-14_VAL-2026-01-14_LUCAS-ANDRE-DE-SOUSA-RIBEIRO.pdf",
         "issueDate": "2025-01-14T03:00:00.000Z",
         "expirationDate": "2027-01-14T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 14/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 63 dias (14/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1rN2R4J_xCndXz99k3OaHEhRUVMdbvsfU/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -10202,12 +10218,12 @@
       "09": {
         "code": "09",
         "name": "Doc 09",
-        "filename": "09_DIRECAO-DEFENSIVA-RECICLAGEM_EMI-2026-08-26_VAL-2028-08-26_LUCAS-ANDRE-DE-SOUSA-RIBEIRO.pdf",
-        "issueDate": "2026-08-26T03:00:00.000Z",
-        "expirationDate": "2028-08-26T03:00:00.000Z",
+        "filename": "DIRE├ç├âO DEFENSIVA LUCAS ANDRE PARA ASSINAR - Clicksign.pdf",
+        "issueDate": "2026-09-12T03:00:00.000Z",
+        "expirationDate": "2028-09-12T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/08/2028",
-        "sourcePath": "https://drive.google.com/file/d/1rGtFbvugPVMabB_GmNL4gRs-mk4dfyoM/view",
+        "statusDetail": "Válido até 12/09/2028",
+        "sourcePath": "https://drive.google.com/file/d/1fuSSTcTu_VOmxJgUGHUy8LYgLOy867sy/view",
         "readSource": "CONTENT",
         "divergences": []
       },
@@ -10839,29 +10855,25 @@
         "code": "16",
         "name": "Doc 16",
         "filename": "16 – Primeiros Socorros (GWO) – 08.10.2025 - LEANDRO CAMILO DE JESUS.pdf",
-        "issueDate": "2025-03-07T03:00:00.000Z",
-        "expirationDate": "2027-03-07T03:00:00.000Z",
+        "issueDate": "2025-10-08T03:00:00.000Z",
+        "expirationDate": "2027-10-08T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/03/2027",
+        "statusDetail": "Válido até 08/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1q6ZNRILEWKAuMMUgoZAqamy9vfaPVZpz/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (08/10/2025) difere da data impressa no documento (07/03/2025)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "17": {
         "code": "17",
         "name": "Doc 17",
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) –  10.10.2025 - LEANDRO CAMILO DE JESUS.pdf",
-        "issueDate": "2025-03-07T03:00:00.000Z",
-        "expirationDate": "2027-03-07T03:00:00.000Z",
+        "issueDate": "2025-10-10T03:00:00.000Z",
+        "expirationDate": "2027-10-10T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/03/2027",
+        "statusDetail": "Válido até 10/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1WQk05YDjGkGX_2IgPK0QHP8BTh7epz75/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (10/10/2025) difere da data impressa no documento (07/03/2025)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "18": {
         "code": "18",
@@ -10879,15 +10891,13 @@
         "code": "19",
         "name": "Doc 19",
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 10.10.2025 - LEANDRO CAMILO DE JESUS.pdf",
-        "issueDate": "2025-03-07T03:00:00.000Z",
-        "expirationDate": "2027-03-07T03:00:00.000Z",
+        "issueDate": "2025-10-10T03:00:00.000Z",
+        "expirationDate": "2027-10-10T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/03/2027",
+        "statusDetail": "Válido até 10/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1--gD1ZQBQXp3ay2eOQlIvfoNxVIGiQyM/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (10/10/2025) difere da data impressa no documento (07/03/2025)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "20": {
         "code": "20",
@@ -10905,15 +10915,13 @@
         "code": "21",
         "name": "Doc 21",
         "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO) – 09.10.2025 - LEANDRO CAMILO DE JESUS.pdf",
-        "issueDate": "2025-03-07T03:00:00.000Z",
-        "expirationDate": "2027-03-07T03:00:00.000Z",
+        "issueDate": "2025-10-09T03:00:00.000Z",
+        "expirationDate": "2027-10-09T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/03/2027",
+        "statusDetail": "Válido até 09/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1es7XunSX6DJns4UgLJaLv77SfpUX_Vu6/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (09/10/2025) difere da data impressa no documento (07/03/2025)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "22": {
         "code": "22",
@@ -10981,8 +10989,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-02-07_VAL-2027-02-07_LEANDRO-CAMILO-DE-JESUS.pdf",
         "issueDate": "2026-02-07T03:00:00.000Z",
         "expirationDate": "2027-02-07T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (07/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1WczChLU_IX4xYzoCz5OOFGNxCuzhMrGL/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -11578,8 +11586,8 @@
         "filename": "06 – Ficha de EPI – 26.01.2028 - JUAN ILGNER MARINHO LIMA.pdf",
         "issueDate": "2026-01-26T03:00:00.000Z",
         "expirationDate": "2027-01-26T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 75 dias (26/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/18jKjQETWGxNMyzoep6c5gC5JDWQf2P10/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -11657,8 +11665,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-16_VAL-2027-01-16_JOAO-CARLOS-GUARDIANO-DA-SILVA.pdf",
         "issueDate": "2025-01-16T03:00:00.000Z",
         "expirationDate": "2027-01-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 65 dias (16/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1j4xC6XUzGdlLwTxNUBk8FZBvwcp7yE3N/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -12222,8 +12230,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-18_VAL-2026-01-18_JOAO-BATISTA-CRUZ-DA-SILVA.pdf",
         "issueDate": "2025-01-18T03:00:00.000Z",
         "expirationDate": "2027-01-18T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 67 dias (18/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Ku3lWDUGks0xg0_fbijQj1YHkLluckji/view",
         "readSource": "OCR",
         "divergences": []
@@ -13389,8 +13397,8 @@
         "filename": "20_NR33-RECICLAGEM_EMI-2026-01-23_VAL-2027-01-23_JONATAS-CARLOS-DA-MOTA-SANTOS.pdf",
         "issueDate": "2026-01-23T03:00:00.000Z",
         "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (23/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1uq_2YZf8EY1BlrA_RbQ58utpbd2hR5hP/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -13474,8 +13482,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-01-18_VAL-2027-01-18_JONATAS-CARLOS-DA-MOTA-SANTOS.pdf",
         "issueDate": "2026-01-18T03:00:00.000Z",
         "expirationDate": "2027-01-18T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 67 dias (18/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1zccF2xBAnuPM-Tobb_8kSD_6pYdxGePV/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -13945,15 +13953,12 @@
         "code": "40",
         "name": "Doc 40",
         "filename": "40 – Contrato de Prestação de Serviço – 12.01.2036 - JOSE ORLANDO BARROS DA SILVA FILHO.pdf",
-        "issueDate": "2026-07-08T03:00:00.000Z",
-        "expirationDate": "2026-07-08T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 127 dias (08/07/2026)",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/12/2099",
         "sourcePath": "https://drive.google.com/file/d/193Xut38zyQgZSwHyoFgzZpiwknyTEYNZ/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (12/01/2036) difere da data impressa no documento (08/07/2026)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "09": {
         "code": "09",
@@ -14075,12 +14080,12 @@
       "04": {
         "code": "04",
         "name": "Doc 04",
-        "filename": "CTPSContratosDigitais_105.643.134-24_31-12-2025.pdf",
+        "filename": "Contrato de Trabalho– 12.01.2036 - Jose Orlando Barros da Silva Filho.Clicksign.pdf",
         "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/12/2099",
-        "sourcePath": "https://drive.google.com/file/d/1PyWc7CYWiv36Xr6h7wl2D_rzgkK50pUT/view",
-        "readSource": "CONTENT",
+        "sourcePath": "https://drive.google.com/file/d/1BvOT1bRADtzoIbPp1zYpYa_wj8A-lPVA/view",
+        "readSource": "OCR",
         "divergences": []
       },
       "08": {
@@ -14648,8 +14653,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-01-13_VAL-2027-01-13_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/17-nxyx0kbwwjyJElOuD8w5Y6SF9VcakD/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -14672,8 +14677,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-02-09_VAL-2027-02-09_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/124trj5UM7K1sbD2liREeEdEgtk8B61AK/view",
         "readSource": "OCR",
         "divergences": []
@@ -14684,8 +14689,8 @@
         "filename": "26_ESO-FORMACAO_EMI-2025-02-09_VAL-2027-02-09_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ZtQoBr_ZPbWMThw9TBNUQmKKUsGeoxkA/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -14753,8 +14758,8 @@
         "filename": "44_CARTA-NR35-UNICO_EMI-2025-01-19_VAL-2026-01-19_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1cHQiat25LwGbtZJQ-uFtKlFGWXhQ25me/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -14777,8 +14782,8 @@
         "filename": "42_CARTA-NR12-UNICO_EMI-2025-01-19_VAL-2026-01-19_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1moTeuusXk3Yv0FFGTupw4spHQ-Z-CSe1/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -14789,8 +14794,8 @@
         "filename": "41_CARTA-NR10-UNICO_EMI-2025-01-19_VAL-2026-01-19_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/15_5UW12Zgq3Q9dkDVkiM4tnWSrzzHKBR/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -15459,8 +15464,8 @@
         "filename": "20_NR33-RECICLAGEM_EMI-2026-02-04_VAL-2027-02-04_ISMAELSON-YURI-ARAUJO-SOUSA.pdf",
         "issueDate": "2026-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1b4-CkU15NMOehz1lU_rnYifxl5t2RqFv/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -15541,8 +15546,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-02-02_VAL-2027-02-02_ISMAELSON-YURI-ARAUJO-SOUSA.pdf",
         "issueDate": "2026-02-02T03:00:00.000Z",
         "expirationDate": "2027-02-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 82 dias (02/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1IriSxMtNHZJgP7m9iesVyz_81E4KHauW/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -16452,8 +16457,8 @@
         "filename": "06 – Ficha de EPI – 30.01.2028 - IGOR MARTINS ROCHA.pdf",
         "issueDate": "2026-01-30T03:00:00.000Z",
         "expirationDate": "2027-01-30T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (30/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Dne9oYMQX2q4mk5fiXAl_bQdDZXzDBed/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -16910,8 +16915,8 @@
         "filename": "12_NR10-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1yYZDluY0aUUK1qilUzK6K5OK4MZUqO7x/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -16946,8 +16951,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-02-01_VAL-2026-02-01_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1dL6pQvuHsWucLcIQN2QOsBXV_3BpQJkC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -16986,8 +16991,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-02-01_VAL-2026-02-01_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1xhAMi3qY3x7dcXzrcZckTTMygYSk20h8/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -17012,8 +17017,8 @@
         "filename": "20_NR33-RECICLAGEM_EMI-2026-01-18_VAL-2027-01-18_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
         "issueDate": "2026-01-18T03:00:00.000Z",
         "expirationDate": "2027-01-18T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 67 dias (18/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/19fs5evbnMXw629aHhgEL0hHWg0HPRpIH/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -17038,8 +17043,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-02-01_VAL-2026-02-01_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1cyrZka9Ic0IZqC5OpY61zeANZnvw-v8i/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -17664,8 +17669,8 @@
         "filename": "06 – Ficha de EPI – 21.01.2028 - FRANCISCO THIAGO DE ABREU.pdf",
         "issueDate": "2026-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1HXMCbpmvQM0o1jYca0LXX0ngqHCIBbOn/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -17771,8 +17776,8 @@
         "filename": "14_NR11-FORMACAO_EMI-2025-02-03_VAL-2026-02-03_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/16p585USCnBGmmmQV2Vg4Av4XDSrzMmxx/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18147,8 +18152,8 @@
         "filename": "12_NR10-FORMACAO_EMI-2025-02-03_VAL-2027-02-03_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1SzxLNt3gtqEzuB-ej2XDPl0OEUVcD3EU/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18159,8 +18164,8 @@
         "filename": "13_NR10-SEP-FORMACAO_EMI-2025-02-10_VAL-2027-02-10_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-02-10T03:00:00.000Z",
         "expirationDate": "2027-02-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 90 dias (10/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1QsTR-kZJbMRDZUc9KhIvkrqqokGp4-pA/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18195,8 +18200,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-01-22_VAL-2027-01-22_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1D4LSxMuR_b3m1Ykk93nD6yLDIHJlV_YI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18207,8 +18212,8 @@
         "filename": "17_GWO-MH-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1p7qXI9MFzS05EtcQJhMkoJ5DKCA-ZRTo/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18219,8 +18224,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-28_VAL-2026-01-28_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-28T03:00:00.000Z",
         "expirationDate": "2027-01-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (28/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1JAwUT5teFSICCyX9P7bLKRvxmYScizdc/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18231,8 +18236,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1nta3PlcftdoLci5u_2oZRgFLN8oR3ZMN/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18255,8 +18260,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/11ELH5bRVhEbWLfiYTh3X_yoao4ssBIe1/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18267,8 +18272,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-29_VAL-2026-01-29_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-29T03:00:00.000Z",
         "expirationDate": "2027-01-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 78 dias (29/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1YxF8BCK7ATqCjWV6tLB13dsKDJrVPvcr/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18279,8 +18284,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-29_VAL-2027-01-29_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-29T03:00:00.000Z",
         "expirationDate": "2027-01-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 78 dias (29/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1hERyjQSiKWII-anRGVfm5C9ePhADPmJC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -18291,8 +18296,8 @@
         "filename": "26_ESO-FORMACAO_EMI-2025-01-25_VAL-2027-01-25_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
         "issueDate": "2025-01-25T03:00:00.000Z",
         "expirationDate": "2027-01-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 74 dias (25/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1kBsydDo_l3o65yFo8tefxBgT9dbTB-hI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19029,8 +19034,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-15_VAL-2026-01-15_FRANCISCO-GEORGE-MARTINS-SILVA.pdf",
         "issueDate": "2025-01-15T03:00:00.000Z",
         "expirationDate": "2027-01-15T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 15/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 64 dias (15/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1rKYZcvWHmY7iIRxe3PE32YV8OtHs37vb/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19077,8 +19082,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-16_VAL-2026-01-16_FRANCISCO-GEORGE-MARTINS-SILVA.pdf",
         "issueDate": "2025-01-16T03:00:00.000Z",
         "expirationDate": "2027-01-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 65 dias (16/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ZemtZOWYa7yBpp8rusV02x2MqW0_QNt9/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19365,27 +19370,27 @@
         "code": "12",
         "name": "Doc 12",
         "filename": "12 – NR-10 Básico (F+R) – 04.09.2026 - FRANCISCO FABRICIO FREIRE BARBOSA.pdf",
-        "issueDate": "2023-02-09T03:00:00.000Z",
-        "expirationDate": "2025-02-09T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 641 dias (09/02/2025)",
+        "issueDate": "2026-09-04T03:00:00.000Z",
+        "expirationDate": "2028-09-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/09/2028",
         "sourcePath": "https://drive.google.com/file/d/15r0rhckFGcHCj2g8GFcf_Dl66PFZ6NhG/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (04/09/2026) difere da data impressa no documento (09/02/2023)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "13": {
         "code": "13",
         "name": "Doc 13",
-        "filename": "DECLARAÇÃO DE NÃO APLICABILIDADE ENEL - Francisco Fabricio Freire Barbosa - Clicksign.pdf",
-        "issueDate": "2026-03-25T03:00:00.000Z",
-        "expirationDate": "2028-03-25T03:00:00.000Z",
+        "filename": "13 – NR – 10 SEP (F+R) – 04.09.2026 - Francisco Fabricio Freire Barbosa.pdf",
+        "issueDate": "2026-08-21T03:00:00.000Z",
+        "expirationDate": "2028-08-21T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/03/2028",
-        "sourcePath": "https://drive.google.com/file/d/18yQxSUl6dZKZiVEvGTVZNLPMDW38pva7/view",
-        "readSource": "CONTENT",
-        "divergences": []
+        "statusDetail": "Válido até 21/08/2028",
+        "sourcePath": "https://drive.google.com/file/d/1IvRFv-uAeFCbjBmyHyYVbFsVh3GH32Vb/view",
+        "readSource": "OCR",
+        "divergences": [
+          "Data no nome (04/09/2026) difere da data impressa no documento (21/08/2026)"
+        ]
       },
       "14": {
         "code": "14",
@@ -19417,8 +19422,8 @@
         "filename": "16 – Primeiros Socorros (GWO) – 04.02.25 - Francisco Fabricio Freire Barbosa - Clicksign..pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1m5weYP8pakCPgNcmZwhGlsiAv3xC6sjz/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19429,8 +19434,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) - 05.02.25 - Francisco Fabricio Freire Barbosa - Clicksign..pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1dEoYD4hONe5p5J-wKSMwQ9bod6bqhR7Q/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19453,8 +19458,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 05.02.2025 – Francisco Fabricio Freire Barbosa- Clicksign.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1pBgnqrRpDId742sN1XiJh_VmlZgWVQFh/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19477,8 +19482,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-02-03_VAL-2027-02-03_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
         "issueDate": "2025-02-03T03:00:00.000Z",
         "expirationDate": "2027-02-03T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 83 dias (03/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1FKoai-LtcyL5_zeyOo-WHyBScl_muycC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20554,8 +20559,8 @@
         "filename": "12_NR10-FORMACAO_EMI-2025-01-31_VAL-2027-01-31_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-31T03:00:00.000Z",
         "expirationDate": "2027-01-31T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 80 dias (31/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-PbJXsW0On4kpDOPYrHIOqaw7M3l4ybE/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20590,8 +20595,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-23_VAL-2026-01-23_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-23T03:00:00.000Z",
         "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (23/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1x8XA0jimR39WYasNJtHXfTghzYq5LIVf/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20602,8 +20607,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-01-22_VAL-2027-01-22_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1mBkS-azuzScmT-ZGdXj4wepxEElBc-TP/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20614,8 +20619,8 @@
         "filename": "17_GWO-MH-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1noQeUqQ_8arcuxgv-ZP4V35V-PzgtHhu/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20626,8 +20631,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-23_VAL-2026-01-23_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-23T03:00:00.000Z",
         "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (23/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/11VNY-L4siRXPYVnt8vfW71PdErUVdUDb/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20638,8 +20643,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Qu9hXDHZMBSjmgftOZlPRNrDOlnuAoGI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20662,8 +20667,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-01-24_VAL-2027-01-24_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-24T03:00:00.000Z",
         "expirationDate": "2027-01-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (24/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1KExPD2cAQyAQN0i-z4F73UBiP2bOGk1X/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20674,8 +20679,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-27_VAL-2026-01-27_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-27T03:00:00.000Z",
         "expirationDate": "2027-01-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 76 dias (27/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1RlsHniJjzfyJ-DbH6fbkQHxZeaD_ay3L/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20697,8 +20702,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-27_VAL-2027-01-27_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-27T03:00:00.000Z",
         "expirationDate": "2027-01-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 76 dias (27/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/15imNibBm3PwILwe2kgCkicIi9iDV1aXe/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20709,8 +20714,8 @@
         "filename": "26_ESO-FORMACAO_EMI-2025-01-28_VAL-2027-01-28_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-01-28T03:00:00.000Z",
         "expirationDate": "2027-01-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (28/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1z4sOprQDNXanW10AGdv_0ezqi5bqAn6o/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20769,8 +20774,8 @@
         "filename": "44_CARTA-NR35-UNICO_EMI-2025-02-04_VAL-2026-02-04_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1CCEC1dlmCbJoFEzVPjQATI3JxeZvlK2b/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -20805,8 +20810,8 @@
         "filename": "41_CARTA-NR10-UNICO_EMI-2025-02-04_VAL-2026-02-04_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-wBviVZfeLWh-Io-GOHS5k4ERJX0wIFU/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -21579,8 +21584,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-02-08_VAL-2027-02-08_FELIPE-DOS-SANTOS-CASTRO.pdf",
         "issueDate": "2026-02-08T03:00:00.000Z",
         "expirationDate": "2027-02-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 88 dias (08/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1vW6aO38D_APywK9WQ4BB8D-V0vZr_AoD/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -21707,8 +21712,8 @@
         "filename": "06 – Ficha de EPI – 21.01.2028 - FELIPE DOS SANTOS CASTRO.pdf",
         "issueDate": "2026-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ruP9ZzKHXMTNoJ5bixciTPREXQ50MFuI/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -22234,8 +22239,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-31_VAL-2026-01-31_EZEQUIEL-CRUZ-VIEIRA.pdf",
         "issueDate": "2025-01-31T03:00:00.000Z",
         "expirationDate": "2027-01-31T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 80 dias (31/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1r-9-ZiCekMD4yufoaIEQm3HemOqactmE/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22246,8 +22251,8 @@
         "filename": "16 – Primeiros Socorros (GWO) – 04.02.2025 - EZEQUIEL CRUZ VIEIRA.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1UVDGmaEaEE6tuTpHs6PcawGj_cQfdLRx/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22258,8 +22263,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) – 05.02.2025 - EZEQUIEL CRUZ VIEIRA.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ztI6ckcRFlA88wejzsU_zL_NHFTcy4yV/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22270,8 +22275,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-28_VAL-2026-01-28_EZEQUIEL-CRUZ-VIEIRA.pdf",
         "issueDate": "2025-01-28T03:00:00.000Z",
         "expirationDate": "2027-01-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (28/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ivz_pZkWYVUnSpMHnjEHxgyrpyQTSllx/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22282,8 +22287,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 05.02.2025 - EZEQUIEL CRUZ VIEIRA.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1LApMlcMclsDDoeIl3RpJX27KLuAn_2xi/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22306,8 +22311,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-01-23_VAL-2027-01-23_EZEQUIEL-CRUZ-VIEIRA.pdf",
         "issueDate": "2025-01-23T03:00:00.000Z",
         "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (23/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/17A82zNAW4SiIthCJvXMxhgmDvamJBN6M/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22518,8 +22523,8 @@
         "filename": "06 – Ficha de EPI – 10.02.2028 - EZEQUIEL CRUZ VIEIRA.pdf",
         "issueDate": "2026-02-10T03:00:00.000Z",
         "expirationDate": "2027-02-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 90 dias (10/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1zF9pW1Vi_86WrLtbIlrNAWuguCNbaDeS/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -22645,8 +22650,8 @@
         "filename": "16 – Primeiros Socorros (GWO) – 31.01.25 - Felipe Rodrigues Bispo - Clicksign.pdf",
         "issueDate": "2025-01-31T03:00:00.000Z",
         "expirationDate": "2027-01-31T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 80 dias (31/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1H1g4T5tohw1npM_1nQoVUEIHxfv8pM8Q/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22657,8 +22662,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO)  – 01.02.25 - Felipe Rodrigues Bispo.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/17teQaSKa-CxuV0GCsrxva9L_17_t3gW3/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22681,8 +22686,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 01.02.2025 - Felipe Rodrigues Bispo  - Clicksign.pdf",
         "issueDate": "2025-02-01T03:00:00.000Z",
         "expirationDate": "2027-02-01T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (01/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1wEcSsg3qpaI3IpWEJzgZfY79C2-8vzQU/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22705,8 +22710,8 @@
         "filename": "21 – NR – 35 Trab. Altura + Resgate (GWO)  – 02.02.2025  – Felipe Rodrigues Bispo.pdf",
         "issueDate": "2025-02-02T03:00:00.000Z",
         "expirationDate": "2027-02-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 82 dias (02/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1n0AQRkKz1qiPXqoIVPqadnC0y_biR2Xq/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22751,8 +22756,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-16_VAL-2027-01-16_FELIPE-RODRIGUES-BISPO.pdf",
         "issueDate": "2025-01-16T03:00:00.000Z",
         "expirationDate": "2027-01-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 65 dias (16/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1I--_3E95DTZEq9rZ-9UwhYuposZ-ro8G/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -24261,8 +24266,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) – 08.02.2025 - Emerson Pallotta Ribeiro - Clicksign.pdf",
         "issueDate": "2025-02-08T03:00:00.000Z",
         "expirationDate": "2027-02-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 88 dias (08/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1WYL-qGKQ4jMVRzAeOq8UWaqn9LcVsgYC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -24571,8 +24576,8 @@
         "filename": "13_NR10-SEP-RECICLAGEM_EMI-2025-02-08_VAL-2027-02-08_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
         "issueDate": "2025-02-08T03:00:00.000Z",
         "expirationDate": "2027-02-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 88 dias (08/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/13G4CLKhiLVLSIVFrlLEVyuAs0dhw7omI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -24595,8 +24600,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-24_VAL-2026-01-24_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
         "issueDate": "2025-01-24T03:00:00.000Z",
         "expirationDate": "2027-01-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (24/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1dCZF36yZTwvUntdmtVLajDCOlpUnyTYY/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -24734,8 +24739,8 @@
         "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-02-07_VAL-2027-02-07_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
         "issueDate": "2026-02-07T03:00:00.000Z",
         "expirationDate": "2027-02-07T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (07/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1pWB8t01sD-eRdZ3F8v7eeIw0mXQmWhcD/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -25209,8 +25214,8 @@
         "filename": "42_CARTA-NR12-UNICO_EMI-2025-01-13_VAL-2026-01-13_EDWARD-THIAGO-HERCULANO-RIBEIRO.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1n2XWHn98KPKwDVvHCdTEPT9ZNdv1krdO/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -25289,8 +25294,8 @@
         "filename": "06 – Ficha de EPI (DBI-SALA) - Edward Thiago Herculano Ribeiro - Clicksign.pdf",
         "issueDate": "2026-01-16T03:00:00.000Z",
         "expirationDate": "2027-01-16T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 65 dias (16/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/13-WeA6XF3qqC2Wm37XF2H4sbwW7vgcIr/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -25763,8 +25768,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-13_VAL-2027-01-13_DIEGO-MENEZES-NUNES-COELHO.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1hQ7GruKutkrPxOj4ADqmwZiiqRyb414h/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -25883,8 +25888,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-15_VAL-2027-01-15_DIEGO-MENEZES-NUNES-COELHO.pdf",
         "issueDate": "2025-01-15T03:00:00.000Z",
         "expirationDate": "2027-01-15T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 15/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 64 dias (15/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1tFIJGRAB8_30bMuJ0RV-eRZdHYZ87ZEC/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -25905,14 +25910,14 @@
         "code": "28",
         "name": "Doc 28",
         "filename": "20 – NR – 33 (Supervisor F+R) – 06.09.2026 - Diego Menezes Nunes Coelho.pdf.pdf",
-        "issueDate": "2026-08-28T03:00:00.000Z",
-        "expirationDate": "2027-08-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/08/2027",
+        "issueDate": "2023-01-22T03:00:00.000Z",
+        "expirationDate": "2024-01-22T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 1025 dias (22/01/2024)",
         "sourcePath": "https://drive.google.com/file/d/1GazjAs8I__PQ_oSMNnAtVFz0tKCd9KlD/view",
         "readSource": "OCR",
         "divergences": [
-          "Data no nome (06/09/2026) difere da data impressa no documento (28/08/2026)"
+          "Data no nome (06/09/2026) difere da data impressa no documento (22/01/2023)"
         ]
       },
       "30": {
@@ -25981,8 +25986,8 @@
         "filename": "44_CARTA-NR35-UNICO_EMI-2025-02-04_VAL-2026-02-04_DIEGO-MENEZES-NUNES-COELHO.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1KCo8q0Z9KsM_GOLcG8JMQ0NEi1ENprB6/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -26622,8 +26627,8 @@
         "filename": "20_NR33-RECICLAGEM_EMI-2026-02-05_VAL-2027-02-05_DANIEL-FERREIRA-DA-SILVA-FILHO.pdf",
         "issueDate": "2026-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1y4LttwEG3zBBsYUUz9XO-z_WsvqmnxpZ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -26695,8 +26700,8 @@
         "filename": "20 – NR – 33 (Supervisor F+R) –  24.02.2026 - Daniel Ferreira da Silva Filho.pdf",
         "issueDate": "2026-02-02T03:00:00.000Z",
         "expirationDate": "2027-02-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 82 dias (02/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/18BJQGZQ0k_b8p7yWMUoHIaHvGP0vhSVt/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -28002,11 +28007,11 @@
         "code": "04",
         "name": "Doc 04",
         "filename": "04 – Contrato – Carlos Henrique Soares da Silva.pdf",
-        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2099-12-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
+        "statusDetail": "Válido até 31/12/2099",
         "sourcePath": "https://drive.google.com/file/d/1uYlJa1Cc-ErXdbur0gU9uuHIIFJb3XOr/view",
-        "readSource": "CONTENT",
+        "readSource": "OCR",
         "divergences": []
       },
       "01": {
@@ -28761,8 +28766,8 @@
         "filename": "06 – Ficha de EPI – 30.01.2028 - CAIO FELIPE RIBEIRO RODRIGUES.pdf",
         "issueDate": "2026-01-31T03:00:00.000Z",
         "expirationDate": "2027-01-31T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 31/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 80 dias (31/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Ccu-uCprH5beGx4wZssYiMq87uOYhqg7/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -28890,8 +28895,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-02-04_VAL-2027-02-04_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1KHDGyorspqOgBh8MdcPKNSESMH6ZTtcM/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -28902,8 +28907,8 @@
         "filename": "17_GWO-MH-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1lDbBtmhMifnsFoS6B4yXAzya4pUE8CY8/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -28926,8 +28931,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-02-05_VAL-2027-02-05_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
         "issueDate": "2025-02-05T03:00:00.000Z",
         "expirationDate": "2027-02-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 85 dias (05/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/16_HTCt_e90W_nYzsQ7DSWV0QabZWnjF2/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -28998,15 +29003,13 @@
         "code": "28",
         "name": "Doc 28",
         "filename": "20 – NR – 33 (Supervisor R) – 25.04.26 Antonio Rafael dos Santos.pdf.pdf",
-        "issueDate": "2023-09-25T03:00:00.000Z",
-        "expirationDate": "2024-09-25T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 778 dias (25/09/2024)",
+        "issueDate": "2026-04-25T03:00:00.000Z",
+        "expirationDate": "2027-04-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1UmqlakLetoVY3uNXnSM7h99lJ-rw3c7t/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (25/04/2026) difere da data impressa no documento (25/09/2023)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "30": {
         "code": "30",
@@ -30018,15 +30021,13 @@
         "code": "12",
         "name": "Doc 12",
         "filename": "12 – NR – 10 Básico (F+R) – 31.03.26 – Adenilço Queiroz  new.pdf",
-        "issueDate": "2024-07-08T03:00:00.000Z",
-        "expirationDate": "2026-07-08T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 127 dias (08/07/2026)",
+        "issueDate": "2026-03-31T03:00:00.000Z",
+        "expirationDate": "2028-03-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/03/2028",
         "sourcePath": "https://drive.google.com/file/d/1nUJS8O6fTkkBBVJqqduDmI4o1VNrKnSK/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (31/03/2026) difere da data impressa no documento (08/07/2024)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "13": {
         "code": "13",
@@ -30415,8 +30416,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-13_VAL-2027-01-13_ALISSON-MATEUS-ALMEIDA-DA-COSTA.pdf",
         "issueDate": "2025-01-13T03:00:00.000Z",
         "expirationDate": "2027-01-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (13/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1b9YC-zSieHqqL3jAYp0Kz1zW_9rXj7iO/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -30453,8 +30454,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-18_VAL-2026-01-18_ALISSON-MATEUS-ALMEIDA-DA-COSTA.pdf",
         "issueDate": "2025-01-18T03:00:00.000Z",
         "expirationDate": "2027-01-18T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 18/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 67 dias (18/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Vm4zYaixEMQ25zZGQaB1VUDWerhEhbiZ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -30539,8 +30540,8 @@
         "filename": "22_LOTO-FORMACAO_EMI-2025-01-20_VAL-2026-01-20_ALISSON-MATEUS-ALMEIDA-DA-COSTA.pdf",
         "issueDate": "2025-01-20T03:00:00.000Z",
         "expirationDate": "2027-01-20T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 69 dias (20/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1F93mNjLvbtTD8_TGidR6lz_1TcOUhRJz/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -30976,9 +30977,7 @@
         "statusDetail": "VENCIDO há 1443 dias (30/11/2022)",
         "sourcePath": "https://drive.google.com/file/d/1EfSNRwmodJOS5J9ltyZtFsLp_NDXU0iT/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "40": {
         "code": "40",
@@ -31607,8 +31606,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-21_VAL-2026-01-21_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1NS8FZX_FVpbMe8cKb1p7Jq2EfW5vQPym/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -31643,8 +31642,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-17_VAL-2026-01-17_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
         "issueDate": "2025-01-17T03:00:00.000Z",
         "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (17/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Zxp0twzvNQZdmGdbF2nKqXE2jc3JTaLK/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -31703,8 +31702,8 @@
         "filename": "25_SIT-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1NqQNJxCgh43qTJWNMHHlMnrEPhNe3ZXD/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -31877,8 +31876,8 @@
         "filename": "06 – Ficha de EPI – 30.01.2028 - DIEGO PATRICK SANCHES CAMPOS.pdf",
         "issueDate": "2026-01-30T03:00:00.000Z",
         "expirationDate": "2027-01-30T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (30/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1iiG5d8lVVOZKMsJiCQXJ7ZOlL9eDGypL/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -32019,8 +32018,8 @@
         "filename": "PS - Italo de Abreu.pdf",
         "issueDate": "2023-02-25T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1QABnV2hsG45s4GGVm1-BU5X9spM7ZGKY/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32031,8 +32030,8 @@
         "filename": "17 – NR – 17 Car. Manual Peso (GWO) (Rec)– 09.02.2025 - Italo de Abreu Duarte .pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1lilXC0NUsMpLs6LKTfJC-khOHVr_d9N3/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32055,8 +32054,8 @@
         "filename": "19 – NR – 23 C. Incêndio (GWO) (Rec)– 09.02.2025 - Italo de Abreu Duarte.pdf",
         "issueDate": "2025-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1ulfnX5o3VMwO10IxKXe8qtTmzDY1m6c0/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32292,8 +32291,8 @@
         "filename": "06 – Ficha de EPI – 30.01.2028 - ITALO DE ABREU DUARTE.pdf",
         "issueDate": "2026-02-02T03:00:00.000Z",
         "expirationDate": "2027-02-02T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 82 dias (02/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/187pCOZZFQRIInnI2FT7rTvL_1ZJjBiHy/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -32454,8 +32453,8 @@
         "filename": "16_GWO-FA-FORMACAO_EMI-2025-01-22_VAL-2027-01-22_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
         "issueDate": "2025-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/18fY59Lj4TJttCTqapgxFoSQAI8UHCGKM/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32466,8 +32465,8 @@
         "filename": "17_GWO-MH-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1VpxKMQ_YiEEsWH6FPdDDFduKG2ej41T8/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32490,8 +32489,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-01-21_VAL-2027-01-21_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
         "issueDate": "2025-01-21T03:00:00.000Z",
         "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 21/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 70 dias (21/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-4IakP6sgyglc3qYASxSi7D8UYXFb4b1/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32502,8 +32501,8 @@
         "filename": "20_NR33-RECICLAGEM_EMI-2026-02-04_VAL-2027-02-04_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
         "issueDate": "2026-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 84 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-z2VyoHpJhyqwznMCRFPmcOYeD5u4OAI/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -32514,8 +32513,8 @@
         "filename": "21_NR35-FORMACAO_EMI-2025-01-24_VAL-2027-01-24_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
         "issueDate": "2025-01-24T03:00:00.000Z",
         "expirationDate": "2027-01-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (24/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1TuOWMLLvc8Hk7btmKcNMVZcbxygzA4-s/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -33241,8 +33240,8 @@
         "filename": "13_NR10-SEP-RECICLAGEM_EMI-2025-01-23_VAL-2027-01-23_PHILIPE-DE-SOUZA-ANDRADE.pdf",
         "issueDate": "2025-01-23T03:00:00.000Z",
         "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (23/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/11r5eGd6bSee9umGk6hropVYXPM17FReQ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -33265,8 +33264,8 @@
         "filename": "15_NR12-FORMACAO_EMI-2025-01-19_VAL-2026-01-19_PHILIPE-DE-SOUZA-ANDRADE.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1VIHUoUSa774KtBZ7exkKQfM8NnzXnoGn/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -33301,8 +33300,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-20_VAL-2026-01-20_PHILIPE-DE-SOUZA-ANDRADE.pdf",
         "issueDate": "2025-01-20T03:00:00.000Z",
         "expirationDate": "2027-01-20T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 69 dias (20/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1p2wCWTBrZl_Asn0ih6UFwrCNmfAGEd4v/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -33594,8 +33593,8 @@
         "filename": "06 – Ficha de EPI – 09.02.2028 - PHILIPE DE SOUZA ANDRADE.pdf",
         "issueDate": "2026-02-09T03:00:00.000Z",
         "expirationDate": "2027-02-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 89 dias (09/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1m7tTbDFxfqvzcn31Dl_-LO10QJU_UatM/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -33794,15 +33793,13 @@
         "code": "20",
         "name": "Doc 20",
         "filename": "20 – NR-33 Espaço Confinado Vigia (F+R) – 24.08.2026 - FRANCISCO MARCOS DE SOUZA MAGALHAES.pdf",
-        "issueDate": "2026-01-17T03:00:00.000Z",
-        "expirationDate": "2027-01-17T03:00:00.000Z",
+        "issueDate": "2026-08-24T03:00:00.000Z",
+        "expirationDate": "2027-08-24T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/01/2027",
+        "statusDetail": "Válido até 24/08/2027",
         "sourcePath": "https://drive.google.com/file/d/1CLJt0uqzZ908bTah1li1Je8UEtNUzTA8/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (24/08/2026) difere da data impressa no documento (17/01/2026)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "21": {
         "code": "21",
@@ -33868,8 +33865,8 @@
         "filename": "26_ESO-FORMACAO_EMI-2025-01-24_VAL-2027-01-24_FRANCISCO-MARCOS-DE-SOUZA-MAGALHAES.pdf",
         "issueDate": "2025-01-24T03:00:00.000Z",
         "expirationDate": "2027-01-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (24/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/17QSmA6ZAsUa6MvJMdaOTr9Jnz-RNjrn4/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -34792,15 +34789,13 @@
         "code": "12",
         "name": "Doc 12",
         "filename": "12 - NR - 10 Básico (F+R) - 27.04.26 - Kelvin Garcia de Oliveira",
-        "issueDate": "2024-04-29T03:00:00.000Z",
-        "expirationDate": "2026-04-29T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 197 dias (29/04/2026)",
+        "issueDate": "2026-04-27T03:00:00.000Z",
+        "expirationDate": "2028-04-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/04/2028",
         "sourcePath": "https://drive.google.com/file/d/1QkyqSczK8h7ddUz6qHArNBz_SD9aJN6s/view",
-        "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (27/04/2026) difere da data impressa no documento (29/04/2024)"
-        ]
+        "readSource": "OCR",
+        "divergences": []
       },
       "13": {
         "code": "13",
@@ -34817,12 +34812,12 @@
       "15": {
         "code": "15",
         "name": "Doc 15",
-        "filename": "16 – NR – 12 (Drone) –  26.05.2026 - Kelvin Garcia de Oliveira.pdf",
+        "filename": "16 – NR – 12 (FOR+R) –  26.05.2026 - Kelvin Garcia de Oliveira.pdf",
         "issueDate": "2026-05-25T03:00:00.000Z",
         "expirationDate": "2028-05-25T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 25/05/2028",
-        "sourcePath": "https://drive.google.com/file/d/1T2N1J7lyiIks6rpR-fHqRKCH3bvhziC8/view",
+        "sourcePath": "https://drive.google.com/file/d/15_1fGU90LpfC97prMU_Ayu9i-fzW2IK-/view",
         "readSource": "OCR",
         "divergences": [
           "Data no nome (26/05/2026) difere da data impressa no documento (25/05/2026)"
@@ -35082,13 +35077,13 @@
       "12": {
         "code": "12",
         "name": "Doc 12",
-        "filename": "RIM-ARTHWIND 01.10.2025 (1).pdf",
-        "issueDate": "2025-10-01T03:00:00.000Z",
-        "expirationDate": "2027-10-01T03:00:00.000Z",
+        "filename": "12 – NR – 10 Básico (For+Rec) – 22.04.26 - LUIS GUSTAVO ROSA DA SILVA.pdf.pdf",
+        "issueDate": "2026-04-22T03:00:00.000Z",
+        "expirationDate": "2028-04-22T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/10/2027",
-        "sourcePath": "https://drive.google.com/file/d/1KDC69HwAg7qYeu_s6U4z_o844ByMGpwX/view",
-        "readSource": "CONTENT",
+        "statusDetail": "Válido até 22/04/2028",
+        "sourcePath": "https://drive.google.com/file/d/1lG-WCxFwuU6TEa9_0mH21I5bGq0j9dL2/view",
+        "readSource": "OCR",
         "divergences": []
       },
       "13": {
@@ -35374,8 +35369,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-20_VAL-2027-01-20_ALISON-DOS-SANTOS-RIBEIRO.pdf",
         "issueDate": "2025-01-20T03:00:00.000Z",
         "expirationDate": "2027-01-20T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 69 dias (20/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1QIaJOA_VkZDE5q4SbnmAyWG04bb4n-HT/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -35422,8 +35417,8 @@
         "filename": "18_NR18-FORMACAO_EMI-2025-01-20_VAL-2026-01-20_ALISON-DOS-SANTOS-RIBEIRO.pdf",
         "issueDate": "2025-01-20T03:00:00.000Z",
         "expirationDate": "2027-01-20T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 20/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 69 dias (20/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1XrU5UNDemlMMWo-E-Vu7YmCGgo71cWDQ/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -35434,8 +35429,8 @@
         "filename": "19_GWO-FAW-FORMACAO_EMI-2025-02-06_VAL-2027-02-06_ALISON-DOS-SANTOS-RIBEIRO.pdf",
         "issueDate": "2025-02-06T03:00:00.000Z",
         "expirationDate": "2027-02-06T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 06/02/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 86 dias (06/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/186tQZPcmy_uhKWVadp9ELgNQfQ0CTZav/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -36126,8 +36121,8 @@
         "filename": "06 – Ficha de EPI – 22.01.2028 - ANTONIO CARLOS PEREIRA.pdf",
         "issueDate": "2026-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1UyL10fnlDSOPy6qMGjfBPIKIbMr_h1l4/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -36191,8 +36186,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-19_VAL-2027-01-19_NARDEL-DELON-NOVAIS-ROCHA.pdf",
         "issueDate": "2025-01-19T03:00:00.000Z",
         "expirationDate": "2027-01-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 19/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (19/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1rR2mIZvtL4BEiMFyNAVxtd4cIzFqGtxd/view",
         "readSource": "OCR",
         "divergences": []
@@ -36468,8 +36463,8 @@
         "filename": "12_NR10-RECICLAGEM_EMI-2025-01-22_VAL-2027-01-22_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
         "issueDate": "2025-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1KNEN4bl9_BaHelveH37AjSO3Su9YvItj/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -37194,8 +37189,8 @@
         "filename": "06 – Ficha de EPI – 30.01.2028 - THIAGO LIMA SANTOS SILVA.pdf",
         "issueDate": "2026-01-30T03:00:00.000Z",
         "expirationDate": "2027-01-30T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 30/01/2027",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (30/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/19X1_GOILqru2KJ4Zh-djFMenvaQlysZ1/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -37717,11 +37712,11 @@
         "code": "04",
         "name": "Doc 04",
         "filename": "04_CONTRATO-CTPS-UNICO_EMI-2026-09-30_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
-        "issueDate": "2026-09-30T03:00:00.000Z",
+        "expirationDate": "2027-10-05T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
+        "statusDetail": "Válido até 05/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1UtxX-KnRpq-tIKfM4CqGma_Y1ovWMWr0/view",
-        "readSource": "CONTENT",
+        "readSource": "OCR",
         "divergences": []
       },
       "03": {

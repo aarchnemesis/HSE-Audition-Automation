@@ -429,7 +429,10 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         await pdfParse(buffer, { pagerender: collector.pagerender })
         pages = collector.pages
         if (pages.join('').replace(/\s+/g, '').length < MIN_TEXT_CHARS) {
-          pages = await TesseractOcrAdapter.extractTextFromScannedPdf(buffer)
+          pages = await TesseractOcrAdapter.extractTextFromScannedPdf(
+            buffer,
+            Math.min(Math.max(pages.length, 4), 12)
+          )
           ocrUsed = true
         }
       } else if (isImageBuffer(buffer)) {
@@ -473,7 +476,17 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
         )
         pages = pages.map((text, i) => `${text}\n${ocrPages[i] ?? ''}`)
         ocrUsed = true
+        const textItems = items
         items = inspect()
+        // A leitura do texto já valia: o OCR das páginas-imagem só entra quando acha um curso mais
+        // novo (a reciclagem do F+R). Sem isso o OCR trocava datas certas por datas de log/assinatura.
+        if (!textItems.every(item => item.statusEHS === 'NAO_LIDO')) {
+          const expOf = (i: InspectedDocumentResult) => (i.statusEHS === 'NAO_LIDO' ? 0 : i.expirationDate?.getTime() ?? 0)
+          items = textItems.map(t => {
+            const o = items.find(i => i.code === t.code)
+            return o && expOf(o) > expOf(t) ? o : t
+          })
+        }
       } catch (err) {
         if (err instanceof OcrUnavailableError) throw err
       }
