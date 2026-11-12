@@ -339,7 +339,8 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
     const mime = entry.mimeType || ''
     const cache = PDFContentCache.getInstance()
     const md5 = entry.md5Checksum || undefined
-    const holderKey = personNameTokens(holder.name).join(' ')
+    // "h2": holder rule changed (full holder name beats a longer signer name); re-check cached files.
+    const holderKey = `h2:${personNameTokens(holder.name).join(' ')}`
     const notRead = (reason: string) => ({
       items: [
         PDFContentInspector.notReadResult(

@@ -44,6 +44,16 @@ describe('checkHolder', () => {
       checkHolder('Certifico que FRANCISCO PEREIRA SILVA NUNES', team[0], team)
     ).toEqual({ status: 'OUTRA_PESSOA', other: team[1] })
   })
+  it('keeps the holder when the full name is printed next to a longer signer name', () => {
+    const team = ['WILDEN ALVES FERREIRA', 'LEONARDO SIMON COSTA GAEM']
+    expect(
+      checkHolder(
+        'ASSINATURAS LEONARDO SIMON COSTA GAEM CPF ASSINOU ... WILDEN ALVES FERREIRA CPF ASSINOU',
+        team[0],
+        team
+      )
+    ).toEqual({ status: 'OK' })
+  })
   it('never blocks a single-word holder as another person', () => {
     expect(
       checkHolder('Certifico que BELTRANO PEREIRA NUNES', 'FULANO', roster)

@@ -1278,6 +1278,11 @@ export function checkHolder(
       best = { name: other, score }
   }
 
+  // A holder whose full name is printed owns the document even when a longer name also appears:
+  // letters, service orders and contracts carry the signer's name (coordinator, safety supervisor,
+  // witness) and that name often has more tokens than the holder's.
+  const holderFull = holderTokens.length >= 2 && holderScore >= holderTokens.length
+  if (holderFull) return { status: 'OK' }
   if (holderOk && (!best || holderScore >= best.score)) return { status: 'OK' }
   if (best && holderTokens.length >= 2)
     return { status: 'OUTRA_PESSOA', other: best.name }
