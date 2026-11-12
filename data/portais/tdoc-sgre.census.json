@@ -1,6 +1,6 @@
 {
   "portalId": "tdoc-sgre",
-  "capturedAt": "2026-11-11T18:01:34.372Z",
+  "capturedAt": "2026-11-12T09:00:56.364Z",
   "workers": [
     {
       "name": "João Carlos Guardiano",
@@ -4248,6 +4248,12 @@
           "required": true,
           "status": "APPROVED",
           "expiresOn": "2028-04-29"
+        },
+        {
+          "title": "Cert. GWO-BST",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-03"
         }
       ]
     },
@@ -4357,6 +4363,114 @@
           "required": true,
           "status": "IN_REVIEW",
           "note": "Enviado em 2026-10-30"
+        }
+      ]
+    },
+    {
+      "name": "ALISON DOS SANTOS RIBEIRO",
+      "role": "INSPETOR DE EQUIPAMENTOS",
+      "contract": "TUCANO",
+      "documents": [
+        {
+          "title": "Carteira Nácional Habilitação",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2032-12-06"
+        },
+        {
+          "title": "Contrato trabalho",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Ficha EPI",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2027-03-19"
+        },
+        {
+          "title": "Trein. Direção Defensiva",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2028-02-11"
+        },
+        {
+          "title": "ASO",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2027-08-31"
+        },
+        {
+          "title": "Cartão de vacinação + COVID19",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. Integração Admissional",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "CTPS",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Ficha Registro Colaborador",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Ordem Serviço",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "CPF-RG o DNI",
+          "required": true,
+          "status": "APPROVED"
+        },
+        {
+          "title": "Trein. Combate a Incêndio",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2027-02-06"
+        },
+        {
+          "title": "Trein. Primeiros socorros",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2027-01-06"
+        },
+        {
+          "title": "Perfil treinamento SGRE Manutenção",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "DESAPARECIDO"
+        },
+        {
+          "title": "Cert. GWO-BST",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2028-10-15"
+        },
+        {
+          "title": "Apolice Seguro Vida",
+          "required": true,
+          "status": "APPROVED",
+          "expiresOn": "2026-12-06"
+        },
+        {
+          "title": "Autorização COFIC",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-03"
+        },
+        {
+          "title": "Trein. NR06 - EPIS",
+          "required": true,
+          "status": "IN_REVIEW",
+          "note": "Enviado em 2026-11-05"
         }
       ]
     },

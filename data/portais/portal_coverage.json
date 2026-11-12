@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-11-11",
+  "refDate": "2026-11-12",
   "portals": [
     {
       "portal": {
@@ -20,8 +20,8 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T18:01:34.372Z",
-        "workers": 23
+        "capturedAt": "2026-11-12T09:00:56.364Z",
+        "workers": 24
       },
       "clients": [
         {
@@ -85,7 +85,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T18:01:00.531Z",
+        "capturedAt": "2026-11-12T09:00:25.626Z",
         "workers": 44
       },
       "clients": [
@@ -285,7 +285,7 @@
         {
           "client": "NORDEX ACCIONA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 2,
+          "projectsInWindow": 3,
           "nextStart": "2026-11-30"
         },
         {
@@ -507,7 +507,7 @@
       "accessPending": 2,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T18:12:38.783Z",
+        "capturedAt": "2026-11-12T09:06:26.848Z",
         "workers": 6
       },
       "clients": [
@@ -794,7 +794,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T18:13:15.906Z",
+        "capturedAt": "2026-11-12T09:07:01.747Z",
         "workers": 8
       },
       "clients": [
@@ -1463,7 +1463,7 @@
         {
           "client": "NORDEX ACCIONA",
           "activity": "IN_FIELD",
-          "projectsInWindow": 2,
+          "projectsInWindow": 3,
           "nextStart": "2026-11-30"
         }
       ],
