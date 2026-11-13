@@ -90216,60 +90216,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-10-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 30_WINDA",
-        "extractedClause": "Data do nome do arquivo"
-      },
-      {
-        "code": "16",
-        "issueDate": "2025-02-24T03:00:00.000Z",
-        "expirationDate": "2027-02-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "First Aid Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "19",
-        "issueDate": "2025-02-25T03:00:00.000Z",
-        "expirationDate": "2027-02-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Fire Awareness Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "17",
-        "issueDate": "2025-02-25T03:00:00.000Z",
-        "expirationDate": "2027-02-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Manual Handling Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "21",
-        "issueDate": "2025-02-27T03:00:00.000Z",
-        "expirationDate": "2027-02-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Working at Heights Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
         "code": "32",
         "issueDate": "2026-07-17T03:00:00.000Z",
         "expirationDate": "2028-07-17T03:00:00.000Z",
@@ -106022,20 +105968,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1e87sGYSVCpHgHho8tr2NOkfUpLYXofQn",
@@ -116315,20 +116248,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1WczChLU_IX4xYzoCz5OOFGNxCuzhMrGL",
@@ -117559,20 +117479,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "Data do nome do arquivo",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "Data do nome do arquivo"
-      }
-    ]
+    "extractedClause": "Data do nome do arquivo"
   },
   {
     "fileId": "1t1WwXzZyeD-cMqJW0UaW8i1UYlCJW_-8",
@@ -118696,16 +118603,6 @@
     "extractedClause": "Assinou em 26 jan 2026",
     "documents": [
       {
-        "code": "11",
-        "issueDate": "2026-01-26T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-06 (via PDF) (Pág. 1)",
-        "extractedClause": "Assinou em 26 jan 2026"
-      },
-      {
         "code": "06",
         "issueDate": "2026-01-26T03:00:00.000Z",
         "expirationDate": "2027-01-26T03:00:00.000Z",
@@ -119135,20 +119032,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "10P0M1yMzNSsT-lSAkhWmgFE_riVEZZP4",
@@ -124644,20 +124528,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "GWO SLU - Módulo de Formação de Usuário do Elevador de Serviço (FORMACAO)",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO SLU - Módulo de Formação de Usuário do Elevador de Serviço (FORMACAO)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "1lmGct6d528ZAg1tYL8_RecQUbkl03ct9",
@@ -139182,20 +139053,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "Fortaleza, 09de Outubrode 2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-09T03:00:00.000Z",
-        "expirationDate": "2028-10-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "Fortaleza, 09de Outubrode 2026"
-      }
-    ]
+    "extractedClause": "Fortaleza, 09de Outubrode 2026"
   },
   {
     "fileId": "16eFJpWX0LhQNqNYwRGRzg228CIKBib9x",
@@ -145219,20 +145077,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1Tc23PLEsiOaEypT2z-Pcf-aRvK7hX2GQ",
@@ -155226,20 +155071,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1ImowK2K7A_IkKv76J6OXqr2ch5K2iYyb",
@@ -158547,20 +158379,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1k2ZwT2kpPP2qIymnU42D9Ytv2ab6pSWR",
@@ -159193,14 +159012,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
-        "code": "31",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO) (via PDF) (Pág. 1)"
       }
     ]
   },
@@ -160107,20 +159918,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1de8XztDEarJqQwILGj9HEXKO_brxWvSr",
@@ -161593,20 +161391,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "15H8TU7lbgbAP_m5SbZMtG0zZ91HVyBez",
@@ -162747,20 +162532,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1rHhPIDv3xQUe9yTXTG3dRlS_oo9-TdYr",
@@ -165260,20 +165032,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1g8T-HX5tVbFcIIATrRnUEiu9PjxDk8Fc",
@@ -166329,20 +166088,7 @@
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "IMAGE_FALLBACK",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1pzHcJdcHVq4JcEVMD9bVpgeLo_ulfAdR",
@@ -173407,20 +173153,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 13/10/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 13/10/2026"
-      }
-    ]
+    "extractedClause": "no dia 13/10/2026"
   },
   {
     "fileId": "1F2njRAMLSX17VbJ9FEUkwpWZqyRiWGLS",
@@ -174442,20 +174175,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 28/09/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-09-28T03:00:00.000Z",
-        "expirationDate": "2028-09-28T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/09/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 28/09/2026"
-      }
-    ]
+    "extractedClause": "no dia 28/09/2026"
   },
   {
     "fileId": "1yWwuVvjX7t-8-8kqpeOFNqdQNcooI3V1",
@@ -179532,16 +179252,6 @@
     "extractedClause": "Assinou em 27 jan 2026",
     "documents": [
       {
-        "code": "11",
-        "issueDate": "2026-01-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-06 (via PDF) (Pág. 1)",
-        "extractedClause": "Assinou em 27 jan 2026"
-      },
-      {
         "code": "06",
         "issueDate": "2026-01-27T03:00:00.000Z",
         "expirationDate": "2027-01-27T03:00:00.000Z",
@@ -180734,17 +180444,6 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "20",
-        "issueDate": "2020-12-23T03:00:00.000Z",
-        "expirationDate": "2021-12-23T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1786 dias (23/12/2021)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 33 - Capacitação de Supervisores de Entrada em Espaço Confinado (Formação) (FORMACAO)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -190125,20 +189824,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Básico",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "27",
-        "issueDate": "2026-01-22T03:00:00.000Z",
-        "expirationDate": "2028-01-22T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 22/01/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Básico",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "1Rtumo59JjvIcyqKY6DS2-65V8PCw6SP8",
@@ -191215,20 +190901,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Intermediário",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "27",
-        "issueDate": "2025-01-21T03:00:00.000Z",
-        "expirationDate": "2027-01-21T03:00:00.000Z",
-        "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 69 dias (21/01/2027)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Intermediário",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "16zuu80kcfbGLCJl-pHWb6jbC4j6Zmpkw",
@@ -192542,20 +192215,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Básico",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "27",
-        "issueDate": "2026-01-29T03:00:00.000Z",
-        "expirationDate": "2028-01-29T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/01/2028",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Básico",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "1nvYsI0zNZW7v9X20etZXzQcmE9Rf8BUW",
@@ -196526,20 +196186,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "MÓDULO DE FORMAÇÃO DE PRIMEIROS SOCORROS (FORMACAO)",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "27",
-        "issueDate": "2024-12-06T03:00:00.000Z",
-        "expirationDate": "2026-12-06T03:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (06/12/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "MÓDULO DE FORMAÇÃO DE PRIMEIROS SOCORROS (FORMACAO)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "1BHrabZT-3H5JDdbTa9tN-NZZioekEF3m",
@@ -210855,17 +210502,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "LOTO - Guia Prático",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "20",
-        "issueDate": "2026-01-17T03:00:00.000Z",
-        "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 65 dias (17/01/2027)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -224537,16 +224173,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-11-06T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "17",
         "issueDate": "2026-11-06T03:00:00.000Z",
         "expirationDate": "2028-11-06T03:00:00.000Z",
@@ -224736,16 +224362,6 @@
     "matchedTerm": "GWO ART (via PDF) (Pág. 2)",
     "extractedClause": "Caucaia, 10de Novembro de 2026 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-11-10T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "32",
         "issueDate": "2026-11-10T03:00:00.000Z",
@@ -230604,20 +230220,7 @@
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
-    "extractedClause": "no dia 12/11/2026",
-    "documents": [
-      {
-        "code": "31",
-        "issueDate": "2026-11-12T03:00:00.000Z",
-        "expirationDate": "2028-11-12T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/11/2028",
-        "source": "IMAGE_FALLBACK",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
-        "extractedClause": "no dia 12/11/2026"
-      }
-    ]
+    "extractedClause": "no dia 12/11/2026"
   },
   {
     "fileId": "1LM9IYOCcVEHs5JjaEp73yek8KVRY8kt5",
@@ -233651,17 +233254,6 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "13",
-        "issueDate": "2023-02-24T03:00:00.000Z",
-        "expirationDate": "2025-02-24T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 627 dias (24/02/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 Básico (Segurança em Instalações e Serviços em Eletricidade) e NR-10 Complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -244222,83 +243814,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "19",
-        "issueDate": "2023-05-10T03:00:00.000Z",
-        "expirationDate": "2025-05-10T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 552 dias (10/05/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST Fire Awareness",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "16",
-        "issueDate": "2023-05-11T03:00:00.000Z",
-        "expirationDate": "2025-05-11T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 551 dias (11/05/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST First Aid",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "17",
-        "issueDate": "2023-05-10T03:00:00.000Z",
-        "expirationDate": "2025-05-10T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 552 dias (10/05/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST Manual Handling",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "21",
-        "issueDate": "2023-11-09T03:00:00.000Z",
-        "expirationDate": "2025-11-09T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 369 dias (09/11/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 35 – Safety on work at height (Formation/Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "12",
-        "issueDate": "2023-06-19T03:00:00.000Z",
-        "expirationDate": "2025-06-19T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 512 dias (19/06/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 10 BAS – Safety on Electrical operations (Formation / Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "13",
-        "issueDate": "2024-08-01T03:00:00.000Z",
-        "expirationDate": "2026-08-01T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 104 dias (01/08/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 10 SEP – Safety on Electrical operations (Formation/Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "09",
-        "issueDate": "2024-01-06T03:00:00.000Z",
-        "expirationDate": "2026-01-06T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 311 dias (06/01/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Defensive Driving - Brazil (DIREÇÃO DEFENSIVA) - 2 Years validity - OR",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
         "code": "15",
         "issueDate": "2025-05-03T03:00:00.000Z",
         "expirationDate": "2027-05-03T03:00:00.000Z",
@@ -244307,17 +243822,6 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR12 – Operation of Industrial Machines and Equipment (UP-9079) - OR",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "28",
-        "issueDate": "2024-06-04T03:00:00.000Z",
-        "expirationDate": "2025-06-04T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 527 dias (04/06/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 33 Confined Space (Trabalhador Autorizado e Vigia / Supervisor)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -250996,17 +250500,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-10 Curso Básico - Segurança em Instalações e Serviços com Eletricidade (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "13",
-        "issueDate": "2023-02-09T03:00:00.000Z",
-        "expirationDate": "2025-02-09T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 642 dias (09/02/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 Básico e NR-10 Complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades (FORMACAO)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -251763,17 +251256,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "13",
-        "issueDate": "2023-02-18T03:00:00.000Z",
-        "expirationDate": "2025-02-18T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 633 dias (18/02/2025)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-10 Básico (Segurança em Instalações e Serviços em Eletricidade) e NR-10 Complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -251901,83 +251383,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "19",
-        "issueDate": "2022-12-14T03:00:00.000Z",
-        "expirationDate": "2024-12-14T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 699 dias (14/12/2024)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST Fire Awareness",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "16",
-        "issueDate": "2022-12-13T03:00:00.000Z",
-        "expirationDate": "2024-12-13T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 700 dias (13/12/2024)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST First Aid",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "17",
-        "issueDate": "2022-12-14T03:00:00.000Z",
-        "expirationDate": "2024-12-14T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 699 dias (14/12/2024)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO BST Manual Handling",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "21",
-        "issueDate": "2024-11-30T03:00:00.000Z",
-        "expirationDate": "2026-11-30T03:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 17 dias (30/11/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 35 – Safety on work at height (Formation/Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "12",
-        "issueDate": "2024-12-05T03:00:00.000Z",
-        "expirationDate": "2026-12-05T03:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (05/12/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 10 BAS – Safety on Electrical operations (Formation / Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "13",
-        "issueDate": "2025-01-23T03:00:00.000Z",
-        "expirationDate": "2027-01-23T03:00:00.000Z",
-        "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 71 dias (23/01/2027)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 10 SEP – Safety on Electrical operations (Formation/Refresher)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "09",
-        "issueDate": "2025-08-05T03:00:00.000Z",
-        "expirationDate": "2027-08-05T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 05/08/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Defensive Driving - Brazil (DIREÇÃO DEFENSIVA) - 2 Years validity - OR",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
         "code": "15",
         "issueDate": "2025-10-13T03:00:00.000Z",
         "expirationDate": "2027-10-13T03:00:00.000Z",
@@ -251986,17 +251391,6 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR12 – Operation of Industrial Machines and Equipment - 2 year validity (UP-10143) - OR",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "28",
-        "issueDate": "2025-04-16T03:00:00.000Z",
-        "expirationDate": "2026-04-16T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 211 dias (16/04/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR 33 Confined Space (Trabalhador Autorizado e Vigia / Supervisor)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -253812,20 +253206,7 @@
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Intermediário",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "27",
-        "issueDate": "2024-11-07T03:00:00.000Z",
-        "expirationDate": "2026-11-07T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 6 dias (07/11/2026)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Atendimento Pré Hospitalar (Primeiros Socorros) Intermediário",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam"
   },
   {
     "fileId": "1br64TKcOG2k5zTmVBZLVAIC4Js-lqLEJ",
@@ -255534,6 +254915,604 @@
         "source": "FILENAME",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "ASO"
+      }
+    ]
+  },
+  {
+    "fileId": "18FhOiY4BQqyZqyEJJdP5sjg8AxX2lZUX",
+    "filename": "27-10-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR1_-_DISPOSIçõES_GERAIS_E_GERENCIAMENTO_DE_RISCOS_OCUPACIONAIS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "be93903d160e522104bddb278a2d4cb0",
+    "modifiedTime": "2026-11-13T17:00:53.169Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-10-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-10-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1EXYohEsG34vZ23z7al034ugIB9RYLYFG",
+    "filename": "08-11-2026_Adenio_Francisco_de_Sousa_[STORZ-ARTHWIND]_-_NR11_-_TRANSPORTE_MOVIMENTAçãO_ARMAZENAGEM_E_MANUSEIO_DE_MATERIAIS_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "aae2334db50b6ee5e51dd59ff203facd",
+    "modifiedTime": "2026-11-13T14:04:57.988Z",
+    "holder": {
+      "key": "h2:ADENIO FRANCISCO SOUSA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ-ARTHWIND] - NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1ITZQHK2z6ptaOREh7FoVW6ghmQzGF3oR",
+    "filename": "04-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR33_SUPERVISOR_(INICIAçãO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "15464fb2b5fd4125309ddbf41f80b429",
+    "modifiedTime": "2026-11-13T16:53:59.870Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-11-04T03:00:00.000Z",
+    "expirationDate": "2027-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 Supervisor",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-11-04T03:00:00.000Z",
+        "expirationDate": "2027-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Supervisor",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1lR6OPkbqN7_YLd9-__E9lissMuCww-nC",
+    "filename": "11-09-2026_Wilden_Alves_Ferreira_[STORZ]_-_NR33_SUPERVISOR_(PERIóDICO) (1).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "69efe054811cabd2ff8f6f5edbed0e13",
+    "modifiedTime": "2026-11-13T14:54:15.311Z",
+    "holder": {
+      "key": "h2:WILDEN ALVES FERREIRA",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-09-11T03:00:00.000Z",
+    "expirationDate": "2027-09-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-09-11T03:00:00.000Z",
+        "expirationDate": "2027-09-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "10JqGzEOP7TZsrJpbUrnJQtcyC8f4B0s-",
+    "filename": "04-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA_(INICIAçãO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1b30611a4faea2f963a3726e7b07995a",
+    "modifiedTime": "2026-11-13T16:53:37.299Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-11-04T03:00:00.000Z",
+    "expirationDate": "2027-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-11-04T03:00:00.000Z",
+        "expirationDate": "2027-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1qEwwTXsIPK2S6wTYUeWDKdINFgOcZrzH",
+    "filename": "01-09-2026_Wilden_Alves_Ferreira_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA_(PERIóDICO) (1).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "708aa58f06215dbde4faad76adc37443",
+    "modifiedTime": "2026-11-13T14:53:54.446Z",
+    "holder": {
+      "key": "h2:WILDEN ALVES FERREIRA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-09-01T03:00:00.000Z",
+    "expirationDate": "2027-09-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2027-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1WDxfeqvzvnI3dTFVlnP_OKKhYmo10c8d",
+    "filename": "02-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ-ARTHWIND]_-_PREVENçãO_E_PROTEçãO_CONTRA_INCêNDIOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "92c41649dee4636d5a94a4b66a65afcb",
+    "modifiedTime": "2026-11-13T16:52:50.947Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": null,
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "statusEHS": "INDETERMINADO",
+    "statusDetail": "Data não informada ou formato inválido",
+    "source": "PDF_CONTENT",
+    "classificationSource": "NONE",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": null,
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "PDF_CONTENT",
+        "classificationSource": "NONE",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1YkbrGwOtDaBxEMZnofzXOOPwu8mt3sJ3",
+    "filename": "27-10-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR18_-_SEGURANçA_E_SAúDE_NO_TRABALHO_NA_INDúSTRIA_DA_CONSTRUçãO_(BáSICO_EM_SEGURANçA_DO_TRABALHO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a986f20aaeedb1f2977056ecdb01bcf7",
+    "modifiedTime": "2026-11-13T16:52:13.493Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "18",
+    "issueDate": "2026-10-27T03:00:00.000Z",
+    "expirationDate": "2028-10-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-18",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "18",
+        "issueDate": "2026-10-27T03:00:00.000Z",
+        "expirationDate": "2028-10-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-18",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1mcO9gQKo1gxUzeC6k0VsBRcms61OWIWd",
+    "filename": "Igor Martins Rocha - Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0a08b72df91e70e1344348b07d11c769",
+    "modifiedTime": "2026-11-13T17:34:32.754Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-09-03T03:00:00.000Z",
+    "expirationDate": "2028-09-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF)",
+    "extractedClause": "no dia 03 Setembrode 2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-09-03T03:00:00.000Z",
+        "expirationDate": "2028-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF)",
+        "extractedClause": "no dia 03 Setembrode 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1ZkCa-QnAL_VzTCnf5LMVGd81HdoFJZ4H",
+    "filename": "06-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR12_-_SEGURANçA_NO_TRABALHO_EM_MáQUINAS_E_EQUIPAMENTOS_(GERAL)_(INICIAçãO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3be4c60fdb18b81f05149bfc88597a91",
+    "modifiedTime": "2026-11-13T16:51:54.493Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-11-06T03:00:00.000Z",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-06T03:00:00.000Z",
+        "expirationDate": "2028-11-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1blA2BZXv_zjLkusxLcjggp48D8awSX-D",
+    "filename": "Francisco Davilo Marques de Sousa - NR 35 - Clicksign_removed.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "bfa138e7835a4de1bc6243fa2c4258f9",
+    "modifiedTime": "2026-11-13T17:50:16.625Z",
+    "holder": {
+      "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-05-27T03:00:00.000Z",
+    "expirationDate": "2028-05-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 27 de Maio de 2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-05-27T03:00:00.000Z",
+        "expirationDate": "2028-05-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35",
+        "extractedClause": "no dia 27 de Maio de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1iYY4ctaWbM9gm5cAY4IDBmNIu2Nwp_sU",
+    "filename": "27-10-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR6_-_EPIS_E_EPCS_(EQUIPAMENTOS_DE_PROTEçãO_INDIVIDUAL_E_COLETIVA).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0b782bd989be28075ffce98af64872d7",
+    "modifiedTime": "2026-11-13T16:51:11.726Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-10-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "17niyo_ZcORhTWgIZNAQu17DoI3_hpaa2",
+    "filename": "04-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_NR10_-_CURSO_BáSICO_-_SEGURANçA_EM_INSTALAçõES_E_SERVIçOS_COM_ELETRICIDADE_(INICIAçãO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "41748a41d32c97c034e4ead9f02553fa",
+    "modifiedTime": "2026-11-13T16:49:12.254Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-04T03:00:00.000Z",
+    "expirationDate": "2028-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-04T03:00:00.000Z",
+        "expirationDate": "2028-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1XyoAvaZ1aZGK2OSChYXyIAAPhoB1E8CP",
+    "filename": "Ant├┤nio Carvalho J├║nior 35pdf - Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4bffeda2d43d9f7ee686bb33fb9b854d",
+    "modifiedTime": "2026-11-13T17:36:23.888Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-09-03T03:00:00.000Z",
+    "expirationDate": "2028-09-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF)",
+    "extractedClause": "no dia 03 Setembrode 2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-09-03T03:00:00.000Z",
+        "expirationDate": "2028-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF)",
+        "extractedClause": "no dia 03 Setembrode 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1JCK2T8PLfLlM41vvNTj2tbqqUpoMfAN-",
+    "filename": "11-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ-ARTHWIND]_-_NR11_-_TRANSPORTE_MOVIMENTAçãO_ARMAZENAGEM_E_MANUSEIO_DE_MATERIAIS_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3355baa524ad051790d87a1f16c89975",
+    "modifiedTime": "2026-11-13T16:24:06.993Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "expirationDate": "2028-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "expirationDate": "2028-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "17GrWyqCIlxWtKzFU4ejf57Lpdz5p2_Gy",
+    "filename": "02-11-2026_Henrique_Elano_Gomes_Fernandes_[STORZ]_-_LOTO_-_GUIA_PRáTICO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a6b54939c802adf743eb13b882cefa1c",
+    "modifiedTime": "2026-11-13T16:23:04.738Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "expirationDate": "2028-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "expirationDate": "2028-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1uRMOQLcuhOjLErzO3M3-s_xhNjyQXmuY",
+    "filename": "Passaporte_Leonardo Gaem.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6e4f214c26a3ca68ebab6d888186508d",
+    "modifiedTime": "2026-01-08T07:04:24.000Z",
+    "holder": {
+      "key": "h2:LEONARDO SIMON COSTA GAEM",
+      "status": "NAO_ENCONTRADO"
+    },
+    "code": "01",
+    "statusEHS": "NAO_LIDO",
+    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"Passaporte_Leonardo Gaem.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "source": "FILENAME",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ASO (via PDF)",
+    "documents": [
+      {
+        "code": "01",
+        "statusEHS": "NAO_LIDO",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"Passaporte_Leonardo Gaem.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "source": "FILENAME",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ASO (via PDF)"
       }
     ]
   }
