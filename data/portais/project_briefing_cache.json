@@ -180,6 +180,15 @@
     "team": "Francisco Vinicius Sousa Dos Santos, Herbens, Wanderson Avelino de Souza, Ítalo Abreu"
   },
   {
+    "wo": "2026-0023-2",
+    "client": "ENEL",
+    "windfarm": "Complexo Eólico Morro do Chapéu",
+    "scope": "Investigativa",
+    "startDate": "2026-04-03",
+    "status": "Amarelo",
+    "team": "Allan Thiago Ramos Veiga, Daniel, Valderson"
+  },
+  {
     "wo": "WOOPEN09",
     "client": "NAWP PERU",
     "windfarm": "Complexo Eólico San Juan de Marcona",
@@ -493,6 +502,15 @@
     "startDate": "2026-09-02",
     "status": "Amarelo",
     "team": "Terceirizado"
+  },
+  {
+    "wo": "ATD-2026-0125",
+    "client": "ENEL",
+    "windfarm": "Complexo Eólico Morro do Chapéu",
+    "scope": "Investigativa",
+    "startDate": "2026-04-03",
+    "status": "Amarelo",
+    "team": "Allan Thiago Ramos Veiga, Thiago Lima"
   },
   {
     "wo": "ATD-2026-0115",
@@ -1012,15 +1030,7 @@
     "scope": "AUDITORIA – REPARO",
     "startDate": "2026-10-12",
     "status": "Verde",
-    "team": "Diego Patrick, Emerson Pallotta Ribeiro"
-  },
-  {
-    "client": "INVENERGY",
-    "windfarm": "Adcomp Sorocaba",
-    "scope": "AUDITORIA – RECEBIMENTO",
-    "startDate": "2026-11-02",
-    "status": "Amarelo",
-    "team": "Diego Patrick, Elias dos Santos Rodrigues, Lucas Franklin"
+    "team": "Diego Patrick, Emerson Pallotta Ribeiro, Joceleo"
   },
   {
     "wo": "WOPEND225",
@@ -1029,7 +1039,7 @@
     "scope": "AUDITORIA – REPARO",
     "startDate": "2026-11-23",
     "status": "Amarelo",
-    "team": "?, Diego Patrick"
+    "team": "Antonio Carvalho, Diego Menezes, Diego Patrick, Wilden"
   },
   {
     "wo": "WOPEND226",
@@ -1038,7 +1048,7 @@
     "scope": "AUDITORIA – REPARO",
     "startDate": "2026-11-23",
     "status": "Amarelo",
-    "team": "?, Diego Patrick"
+    "team": "Diego Patrick, Luana Queiroz de Sousa"
   },
   {
     "wo": "WOPEND120",
@@ -1047,7 +1057,7 @@
     "scope": "AUDITORIA – RECEBIMENTO",
     "startDate": "2026-11-30",
     "status": "Amarelo",
-    "team": "?, Diego Menezes, Diego Patrick, Maria Bruna Soares Santos, Thayná Nogueira Tavares"
+    "team": "Antonio Carvalho, Diego Patrick, Elias dos Santos Rodrigues, Maria Bruna Soares Santos"
   },
   {
     "wo": "WOPEND121",
@@ -1056,7 +1066,7 @@
     "scope": "AUDITORIA – RECEBIMENTO",
     "startDate": "2026-11-30",
     "status": "Amarelo",
-    "team": "Diego Menezes, Diego Patrick, Elias dos Santos Rodrigues, Wilden"
+    "team": "Antonio Carvalho, Diego Patrick, Emerson Pallotta Ribeiro, Thayná Nogueira Tavares"
   },
   {
     "client": "CPFL",
