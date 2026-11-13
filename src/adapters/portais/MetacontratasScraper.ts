@@ -13,7 +13,8 @@ export const METACONTRATAS_TARGETS = [
   { match: /IBITU/i, nth: 0, client: 'IBITU ENERGIA S.A' },
   { match: /ENERGIMP/i, nth: 0, client: 'ENERGIMP (1, desativado)' },
   { match: /ENERGIMP/i, nth: 1, client: 'ENERGIMP (2)' },
-  { match: /REPSOL/i, nth: 0, client: 'REPSOL CHILE' }
+  { match: /REPSOL/i, nth: 0, client: 'REPSOL CHILE' },
+  { match: /CPFL/i, nth: 0, client: 'CPFL' }
 ]
 
 function mapDocStatus(raw: string): PortalDocStatus | undefined {
@@ -148,7 +149,10 @@ export async function scrapeMetacontratasCensus(
         waitUntil: 'commit',
         timeout: 25000
       })
-      await hubPage.waitForSelector('button:has-text("IBITU"), button:has-text("ENERGIMP")', { timeout: 20000 })
+      await hubPage.waitForSelector(
+        'button:has-text("IBITU"), button:has-text("ENERGIMP"), button:has-text("CPFL"), button:has-text("REPSOL")',
+        { timeout: 20000 }
+      )
       await hubPage.waitForTimeout(2000)
 
       const btn = hubPage.locator('button').filter({ hasText: target.match }).nth(target.nth)

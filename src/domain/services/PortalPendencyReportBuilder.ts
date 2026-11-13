@@ -297,10 +297,20 @@ const VALID_BASE_STATUSES = new Set([
  * the EHS team a document is on file when it is not.
  */
 export function portalDocCode(title: string): string | null {
-  const norm = title.normalize('NFD').replace(/[̀-ͯ]/g, '')
+  const norm = title.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   if (/emergencia|salvamento|resgate|brigada/i.test(norm)) return null
   if (/supervisor/i.test(norm) && /confinado|NR\s*-?\s*33/i.test(norm))
     return '28'
+  if (/carta\s*(?:de\s+)?anuencia/i.test(norm)) {
+    if (/NR\s*-?\s*10\b/i.test(norm)) return '12.1'
+    if (/NR\s*-?\s*12\b/i.test(norm)) return '15.1'
+    if (/NR\s*-?\s*33\b/i.test(norm)) return '20.1'
+    if (/NR\s*-?\s*35\b/i.test(norm)) return '21.1'
+    return null
+  }
+  if (/cartao\s+de\s+vacinas?\b/i.test(norm)) return '05'
+  if (/e-?social\b/i.test(norm)) return '03'
+  if (/treinamento\s+basico\s+de\s+seguranca.*integracao/i.test(norm)) return '10'
   return CertificateClassifier.classify(norm).code
 }
 

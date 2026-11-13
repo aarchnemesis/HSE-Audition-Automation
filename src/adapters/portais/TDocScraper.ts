@@ -151,8 +151,9 @@ export async function scrapeTdocCensus(
             }
           }
 
-          if (!rawWorkersMap.has(fullName)) {
-            rawWorkersMap.set(fullName, {
+          const workerKey = `${fullName}|${t.name}`
+          if (!rawWorkersMap.has(workerKey)) {
+            rawWorkersMap.set(workerKey, {
               nome: fullName,
               cpf: rowData.cpf || undefined,
               funcao: rowData.cargo || undefined,
@@ -160,7 +161,7 @@ export async function scrapeTdocCensus(
               pendencias: docsList
             })
           } else {
-            const existWorker = rawWorkersMap.get(fullName)!
+            const existWorker = rawWorkersMap.get(workerKey)!
             for (const doc of docsList) {
               if (!existWorker.pendencias.some(pd => pd.documento === doc.documento)) {
                 existWorker.pendencias.push(doc)
