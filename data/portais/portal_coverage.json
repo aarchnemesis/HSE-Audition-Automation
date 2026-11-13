@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-11-12",
+  "refDate": "2026-11-13",
   "portals": [
     {
       "portal": {
@@ -52,7 +52,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-12T21:00:56.179Z",
+        "capturedAt": "2026-11-13T10:00:37.236Z",
         "workers": 13
       },
       "clients": [
@@ -126,7 +126,7 @@
         {
           "client": "VESTAS CHILE",
           "activity": "IN_FIELD",
-          "projectsInWindow": 6,
+          "projectsInWindow": 5,
           "lastStart": "2026-11-06",
           "nextStart": "2026-11-18"
         },
@@ -614,7 +614,7 @@
         {
           "client": "INVENERGY",
           "activity": "IN_FIELD",
-          "projectsInWindow": 6,
+          "projectsInWindow": 5,
           "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
