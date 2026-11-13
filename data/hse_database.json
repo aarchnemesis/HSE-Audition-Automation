@@ -455,13 +455,13 @@
     "expirationDate": "2028-11-08T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "623618",
-    "storzState": "SOLICITADO",
+    "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 08/11/2028 | Reciclagem já solicitada na Storz (623618 - Status: SOLICITADO).",
+    "detail": "Válido até 08/11/2028 | Reciclagem já solicitada na Storz (623618 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1EXYohEsG34vZ23z7al034ugIB9RYLYFG/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1hs_a_N5vvpIFEISytZ6i-CZInclA50uX",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T18:12:38.484Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_12",
@@ -1911,12 +1911,12 @@
     "statusEHS": "VENCE_15",
     "storzRequestId": "621275",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 25,
+    "storzProgressPercent": 28,
     "storzDeadline": "12/01/2027",
-    "detail": "ALERTA URGENTE: Vence em 11 dias (24/11/2026) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (621275 - Progresso: 25%) [Prazo Storz: 12/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (12/01/2027)!",
+    "detail": "ALERTA URGENTE: Vence em 11 dias (24/11/2026) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (621275 - Progresso: 28%) [Prazo Storz: 12/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 24/11/2026, ANTES do prazo da Storz (12/01/2027)!",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1OLwcwGxacW4yBI0CfFCH5TEvTWi0mZwM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -21658,7 +21658,7 @@
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
@@ -21668,13 +21668,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/19uMV8kTbKIfMIrQR297xBfTEVkNphvDO/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "08",
     "docName": "CNH - Carteira de Habilitação",
@@ -21685,13 +21685,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1wIphPgj1Upi3eZL5QFL0cZqErqOxjj9N/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T09:32:29.100Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "10",
     "docName": "NR-01 Integração EHS",
@@ -21704,13 +21704,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1VQbhHax_UWF_CV9ToxGSLYyy9hb3sdB9/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "11",
     "docName": "NR-06 Uso de EPI",
@@ -21723,13 +21723,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1aWA-4lE1fdZchqK5U9F9wJmeqHf5yjHY/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "12",
     "docName": "NR-10 Básico",
@@ -21743,13 +21743,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1CVEnyFxJhd5D4SUCHmZFqFOXFAHssx24/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:47:03.278Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "13",
     "docName": "NR-10 SEP",
@@ -21763,13 +21763,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1UNPg9m2kwGIiah7X-30IUrxE8tR1ZEJy/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
@@ -21783,13 +21783,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1ueLCx1O3vvl2FSB-nJCMfNZAR-rS87sn/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
@@ -21803,13 +21803,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1yD1b2zOgmw8xg6cAFdI--Hfhx1g7vsas/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
@@ -21819,13 +21819,13 @@
     "detail": "Válido até 13/06/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
@@ -21835,13 +21835,13 @@
     "detail": "Válido até 16/06/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "18",
     "docName": "NR-18 Integração EHS",
@@ -21855,13 +21855,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/15Hcv_WRMd-c55yYunTx5kEXCTonQgIqD/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
@@ -21874,13 +21874,13 @@
     "detail": "Curso renovado e aprovado na Storz (612341) em 30/10/2026 — Válido até 30/10/2028 (aguardando upload no Drive).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
@@ -21894,13 +21894,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1RDHhm2E5VTi_oWGe63yvFliIXryTfi-h/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
@@ -21911,13 +21911,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/1suq7oDauloTwiY6PR3aIr4ceukLwoDQi/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T09:32:29.100Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
@@ -21931,13 +21931,13 @@
     "evidenceUrl": "https://drive.google.com/file/d/17SRSkS4ekMH_xnHY6Km0lgyoT13UD7Pf/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_79",
     "inspectorName": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "28",
     "docName": "NR-33 Supervisor",
@@ -21951,24 +21951,7 @@
     "evidenceUrl": "https://drive.google.com/file/d/13U-0azaC7LtAPOwpqmUhw0X6sMkAqJ_I/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
-  },
-  {
-    "inspectorId": "rpo_79",
-    "inspectorName": "WILLAMES WAGNER DA SILVA",
-    "role": "INSPETOR",
-    "sector": "OPERAÇÕES",
-    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
-    "docCode": "31",
-    "docName": "Elevador (JASO)",
-    "modality": "ONLINE",
-    "expirationDate": "2028-11-12T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 12/11/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1zOF2FXu-LjGPM53JXlbNFZM2tFut6Anz/view",
-    "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
-    "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T18:32:06.274Z"
   },
   {
     "inspectorId": "rpo_81",

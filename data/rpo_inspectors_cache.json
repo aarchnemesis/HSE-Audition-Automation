@@ -9645,6 +9645,7 @@
     "id": "rpo_79",
     "name": "WILLAMES WAGNER DA SILVA",
     "role": "INSPETOR",
+    "sector": ",",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "windaId": "WD069634BR",
     "certificates": {
@@ -9753,7 +9754,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/10/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_81",
