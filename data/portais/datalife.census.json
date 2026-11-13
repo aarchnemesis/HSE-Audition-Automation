@@ -1,61 +1,5264 @@
 {
   "portalId": "datalife",
-  "portalName": "Datalife (GE Vernova)",
+  "portalName": "Datalife (Neoenergia, Enel, GE Vernova)",
   "system": "Datalife",
-  "capturedAt": "2026-11-12T09:06:26.848Z",
+  "capturedAt": "2026-11-13T10:25:49.664Z",
   "workers": [
     {
-      "name": "ALLAN THIAGO RAMOS VEIGA",
+      "name": "ADENILÇO QUEIROZ DA SILVA",
+      "cpf": "34984149841",
       "status": "BLOCKED",
       "cleared": false,
-      "plant": "(ENEL) LAGOA DOS VENTOS",
-      "client": "GE VERNOVA",
-      "documents": []
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "DELFINA (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-06-28",
+          "required": true
+        },
+        {
+          "title": "NR35 (1 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-25",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-17",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-25",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (1 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-03",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-31",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-12",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-20",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-10",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ALISON DOS SANTOS RIBEIRO",
+      "cpf": "04839401357",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 7,
+      "plant": "CRISTAL (O&M), CURVA DOS VENTOS (O&M), DELFINA (O&M), FONTES DOS VENTOS I&II (O&M), MODELO (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "note": "Contrato de Prestação de Serviços",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-19",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-18",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ALLAN THIAGO RAMOS VEIGA",
+      "cpf": "22694750893",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "DELFINA (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Lider Operacional",
+      "jobRole": "O&M - Lider Operacional",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-18",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-24",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-20",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-12",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANDERSON VIEIRA DA ROCHA",
+      "cpf": "01881986365",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 16,
+      "plant": "MORRO DO CHAPEU SUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-08",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-04-10",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-02",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-25",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-28",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-11",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-15",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-27",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-20",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANTONIO CARLOS PEREIRA",
+      "cpf": "41099125391",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 12,
+      "plant": "CRISTAL (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-01",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-17",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-03",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANTONIO NATANAIL SILVA DE OLIVEIRA",
+      "cpf": "06678363302",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 17,
+      "plant": "MODELO (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-10",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-15",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2031-06-04",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-14",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-20",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-18",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-29",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-14",
+          "required": true
+        },
+        {
+          "title": "NR12 (2 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2025-09-14",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2025-09-20",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANTONIO RAFAEL DOS SANTOS",
+      "cpf": "01281013340",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "DELFINA (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-11",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-05-04",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-08",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-14",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-21",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-06",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-08-12",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BRUNO EDUARDO FERREIRA DE PAIVA",
+      "cpf": "06641967646",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 9,
+      "plant": "CURVA DOS VENTOS (O&M), FONTES DOS VENTOS I&II (O&M), MODELO (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-26",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2026-03-22",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-04-20",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-05",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-10",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-07-03",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "CAIO VICTOR OLIVEIRA BALBINO",
+      "cpf": "07225266365",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "MORRO DO CHAPEU SUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-26",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-15",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-11-26",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-08",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-29",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-05",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-18",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-12",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-10-26",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "DANIEL FERNANDES PACHECO",
+      "cpf": "38640858888",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 9,
+      "plant": "CRISTAL (O&M), CURVA DOS VENTOS (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "note": "Contrato de prestação de Serviços",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-06-26",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-11",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-07-07",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "DANIEL FERREIRA DA SILVA FILHO",
+      "cpf": "11658296656",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 15,
+      "plant": "DELFINA (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-26",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2087-02-24",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-28",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-06-29",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-26",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2032-05-21",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-06-01",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-06",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2029-03-26",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-09",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-18",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-24",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EDCLEI DA CONCEIÇÃO CUSTÓDIO",
+      "cpf": "28309848897",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "FONTES DOS VENTOS I&II (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-19",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-21",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-08",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-26",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-12",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "EXPIRING",
+          "expiresOn": "2025-02-14",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EDWARD THIAGO HERCULANO RIBEIRO",
+      "cpf": "05653750328",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 17,
+      "plant": "MODELO (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-07-30",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-05-16",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-17",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-21",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-05",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-10",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-01",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-18",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2024-10-10",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ERALDO ANTONIO DE MOURA",
+      "cpf": "00870925490",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 17,
+      "plant": "DELFINA (O&M), FONTES DOS VENTOS I&II (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-24",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-05",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (1 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-28",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-16",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-05",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-10",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-24",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-08-28",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "EZEQUIEL CRUZ VIEIRA",
+      "cpf": "04242956363",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "DELFINA (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-31",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-22",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-03",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-23",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-20",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-01",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2026-09-01",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FELIPE ALAN PEGHIN DOS SANTOS",
+      "cpf": "32979348830",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 7,
+      "plant": "FONTES DOS VENTOS I&II (O&M), MODELO (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-23",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "note": "contrato de Prestação de Serviços",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2024-12-11",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FELIPE DOS SANTOS CASTRO",
+      "cpf": "60824147308",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 14,
+      "plant": "FONTES DOS VENTOS I&II (O&M), MODELO (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade",
+      "jobRole": "O&M - Inspetor de Qualidade",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-06-08",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-06-09",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-01",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-09",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-05-01",
+          "required": true
+        },
+        {
+          "title": "NR33 (1 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-02-08",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO ELVISON PEREIRA DE SOUSA",
+      "cpf": "07117520361",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 14,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade",
+      "jobRole": "O&M - Inspetor de Qualidade",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-01",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-26",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-10",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2033-01-03",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO ESTEPHANYO ARAÚJO DE ALBUQUERQUE",
+      "cpf": "06325558316",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 17,
+      "plant": "DELFINA (O&M), SERRA AZUL (O&M)",
+      "role": "E&C - Analista de Engenharia",
+      "jobRole": "E&C - Analista de Engenharia",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carta de Anuência NR 10 (1 de 4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 33 (3 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2026-07-21",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (1 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (1 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Admissional (1 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-04-14",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "EXPIRED",
+          "expiresOn": "2027-12-12",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-06-16",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-06-30",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência de certificados em geral",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR33 (1 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-05-08",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 35 (3 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-07-31",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-05-12",
+          "required": true
+        },
+        {
+          "title": "GWO (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2028-05-05",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRED",
+          "expiresOn": "2027-05-01",
+          "required": true
+        },
+        {
+          "title": "NR11",
+          "status": "EXPIRED",
+          "expiresOn": "2027-07-01",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-07-23",
+          "required": true
+        }
+      ]
     },
     {
       "name": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
+      "cpf": "07832378395",
       "status": "BLOCKED",
       "cleared": false,
-      "plant": "(ENEL) LAGOA DOS VENTOS",
-      "client": "GE VERNOVA",
-      "documents": []
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-28",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-03-08",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-03",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-19",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-07-28",
+          "required": true
+        }
+      ]
     },
     {
       "name": "FRANCISCO MARCOS DE SOUZA MAGALHAES",
+      "cpf": "07229586330",
       "status": "BLOCKED",
       "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "MORRO DO CHAPEU SUL (O&M)",
+      "role": "O&M - Lider Operacional",
+      "jobRole": "O&M - Lider Operacional",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2031-09-01",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-01",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-18",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-17",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-04",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-08",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-22",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-17",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-08-20",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ITALO FELIX DE OLIVEIRA",
+      "cpf": "03984676417",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 13,
+      "plant": "FONTES DOS VENTOS I&II (O&M)",
+      "role": "O&M - Inspetor de Qualidade",
+      "jobRole": "O&M - Inspetor de Qualidade",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-30",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-13",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-23",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-05",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2024-12-31",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "JOÃO CARLOS GUARDIANO DA SILVA",
+      "cpf": "08787966492",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 16,
+      "plant": "MORRO DO CHAPEU SUL (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2031-07-07",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-18",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-16",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-24",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-30",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-11",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-20",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-28",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "JONATAS CARLOS DA MOTA SANTOS",
+      "cpf": "12226500880",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 14,
+      "plant": "DELFINA (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-28",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-06",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-23",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-08-20",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "JOSE RICARDO BRAGA MATOS",
+      "cpf": "07657873345",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "DELFINA (O&M), MODELO (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-27",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-03-12",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-22",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-24",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-06",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-05-15",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-04",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-21",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-15",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-05",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-23",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-14",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2040-04-14",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "LEANDRO NUNES DE OLIVEIRA",
+      "cpf": "28514040839",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 17,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-23",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-10",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-06-14",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-20",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-03",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-21",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-17",
+          "required": true
+        },
+        {
+          "title": "CTPS (1 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2024-10-10",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "LUCAS ANDRE DE SOUSA RIBEIRO",
+      "cpf": "07357805360",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 17,
+      "plant": "FONTES DOS VENTOS I&II (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-08",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-19",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-08-04",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-02",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-22",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-28",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-06",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-03-06",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "EXPIRING",
+          "expiresOn": "2024-11-08",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "LUCAS BATISTA ARAUJO",
+      "cpf": "86179392579",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 15,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-02",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2037-11-01",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2030-05-23",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-03",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2036-09-19",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-16",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-18",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2029-12-01",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-08",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-20",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-25",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2033-07-31",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-18",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-25",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "LUCAS JEAN GONÇALVES DE SOUZA",
+      "cpf": "07172560302",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "DELFINA (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2035-10-22",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-20",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-03",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-29",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-29",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-15",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-04",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-23",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-10-23",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "LUIS GUSTAVO ROSA DA SILVA",
+      "cpf": "36789785841",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 9,
+      "plant": "DELFINA (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2031-10-21",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-27",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-03",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-09-30",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-07-17",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "NARDEL DELON NOVAIS ROCHA",
+      "cpf": "21992426848",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 9,
+      "plant": "CRISTAL (O&M), DELFINA (O&M), FONTES DOS VENTOS I&II (O&M), MODELO (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "expiresOn": "2026-06-30",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2026-03-22",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-08-06",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-16",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-05",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-10-08",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "PAULO GUILHERME MARTINS MENESES FILHO",
+      "cpf": "08569101392",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 17,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-23",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2035-11-27",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-07",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-11",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-12",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-08-08",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-13",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-02",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-17",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "PEDRO EZEQUIEL DE ABREU GOMES",
+      "cpf": "06860366389",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 2,
+      "totalDocuments": 16,
+      "plant": "MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-09",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-30",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-31",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-31",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-06",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-10",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-29",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-25",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-12-13",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2026-09-30",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "PEDRO PAULO FERREIRA DE ALMEIDA",
+      "cpf": "14980586805",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-14",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-18",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-27",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-16",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-02",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2026-07-16",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-10-24",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "EXPIRED",
+          "expiresOn": "2026-11-08",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-05-06",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "PHILIPE DE SOUZA ANDRADE",
+      "cpf": "01347397523",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Lider Operacional",
+      "jobRole": "O&M - Lider Operacional",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2032-01-22",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-05",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-03",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-23",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-11-30",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRED",
+          "expiresOn": "2027-02-20",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2026-11-05",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "RAFAEL ALVES DE MOURA",
+      "cpf": "06786805310",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "MODELO (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-21",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-04",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-21",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-24",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-06-26",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (4 de 4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2025-02-21",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "RAMON RAMIRES COSTA CIRINO",
+      "cpf": "06294426308",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 15,
+      "plant": "DELFINA (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M), LAGOA DOS VENTOS V (O&M)",
+      "role": "O&M - Técnico de Segurança do Trabalho",
+      "jobRole": "O&M - Técnico de Segurança do Trabalho",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-03",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-28",
+          "required": true
+        },
+        {
+          "title": "NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-02",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-23",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para sua função/atividade) (1 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-23",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "GWO (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-05",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-05-08",
+          "required": true
+        },
+        {
+          "title": "NR 23",
+          "status": "APPROVED",
+          "expiresOn": "2028-05-07",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (1 de 3)",
+          "status": "EXPIRED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "SERGIO LUIZ ROSA TAVUENCAS",
+      "cpf": "17726721812",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 9,
+      "plant": "CRISTAL (O&M), CURVA DOS VENTOS (O&M), DELFINA (O&M), SERRA AZUL (O&M), AROEIRA (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-07-12",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "expiresOn": "2026-03-22",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-01",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-10",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-30",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "THIAGO AUGUSTO DE PAULA PEPE",
+      "cpf": "36657325819",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 9,
+      "plant": "CRISTAL (O&M), CURVA DOS VENTOS (O&M), DELFINA (O&M), FONTES DOS VENTOS I&II (O&M), MODELO (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-11",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-25",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-11",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-01",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-25",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2034-09-11",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-25",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "THIAGO LIMA SANTOS SILVA",
+      "cpf": "01547632500",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 9,
+      "plant": "MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-29",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-30",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2028-01-31",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2032-02-15",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "VALDECIR DE SOUZA MARQUES",
+      "cpf": "06340879322",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 17,
+      "plant": "SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-05-03",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-14",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-14",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-30",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-10",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-18",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-07",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-28",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "EXPIRING",
+          "expiresOn": "2024-11-06",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "VALDERSON DO NASCIMENTO FERREIRA",
+      "cpf": "60578333333",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "jobRole": "O&M - Inspetor de Qualidade ( ARTH WIND)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CARTA DE ANUÊNCIA NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-28",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (2 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2032-07-12",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-16",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-25",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-20",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (1 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "EXPIRING",
+          "expiresOn": "2027-02-02",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "WELLINGTON CASEMIRO CORDEIRO",
+      "cpf": "29363071391",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 7,
+      "plant": "FONTES DOS VENTOS I&II (O&M), MODELO (O&M)",
+      "role": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "jobRole": "O&M - Inspetor de Equipamentos (Arth Wind)",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2024-03-09",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-23",
+          "required": true
+        },
+        {
+          "title": "Aprovação da Enel para contratação PJ / Profissional Autônomo",
+          "status": "APPROVED",
+          "note": "contrato de prestação de Serviços",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "CTPS (2 de 2)",
+          "status": "EXPIRED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "WILLIAN MENESES CAVALCANTE",
+      "cpf": "03522779398",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 15,
+      "plant": "DELFINA (O&M), SERRA AZUL (O&M)",
+      "role": "O&M - Técnico de Operações",
+      "jobRole": "O&M - Técnico de Operações",
+      "client": "ENEL",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-05",
+          "required": true
+        },
+        {
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-06",
+          "required": true
+        },
+        {
+          "title": "Certificação de Formação Profissional (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas (2 de 2)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-05",
+          "required": true
+        },
+        {
+          "title": "NR10 COMPLEMENTAR (SEP) (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-16",
+          "required": true
+        },
+        {
+          "title": "NR12 (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-10",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 10 (3 de 4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR33 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-20",
+          "required": true
+        },
+        {
+          "title": "NR35 (2 de 3)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-02",
+          "required": true
+        },
+        {
+          "title": "CNH - Categoria B (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2035-09-04",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva (1 de 2)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR 35 (3 de 3)",
+          "status": "APPROVED",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ALLAN THIAGO RAMOS VEIGA",
+      "cpf": "22694750893",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 27,
       "plant": "(ENEL) LAGOA DOS VENTOS",
+      "role": "Líder Operacional",
+      "jobRole": "Líder Operacional",
       "client": "GE VERNOVA",
-      "documents": []
+      "documents": [
+        {
+          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-28",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-04",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "required": true
+        },
+        {
+          "title": "Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-24",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-15",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2036-05-08",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 33 - Trabalhador, Vigia e Supervisor (33.6.5)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-24",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2028-06-24",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-07",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2028-10-02",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-19",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-19",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-19",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO",
+      "cpf": "07832378395",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 25,
+      "plant": "(ENEL) LAGOA DOS VENTOS",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "GE VERNOVA",
+      "documents": [
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-18",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-12",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-10",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-27",
+          "required": true
+        },
+        {
+          "title": "Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2033-03-08",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Uso Adequado, Guarda e Conservação de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-22",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-25",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "GWO (Winda) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-21",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida - Individual",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-18",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "FRANCISCO MARCOS DE SOUZA MAGALHAES",
+      "cpf": "07229586330",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 25,
+      "plant": "(ENEL) LAGOA DOS VENTOS",
+      "role": "Líder Operacional",
+      "jobRole": "Líder Operacional",
+      "client": "GE VERNOVA",
+      "documents": [
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2027-07-22",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-01",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-18",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-17",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-11",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-08",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-04",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-17",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2031-09-01",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-22",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 33 - Trabalhador, Vigia e Supervisor (33.6.5)",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-22",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "expiresOn": "2029-10-22",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-28",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-15",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 SEP",
+          "status": "EXPIRED",
+          "expiresOn": "2028-10-22",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-02",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-02",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-02",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MARIO SERGIO CASTRO DE SOUSA",
+      "cpf": "07483946300",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 23,
+      "plant": "(EDF) VENTOS DA BAHIA",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "GE VERNOVA",
+      "documents": [
+        {
+          "title": "Certificação Profissional",
+          "status": "WAIVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2027-11-08",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "GWO (Winda) - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2028-07-17",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2028-10-16",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2028-10-26",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "EXPIRED",
+          "expiresOn": "2027-02-25",
+          "required": true
+        },
+        {
+          "title": "Primeiros Socorros",
+          "status": "EXPIRED",
+          "expiresOn": "2027-02-25",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2028-04-10",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-23",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "EXPIRED",
+          "expiresOn": "2028-02-22",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-21",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 33 - Trabalhador, Vigia e Supervisor (33.6.5)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-09",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-19",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "WAIVED",
+          "expiresOn": "2027-11-12",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "WAIVED",
+          "expiresOn": "2027-11-12",
+          "required": true
+        }
+      ]
     },
     {
       "name": "MICHEL PLATINI SOARES BARROS",
-      "status": "BLOCKED",
-      "cleared": false,
+      "cpf": "06123741306",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 30,
       "plant": "(ENEL) FONTE DOS VENTOS",
+      "role": "Tecnico em eletromecanica",
+      "jobRole": "Tecnico em eletromecanica",
       "client": "GE VERNOVA",
-      "documents": []
+      "documents": [
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-15",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-12",
+          "required": true
+        },
+        {
+          "title": "GWO (Winda) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2031-10-13",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-28",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-29",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "GWO/BST - Manuseio Manual - (3h35)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 33 - Trabalhador, Vigia e Supervisor (33.6.5)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "GWO/BST - Trabalho e Resgate em Altura",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "Advanced Rescue Training (ART / SART)  - ART Módulo - (HSIBR)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-13",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-24",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-09",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-06",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-21",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável para a função/atividade)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-02",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-22",
+          "required": true
+        }
+      ]
     },
     {
       "name": "NYLLYS RODRIGUES MARTINS",
-      "status": "BLOCKED",
-      "cleared": false,
+      "cpf": "06325757351",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 26,
       "plant": "(ENEL) LAGOA DOS VENTOS",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
       "client": "GE VERNOVA",
-      "documents": []
+      "documents": [
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2031-07-15",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-16",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2026-12-22",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2027-05-18",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-07",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-14",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-30",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-26",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-09",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-13",
+          "required": true
+        },
+        {
+          "title": "GWO (Winda) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-20",
+          "required": true
+        },
+        {
+          "title": "Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-11",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-07-10",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida - Individual",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2029-10-20",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-21",
+          "required": true
+        }
+      ]
     },
     {
       "name": "RAFAEL PEREIRA NUNES",
-      "status": "BLOCKED",
-      "cleared": false,
+      "cpf": "07028126331",
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
+      "totalDocuments": 23,
       "plant": "(ENEL) LAGOA DOS VENTOS",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
       "client": "GE VERNOVA",
-      "documents": []
+      "documents": [
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carteira de Vacinas",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-24",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-30",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-29",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-24",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-01",
+          "required": true
+        },
+        {
+          "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-25",
+          "required": true
+        },
+        {
+          "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-30",
+          "required": true
+        },
+        {
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-03-26",
+          "required": true
+        },
+        {
+          "title": "NR 06 - Ficha de EPI's",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-05",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "GWO (Winda) - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-24",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida - Individual",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-20",
+          "required": true
+        },
+        {
+          "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-22",
+          "required": true
+        }
+      ]
     }
   ],
   "summary": {
-    "totalWorkers": 6,
-    "clearedWorkers": 0,
-    "blockedWorkers": 6
+    "totalWorkers": 51,
+    "clearedWorkers": 11,
+    "blockedWorkers": 40
   }
 }
