@@ -12696,12 +12696,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "623625",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 42,
+    "storzProgressPercent": 71,
     "storzDeadline": "12/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (623625 - Progresso: 42%) [Prazo Storz: 12/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (623625 - Progresso: 71%) [Prazo Storz: 12/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T20:04:48.444Z"
+    "lastUpdated": "2026-11-13T22:03:53.884Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -13902,16 +13902,16 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-12-16T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "621776",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 16/12/2027 | Reciclagem já solicitada na Storz (621776 - Status: SOLICITADO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (621776) em 13/11/2026 — Válido até 13/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1ANczA02Q9tKr61QrECUFLaXvAsvq2A4G/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1gtsv6eCtZ4oaW_nFjvRBgXHhAj87MzD0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-13T22:03:53.884Z"
   },
   {
     "inspectorId": "rpo_55",
@@ -13925,13 +13925,14 @@
     "expirationDate": "2027-12-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "621777",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "Válido até 17/12/2027 | Reciclagem já solicitada na Storz (621777 - Status: SOLICITADO).",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 12,
+    "storzDeadline": "12/01/2027",
+    "detail": "Válido até 17/12/2027 | Reciclagem já solicitada na Storz (621777 - Status: EM_ANDAMENTO).",
     "evidenceUrl": "https://drive.google.com/file/d/1rjSHkNTf0uyAXUWfk-uhFySulSWd6uIW/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1gtsv6eCtZ4oaW_nFjvRBgXHhAj87MzD0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-13T22:03:53.884Z"
   },
   {
     "inspectorId": "rpo_55",
@@ -16812,14 +16813,14 @@
     "docCode": "13",
     "docName": "NR-10 SEP",
     "modality": "ONLINE",
-    "expirationDate": "2028-10-19T12:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "612219",
-    "storzState": "EM_ANDAMENTO",
+    "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Válido até 19/10/2028 | Reciclagem já solicitada na Storz (612219 - Status: EM_ANDAMENTO).",
+    "detail": "Curso renovado e aprovado na Storz (612219) em 13/11/2026 — Válido até 13/11/2028 (aguardando upload no Drive).",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T20:04:48.444Z"
+    "lastUpdated": "2026-11-13T22:03:53.884Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -24468,13 +24469,13 @@
     "statusEHS": "VENCE_90",
     "storzRequestId": "613532",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 50,
+    "storzProgressPercent": 63,
     "storzDeadline": "31/12/2026",
-    "detail": "PROGRAMAR: Vence em 70 dias (22/01/2027) | EM ANDAMENTO NA STORZ (613532 - Progresso: 50%) [Prazo Storz: 31/12/2026] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 70 dias (22/01/2027) | EM ANDAMENTO NA STORZ (613532 - Progresso: 63%) [Prazo Storz: 31/12/2026] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1KNEN4bl9_BaHelveH37AjSO3Su9YvItj/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T03:25:32.724Z"
+    "lastUpdated": "2026-11-13T22:03:53.884Z"
   },
   {
     "inspectorId": "rpo_96",
