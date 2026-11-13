@@ -255515,5 +255515,113 @@
         "matchedTerm": "ASO (via PDF)"
       }
     ]
+  },
+  {
+    "fileId": "18eJs48fTK4mP0fn95ZQfVzKCRxVOUatW",
+    "filename": "WILLAMES WAGNER DA SILVA - GWO SLU - M├ôDULO DE FORMA├ç├âO DE USU├üRIO DO ELEVADOR DE SERVI├çO - Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "28d43b5637feb708b0c6b661b118ed0b",
+    "modifiedTime": "2026-11-13T19:26:38.950Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "31",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Elevador (JASO)",
+    "extractedClause": "no dia 12/11/2026",
+    "documents": [
+      {
+        "code": "31",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Elevador (JASO)",
+        "extractedClause": "no dia 12/11/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1vea7ml4fb_kFkXDveq3rn4Wh4I70Uuv5",
+    "filename": "12-11-2026_Juan_Ilgner_Marinho_Lima_[STORZ-ARTHWIND]_-_NR11_-_TRANSPORTE_MOVIMENTAçãO_ARMAZENAGEM_E_MANUSEIO_DE_MATERIAIS_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6e6a15aa5537792c150efe6daab856bc",
+    "modifiedTime": "2026-11-13T18:46:35.264Z",
+    "holder": {
+      "key": "h2:JUAN ILGNER MARINHO LIMA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1BXSyzcHo_KXceWJa0hRWIFtzUPyq2Ayj",
+    "filename": "ALLAN THIAGO RAMOS VEIGA - GWO SLU - M├ôDULO DE FORMA├ç├âO DE USU├üRIO DO ELEVADOR DE SERVI├çO - Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "b4d851f0b1f04265404a934a5188ba4f",
+    "modifiedTime": "2026-11-13T19:31:37.570Z",
+    "holder": {
+      "key": "h2:ALLAN THIAGO RAMOS VEIGA",
+      "status": "OK"
+    },
+    "code": "31",
+    "issueDate": "2026-11-10T03:00:00.000Z",
+    "expirationDate": "2028-11-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Elevador (JASO)",
+    "extractedClause": "no dia 10/11/2026",
+    "documents": [
+      {
+        "code": "31",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "expirationDate": "2028-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Elevador (JASO)",
+        "extractedClause": "no dia 10/11/2026"
+      }
+    ]
   }
 ]
