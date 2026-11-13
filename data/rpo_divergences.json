@@ -7696,14 +7696,18 @@
     "inspectorName": "JUAN ILGNER MARINHO LIMA",
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
-    "driveExpiration": "2027-11-30T03:00:00.000Z",
+    "driveExpiration": "2028-11-12T03:00:00.000Z",
     "storzExpiration": "2028-11-12T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2027-11-30T12:00:00.000Z",
-    "divergent": false,
-    "diffDays": 0,
-    "detail": "Drive e RPO consistentes.",
-    "recommendedAction": "Nenhuma ação necessária (Consistente)",
+    "divergent": true,
+    "divergenceKind": "DATA_DIVERGENTE",
+    "direction": "DRIVE_NEWER",
+    "isSwappedDayMonth": false,
+    "isRpoValidated": false,
+    "detail": "Drive mais recente que a RPO em 348 dia(s) (12/11/2028 no Drive vs 30/11/2027 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 348,
+    "recommendedAction": "Atualizar data na RPO para 12/11/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DKVmE5DIe-jxAlNWypnQBhfZ3YgMfT5x"
   },
   {
@@ -18929,6 +18933,18 @@
     "diffDays": 0,
     "detail": "Drive e RPO consistentes.",
     "recommendedAction": "Nenhuma ação necessária (Consistente)",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz"
+  },
+  {
+    "inspectorName": "ALLAN THIAGO RAMOS VEIGA",
+    "docCode": "31",
+    "docName": "Elevador (JASO)",
+    "driveExpiration": "2028-11-10T03:00:00.000Z",
+    "trustedSource": "DRIVE",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive",
     "driveFolderUrl": "https://drive.google.com/drive/folders/18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz"
   },
   {
