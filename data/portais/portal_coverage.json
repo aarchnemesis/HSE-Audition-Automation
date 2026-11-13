@@ -52,7 +52,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-13T12:00:55.895Z",
+        "capturedAt": "2026-11-13T13:01:00.815Z",
         "workers": 13
       },
       "clients": [
@@ -614,7 +614,7 @@
         {
           "client": "INVENERGY",
           "activity": "IN_FIELD",
-          "projectsInWindow": 5,
+          "projectsInWindow": 4,
           "lastStart": "2026-11-02",
           "nextStart": "2026-11-16"
         }
