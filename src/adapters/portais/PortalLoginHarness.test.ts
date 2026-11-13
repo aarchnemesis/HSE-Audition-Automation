@@ -48,7 +48,7 @@ describe('applyLogin', () => {
       cred()
     )
     expect(page.goto).toHaveBeenCalledWith(
-      'https://vestaslatam.egestiona.com/',
+      'https://vestaslatam.egestiona.com/login?origen=subcontrata',
       expect.anything()
     )
     expect(calls.fills).toEqual([
