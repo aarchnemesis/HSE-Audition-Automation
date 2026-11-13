@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import { scrapeEgestionaCensus } from '../adapters/portais/EgestionaScraper.js'
 import { savePortalCensus } from '../adapters/portais/PortalCensusStore.js'
+import type { PortalWorker } from '../domain/models/PortalCensus.js'
 import {
   closeSession,
   getLoginConfig,
@@ -23,36 +24,51 @@ async function main() {
     .find(a => a.startsWith('--client='))
     ?.split('=')[1]
     ?.replace(/^["']|["']$/g, '')
+  // Vestas Latam: contas validadas pela auditoria (13/11). Cada uma só enxerga a própria empresa:
+  // "VESTAS CHILE 2" = colaboradores Arthwind; "ADENTU" = técnicos da Adentu (subcontratada chilena).
+  const clients: (string | undefined)[] = client
+    ? [client]
+    : portalId === 'egestiona-vestaslatam' ? ['VESTAS CHILE 2', 'ADENTU'] : [undefined]
   const headful = process.argv.includes('--headful')
 
   const config = getLoginConfig(portalId)
   if (!config || config.system !== 'eGestiona')
     throw new Error(`"${portalId}" não é um portal eGestiona com login mapeado`)
 
-  const cred = findCredential(await loadPortalCredentials(), {
-    portalId,
-    client,
-  })
-  if (!cred) throw new Error(`Sem credencial na planilha para ${portalId}`)
-
-  console.log('[eGestiona] entrando:', redactCredential(cred))
-  const session = await launchAndLogin({ config, cred, headless: !headful })
-  try {
-    const census = await scrapeEgestionaCensus(session.page, { portalId })
-    if (census.workers.length === 0) {
-      console.warn(
-        '[eGestiona] Raspagem vazia (0 colaboradores) — censo existente preservado, nada gravado.'
-      )
-      return
+  const creds = await loadPortalCredentials()
+  const workers: PortalWorker[] = []
+  let failures = 0
+  for (const c of clients) {
+    const cred = findCredential(creds, { portalId, client: c })
+    if (!cred) {
+      console.warn(`[eGestiona] sem credencial na planilha para ${portalId} ${c ?? ''}`)
+      failures++
+      continue
     }
-    const out = savePortalCensus(census)
-    const docs = census.workers.reduce((n, w) => n + w.documents.length, 0)
-    console.log(
-      `[eGestiona] ${census.workers.length} colaboradores, ${docs} documentos -> ${out}`
-    )
-  } finally {
-    await closeSession(session)
+    console.log('[eGestiona] entrando:', redactCredential(cred))
+    const session = await launchAndLogin({ config, cred, headless: !headful }).catch(e => {
+      console.warn(`[eGestiona] login falhou (${cred.client}): ${e instanceof Error ? e.message : e}`)
+      return null
+    })
+    if (!session) { failures++; continue }
+    try {
+      const census = await scrapeEgestionaCensus(session.page, { portalId, log: m => console.log(`[eGestiona] ${cred.client}: ${m}`) })
+      for (const w of census.workers) workers.push({ ...w, client: undefined, role: cred.client })
+    } catch (e) {
+      console.warn(`[eGestiona] leitura falhou (${cred.client}): ${e instanceof Error ? e.message : e}`)
+      failures++
+    } finally {
+      await closeSession(session)
+    }
   }
+  // Uma conta que falhou encolheria o censo: nesse caso não grava por cima do anterior.
+  if (workers.length === 0 || failures > 0) {
+    console.warn(`[eGestiona] ${failures} conta(s) falharam, ${workers.length} colaboradores — censo existente preservado, nada gravado.`)
+    if (workers.length === 0 || !process.argv.includes('--force')) return
+  }
+  const out = savePortalCensus({ portalId, capturedAt: new Date().toISOString(), workers })
+  const docs = workers.reduce((n, w) => n + w.documents.length, 0)
+  console.log(`[eGestiona] ${workers.length} colaboradores, ${docs} documentos -> ${out}`)
 }
 
 main().catch(err => {

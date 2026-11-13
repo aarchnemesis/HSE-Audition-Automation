@@ -166,6 +166,8 @@ export const PORTAL_LOGIN_CONFIGS: Record<string, PortalLoginConfig> = {
   'egestiona-vestaslatam': {
     portalId: 'egestiona-vestaslatam',
     system: 'eGestiona',
+    // A raiz do host é uma página de escolha (Intranet/Contratas/...); o login das subcontratadas é este.
+    url: 'https://vestaslatam.egestiona.com/login?origen=subcontrata',
     fields: [
       { selector: 'input[name="ClientName"]', from: 'clientCode' },
       { selector: 'input[name="Username"]', from: 'username' },

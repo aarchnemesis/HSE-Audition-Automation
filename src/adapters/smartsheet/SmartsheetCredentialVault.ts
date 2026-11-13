@@ -114,10 +114,15 @@ export function findCredential(
     c =>
       (!query.portalId || c.portalId === query.portalId) &&
       (!query.host || c.host === query.host) &&
-      (!wantClient || c.clientKey === wantClient)
+      // trecho do nome também vale ("ADENTU" acha "VESTAS LATAM CHILE (ADENTU)"); exato tem prioridade
+      (!wantClient || c.clientKey === wantClient || c.clientKey.includes(wantClient) ||
+        c.client.toUpperCase().includes(query.client!.toUpperCase()))
   )
+  // Nome original contendo o pedido ganha da chave normalizada (que junta várias contas do mesmo cliente).
   return (
-    matches.find(c => wantClient && c.clientKey === wantClient) ?? matches[0]
+    matches.find(c => query.client && c.client.toUpperCase().includes(query.client.toUpperCase())) ??
+    matches.find(c => wantClient && c.clientKey === wantClient) ??
+    matches[0]
   )
 }
 
