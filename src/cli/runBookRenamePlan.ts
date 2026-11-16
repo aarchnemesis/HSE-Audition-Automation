@@ -107,10 +107,24 @@ async function main() {
             byBook = d.toISOString().slice(0, 10)
           }
           // Book seção 4: VAL pela matriz a partir da EMI; se o documento declarar validade menor, vale a menor.
-          const val = permanent ? 'NA' : [byBook, declared].filter(Boolean).sort()[0] ?? 'NA'
-          if (map && !emi && !permanent) issues.push('Sem data de emissão lida no conteúdo')
+          let val = permanent ? 'NA' : [byBook, declared].filter(Boolean).sort()[0] ?? 'NA'
+          // Arquivo já no padrão do Book: o nome atual é a referência. Data que a leitura não achou fica a do
+          // nome (nunca vira NA), documento único sem validade na matriz não ganha VAL, e se a leitura
+          // contradiz o nome a decisão é humana, não um renome automático.
+          const cur = f.name.match(/^\d\d_[A-Z0-9-]+_EMI-(\d{4}-\d{2}-\d{2}|NA)_VAL-(\d{4}-\d{2}-\d{2}|NA)_/)
+          let emiName = emi
+          if (cur && map) {
+            const [, curEmi, curVal] = cur
+            if (!emiName && curEmi !== 'NA') emiName = curEmi
+            if (map.kind === 'UNICO' && !months && curVal === 'NA') val = 'NA'
+            if (val === 'NA' && curVal !== 'NA' && !permanent) val = curVal
+            if ((curEmi !== 'NA' && emiName !== curEmi) || (curVal !== 'NA' && val !== curVal))
+              issues.push(`Datas lidas no conteúdo (EMI ${emiName ?? 'NA'}, VAL ${val}) diferem do nome atual no padrão do Book`)
+          }
+          if (emiName && val !== 'NA' && val < emiName) issues.push(`Validade (${val}) anterior à emissão (${emiName})`)
+          if (map && !emiName && !permanent) issues.push('Sem data de emissão lida no conteúdo')
           const proposed = map
-            ? `${map.cc}_${map.doc}-${tipoFor(map.kind, f.name)}_EMI-${emi ?? 'NA'}_VAL-${val}_${slugName(p.name)}.pdf`
+            ? `${map.cc}_${map.doc}-${tipoFor(map.kind, f.name)}_EMI-${emiName ?? 'NA'}_VAL-${val}_${slugName(p.name)}.pdf`
             : null
           rows.push({
             fileId: f.id,
