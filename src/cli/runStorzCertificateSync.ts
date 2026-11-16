@@ -55,6 +55,9 @@ async function plan(since?: string) {
   // Nome do aluno na Storz escrito diferente da pasta do Drive: scratch/storz_aliases.json { "nome na Storz": "nome da pasta" }.
   let aliases: Record<string, string> = {}
   try { aliases = JSON.parse(fs.readFileSync('scratch/storz_aliases.json', 'utf8')) } catch {}
+  // Alunos sem pasta de propósito (desligados, office): scratch/storz_ignore.json { "nome na Storz": "motivo" }.
+  let ignore: Record<string, string> = {}
+  try { ignore = JSON.parse(fs.readFileSync('scratch/storz_ignore.json', 'utf8')) } catch {}
 
   const rows: any[] = []
   for (const c of recent) {
@@ -63,6 +66,7 @@ async function plan(since?: string) {
     const code = CertificateClassifier.classify(c.ds_nome_curso).code
     const concl = brToIso(c.dt_conclusao)
     const base = { certId: c.id_certificado, student: c.ds_nome_aluno, course: c.ds_nome_curso, conclusion: concl, code }
+    if (!person && ignore[c.ds_nome_aluno]) { rows.push({ ...base, action: 'IGNORAR', issue: ignore[c.ds_nome_aluno] }); continue }
     if (!person) { rows.push({ ...base, action: 'REVISAR', issue: 'Aluno não encontrado entre as pastas do Drive' }); continue }
     if (!code) { rows.push({ ...base, person: person.name, action: 'REVISAR', issue: 'Curso sem código correspondente no Drive' }); continue }
     const inDrive = person.certificates?.[code]
