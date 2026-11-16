@@ -39,6 +39,8 @@ export interface LlmReading {
   confirmedBy?: 'B' | 'REGRAS'
   agreed: boolean
   disagreement?: string
+  /** Leitura feita com as imagens das páginas (modo --vision). */
+  vision?: boolean
   error?: string
   at: string
 }
@@ -74,7 +76,7 @@ function prompt(reader: 'A' | 'B', text: string): string {
  * chamando call_llm do Hermes. Subir `hermes chat` por pergunta esgotava a memória da VPS.
  */
 export function runBatch(
-  jobs: { id: string; prompt: string }[],
+  jobs: { id: string; prompt: string; images?: string[] }[],
   threads = MAX_PARALLEL,
   onProgress?: (line: string) => void
 ): Promise<Map<string, string>> {
@@ -253,14 +255,18 @@ export class PrometheusReader {
    * do Prometheus com `threads` chamadas simultâneas e grava o cache ao fim de cada fase.
    */
   static async readMany(
-    items: { key: string; pages: string[]; agreesWithRules?: (a: LlmDocument[]) => boolean }[],
+    items: { key: string; pages: string[]; images?: string[]; agreesWithRules?: (a: LlmDocument[]) => boolean }[],
     threads = MAX_PARALLEL,
-    onProgress?: (line: string) => void
+    onProgress?: (line: string) => void,
+    force = false
   ): Promise<void> {
     const cache = this.load()
-    const todo = items.filter(i => !this.has(i.key))
-    const textOf = (pages: string[]) => textFromPages(pages)
-    const resA = await runBatch(todo.map(i => ({ id: i.key, prompt: prompt('A', textOf(i.pages)) })), threads, onProgress)
+    // force: relê mesmo o que já tem leitura (a leitura por imagem substitui a feita só com o texto do OCR).
+    const todo = items.filter(i => force || !this.has(i.key))
+    const VISION = 'As imagens das páginas estão anexadas e são a fonte principal: datas e marcações manuscritas, carimbos e assinaturas valem como lidos. O texto do OCR abaixo pode estar errado.\n\n'
+    const textOf = (i: { pages: string[]; images?: string[] }) => (i.images?.length ? VISION : '') + textFromPages(i.pages)
+    const job = (r: 'A' | 'B', i: (typeof todo)[number]) => ({ id: i.key, prompt: prompt(r, textOf(i)), images: i.images })
+    const resA = await runBatch(todo.map(i => job('A', i)), threads, onProgress)
     const needB: typeof todo = []
     const aOf = new Map<string, LlmDocument[]>()
     const now = () => new Date().toISOString()
@@ -270,7 +276,7 @@ export class PrometheusReader {
       try {
         if (!out || out.startsWith('__ERRO__')) throw new Error(out || 'sem resposta')
         const a = parse(out)
-        if (i.agreesWithRules?.(a)) cache[k] = { a, consensus: a, agreed: true, confirmedBy: 'REGRAS', at: now() }
+        if (i.agreesWithRules?.(a)) cache[k] = { a, consensus: a, agreed: true, confirmedBy: 'REGRAS', vision: !!i.images?.length, at: now() }
         else { aOf.set(i.key, a); needB.push(i) }
       } catch (e: any) {
         cache[k] = { agreed: false, error: String(e?.message || e), at: now() }
@@ -278,7 +284,7 @@ export class PrometheusReader {
     }
     this.dirty = true
     this.save()
-    const resB = await runBatch(needB.map(i => ({ id: i.key, prompt: prompt('B', textOf(i.pages)) })), threads, onProgress)
+    const resB = await runBatch(needB.map(i => job('B', i)), threads, onProgress)
     for (const i of needB) {
       const k = `${i.key}|v${LLM_PROMPT_VERSION}`
       const a = aOf.get(i.key)!
@@ -287,7 +293,7 @@ export class PrometheusReader {
         if (!out || out.startsWith('__ERRO__')) throw new Error(out || 'sem resposta')
         const b = parse(out)
         const c = consensusOf(a, b)
-        cache[k] = { a, b, consensus: c.consensus, agreed: c.agreed, confirmedBy: c.agreed ? 'B' : undefined, disagreement: c.why, at: now() }
+        cache[k] = { a, b, consensus: c.consensus, agreed: c.agreed, confirmedBy: c.agreed ? 'B' : undefined, disagreement: c.why, vision: !!i.images?.length, at: now() }
       } catch (e: any) {
         cache[k] = { a, agreed: false, error: `Leitor B: ${String(e?.message || e)}`, at: now() }
       }

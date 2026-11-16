@@ -11,6 +11,9 @@
  */
 import 'dotenv/config'
 import fs from 'fs'
+import os from 'os'
+import path from 'path'
+import { execFileSync } from 'child_process'
 import { google } from 'googleapis'
 import pdfParse from 'pdf-parse'
 import { getAuthorizedClient } from '../adapters/drive/googleAuth.js'
@@ -27,6 +30,7 @@ const sameDay = (a?: string | Date, b?: string | Date | null) =>
 
 async function main() {
   const all = process.argv.includes('--all')
+  const vision = process.argv.includes('--vision')
   const limit = Number(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1]) || Infinity
   const raw = JSON.parse(fs.readFileSync('data/pdf_content_cache.json', 'utf8'))
   const files: any[] = Array.isArray(raw) ? raw : Object.values(raw)
@@ -56,7 +60,8 @@ async function main() {
       const person = owner.get(id)
       if (!person) continue
       const k = `${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`
-      if (llm[k]?.at && !llm[k]?.error) continue
+      if (!vision && llm[k]?.at && !llm[k]?.error) continue
+      if (vision && llm[k]?.vision) continue
       queue.push({ f, person, strong: true })
     }
   }
@@ -86,7 +91,7 @@ async function main() {
   for (let from = 0; from < todo.length; from += CHUNK) {
     const chunk = todo.slice(from, from + CHUNK)
     // 1) texto + OCR aqui (CPU local), em paralelo
-    const prepared: { key: string; pages: string[]; agreesWithRules: (a: any[]) => boolean }[] = []
+    const prepared: { key: string; pages: string[]; images?: string[]; agreesWithRules: (a: any[]) => boolean }[] = []
     let next = 0
     await Promise.all(Array.from({ length: Number(process.env.HSE_LLM_FILES_PARALLEL) || 12 }, async () => {
       while (next < chunk.length) {
@@ -103,11 +108,25 @@ async function main() {
               pages = ocr.map((o, i) => `${(pages[i] ?? '').trim()}\n${o}`)
             }
           } else pages = [await TesseractOcrAdapter.extractTextFromImage(buf)]
-          if (!pages.join('').trim()) continue
+          // --vision: páginas como imagem (até 3, 110 dpi, JPEG) para o Prometheus ler o que o OCR não lê.
+          let images: string[] | undefined
+          if (vision) {
+            const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'hse-vis-'))
+            try {
+              const src = path.join(dir, buf.subarray(0, 1024).includes('%PDF-') ? 'f.pdf' : 'f.img')
+              fs.writeFileSync(src, buf)
+              if (src.endsWith('.pdf')) execFileSync('pdftoppm', ['-r', '110', '-f', '1', '-l', '3', '-jpeg', '-jpegopt', 'quality=80', src, path.join(dir, 'p')])
+              else execFileSync('convert', [src + '[0]', '-resize', '1600x1600>', '-quality', '80', path.join(dir, 'p-1.jpg')])
+              images = fs.readdirSync(dir).filter(n => n.endsWith('.jpg')).sort().map(n => fs.readFileSync(path.join(dir, n)).toString('base64'))
+            } catch { images = undefined } finally { fs.rmSync(dir, { recursive: true, force: true }) }
+            if (!images?.length) continue
+          }
+          if (!pages.join('').trim() && !images?.length) continue
           const rules = (f.documents?.length ? f.documents : [f]).filter((d: any) => d.statusEHS !== 'NAO_LIDO' && d.code)
           prepared.push({
             key: f.md5 || f.fileId,
             pages,
+            images,
             agreesWithRules: (a: any[]) =>
               rules.length > 0 &&
               a.every(d => d.titular_nome === 'ausente' || namesMatch(d.titular_nome, person)) &&
@@ -119,7 +138,7 @@ async function main() {
       }
     }))
     // 2) Prometheus em lote (A em todos, B onde A diverge das regras)
-    await PrometheusReader.readMany(prepared, threads)
+    await PrometheusReader.readMany(prepared, threads, undefined, vision)
     const c: Record<string, any> = JSON.parse(fs.readFileSync('data/llm_reading_cache.json', 'utf8'))
     const mine = prepared.map(p => c[`${p.key}|v${LLM_PROMPT_VERSION}`]).filter(Boolean)
     const min = (Date.now() - started) / 60000

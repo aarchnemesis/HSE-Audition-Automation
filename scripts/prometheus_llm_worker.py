@@ -23,6 +23,16 @@ PROVIDER = "openai-codex"
 MODEL = "gpt-5.6-luna"
 
 
+def content_of(job):
+    """Texto puro, ou texto + imagens das páginas (job["images"]: JPEG em base64) quando o OCR não basta."""
+    imgs = job.get("images") or []
+    if not imgs:
+        return job["prompt"]
+    return [{"type": "text", "text": job["prompt"]}] + [
+        {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64," + b}} for b in imgs
+    ]
+
+
 def main() -> None:
     src, dst = sys.argv[1], sys.argv[2]
     threads = int(sys.argv[3]) if len(sys.argv) > 3 else 8
@@ -60,7 +70,7 @@ def main() -> None:
                 resp = call_llm(
                     provider=PROVIDER,
                     model=MODEL,
-                    messages=[{"role": "user", "content": job["prompt"]}],
+                    messages=[{"role": "user", "content": content_of(job)}],
                     timeout=240,
                 )
                 rec = {"id": job["id"], "content": resp.choices[0].message.content, "secs": round(time.time() - t0, 1)}
