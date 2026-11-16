@@ -154,7 +154,9 @@ async function main() {
               issues.push(`Datas lidas no conteúdo (EMI ${emiName ?? 'NA'}, VAL ${val}) diferem do nome atual no padrão do Book`)
           }
           if (emiName && val !== 'NA' && val < emiName) issues.push(`Validade (${val}) anterior à emissão (${emiName})`)
-          if (map && !emiName && !permanent) issues.push('Sem data de emissão lida no conteúdo')
+          // CNH: vale o vencimento impresso; sem emissão lida, EMI fica NA.
+          const valOnly = code === '08' && val !== 'NA'
+          if (map && !emiName && !permanent && !valOnly) issues.push('Sem data de emissão lida no conteúdo')
           let proposed = map
             ? `${map.cc}_${map.doc}-${tipoFor(map.kind, f.name)}_EMI-${emiName ?? 'NA'}_VAL-${val}_${slugName(p.name)}.pdf`
             : null
