@@ -78,7 +78,17 @@ async function main() {
   for (const f of idsPath ? [] : files) {
     const person = owner.get(f.fileId)
     if (!person) continue
-    if (llm[`${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`]?.at && !llm[`${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`]?.error) continue
+    const prev = llm[`${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`]
+    // Degrau 1: só o que nunca foi lido. Degraus 2+: o que já foi lido no degrau anterior e não teve acordo
+    // (ou acordou sem data, caso típico de data manuscrita), sem repetir o degrau.
+    if (tier === 1 && prev?.at && !prev?.error) continue
+    if (tier >= 2) {
+      const d0 = prev?.consensus?.[0]
+      const semData = !!d0 && [d0.data_conclusao, d0.data_assinatura].every((x: string) => !x || x === 'ausente' || x === 'ilegivel')
+      if (!prev?.at || (prev.tier ?? 1) >= tier || (prev.tier ?? 1) < tier - 1 || (prev.agreed && !(tier === 2 && semData))) continue
+      queue.push({ f, person, strong: true })
+      continue
+    }
     const docs = f.documents?.length ? f.documents : [f]
     const fnCode = CertificateClassifier.classify(f.filename).code
     const fnDate = parseDateFromFilename(f.filename)
