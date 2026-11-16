@@ -5,5 +5,6 @@
 cd /opt/hse-automation || exit 1
 export HSE_PROMETHEUS_PARALLEL="${HSE_PROMETHEUS_PARALLEL:-6}"
 for args in "" "--vision" "--tier=3" "--arbiter"; do
-  npx tsx src/cli/runLlmQueue.ts $args 2>&1 | grep "\[llm-queue\]"
+  # Trava única: a fila grava data/llm_reading_cache.json inteiro; duas filas juntas se sobrescrevem.
+  flock /run/lock/hse-llm.lock npx tsx src/cli/runLlmQueue.ts $args 2>&1 | grep "\[llm-queue\]"
 done
