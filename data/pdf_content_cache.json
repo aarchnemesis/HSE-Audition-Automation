@@ -255151,18 +255151,7 @@
     "statusDetail": "Data não informada ou formato inválido",
     "source": "PDF_CONTENT",
     "classificationSource": "NONE",
-    "extractedClause": "Data do nome do arquivo",
-    "documents": [
-      {
-        "code": null,
-        "issueDate": "2026-11-02T03:00:00.000Z",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "PDF_CONTENT",
-        "classificationSource": "NONE",
-        "extractedClause": "Data do nome do arquivo"
-      }
-    ]
+    "extractedClause": "Data do nome do arquivo"
   },
   {
     "fileId": "1YkbrGwOtDaBxEMZnofzXOOPwu8mt3sJ3",
@@ -259197,6 +259186,1760 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Book EHS 13_NR10-SEP",
         "extractedClause": "Iniciado em 27/01/2026 | Atualizado via nome: 01/02/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1xedw6Vnjn1AMFGG-bAFMTR2r6XVrMxp3",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-29_VAL-2027-10-29_DRIELTON-FRANCISCO-DE-ARAUJO-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0cc1e19b227c33548b2dff4b25884442",
+    "modifiedTime": "2026-11-16T10:37:16.503Z",
+    "holder": {
+      "key": "h2:DRIELTON FRANCISCO ARAUJO SILVA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-29T03:00:00.000Z",
+    "expirationDate": "2028-10-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-29T03:00:00.000Z",
+        "expirationDate": "2028-10-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1xuJPf9b_d2R2eWaEIVFSsFg8OrbPyklI",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-30_VAL-2027-10-30_JOCELEO-ABREU-VENANCIO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8841af43a6aa6a73775368c0f81606c5",
+    "modifiedTime": "2026-11-16T10:37:13.556Z",
+    "holder": {
+      "key": "h2:JOCELEO ABREU VENANCIO",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-30T03:00:00.000Z",
+    "expirationDate": "2028-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-30T03:00:00.000Z",
+        "expirationDate": "2028-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ECCkx8ppgDCtiajyrQDlFdzqz5Q_jlcb",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-11-02_VAL-2027-11-02_HENRIQUE-ELANIO-GOMES-FERNANDES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "92c41649dee4636d5a94a4b66a65afcb",
+    "modifiedTime": "2026-11-16T10:37:04.139Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "expirationDate": "2028-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "expirationDate": "2028-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1XK8ow-9KkoLbusO0b03GSliIRFBY0lso",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-11-01_VAL-2027-11-01_ADENIO-FRANCISCO-DE-SOUSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "584d6239eeba40aa5d4a5c93c6aab10b",
+    "modifiedTime": "2026-11-16T10:37:07.266Z",
+    "holder": {
+      "key": "h2:ADENIO FRANCISCO SOUSA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-11-01T03:00:00.000Z",
+    "expirationDate": "2028-11-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-11-01T03:00:00.000Z",
+        "expirationDate": "2028-11-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1qD1E4bc_sio88LlYTIFjBVxazfetlLyP",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-30_VAL-2027-10-30_WILLAMES-WAGNER-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9d8a92c49d64998efb1f0a99dbba987a",
+    "modifiedTime": "2026-11-16T10:36:53.393Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Concluído em 30/10/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Concluído em 30/10/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "15jua41A01dcrprccst0GUJnxsDo_rtoY",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-11-06_VAL-2028-11-06_HENRIQUE-ELANIO-GOMES-FERNANDES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "aa682d578963bf9c7a2e096e68d57b27",
+    "modifiedTime": "2026-11-16T10:19:22.017Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-06T03:00:00.000Z",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-06T03:00:00.000Z",
+        "expirationDate": "2028-11-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1PouNRRZ1OXNcVdx-zc_fO7upRwUwFuGs",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-28_VAL-2027-10-28_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "84056351dff94c6f73a406c7791e0a0f",
+    "modifiedTime": "2026-11-16T10:37:22.714Z",
+    "holder": {
+      "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-28T03:00:00.000Z",
+    "expirationDate": "2028-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-28T03:00:00.000Z",
+        "expirationDate": "2028-10-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1uiJu6y8Iun1eRo2TU5GQFvi4ljOAZ03s",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-14_VAL-2027-11-14_HENRIQUE-ELANIO-GOMES-FERNANDES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e839b2b6ae3a22dea8eece2134590ab8",
+    "modifiedTime": "2026-11-16T10:18:54.922Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2028-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2028-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1w8-bk0jCo4901btrsB5dkF_-WIMjF81p",
+    "filename": "13-11-2026_MÁRIO_SÉRGIO_CASTRO_DE_SOUSA_[STORZ]_-_NR10_-_CURSO_COMPLEMENTAR_-_SEGURANçA_NO_SISTORZA_ELéTRICO_DE_POTêNCIA_(SEP)_E_EM_SUAS_PROXIMIDADES_(INICIAçãO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "96e89cf5ea886c30c854eec0e0cb1d01",
+    "modifiedTime": "2026-11-16T11:42:48.088Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 SEP",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 SEP",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "18AGAVQP3m6pjO2luz0otw5aDWNobPdyz",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-06-08_VAL-2027-06-08_VALDERSON-DO-NASCIMENTO-FERREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "bfeac4fab5b0bb7ca66a78947b21b034",
+    "modifiedTime": "2026-11-16T10:38:34.009Z",
+    "holder": {
+      "key": "h2:VALDERSON NASCIMENTO FERREIRA",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-06-08T03:00:00.000Z",
+    "expirationDate": "2027-06-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/06/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-06-08T03:00:00.000Z",
+        "expirationDate": "2027-06-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/06/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1PFm4FY_46KCBXScogFwsveoiydTpSVbs",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-05-03_VAL-2027-05-03_RAFAEL-ANDRADE-BARBOSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "164a67040695578e449503a79ee2596a",
+    "modifiedTime": "2026-11-16T10:38:45.947Z",
+    "holder": {
+      "key": "h2:RAFAEL ANDRADE BARBOSA",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-05-03T03:00:00.000Z",
+    "expirationDate": "2027-05-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-05-03T03:00:00.000Z",
+        "expirationDate": "2027-05-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1DjL3vDEq3cuiZSWdK77YsL2BgvXuyKdb",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-23_VAL-2027-09-23_RAFAEL-PEREIRA-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "69c18e0639d1ba011d5c57979ce0b331",
+    "modifiedTime": "2026-11-16T10:37:50.893Z",
+    "holder": {
+      "key": "h2:RAFAEL PEREIRA NUNES",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1CP_9KaPaVx8FcLoIoJkPm_UwVeGlyJ9c",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-09-28_VAL-2027-09-28_RAFAEL-PEREIRA-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c35e35f3d3a29dea349f4c8f7859555e",
+    "modifiedTime": "2026-11-16T10:37:47.537Z",
+    "holder": {
+      "key": "h2:RAFAEL PEREIRA NUNES",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-09-28T03:00:00.000Z",
+    "expirationDate": "2028-09-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-09-28T03:00:00.000Z",
+        "expirationDate": "2028-09-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1H7l8EVkF-VYEf19Nd7D8EodSgU6AbP_r",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-06-08_VAL-2027-06-08_MICHEL-PLATINI-SOARES-BARROS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "47f347c1514eb075bea0595d72d590d9",
+    "modifiedTime": "2026-11-16T10:38:37.075Z",
+    "holder": {
+      "key": "h2:MICHEL PLATINI SOARES BARROS",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-06-08T03:00:00.000Z",
+    "expirationDate": "2027-06-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/06/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-06-08T03:00:00.000Z",
+        "expirationDate": "2027-06-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/06/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1Qy1rk3SDjuaxRTUrWwIhfNWMtix0iyMy",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-05-06_VAL-2027-05-06_JOSE-MARCOS-LIMA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "b6d56468e889d9afcc7f6126224e650c",
+    "modifiedTime": "2026-11-16T10:38:42.915Z",
+    "holder": {
+      "key": "h2:JOSE MARCOS LIMA MOURA",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-05-06T03:00:00.000Z",
+    "expirationDate": "2027-05-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-05-06T03:00:00.000Z",
+        "expirationDate": "2027-05-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1KC1qhpYzsXwxn1y1ZtcHjg_Fp5tiCQck",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-11_VAL-2027-10-11_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "7b2f267279ff3c95345320d54d6f5ffb",
+    "modifiedTime": "2026-11-16T10:37:44.121Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-11T03:00:00.000Z",
+    "expirationDate": "2028-10-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-11T03:00:00.000Z",
+        "expirationDate": "2028-10-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1sRI_r_AotkHQTCH2Htj1HQgpo-PJe0Pf",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-31_VAL-2027-10-31_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "63b85af3e66e131e0ee5e406269af70e",
+    "modifiedTime": "2026-11-16T10:37:10.356Z",
+    "holder": {
+      "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-31T03:00:00.000Z",
+    "expirationDate": "2028-10-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-31T03:00:00.000Z",
+        "expirationDate": "2028-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1hTTWDpwBCFdodvxhTdt9fF7iaa9Aifle",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-11-08_VAL-2027-11-08_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c288e5e857ce3dddd7bd44c22fd051a9",
+    "modifiedTime": "2026-11-16T10:36:49.176Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "137mtG7Ey5mZHYY9Gyjutzcl7YdU8z3Md",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-21_VAL-2027-09-21_IGOR-MARTINS-ROCHA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "948104c49af5dc2084cfd1d1d99a049a",
+    "modifiedTime": "2026-11-16T10:37:56.990Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-21T03:00:00.000Z",
+    "expirationDate": "2028-09-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-21T03:00:00.000Z",
+        "expirationDate": "2028-09-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1Yp_diH1irClSsxbFb_dCdmZvzldhBCZi",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-28_VAL-2027-10-28_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4ccd69dad73e8d89563b1172ca2ccdf1",
+    "modifiedTime": "2026-11-16T10:37:19.415Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-28T03:00:00.000Z",
+    "expirationDate": "2028-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-28T03:00:00.000Z",
+        "expirationDate": "2028-10-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1jgcnYy2_BBadL-OibsfHJHGV_ckKsd8d",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-11-08_VAL-2027-11-08_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ae25d826967a2b36861f06ec3a953d3c",
+    "modifiedTime": "2026-11-16T10:36:46.171Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ePhXOrVAnRN9OC4n2TAARNGJXNw6_sCu",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-11-08_VAL-2027-11-08_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6e6a18cb392b700b345bf594857964d8",
+    "modifiedTime": "2026-11-16T10:36:42.738Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "19ea4S6BUZQODnWWHftkdqweVnp8Ac74Y",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-20_VAL-2027-09-20_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1512c1631551ed9daf2b588cfe613430",
+    "modifiedTime": "2026-11-16T10:37:59.876Z",
+    "holder": {
+      "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-20T03:00:00.000Z",
+    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-20T03:00:00.000Z",
+        "expirationDate": "2028-09-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1LSAD5hHsip1GSZBCVFTvCt10W3wwMIDV",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-26_VAL-2027-10-26_FRANCISCO-DAVILO-MARQUES-DE-SOUSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d26bcd0fa3207a1f2911e0b620c60a39",
+    "modifiedTime": "2026-11-16T10:37:25.861Z",
+    "holder": {
+      "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-26T03:00:00.000Z",
+    "expirationDate": "2028-10-26T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 26/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-26T03:00:00.000Z",
+        "expirationDate": "2028-10-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1D8_nLxOEoRpNR7O4ZtJ3RP5hvOGELHal",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-09-21_VAL-2027-09-21_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "84dc783c4d9a837d2e8ef48eda466764",
+    "modifiedTime": "2026-11-16T10:37:53.875Z",
+    "holder": {
+      "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-09-21T03:00:00.000Z",
+    "expirationDate": "2028-09-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-09-21T03:00:00.000Z",
+        "expirationDate": "2028-09-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1f9N1zKBEQkApgzuAPLv3QN9Cq35riD0k",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-07-15_VAL-2027-07-15_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "cf5ab7e5e8dd8a16efc33893dfcdf411",
+    "modifiedTime": "2026-11-16T10:38:28.024Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-07-15T03:00:00.000Z",
+    "expirationDate": "2027-07-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/07/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-07-15T03:00:00.000Z",
+        "expirationDate": "2027-07-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/07/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1vn1UHg-z6RqzVU1pvtj8-jjS1cinbWbI",
+    "filename": "15-11-2026_Emerson_Pallotta_Ribeiro_[STORZ]_-_NR6_-_EPIS_E_EPCS_(EQUIPAMENTOS_DE_PROTEçãO_INDIVIDUAL_E_COLETIVA).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d0a6341f2744a42a355768a01d5c0de4",
+    "modifiedTime": "2026-11-16T11:54:36.363Z",
+    "holder": {
+      "key": "h2:EMERSON PALLOTTA RIBEIRO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1p3jZ11gL7MQpJM3AMkX1HivN_WnbRSox",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-01_VAL-2027-09-01_EDCLEI-DA-CONCEICAO-CUSTODIO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3a34d3903fb21a3294e2ed570058407b",
+    "modifiedTime": "2026-11-16T10:38:12.809Z",
+    "holder": {
+      "key": "h2:EDCLEI CONCEICAO CUSTODIO",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-01T03:00:00.000Z",
+    "expirationDate": "2028-09-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2028-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1vfRKnv7hNQyeNPkmqXtbF28UEsAx3NZa",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-08-27_VAL-2027-08-27_DIEGO-MENEZES-NUNES-COELHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "790163d2cd672567ac3ff8afee0da4ec",
+    "modifiedTime": "2026-11-16T10:38:21.749Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-08-27T03:00:00.000Z",
+    "expirationDate": "2028-08-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-08-27T03:00:00.000Z",
+        "expirationDate": "2028-08-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1DCvasrTt_8X8wxMaICpAAQcTPIDXHtmV",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-08-28_VAL-2027-08-28_DIEGO-MENEZES-NUNES-COELHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "30f0e853dec38e7b19bae8d073171a8a",
+    "modifiedTime": "2026-11-16T10:38:15.858Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-08-28T03:00:00.000Z",
+    "expirationDate": "2028-08-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-08-28T03:00:00.000Z",
+        "expirationDate": "2028-08-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1tv9e_F9-ncyl6Fk3EtFT9LdtFY-NVR_Z",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-08-22_VAL-2027-08-22_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "04d4c7d72a55dbc36ca22cf0caf18694",
+    "modifiedTime": "2026-11-16T10:38:24.921Z",
+    "holder": {
+      "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-08-22T03:00:00.000Z",
+    "expirationDate": "2028-08-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-08-22T03:00:00.000Z",
+        "expirationDate": "2028-08-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ThEAaK_u1dywojKrnNAX2OyKh36F6ugz",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-07-12_VAL-2027-07-12_FRANCISCO-MARCOS-DE-SOUZA-MAGALHAES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a3cef1cfd4ffb6bc2c4fb2ba277f8136",
+    "modifiedTime": "2026-11-16T10:38:30.822Z",
+    "holder": {
+      "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-07-12T03:00:00.000Z",
+    "expirationDate": "2027-07-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/07/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-07-12T03:00:00.000Z",
+        "expirationDate": "2027-07-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/07/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1YWaR9ug4mDnoro_KAvDM9Wbpu3KWl7Zz",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-03_VAL-2027-09-03_DIEGO-MENEZES-NUNES-COELHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d938c6d8740a1e10e963cdc465408e92",
+    "modifiedTime": "2026-11-16T10:38:09.494Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-03T03:00:00.000Z",
+    "expirationDate": "2028-09-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-03T03:00:00.000Z",
+        "expirationDate": "2028-09-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1s2Kfi3wO8jh_yOthdcIWXwt8tarFLLc0",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-08-28_VAL-2027-08-28_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1017391c91e8cf395ba1e57c11843771",
+    "modifiedTime": "2026-11-16T10:38:18.840Z",
+    "holder": {
+      "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-08-28T03:00:00.000Z",
+    "expirationDate": "2028-08-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-08-28T03:00:00.000Z",
+        "expirationDate": "2028-08-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1RXfx22LK0ICg5q5Vl56hbgy5hcM4MHGh",
+    "filename": "eso.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "67db0fc340f084619598711a64bccbbf",
+    "modifiedTime": "2026-11-16T12:02:36.860Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": null,
+    "statusEHS": "NAO_LIDO",
+    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"eso.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "source": "FILENAME",
+    "classificationSource": "NONE",
+    "documents": [
+      {
+        "code": null,
+        "statusEHS": "NAO_LIDO",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"eso.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "source": "FILENAME",
+        "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1l7BJ7EJWSrz0Iy-z_ijKcumkYn-UA8LN",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-14_VAL-2027-09-14_LUIS-GUSTAVO-ROSA-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "325575b7a587408329b548aebc713043",
+    "modifiedTime": "2026-11-16T10:38:06.103Z",
+    "holder": {
+      "key": "h2:LUIS GUSTAVO ROSA SILVA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-14T03:00:00.000Z",
+    "expirationDate": "2028-09-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1PurpPMPqnaZdrKY3ufXk9EcMnAWphEzN",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-22_VAL-2027-10-22_ALISON-DOS-SANTOS-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "98c02ca71b14b4b2151b6adc05c460a2",
+    "modifiedTime": "2026-11-16T10:37:32.166Z",
+    "holder": {
+      "key": "h2:ALISON SANTOS RIBEIRO",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "expirationDate": "2028-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "expirationDate": "2028-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1XBfqQQOkPJQmM1FflDgxSB8a1rXdknGn",
+    "filename": "Certificado NR10 - Curso Básico_Antonio Carvalho Jr.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8fc4e70f3a33a86aa02af277a5395a69",
+    "modifiedTime": "2026-11-16T11:57:54.941Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-10-08T03:00:00.000Z",
+    "expirationDate": "2028-10-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/10/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-10 Básico",
+    "extractedClause": "Iniciado em 08/10/2026",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-10-08T03:00:00.000Z",
+        "expirationDate": "2028-10-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-10 Básico",
+        "extractedClause": "Iniciado em 08/10/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1jQjmKOHhkGM2BPIWbcjSZhChlZVaIjjk",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-10-22_VAL-2027-10-22_ALISON-DOS-SANTOS-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "523c8c92f7a7790cdc38414a502ab369",
+    "modifiedTime": "2026-11-16T10:37:28.975Z",
+    "holder": {
+      "key": "h2:ALISON SANTOS RIBEIRO",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "expirationDate": "2028-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "expirationDate": "2028-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1uQCg6NGKS1dmYVFcHPxuU3SM3TKthEdX",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-14_VAL-2027-09-14_ANTONIO-CARLOS-PEREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ae65423b80884125173c34f51b57eb47",
+    "modifiedTime": "2026-11-16T10:38:03.172Z",
+    "holder": {
+      "key": "h2:ANTONIO CARLOS PEREIRA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-09-14T03:00:00.000Z",
+    "expirationDate": "2028-09-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-09-14T03:00:00.000Z",
+        "expirationDate": "2028-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1GMftSymSzD7HNFUgbjDIZm4L_FN0vKlw",
+    "filename": "34_NR05-CIPA-FORMACAO_EMI-2026-05-18_VAL-2027-05-18_ANTONIO-CARVALHO-JUNIOR.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "18a5c8c3a8066768f103eb75c3019835",
+    "modifiedTime": "2026-11-16T10:38:39.929Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "34",
+    "issueDate": "2026-05-18T03:00:00.000Z",
+    "expirationDate": "2027-05-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/05/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "34",
+        "issueDate": "2026-05-18T03:00:00.000Z",
+        "expirationDate": "2027-05-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/05/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "CIPA (NR-05) (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1_jyahPPrjAOGN14r571ayfNoYViSNLbQ",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-19_VAL-2027-10-19_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d2038e433fc58232209db30668448e36",
+    "modifiedTime": "2026-11-16T10:37:38.098Z",
+    "holder": {
+      "key": "h2:BRUNO EDUARDO FERREIRA PAIVA",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-10-19T03:00:00.000Z",
+    "expirationDate": "2028-10-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2028-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1nTjosPxg-zh5IBcQKWTldiuTCjvPm-sy",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-22_VAL-2027-09-22_DANIEL-FERNANDES-PACHECO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0711d882582bd789f7777e6f541cf963",
+    "modifiedTime": "2026-11-16T10:37:40.997Z",
+    "holder": {
+      "key": "h2:DANIEL FERNANDES PACHECO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-09-22T03:00:00.000Z",
+    "expirationDate": "2027-09-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/09/2027",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Concluído em 22/09/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-09-22T03:00:00.000Z",
+        "expirationDate": "2027-09-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/09/2027",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Concluído em 22/09/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1GQdZK07XlNyaxMQ3u8m9eUQq24ngykdT",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-11-16_VAL-2027-11-16_ANTONIO-CARVALHO-JUNIOR.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ba7d79de07d33c29252a61d44818855e",
+    "modifiedTime": "2026-11-16T10:36:34.859Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-11-16T03:00:00.000Z",
+    "expirationDate": "2028-11-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-11-16T03:00:00.000Z",
+        "expirationDate": "2028-11-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1bNh8VPz-XdOkwmzOkyLsGxuW4WSpp5dj",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-10-20_VAL-2027-10-20_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "23f16d507d47784ee9e5bbc31f5ae2a2",
+    "modifiedTime": "2026-11-16T10:37:35.180Z",
+    "holder": {
+      "key": "h2:BRUNO EDUARDO FERREIRA PAIVA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-20T03:00:00.000Z",
+    "expirationDate": "2027-10-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/10/2027",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Concluído em 20/10/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-20T03:00:00.000Z",
+        "expirationDate": "2027-10-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2027",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Concluído em 20/10/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1Vd1T2dr-8oaaO-1JvsMZgPbj4TqY0WAh",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-03-18_VAL-2027-03-18_THIAGO-AUGUSTO-DE-PAULA-PEPE.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a6f3173cfd3efa66f983c01873530571",
+    "modifiedTime": "2026-11-16T10:38:48.977Z",
+    "holder": {
+      "key": "h2:THIAGO AUGUSTO PAULA PEPE",
+      "status": "OK"
+    },
+    "code": "46",
+    "issueDate": "2026-03-18T03:00:00.000Z",
+    "expirationDate": "2028-03-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/03/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "46",
+        "issueDate": "2026-03-18T03:00:00.000Z",
+        "expirationDate": "2028-03-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/03/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio (via PDF) (Pág. 3)",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1yD2Zer-XhwVtWCcI102Rul3u6u88oi4X",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-10-29_VAL-2027-10-29_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "874f43edb0cb99ffe136404a757c2932",
+    "modifiedTime": "2026-11-16T10:36:39.666Z",
+    "holder": {
+      "key": "h2:FELIPE ALAN PEGHIN SANTOS",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-29T03:00:00.000Z",
+    "expirationDate": "2027-10-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/10/2027",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Concluído em 29/10/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-29T03:00:00.000Z",
+        "expirationDate": "2027-10-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2027",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Concluído em 29/10/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1qlJzmPq1FDsvKpYA9Y8yS9ya8Z4TmPY4",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-01-30_VAL-2027-01-30_THIAGO-LIMA-SANTOS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "538440b142d1301cb1991577b98f9ba4",
+    "modifiedTime": "2026-11-16T10:36:59.636Z",
+    "holder": {
+      "key": "h2:THIAGO LIMA SANTOS SILVA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-01-27T03:00:00.000Z",
+    "expirationDate": "2027-01-27T03:00:00.000Z",
+    "statusEHS": "VENCE_90",
+    "statusDetail": "PROGRAMAR: Vence em 72 dias (27/01/2027)",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Iniciado em 27/01/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-01-27T03:00:00.000Z",
+        "expirationDate": "2027-01-27T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 72 dias (27/01/2027)",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Iniciado em 27/01/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1CDqpwdF7ZVSLmy42wqeMt5FFsfAew51-",
+    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-01-28_VAL-2027-01-28_THIAGO-LIMA-SANTOS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9b81b02f3574449f0d86822f3b3e995b",
+    "modifiedTime": "2026-11-16T10:36:56.557Z",
+    "holder": {
+      "key": "h2:THIAGO LIMA SANTOS SILVA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-01-28T03:00:00.000Z",
+    "expirationDate": "2027-01-28T03:00:00.000Z",
+    "statusEHS": "VENCE_90",
+    "statusDetail": "PROGRAMAR: Vence em 73 dias (28/01/2027)",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "extractedClause": "Concluído em 28/01/2026",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-01-28T03:00:00.000Z",
+        "expirationDate": "2027-01-28T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 73 dias (28/01/2027)",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "extractedClause": "Concluído em 28/01/2026"
       }
     ]
   }
