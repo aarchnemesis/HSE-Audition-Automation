@@ -4,6 +4,8 @@
 # O resultado entra no Drive na rodada seguinte (leitura nova invalida o cache do arquivo).
 cd /opt/hse-automation || exit 1
 export HSE_PROMETHEUS_PARALLEL="${HSE_PROMETHEUS_PARALLEL:-6}"
+# Fila avulsa (--ids) rodando fora da trava: espera terminar para não sobrescrever o cache.
+while pgrep -f "runLlmQueue.ts .*--ids=" >/dev/null; do sleep 30; done
 for args in "" "--vision" "--tier=3" "--arbiter"; do
   # Trava única: a fila grava data/llm_reading_cache.json inteiro; duas filas juntas se sobrescrevem.
   flock /run/lock/hse-llm.lock npx tsx src/cli/runLlmQueue.ts $args 2>&1 | grep "\[llm-queue\]"
