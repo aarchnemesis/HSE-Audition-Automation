@@ -36,11 +36,15 @@ export interface LlmReading {
   /** Documentos em que A e B (ou A e as regras) concordam */
   consensus?: LlmDocument[]
   /** Quem confirmou a leitura do Leitor A: o Leitor B ou a leitura das regras */
-  confirmedBy?: 'B' | 'REGRAS'
+  confirmedBy?: 'B' | 'REGRAS' | 'C'
   agreed: boolean
   disagreement?: string
   /** Leitura feita com as imagens das páginas (modo --vision). */
   vision?: boolean
+  /** Degrau da escada de leitura: 1 texto, 2 imagem, 3 imagem em alta com modelos fortes, 4 árbitro. */
+  tier?: number
+  /** Parecer do árbitro C quando decidiu (ou por que não decidiu). */
+  arbiter?: string
   error?: string
   at: string
 }
@@ -76,7 +80,7 @@ function prompt(reader: 'A' | 'B', text: string): string {
  * chamando call_llm do Hermes. Subir `hermes chat` por pergunta esgotava a memória da VPS.
  */
 export function runBatch(
-  jobs: { id: string; prompt: string; images?: string[] }[],
+  jobs: { id: string; prompt: string; images?: string[]; provider?: string; model?: string }[],
   threads = MAX_PARALLEL,
   onProgress?: (line: string) => void
 ): Promise<Map<string, string>> {
@@ -164,7 +168,67 @@ export function consensusOf(a: LlmDocument[], b: LlmDocument[]): { agreed: boole
   return { agreed: true, consensus: both }
 }
 
+export interface LlmModel { provider: string; model: string }
+
+const ARBITER_RULES = `Você é o Árbitro C do Book de Padronização EHS da Arthwind. Dois leitores independentes (A e B) leram o MESMO arquivo e discordaram.
+Olhe as imagens das páginas (fonte principal) e decida campo a campo qual leitura está certa, ou corrija as duas se ambas erraram.
+Datas manuscritas, carimbos e assinaturas valem. Não invente: se a imagem não permite decidir um campo, use "ilegivel".
+Se não for possível decidir o documento com segurança, responda {"decisao":"indeterminado","motivo":"...","documentos":[]}.
+Caso contrário responda {"decisao":"decidido","motivo":"(uma frase)","documentos":[...]}, com cada documento no formato:
+${SCHEMA}
+
+${COMMON_RULES}`
+
 export class PrometheusReader {
+  /**
+   * Degrau 4 da escada: o Árbitro C vê as imagens, as leituras A e B e o motivo da divergência, e decide.
+   * Decidido grava confirmedBy 'C'; "indeterminado" continua como divergência, com o parecer em `arbiter`.
+   */
+  static async arbitrate(
+    items: { key: string; pages: string[]; images: string[] }[],
+    model: LlmModel,
+    threads = MAX_PARALLEL,
+    onProgress?: (line: string) => void
+  ): Promise<void> {
+    const cache = this.load()
+    const keyOf = (k: string) => `${k}|v${LLM_PROMPT_VERSION}`
+    const todo = items.filter(i => {
+      const r = cache[keyOf(i.key)]
+      return r && !r.agreed && (r.a || r.b) && i.images.length > 0
+    })
+    const jobs = todo.map(i => {
+      const r = cache[keyOf(i.key)]
+      const p = [
+        ARBITER_RULES,
+        `Motivo da divergência: ${r.disagreement ?? r.error ?? 'não informado'}`,
+        `Leitura A:\n${JSON.stringify(r.a ?? [])}`,
+        `Leitura B:\n${JSON.stringify(r.b ?? [])}`,
+        `Texto do OCR (pode estar errado):\n${textFromPages(i.pages).slice(0, 8000)}`,
+      ].join('\n\n')
+      return { id: i.key, prompt: p, images: i.images, ...model }
+    })
+    const res = await runBatch(jobs, threads, onProgress)
+    const now = new Date().toISOString()
+    for (const i of todo) {
+      const k = keyOf(i.key)
+      const out = res.get(i.key)
+      try {
+        if (!out || out.startsWith('__ERRO__')) throw new Error(out || 'sem resposta')
+        const m = out.match(/\{[\s\S]*\}/)
+        if (!m) throw new Error('resposta sem JSON')
+        const j = JSON.parse(m[0])
+        const docs: LlmDocument[] = Array.isArray(j.documentos) ? j.documentos : []
+        if (j.decisao === 'decidido' && docs.length)
+          cache[k] = { ...cache[k], consensus: docs, agreed: true, confirmedBy: 'C', arbiter: String(j.motivo ?? ''), tier: 4, at: now }
+        else cache[k] = { ...cache[k], arbiter: `indeterminado: ${String(j.motivo ?? '')}`, tier: 4, at: now }
+      } catch (e: any) {
+        cache[k] = { ...cache[k], arbiter: `erro do árbitro: ${String(e?.message || e)}`, tier: 4 }
+      }
+    }
+    this.dirty = true
+    this.save()
+  }
+
   private static cache: Record<string, LlmReading> | null = null
   private static dirty = false
   private static running = 0
@@ -258,14 +322,16 @@ export class PrometheusReader {
     items: { key: string; pages: string[]; images?: string[]; agreesWithRules?: (a: LlmDocument[]) => boolean }[],
     threads = MAX_PARALLEL,
     onProgress?: (line: string) => void,
-    force = false
+    force = false,
+    opts: { tier?: number; modelA?: LlmModel; modelB?: LlmModel } = {}
   ): Promise<void> {
     const cache = this.load()
     // force: relê mesmo o que já tem leitura (a leitura por imagem substitui a feita só com o texto do OCR).
     const todo = items.filter(i => force || !this.has(i.key))
     const VISION = 'As imagens das páginas estão anexadas e são a fonte principal: datas e marcações manuscritas, carimbos e assinaturas valem como lidos. O texto do OCR abaixo pode estar errado.\n\n'
     const textOf = (i: { pages: string[]; images?: string[] }) => (i.images?.length ? VISION : '') + textFromPages(i.pages)
-    const job = (r: 'A' | 'B', i: (typeof todo)[number]) => ({ id: i.key, prompt: prompt(r, textOf(i)), images: i.images })
+    const job = (r: 'A' | 'B', i: (typeof todo)[number]) => ({ id: i.key, prompt: prompt(r, textOf(i)), images: i.images, ...(r === 'A' ? opts.modelA : opts.modelB) })
+    const tier = opts.tier ?? (todo.some(i => i.images?.length) ? 2 : 1)
     const resA = await runBatch(todo.map(i => job('A', i)), threads, onProgress)
     const needB: typeof todo = []
     const aOf = new Map<string, LlmDocument[]>()
@@ -276,7 +342,7 @@ export class PrometheusReader {
       try {
         if (!out || out.startsWith('__ERRO__')) throw new Error(out || 'sem resposta')
         const a = parse(out)
-        if (i.agreesWithRules?.(a)) cache[k] = { a, consensus: a, agreed: true, confirmedBy: 'REGRAS', vision: !!i.images?.length, at: now() }
+        if (i.agreesWithRules?.(a)) cache[k] = { a, consensus: a, agreed: true, confirmedBy: 'REGRAS', vision: !!i.images?.length, tier, at: now() }
         else { aOf.set(i.key, a); needB.push(i) }
       } catch (e: any) {
         cache[k] = { agreed: false, error: String(e?.message || e), at: now() }
@@ -293,7 +359,7 @@ export class PrometheusReader {
         if (!out || out.startsWith('__ERRO__')) throw new Error(out || 'sem resposta')
         const b = parse(out)
         const c = consensusOf(a, b)
-        cache[k] = { a, b, consensus: c.consensus, agreed: c.agreed, confirmedBy: c.agreed ? 'B' : undefined, disagreement: c.why, vision: !!i.images?.length, at: now() }
+        cache[k] = { a, b, consensus: c.consensus, agreed: c.agreed, confirmedBy: c.agreed ? 'B' : undefined, disagreement: c.why, vision: !!i.images?.length, tier, at: now() }
       } catch (e: any) {
         cache[k] = { a, agreed: false, error: `Leitor B: ${String(e?.message || e)}`, at: now() }
       }

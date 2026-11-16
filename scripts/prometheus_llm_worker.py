@@ -68,8 +68,8 @@ def main() -> None:
         for attempt in range(3):
             try:
                 resp = call_llm(
-                    provider=PROVIDER,
-                    model=MODEL,
+                    provider=job.get("provider") or PROVIDER,
+                    model=job.get("model") or MODEL,
                     messages=[{"role": "user", "content": content_of(job)}],
                     timeout=240,
                 )

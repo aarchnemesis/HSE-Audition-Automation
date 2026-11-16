@@ -30,7 +30,16 @@ const sameDay = (a?: string | Date, b?: string | Date | null) =>
 
 async function main() {
   const all = process.argv.includes('--all')
-  const vision = process.argv.includes('--vision')
+  // Escada de leitura: --vision (degrau 2), --tier=3 (imagem em alta, modelos fortes de famílias diferentes),
+  // --arbiter (degrau 4: Árbitro C decide o que ainda diverge). Degrau 3 e árbitro só pegam o que não tem acordo.
+  const tierArg = Number(process.argv.find(a => a.startsWith('--tier='))?.split('=')[1]) || 0
+  const arbiter = process.argv.includes('--arbiter')
+  const tier = arbiter ? 4 : tierArg || (process.argv.includes('--vision') ? 2 : 1)
+  const vision = tier >= 2
+  const DPI = tier >= 3 ? '200' : '110'
+  const MAX_PAGES = tier >= 3 ? '6' : '3'
+  const STRONG_A = { provider: process.env.HSE_LLM_STRONG_A_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_A_MODEL || 'gpt-6.1-sol' }
+  const STRONG_B = { provider: process.env.HSE_LLM_STRONG_B_PROVIDER || 'gemini', model: process.env.HSE_LLM_STRONG_B_MODEL || 'gemini-3.1-pro-preview' }
   const limit = Number(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1]) || Infinity
   const raw = JSON.parse(fs.readFileSync('data/pdf_content_cache.json', 'utf8'))
   const files: any[] = Array.isArray(raw) ? raw : Object.values(raw)
@@ -60,8 +69,9 @@ async function main() {
       const person = owner.get(id)
       if (!person) continue
       const k = `${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`
-      if (!vision && llm[k]?.at && !llm[k]?.error) continue
-      if (vision && llm[k]?.vision) continue
+      if (tier === 1 && llm[k]?.at && !llm[k]?.error) continue
+      if (tier === 2 && llm[k]?.vision) continue
+      if (tier >= 3 && (llm[k]?.agreed || (llm[k]?.tier ?? 1) >= tier)) continue
       queue.push({ f, person, strong: true })
     }
   }
@@ -115,8 +125,8 @@ async function main() {
             try {
               const src = path.join(dir, buf.subarray(0, 1024).includes('%PDF-') ? 'f.pdf' : 'f.img')
               fs.writeFileSync(src, buf)
-              if (src.endsWith('.pdf')) execFileSync('pdftoppm', ['-r', '110', '-f', '1', '-l', '3', '-jpeg', '-jpegopt', 'quality=80', src, path.join(dir, 'p')])
-              else execFileSync('convert', [src + '[0]', '-resize', '1600x1600>', '-quality', '80', path.join(dir, 'p-1.jpg')])
+              if (src.endsWith('.pdf')) execFileSync('pdftoppm', ['-r', DPI, '-f', '1', '-l', MAX_PAGES, '-jpeg', '-jpegopt', 'quality=80', src, path.join(dir, 'p')])
+              else execFileSync('convert', [src + '[0]', '-resize', tier >= 3 ? '2400x2400>' : '1600x1600>', '-quality', '80', path.join(dir, 'p-1.jpg')])
               images = fs.readdirSync(dir).filter(n => n.endsWith('.jpg')).sort().map(n => fs.readFileSync(path.join(dir, n)).toString('base64'))
             } catch { images = undefined } finally { fs.rmSync(dir, { recursive: true, force: true }) }
             if (!images?.length) continue
@@ -138,12 +148,13 @@ async function main() {
       }
     }))
     // 2) Prometheus em lote (A em todos, B onde A diverge das regras)
-    await PrometheusReader.readMany(prepared, threads, undefined, vision)
+    if (arbiter) await PrometheusReader.arbitrate(prepared.filter(p => p.images?.length) as any, STRONG_A, threads)
+    else await PrometheusReader.readMany(prepared, threads, undefined, vision, tier >= 3 ? { tier, modelA: STRONG_A, modelB: STRONG_B } : { tier })
     const c: Record<string, any> = JSON.parse(fs.readFileSync('data/llm_reading_cache.json', 'utf8'))
     const mine = prepared.map(p => c[`${p.key}|v${LLM_PROMPT_VERSION}`]).filter(Boolean)
     const min = (Date.now() - started) / 60000
     const doneN = Math.min(from + CHUNK, todo.length)
-    console.log(`[llm-queue] ${doneN}/${todo.length} em ${min.toFixed(1)} min | lote: ${mine.filter(r => r.agreed).length} concordam (${mine.filter(r => r.confirmedBy === 'REGRAS').length} pelas regras, ${mine.filter(r => r.confirmedBy === 'B').length} pelo Leitor B), ${mine.filter(r => !r.agreed && !r.error).length} divergem, ${mine.filter(r => r.error).length} erros | faltam ~${Math.round(((todo.length - doneN) * min) / doneN)} min`)
+    console.log(`[llm-queue] ${doneN}/${todo.length} em ${min.toFixed(1)} min | lote: ${mine.filter(r => r.agreed).length} concordam (${mine.filter(r => r.confirmedBy === 'REGRAS').length} pelas regras, ${mine.filter(r => r.confirmedBy === 'B').length} pelo Leitor B, ${mine.filter(r => r.confirmedBy === 'C').length} pelo Árbitro C) [degrau ${tier}], ${mine.filter(r => !r.agreed && !r.error).length} divergem, ${mine.filter(r => r.error).length} erros | faltam ~${Math.round(((todo.length - doneN) * min) / doneN)} min`)
   }
   PrometheusReader.save()
 }
