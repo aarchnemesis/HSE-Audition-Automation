@@ -1,5 +1,5 @@
 {
-  "refDate": "2026-11-13",
+  "refDate": "2026-11-16",
   "portals": [
     {
       "portal": {
@@ -20,8 +20,8 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-13T10:35:33.325Z",
-        "workers": 29
+        "capturedAt": "2026-11-16T09:00:53.871Z",
+        "workers": 27
       },
       "clients": [
         {
@@ -85,7 +85,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-12T09:00:25.626Z",
+        "capturedAt": "2026-11-16T09:00:24.522Z",
         "workers": 44
       },
       "clients": [
@@ -93,8 +93,8 @@
           "client": "SERENA",
           "activity": "IN_FIELD",
           "projectsInWindow": 4,
-          "lastStart": "2026-11-02",
-          "nextStart": "2026-11-16"
+          "lastStart": "2026-11-16",
+          "nextStart": "2026-12-07"
         }
       ],
       "activity": "IN_FIELD"
@@ -119,7 +119,7 @@
       "accessPending": 1,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-13T13:58:22.793Z",
+        "capturedAt": "2026-11-16T09:25:37.931Z",
         "workers": 24
       },
       "clients": [
@@ -192,8 +192,8 @@
           "client": "NAWP CHILE",
           "activity": "IN_FIELD",
           "projectsInWindow": 4,
-          "lastStart": "2026-11-09",
-          "nextStart": "2026-11-16"
+          "lastStart": "2026-11-16",
+          "nextStart": "2026-12-07"
         },
         {
           "client": "REPSOL CHILE",
@@ -508,8 +508,8 @@
       "accessPending": 2,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-13T10:25:49.664Z",
-        "workers": 51
+        "capturedAt": "2026-11-16T09:09:06.050Z",
+        "workers": 62
       },
       "clients": [
         {
@@ -608,7 +608,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-11T18:05:56.807Z",
+        "capturedAt": "2026-11-16T09:05:28.634Z",
         "workers": 11
       },
       "clients": [
@@ -616,8 +616,7 @@
           "client": "INVENERGY",
           "activity": "IN_FIELD",
           "projectsInWindow": 4,
-          "lastStart": "2026-11-02",
-          "nextStart": "2026-11-16"
+          "lastStart": "2026-11-16"
         }
       ],
       "activity": "IN_FIELD"
@@ -795,7 +794,7 @@
       "accessPending": 0,
       "missingCredentials": 0,
       "census": {
-        "capturedAt": "2026-11-12T09:07:01.747Z",
+        "capturedAt": "2026-11-16T09:09:11.210Z",
         "workers": 8
       },
       "clients": [
@@ -1212,7 +1211,7 @@
           "client": "NAWP PERU",
           "activity": "IN_FIELD",
           "projectsInWindow": 1,
-          "nextStart": "2026-11-16"
+          "lastStart": "2026-11-16"
         }
       ],
       "activity": "IN_FIELD"
@@ -1521,8 +1520,8 @@
           "client": "SERENA",
           "activity": "IN_FIELD",
           "projectsInWindow": 4,
-          "lastStart": "2026-11-02",
-          "nextStart": "2026-11-16"
+          "lastStart": "2026-11-16",
+          "nextStart": "2026-12-07"
         }
       ],
       "activity": "IN_FIELD"

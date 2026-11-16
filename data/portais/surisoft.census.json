@@ -1,6 +1,6 @@
 {
   "portalId": "surisoft",
-  "capturedAt": "2026-11-12T09:00:25.626Z",
+  "capturedAt": "2026-11-16T09:00:24.522Z",
   "workers": [
     {
       "name": "JUAN ILGNER MARINHO LIMA",
@@ -29,12 +29,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "expiresOn": "2027-12-08",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-29",
           "required": true
         },
         {
@@ -143,6 +137,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-24",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-12-03",
@@ -167,15 +167,15 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-11-24",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2028-11-30",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-29",
           "required": true
         },
         {
@@ -239,12 +239,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2026-11-20",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-19",
           "required": true
         },
         {
@@ -353,6 +347,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-02",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-01-21",
@@ -377,15 +377,15 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-02",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-04-07",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-01-19",
           "required": true
         },
         {
@@ -446,12 +446,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-08-21",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-04-06",
           "required": true
         },
         {
@@ -560,6 +554,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-03-31",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-02-05",
@@ -584,9 +584,9 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
-          "expiresOn": "2028-03-31",
+          "expiresOn": "2027-04-06",
           "required": true
         },
         {
@@ -652,12 +652,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-09-10",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-08-22",
           "required": true
         },
         {
@@ -766,6 +760,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-23",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-10-17",
@@ -790,15 +790,15 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-23",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-03-29",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-08-22",
           "required": true
         },
         {
@@ -862,12 +862,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "expiresOn": "2027-04-16",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2027-04-11",
           "required": true
         },
         {
@@ -970,6 +964,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "expiresOn": "2027-04-16",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-04-24",
@@ -993,16 +993,16 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2027-04-16",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "REJECTED",
           "expiresOn": "2020-04-10",
           "note": "Pendente RG/CPF do colaborador",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "expiresOn": "2027-04-11",
           "required": true
         },
         {
@@ -1066,12 +1066,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-10-13",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2028-09-07",
           "required": true
         },
         {
@@ -1180,6 +1174,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-24",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2028-07-08",
@@ -1204,15 +1204,15 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-09-24",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-04-29",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2028-09-07",
           "required": true
         },
         {
@@ -1272,12 +1272,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-02-10",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-01-27",
           "required": true
         },
         {
@@ -1368,6 +1362,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-03",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-01-21",
@@ -1386,9 +1386,9 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
-          "expiresOn": "2027-02-03",
+          "expiresOn": "2027-01-27",
           "required": true
         },
         {
@@ -1454,12 +1454,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-10-23",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "1999-01-01",
           "required": true
         },
         {
@@ -1568,6 +1562,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-11-12",
@@ -1592,13 +1592,13 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
-          "expiresOn": "2027-10-19",
+          "expiresOn": "1999-01-01",
           "required": true
         },
         {
-          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "1999-01-01",
           "required": true
@@ -1666,12 +1666,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-08-24",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "expiresOn": "2028-09-11",
           "required": true
         },
         {
@@ -1780,6 +1774,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-08-22",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-11-19",
@@ -1804,9 +1804,9 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-08-22",
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "expiresOn": "2028-09-11",
           "required": true
         },
         {
@@ -1973,6 +1973,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-12-25",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-07-24",
@@ -1994,12 +2000,6 @@
           "title": "NR 35 - Capacitação Trabalho em Altura",
           "status": "APPROVED",
           "expiresOn": "2027-12-30",
-          "required": true
-        },
-        {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-12-25",
           "required": true
         },
         {
@@ -2059,11 +2059,6 @@
         },
         {
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "MISSING",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "required": true
         },
@@ -2158,6 +2153,11 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "MISSING",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "MISSING",
           "required": true
@@ -2178,12 +2178,12 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "required": true
         },
         {
-          "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "MISSING",
           "required": true
         },
@@ -2319,15 +2319,15 @@
           "required": true
         },
         {
-          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
-          "expiresOn": "2027-11-23",
+          "expiresOn": "2028-07-09",
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
-          "expiresOn": "2028-07-09",
+          "expiresOn": "2027-11-23",
           "required": true
         },
         {
@@ -2465,15 +2465,15 @@
           "required": true
         },
         {
-          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
-          "expiresOn": "2028-01-28",
+          "expiresOn": "2028-01-23",
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
-          "expiresOn": "2028-01-23",
+          "expiresOn": "2028-01-28",
           "required": true
         },
         {
@@ -2538,12 +2538,6 @@
           "title": "Capacitação NR-10 (SEP) - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-11-03",
-          "required": true
-        },
-        {
-          "title": "Capacitação NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-24",
           "required": true
         },
         {
@@ -2652,6 +2646,12 @@
           "required": true
         },
         {
+          "title": "NR 10 (Básico) - (Se for reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-30",
+          "required": true
+        },
+        {
           "title": "NR 23 - Capacitação Proteção e Combate a Incêndio",
           "status": "APPROVED",
           "expiresOn": "2027-11-12",
@@ -2676,15 +2676,15 @@
           "required": true
         },
         {
-          "title": "NR-10 (Básico) - (Em caso de reciclagem apresentar Admissional + Periódico)",
-          "status": "APPROVED",
-          "expiresOn": "2027-10-30",
-          "required": true
-        },
-        {
           "title": "NR-11 - (Em caso de reciclagem apresentar Admissional + Periódico)",
           "status": "APPROVED",
           "expiresOn": "2027-10-25",
+          "required": true
+        },
+        {
+          "title": "NR-12 - (Em caso de reciclagem apresentar Admissional + Periódico)",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-24",
           "required": true
         },
         {

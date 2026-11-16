@@ -2,8 +2,1299 @@
   "portalId": "datalife",
   "portalName": "Datalife (Neoenergia, Enel, GE Vernova)",
   "system": "Datalife",
-  "capturedAt": "2026-11-13T10:25:49.664Z",
+  "capturedAt": "2026-11-16T09:09:06.050Z",
   "workers": [
+    {
+      "name": "ADRIANO CIRILO GARCIA LIMA",
+      "cpf": "02377013325",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 15,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-27",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-18",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-18",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-16",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-17",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-31",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "EXPIRING",
+          "expiresOn": "2024-10-10",
+          "note": ".",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANTONIO CORDEIRO DE MORAIS NETO",
+      "cpf": "07462833344",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 16,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-15",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-23",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-10",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2024-08-10",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-14",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2024-08-12",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-06",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-06",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-29",
+          "note": ".",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ANTONIO RAFAEL DOS SANTOS",
+      "cpf": "01281013340",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 17,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2024-02-23",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-27",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-02-28",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE  SERVIÇO",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-09-23",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-25",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2025-03-15",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-03-16",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-06",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-30",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BRUNO ALEXANDRE DE BRITO",
+      "cpf": "05955225480",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 24,
+      "plant": "Renováveis",
+      "role": "TECNICO EM OPERAÇÕES",
+      "jobRole": "TECNICO EM OPERAÇÕES",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "NR12",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR11",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR12",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR17",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Documento de identificação com foto (RG, Passaporte ou CNH)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-08",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-26",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "CARTEIRA DE VACINAS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2024-08-26",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "DIREÇÃO  DEFENSIVA",
+          "status": "APPROVED",
+          "expiresOn": "2028-12-26",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável p/ a função/atividade)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Certificação Formação Profissional",
+          "status": "APPROVED",
+          "expiresOn": "2070-02-28",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2024-08-17",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-27",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-20",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2024-08-19",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-11-30",
+          "note": ".",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BRUNO KEVIN MOTA LIMA",
+      "cpf": "05921582336",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 16,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-18",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-30",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-31",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-04",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-13",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-21",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2026-02-23",
+          "note": ".",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "ERMESON RAFAEL SOUZA ALCANTARA",
+      "cpf": "06652228319",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 17,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2024-02-07",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-02-11",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-15",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-09",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-09",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-14",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-17",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE  SERVIÇO",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-10",
+          "required": true
+        },
+        {
+          "title": "xN/Ax",
+          "status": "EXPIRED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "GUSTAVO HENRIQUE DE FREITAS SILVEIRA DOS SANTOS",
+      "cpf": "06134019569",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 19,
+      "plant": "Renováveis",
+      "role": "Tecnico de Montagem Eletromecanico",
+      "jobRole": "Tecnico de Montagem Eletromecanico",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "REJECTED",
+          "expiresOn": "2024-03-22",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "EXPIRED",
+          "expiresOn": "2024-10-10",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "REJECTED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "REJECTED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Certificação Formação Profissional",
+          "status": "REJECTED",
+          "expiresOn": "2073-11-01",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Registro CRQ / CRBIO / CREA (apresentar o registro que for aplicável p/ a função/atividade)",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "EXPIRED",
+          "expiresOn": "2023-11-26",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "REJECTED",
+          "expiresOn": "2025-03-16",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "REJECTED",
+          "expiresOn": "2025-03-30",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "EXPIRED",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "REJECTED",
+          "expiresOn": "2025-03-15",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento Direção Defensiva",
+          "status": "REJECTED",
+          "expiresOn": "2027-11-23",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "EXPIRED",
+          "expiresOn": "2025-03-28",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "EXPIRED",
+          "expiresOn": "2025-03-27",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "REJECTED",
+          "expiresOn": "2023-11-25",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR12",
+          "status": "REJECTED",
+          "expiresOn": "2025-03-10",
+          "note": ".",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "HARON QUEIROZ DE CARVALHO",
+      "cpf": "91121175368",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 16,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-27",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-21",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-31",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-17",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-21",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-28",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-27",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "EXPIRING",
+          "expiresOn": "2024-10-10",
+          "note": ",",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "INOCENCIO ROCHA DE MOURA",
+      "cpf": "60554716399",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 16,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2023-11-07",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-10",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2023-11-07",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE  SERVIÇO",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2024-11-18",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-14",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-18",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2024-12-06",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "xN/Ax",
+          "status": "EXPIRED",
+          "expiresOn": "2073-11-01",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "EXPIRED",
+          "expiresOn": "2024-11-22",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "JOÃO VICTOR DOS SANTOS RIBEIRO",
+      "cpf": "61681781395",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 1,
+      "totalDocuments": 18,
+      "plant": "Renováveis",
+      "role": "Inspetor de Qualidade",
+      "jobRole": "Inspetor de Qualidade",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2024-10-10",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Treinamento admissional (SSO)",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-04-09",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR33",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "ORDEM DE  SERVIÇO",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "Treinamento Primeiros Socorros",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-19",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-17",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-21",
+          "required": true
+        },
+        {
+          "title": "NR35",
+          "status": "APPROVED",
+          "expiresOn": "2025-10-18",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR35",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-18",
+          "required": true
+        },
+        {
+          "title": "CERTIFICADO DE CAPACITAÇÃO TÉCNICA",
+          "status": "APPROVED",
+          "expiresOn": "2073-11-17",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2025-01-19",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR 33",
+          "status": "APPROVED",
+          "expiresOn": "2025-02-21",
+          "note": ".",
+          "required": true
+        },
+        {
+          "title": "NR 23 - (BST -GWO - MODULOS COMBATE A INCENDIO)",
+          "status": "EXPIRING",
+          "expiresOn": "2025-01-17",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "MARCELO DE JESUS RAMOS PIRES",
+      "cpf": "05598175762",
+      "status": "BLOCKED",
+      "cleared": false,
+      "pendingCount": 0,
+      "totalDocuments": 9,
+      "plant": "Renováveis",
+      "role": "Inspetor de Equipamentos",
+      "jobRole": "Inspetor de Equipamentos",
+      "client": "NEOENERGIA",
+      "documents": [
+        {
+          "title": "COMPROVAÇÃO DE VÍNCULO EMPREGATÍCIO (ctps, ficha de registro ou eSocial)",
+          "status": "APPROVED",
+          "expiresOn": "2026-04-07",
+          "required": true
+        },
+        {
+          "title": "ASO - Atestado de Saúde Ocupacional",
+          "status": "APPROVED",
+          "expiresOn": "2026-04-10",
+          "required": true
+        },
+        {
+          "title": "CNH",
+          "status": "APPROVED",
+          "expiresOn": "2033-10-15",
+          "required": true
+        },
+        {
+          "title": "Carta de Anuência NR10",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR10- (40hrs)",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-20",
+          "required": true
+        },
+        {
+          "title": "NR10 SEP",
+          "status": "APPROVED",
+          "expiresOn": "2027-04-23",
+          "required": true
+        },
+        {
+          "title": "NR01- Ordem de Serviço",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR06- Ficha de EPIs",
+          "status": "APPROVED",
+          "expiresOn": "2026-04-10",
+          "required": true
+        },
+        {
+          "title": "Seguro de Vida",
+          "status": "APPROVED",
+          "expiresOn": "2025-12-06",
+          "required": true
+        },
+        {
+          "title": "CONTRATO PJ",
+          "status": "EXPIRED",
+          "expiresOn": "2025-04-06",
+          "required": true
+        },
+        {
+          "title": "DIREÇÃO  DEFENSIVA",
+          "status": "EXPIRED",
+          "expiresOn": "2027-04-10",
+          "required": true
+        }
+      ]
+    },
     {
       "name": "ADENILÇO QUEIROZ DA SILVA",
       "cpf": "34984149841",
@@ -3467,8 +4758,8 @@
     {
       "name": "RAMON RAMIRES COSTA CIRINO",
       "cpf": "06294426308",
-      "status": "BLOCKED",
-      "cleared": false,
+      "status": "CLEARED",
+      "cleared": true,
       "pendingCount": 0,
       "totalDocuments": 15,
       "plant": "DELFINA (O&M), MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M), LAGOA DOS VENTOS V (O&M)",
@@ -3556,7 +4847,7 @@
         },
         {
           "title": "Carta de Anuência NR 35 (1 de 3)",
-          "status": "EXPIRED",
+          "status": "APPROVED",
           "required": true
         }
       ]
@@ -3865,9 +5156,9 @@
     {
       "name": "VALDERSON DO NASCIMENTO FERREIRA",
       "cpf": "60578333333",
-      "status": "BLOCKED",
-      "cleared": false,
-      "pendingCount": 1,
+      "status": "CLEARED",
+      "cleared": true,
+      "pendingCount": 0,
       "totalDocuments": 16,
       "plant": "MORRO DO CHAPEU SUL (O&M), MORRO DO CHAPEU SUL II (O&M), SERRA AZUL (O&M)",
       "role": "O&M - Inspetor de Qualidade ( ARTH WIND)",
@@ -3958,14 +5249,14 @@
           "required": true
         },
         {
-          "title": "Certificação de Formação Profissional (1 de 2)",
-          "status": "EXPIRED",
+          "title": "NR06 - Ficha de Epi",
+          "status": "APPROVED",
+          "expiresOn": "2027-11-12",
           "required": true
         },
         {
-          "title": "NR06 - Ficha de Epi",
-          "status": "EXPIRING",
-          "expiresOn": "2027-02-02",
+          "title": "Certificação de Formação Profissional (1 de 2)",
+          "status": "EXPIRED",
           "required": true
         }
       ]
@@ -4617,42 +5908,84 @@
       "cpf": "07483946300",
       "status": "BLOCKED",
       "cleared": false,
-      "pendingCount": 0,
-      "totalDocuments": 23,
+      "pendingCount": 4,
+      "totalDocuments": 25,
       "plant": "(EDF) VENTOS DA BAHIA",
       "role": "Inspetor de Qualidade",
       "jobRole": "Inspetor de Qualidade",
       "client": "GE VERNOVA",
       "documents": [
         {
-          "title": "Certificação Profissional",
-          "status": "WAIVED",
-          "required": true
-        },
-        {
-          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
-          "status": "EXPIRED",
-          "required": true
-        },
-        {
           "title": "TREINAMENTO ADMISSIONAL / INTEGRAÇÃO",
-          "status": "EXPIRED",
+          "status": "APPROVED",
           "required": true
         },
         {
           "title": "Carteira de Vacinas",
-          "status": "EXPIRED",
+          "status": "APPROVED",
           "required": true
         },
         {
           "title": "NR 35 - Trabalho em Altura - Certificado de Treinamento",
-          "status": "EXPIRED",
+          "status": "APPROVED",
           "expiresOn": "2027-11-08",
           "required": true
         },
         {
-          "title": "Anuência Formal - NR 12",
-          "status": "EXPIRED",
+          "title": "Documento de Identificação",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 10 Básico - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-10-16",
+          "required": true
+        },
+        {
+          "title": "NR 23 - Proteção e Combate a Incêndio",
+          "status": "APPROVED",
+          "expiresOn": "2027-02-25",
+          "required": true
+        },
+        {
+          "title": "NR 11 - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2028-04-10",
+          "required": true
+        },
+        {
+          "title": "Direção Defensiva",
+          "status": "APPROVED",
+          "expiresOn": "2028-02-22",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "required": true
+        },
+        {
+          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-21",
+          "required": true
+        },
+        {
+          "title": "Ficha de Registro",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "CTPS",
+          "status": "APPROVED",
+          "required": true
+        },
+        {
+          "title": "NR 12",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-19",
           "required": true
         },
         {
@@ -4662,43 +5995,46 @@
           "required": true
         },
         {
-          "title": "Documento de Identificação",
-          "status": "EXPIRED",
+          "title": "Certificação Profissional",
+          "status": "APPROVED",
           "required": true
         },
         {
-          "title": "NR 10 Básico - Certificado de Treinamento",
-          "status": "EXPIRED",
-          "expiresOn": "2028-10-16",
-          "required": true
-        },
-        {
-          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "title": "Anuência Formal - NR35 - Autorização para trabalho em altura",
           "status": "EXPIRED",
           "required": true
         },
         {
           "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
-          "status": "EXPIRED",
+          "status": "EXPIRING",
           "expiresOn": "2028-10-26",
           "required": true
         },
         {
-          "title": "NR 23 - Proteção e Combate a Incêndio",
-          "status": "EXPIRED",
-          "expiresOn": "2027-02-25",
-          "required": true
-        },
-        {
           "title": "Primeiros Socorros",
-          "status": "EXPIRED",
+          "status": "EXPIRING",
           "expiresOn": "2027-02-25",
           "required": true
         },
         {
-          "title": "NR 11 - Certificado de Treinamento",
+          "title": "NR 01 - Ordem de Serviço",
+          "status": "EXPIRING",
+          "required": true
+        },
+        {
+          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
+          "status": "EXPIRING",
+          "expiresOn": "2027-10-09",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR 12",
           "status": "EXPIRED",
-          "expiresOn": "2028-04-10",
+          "required": true
+        },
+        {
+          "title": "Anuência Formal - NR10 - Autorização para trabalho em instalações elétricas (10.8.4)",
+          "status": "EXPIRED",
           "required": true
         },
         {
@@ -4708,64 +6044,19 @@
           "required": true
         },
         {
-          "title": "Direção Defensiva",
-          "status": "EXPIRED",
-          "expiresOn": "2028-02-22",
-          "required": true
-        },
-        {
-          "title": "NR 33 - Espaço Confinado - Supervisor - Certificado de Treinamento",
-          "status": "EXPIRED",
-          "expiresOn": "2027-10-22",
-          "required": true
-        },
-        {
-          "title": "NR 33 - Espaço Confinado - Vigia e Trabalhador - Certificado de Treinamento",
-          "status": "EXPIRED",
-          "expiresOn": "2027-10-21",
-          "required": true
-        },
-        {
           "title": "Anuência Formal - NR 33 - Trabalhador, Vigia e Supervisor (33.6.5)",
           "status": "EXPIRED",
           "required": true
         },
         {
-          "title": "NR 01 - Ordem de Serviço",
-          "status": "EXPIRED",
-          "required": true
-        },
-        {
-          "title": "Ficha de Registro",
-          "status": "EXPIRED",
-          "required": true
-        },
-        {
-          "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
-          "status": "EXPIRED",
-          "expiresOn": "2027-10-09",
-          "required": true
-        },
-        {
-          "title": "CTPS",
-          "status": "EXPIRED",
-          "required": true
-        },
-        {
-          "title": "NR 12",
-          "status": "EXPIRED",
-          "expiresOn": "2027-10-19",
-          "required": true
-        },
-        {
           "title": "NR 20 - Trabalho com Líquidos e Inflamáveis",
-          "status": "WAIVED",
+          "status": "APPROVED",
           "expiresOn": "2027-11-12",
           "required": true
         },
         {
           "title": "NR 26 - Manuseio e Resposta a Derramamento de Produtos Químicos",
-          "status": "WAIVED",
+          "status": "APPROVED",
           "expiresOn": "2027-11-12",
           "required": true
         }
@@ -5257,8 +6548,8 @@
     }
   ],
   "summary": {
-    "totalWorkers": 51,
-    "clearedWorkers": 11,
-    "blockedWorkers": 40
+    "totalWorkers": 62,
+    "clearedWorkers": 13,
+    "blockedWorkers": 49
   }
 }

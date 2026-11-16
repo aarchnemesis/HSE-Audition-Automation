@@ -1,6 +1,6 @@
 {
   "portalId": "egestiona-vestaslatam",
-  "capturedAt": "2026-11-13T13:58:22.793Z",
+  "capturedAt": "2026-11-16T09:25:37.931Z",
   "workers": [
     {
       "name": "Gabriel Lima Feitosa",
@@ -505,6 +505,18 @@
           "required": true
         },
         {
+          "title": "AR-TRAB-05- ESO (Certificado Electrical safety for ordinary electrical persons)",
+          "status": "MISSING",
+          "note": "Pendiente enviar",
+          "required": true
+        },
+        {
+          "title": "CL-TRAB-45- ESO - Electrical Safety for Ordinary Electrical Persons (E-learning)",
+          "status": "MISSING",
+          "note": "Pendiente enviar",
+          "required": true
+        },
+        {
           "title": "AR-TRAB-04- Certificado SIT",
           "status": "APPROVED",
           "expiresOn": "2026-11-17",
@@ -519,13 +531,6 @@
           "required": true
         },
         {
-          "title": "AR-TRAB-05- ESO (Certificado Electrical safety for ordinary electrical persons)",
-          "status": "APPROVED",
-          "expiresOn": "2026-11-15",
-          "note": "Enviado",
-          "required": true
-        },
-        {
           "title": "AR-TRAB-119- Fotografía tipo carnet",
           "status": "APPROVED",
           "expiresOn": "2075-07-14",
@@ -536,13 +541,6 @@
           "title": "CL-TRAB-09- Curso de Manejo Defensivo",
           "status": "APPROVED",
           "expiresOn": "2027-02-24",
-          "note": "Enviado",
-          "required": true
-        },
-        {
-          "title": "CL-TRAB-45- ESO - Electrical Safety for Ordinary Electrical Persons (E-learning)",
-          "status": "APPROVED",
-          "expiresOn": "2026-11-15",
           "note": "Enviado",
           "required": true
         },
@@ -6527,6 +6525,12 @@
           "required": true
         },
         {
+          "title": "AR-TRAB-03- Certificado GWO",
+          "status": "MISSING",
+          "note": "Pendiente enviar",
+          "required": true
+        },
+        {
           "title": "AR-TRAB-173 Credencial Genneia",
           "status": "APPROVED",
           "note": "Enviado",
@@ -6550,13 +6554,6 @@
           "title": "AR-TRAB-139 DDJJ DE TRABAJADORES INDEPENDIENTES (AUTONOMOS/MONOTRIBUTISTAS) Vestas",
           "status": "APPROVED",
           "expiresOn": "2075-07-31",
-          "note": "Enviado",
-          "required": true
-        },
-        {
-          "title": "AR-TRAB-03- Certificado GWO",
-          "status": "APPROVED",
-          "expiresOn": "2026-11-13",
           "note": "Enviado",
           "required": true
         },
@@ -9106,7 +9103,7 @@
     },
     {
       "name": "ISAAC OHMKI ESPINOSA",
-      "contract": "CL-MRP- Cerro Tigre (CL-SERV-004) | CL-PKT- Cabo Negro I y II (CL-SERV-018) | CL-ENEL- Talinay Oriente I y II (CL-SERV-001) | CL-ENEL- Talinay Poniente (CL-SERV-002) | CL-ENEL- Los Buenos Aires (CL-SERV-005) | CL-ENEL- Renaico (CL-SERV-006) | CL-WPD- Duqueco (CL-SERV-013) | CL-WPD- Negrete (CL-SERV-011) | CL-WPD- Malleco (CL-SERV-012) | CL-SERV-AES- San Matias (CL-SERV-022) | CL-AES- Campo Lindo (CL-SERV-014) | CL-VDR- La Flor (CL-SERV-010) | CL-LAP- Totoral (CL-SERV-017) | CL-EU- Ucuquer (CL-SERV-020)",
+      "contract": "CL-MRP- Cerro Tigre (CL-SERV-004) | CL-LAP- Totoral (CL-SERV-017) | CL-PKT- Cabo Negro I y II (CL-SERV-018) | CL-ENEL- Talinay Oriente I y II (CL-SERV-001) | CL-ENEL- Talinay Poniente (CL-SERV-002) | CL-ENEL- Los Buenos Aires (CL-SERV-005) | CL-ENEL- Renaico (CL-SERV-006) | CL-WPD- Duqueco (CL-SERV-013) | CL-WPD- Negrete (CL-SERV-011) | CL-WPD- Malleco (CL-SERV-012) | CL-SERV-AES- San Matias (CL-SERV-022) | CL-AES- Campo Lindo (CL-SERV-014) | CL-VDR- La Flor (CL-SERV-010) | CL-EU- Ucuquer (CL-SERV-020)",
       "documents": [
         {
           "title": "CL-TRAB-21- Informacion de Riesgos Laborales IRL (ex ODI)",
@@ -9401,6 +9398,20 @@
           "required": true
         },
         {
+          "title": "CL-TRAB-139 Descripciones de Cargo",
+          "status": "APPROVED",
+          "expiresOn": "2076-10-30",
+          "note": "Enviado · CL-LAP- Totoral (CL-SERV-017)",
+          "required": true
+        },
+        {
+          "title": "CL-TRAB-129 Información de la Gestión de los Derechos Humanos",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "note": "Enviado · CL-LAP- Totoral (CL-SERV-017)",
+          "required": true
+        },
+        {
           "title": "CL-TRAB-18- Registro de Entrega Elementos de Protección Personal EPP",
           "status": "APPROVED",
           "expiresOn": "2027-11-09",
@@ -9412,7 +9423,7 @@
     },
     {
       "name": "PEDRO ARIEL FIGUEROA CIFUENTES",
-      "contract": "CL-MRP- Cerro Tigre (CL-SERV-004) | CL-PKT- Cabo Negro I y II (CL-SERV-018) | CL-ENEL- Talinay Oriente I y II (CL-SERV-001) | CL-ENEL- Talinay Poniente (CL-SERV-002) | CL-ENEL- Renaico (CL-SERV-006) | CL-ENEL- Los Buenos Aires (CL-SERV-005) | CL-WPD- Duqueco (CL-SERV-013) | CL-WPD- Negrete (CL-SERV-011) | CL-WPD- Malleco (CL-SERV-012) | CL-SERV-AES- San Matias (CL-SERV-022) | CL-AES- Campo Lindo (CL-SERV-014) | CL-VDR- La Flor (CL-SERV-010) | CL-LAP- Totoral (CL-SERV-017) | CL-EU- Ucuquer (CL-SERV-020)",
+      "contract": "CL-MRP- Cerro Tigre (CL-SERV-004) | CL-LAP- Totoral (CL-SERV-017) | CL-PKT- Cabo Negro I y II (CL-SERV-018) | CL-ENEL- Talinay Oriente I y II (CL-SERV-001) | CL-ENEL- Talinay Poniente (CL-SERV-002) | CL-ENEL- Renaico (CL-SERV-006) | CL-ENEL- Los Buenos Aires (CL-SERV-005) | CL-WPD- Duqueco (CL-SERV-013) | CL-WPD- Negrete (CL-SERV-011) | CL-WPD- Malleco (CL-SERV-012) | CL-SERV-AES- San Matias (CL-SERV-022) | CL-AES- Campo Lindo (CL-SERV-014) | CL-VDR- La Flor (CL-SERV-010) | CL-EU- Ucuquer (CL-SERV-020)",
       "documents": [
         {
           "title": "CL-TRAB-21- Informacion de Riesgos Laborales IRL (ex ODI)",
@@ -9501,12 +9512,6 @@
           "status": "APPROVED",
           "expiresOn": "2028-03-23",
           "note": "Enviado · CL-ENEL- Talinay Oriente I y II (CL-SERV-001)",
-          "required": true
-        },
-        {
-          "title": "CL-TRAB-18- Registro de Entrega Elementos de Protección Personal EPP",
-          "status": "MISSING",
-          "note": "Pendiente enviar",
           "required": true
         },
         {
@@ -9717,6 +9722,27 @@
           "status": "APPROVED",
           "expiresOn": "2027-10-22",
           "note": "Enviado · CL-LAP- Totoral (CL-SERV-017)",
+          "required": true
+        },
+        {
+          "title": "CL-TRAB-129 Información de la Gestión de los Derechos Humanos",
+          "status": "APPROVED",
+          "expiresOn": "2027-10-22",
+          "note": "Enviado · CL-LAP- Totoral (CL-SERV-017)",
+          "required": true
+        },
+        {
+          "title": "CL-TRAB-139 Descripciones de Cargo",
+          "status": "APPROVED",
+          "expiresOn": "2076-10-30",
+          "note": "Enviado · CL-LAP- Totoral (CL-SERV-017)",
+          "required": true
+        },
+        {
+          "title": "CL-TRAB-18- Registro de Entrega Elementos de Protección Personal EPP",
+          "status": "APPROVED",
+          "expiresOn": "2027-09-14",
+          "note": "Enviado",
           "required": true
         }
       ],
