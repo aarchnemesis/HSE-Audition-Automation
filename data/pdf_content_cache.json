@@ -255597,5 +255597,3607 @@
     "classificationSource": "SEMANTIC",
     "matchedTerm": "Elevador (JASO)",
     "extractedClause": "no dia 10/11/2026"
+  },
+  {
+    "fileId": "1NqJkXvz5avRhTD8yVNszxAVMKppgjhJr",
+    "filename": "10_NR01-FORMACAO_EMI-2026-11-06_VAL-2027-11-06_FRANCISCO-WELLINGTON-DA-COSTA-GOMES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "652045240b313f1b5eb5412bfa14b918",
+    "modifiedTime": "2026-11-16T09:59:01.804Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 10_NR01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-11-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 10_NR01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1FAVMSTCSGYBWHPmKMHvgKOiEchnNx-oc",
+    "filename": "12_NR10-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_IRLAN-OLIVEIRA-DA-CONCEICAO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "662851e7d6235827df4faa035fc36cf0",
+    "modifiedTime": "2026-11-16T09:58:19.386Z",
+    "holder": {
+      "key": "h2:IRLAN OLIVEIRA CONCEICAO",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1y5JEghcfM4RKhjjLeFpZYyhdWrJzYPhn",
+    "filename": "12_NR10-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_ANTONIO-ROGERIO-DUARTE-COSTA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "63a9ab17ede0c704ac7aad8a87161632",
+    "modifiedTime": "2026-11-16T09:58:22.458Z",
+    "holder": {
+      "key": "h2:ANTONIO ROGERIO DUARTE COSTA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1WiJN228Yty07kzyQVguFz3yO49egxyiB",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-06_VAL-2027-11-06_FRANCISCO-WELLINGTON-DA-COSTA-GOMES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "2dbebde79119ba3708262f5faf6ba37b",
+    "modifiedTime": "2026-11-16T09:58:58.887Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1L-tX4GWoSNGY7rHWisWcWeLLaGZvuGmB",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-14_VAL-2027-11-14_IRLAN-OLIVEIRA-DA-CONCEICAO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3613a75bd454cff9a7936abe255b86bb",
+    "modifiedTime": "2026-11-16T09:57:58.202Z",
+    "holder": {
+      "key": "h2:IRLAN OLIVEIRA CONCEICAO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2028-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2028-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1P99QtPudhdVOME9PSV1YbRAy03wW_Gah",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-14_VAL-2027-11-14_ANTONIO-ROGERIO-DUARTE-COSTA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "705e86fb7d610482b9009fdb520ca0a1",
+    "modifiedTime": "2026-11-16T09:58:04.224Z",
+    "holder": {
+      "key": "h2:ANTONIO ROGERIO DUARTE COSTA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2028-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2028-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "13P2Vc9ppP1Rk6H7Jk-Kl_AJpERLeo8uy",
+    "filename": "12_NR10-FORMACAO_EMI-2026-11-15_VAL-2028-11-15_FRANCISCO-WELLINGTON-DA-COSTA-GOMES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "12834c734429d8fe21511255f1a7b3d3",
+    "modifiedTime": "2026-11-16T09:57:39.576Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2028-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2028-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "10mkv3m9BoIThTNaSwHxgHouZFVygmYQ5",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-14_VAL-2027-11-14_JOCELEO-ABREU-VENANCIO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d6005b7d39f9c79e8ccf9afc9685ffee",
+    "modifiedTime": "2026-11-16T09:58:01.203Z",
+    "holder": {
+      "key": "h2:JOCELEO ABREU VENANCIO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2028-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2028-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1S_FAv-br55u0nj3Muj6nSRJPZAp2MtLt",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-11-04_VAL-2027-11-04_DRIELTON-FRANCISCO-DE-ARAUJO-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a5f86e446d5ec6285e5a819412975125",
+    "modifiedTime": "2026-11-16T09:59:07.678Z",
+    "holder": {
+      "key": "h2:DRIELTON FRANCISCO ARAUJO SILVA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-04T03:00:00.000Z",
+    "expirationDate": "2028-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-04T03:00:00.000Z",
+        "expirationDate": "2028-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1Oarkn41y_Ln3n_LErA9ENGkCvv3gD0Ul",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-15_VAL-2027-11-15_WILLAMES-WAGNER-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "31adc3a7ef59b9f57d305c5e8fba5bfd",
+    "modifiedTime": "2026-11-16T09:57:33.173Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2028-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2028-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1otHXDrMQwmsiYcxnfItWf_DEm8RJ1FJg",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-15_VAL-2027-11-15_ADENIO-FRANCISCO-DE-SOUSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4b6430159d533a00ac4d30408aaa493f",
+    "modifiedTime": "2026-11-16T09:57:45.815Z",
+    "holder": {
+      "key": "h2:ADENIO FRANCISCO SOUSA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2028-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2028-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1vVo4EoYkO0oWL0wolm5_4T1cT308F4Yw",
+    "filename": "14_NR11-FORMACAO_EMI-2026-11-14_VAL-2027-11-14_DRIELTON-FRANCISCO-DE-ARAUJO-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c285efea91e66ef2a8657818dd3c4451",
+    "modifiedTime": "2026-11-16T09:57:55.092Z",
+    "holder": {
+      "key": "h2:DRIELTON FRANCISCO ARAUJO SILVA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2028-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2028-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1cJAf5H2RY_bZgftFv-G-1CFXlP_njjtw",
+    "filename": "12_NR10-FORMACAO_EMI-2026-11-02_VAL-2028-11-02_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a86fa53a82f5cbfdcb809f558af6ac7e",
+    "modifiedTime": "2026-11-16T09:59:35.143Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "expirationDate": "2028-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "expirationDate": "2028-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1Qj-9VyleXSWY5zkYOp-H2MOCvPKuJFj2",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-10-18_VAL-2028-10-18_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "dc884e42efc09201b69ff79398706605",
+    "modifiedTime": "2026-11-16T10:00:25.937Z",
+    "holder": {
+      "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-10-18T03:00:00.000Z",
+    "expirationDate": "2028-10-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-10-18T03:00:00.000Z",
+        "expirationDate": "2028-10-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1XhUfSuzcxPLhzyBjIel0J2qaiRocMTm3",
+    "filename": "21_NR35-FORMACAO_EMI-2026-06-12_VAL-2028-06-12_THALITSON-WILKSON-PINTO-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8c664bcb4bce829fde29f097ca5f6cad",
+    "modifiedTime": "2026-11-16T10:02:15.793Z",
+    "holder": {
+      "key": "h2:THALITSON WILKSON PINTO NUNES",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-06-12T03:00:00.000Z",
+    "expirationDate": "2028-06-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/06/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 21_NR35",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-06-12T03:00:00.000Z",
+        "expirationDate": "2028-06-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/06/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 21_NR35",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1RGY88ukXSTln_0RDj1Eid_jstvXLPrIK",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "96e89cf5ea886c30c854eec0e0cb1d01",
+    "modifiedTime": "2026-11-16T09:58:16.254Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "11JF5r1dXuKKSveKdZ7mIHl52ACCuSh2b",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-10-22_VAL-2027-10-22_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e5a76dbbe58c82a72167b920fd7c8cbf",
+    "modifiedTime": "2026-11-16T10:00:11.521Z",
+    "holder": {
+      "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "expirationDate": "2028-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "expirationDate": "2028-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1HOjpNNpcvY4lndgOlmWbs2sK846Vaxyq",
+    "filename": "14_NR11-FORMACAO_EMI-2026-10-27_VAL-2027-10-27_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "02d07dc316142bba4cd87af509371da0",
+    "modifiedTime": "2026-11-16T09:59:59.484Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-27T03:00:00.000Z",
+    "expirationDate": "2028-10-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-27T03:00:00.000Z",
+        "expirationDate": "2028-10-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1xNgCdUE1JI-w4WzeDPGHboOH5Fc3DNKm",
+    "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-10-30_VAL-2027-10-30_WANDERSON-AVELINO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "524cb1ae3f47b429b03a50f31cc63550",
+    "modifiedTime": "2026-11-16T09:59:44.409Z",
+    "holder": {
+      "key": "h2:WANDERSON AVELINO SOUZA",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-10-30T03:00:00.000Z",
+    "expirationDate": "2027-10-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 Supervisor (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-10-30T03:00:00.000Z",
+        "expirationDate": "2027-10-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Supervisor (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1nJAEp1aGi21FgWnnip5L2UI7ahpquk4L",
+    "filename": "12_NR10-FORMACAO_EMI-2026-10-11_VAL-2028-10-11_SIMON-DIAS-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0020ec056f651f1d51f1ba62e5b077e5",
+    "modifiedTime": "2026-11-16T10:00:40.765Z",
+    "holder": {
+      "key": "h2:SIMON DIAS SILVA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-10-11T03:00:00.000Z",
+    "expirationDate": "2028-10-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-10-11T03:00:00.000Z",
+        "expirationDate": "2028-10-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1pc6K0CBDdxLg0Q7vXCqEjRrFyyjkZO2i",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-09-23_VAL-2028-09-23_RAFAEL-PEREIRA-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0198d1e19f303bb4e79b444d15a16faf",
+    "modifiedTime": "2026-11-16T10:01:16.072Z",
+    "holder": {
+      "key": "h2:RAFAEL PEREIRA NUNES",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1RlAt9CAbFr8SFtEtWnaEjuRxjPjsozbz",
+    "filename": "10_NR01-FORMACAO_EMI-2026-11-08_VAL-2027-11-08_WANDERSON-AVELINO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "08ec63a2fe64cbb659988fe80697d21b",
+    "modifiedTime": "2026-11-16T09:58:49.731Z",
+    "holder": {
+      "key": "h2:WANDERSON AVELINO SOUZA",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 10_NR01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 10_NR01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1XWtpegYDVOzoIJG8SH2qiyv3ErJlGZWL",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-09-23_VAL-2027-09-23_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4ba841a832c4afc52b9f2ade0b5c1cc5",
+    "modifiedTime": "2026-11-16T10:01:07.173Z",
+    "holder": {
+      "key": "h2:PEDRO PAULO FERREIRA ALMEIDA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1WqgJwEuEFOTvVxQed3IF8eaMnIEell93",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-10-23_VAL-2028-10-23_RAFAEL-PEREIRA-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9ed6e0e239e298fb4b6ad9b84c43f815",
+    "modifiedTime": "2026-11-16T10:00:05.501Z",
+    "holder": {
+      "key": "h2:RAFAEL PEREIRA NUNES",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-10-23T03:00:00.000Z",
+    "expirationDate": "2028-10-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-10-23T03:00:00.000Z",
+        "expirationDate": "2028-10-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "12-qoOYGfQuq-H4wYHzWcXvkuCd6mJ19n",
+    "filename": "15_NR12-RECICLAGEM_EMI-2026-09-20_VAL-2027-09-20_PEDRO-EDUARDO-DE-OLIVEIRA-CAVALCANTI-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "32a51f036352b6d2f59399dc60cbbe52",
+    "modifiedTime": "2026-11-16T10:01:25.422Z",
+    "holder": {
+      "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-09-20T03:00:00.000Z",
+    "expirationDate": "2028-09-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) vr Periddico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-09-20T03:00:00.000Z",
+        "expirationDate": "2028-09-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) vr Periddico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1GqaSs6bgMFW2PgGSZTa678Mt0xtyHOjr",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-10-26_VAL-2028-10-26_RAFAEL-PEREIRA-NUNES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "f56beacdcd6dff274102505ea41cc94f",
+    "modifiedTime": "2026-11-16T10:00:02.509Z",
+    "holder": {
+      "key": "h2:RAFAEL PEREIRA NUNES",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-10-26T03:00:00.000Z",
+    "expirationDate": "2028-10-26T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 26/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-10-26T03:00:00.000Z",
+        "expirationDate": "2028-10-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "12I9h2WAnMxkOa2LvuNJbP8EgL_MnoYR9",
+    "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-09-23_VAL-2027-09-23_MARIA-BRUNA-SOARES-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "73939c3ac31713d0c20cbb9bbfed40b7",
+    "modifiedTime": "2026-11-16T10:01:01.022Z",
+    "holder": {
+      "key": "h2:MARIA BRUNA SOARES SANTOS",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2027-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2027-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1MrM2fsUBKKlISmb6wl0IP761kdtxvSsd",
+    "filename": "21_NR35-RECICLAGEM_EMI-2026-05-21_VAL-2028-05-21_LUCAS-ANDRE-DE-SOUSA-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9e3600d7490ac4922d0762186cafbbb5",
+    "modifiedTime": "2026-11-16T10:02:18.731Z",
+    "holder": {
+      "key": "h2:LUCAS ANDRE SOUSA RIBEIRO",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-05-21T03:00:00.000Z",
+    "expirationDate": "2028-05-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/05/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR35 - Trabalho em Altura (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-05-21T03:00:00.000Z",
+        "expirationDate": "2028-05-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR35 - Trabalho em Altura (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "17fL8J0C1ztBuaQKZ1v-HzcTNQvjYFSXW",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-11-12_VAL-2027-11-12_JUAN-ILGNER-MARINHO-LIMA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6e6a15aa5537792c150efe6daab856bc",
+    "modifiedTime": "2026-11-16T09:58:28.375Z",
+    "holder": {
+      "key": "h2:JUAN ILGNER MARINHO LIMA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1NOG0ndEvyE88Vft2xp5JVFZakh4DepTv",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-09-23_VAL-2027-09-23_LEANDRO-CAMILO-DE-JESUS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1c1ce43ef7678e71bed03c4bc1c4814b",
+    "modifiedTime": "2026-11-16T10:01:10.292Z",
+    "holder": {
+      "key": "h2:LEANDRO CAMILO JESUS",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) - Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) - Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1woIg01hshMA9F5-Yzx1fKcyozFsShh2e",
+    "filename": "15_NR12-FORMACAO_EMI-2026-11-12_VAL-2027-11-12_JUAN-ILGNER-MARINHO-LIMA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "002159314550916424727d70df9b5813",
+    "modifiedTime": "2026-11-16T09:58:25.447Z",
+    "holder": {
+      "key": "h2:JUAN ILGNER MARINHO LIMA",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 15_NR12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 15_NR12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1aWVAsmoZ7Dqov0yyzlUNrp4iNtKCw5_p",
+    "filename": "11_NR06-FORMACAO_EMI-2026-09-16_VAL-2027-09-16_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6e08bba73eec2f16c8d4c1037a701aae",
+    "modifiedTime": "2026-11-16T10:01:31.386Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-09-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-09-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ZNmLlZOlV140L0ToBt1J9HaK4C6HPLVz",
+    "filename": "15_NR12-RECICLAGEM_EMI-2026-09-11_VAL-2027-09-11_JOSE-MARCOS-LIMA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e96f2e1e63d5d669f134b7364dac4a1e",
+    "modifiedTime": "2026-11-16T10:01:39.989Z",
+    "holder": {
+      "key": "h2:JOSE MARCOS LIMA MOURA",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-09-11T03:00:00.000Z",
+    "expirationDate": "2028-09-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos Geral",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-09-11T03:00:00.000Z",
+        "expirationDate": "2028-09-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos Geral",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "14xfkYUAtf0pEvgpx301VaGT-jlMWg9-F",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-09-21_VAL-2027-09-21_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d9781829fa477cfc961bc004051e19f1",
+    "modifiedTime": "2026-11-16T10:01:22.304Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-09-21T03:00:00.000Z",
+    "expirationDate": "2027-09-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Trabalhador e Vigia (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-09-21T03:00:00.000Z",
+        "expirationDate": "2027-09-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1Dmbeq3DEs3D-yMdSw5ws6ekaT1JMeiUD",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-11-13_VAL-2027-11-13_JOSE-ORLANDO-BARROS-DA-SILVA-FILHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c42cc6fa34149c86ebf00108fc2b9744",
+    "modifiedTime": "2026-11-16T09:58:13.443Z",
+    "holder": {
+      "key": "h2:JOSE ORLANDO BARROS SILVA FILHO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1KZm-oSxMJeSq3TfEnwW66v87Lhhn7YlZ",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-10-12_VAL-2028-10-12_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "15c1e4d3aee7d0f67463cde8fe2135cb",
+    "modifiedTime": "2026-11-16T10:00:37.850Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-10-12T03:00:00.000Z",
+    "expirationDate": "2028-10-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-10-12T03:00:00.000Z",
+        "expirationDate": "2028-10-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1T7UvB6nAcK2dH_P6sJhKl14ZPXwNnAwF",
+    "filename": "15_NR12-FORMACAO_EMI-2026-11-13_VAL-2027-11-13_JOSE-ORLANDO-BARROS-DA-SILVA-FILHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "2be0aa78bae4d0c4f1a168d3b369d760",
+    "modifiedTime": "2026-11-16T09:58:07.222Z",
+    "holder": {
+      "key": "h2:JOSE ORLANDO BARROS SILVA FILHO",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 15_NR12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 15_NR12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1MYzRFU9HgvCKDU-Y_W-eKoMI0LVhF3qb",
+    "filename": "15_NR12-RECICLAGEM_EMI-2026-11-07_VAL-2027-11-07_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "13619b265b9528b226fa9b8575d5cf8e",
+    "modifiedTime": "2026-11-16T09:58:43.641Z",
+    "holder": {
+      "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-11-07T03:00:00.000Z",
+    "expirationDate": "2028-11-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 07/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-07T03:00:00.000Z",
+        "expirationDate": "2028-11-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1xphce1D2hFxg1skt3fzmaZc7yQzdPTew",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-11-02_VAL-2028-11-02_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "aecacfb24180766f6d6fe79a6100d872",
+    "modifiedTime": "2026-11-16T09:59:32.166Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "expirationDate": "2028-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "expirationDate": "2028-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1ZhSkyKG1cVOHkSLJevlFP_PFJVekJu32",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-09-23_VAL-2028-09-23_IGOR-MARTINS-ROCHA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "2f301b182746041df58cfae5dfc9899e",
+    "modifiedTime": "2026-11-16T10:01:18.958Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1BUu9igl7Bwa9qbk7wk3RAG7hqI3O08xH",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-04-22_VAL-2028-04-22_ISMAELSON-YURI-ARAUJO-SOUSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0b8f057bc482b8006eac39e295b41e9a",
+    "modifiedTime": "2026-11-16T10:02:27.502Z",
+    "holder": {
+      "key": "h2:ISMAELSON YURI ARAUJO SOUSA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-04-22T03:00:00.000Z",
+    "expirationDate": "2028-04-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/04/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-04-22T03:00:00.000Z",
+        "expirationDate": "2028-04-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/04/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (SEP) e em suas proximidades",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1gd6UATFfytnlpMUc1lrDZv6JWlAaMdKy",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-02_VAL-2027-11-02_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "104b61c4e91ddc0b9b2e721590fbb5a5",
+    "modifiedTime": "2026-11-16T09:59:29.125Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1Sy6vYOpLhE4LbITNyEV_WjOafCEtdVpq",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-10-28_VAL-2028-10-28_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4133adb488e330936246fc6e7cca9039",
+    "modifiedTime": "2026-11-16T09:59:53.281Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-10-28T03:00:00.000Z",
+    "expirationDate": "2028-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-10-28T03:00:00.000Z",
+        "expirationDate": "2028-10-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ZpYSae21zbfgA3cFeGQMF-rmapFKuWFN",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-10-20_VAL-2028-10-20_IGOR-MARTINS-ROCHA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3f9f9f497d8b3e21c5f2f2af39a544fd",
+    "modifiedTime": "2026-11-16T10:00:20.194Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-10-20T03:00:00.000Z",
+    "expirationDate": "2028-10-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 20/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-10-20T03:00:00.000Z",
+        "expirationDate": "2028-10-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1vzmEXw77PPH0IQjOXFaulDAzzPOlNbTu",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-11-08_VAL-2028-11-08_JOSE-RICARDO-BRAGA-MATOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6c3b94b80af4846dc6804de27fb06c38",
+    "modifiedTime": "2026-11-16T09:58:52.690Z",
+    "holder": {
+      "key": "h2:JOSE RICARDO BRAGA MATOS",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1UytwpTCgig-ODqGPc7DM_vY87WvFrGpd",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-11-02_VAL-2028-11-02_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "00322645d8c91a6eb2e25e7673ab3dd7",
+    "modifiedTime": "2026-11-16T09:59:26.129Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-02T03:00:00.000Z",
+    "expirationDate": "2028-11-02T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 02/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-02T03:00:00.000Z",
+        "expirationDate": "2028-11-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1HJx8aIe4Al_LQRqAfgh-PM0is0tjGGWN",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-09_VAL-2027-11-09_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e285a8dcb068915683a85dd8d5440448",
+    "modifiedTime": "2026-11-16T09:58:37.835Z",
+    "holder": {
+      "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1sASbNioyIsmRUFRSGrz51dPdtG-pA2k8",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-09-19_VAL-2028-09-19_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8bf3f2520836d8ff9f6d68d23febe33d",
+    "modifiedTime": "2026-11-16T10:01:28.366Z",
+    "holder": {
+      "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-09-19T03:00:00.000Z",
+    "expirationDate": "2028-09-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-09-19T03:00:00.000Z",
+        "expirationDate": "2028-09-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1rdYyzQSRrbZ9of7EGDtb7_sqkVGb8UUY",
+    "filename": "14_NR11-FORMACAO_EMI-2026-10-27_VAL-2027-10-27_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "cf8fdb9808797a3829b7d2ce16746b1e",
+    "modifiedTime": "2026-11-16T09:59:56.459Z",
+    "holder": {
+      "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-27T03:00:00.000Z",
+    "expirationDate": "2028-10-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-27T03:00:00.000Z",
+        "expirationDate": "2028-10-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1lqOkHLo53M5P2SYeqsAW88aOY9ue15Wv",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-11-08_VAL-2028-11-08_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4081f0fa93c0a96566fc4c4419270000",
+    "modifiedTime": "2026-11-16T09:58:46.757Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-08T03:00:00.000Z",
+    "expirationDate": "2028-11-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Basico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-08T03:00:00.000Z",
+        "expirationDate": "2028-11-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Basico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1cSAq7qBtPrT6iPsI3RSQW-1roo8EHB3c",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-11-11_VAL-2027-11-11_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "458c6849ebaf1a85396ebcf0e5bebf18",
+    "modifiedTime": "2026-11-16T09:58:31.430Z",
+    "holder": {
+      "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "expirationDate": "2027-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "expirationDate": "2027-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "164wX0d0unDfrP0r8kG5O6A5UNBwFLkC-",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-11-13_VAL-2027-11-13_INOCENCIO-ROCHA-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d46751a5b0f61a2a238d4e25c7ff54ef",
+    "modifiedTime": "2026-11-16T09:58:10.525Z",
+    "holder": {
+      "key": "h2:INOCENCIO ROCHA MOURA",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1mAaWwLr6NErCydMMtHjJ4nCU-2Xo0rmd",
+    "filename": "18_NR18-FORMACAO_EMI-2026-11-03_VAL-2027-11-03_FRANCISCO-GEORGE-MARTINS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a6e10ed805b23a9df826b46a1ff905c8",
+    "modifiedTime": "2026-11-16T09:59:22.893Z",
+    "holder": {
+      "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
+      "status": "OK"
+    },
+    "code": "18",
+    "issueDate": "2026-11-03T03:00:00.000Z",
+    "expirationDate": "2028-11-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 18_NR18",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "18",
+        "issueDate": "2026-11-03T03:00:00.000Z",
+        "expirationDate": "2028-11-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 18_NR18",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1VqUDcoGGPrDLJ3opfhLe0o-CCxRPy7Y9",
+    "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-08-06_VAL-2027-08-06_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d2af159132dcfb46076fb9ab0aac546e",
+    "modifiedTime": "2026-11-16T10:02:07.433Z",
+    "holder": {
+      "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-08-06T03:00:00.000Z",
+    "expirationDate": "2027-08-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/08/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-08-06T03:00:00.000Z",
+        "expirationDate": "2027-08-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/08/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Supervisor (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1g-DCM4WG4YVSmfEGCCXYyqDbgjyLrSYq",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-11-04_VAL-2027-11-04_FRANCISCO-GEORGE-MARTINS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ac0e421cbe7784998f268a2b868ad721",
+    "modifiedTime": "2026-11-16T09:59:10.664Z",
+    "holder": {
+      "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-11-04T03:00:00.000Z",
+    "expirationDate": "2028-11-04T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 04/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-11-04T03:00:00.000Z",
+        "expirationDate": "2028-11-04T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 04/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1RT56AjNXshDycfWVr2evVs4ggkc6_1Jl",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-10-14_VAL-2027-10-14_FRANCISCO-DAVILO-MARQUES-DE-SOUSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "2ee61b326f009c5f58acfecf32b19816",
+    "modifiedTime": "2026-11-16T10:00:32.003Z",
+    "holder": {
+      "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-14T03:00:00.000Z",
+    "expirationDate": "2028-10-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2028-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1pHOE51_mWYI236oR370_G2r1kM7YhE3N",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-08-10_VAL-2027-08-10_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "54dca469eaa69a69bf3ce22e458dcce1",
+    "modifiedTime": "2026-11-16T10:02:04.489Z",
+    "holder": {
+      "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-08-10T03:00:00.000Z",
+    "expirationDate": "2027-08-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/08/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-08-10T03:00:00.000Z",
+        "expirationDate": "2027-08-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/08/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1iExu33AJy8DVHTWOvxpv_85NeBxvt-5E",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-04-28_VAL-2027-04-28_FELIPE-DOS-SANTOS-CASTRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a9ccd85e091f0bc69d68e76954ba65cf",
+    "modifiedTime": "2026-11-16T10:02:24.533Z",
+    "holder": {
+      "key": "h2:FELIPE SANTOS CASTRO",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-04-28T03:00:00.000Z",
+    "expirationDate": "2028-04-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/04/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Iniciado em 24/04/2026 | Atualizado via nome: 28/04/2026",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-04-28T03:00:00.000Z",
+        "expirationDate": "2028-04-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/04/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Iniciado em 24/04/2026 | Atualizado via nome: 28/04/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1kBezXNX8yr-2GyugBWAO6oC88iOFCQ7V",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-10-31_VAL-2027-10-31_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "5d98e9f29b8fec94d940f8f2454e9623",
+    "modifiedTime": "2026-11-16T09:59:41.575Z",
+    "holder": {
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-31T03:00:00.000Z",
+    "expirationDate": "2027-10-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-31T03:00:00.000Z",
+        "expirationDate": "2027-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1S8zgPNK9Zbt4WCWyJM0TVs-uQPTG5nMG",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-08-05_VAL-2028-08-05_FELIPE-DOS-SANTOS-CASTRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a14e5d7f11c41015082b7e63e4f9ac13",
+    "modifiedTime": "2026-11-16T10:02:10.021Z",
+    "holder": {
+      "key": "h2:FELIPE SANTOS CASTRO",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-08-05T03:00:00.000Z",
+    "expirationDate": "2028-08-05T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 05/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-08-05T03:00:00.000Z",
+        "expirationDate": "2028-08-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1y6UN-ZkPvPnUJUz59-qLLDfHj-lG4Y2h",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-11_VAL-2027-11-11_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8fd2280c12808135ca8a405a5cbd65ed",
+    "modifiedTime": "2026-11-16T09:58:34.571Z",
+    "holder": {
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "13V0iYshg9g656xNg5cQZYTffIC2ooZS4",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-09-29_VAL-2028-09-29_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "838042b3ec052437f18ae2272ecb93fd",
+    "modifiedTime": "2026-11-16T10:00:55.236Z",
+    "holder": {
+      "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-09-29T03:00:00.000Z",
+    "expirationDate": "2028-09-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1YaUkldZay5mXeOCKNNQ8h5-cwlaNcfeE",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-05_VAL-2027-11-05_EZEQUIEL-CRUZ-VIEIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "f60c234d2a574ad2e49a3692e245cbbd",
+    "modifiedTime": "2026-11-16T09:59:04.751Z",
+    "holder": {
+      "key": "h2:EZEQUIEL CRUZ VIEIRA",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-05T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1oyXmqY7vUR-iRKGn6iqFZq3AO6QMZH33",
+    "filename": "11_NR06-FORMACAO_EMI-2026-10-13_VAL-2027-10-13_ERALDO-ANTONIO-DE-MOURA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "0fb15ee4fd179b9fad227af6ea0ed43f",
+    "modifiedTime": "2026-11-16T10:00:34.932Z",
+    "holder": {
+      "key": "h2:ERALDO ANTONIO MOURA",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-10-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1bJCYp6di2cZzC7u6eohnDTx997CJ4mgd",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-09-23_VAL-2027-09-23_ERVESON-NASCIMENTO-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "24b878a9a8f93aebbf23e5ef3df50682",
+    "modifiedTime": "2026-11-16T10:01:13.232Z",
+    "holder": {
+      "key": "h2:ERVESON NASCIMENTO SANTOS",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1oQR3hN0Kl2FDZgshzKWHos4XhDR8Fjn1",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-08-27_VAL-2028-08-27_EMERSON-PALLOTTA-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a4e4948f58144029b9a1032557aa8f3c",
+    "modifiedTime": "2026-11-16T10:01:58.698Z",
+    "holder": {
+      "key": "h2:EMERSON PALLOTTA RIBEIRO",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-08-27T03:00:00.000Z",
+    "expirationDate": "2028-08-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-08-27T03:00:00.000Z",
+        "expirationDate": "2028-08-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "14SXG2FUEVouyNR7MDlOYDrEdjyFAEJbZ",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-11-06_VAL-2028-11-06_EZEQUIEL-CRUZ-VIEIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "956483426ab330e4892bd6069e8efb13",
+    "modifiedTime": "2026-11-16T09:58:55.620Z",
+    "holder": {
+      "key": "h2:EZEQUIEL CRUZ VIEIRA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-06T03:00:00.000Z",
+    "expirationDate": "2028-11-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-06T03:00:00.000Z",
+        "expirationDate": "2028-11-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1fv88HRaqLyFwmLGlLkZF2kNWGf4oxLx1",
+    "filename": "11_NR06-FORMACAO_EMI-2026-10-22_VAL-2027-10-22_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "77f4eb9add4030a975a6354470426871",
+    "modifiedTime": "2026-11-16T10:00:14.498Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-10-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1ybOGlMjIQflpwnH0UZ_qJcxyN1I9loNi",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-15_VAL-2027-11-15_EMERSON-PALLOTTA-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d0a6341f2744a42a355768a01d5c0de4",
+    "modifiedTime": "2026-11-16T09:57:48.940Z",
+    "holder": {
+      "key": "h2:EMERSON PALLOTTA RIBEIRO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1aPzqlEuqvpC2p3V6u0BNKjOSw9JzoZpL",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-09-23_VAL-2027-09-23_EDWARD-THIAGO-HERCULANO-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "50ac41817acb874fa58e5344baa390a6",
+    "modifiedTime": "2026-11-16T10:01:04.038Z",
+    "holder": {
+      "key": "h2:EDWARD THIAGO HERCULANO RIBEIRO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-09-23T03:00:00.000Z",
+    "expirationDate": "2028-09-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-09-23T03:00:00.000Z",
+        "expirationDate": "2028-09-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "15AZG3eNoE0mEGr3XAxmzNw7d8DxZP7aV",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-10-23_VAL-2027-10-23_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e8c6ef3d7f72a633ad8a3b24f797f31f",
+    "modifiedTime": "2026-11-16T10:00:08.674Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-23T03:00:00.000Z",
+    "expirationDate": "2028-10-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-23T03:00:00.000Z",
+        "expirationDate": "2028-10-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAÇÃO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1gUL283GOb_CsX_A-8YKCbLXTuE4eCXH4",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-08-28_VAL-2027-08-28_DIEGO-MENEZES-NUNES-COELHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1076ea060c6021ee314e5cd0c15278d7",
+    "modifiedTime": "2026-11-16T10:01:52.867Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-08-28T03:00:00.000Z",
+    "expirationDate": "2027-08-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/08/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-08-28T03:00:00.000Z",
+        "expirationDate": "2027-08-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/08/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1hK-vNQtWnhz2s1z86B9eVv7sQkrC0KZ-",
+    "filename": "15_NR12-RECICLAGEM_EMI-2026-09-15_VAL-2027-09-15_DAVID-KELSON-DE-SOUZA-LOYOLA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "b7183aa076691f8989ed343141636b84",
+    "modifiedTime": "2026-11-16T10:01:34.322Z",
+    "holder": {
+      "key": "h2:DAVID KELSON SOUZA LOYOLA",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-09-15T03:00:00.000Z",
+    "expirationDate": "2028-09-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-09-15T03:00:00.000Z",
+        "expirationDate": "2028-09-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1OFsmi1Zr4ulTcpPAVHNZJHqr0sDL1JM1",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-10-28_VAL-2027-10-28_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "1af65d820cc107184cac09dbc728d704",
+    "modifiedTime": "2026-11-16T09:59:50.412Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-28T03:00:00.000Z",
+    "expirationDate": "2027-10-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-28T03:00:00.000Z",
+        "expirationDate": "2027-10-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1dcGyvewWeH00yXKE4HaktNTrsZTshUBm",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-10-06_VAL-2027-10-06_DIEGO-MENEZES-NUNES-COELHO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "7156994b61b95cb2e6212eefd7af5b4a",
+    "modifiedTime": "2026-11-16T10:00:49.366Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-06T03:00:00.000Z",
+    "expirationDate": "2028-10-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-06T03:00:00.000Z",
+        "expirationDate": "2028-10-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1-NG6gofrO_-G8kEtN9kf9u8YOutBU7us",
+    "filename": "20_NR33-FORMACAO_EMI-2026-10-16_VAL-2027-10-16_CARLOS-HENRIQUE-SOARES-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9d7ac75eb2e40d1a63569811c18e0be0",
+    "modifiedTime": "2026-11-16T10:00:29.043Z",
+    "holder": {
+      "key": "h2:CARLOS HENRIQUE SOARES SILVA",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-16T03:00:00.000Z",
+    "expirationDate": "2027-10-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 20_NR33",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-16T03:00:00.000Z",
+        "expirationDate": "2027-10-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 20_NR33",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1cQe-1uIjlunYM4Ts4LInDEj2GE-3fF9F",
+    "filename": "15_NR12-RECICLAGEM_EMI-2026-10-29_VAL-2027-10-29_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "084822fdf905b5e2861851a2f5dc9e65",
+    "modifiedTime": "2026-11-16T09:58:40.701Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-10-29T03:00:00.000Z",
+    "expirationDate": "2028-10-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-10-29T03:00:00.000Z",
+        "expirationDate": "2028-10-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1emFFHlRy5UwoWA5hhREj71gl5h-Iauwl",
+    "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-11-15_VAL-2027-11-15_ANTONIO-ROBERTO-DOS-SANTOS-NASCIMENTO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "60dd976bc63aa637989dbab03aee7de7",
+    "modifiedTime": "2026-11-16T09:57:36.563Z",
+    "holder": {
+      "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2027-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR33 SUPERVISOR (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2027-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR33 SUPERVISOR (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "19xZxdgEVHAcocChfD9gbaxWwUskeJVfB",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-04-21_VAL-2028-04-21_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ea5784a1585a94420ad324dcd3e95496",
+    "modifiedTime": "2026-11-16T10:02:30.472Z",
+    "holder": {
+      "key": "h2:ANTONIO RAFAEL SANTOS",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-04-21T03:00:00.000Z",
+    "expirationDate": "2028-04-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/04/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-04-21T03:00:00.000Z",
+        "expirationDate": "2028-04-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/04/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1AaKE6u56e9aVqq_PM8OMAuh4B2G_H7SM",
+    "filename": "10_NR01-FORMACAO_EMI-2026-09-15_VAL-2027-09-15_ADRIANO-CIRILO-GARCIA-LIMA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d7c67531d9a814b6f474e1aadb95a9a6",
+    "modifiedTime": "2026-11-16T10:01:37.193Z",
+    "holder": {
+      "key": "h2:ADRIANO CIRILO GARCIA LIMA",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-09-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 10_NR01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-09-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 10_NR01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1kPF-E2rhlHAN-Zdj2DTYPGAVPuwSID6n",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-04-25_VAL-2027-04-25_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3ba15f371057ccb379d2ec38baaf3166",
+    "modifiedTime": "2026-11-16T10:02:21.748Z",
+    "holder": {
+      "key": "h2:ANTONIO RAFAEL SANTOS",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-04-25T03:00:00.000Z",
+    "expirationDate": "2028-04-25T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 25/04/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Iniciado em 24/04/2026 | Atualizado via nome: 25/04/2026",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-04-25T03:00:00.000Z",
+        "expirationDate": "2028-04-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/04/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Iniciado em 24/04/2026 | Atualizado via nome: 25/04/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1gRnA5ABbaP2L8aH4ThfPZKUWdxN8rrke",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-04-15_VAL-2028-04-15_ADENILCO-QUEIROZ-DA-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "be88f22627be9b3446365d94e9966159",
+    "modifiedTime": "2026-11-16T10:02:33.364Z",
+    "holder": {
+      "key": "h2:ADENILCO QUEIROZ SILVA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-04-15T03:00:00.000Z",
+    "expirationDate": "2028-04-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/04/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-04-15T03:00:00.000Z",
+        "expirationDate": "2028-04-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/04/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1e18K59T2Ybd4IZsVKxgJE1ukWHER_-c9",
+    "filename": "28_NR33-SUPERVISOR-FORMACAO_EMI-2026-09-25_VAL-2027-09-25_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "83a986cea00fa50c3d8804df6361ba85",
+    "modifiedTime": "2026-11-16T10:00:58.017Z",
+    "holder": {
+      "key": "h2:ANTONIO RAFAEL SANTOS",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-09-25T03:00:00.000Z",
+    "expirationDate": "2027-09-25T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 25/09/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 28_NR33-SUPERVISOR",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-09-25T03:00:00.000Z",
+        "expirationDate": "2027-09-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/09/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 28_NR33-SUPERVISOR",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1yl29E7p75ynIAhzZZv2SzhIKRJStMT7T",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-08-22_VAL-2028-08-22_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "dc0ee39973ba8f17c6e9475e2f428fbc",
+    "modifiedTime": "2026-11-16T10:02:01.646Z",
+    "holder": {
+      "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-08-22T03:00:00.000Z",
+    "expirationDate": "2028-08-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-08-22T03:00:00.000Z",
+        "expirationDate": "2028-08-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1EYM0RcDSQnUIBXTmHi_n01AVPYJ2Qtko",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-10-19_VAL-2027-10-19_LEONARDO-SIMON-COSTA-GAEM.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "b73902a2c6df9369ad47ba3d3871369e",
+    "modifiedTime": "2026-11-16T10:00:23.029Z",
+    "holder": {
+      "key": "h2:LEONARDO SIMON COSTA GAEM",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-10-19T03:00:00.000Z",
+    "expirationDate": "2027-10-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1f1xd0-uPH0FYQ8mPrHYc26p1TFNZUSOe",
+    "filename": "14_NR11-FORMACAO_EMI-2026-10-29_VAL-2027-10-29_ITALO-DE-ABREU-DUARTE.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "38b1a798c53cba0018b8fd0b169e30f0",
+    "modifiedTime": "2026-11-16T09:59:47.356Z",
+    "holder": {
+      "key": "h2:ITALO ABREU DUARTE",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-29T03:00:00.000Z",
+    "expirationDate": "2028-10-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 14_NR11",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-29T03:00:00.000Z",
+        "expirationDate": "2028-10-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 14_NR11",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "112HyiPTsnEVbwizvvWTAbWXqkGNRDD8I",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-08-28_VAL-2028-08-28_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8feba88b19f786a62d7c819de3deaf6a",
+    "modifiedTime": "2026-11-16T10:01:55.804Z",
+    "holder": {
+      "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-08-28T03:00:00.000Z",
+    "expirationDate": "2028-08-28T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 28/08/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-08-28T03:00:00.000Z",
+        "expirationDate": "2028-08-28T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 28/08/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1EqajS3H7OoPAjWwNX8sQbhMLPkJa-tc5",
+    "filename": "15_NR12-FORMACAO_EMI-2026-10-31_VAL-2027-10-31_ITALO-DE-ABREU-DUARTE.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "f334e9b494a7564c0c357c76aaec5821",
+    "modifiedTime": "2026-11-16T09:59:38.461Z",
+    "holder": {
+      "key": "h2:ITALO ABREU DUARTE",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-10-31T03:00:00.000Z",
+    "expirationDate": "2028-10-31T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 31/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 15_NR12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-10-31T03:00:00.000Z",
+        "expirationDate": "2028-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 15_NR12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "13SW2-pojJV_pUYayfJBxkCyGg6Yc-pR5",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-09-01_VAL-2027-09-01_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6dc5b375dc4029ea4656a4ba933d2635",
+    "modifiedTime": "2026-11-16T10:01:42.892Z",
+    "holder": {
+      "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-09-01T03:00:00.000Z",
+    "expirationDate": "2028-09-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 22_LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2028-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 22_LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1UOfrzbx5l84BGhCjiJjTUrKf1Cu3hjmf",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-10-01_VAL-2027-10-01_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "aafee791e0dafc8c67a2a9db87f91029",
+    "modifiedTime": "2026-11-16T10:00:52.392Z",
+    "holder": {
+      "key": "h2:ALLAN THIAGO RAMOS VEIGA",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-01T03:00:00.000Z",
+    "expirationDate": "2028-10-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) - Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-01T03:00:00.000Z",
+        "expirationDate": "2028-10-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico) - Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1QME_wf8AmiYQsFO_wKJv1LxIOcFMeXpT",
+    "filename": "11_NR06-FORMACAO_EMI-2026-08-29_VAL-2027-08-29_MASSUDE-MADRE-DE-DEUS-AFONSO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "995f8eaf907a1446b0ec1367481c505c",
+    "modifiedTime": "2026-11-16T10:01:49.934Z",
+    "holder": {
+      "key": "h2:MASSUDE MADRE DEUS AFONSO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-08-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-08-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1j7IKy5NJ9k7iwqFrzqWo7IiLQMH0TT_s",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-11-03_VAL-2028-11-03_ITALO-DE-ABREU-DUARTE.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "682a16a52d96288faeb8bc873f6a0991",
+    "modifiedTime": "2026-11-16T09:59:13.845Z",
+    "holder": {
+      "key": "h2:ITALO ABREU DUARTE",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-03T03:00:00.000Z",
+    "expirationDate": "2028-11-03T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 03/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-03T03:00:00.000Z",
+        "expirationDate": "2028-11-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1n0RnHvVmM5TnSjBpiop2x38WC0DOG4ST",
+    "filename": "14_NR11-RECICLAGEM_EMI-2026-10-08_VAL-2027-10-08_FRANCISCO-MARCOS-DE-SOUZA-MAGALHAES.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "142b8cb25720b09c361f0f8a0c48970b",
+    "modifiedTime": "2026-11-16T10:00:46.542Z",
+    "holder": {
+      "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-10-08T03:00:00.000Z",
+    "expirationDate": "2028-10-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/10/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-10-08T03:00:00.000Z",
+        "expirationDate": "2028-10-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - Transporte Movimentação Armazenagem e Manuseio de Materiais (Periódico). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1pWNXn85VptrL8uiMBhT9z2_OADEJuunW",
+    "filename": "10_NR01-FORMACAO_EMI-2026-08-29_VAL-2027-08-29_MASSUDE-MADRE-DE-DEUS-AFONSO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "b04cf29e939862d0bca98365b68fa0f8",
+    "modifiedTime": "2026-11-16T10:01:47.114Z",
+    "holder": {
+      "key": "h2:MASSUDE MADRE DEUS AFONSO",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-08-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 10_NR01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-08-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 10_NR01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1l2FQ9eYQRGH65nSNzRCGo0v0Ajedjsr6",
+    "filename": "12_NR10-RECICLAGEM_EMI-2026-11-15_VAL-2028-11-15_ANTONIO-CARVALHO-JUNIOR.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "8fc4e70f3a33a86aa02af277a5395a69",
+    "modifiedTime": "2026-11-16T09:57:42.611Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2028-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2028-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "10-tydtRwoUFz5bQ437A4rFNVXTgy0qKY",
+    "filename": "10_NR01-FORMACAO_EMI-2026-07-27_VAL-2027-07-27_NARDEL-DELON-NOVAIS-ROCHA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "e861fe6cab8fa8248e08fc52237d6d94",
+    "modifiedTime": "2026-11-16T10:02:12.872Z",
+    "holder": {
+      "key": "h2:NARDEL DELON NOVAIS ROCHA",
+      "status": "OK"
+    },
+    "code": "10",
+    "issueDate": "2026-07-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 10_NR01",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "10",
+        "issueDate": "2026-07-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 10_NR01",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1F_GVZ8oBetCql0VbV7i7uD8IlKsXCHL2",
+    "filename": "11_NR06-FORMACAO_EMI-2026-10-21_VAL-2027-10-21_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a95c1df24b5dc51c7194c8182661f44a",
+    "modifiedTime": "2026-11-16T10:00:17.260Z",
+    "holder": {
+      "key": "h2:BRUNO EDUARDO FERREIRA PAIVA",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-10-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1XAbiKz93mNMnMdsR0H7LinU9TLtMfq51",
+    "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-11-15_VAL-2028-11-15_ANTONIO-CARLOS-PEREIRA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ff43ce66cad013fe087e952128c73b90",
+    "modifiedTime": "2026-11-16T09:57:52.062Z",
+    "holder": {
+      "key": "h2:ANTONIO CARLOS PEREIRA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2028-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2028-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso complementar - Segurança no Sistema Elétrico de Potência (Sep) e em suas proximidades (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1v4UyWGMLHYfgf5_DZS_-Bg_FuEch3Uef",
+    "filename": "11_NR06-FORMACAO_EMI-2026-10-10_VAL-2027-10-10_DANIEL-FERNANDES-PACHECO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "24e60911be2627c2ae1c2d2e30a2d54f",
+    "modifiedTime": "2026-11-16T10:00:43.608Z",
+    "holder": {
+      "key": "h2:DANIEL FERNANDES PACHECO",
+      "status": "OK"
+    },
+    "code": "11",
+    "issueDate": "2026-10-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Documento permanente — sem vencimento",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 11_NR06",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "11",
+        "issueDate": "2026-10-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 11_NR06",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1IvlhQxaHwgCgBYtRGHKaweRRhewVhztC",
+    "filename": "12_NR10-FORMACAO_EMI-2026-02-01_VAL-2028-02-01_THIAGO-LIMA-SANTOS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ce8a5a33a3cf92b429317caa28bf9b71",
+    "modifiedTime": "2026-11-16T09:59:19.871Z",
+    "holder": {
+      "key": "h2:THIAGO LIMA SANTOS SILVA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-02-01T03:00:00.000Z",
+    "expirationDate": "2028-02-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/02/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Iniciado em 27/01/2026 | Atualizado via nome: 01/02/2026",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-02-01T03:00:00.000Z",
+        "expirationDate": "2028-02-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/02/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Iniciado em 27/01/2026 | Atualizado via nome: 01/02/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1Zg2EgupCuHXyivHRxMSq2ZZZG445zQ_W",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-02-01_VAL-2028-02-01_THIAGO-LIMA-SANTOS-SILVA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4ebdd004a6c94c858b4f23d0799086fc",
+    "modifiedTime": "2026-11-16T09:59:16.866Z",
+    "holder": {
+      "key": "h2:THIAGO LIMA SANTOS SILVA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-02-01T03:00:00.000Z",
+    "expirationDate": "2028-02-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/02/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Iniciado em 27/01/2026 | Atualizado via nome: 01/02/2026",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-02-01T03:00:00.000Z",
+        "expirationDate": "2028-02-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/02/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Iniciado em 27/01/2026 | Atualizado via nome: 01/02/2026"
+      }
+    ]
   }
 ]
