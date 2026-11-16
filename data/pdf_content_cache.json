@@ -90204,11 +90204,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "b17199ea9ed4b73bbb6ac0ab9ea5547b",
-    "llmAt": "2026-11-12T18:27:14.025Z",
+    "llmAt": "2026-11-16T16:52:29.415Z",
     "modifiedTime": "2026-11-12T13:01:10.774Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "32",
     "issueDate": "2026-07-17T03:00:00.000Z",
@@ -90220,6 +90220,60 @@
     "matchedTerm": "Advanced Rescue Training - Hub (FORMACAO)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 30_WINDA",
+        "extractedClause": "Data do nome do arquivo"
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-02-24T03:00:00.000Z",
+        "expirationDate": "2027-02-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2025-02-25T03:00:00.000Z",
+        "expirationDate": "2027-02-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2025-02-25T03:00:00.000Z",
+        "expirationDate": "2027-02-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "21",
+        "issueDate": "2025-02-27T03:00:00.000Z",
+        "expirationDate": "2027-02-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
       {
         "code": "32",
         "issueDate": "2026-07-17T03:00:00.000Z",
@@ -99617,7 +99671,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d789c115580cad956907f4709f740e8a",
-    "llmAt": "2026-11-13T14:31:16.324Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:24.878Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -104462,7 +104516,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8e6b354147615f5b241dd00582579f26",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2026-09-28T14:36:44.000Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
@@ -104605,7 +104659,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e37efc9608f8870ec30a97e13f211e27",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-06-10T08:13:30.000Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
@@ -107956,7 +108010,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6baed1d8e854ba10453f4991c4666c38",
-    "llmAt": "2026-11-13T14:46:13.515Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2026-11-13T10:34:24.681Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
@@ -110621,7 +110675,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "56116556774abb33bd36ed3311af937d",
-    "llmAt": "2026-11-16T11:31:03.373Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-05-23T13:29:12.000Z",
     "holder": {
       "key": "h2:MARIA BRUNA SOARES SANTOS",
@@ -111909,7 +111963,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "90847193544626925b55512172e98e93",
-    "llmAt": "2026-11-13T14:54:53.325Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-11-13T10:33:48.503Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
@@ -118523,7 +118577,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f5f35206f0b40d3f6f75568860c4dcbc",
-    "llmAt": "2026-11-16T11:31:03.373Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-08-03T05:42:50.000Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
@@ -120076,7 +120130,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "77969fe49346d5a968916726fa86849a",
-    "llmAt": "2026-11-16T11:31:03.371Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-12-09T14:37:18.000Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
@@ -122353,7 +122407,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "7d45bd72cf5221e7a047cb5940f45fac",
-    "llmAt": "2026-11-16T11:31:03.372Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2024-04-11T14:44:00.000Z",
     "holder": {
       "key": "h2:JOSE RICARDO BRAGA MATOS",
@@ -137897,26 +137951,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "ae5f2f1a03a59f4c18c90f720d882ed3",
-    "llmAt": "2026-11-12T18:31:19.729Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-11-13T10:30:16.113Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-THIAGO-DE-ABREU.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2031-05-25T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 25/05/2031",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 08_CNH",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-THIAGO-DE-ABREU.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2031-05-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/05/2031",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 08_CNH"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -140083,16 +140141,16 @@
     "sv": 1,
     "ev": 7,
     "md5": "f9f4db16067f3bdab2272bdfd420abb2",
-    "llmAt": "2026-11-13T15:38:56.202Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-11-13T10:29:38.490Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "expirationDate": "2033-03-08T03:00:00.000Z",
+    "expirationDate": "2033-03-07T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 08/03/2033",
+    "statusDetail": "Válido até 07/03/2033",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "ausente",
@@ -140100,9 +140158,9 @@
     "documents": [
       {
         "code": "08",
-        "expirationDate": "2033-03-08T03:00:00.000Z",
+        "expirationDate": "2033-03-07T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/03/2033",
+        "statusDetail": "Válido até 07/03/2033",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "ausente",
@@ -142274,7 +142332,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3ce310d998ac5884079642ee1ad1f46c",
-    "llmAt": "2026-11-16T11:19:36.200Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-11-12T12:37:46.931Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
@@ -142487,7 +142545,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3ce310d998ac5884079642ee1ad1f46c",
-    "llmAt": "2026-11-16T11:19:36.200Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-03-14T13:01:38.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
@@ -142591,7 +142649,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "133c829b4df4ce49dcd24bfcae4fae51",
-    "llmAt": "2026-11-16T11:19:36.201Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-09-24T08:02:48.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -143789,7 +143847,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "083eb806480591d0a73c8f6380890a2e",
-    "llmAt": "2026-11-16T11:19:36.200Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-04-11T13:25:12.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -144187,18 +144245,21 @@
     "sv": 1,
     "ev": 7,
     "md5": "ff2b2eeaf9126d82b58486634090ce19",
-    "llmAt": "2026-11-12T18:31:19.732Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-01-19T08:46:56.000Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
       "status": "OK"
     },
-    "code": "30",
+    "code": "21",
+    "issueDate": "2025-10-26T03:00:00.000Z",
+    "expirationDate": "2027-10-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Documento permanente — sem vencimento",
+    "statusDetail": "Válido até 26/10/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO WINDA ID",
+    "matchedTerm": "Working at Heights",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "30",
@@ -144207,6 +144268,50 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID"
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-10-24T03:00:00.000Z",
+        "expirationDate": "2027-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2025-10-25T03:00:00.000Z",
+        "expirationDate": "2027-10-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2025-10-25T03:00:00.000Z",
+        "expirationDate": "2027-10-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "21",
+        "issueDate": "2025-10-26T03:00:00.000Z",
+        "expirationDate": "2027-10-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -144853,7 +144958,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "00c6d7b2523c98a15ccedffb2bc4608e",
-    "llmAt": "2026-11-16T11:19:36.199Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-09-29T15:12:34.000Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
@@ -145065,16 +145170,16 @@
     "sv": 1,
     "ev": 7,
     "md5": "1d1e3f9895f90298b4c039c94781b326",
-    "llmAt": "2026-11-13T15:49:21.253Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-11-13T10:29:05.493Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "expirationDate": "2033-01-03T03:00:00.000Z",
+    "expirationDate": "2033-03-01T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 03/01/2033",
+    "statusDetail": "Válido até 01/03/2033",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "ausente",
@@ -145082,9 +145187,9 @@
     "documents": [
       {
         "code": "08",
-        "expirationDate": "2033-01-03T03:00:00.000Z",
+        "expirationDate": "2033-03-01T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/01/2033",
+        "statusDetail": "Válido até 01/03/2033",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "ausente",
@@ -147544,7 +147649,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ec27e466ba30e10f2a1cb54c89affb33",
-    "llmAt": "2026-11-13T15:48:53.170Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-13T10:28:37.396Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
@@ -151647,18 +151752,21 @@
     "sv": 1,
     "ev": 7,
     "md5": "116383d329456f80cf47e84f171e102f",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-03-31T12:46:46.000Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
       "status": "OK"
     },
-    "code": "30",
-    "statusEHS": "CONFORME",
-    "statusDetail": "Documento permanente — sem vencimento",
+    "code": "19",
+    "issueDate": "2025-02-05T03:00:00.000Z",
+    "expirationDate": "2027-02-05T03:00:00.000Z",
+    "statusEHS": "VENCE_90",
+    "statusDetail": "PROGRAMAR: Vence em 81 dias (05/02/2027)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO WINDA ID",
+    "matchedTerm": "Fire Awareness Refresher (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "30",
@@ -151667,6 +151775,50 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID"
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-02-04T03:00:00.000Z",
+        "expirationDate": "2027-02-04T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 80 dias (04/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2025-02-05T03:00:00.000Z",
+        "expirationDate": "2027-02-05T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (05/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2025-02-05T03:00:00.000Z",
+        "expirationDate": "2027-02-05T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (05/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "21",
+        "issueDate": "2025-01-23T03:00:00.000Z",
+        "expirationDate": "2027-01-23T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 68 dias (23/01/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights Refresher (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -152876,18 +153028,21 @@
     "sv": 1,
     "ev": 7,
     "md5": "5168db09f646dcab8c4ff5e74d338749",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2025-05-13T14:35:42.249Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
       "status": "OK"
     },
-    "code": "30",
-    "statusEHS": "CONFORME",
-    "statusDetail": "Documento permanente — sem vencimento",
+    "code": "21",
+    "issueDate": "2025-02-02T03:00:00.000Z",
+    "expirationDate": "2027-02-02T03:00:00.000Z",
+    "statusEHS": "VENCE_90",
+    "statusDetail": "PROGRAMAR: Vence em 78 dias (02/02/2027)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO WINDA ID",
+    "matchedTerm": "Working at Heights",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "30",
@@ -152896,6 +153051,50 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID"
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-01-31T03:00:00.000Z",
+        "expirationDate": "2027-01-31T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 76 dias (31/01/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2025-02-01T03:00:00.000Z",
+        "expirationDate": "2027-02-01T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (01/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2025-02-01T03:00:00.000Z",
+        "expirationDate": "2027-02-01T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (01/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "21",
+        "issueDate": "2025-02-02T03:00:00.000Z",
+        "expirationDate": "2027-02-02T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 78 dias (02/02/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -159170,7 +159369,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2979e216a5db4f86d269f910c8601e18",
-    "llmAt": "2026-11-12T20:17:27.778Z",
+    "llmAt": "2026-11-16T16:07:08.796Z",
     "modifiedTime": "2025-06-26T16:27:02.000Z",
     "holder": {
       "key": "h2:EDWARD THIAGO HERCULANO RIBEIRO",
@@ -159192,6 +159391,14 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "31",
+        "statusEHS": "INDETERMINADO",
+        "statusDetail": "Data não informada ou formato inválido",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Elevador (JASO) (via PDF) (Pág. 1)"
       }
     ]
   },
@@ -182811,18 +183018,21 @@
     "sv": 1,
     "ev": 7,
     "md5": "b1882cccb42e76f15ca87b6a6cbe4b0c",
-    "llmAt": "2026-11-12T18:35:16.844Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-05-11T14:29:39.000Z",
     "holder": {
       "key": "h2:RAMON RAMIRES COSTA CIRINO",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
-    "code": "30",
+    "code": "21",
+    "issueDate": "2026-05-08T03:00:00.000Z",
+    "expirationDate": "2028-05-08T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Documento permanente — sem vencimento",
+    "statusDetail": "Válido até 08/05/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO WINDA ID",
+    "matchedTerm": "Working at Heights",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "30",
@@ -182831,6 +183041,50 @@
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID"
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-05-05T03:00:00.000Z",
+        "expirationDate": "2028-05-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-05-07T03:00:00.000Z",
+        "expirationDate": "2028-05-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2026-05-07T03:00:00.000Z",
+        "expirationDate": "2028-05-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-05-08T03:00:00.000Z",
+        "expirationDate": "2028-05-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/05/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -184384,7 +184638,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e440025b200c7c649c053c2be4d0be09",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2025-05-02T17:57:12.176Z",
     "holder": {
       "key": "h2:PHILIPE SOUZA ANDRADE",
@@ -189632,7 +189886,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0f758df182adcda12a7298049cc7738f",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-07-07T09:41:38.000Z",
     "holder": {
       "key": "h2:RAPHAEL AFONSO CARDOSO PEREIRA",
@@ -191084,7 +191338,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a471ed3209b46a3d4ad31846804d4e3b",
-    "llmAt": "2026-11-16T11:31:03.373Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2025-04-07T15:58:14.000Z",
     "holder": {
       "key": "h2:NARDEL DELON NOVAIS ROCHA",
@@ -193108,7 +193362,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a4436f6396e7cc31c86fe6489cdded37",
-    "llmAt": "2026-11-16T11:32:11.493Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-02-03T19:35:26.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -194594,7 +194848,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "64cc539d6db8dbd0ae46ab869b877789",
-    "llmAt": "2026-11-16T11:19:36.199Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2024-04-04T16:37:47.000Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
@@ -195799,7 +196053,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ea8149f1b821f8f0700a689c70a49c50",
-    "llmAt": "2026-11-16T11:31:03.372Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-03-28T14:01:22.000Z",
     "holder": {
       "key": "h2:JOSE MARCELO MAGALHAES SOUSA",
@@ -198763,7 +199017,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d54d476ff066610c1650b13af299c6b2",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2025-06-04T14:05:10.000Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
@@ -199568,7 +199822,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "da7398e1b4f024845014bf696a36d625",
-    "llmAt": "2026-11-16T11:19:36.201Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-10-22T12:56:46.358Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
@@ -201853,7 +202107,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "74da2b5d897b24d233edecfbdf92dded",
-    "llmAt": "2026-11-13T15:17:41.489Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-13T10:32:20.560Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -202022,7 +202276,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "81b30750357d66a6e0a8e550e9224229",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.415Z",
     "modifiedTime": "2026-10-22T13:42:35.455Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
@@ -202568,7 +202822,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2d774d4188741d86a587e0a27d2cfcfa",
-    "llmAt": "2026-11-16T11:31:03.373Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-11-08T23:13:27.221Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
@@ -203016,7 +203270,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fd69aa490fd0ae6d15d10ae463489144",
-    "llmAt": "2026-11-16T11:31:03.371Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-06-16T13:09:32.000Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -204289,7 +204543,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "149a3755c0b3b66961b595e9f05e4158",
-    "llmAt": "2026-11-12T18:42:07.201Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-06-03T16:17:44.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
@@ -204391,7 +204645,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "00c6d7b2523c98a15ccedffb2bc4608e",
-    "llmAt": "2026-11-16T11:19:36.199Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-11-10T11:49:07.427Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
@@ -204837,7 +205091,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8418c0a7e25ef9c2ac6161f22bd52dec",
-    "llmAt": "2026-11-16T11:19:36.201Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-09-29T16:54:58.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -205008,7 +205262,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "149a3755c0b3b66961b595e9f05e4158",
-    "llmAt": "2026-11-12T18:42:07.201Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-11-16T12:14:43.578Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
@@ -206864,7 +207118,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "67df0a52f4be60d484b1023f778a9639",
-    "llmAt": "2026-11-16T11:11:07.662Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2026-04-09T06:22:30.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
@@ -209191,7 +209445,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d1e0da4cb15c4dd75838449c7d6c70c7",
-    "llmAt": "2026-11-16T11:31:03.371Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-10T11:52:32.038Z",
     "holder": {
       "key": "h2:ITALO ABREU DUARTE",
@@ -210895,7 +211149,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "04e13dfdc92697a69cf17fa2639deadd",
-    "llmAt": "2026-11-12T19:10:37.153Z",
+    "llmAt": "2026-11-16T16:22:25.810Z",
     "modifiedTime": "2026-11-12T16:19:54.814Z",
     "holder": {
       "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
@@ -210908,7 +211162,7 @@
     "statusDetail": "Válido até 15/09/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "LOTO - Guia Prático",
+    "matchedTerm": "LOTO - Guia Prático (FORMACAO)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -210919,7 +211173,18 @@
         "statusDetail": "Válido até 15/09/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "LOTO - Guia Prático",
+        "matchedTerm": "LOTO - Guia Prático (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "20",
+        "issueDate": "2026-01-17T03:00:00.000Z",
+        "expirationDate": "2027-01-17T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (17/01/2027)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -213754,7 +214019,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "eff4da46262ac05a7ca84251abf70531",
-    "llmAt": "2026-11-16T11:31:03.374Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2026-04-14T13:37:46.000Z",
     "holder": {
       "key": "h2:NARDEL DELON NOVAIS ROCHA",
@@ -214441,7 +214706,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4ddf0fb81fdf7522202e7d08b93408c5",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:36.949Z",
     "holder": {
       "key": "h2:WILDEN ALVES FERREIRA",
@@ -214556,7 +214821,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4ddf0fb81fdf7522202e7d08b93408c5",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:41.637Z",
     "holder": {
       "key": "h2:WILDEN ALVES FERREIRA",
@@ -214625,7 +214890,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "362b748a2bc4b9ffd0966b90d6dfd3fc",
-    "llmAt": "2026-11-12T18:46:09.321Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-11-13T10:35:38.755Z",
     "holder": {
       "key": "h2:THALITSON WILKSON PINTO NUNES",
@@ -214988,7 +215253,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fdd639bcaf7aabe25672b1ab05197bf4",
-    "llmAt": "2026-11-12T18:46:09.321Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:21.805Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -215112,7 +215377,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fdd639bcaf7aabe25672b1ab05197bf4",
-    "llmAt": "2026-11-12T18:46:09.321Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:26.693Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -215217,7 +215482,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9897d3ac9ccd4cf09101b2a451f04d67",
-    "llmAt": "2026-11-12T18:46:09.321Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-11-13T10:35:04.573Z",
     "holder": {
       "key": "h2:RAIMUNDO NONATO HOLANDA FILHO",
@@ -215903,7 +216168,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "536812966a0d6c0b84bafa88dce6c944",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-11-13T10:33:45.081Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
@@ -215983,7 +216248,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "536812966a0d6c0b84bafa88dce6c944",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-11-13T10:33:49.951Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
@@ -216544,7 +216809,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2832cb4275389ddbcd88324aa5829aff",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-13T10:32:42.710Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
@@ -216694,7 +216959,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2832cb4275389ddbcd88324aa5829aff",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-13T10:32:46.185Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
@@ -216765,7 +217030,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1da74d4ab8b7e9425318dddf8bb11432",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-16T11:11:35.882Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
@@ -216982,7 +217247,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1da74d4ab8b7e9425318dddf8bb11432",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-16T11:11:39.583Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
@@ -217497,7 +217762,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "49be5aedfdb4766652d877d2a0483e7c",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-11-13T10:31:30.844Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -217612,7 +217877,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "49be5aedfdb4766652d877d2a0483e7c",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-11-13T10:31:44.286Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -217647,7 +217912,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f46d39612d7a62056bff51c300ceabd7",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.516Z",
     "modifiedTime": "2026-11-13T10:30:30.213Z",
     "holder": {
       "key": "h2:GERARDO LUCAS VIANA FILHO",
@@ -217832,7 +218097,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5b654f75a8e70e6dc4175fdcca0f51cb",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-16T11:10:59.371Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
@@ -217867,7 +218132,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f46d39612d7a62056bff51c300ceabd7",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:37:50.516Z",
     "modifiedTime": "2026-11-13T10:30:32.321Z",
     "holder": {
       "key": "h2:GERARDO LUCAS VIANA FILHO",
@@ -217902,7 +218167,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5b654f75a8e70e6dc4175fdcca0f51cb",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-16T11:10:55.516Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
@@ -218050,7 +218315,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8117a07d16617e55ae6e159570795f05",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-11-13T10:30:11.277Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
@@ -218311,7 +218576,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8117a07d16617e55ae6e159570795f05",
-    "llmAt": "2026-11-12T18:46:09.322Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-11-13T10:30:17.484Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
@@ -218381,7 +218646,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3c8bb8559fe10a648a9992ce8df4a0d2",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-11-13T10:29:45.742Z",
     "holder": {
       "key": "h2:FRANCISCO KELVIO TORRES ASSUNCAO",
@@ -218496,7 +218761,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3c8bb8559fe10a648a9992ce8df4a0d2",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-11-13T10:29:50.347Z",
     "holder": {
       "key": "h2:FRANCISCO KELVIO TORRES ASSUNCAO",
@@ -218889,7 +219154,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fb8bb8a7ff0e209e3c87be23441660fa",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-16T11:09:02.313Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
@@ -219359,7 +219624,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6ffe3ef55057c5e34096dfc38439f57e",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-13T10:28:24.962Z",
     "holder": {
       "key": "h2:FELIPE JARDEL SILVA CARVALHO",
@@ -219473,7 +219738,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6ffe3ef55057c5e34096dfc38439f57e",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-13T10:28:28.200Z",
     "holder": {
       "key": "h2:FELIPE JARDEL SILVA CARVALHO",
@@ -221219,7 +221484,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b2249a961050b6ffff307541dd741bb8",
-    "llmAt": "2026-11-12T18:49:48.475Z",
+    "llmAt": "2026-11-16T16:52:29.411Z",
     "modifiedTime": "2026-11-13T10:33:02.722Z",
     "holder": {
       "key": "h2:LEONARDO SIMON COSTA GAEM",
@@ -221369,7 +221634,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b2249a961050b6ffff307541dd741bb8",
-    "llmAt": "2026-11-12T18:49:48.475Z",
+    "llmAt": "2026-11-16T16:52:29.411Z",
     "modifiedTime": "2026-11-13T10:33:07.614Z",
     "holder": {
       "key": "h2:LEONARDO SIMON COSTA GAEM",
@@ -221659,7 +221924,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "58e74e2e287ec7fe87c6e2a11e86604f",
-    "llmAt": "2026-11-12T18:49:48.475Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-13T10:31:12.707Z",
     "holder": {
       "key": "h2:ITALO ABREU DUARTE",
@@ -221956,7 +222221,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "58e74e2e287ec7fe87c6e2a11e86604f",
-    "llmAt": "2026-11-12T18:49:48.475Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-13T10:31:16.788Z",
     "holder": {
       "key": "h2:ITALO ABREU DUARTE",
@@ -222383,7 +222648,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "cf7632b6113204a2ccc1641814f14a4c",
-    "llmAt": "2026-11-12T19:10:37.152Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-11-13T10:33:56.993Z",
     "holder": {
       "key": "h2:LUIS GUSTAVO ROSA SILVA",
@@ -224503,7 +224768,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "521d580b09177fbee5910817c4a6f076",
-    "llmAt": "2026-11-12T19:10:37.152Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-11-13T10:32:11.121Z",
     "holder": {
       "key": "h2:JOSE MARCELO MAGALHAES SOUSA",
@@ -225319,26 +225584,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "d8ed6cb0ec8225dc5f3034e812e538e7",
-    "llmAt": "2026-11-12T19:34:21.455Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2026-11-13T10:34:32.733Z",
     "holder": {
       "key": "h2:PEDRO PAULO FERREIRA ALMEIDA",
       "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2028-04-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/04/2028",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 08_CNH",
+    "matchedTerm": "CNH",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2028-04-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/04/2028",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 08_CNH"
+        "matchedTerm": "CNH",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -230789,7 +231058,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d8f64ab8d4f5b34bfefa804ed36fbd7c",
-    "llmAt": "2026-11-12T19:12:33.955Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-03T17:12:09.932Z",
     "holder": {
       "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
@@ -230882,7 +231151,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4bc2304ac2e37de0284daa3488142eef",
-    "llmAt": "2026-11-13T14:03:42.519Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-11-12T16:20:10.843Z",
     "holder": {
       "key": "h2:WILLAMES WAGNER SILVA",
@@ -231033,26 +231302,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "b3f4de71119cc238bf8da8d067a67f4a",
-    "llmAt": "2026-11-12T19:29:51.767Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-11-13T10:29:09.099Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
       "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2028-05-17T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 17/05/2028",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 08_CNH",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2028-05-17T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/05/2028",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 08_CNH"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -231064,7 +231337,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8940ab72b01bf83182df489410ae2ff0",
-    "llmAt": "2026-11-13T14:14:07.014Z",
+    "llmAt": "2026-11-16T16:52:29.413Z",
     "modifiedTime": "2026-11-12T13:00:53.312Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
@@ -231076,7 +231349,7 @@
     "statusDetail": "Válido até 22/12/2035",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ausente",
+    "matchedTerm": "CNH",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -231086,7 +231359,7 @@
         "statusDetail": "Válido até 22/12/2035",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ausente",
+        "matchedTerm": "CNH",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -231130,11 +231403,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "0adfec9cca671cb7284c5fdc387a695e",
-    "llmAt": "2026-11-12T19:20:40.491Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-10-22T13:17:50.774Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -231159,27 +231432,31 @@
     "sv": 1,
     "ev": 7,
     "md5": "4919dfef7bb82b95def8249b81dbdafa",
-    "llmAt": "2026-11-16T11:31:03.373Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-10-22T13:50:43.522Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
       "status": "OK"
     },
-    "code": null,
+    "code": "48",
     "issueDate": "2025-08-14T03:00:00.000Z",
-    "statusEHS": "INDETERMINADO",
-    "statusDetail": "Data não informada ou formato inválido",
+    "expirationDate": "2027-08-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/08/2027",
     "source": "IMAGE_FALLBACK",
-    "classificationSource": "NONE",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-20 Inflamáveis (via PDF)",
     "extractedClause": "nos dias 02/08/2025 | Atualizado via nome: 14/08/2025",
     "documents": [
       {
-        "code": null,
+        "code": "48",
         "issueDate": "2025-08-14T03:00:00.000Z",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
+        "expirationDate": "2027-08-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/08/2027",
         "source": "IMAGE_FALLBACK",
-        "classificationSource": "NONE",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-20 Inflamáveis (via PDF)",
         "extractedClause": "nos dias 02/08/2025 | Atualizado via nome: 14/08/2025"
       }
     ]
@@ -231221,7 +231498,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ef016898c98b80559f7d87dc181b2a27",
-    "llmAt": "2026-11-12T19:24:24.266Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-10-22T13:12:06.271Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
@@ -231310,7 +231587,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "543a854ae0d47b8c4e090177f520c1fb",
-    "llmAt": "2026-11-12T19:26:09.275Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-10-22T13:06:05.449Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
@@ -231339,11 +231616,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "cd3ae8c6aa0a95f24df77c66119a47b0",
-    "llmAt": "2026-11-13T14:19:42.385Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2026-10-22T14:08:15.633Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -231368,11 +231645,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "ed9cf36d7746ecc14e9a5e42674d2461",
-    "llmAt": "2026-11-12T19:27:50.674Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-22T13:05:57.222Z",
     "holder": {
       "key": "h2:FRANCISCO EVERSON BARBOSA VASCONCELOS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -231591,11 +231868,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "208038aa087996e133583127e50cf40b",
-    "llmAt": "2026-11-12T19:38:34.433Z",
+    "llmAt": "2026-11-16T16:52:29.423Z",
     "modifiedTime": "2026-10-22T14:00:55.662Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -231620,7 +231897,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6593fe74ba0a486eb05180d23f726f51",
-    "llmAt": "2026-11-12T19:20:10.355Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-10-22T14:42:15.837Z",
     "holder": {
       "key": "h2:HERBENS GOMES SILVA",
@@ -231649,7 +231926,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "361eaf9b21f4369593aceecdc858d7ff",
-    "llmAt": "2026-11-13T14:23:03.638Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2026-10-22T13:55:58.336Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
@@ -231707,7 +231984,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "55977928adb78b0b8e05fc7b950fd1d4",
-    "llmAt": "2026-11-12T19:24:57.855Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-10-22T14:42:15.724Z",
     "holder": {
       "key": "h2:HERBENS GOMES SILVA",
@@ -231897,11 +232174,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "d03604deefda0f5f6a3d6cb88d029d3e",
-    "llmAt": "2026-11-12T19:28:47.018Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-10-22T14:42:15.697Z",
     "holder": {
       "key": "h2:HERBENS GOMES SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -231986,7 +232263,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a84f5220fb084f04d6f8b4effb936b94",
-    "llmAt": "2026-11-12T19:30:38.203Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-10-22T14:42:15.685Z",
     "holder": {
       "key": "h2:HERBENS GOMES SILVA",
@@ -232015,7 +232292,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b47b658e32898961e0b461ce2f6dad4f",
-    "llmAt": "2026-11-12T19:18:19.234Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-21T13:50:42.931Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
@@ -232073,7 +232350,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0a3ce71c2003c4e88f15401893fca2c8",
-    "llmAt": "2026-11-12T19:21:59.258Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-21T13:44:59.341Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
@@ -232167,7 +232444,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fa61f2eb22e66eb874c351ae9f6a1cd1",
-    "llmAt": "2026-11-12T19:25:24.369Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-21T13:30:46.097Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
@@ -232227,11 +232504,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "a1ca29c049ca18657a4b01da9a22e7a2",
-    "llmAt": "2026-11-12T19:27:13.822Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-21T13:30:45.988Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -232256,7 +232533,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c584495f69302d6c36bf22dc807ab022",
-    "llmAt": "2026-11-16T15:54:43.290Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-10-02T13:40:46.000Z",
     "holder": {
       "key": "h2:WILDEN ALVES FERREIRA",
@@ -232264,19 +232541,25 @@
       "other": "CARLOS HENRIQUE SOARES DA SILVA"
     },
     "code": "01",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01. ASO-ADM-CARLOS HENRIQUE SOARES DA SILVA-29-09-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2026-09-24T03:00:00.000Z",
+    "expirationDate": "2027-09-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/09/2027",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ASO",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "01",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01. ASO-ADM-CARLOS HENRIQUE SOARES DA SILVA-29-09-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2026-09-24T03:00:00.000Z",
+        "expirationDate": "2027-09-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2027",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ASO"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -232316,11 +232599,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "260c832fd1180d3a799c0b4f2312c62f",
-    "llmAt": "2026-11-12T19:17:04.615Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2025-11-19T13:56:12.000Z",
     "holder": {
       "key": "h2:WILDEN ALVES FERREIRA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -232345,11 +232628,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "ac31ff1eb1adab5182f5602d9ceb2b29",
-    "llmAt": "2026-11-12T19:28:52.621Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-21T13:30:45.972Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -232518,7 +232801,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "7b98e4a258e0d23d844f5838a14e07d1",
-    "llmAt": "2026-11-12T19:31:07.665Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-10-14T14:15:03.073Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
@@ -232712,7 +232995,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "80088dbaffb329b9fc9d62b17a4b8e9e",
-    "llmAt": "2026-11-12T19:15:19.002Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-12-04T15:57:04.000Z",
     "holder": {
       "key": "h2:THALITSON WILKSON PINTO NUNES",
@@ -232813,7 +233096,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3a84111efaa558ca7097a868207d9f9e",
-    "llmAt": "2026-11-12T19:17:09.698Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2025-11-27T12:38:20.000Z",
     "holder": {
       "key": "h2:THALITSON WILKSON PINTO NUNES",
@@ -232844,7 +233127,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fa244e2b05f0d90af8f61aa3175f3107",
-    "llmAt": "2026-11-12T19:13:05.448Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-11-04T09:56:22.555Z",
     "holder": {
       "key": "h2:WERMESON OLIVEIRA FRANCO",
@@ -232911,6 +233194,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "dac6c8c0fd46ace7edb0720552caa77a",
+    "llmAt": "2026-11-16T17:00:20.004Z",
     "modifiedTime": "2025-11-26T06:43:58.000Z",
     "holder": {
       "key": "h2:THALITSON WILKSON PINTO NUNES",
@@ -233013,7 +233297,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "962838faeb6608bea75d6b7b9098f08f",
-    "llmAt": "2026-11-13T14:30:09.970Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-12T13:11:57.711Z",
     "holder": {
       "key": "h2:VALDERSON NASCIMENTO FERREIRA",
@@ -233044,6 +233328,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ad879e7d193c4cc6e908d6333f8881bf",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2025-10-20T09:02:50.000Z",
     "holder": {
       "key": "h2:VALDERSON NASCIMENTO FERREIRA",
@@ -233074,11 +233359,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "0d14eb642a4830d7cdb41f69e06067d5",
-    "llmAt": "2026-11-12T19:16:53.193Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2025-10-20T08:59:48.000Z",
     "holder": {
       "key": "h2:VALDERSON NASCIMENTO FERREIRA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -233419,11 +233704,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "00711037411825795d33c2ef416170c5",
-    "llmAt": "2026-11-12T19:18:38.610Z",
+    "llmAt": "2026-11-16T16:52:29.423Z",
     "modifiedTime": "2026-07-07T14:00:10.000Z",
     "holder": {
       "key": "h2:RAFAEL SIQUEIRA SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -233507,6 +233792,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "759a8e41258f8a917ab662a009f8763f",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-06-10T09:39:34.000Z",
     "holder": {
       "key": "h2:RAFAEL SIQUEIRA SILVA",
@@ -233535,11 +233821,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "6e6da5afd8cd7b917887bb9d85aaee90",
-    "llmAt": "2026-11-12T19:21:06.790Z",
+    "llmAt": "2026-11-16T16:52:29.423Z",
     "modifiedTime": "2025-03-26T06:34:04.000Z",
     "holder": {
       "key": "h2:RAFAEL SIQUEIRA SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -233564,7 +233850,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4365d30a47250094b7f5b0b3e3a085f6",
-    "llmAt": "2026-11-12T19:20:17.189Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-08-14T08:57:42.000Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -233593,7 +233879,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "00daa6be8fe6c7a7cb46d661a71cb312",
-    "llmAt": "2026-11-12T19:21:50.630Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2025-12-04T11:30:20.000Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -233726,7 +234012,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e201393a566b1429645a11654409b5f9",
-    "llmAt": "2026-11-12T19:21:29.623Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-04T10:14:58.065Z",
     "holder": {
       "key": "h2:THAYNA NOGUEIRA TAVARES",
@@ -233757,7 +234043,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b55e932d88507826b47453ec1ddf2471",
-    "llmAt": "2026-11-12T19:23:08.512Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-10-13T12:18:02.000Z",
     "holder": {
       "key": "h2:THAYNA NOGUEIRA TAVARES",
@@ -233894,7 +234180,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4365d30a47250094b7f5b0b3e3a085f6",
-    "llmAt": "2026-11-12T19:20:17.189Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-08-14T08:57:42.000Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -234069,7 +234355,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "49f7e12df43c14b87f29a198df0d4e45",
-    "llmAt": "2026-11-12T18:42:07.201Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-11-12T13:09:14.383Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
@@ -234100,26 +234386,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "f1ab0e1f76846594c1d7a76471fbde4a",
-    "llmAt": "2026-11-12T19:22:54.117Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.842Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CNH.jpg\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2034-05-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/05/2034",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "CNH categoria AB",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CNH.jpg\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2034-05-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/05/2034",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH"
+        "matchedTerm": "CNH categoria AB",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -234131,11 +234421,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "75146fdfccf62eeb7be1d2a0d0567012",
-    "llmAt": "2026-11-12T19:24:39.480Z",
+    "llmAt": "2026-11-16T17:00:20.004Z",
     "modifiedTime": "2026-10-21T14:54:55.862Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234160,11 +234450,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "f37e7f91796ed5ac8e994c5bf15f5239",
-    "llmAt": "2026-11-12T19:26:34.401Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.851Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234189,6 +234479,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e75e92581387fb351229daee93a5db89",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.851Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
@@ -234217,7 +234508,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "15766d09086d241c3b9f1ea2e3062caa",
-    "llmAt": "2026-11-12T19:24:13.769Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-11-04T09:58:10.184Z",
     "holder": {
       "key": "h2:RAIMUNDO NONATO HOLANDA FILHO",
@@ -234248,7 +234539,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c4b8c82da073c4b54f13ae96d2fb4989",
-    "llmAt": "2026-11-12T19:25:51.177Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-06-01T05:58:10.000Z",
     "holder": {
       "key": "h2:RAIMUNDO NONATO HOLANDA FILHO",
@@ -234306,11 +234597,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "e58d6b06ae7499b3f7c4970229654e05",
-    "llmAt": "2026-11-12T19:30:39.673Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.832Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234335,11 +234626,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "5b4cc1b86d1a871f5860ec5a07349afe",
-    "llmAt": "2026-11-12T19:32:06.899Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.828Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234364,11 +234655,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "a29041bdcc883f7b15607677cbae84d5",
-    "llmAt": "2026-11-12T19:34:06.072Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.825Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234453,11 +234744,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "424bff23720100e5754ca66775fbff2b",
-    "llmAt": "2026-11-12T19:38:46.117Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-10-21T14:54:55.816Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234482,7 +234773,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1e0017657ec5c1d3d9e57f05441797a7",
-    "llmAt": "2026-11-12T19:28:10.666Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-02-20T07:17:48.000Z",
     "holder": {
       "key": "h2:RAIMUNDO NONATO HOLANDA FILHO",
@@ -234511,11 +234802,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "f97cdf14bb2ab292851707d50f249c39",
-    "llmAt": "2026-11-12T19:30:27.197Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-11-19T12:42:42.000Z",
     "holder": {
       "key": "h2:RAIMUNDO NONATO HOLANDA FILHO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234540,11 +234831,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "36db89384a4faaff90a313a4f40a2228",
-    "llmAt": "2026-11-12T19:25:46.565Z",
+    "llmAt": "2026-11-16T16:52:29.430Z",
     "modifiedTime": "2026-09-09T09:42:38.000Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -234600,7 +234891,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e907bcbf6ddeef9a03ec879a6308a3e8",
-    "llmAt": "2026-11-12T19:27:28.892Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-09-08T13:41:38.000Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
@@ -235090,11 +235381,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "a42c15bcc0d42c59ba691232919ae1e6",
-    "llmAt": "2026-11-12T19:29:38.051Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2026-01-23T05:05:24.000Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -235119,11 +235410,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "23157a27a11b65dc7054491d63b74387",
-    "llmAt": "2026-11-12T19:31:43.919Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-08-25T16:35:50.000Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -235148,7 +235439,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c867ca78a1df88d3cf4b417129eb32a6",
-    "llmAt": "2026-11-12T19:23:53.422Z",
+    "llmAt": "2026-11-16T16:52:29.423Z",
     "modifiedTime": "2026-02-05T13:03:08.000Z",
     "holder": {
       "key": "h2:RAFAEL PEREIRA NUNES",
@@ -235208,11 +235499,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "2340278a9d1806794a179ba0fc5f5004",
-    "llmAt": "2026-11-12T19:28:35.053Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-05-21T07:29:58.000Z",
     "holder": {
       "key": "h2:RAFAEL PEREIRA NUNES",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -235237,6 +235528,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e4a617c5064431888d0b874406420205",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-05-20T15:37:18.000Z",
     "holder": {
       "key": "h2:RAFAEL PEREIRA NUNES",
@@ -235409,7 +235701,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2fa3b54a433e6a6bee291434a559aed1",
-    "llmAt": "2026-11-12T19:28:01.413Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2026-05-14T13:22:14.000Z",
     "holder": {
       "key": "h2:PEDRO PAULO FERREIRA ALMEIDA",
@@ -235440,7 +235732,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a802e97c807523b2ef6ae33a50e8a4f5",
-    "llmAt": "2026-11-12T19:29:57.924Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-07-14T15:45:56.000Z",
     "holder": {
       "key": "h2:PEDRO PAULO FERREIRA ALMEIDA",
@@ -235543,11 +235835,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "97176fc43382292b23cee09e2f3a9834",
-    "llmAt": "2026-11-12T19:32:12.523Z",
+    "llmAt": "2026-11-16T16:52:29.423Z",
     "modifiedTime": "2025-06-09T15:22:12.000Z",
     "holder": {
       "key": "h2:PEDRO PAULO FERREIRA ALMEIDA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -236020,6 +236312,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5f579cfb6056431bb8a3f1b4e32cd25a",
+    "llmAt": "2026-11-16T16:52:29.415Z",
     "modifiedTime": "2026-04-10T06:41:10.000Z",
     "holder": {
       "key": "h2:MICHEL PLATINI SOARES BARROS",
@@ -236079,7 +236372,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6bf3718002ec10c5b17ef2c262c7d9f2",
-    "llmAt": "2026-11-12T19:29:10.594Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2026-11-04T10:04:23.232Z",
     "holder": {
       "key": "h2:NYLLYS RODRIGUES MARTINS",
@@ -236110,7 +236403,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "61097e4e862d029f4bb16f8351ad59fb",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2026-01-07T14:47:34.000Z",
     "holder": {
       "key": "h2:MICHEL PLATINI SOARES BARROS",
@@ -236147,7 +236440,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6bf3718002ec10c5b17ef2c262c7d9f2",
-    "llmAt": "2026-11-12T19:29:10.594Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2025-06-09T14:34:16.000Z",
     "holder": {
       "key": "h2:NYLLYS RODRIGUES MARTINS",
@@ -236207,11 +236500,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "f0be55b18df1d49ad9117c0e9800eff6",
-    "llmAt": "2026-11-12T19:33:29.866Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2025-06-09T14:30:48.000Z",
     "holder": {
       "key": "h2:NYLLYS RODRIGUES MARTINS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -236711,7 +237004,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "74795f0b5899f7472eb3d93c19e9c1fd",
-    "llmAt": "2026-11-12T19:37:09.850Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-05-23T13:14:22.000Z",
     "holder": {
       "key": "h2:MARIA BRUNA SOARES SANTOS",
@@ -236812,7 +237105,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ac127c50c1ff4be726503f3549c87cd3",
-    "llmAt": "2026-11-16T11:31:03.375Z",
+    "llmAt": "2026-11-16T16:52:29.415Z",
     "modifiedTime": "2025-12-05T13:50:54.000Z",
     "holder": {
       "key": "h2:LUCAS BATISTA ARAUJO",
@@ -236880,7 +237173,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b1fbf787b6ff452b3ecd8be636166fac",
-    "llmAt": "2026-11-12T19:41:08.327Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-09-09T07:30:52.000Z",
     "holder": {
       "key": "h2:LUCAS BATISTA ARAUJO",
@@ -236911,11 +237204,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "84e8f0d1ceb391f5b37a1503347acc92",
-    "llmAt": "2026-11-12T19:42:30.175Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-05-23T12:31:14.000Z",
     "holder": {
       "key": "h2:LUCAS BATISTA ARAUJO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -236971,7 +237264,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ab9f8a300256028b24b53e05d753b2c2",
-    "llmAt": "2026-11-13T14:56:58.011Z",
+    "llmAt": "2026-11-16T16:52:29.413Z",
     "modifiedTime": "2026-11-12T12:58:41.999Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
@@ -237135,11 +237428,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "506b30fc941819a435181a417c7b8b3e",
-    "llmAt": "2026-11-12T19:34:27.591Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-11-10T12:03:22.000Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -237380,26 +237673,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "7a54585a709d7978a1c5be83cd26f9fb",
-    "llmAt": "2026-11-12T19:36:40.759Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2026-11-13T10:33:14.817Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_LUANA-QUEIROZ-DE-SOUSA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2031-12-23T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 23/12/2031",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 08_CNH",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_LUANA-QUEIROZ-DE-SOUSA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2031-12-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/12/2031",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 08_CNH"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -237411,11 +237708,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "85b7bcb157fbcbc0c03764701b812d5d",
-    "llmAt": "2026-11-12T19:39:10.149Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-11-04T12:13:18.000Z",
     "holder": {
       "key": "h2:LUCAS FRANKLIN FALCAO SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -237477,6 +237774,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6121c05604f109e080f6f363b571fc10",
+    "llmAt": "2026-11-16T16:52:29.411Z",
     "modifiedTime": "2026-06-25T11:20:08.000Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
@@ -237505,7 +237803,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d0b3dd98a103d4ce7e46587bc6b3ba41",
-    "llmAt": "2026-11-12T19:34:56.599Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-11-25T11:03:32.000Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
@@ -238029,7 +238327,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d9f3bf3ed10bf0183e7d2cff4ea8184a",
-    "llmAt": "2026-11-12T19:46:09.516Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-12-16T11:55:46.000Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
@@ -238202,7 +238500,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2b8eb1ddd1c142c152825d25ba291ae6",
-    "llmAt": "2026-11-12T19:49:04.999Z",
+    "llmAt": "2026-11-16T16:52:29.411Z",
     "modifiedTime": "2025-09-30T08:41:52.000Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
@@ -238231,7 +238529,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9acbb8388db6d6f3ab207772a05c4067",
-    "llmAt": "2026-11-12T19:50:16.758Z",
+    "llmAt": "2026-11-16T16:52:29.411Z",
     "modifiedTime": "2025-09-30T08:39:02.000Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
@@ -238260,7 +238558,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d5219af541d986c58c680d3ca3d77281",
-    "llmAt": "2026-11-12T19:51:37.880Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-09-30T08:36:50.000Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
@@ -238320,7 +238618,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "55f5a0db5a79d30fa59195e09d8f7ba4",
-    "llmAt": "2026-11-12T19:55:32.750Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-05-23T09:35:36.000Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
@@ -238656,7 +238954,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d73074feae03b6943ae8929b15b93b0f",
-    "llmAt": "2026-11-12T19:44:13.957Z",
+    "llmAt": "2026-11-16T16:52:29.430Z",
     "modifiedTime": "2026-09-02T14:29:54.000Z",
     "holder": {
       "key": "h2:LUCAS ANDRE SOUSA RIBEIRO",
@@ -238751,11 +239049,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "058895066907ccc0f64287a282a71fc3",
-    "llmAt": "2026-11-12T19:47:12.504Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-14T13:05:32.000Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -238780,7 +239078,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "17b48d50407d8d3792ee5fcaf290c684",
-    "llmAt": "2026-11-12T19:48:53.717Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-14T12:42:12.000Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
@@ -238845,11 +239143,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "e7f78667a6eef05a1d2a254e4ca025bc",
-    "llmAt": "2026-11-12T19:50:20.634Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-03-11T08:28:42.000Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -239055,6 +239353,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "600592d5f35453f3595b3a7c016f630a",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-10T11:53:54.690Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
@@ -239083,11 +239382,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "dfafb49d377f8c5bff755304e7c48196",
-    "llmAt": "2026-11-12T19:47:33.012Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-03-24T15:27:12.000Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -239352,6 +239651,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "600592d5f35453f3595b3a7c016f630a",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-22T15:31:30.000Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
@@ -239416,7 +239716,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "52149f3bc193b8685f8f7ab013afc559",
-    "llmAt": "2026-11-12T19:46:43.119Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-08-04T10:00:50.000Z",
     "holder": {
       "key": "h2:JOSE RICARDO BRAGA MATOS",
@@ -239545,7 +239845,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "619ce4c3022ebbbd45a4c60ddb1075af",
-    "llmAt": "2026-11-12T19:47:05.565Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-02-23T09:17:08.000Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -239612,6 +239912,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1a2305b039b67c02b9878160dcc349f2",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-10T11:50:30.204Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -239712,6 +240013,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "be6fc13112dcfff45da8c04a2c4aed8e",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-10T11:50:27.083Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -239807,7 +240109,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a5e295db00799466de72fbc280c87e28",
-    "llmAt": "2026-11-12T19:53:49.964Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-02-20T06:32:06.000Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -239836,6 +240138,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "be6fc13112dcfff45da8c04a2c4aed8e",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-06-26T16:29:32.000Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -239864,6 +240167,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1a2305b039b67c02b9878160dcc349f2",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-05-23T07:45:14.000Z",
     "holder": {
       "key": "h2:JOSE MARCOS LIMA MOURA",
@@ -240105,7 +240409,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b223fb9dde0d8466f9cb8a126d2dd735",
-    "llmAt": "2026-11-12T19:49:23.559Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-09-22T09:33:34.000Z",
     "holder": {
       "key": "h2:JONATAS CARLOS MOTA SANTOS",
@@ -240168,6 +240472,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f98306dceaabff8a34a54ac8aca3c63b",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-05-22T16:29:10.000Z",
     "holder": {
       "key": "h2:JONATAS CARLOS MOTA SANTOS",
@@ -240196,7 +240501,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e12b96beeb563d75d76988b6ebe38468",
-    "llmAt": "2026-11-12T19:51:08.736Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-05-22T16:28:44.000Z",
     "holder": {
       "key": "h2:JONATAS CARLOS MOTA SANTOS",
@@ -240227,7 +240532,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f99890ae2c21c0c32e8878b19bf96847",
-    "llmAt": "2026-11-12T19:52:49.707Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-05-22T16:27:52.000Z",
     "holder": {
       "key": "h2:JONATAS CARLOS MOTA SANTOS",
@@ -240285,7 +240590,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "bea061041185d7b5812711b9d6b1c478",
-    "llmAt": "2026-11-12T19:46:42.232Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-11-04T10:20:40.778Z",
     "holder": {
       "key": "h2:JOSE ORLANDO BARROS SILVA FILHO",
@@ -240316,7 +240621,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "708dd50e50f4fd9e67202b1c5aaa569e",
-    "llmAt": "2026-11-12T19:52:53.510Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-01-09T06:51:38.000Z",
     "holder": {
       "key": "h2:JOSE ORLANDO BARROS SILVA FILHO",
@@ -240560,26 +240865,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "e01d80d5be0814bb7295d01d6453c581",
-    "llmAt": "2026-11-12T19:48:36.031Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-12-24T07:39:46.000Z",
     "holder": {
       "key": "h2:ISMAEL FREITAS SILVA",
       "status": "OK"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 – CNH – 23.12.2035 – Ismael de Freitas Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2035-12-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/12/2035",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "CNH categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 – CNH – 23.12.2035 – Ismael de Freitas Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2035-12-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/12/2035",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH"
+        "matchedTerm": "CNH categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -240627,11 +240936,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "670596acafc2c8b5393f3f2f9df7bfee",
-    "llmAt": "2026-11-12T19:50:42.363Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-12T13:29:48.000Z",
     "holder": {
       "key": "h2:ISMAEL FREITAS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -240723,7 +241032,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e0adb2976a8aeca79c8c041d4b462bda",
-    "llmAt": "2026-11-12T20:04:39.623Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-11-26T15:44:26.000Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -240788,7 +241097,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e53fe881ad0ffd377b6cc714228e6956",
-    "llmAt": "2026-11-12T20:08:49.892Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-10-23T15:02:44.000Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -240817,7 +241126,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1f02aa853a75590d576ae9aaf257091f",
-    "llmAt": "2026-11-12T19:50:07.522Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-12T13:00:21.021Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
@@ -240848,7 +241157,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "620ba9c9d29adbbd42e9d768b339f098",
-    "llmAt": "2026-11-12T20:09:50.890Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-10-23T15:02:36.000Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -240877,7 +241186,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1ea269ab486921c9cffca08b39c8ce01",
-    "llmAt": "2026-11-12T19:51:50.099Z",
+    "llmAt": "2026-11-16T16:24:30.715Z",
     "modifiedTime": "2025-05-21T15:36:26.000Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
@@ -240906,6 +241215,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "da69be343b3384ea3161e36fd641fff8",
+    "llmAt": "2026-11-16T16:37:50.516Z",
     "modifiedTime": "2025-05-21T15:32:06.000Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
@@ -240934,7 +241244,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c6bbbe6bcf7d897ee2b93c94f343a72b",
-    "llmAt": "2026-11-12T19:54:57.070Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-13T10:30:52.000Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
@@ -241109,11 +241419,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "1075a7be5c3d515cd306ba508ea1b6a4",
-    "llmAt": "2026-11-12T19:54:23.297Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-11-26T11:37:20.000Z",
     "holder": {
       "key": "h2:ISMAELSON YURI ARAUJO SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -241198,7 +241508,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "46eb966d4d75a13dc7fd4395bdaf9588",
-    "llmAt": "2026-11-12T19:50:42.483Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-01-05T12:25:32.000Z",
     "holder": {
       "key": "h2:GERARDO LUCAS VIANA FILHO",
@@ -241227,7 +241537,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0d0d4f1fe174f6691e7a0a22a0d4e655",
-    "llmAt": "2026-11-12T19:58:09.331Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-05-15T10:28:46.000Z",
     "holder": {
       "key": "h2:ISMAELSON YURI ARAUJO SOUSA",
@@ -241286,11 +241596,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "72f2d01a880dccdc92fa6ee30eab538a",
-    "llmAt": "2026-11-12T19:59:32.017Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-05-15T10:27:56.000Z",
     "holder": {
       "key": "h2:ISMAELSON YURI ARAUJO SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -241315,26 +241625,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "2e6359aaa7c78c17d2f599c7371079e7",
-    "llmAt": "2026-11-12T20:13:58.415Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-10-23T15:02:14.000Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
       "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 - CNH - 22.07.2031 - JOAO ELIENAI RIBEIRO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "expirationDate": "2031-07-22T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 22/07/2031",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 - CNH - 22.07.2031 - JOAO ELIENAI RIBEIRO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "expirationDate": "2031-07-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/07/2031",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -241666,7 +241980,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d39b6fac2749267f8162d0bc7ef618f3",
-    "llmAt": "2026-11-12T19:58:49.225Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2026-04-01T14:09:04.000Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
@@ -241695,6 +242009,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "39c2c915732bb4dcb9df1809adc87084",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2026-04-01T14:09:04.000Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
@@ -241723,7 +242038,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d39b6fac2749267f8162d0bc7ef618f3",
-    "llmAt": "2026-11-12T19:58:49.225Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2025-05-09T14:57:58.000Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
@@ -241752,6 +242067,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "39c2c915732bb4dcb9df1809adc87084",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2025-05-09T14:55:58.000Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
@@ -241852,26 +242168,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "654cf26526f3c09e3a9bf393367927d6",
-    "llmAt": "2026-11-12T18:42:07.201Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-08-24T14:39:08.000Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
       "status": "OK"
     },
     "code": "01",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 30.07.2026 - IGOR MARTINS ROCHA - Clicksign.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2026-07-30T03:00:00.000Z",
+    "expirationDate": "2027-07-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 30/07/2027",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ASO",
+    "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "01",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 30.07.2026 - IGOR MARTINS ROCHA - Clicksign.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2026-07-30T03:00:00.000Z",
+        "expirationDate": "2027-07-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/07/2027",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ASO"
+        "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -241883,7 +242205,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6e38660432b109df96c2008bf2181ad6",
-    "llmAt": "2026-11-12T19:54:23.829Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-07-18T15:00:20.000Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
@@ -241912,11 +242234,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "1c67ff9da541a5fa1cc928971bc74d9a",
-    "llmAt": "2026-11-12T19:56:21.501Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-05-22T09:32:08.000Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -241941,11 +242263,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "01a319e4c207c6e825ba65a9a022f615",
-    "llmAt": "2026-11-12T19:53:55.841Z",
+    "llmAt": "2026-11-16T16:24:30.716Z",
     "modifiedTime": "2026-07-06T06:17:40.000Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -242001,7 +242323,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f74f01235d98deb5aa59fa50663050d2",
-    "llmAt": "2026-11-12T19:57:09.965Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-01-09T08:24:02.000Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
@@ -242208,7 +242530,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1bf1c2f5730c3c44103fe84e680be00b",
-    "llmAt": "2026-11-12T19:57:41.927Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-11-04T10:12:30.781Z",
     "holder": {
       "key": "h2:INOCENCIO ROCHA MOURA",
@@ -242239,7 +242561,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d3f5c444522bb003a9a03ed628d94f97",
-    "llmAt": "2026-11-12T19:59:30.480Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-12-17T07:18:52.000Z",
     "holder": {
       "key": "h2:INOCENCIO ROCHA MOURA",
@@ -242550,7 +242872,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2940c30ccddf5b0ba346d4f7d2f880e0",
-    "llmAt": "2026-11-12T19:57:06.444Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-12-16T14:40:56.000Z",
     "holder": {
       "key": "h2:FRANCISCO KELVIO TORRES ASSUNCAO",
@@ -242646,7 +242968,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3a9aa03dc63f3b388f18183c0cf5213c",
-    "llmAt": "2026-11-12T20:00:48.054Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-11-17T14:52:20.000Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
@@ -242675,7 +242997,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ce8f2367fae0abdeaa3868112e586750",
-    "llmAt": "2026-11-12T20:02:40.073Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-07-29T08:24:16.000Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
@@ -242704,11 +243026,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "0ed61a02ea56f446f7d2110df2106b40",
-    "llmAt": "2026-11-12T20:06:30.792Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-04-23T16:43:36.000Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -242982,7 +243304,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b4cf82f704f8f377f6419b5f981a26a8",
-    "llmAt": "2026-11-12T18:52:31.822Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-09-29T16:54:46.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -243011,11 +243333,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "caa479c4f9f3986352591ea41cd2daa2",
-    "llmAt": "2026-11-12T20:07:31.107Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-05-21T14:50:12.000Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -243071,7 +243393,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0b962591a787cd350b6726898c1e8739",
-    "llmAt": "2026-11-12T20:09:18.014Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-05-21T14:49:20.000Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
@@ -243100,7 +243422,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "98a3f35f1d7e6dc3bc3b466b27dbbbcb",
-    "llmAt": "2026-11-12T20:00:44.335Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-06-23T08:16:02.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
@@ -243131,11 +243453,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "d654ad1fda947f1f287493ed6114d6bc",
-    "llmAt": "2026-11-12T20:03:08.100Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2026-05-29T13:36:50.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -243160,11 +243482,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "07b5d3d2953065814db53723cdfa848a",
-    "llmAt": "2026-11-12T20:05:21.122Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-09-08T14:10:18.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -243189,11 +243511,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "4148514ad658484d4355eb7096e3ec18",
-    "llmAt": "2026-11-12T20:07:34.403Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-05-20T10:40:10.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -243284,7 +243606,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b62670fa15ca391770eba97d606c4c3b",
-    "llmAt": "2026-11-12T20:00:43.790Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-03-25T15:18:34.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -243313,11 +243635,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "dd06b602cc6084ec81061465fb7f4d5f",
-    "llmAt": "2026-11-12T20:09:38.090Z",
+    "llmAt": "2026-11-16T16:24:30.716Z",
     "modifiedTime": "2025-05-20T10:39:38.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -243416,7 +243738,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e7054adda227a3d982e0b86690cbcdde",
-    "llmAt": "2026-11-12T20:03:26.228Z",
+    "llmAt": "2026-11-16T16:24:30.716Z",
     "modifiedTime": "2025-07-15T09:51:48.000Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -243800,7 +244122,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "772044f985659dbcda8f0782b48ca3c1",
-    "llmAt": "2026-11-12T20:07:51.688Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-05-14T15:07:24.000Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
@@ -243829,11 +244151,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "3569ff380b7bf51506a26eee23406f17",
-    "llmAt": "2026-11-12T20:11:43.304Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-10-21T10:53:10.000Z",
     "holder": {
       "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "21",
     "statusEHS": "NAO_LIDO",
@@ -243999,11 +244321,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "679a6d9438f973f48267e341b5418808",
-    "llmAt": "2026-11-12T20:13:30.979Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-11-18T06:53:12.000Z",
     "holder": {
       "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -244087,11 +244409,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "354e7853a1cb28cf7316befbf7ebc66d",
-    "llmAt": "2026-11-12T20:10:34.159Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-09-25T08:49:26.000Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -244144,11 +244466,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "9d3cc4b3514ba42268b8cca68aa4e904",
-    "llmAt": "2026-11-12T20:12:37.748Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-03-26T06:25:00.000Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -244244,7 +244566,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "69502d3caafc6a0f245bdf7afdf7d6db",
-    "llmAt": "2026-11-12T20:05:55.276Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-01-09T14:36:25.000Z",
     "holder": {
       "key": "h2:FLAVIO ALVES SANTANA",
@@ -244304,6 +244626,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4a43fe20f4ec9dfc04ab0296c6c6d9b8",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-12-02T18:38:15.000Z",
     "holder": {
       "key": "h2:FLAVIO ALVES SANTANA",
@@ -244867,26 +245190,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "32690b52c06d9fd6793f59ce6eb6ce64",
-    "llmAt": "2026-11-12T20:09:30.359Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-03-31T13:11:27.988Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
       "status": "OK"
     },
     "code": "31",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"27 – Elevador Avanti (Shark L) – 09.07.24 – Ezequiel Cruz Vieira.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2024-07-09T03:00:00.000Z",
+    "expirationDate": "2026-07-09T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "statusDetail": "VENCIDO há 130 dias (09/07/2026)",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Elevador (JASO) (sobrepôs prefixo 27)",
+    "matchedTerm": "Operation of Avanti Service Lift Model Shark L (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "31",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"27 – Elevador Avanti (Shark L) – 09.07.24 – Ezequiel Cruz Vieira.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2024-07-09T03:00:00.000Z",
+        "expirationDate": "2026-07-09T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 130 dias (09/07/2026)",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO) (sobrepôs prefixo 27)"
+        "matchedTerm": "Operation of Avanti Service Lift Model Shark L (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -244898,7 +245227,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "98e2d0baa4cd23a1e8f12bab827adc15",
-    "llmAt": "2026-11-12T20:05:00.069Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-01-09T11:55:05.000Z",
     "holder": {
       "key": "h2:FELIPE JARDEL SILVA CARVALHO",
@@ -244958,7 +245287,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3fdc4cc0c227619e8360d06b33608613",
-    "llmAt": "2026-11-12T20:13:14.644Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-07-15T13:41:10.000Z",
     "holder": {
       "key": "h2:FELIPE SANTOS CASTRO",
@@ -244987,7 +245316,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "63f93b2230fb6d2072a476593ae05bec",
-    "llmAt": "2026-11-12T20:12:13.591Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2025-12-30T16:03:21.000Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
@@ -245018,7 +245347,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d09b63a245bcc6bcb3624a5a63c763f9",
-    "llmAt": "2026-11-12T20:14:48.593Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2025-05-28T12:04:20.000Z",
     "holder": {
       "key": "h2:FELIPE SANTOS CASTRO",
@@ -245083,7 +245412,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d42543f2d3e4dc220a75a78e5bd23988",
-    "llmAt": "2026-11-12T20:14:12.713Z",
+    "llmAt": "2026-11-16T16:07:08.800Z",
     "modifiedTime": "2025-09-08T14:50:50.235Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
@@ -245112,11 +245441,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "4627a3b2c0ab2aa9c69bb2c8704adf44",
-    "llmAt": "2026-11-12T20:15:36.569Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-06-09T13:10:29.648Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -245141,7 +245470,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "64c8eb8fb4a31c3b467655b705312a48",
-    "llmAt": "2026-11-12T18:42:07.202Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-12-11T12:58:56.465Z",
     "holder": {
       "key": "h2:FELIPE JARDEL SILVA CARVALHO",
@@ -245522,6 +245851,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c11f7f70d15c913f4fe93705e99243c4",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T14:00:35.220Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -245550,6 +245880,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "faf93e3f806b4c44ecb117a58c49eca1",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T13:56:35.078Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -245578,11 +245909,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "04a39c16ddf676cc38bf9f96ef5bf714",
-    "llmAt": "2026-11-12T20:14:28.310Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T13:55:55.718Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -245607,6 +245938,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "7b72470d0aefc537f05bb61a50c81d21",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T13:55:30.071Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -245635,6 +245967,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c11f7f70d15c913f4fe93705e99243c4",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T10:00:34.000Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -245757,6 +246090,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "bb31f5ce46b147e47ae429de5df7a4ab",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-03-31T13:19:44.565Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
@@ -245822,11 +246156,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "42fe6fdc6029b3e43f036a01e40ee829",
-    "llmAt": "2026-11-12T20:09:11.602Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2025-12-19T18:27:48.000Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "31",
     "statusEHS": "NAO_LIDO",
@@ -245853,7 +246187,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f4c1f8213d0a33dc0acfa51ca2fba7eb",
-    "llmAt": "2026-11-12T20:11:49.532Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2025-12-31T12:32:14.000Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
@@ -245921,7 +246255,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "03e2ab292fd9523af8b723609b112264",
-    "llmAt": "2026-11-12T20:13:26.411Z",
+    "llmAt": "2026-11-16T16:24:30.713Z",
     "modifiedTime": "2025-06-13T13:50:05.043Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
@@ -245978,11 +246312,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "f81f59b6b4410bb08345ecccc9bcb370",
-    "llmAt": "2026-11-12T20:15:08.669Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-05-13T14:08:24.227Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -246007,7 +246341,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5c709d75e28801b7330cf1988f6118e0",
-    "llmAt": "2026-11-12T20:16:11.382Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2025-05-13T14:00:54.000Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
@@ -246391,11 +246725,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "ba42d4be901bf2488a9c0e28b81db075",
-    "llmAt": "2026-11-12T20:18:33.840Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-08T14:03:50.000Z",
     "holder": {
       "key": "h2:ERALDO ANTONIO MOURA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -246451,6 +246785,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b31a1a8af003b3472074317385f047f6",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-08T13:59:04.000Z",
     "holder": {
       "key": "h2:ERALDO ANTONIO MOURA",
@@ -246481,7 +246816,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c8ccdb17833ae599fa93dfd7dc1e6a2a",
-    "llmAt": "2026-11-12T20:16:41.578Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2026-04-09T06:22:30.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
@@ -246546,24 +246881,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "9e7acda54619a68da905d27f4a2b5b73",
-    "llmAt": "2026-11-12T20:17:34.120Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2026-04-09T06:22:30.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
       "status": "OK"
     },
-    "code": null,
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CARTA CONVITE GEV - Erveson Nascimento Dos Santos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
-    "classificationSource": "NONE",
+    "code": "08",
+    "expirationDate": "2027-10-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 07/10/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": null,
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CARTA CONVITE GEV - Erveson Nascimento Dos Santos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
-        "classificationSource": "NONE"
+        "code": "08",
+        "expirationDate": "2027-10-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -246575,11 +246916,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "261edb865b5eb9bd286a18fa6756e585",
-    "llmAt": "2026-11-12T20:18:31.244Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-09-26T14:27:26.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -246604,6 +246945,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "dfba1465cf97c0aebc9310e863fd13f9",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2026-01-07T13:25:50.000Z",
     "holder": {
       "key": "h2:EMERSON PALLOTTA RIBEIRO",
@@ -246632,7 +246974,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "35639c9c4b3616fea6025c086ce77d9f",
-    "llmAt": "2026-11-12T20:15:15.236Z",
+    "llmAt": "2026-11-16T16:07:08.796Z",
     "modifiedTime": "2025-05-08T12:14:08.000Z",
     "holder": {
       "key": "h2:EMERSON PALLOTTA RIBEIRO",
@@ -246663,7 +247005,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c8ccdb17833ae599fa93dfd7dc1e6a2a",
-    "llmAt": "2026-11-12T20:16:41.578Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2025-09-22T09:53:44.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
@@ -246692,7 +247034,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "467823d4062bdc2164951349cbb8a4ed",
-    "llmAt": "2026-11-16T11:11:07.662Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-05-09T10:53:58.000Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
@@ -247259,7 +247601,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b96f39091e74a2b872f6d4a51e2bc353",
-    "llmAt": "2026-11-12T20:22:13.351Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-06-11T12:27:34.817Z",
     "holder": {
       "key": "h2:EDWARD THIAGO HERCULANO RIBEIRO",
@@ -247362,26 +247704,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "fbbf89f9c2ccefd1510f1bb6739aacf8",
-    "llmAt": "2026-11-12T20:19:47.492Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2026-08-26T14:44:26.000Z",
     "holder": {
       "key": "h2:EDCLEI CONCEICAO CUSTODIO",
       "status": "OK"
     },
     "code": "01",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 27.07.2026 - EDCLEI DA CONCEIÇÃO CUSTODIO - Clicksign.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2026-07-27T03:00:00.000Z",
+    "expirationDate": "2027-07-27T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 27/07/2027",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ASO",
+    "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "01",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 27.07.2026 - EDCLEI DA CONCEIÇÃO CUSTODIO - Clicksign.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2026-07-27T03:00:00.000Z",
+        "expirationDate": "2027-07-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/07/2027",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ASO"
+        "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -247393,7 +247741,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4f9eab6c50503357fbbf583fad8bcb84",
-    "llmAt": "2026-11-12T20:21:06.048Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-12-22T07:18:10.000Z",
     "holder": {
       "key": "h2:EDCLEI CONCEICAO CUSTODIO",
@@ -247422,7 +247770,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a65e7183b47989d308ed6d52d583641a",
-    "llmAt": "2026-11-12T20:22:58.119Z",
+    "llmAt": "2026-11-16T16:07:08.797Z",
     "modifiedTime": "2025-06-02T12:56:48.000Z",
     "holder": {
       "key": "h2:EDCLEI CONCEICAO CUSTODIO",
@@ -247659,7 +248007,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8692fd6afd0f69855d2bf7f069eab23f",
-    "llmAt": "2026-11-12T20:24:38.031Z",
+    "llmAt": "2026-11-16T16:07:08.798Z",
     "modifiedTime": "2025-05-08T08:13:22.000Z",
     "holder": {
       "key": "h2:EDCLEI CONCEICAO CUSTODIO",
@@ -248628,26 +248976,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "c584495f69302d6c36bf22dc807ab022",
-    "llmAt": "2026-11-16T15:54:43.290Z",
+    "llmAt": "2026-11-16T17:00:20.009Z",
     "modifiedTime": "2026-10-27T13:10:06.025Z",
     "holder": {
       "key": "h2:CARLOS HENRIQUE SOARES SILVA",
       "status": "OK"
     },
     "code": "01",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 29.09.26 – Carlos Henrique Soares da Silva\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2026-09-24T03:00:00.000Z",
+    "expirationDate": "2027-09-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/09/2027",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ASO",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "01",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 29.09.26 – Carlos Henrique Soares da Silva\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2026-09-24T03:00:00.000Z",
+        "expirationDate": "2027-09-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2027",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ASO"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -249227,7 +249581,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4477206d0bf738791d4986234cb87195",
-    "llmAt": "2026-11-12T20:27:14.722Z",
+    "llmAt": "2026-11-16T15:54:43.292Z",
     "modifiedTime": "2025-05-06T12:53:42.000Z",
     "holder": {
       "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
@@ -249287,11 +249641,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "8d961fd2f0276197976683c81b7fd3da",
-    "llmAt": "2026-11-12T20:34:24.702Z",
+    "llmAt": "2026-11-16T15:54:43.292Z",
     "modifiedTime": "2025-04-10T16:57:37.857Z",
     "holder": {
       "key": "h2:CARLOS EDUARDO FERREIRA ALVES",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -250503,7 +250857,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6ec5bfdd52f88f303794d5e13389db02",
-    "llmAt": "2026-11-12T20:26:12.256Z",
+    "llmAt": "2026-11-16T16:52:29.413Z",
     "modifiedTime": "2025-06-13T14:07:26.000Z",
     "holder": {
       "key": "h2:LUCAS MAGNO SOUSA",
@@ -250532,7 +250886,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "41f8d1441ca84ce7e924db13ea09e76c",
-    "llmAt": "2026-11-12T20:27:21.934Z",
+    "llmAt": "2026-11-16T16:52:29.413Z",
     "modifiedTime": "2025-06-13T14:06:00.000Z",
     "holder": {
       "key": "h2:LUCAS MAGNO SOUSA",
@@ -251009,7 +251363,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0c4b5795ae3a12bc5b8e55d5adb049f4",
-    "llmAt": "2026-11-12T20:32:01.871Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2026-11-13T10:31:46.244Z",
     "holder": {
       "key": "h2:JOAO VICTOR COSTA CAMPOS",
@@ -251216,7 +251570,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6909f79b30a06269a2a208bc373d93b2",
-    "llmAt": "2026-11-12T20:32:58.402Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-11-14T06:34:52.000Z",
     "holder": {
       "key": "h2:JOAO VICTOR COSTA CAMPOS",
@@ -251245,7 +251599,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "490f8a92382f6f511cb27e4317fb2e12",
-    "llmAt": "2026-11-12T20:34:43.544Z",
+    "llmAt": "2026-11-16T16:37:50.518Z",
     "modifiedTime": "2025-10-30T08:06:42.000Z",
     "holder": {
       "key": "h2:JOAO VICTOR COSTA CAMPOS",
@@ -251567,11 +251921,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "3da2fb36a2790bb425ad2e5d0e12fcf2",
-    "llmAt": "2026-11-12T20:37:49.383Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-10-02T14:40:26.000Z",
     "holder": {
       "key": "h2:LEONARDO SIMON COSTA GAEM",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -251769,7 +252123,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "bcc3580533ac923f5b8e8c9976cc1f50",
-    "llmAt": "2026-11-12T20:44:47.785Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2026-02-23T11:11:28.000Z",
     "holder": {
       "key": "h2:ITALO ABREU DUARTE",
@@ -252004,7 +252358,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9daea3bce447b3e4629d270386b9f38a",
-    "llmAt": "2026-11-12T20:47:43.696Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-03-19T10:19:54.000Z",
     "holder": {
       "key": "h2:ITALO ABREU DUARTE",
@@ -252450,7 +252804,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6e6c59e6cdefd64e9178df54d3c3efb7",
-    "llmAt": "2026-11-12T20:39:16.481Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-05-04T13:25:59.699Z",
     "holder": {
       "key": "h2:RAMON RAMIRES COSTA CIRINO",
@@ -252664,7 +253018,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9f4276f45bfac9af3eff97c791cd7f5a",
-    "llmAt": "2026-11-12T20:41:04.947Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2026-02-25T15:03:32.548Z",
     "holder": {
       "key": "h2:PHILIPE SOUZA ANDRADE",
@@ -252732,7 +253086,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0b8fed1d115d0fd91d69198b85da773d",
-    "llmAt": "2026-11-12T20:42:39.730Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2025-06-09T12:59:35.248Z",
     "holder": {
       "key": "h2:PHILIPE SOUZA ANDRADE",
@@ -252798,11 +253152,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "7407aaaff7c16727bad35c6c056eec53",
-    "llmAt": "2026-11-12T20:44:19.654Z",
+    "llmAt": "2026-11-16T16:52:29.421Z",
     "modifiedTime": "2025-05-02T17:55:23.000Z",
     "holder": {
       "key": "h2:PHILIPE SOUZA ANDRADE",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -252936,7 +253290,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3b8d81f1613720842a95ba6cde386a80",
-    "llmAt": "2026-11-12T20:51:05.029Z",
+    "llmAt": "2026-11-16T16:24:30.715Z",
     "modifiedTime": "2026-11-13T10:30:00.527Z",
     "holder": {
       "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
@@ -253334,7 +253688,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "53df9580500e98df25d020975534ba35",
-    "llmAt": "2026-11-12T20:41:35.730Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2026-08-26T07:46:30.000Z",
     "holder": {
       "key": "h2:SERGIO LUIZ ROSA TAVUENCAS",
@@ -253396,7 +253750,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f1bdeac5b48688b1e3d978b5fe5e7da9",
-    "llmAt": "2026-11-12T20:44:10.371Z",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-08-04T08:07:22.000Z",
     "holder": {
       "key": "h2:SERGIO LUIZ ROSA TAVUENCAS",
@@ -253635,7 +253989,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ea90b0f2d8687acc5c36699608757a0e",
-    "llmAt": "2026-11-12T20:44:29.237Z",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2025-10-31T07:57:46.000Z",
     "holder": {
       "key": "h2:KELVIN GARCIA OLIVEIRA",
@@ -253664,6 +254018,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "70214e8bbcb4613df0ba02ddca65d77d",
+    "llmAt": "2026-11-16T16:37:50.519Z",
     "modifiedTime": "2026-05-26T05:48:42.000Z",
     "holder": {
       "key": "h2:KELVIN GARCIA OLIVEIRA",
@@ -253749,7 +254104,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "24c0673b85efc222ae31551f93a7f69d",
-    "llmAt": "2026-11-12T20:48:15.983Z",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-04-08T14:46:04.000Z",
     "holder": {
       "key": "h2:KELVIN GARCIA OLIVEIRA",
@@ -253849,6 +254204,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "33c42085ca395f187d1de0b466b2dd04",
+    "llmAt": "2026-11-16T16:52:29.412Z",
     "modifiedTime": "2025-10-07T10:48:46.000Z",
     "holder": {
       "key": "h2:LUIS GUSTAVO ROSA SILVA",
@@ -253877,7 +254233,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "679a0d77acbc930981d095e3c09b2772",
-    "llmAt": "2026-11-12T20:49:09.089Z",
+    "llmAt": "2026-11-16T16:24:30.714Z",
     "modifiedTime": "2026-08-10T13:09:45.000Z",
     "holder": {
       "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
@@ -254521,6 +254877,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "a746afbe68cf38d1fc8e41b8feb437b0",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-04-07T06:59:26.000Z",
     "holder": {
       "key": "h2:RAPHAEL AFONSO CARDOSO PEREIRA",
@@ -254549,6 +254906,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5014df3316d192eea3f82c75f39e5943",
+    "llmAt": "2026-11-16T17:00:20.003Z",
     "modifiedTime": "2025-04-04T14:22:02.000Z",
     "holder": {
       "key": "h2:RAPHAEL AFONSO CARDOSO PEREIRA",
@@ -254929,7 +255287,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c7fc1b1861bf2601def0395e044a4534",
-    "llmAt": "2026-11-12T20:49:44.011Z",
+    "llmAt": "2026-11-16T16:52:29.416Z",
     "modifiedTime": "2026-10-01T09:14:26.000Z",
     "holder": {
       "key": "h2:NARDEL DELON NOVAIS ROCHA",
@@ -255117,7 +255475,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5cff4c3ecf696cb60d287317c8520e90",
-    "llmAt": "2026-11-12T20:47:29.389Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-11-13T10:36:04.248Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255248,7 +255606,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "b7f7d2285c22265e728b78417fe836bf",
-    "llmAt": "2026-11-12T20:49:33.501Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-08-26T11:48:08.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255308,7 +255666,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "175c785c2f9ba95e0525510f3976cbd5",
-    "llmAt": "2026-11-12T20:52:09.197Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-05-18T13:54:06.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255339,7 +255697,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9b1f7da3c7169bf6e0d3612ef4238dca",
-    "llmAt": "2026-11-12T20:52:44.121Z",
+    "llmAt": "2026-11-16T17:00:20.004Z",
     "modifiedTime": "2026-05-18T13:53:49.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255368,7 +255726,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9b1f7da3c7169bf6e0d3612ef4238dca",
-    "llmAt": "2026-11-12T20:52:44.121Z",
+    "llmAt": "2026-11-16T17:00:20.004Z",
     "modifiedTime": "2026-05-18T10:06:57.451Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255456,7 +255814,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ff2988f06dab2eea180a1fb47ac33d88",
-    "llmAt": "2026-11-12T20:54:47.597Z",
+    "llmAt": "2026-11-16T17:00:20.008Z",
     "modifiedTime": "2026-01-29T17:28:02.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -255628,26 +255986,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "11f90ea2ca0cbc5f4a215f6d05ba18e8",
-    "llmAt": "2026-11-13T17:40:51.649Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-13T10:27:34.542Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
       "status": "OK"
     },
     "code": "06",
-    "statusEHS": "NAO_LIDO",
-    "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-    "source": "FILENAME",
+    "issueDate": "2024-08-22T03:00:00.000Z",
+    "expirationDate": "2025-08-22T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "statusDetail": "VENCIDO há 451 dias (22/08/2025)",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 06_FICHA-EPI",
+    "matchedTerm": "FICHA DE ENTREGA DE EQUIPAMENTO DE PROTEÇÃO INDIVIDUAL",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "06",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "source": "FILENAME",
+        "issueDate": "2024-08-22T03:00:00.000Z",
+        "expirationDate": "2025-08-22T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 451 dias (22/08/2025)",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 06_FICHA-EPI"
+        "matchedTerm": "FICHA DE ENTREGA DE EQUIPAMENTO DE PROTEÇÃO INDIVIDUAL",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -255688,7 +256052,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "bf6a71582232235aef907e2a801b670a",
-    "llmAt": "2026-11-12T20:57:19.788Z",
+    "llmAt": "2026-11-16T16:52:29.418Z",
     "modifiedTime": "2025-04-07T15:57:50.000Z",
     "holder": {
       "key": "h2:NARDEL DELON NOVAIS ROCHA",
@@ -255719,7 +256083,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6bf2c7a346f97827ac84a055548a670a",
-    "llmAt": "2026-11-12T20:49:19.178Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-11-06T16:57:59.326Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
@@ -255846,7 +256210,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0d6552df6b20a867072d62935d676b82",
-    "llmAt": "2026-11-12T20:51:48.963Z",
+    "llmAt": "2026-11-16T16:24:30.712Z",
     "modifiedTime": "2026-11-03T13:55:53.192Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
@@ -255875,11 +256239,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "778f3bd2d837f05f8d8143c2a5fae182",
-    "llmAt": "2026-11-12T20:52:37.717Z",
+    "llmAt": "2026-11-16T16:24:30.711Z",
     "modifiedTime": "2026-01-14T20:59:59.023Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": null,
     "statusEHS": "NAO_LIDO",
@@ -255904,7 +256268,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0432d749577817f5c15b5cb76dc51947",
-    "llmAt": "2026-11-13T17:43:37.449Z",
+    "llmAt": "2026-11-16T16:37:50.516Z",
     "modifiedTime": "2026-11-13T10:30:37.847Z",
     "holder": {
       "key": "h2:GUILHERME ROASIO SILVA",
@@ -255916,7 +256280,7 @@
     "statusDetail": "Válido até 09/08/2035",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ausente",
+    "matchedTerm": "CNH categoria B",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -255926,7 +256290,7 @@
         "statusDetail": "Válido até 09/08/2035",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ausente",
+        "matchedTerm": "CNH categoria B",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -255939,7 +256303,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "7db42eed4112b9b10a4884e57359025c",
-    "llmAt": "2026-11-12T20:48:52.336Z",
+    "llmAt": "2026-11-16T16:37:50.517Z",
     "modifiedTime": "2025-09-10T12:13:55.000Z",
     "holder": {
       "key": "h2:GUILHERME ROASIO SILVA",
@@ -255970,7 +256334,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f065c2ffe65da01d70852d9716bd71c2",
-    "llmAt": "2026-11-12T20:49:38.790Z",
+    "llmAt": "2026-11-16T16:37:50.516Z",
     "modifiedTime": "2025-09-09T17:58:22.331Z",
     "holder": {
       "key": "h2:GUILHERME ROASIO SILVA",
@@ -257215,6 +257579,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4b6430159d533a00ac4d30408aaa493f",
+    "llmAt": "2026-11-16T17:11:51.965Z",
     "modifiedTime": "2026-11-16T09:57:45.815Z",
     "holder": {
       "key": "h2:ADENIO FRANCISCO SOUSA",
@@ -262491,6 +262856,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "4b6430159d533a00ac4d30408aaa493f",
+    "llmAt": "2026-11-16T17:11:51.965Z",
     "modifiedTime": "2026-11-16T13:52:25.428Z",
     "holder": {
       "key": "h2:ADENIO FRANCISCO SOUSA",

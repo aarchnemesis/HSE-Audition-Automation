@@ -1486,6 +1486,36 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "16": {
+        "code": "16",
+        "name": "Doc 16",
+        "filename": "30_WINDA-UNICO_EMI-2026-10-19_VAL-NA_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+        "issueDate": "2025-02-24T03:00:00.000Z",
+        "expirationDate": "2027-02-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/02/2027",
+        "sourcePath": "https://drive.google.com/file/d/1D0PYCPvCYtV8Cp-2GG0teKp0qsEY5gMC/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros)",
+          "Data no nome (19/10/2026) difere da data impressa no documento (24/02/2025)"
+        ]
+      },
+      "17": {
+        "code": "17",
+        "name": "Doc 17",
+        "filename": "30_WINDA-UNICO_EMI-2026-10-19_VAL-NA_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+        "issueDate": "2025-02-25T03:00:00.000Z",
+        "expirationDate": "2027-02-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/02/2027",
+        "sourcePath": "https://drive.google.com/file/d/1D0PYCPvCYtV8Cp-2GG0teKp0qsEY5gMC/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual)",
+          "Data no nome (19/10/2026) difere da data impressa no documento (25/02/2025)"
+        ]
+      },
       "18": {
         "code": "18",
         "name": "Doc 18",
@@ -1558,6 +1588,17 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "30": {
+        "code": "30",
+        "name": "Doc 30",
+        "filename": "30_WINDA-UNICO_EMI-2026-10-19_VAL-NA_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Documento permanente — sem vencimento",
+        "sourcePath": "https://drive.google.com/file/d/1D0PYCPvCYtV8Cp-2GG0teKp0qsEY5gMC/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
       "32": {
         "code": "32",
         "name": "Doc 32",
@@ -1570,9 +1611,20 @@
         "readSource": "CONTENT",
         "divergences": [
           "Nome do arquivo indica código 30, o conteúdo é 32 (GWO ART)",
-          "Data no nome (19/10/2026) difere da data impressa no documento (17/07/2026)",
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+          "Data no nome (19/10/2026) difere da data impressa no documento (17/07/2026)"
         ]
+      },
+      "48": {
+        "code": "48",
+        "name": "Doc 48",
+        "filename": "NR - 20 - 14.08.2025 - Mario Sergio Castro de Souza",
+        "issueDate": "2025-08-14T03:00:00.000Z",
+        "expirationDate": "2027-08-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/08/2027",
+        "sourcePath": "https://drive.google.com/file/d/163_RahRdI2hNVBhgXfINPHl9VfHFIMeh/view",
+        "readSource": "OCR",
+        "divergences": []
       },
       "09": {
         "code": "09",
@@ -1891,10 +1943,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2028-05-17T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 17/05/2028",
         "sourcePath": "https://drive.google.com/file/d/1gGzVFxXr4_-FLa6Jb3Uv_2N3k_Jw-pvj/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "03": {
@@ -5952,10 +6005,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "CNH.jpg",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CNH.jpg\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2034-05-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/05/2034",
         "sourcePath": "https://drive.google.com/file/d/1EeezJyScZBMVA7UMICssR0d1rpofIldq/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "05": {
@@ -6972,10 +7026,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_PEDRO-PAULO-FERREIRA-DE-ALMEIDA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2028-04-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/04/2028",
         "sourcePath": "https://drive.google.com/file/d/1l6blJQAX6FcksP2QvsbL0YXOqN3AEUYN/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "04": {
@@ -10440,10 +10495,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_LUANA-QUEIROZ-DE-SOUSA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_LUANA-QUEIROZ-DE-SOUSA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2031-12-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/12/2031",
         "sourcePath": "https://drive.google.com/file/d/1ay27yZe8Qly60U1CUZNTHJs_9JW0pofh/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "06": {
@@ -14045,10 +14101,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08 – CNH – 23.12.2035 – Ismael de Freitas Silva.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 – CNH – 23.12.2035 – Ismael de Freitas Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2035-12-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/12/2035",
         "sourcePath": "https://drive.google.com/file/d/17q8ua-J6ZU01OtH9UVbsFCqTSxpuu-XC/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -14878,11 +14935,14 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08 - CNH - 22.07.2031 - JOAO ELIENAI RIBEIRO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08 - CNH - 22.07.2031 - JOAO ELIENAI RIBEIRO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2031-07-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/07/2031",
         "sourcePath": "https://drive.google.com/file/d/1RgxROx6IX1Fq3HxdZaqXY2K7wFn_cGSr/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       }
     },
     "driveFolderId": "1TMX0eEsL5GDnSbi52-o9RjdjyXQPjUiX",
@@ -16083,10 +16143,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 30.07.2026 - IGOR MARTINS ROCHA - Clicksign.pdf.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 30.07.2026 - IGOR MARTINS ROCHA - Clicksign.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-30T03:00:00.000Z",
+        "expirationDate": "2027-07-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1ZKvIeMk4B6T7VGRGciIT_7Ozwvcc5Kv2/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -17060,10 +17122,11 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-THIAGO-DE-ABREU.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-THIAGO-DE-ABREU.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "expirationDate": "2031-05-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/05/2031",
         "sourcePath": "https://drive.google.com/file/d/1dv58dejRTm2tR9qVgcw6yHFHrGqcHSe9/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "07": {
@@ -17885,12 +17948,14 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-JHON-HEBSON-RODRIGUES-DE-CARVALHO.pdf",
-        "expirationDate": "2033-03-08T03:00:00.000Z",
+        "expirationDate": "2033-03-07T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/03/2033",
+        "statusDetail": "Válido até 07/03/2033",
         "sourcePath": "https://drive.google.com/file/d/1IQYL0P_1SOqrLhJ8v0YGYvP-HCmoaIVR/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "06": {
         "code": "06",
@@ -19351,26 +19416,31 @@
       "16": {
         "code": "16",
         "name": "Doc 16",
-        "filename": "16_GWO-FA-FORMACAO_EMI-2023-12-19_VAL-2025-12-19_FRANCISCO-ELVISON-PEREIRA-DE-SOUSA.pdf",
-        "issueDate": "2023-12-19T03:00:00.000Z",
-        "expirationDate": "2025-12-19T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 329 dias (19/12/2025)",
-        "sourcePath": "https://drive.google.com/file/d/1GMkJdfVgjxPqV_oXA5ATIyEozcFUtKLO/view",
-        "readSource": "OCR",
-        "divergences": []
+        "filename": "30 - GWO WINDA - FP017117BR - 24.10.2025 - Francisco Elvison Pereira de Sousa.pdf",
+        "issueDate": "2025-10-24T03:00:00.000Z",
+        "expirationDate": "2027-10-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/10/2027",
+        "sourcePath": "https://drive.google.com/file/d/1-0Z_piCV3HvvF0tj80lSezcIs-CVyi82/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros)"
+        ]
       },
       "17": {
         "code": "17",
         "name": "Doc 17",
-        "filename": "17_GWO-MH-FORMACAO_EMI-2023-12-20_VAL-2025-12-20_FRANCISCO-ELVISON-PEREIRA-DE-SOUSA.pdf",
-        "issueDate": "2023-12-20T03:00:00.000Z",
-        "expirationDate": "2025-12-20T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 328 dias (20/12/2025)",
-        "sourcePath": "https://drive.google.com/file/d/1Hiy2Bh13NH6PpllJUZwdIjKAdijfXCHW/view",
-        "readSource": "OCR",
-        "divergences": []
+        "filename": "30 - GWO WINDA - FP017117BR - 24.10.2025 - Francisco Elvison Pereira de Sousa.pdf",
+        "issueDate": "2025-10-25T03:00:00.000Z",
+        "expirationDate": "2027-10-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/10/2027",
+        "sourcePath": "https://drive.google.com/file/d/1-0Z_piCV3HvvF0tj80lSezcIs-CVyi82/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual)",
+          "Data no nome (24/10/2025) difere da data impressa no documento (25/10/2025)"
+        ]
       },
       "18": {
         "code": "18",
@@ -19387,14 +19457,17 @@
       "19": {
         "code": "19",
         "name": "Doc 19",
-        "filename": "19_GWO-FAW-FORMACAO_EMI-2023-12-20_VAL-2025-12-20_FRANCISCO-ELVISON-PEREIRA-DE-SOUSA.pdf",
-        "issueDate": "2023-12-20T03:00:00.000Z",
-        "expirationDate": "2025-12-20T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 328 dias (20/12/2025)",
-        "sourcePath": "https://drive.google.com/file/d/1CR0_FizX4Yxl-4i87QOKFYglF3JGBJcX/view",
-        "readSource": "OCR",
-        "divergences": []
+        "filename": "30 - GWO WINDA - FP017117BR - 24.10.2025 - Francisco Elvison Pereira de Sousa.pdf",
+        "issueDate": "2025-10-25T03:00:00.000Z",
+        "expirationDate": "2027-10-25T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 25/10/2027",
+        "sourcePath": "https://drive.google.com/file/d/1-0Z_piCV3HvvF0tj80lSezcIs-CVyi82/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio)",
+          "Data no nome (24/10/2025) difere da data impressa no documento (25/10/2025)"
+        ]
       },
       "20": {
         "code": "20",
@@ -19411,14 +19484,17 @@
       "21": {
         "code": "21",
         "name": "Doc 21",
-        "filename": "21_NR35-FORMACAO_EMI-2023-12-08_VAL-2025-12-08_FRANCISCO-ELVISON-PEREIRA-DE-SOUSA.pdf",
-        "issueDate": "2023-12-08T03:00:00.000Z",
-        "expirationDate": "2025-12-08T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 340 dias (08/12/2025)",
-        "sourcePath": "https://drive.google.com/file/d/1Cy4Kzl_UOtmBkdWcA21JYn2IIZ-2VrLI/view",
+        "filename": "30 - GWO WINDA - FP017117BR - 24.10.2025 - Francisco Elvison Pereira de Sousa.pdf",
+        "issueDate": "2025-10-26T03:00:00.000Z",
+        "expirationDate": "2027-10-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2027",
+        "sourcePath": "https://drive.google.com/file/d/1-0Z_piCV3HvvF0tj80lSezcIs-CVyi82/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights)",
+          "Data no nome (24/10/2025) difere da data impressa no documento (26/10/2025)"
+        ]
       },
       "22": {
         "code": "22",
@@ -19516,12 +19592,14 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-ELVISON-PEREIRA-DE-SOUSA.pdf",
-        "expirationDate": "2033-01-03T03:00:00.000Z",
+        "expirationDate": "2033-03-01T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/01/2033",
+        "statusDetail": "Válido até 01/03/2033",
         "sourcePath": "https://drive.google.com/file/d/1S43VH74ouzOOjUEY_58-NA830ffsOnqj/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "07": {
         "code": "07",
@@ -21695,6 +21773,21 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "19": {
+        "code": "19",
+        "name": "Doc 19",
+        "filename": "30 - GWO WINDA - EC087793BR - 09.02.2027 - EZEQUIEL CRUZ VIEIRA.pdf",
+        "issueDate": "2025-02-05T03:00:00.000Z",
+        "expirationDate": "2027-02-05T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 81 dias (05/02/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1Yjh_e-hxrhSm6ZVft6UUQAqV0ZFcuWMO/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio)",
+          "Data no nome (09/02/2027) difere da data impressa no documento (05/02/2025)"
+        ]
+      },
       "20": {
         "code": "20",
         "name": "Doc 20",
@@ -21785,10 +21878,12 @@
         "code": "31",
         "name": "Doc 31",
         "filename": "27 – Elevador Avanti (Shark L) – 09.07.24 – Ezequiel Cruz Vieira.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"27 – Elevador Avanti (Shark L) – 09.07.24 – Ezequiel Cruz Vieira.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2024-07-09T03:00:00.000Z",
+        "expirationDate": "2026-07-09T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 130 dias (09/07/2026)",
         "sourcePath": "https://drive.google.com/file/d/1FLIZu2dT6G9L9cLxWTGCNXpqGrK3_zYr/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "40": {
@@ -22044,6 +22139,35 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "16": {
+        "code": "16",
+        "name": "Doc 16",
+        "filename": "30 – GWO WINDA - FR040955BR - 31.01.25 - Felipe Rodrigues Bispo.pdf",
+        "issueDate": "2025-01-31T03:00:00.000Z",
+        "expirationDate": "2027-01-31T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 76 dias (31/01/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1Wd1riWUPN8jeC2pxbu-z2tz_LGTxyzW3/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros)"
+        ]
+      },
+      "17": {
+        "code": "17",
+        "name": "Doc 17",
+        "filename": "30 – GWO WINDA - FR040955BR - 31.01.25 - Felipe Rodrigues Bispo.pdf",
+        "issueDate": "2025-02-01T03:00:00.000Z",
+        "expirationDate": "2027-02-01T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (01/02/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1Wd1riWUPN8jeC2pxbu-z2tz_LGTxyzW3/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual)",
+          "Data no nome (31/01/2025) difere da data impressa no documento (01/02/2025)"
+        ]
+      },
       "18": {
         "code": "18",
         "name": "Doc 18",
@@ -22055,6 +22179,21 @@
         "sourcePath": "https://drive.google.com/file/d/1ayndvG4QCacsDZrQ5XaX8ecPi58cCYEk/view",
         "readSource": "CONTENT",
         "divergences": []
+      },
+      "19": {
+        "code": "19",
+        "name": "Doc 19",
+        "filename": "30 – GWO WINDA - FR040955BR - 31.01.25 - Felipe Rodrigues Bispo.pdf",
+        "issueDate": "2025-02-01T03:00:00.000Z",
+        "expirationDate": "2027-02-01T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 77 dias (01/02/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1Wd1riWUPN8jeC2pxbu-z2tz_LGTxyzW3/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio)",
+          "Data no nome (31/01/2025) difere da data impressa no documento (01/02/2025)"
+        ]
       },
       "20": {
         "code": "20",
@@ -22071,14 +22210,17 @@
       "21": {
         "code": "21",
         "name": "Doc 21",
-        "filename": "21_NR35-FORMACAO_EMI-2024-11-20_VAL-2026-11-20_FELIPE-RODRIGUES-BISPO.pdf",
-        "issueDate": "2024-11-20T03:00:00.000Z",
-        "expirationDate": "2026-11-20T03:00:00.000Z",
-        "statusEHS": "VENCE_07",
-        "statusDetail": "CRÍTICO: Vence em 7 dia(s) (20/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/1oP0nA5aujSbV85JdItSDh0vw69k_uF2q/view",
+        "filename": "30 – GWO WINDA - FR040955BR - 31.01.25 - Felipe Rodrigues Bispo.pdf",
+        "issueDate": "2025-02-02T03:00:00.000Z",
+        "expirationDate": "2027-02-02T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 78 dias (02/02/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1Wd1riWUPN8jeC2pxbu-z2tz_LGTxyzW3/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights)",
+          "Data no nome (31/01/2025) difere da data impressa no documento (02/02/2025)"
+        ]
       },
       "22": {
         "code": "22",
@@ -24883,10 +25025,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 27.07.2026 - EDCLEI DA CONCEIÇÃO CUSTODIO - Clicksign.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 27.07.2026 - EDCLEI DA CONCEIÇÃO CUSTODIO - Clicksign.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-27T03:00:00.000Z",
+        "expirationDate": "2027-07-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1cHbfJyVxA_gNxzblWzKRIFiMhxtYFOpQ/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -27054,11 +27198,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 29.09.26 – Carlos Henrique Soares da Silva",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 29.09.26 – Carlos Henrique Soares da Silva\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-24T03:00:00.000Z",
+        "expirationDate": "2027-09-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1iH05XLS5QL5e8RN0uCmjKrd2cL3SG6FK/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (29/09/2026) difere da data impressa no documento (24/09/2026)"
+        ]
       }
     },
     "driveFolderId": "1Wa2-inrpCroEAHCiLe_hkfZ425vMxMqs",
@@ -31609,15 +31757,36 @@
         "readSource": "CONTENT",
         "divergences": []
       },
+      "16": {
+        "code": "16",
+        "name": "Doc 16",
+        "filename": "30 – GWO WINDA – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-05-05T03:00:00.000Z",
+        "expirationDate": "2028-05-05T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 05/05/2028",
+        "sourcePath": "https://drive.google.com/file/d/19Mc1w8pabDPrtopb9Y9NXLKhWplzHlrx/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros)",
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
+      },
       "17": {
         "code": "17",
         "name": "Doc 17",
-        "filename": "CERTIFICADO DE TÉCNICO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"CERTIFICADO DE TÉCNICO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
-        "sourcePath": "https://drive.google.com/file/d/1T3JeEb2bdIfO_7-QvyQ1XsWa8FFEDceF/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "filename": "30 – GWO WINDA – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-05-07T03:00:00.000Z",
+        "expirationDate": "2028-05-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/05/2028",
+        "sourcePath": "https://drive.google.com/file/d/19Mc1w8pabDPrtopb9Y9NXLKhWplzHlrx/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual)",
+          "Data no nome (05/05/2026) difere da data impressa no documento (07/05/2026)",
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "18": {
         "code": "18",
@@ -31630,6 +31799,22 @@
         "sourcePath": "https://drive.google.com/file/d/13FMjNctTxYPD-7ZHMQ1AZb5TSxM7w6JJ/view",
         "readSource": "CONTENT",
         "divergences": []
+      },
+      "19": {
+        "code": "19",
+        "name": "Doc 19",
+        "filename": "30 – GWO WINDA – 05.05.2026 - RAMON RAMIRES COSTA CIRINO.pdf",
+        "issueDate": "2026-05-07T03:00:00.000Z",
+        "expirationDate": "2028-05-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/05/2028",
+        "sourcePath": "https://drive.google.com/file/d/19Mc1w8pabDPrtopb9Y9NXLKhWplzHlrx/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio)",
+          "Data no nome (05/05/2026) difere da data impressa no documento (07/05/2026)",
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "20": {
         "code": "20",
@@ -31731,7 +31916,9 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/19Mc1w8pabDPrtopb9Y9NXLKhWplzHlrx/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "09": {
         "code": "09",
@@ -32507,6 +32694,20 @@
         "sourcePath": "https://drive.google.com/file/d/11Ro5i0v9PVnS1cednv0Mt_iqq7rtp2zO/view",
         "readSource": "CONTENT",
         "divergences": []
+      },
+      "20": {
+        "code": "20",
+        "name": "Doc 20",
+        "filename": "20_NR33-RECICLAGEM_EMI-2026-08-24_VAL-2027-08-24_FRANCISCO-MARCOS-DE-SOUZA-MAGALHAES.pdf",
+        "issueDate": "2026-01-17T03:00:00.000Z",
+        "expirationDate": "2027-01-17T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 62 dias (17/01/2027)",
+        "sourcePath": "https://drive.google.com/file/d/1CLJt0uqzZ908bTah1li1Je8UEtNUzTA8/view",
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (24/08/2026) difere da data impressa no documento (17/01/2026)"
+        ]
       },
       "21": {
         "code": "21",
@@ -36434,10 +36635,12 @@
         "code": "06",
         "name": "Doc 06",
         "filename": "06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2024-08-22T03:00:00.000Z",
+        "expirationDate": "2025-08-22T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 451 dias (22/08/2025)",
         "sourcePath": "https://drive.google.com/file/d/15F-aOjer9J-SsBVmQDao5NDWidvMJ2pw/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "15.1": {
