@@ -191,9 +191,9 @@
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2028-11-01T12:00:00.000Z",
+        "expirationDate": "2028-11-15T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/11/2028"
+        "statusDetail": "Válido até 15/11/2028"
       },
       "15": {
         "code": "15",
@@ -244,6 +244,20 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/11/2028"
       },
+      "25": {
+        "code": "25",
+        "name": "SIT VESTAS",
+        "expirationDate": "2028-11-12T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028"
+      },
+      "26": {
+        "code": "26",
+        "name": "ESO VESTAS",
+        "expirationDate": "2028-11-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -272,7 +286,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 27/10/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_13",
