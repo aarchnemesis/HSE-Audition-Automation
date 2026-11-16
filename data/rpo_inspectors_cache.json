@@ -2058,6 +2058,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/10/2028"
       },
+      "14": {
+        "code": "14",
+        "name": "NR 11",
+        "expirationDate": "2028-11-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2028"
+      },
       "15": {
         "code": "15",
         "name": "NR 12",
@@ -2107,6 +2114,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/10/2028"
       },
+      "26": {
+        "code": "26",
+        "name": "ESO VESTAS",
+        "expirationDate": "2028-11-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028"
+      },
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
@@ -2121,6 +2135,13 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/10/2027"
       },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2028-11-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028"
+      },
       "09": {
         "code": "09",
         "name": "DIREÇÃO DEFENSIVA",
@@ -2128,7 +2149,10 @@
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/08/2028"
       }
-    }
+    },
+    "exemptDocCodes": [
+      "31"
+    ]
   },
   {
     "id": "rpo_26",
@@ -5411,9 +5435,9 @@
       "12": {
         "code": "12",
         "name": "NR 10",
-        "expirationDate": "2026-11-11T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 5 dias (11/11/2026)"
+        "expirationDate": "2028-11-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028"
       },
       "13": {
         "code": "13",
@@ -5432,9 +5456,9 @@
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2026-11-27T12:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 11 dias (27/11/2026)"
+        "expirationDate": "2028-11-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028"
       },
       "16": {
         "code": "16",
@@ -9718,9 +9742,9 @@
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2028-11-04T12:00:00.000Z",
+        "expirationDate": "2028-11-15T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/11/2028"
+        "statusDetail": "Válido até 15/11/2028"
       },
       "15": {
         "code": "15",
@@ -9784,6 +9808,13 @@
         "expirationDate": "2027-10-31T12:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/10/2027"
+      },
+      "32": {
+        "code": "32",
+        "name": "GWO ART",
+        "expirationDate": "2028-11-09T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028"
       },
       "09": {
         "code": "09",

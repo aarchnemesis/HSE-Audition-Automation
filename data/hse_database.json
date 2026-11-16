@@ -1825,12 +1825,12 @@
     "statusEHS": "VENCE_60",
     "storzRequestId": "621274",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
+    "storzProgressPercent": 19,
     "storzDeadline": "11/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 40 dias (26/12/2026) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (621274 - Progresso: 0%) [Prazo Storz: 11/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 26/12/2026, ANTES do prazo da Storz (11/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 40 dias (26/12/2026) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (621274 - Progresso: 19%) [Prazo Storz: 11/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 26/12/2026, ANTES do prazo da Storz (11/01/2027)!",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1OLwcwGxacW4yBI0CfFCH5TEvTWi0mZwM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-16T12:11:33.630Z"
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -4767,6 +4767,22 @@
     "role": "INSPETOR",
     "sector": "OPERAÇÕES",
     "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "26",
+    "docName": "ESO (Vestas)",
+    "modality": "ONLINE",
+    "expirationDate": "2028-11-16T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 16/11/2028",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
+  },
+  {
+    "inspectorId": "rpo_25",
+    "inspectorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
     "docCode": "28",
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
@@ -4780,6 +4796,22 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-11-12T10:02:21.451Z"
+  },
+  {
+    "inspectorId": "rpo_25",
+    "inspectorName": "DRIELTON FRANCISCO DE ARAUJO SILVA",
+    "role": "INSPETOR",
+    "sector": "OPERAÇÕES",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "expirationDate": "2028-11-09T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 09/11/2028",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1EVsSpikiHmYQUF-yVE_GMGEOlkHgyRqb",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -5793,12 +5825,12 @@
     "statusEHS": "VENCE_90",
     "storzRequestId": "622562",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 10,
+    "storzProgressPercent": 50,
     "storzDeadline": "13/01/2027",
-    "detail": "PROGRAMAR: Vence em 83 dias (07/02/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622562 - Progresso: 10%) [Prazo Storz: 13/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 83 dias (07/02/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622562 - Progresso: 50%) [Prazo Storz: 13/01/2027] — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IGKip57FbhiUb2ZqPjPGcxCLA01dWKpo",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-16T13:09:14.558Z"
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
   },
   {
     "inspectorId": "rpo_28",
@@ -18222,13 +18254,13 @@
     "statusEHS": "VENCE_90",
     "storzRequestId": "613576",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
+    "storzProgressPercent": 10,
     "storzDeadline": "15/01/2027",
-    "detail": "PROGRAMAR: Vence em 70 dias (25/01/2027) | EM ANDAMENTO NA STORZ (613576 - Progresso: 0%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 70 dias (25/01/2027) | EM ANDAMENTO NA STORZ (613576 - Progresso: 10%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1d3dxM3mPo9Xg36l1BTRgamQ85I5PXCN8/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vZ0Jvl7owpIV-_pbqvOgW4dn0X320WNt",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-16T18:32:17.513Z"
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -22015,6 +22047,22 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
     "rpoAuditStatus": "PENDENTE_REVISAO",
     "lastUpdated": "2026-11-13T18:32:06.274Z"
+  },
+  {
+    "inspectorId": "rpo_79",
+    "inspectorName": "WILLAMES WAGNER DA SILVA",
+    "role": "INSPETOR",
+    "sector": ",",
+    "rpoBranch": "INSP. QUALIDADE & TÉC. OPERAÇÕES",
+    "docCode": "32",
+    "docName": "GWO ART",
+    "modality": "PRESENCIAL",
+    "expirationDate": "2028-11-09T12:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 09/11/2028",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1QIOzsgbb-RvsscUKViwuxJPUrWifIKu_",
+    "rpoAuditStatus": "PENDENTE_REVISAO",
+    "lastUpdated": "2026-11-16T20:27:12.786Z"
   },
   {
     "inspectorId": "rpo_81",
