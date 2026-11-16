@@ -12,63 +12,20 @@ import fs from 'fs'
 import path from 'path'
 import { drive_v3, google } from 'googleapis'
 import { getAuthorizedClient } from '../adapters/drive/googleAuth.js'
+import { BOOK_CODE, BOOK_VALIDITY_MONTHS } from '../domain/services/BookNaming.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
-/** Código atual do Drive -> código e sigla do Book (seção 3). As cartas mudam de número (41-44). */
-const BOOK_CODE: Record<string, { cc: string; doc: string; kind: 'TREINO' | 'ASO' | 'UNICO' }> = {
-  '01': { cc: '01', doc: 'ASO', kind: 'ASO' },
-  '02': { cc: '02', doc: 'OS-SST', kind: 'UNICO' },
-  '03': { cc: '03', doc: 'FICHA-REGISTRO', kind: 'UNICO' },
-  '04': { cc: '04', doc: 'CONTRATO-CTPS', kind: 'UNICO' },
-  '04.1': { cc: '04', doc: 'CONTRATO-ADITIVO', kind: 'UNICO' },
-  '40': { cc: '04', doc: 'CONTRATO', kind: 'UNICO' },
-  '40.1': { cc: '04', doc: 'CONTRATO-ADITIVO', kind: 'UNICO' },
-  '05': { cc: '05', doc: 'VACINA', kind: 'UNICO' },
-  '06': { cc: '06', doc: 'FICHA-EPI', kind: 'UNICO' },
-  '07': { cc: '07', doc: 'SEGURO-VIDA', kind: 'UNICO' },
-  '08': { cc: '08', doc: 'CNH', kind: 'UNICO' },
-  '09': { cc: '09', doc: 'DIRECAO-DEFENSIVA', kind: 'TREINO' },
-  '10': { cc: '10', doc: 'NR01', kind: 'TREINO' },
-  '11': { cc: '11', doc: 'NR06', kind: 'TREINO' },
-  '12': { cc: '12', doc: 'NR10', kind: 'TREINO' },
-  '13': { cc: '13', doc: 'NR10-SEP', kind: 'TREINO' },
-  '14': { cc: '14', doc: 'NR11', kind: 'TREINO' },
-  '15': { cc: '15', doc: 'NR12', kind: 'TREINO' },
-  '16': { cc: '16', doc: 'GWO-FA', kind: 'TREINO' },
-  '17': { cc: '17', doc: 'GWO-MH', kind: 'TREINO' },
-  '18': { cc: '18', doc: 'NR18', kind: 'TREINO' },
-  '19': { cc: '19', doc: 'GWO-FAW', kind: 'TREINO' },
-  '20': { cc: '20', doc: 'NR33', kind: 'TREINO' },
-  '28': { cc: '28', doc: 'NR33-SUPERVISOR', kind: 'TREINO' },
-  '21': { cc: '21', doc: 'NR35', kind: 'TREINO' },
-  '22': { cc: '22', doc: 'LOTO', kind: 'TREINO' },
-  '25': { cc: '25', doc: 'SIT', kind: 'TREINO' },
-  '26': { cc: '26', doc: 'ESO', kind: 'TREINO' },
-  '30': { cc: '30', doc: 'WINDA', kind: 'UNICO' },
-  '32': { cc: '32', doc: 'GWO-ART', kind: 'TREINO' },
-  '12.1': { cc: '41', doc: 'CARTA-NR10', kind: 'UNICO' },
-  '15.1': { cc: '42', doc: 'CARTA-NR12', kind: 'UNICO' },
-  '20.1': { cc: '43', doc: 'CARTA-NR33', kind: 'UNICO' },
-  '21.1': { cc: '44', doc: 'CARTA-NR35', kind: 'UNICO' },
-}
+// Tabela única do Book (domain/services/BookNaming), a mesma usada pela Storz e pela leitura do Drive.
 /** Códigos do Drive que o Book não prevê (ou que mudaram de sentido): ficam para decisão humana. */
 const OUT_OF_BOOK: Record<string, string> = {
   '23': 'No Drive o 23 é CRT/Declaração de Classe; no Book o 23 é GWO BST Trabalho em Altura (WAH)',
   '24': 'Diploma técnico: o Book cita na tabela de validade, mas não dá código na seção 3',
-  '27': 'NR-07 Primeiros Socorros não está na tabela do Book',
   '29': 'ATW Integração não está na tabela do Book',
   '31': 'Elevador (JASO) não está na tabela do Book',
-  '34': 'CIPA não está na tabela do Book',
 }
 const SUBFOLDER: Record<string, string> = { ASO: '02_SAUDE_OCUPACIONAL', TREINO: '03_TREINAMENTOS', UNICO: '01_DOCUMENTOS_PESSOAIS' }
 const NO_EXPIRY = new Set(['02', '03', '04', '05', '24', '40', '40.1', '04.1'])
-/** Book seção 4 (validade a partir da EMI). Os que dependem de apólice, CNH, CA ou cliente usam a data declarada. */
-const BOOK_VALIDITY_MONTHS: Record<string, number> = {
-  '01': 12, '10': 12, '11': 12, '12': 24, '13': 24, '14': 12, '15': 12, '18': 12, '20': 12, '28': 12,
-  '21': 24, '22': 12, '16': 24, '17': 24, '19': 24, '23': 24, '32': 24, '09': 24, '45': 6,
-  '41': 12, '42': 12, '43': 12, '44': 12,
-}
 
 const iso = (d?: string) => (d ? d.slice(0, 10) : undefined)
 const slugName = (n: string) =>
