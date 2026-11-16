@@ -147,6 +147,12 @@ const SEMANTIC_RULES: Array<{
     code: '27',
     matchedTerm: 'NR-07 Primeiros Socorros',
   },
+  // Prevenção e proteção contra incêndio (NR-23, curso nacional): não é o GWO Fire Awareness (19).
+  {
+    regex: /\bPREVENCAO\s+E\s+PROTECAO\s+CONTRA\s+INCENDIOS?\b/i,
+    code: '46',
+    matchedTerm: 'NR-23 Prevenção e Proteção contra Incêndio',
+  },
   // GWO NR-23 / Combate a Incêndio
   {
     regex:

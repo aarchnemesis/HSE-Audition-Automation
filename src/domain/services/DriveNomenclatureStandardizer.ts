@@ -49,6 +49,7 @@ const CANONICAL_DOC_NAMES: Record<string, string> = {
   '31': 'Elevador (JASO)',
   '32': 'GWO ART',
   '34': 'CIPA (NR-05)',
+  '46': 'NR-23 Prevenção e Proteção contra Incêndio',
   '40': 'Contrato de Prestação de Serviço',
   '40.1': 'Aditivo ao Contrato',
 }
@@ -80,6 +81,7 @@ const COURSE_AND_CARTA_CODES = new Set([
   '31',
   '32',
   '34',
+  '46',
 ])
 
 export class DriveNomenclatureStandardizer {

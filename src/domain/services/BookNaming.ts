@@ -38,6 +38,9 @@ export const BOOK_CODE: Record<string, { cc: string; doc: string; kind: BookKind
   '26': { cc: '26', doc: 'ESO', kind: 'TREINO' },
   '30': { cc: '30', doc: 'WINDA', kind: 'UNICO' },
   '32': { cc: '32', doc: 'GWO-ART', kind: 'TREINO' },
+  '27': { cc: '27', doc: 'NR07-PRIMEIROS-SOCORROS', kind: 'TREINO' },
+  '34': { cc: '34', doc: 'NR05-CIPA', kind: 'TREINO' },
+  '46': { cc: '46', doc: 'NR23-INCENDIO', kind: 'TREINO' },
   '12.1': { cc: '41', doc: 'CARTA-NR10', kind: 'UNICO' },
   '15.1': { cc: '42', doc: 'CARTA-NR12', kind: 'UNICO' },
   '20.1': { cc: '43', doc: 'CARTA-NR33', kind: 'UNICO' },
@@ -58,6 +61,9 @@ export const BOOK_VALIDITY_MONTHS: Record<string, number> = {
   '01': 12, '10': 12, '11': 12, '12': 24, '13': 24, '14': 12, '15': 12, '18': 12, '20': 12, '28': 12,
   '21': 24, '22': 12, '16': 24, '17': 24, '19': 24, '23': 24, '32': 24, '09': 24, '45': 6,
   '41': 12, '42': 12, '43': 12, '44': 12,
+  // CIPA: mandato anual (guia de treinamentos SST). Primeiros socorros e incêndio: a NR não fixa prazo;
+  // 12 meses como a reciclagem da brigada (ABNT NBR 14276), o mais conservador.
+  '27': 12, '34': 12, '46': 12,
 }
 
 export function slugPersonName(n: string): string {

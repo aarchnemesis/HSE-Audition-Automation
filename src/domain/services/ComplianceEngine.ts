@@ -48,6 +48,7 @@ export const DOC_CATALOG_MAP: Record<string, string> = {
   // interno da NR-33 no catálogo é "20"). CIPA (NR-05) é anual, carga horária varia por grau de
   // risco — ver docs/Guia_Treinamentos_Normativos_SST_arTH.xlsx.
   '34': 'CIPA (NR-05)',
+  '46': 'NR-23 Prevenção e Proteção contra Incêndio',
   // "40"/"40.1" são códigos remapeados (não são o que a Storz/RPO usam) — nas pastas de Drone
   // Insp. Equipamento e LPS-SPDA, o código "04" no nome do arquivo colide com "CTPS Digital"
   // (usado nas pastas de Inspetores/Técnicos). Ver BRANCH_CODE_REMAP em GoogleDriveOAuthAdapter.ts.
