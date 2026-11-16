@@ -88956,20 +88956,21 @@
     "sv": 1,
     "ev": 7,
     "md5": "c7d9061aeb49ae454a660c9cc946b714",
-    "llmAt": "2026-11-12T18:27:14.025Z",
+    "llmAt": "2026-11-16T18:44:35.677Z",
     "modifiedTime": "2026-11-12T12:42:50.269Z",
     "holder": {
       "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
-    "code": "30",
-    "issueDate": "2026-11-03T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "statusDetail": "Documento permanente — sem vencimento",
+    "code": "16",
+    "issueDate": "2024-12-06T03:00:00.000Z",
+    "expirationDate": "2026-12-06T03:00:00.000Z",
+    "statusEHS": "VENCE_30",
+    "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (06/12/2026)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 30_WINDA",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "First Aid (FA)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "30",
@@ -88980,6 +88981,50 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "Book EHS 30_WINDA",
         "extractedClause": "Data do nome do arquivo"
+      },
+      {
+        "code": "21",
+        "issueDate": "2024-12-04T03:00:00.000Z",
+        "expirationDate": "2026-12-04T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 18 dias (04/12/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Working at Heights (WAH)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "17",
+        "issueDate": "2024-12-05T03:00:00.000Z",
+        "expirationDate": "2026-12-05T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (05/12/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Manual Handling (MH)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "19",
+        "issueDate": "2024-12-05T03:00:00.000Z",
+        "expirationDate": "2026-12-05T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (05/12/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Fire Awareness (FAW)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      },
+      {
+        "code": "16",
+        "issueDate": "2024-12-06T03:00:00.000Z",
+        "expirationDate": "2026-12-06T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (06/12/2026)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "First Aid (FA)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -90221,60 +90266,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-10-19T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Documento permanente — sem vencimento",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 30_WINDA",
-        "extractedClause": "Data do nome do arquivo"
-      },
-      {
-        "code": "16",
-        "issueDate": "2025-02-24T03:00:00.000Z",
-        "expirationDate": "2027-02-24T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 24/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "First Aid Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "19",
-        "issueDate": "2025-02-25T03:00:00.000Z",
-        "expirationDate": "2027-02-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Fire Awareness Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "17",
-        "issueDate": "2025-02-25T03:00:00.000Z",
-        "expirationDate": "2027-02-25T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 25/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Manual Handling Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "21",
-        "issueDate": "2025-02-27T03:00:00.000Z",
-        "expirationDate": "2027-02-27T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/02/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Working at Heights Refresher (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
         "code": "32",
         "issueDate": "2026-07-17T03:00:00.000Z",
         "expirationDate": "2028-07-17T03:00:00.000Z",
@@ -90552,7 +90543,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "defe453abe07099306bd4e90f9315183",
-    "llmAt": "2026-11-12T18:27:14.025Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-16T11:48:32.141Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
@@ -90662,32 +90653,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "079ef6242a105c15ecb1193263a88d81",
-    "llmAt": "2026-11-12T18:27:14.025Z",
+    "llmAt": "2026-11-16T18:44:35.678Z",
     "modifiedTime": "2026-11-16T11:48:35.642Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
       "status": "OK"
     },
     "code": "12",
-    "issueDate": "2026-10-16T03:00:00.000Z",
-    "expirationDate": "2028-10-16T03:00:00.000Z",
+    "issueDate": "2025-10-19T03:00:00.000Z",
+    "expirationDate": "2027-10-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 16/10/2028",
+    "statusDetail": "Válido até 19/10/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 12_NR10",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "NR 10 BÁSICO (RECICLAGEM) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "12",
-        "issueDate": "2026-10-16T03:00:00.000Z",
-        "expirationDate": "2028-10-16T03:00:00.000Z",
+        "issueDate": "2025-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/10/2028",
+        "statusDetail": "Válido até 19/10/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 12_NR10",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "NR 10 BÁSICO (RECICLAGEM) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -92425,7 +92416,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c0b53a05f19ceeb028fcc5ed072746d0",
-    "llmAt": "2026-11-12T18:27:14.026Z",
+    "llmAt": "2026-11-16T18:44:35.686Z",
     "modifiedTime": "2026-11-16T11:09:51.464Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
@@ -95141,38 +95132,36 @@
   },
   {
     "fileId": "1syq4Vd4vwT6DZmuTDsfLrr8f646EbrgS",
-    "filename": "08 – CNH –  04.06.2034 - Wilden Alves Ferreira.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-06-04_VAL-2034-06-04_WILDEN-ALVES-FERREIRA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "aa1c3876e2307488cefceef6a6f3d4f7",
-    "llmAt": "2026-11-16T11:32:11.493Z",
-    "modifiedTime": "2025-11-04T10:04:44.000Z",
+    "llmAt": "2026-11-16T18:44:35.677Z",
+    "modifiedTime": "2026-11-16T15:19:53.023Z",
     "holder": {
       "key": "h2:WILDEN ALVES FERREIRA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-06-04T03:00:00.000Z",
-    "expirationDate": "2034-06-04T03:00:00.000Z",
+    "expirationDate": "2034-06-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 04/06/2034",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 14/06/2034",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-06-04T03:00:00.000Z",
-        "expirationDate": "2034-06-04T03:00:00.000Z",
+        "expirationDate": "2034-06-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/06/2034",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 14/06/2034",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -95468,7 +95457,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "92d769f9aad157b064fa453cfbe1a3c9",
-    "llmAt": "2026-11-12T18:58:05.442Z",
+    "llmAt": "2026-11-16T18:40:56.265Z",
     "modifiedTime": "2026-11-16T13:15:13.459Z",
     "holder": {
       "key": "h2:WERMESON OLIVEIRA FRANCO",
@@ -96071,38 +96060,38 @@
   },
   {
     "fileId": "1p2oxEgUEvFaiflO9zrYzLG3-492XnsVN",
-    "filename": "08 – CNH – 28.10.34 –WERMESON DE OLIVEIRA FRANCO .pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-10-28_VAL-2034-10-28_WERMESON-DE-OLIVEIRA-FRANCO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "3acff75acd9da3e82eef8fadccc7ef90",
-    "llmAt": "2026-11-12T18:27:14.026Z",
-    "modifiedTime": "2026-10-26T19:35:51.746Z",
+    "llmAt": "2026-11-16T18:44:35.677Z",
+    "modifiedTime": "2026-11-16T15:19:51.367Z",
     "holder": {
       "key": "h2:WERMESON OLIVEIRA FRANCO",
       "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2034-10-28T03:00:00.000Z",
+    "issueDate": "2022-02-17T03:00:00.000Z",
     "expirationDate": "2034-10-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 28/10/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-10-28T03:00:00.000Z",
+        "issueDate": "2022-02-17T03:00:00.000Z",
         "expirationDate": "2034-10-28T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/10/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -97227,38 +97216,36 @@
   },
   {
     "fileId": "1qhqfOTNLzQbvmLjs73C7Sbpp5wL6HaU0",
-    "filename": "08 – CNH – 24.10.2033 - Thalitson Wilkson Pinto Nunes.pdf",
+    "filename": "08_CNH-UNICO_EMI-2023-10-24_VAL-2033-10-24_THALITSON-WILKSON-PINTO-NUNES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "4c45ebc3ce7b5b8bcd31552fc2be71cc",
-    "llmAt": "2026-11-16T11:31:03.376Z",
-    "modifiedTime": "2025-11-26T06:44:52.000Z",
+    "llmAt": "2026-11-16T18:44:35.678Z",
+    "modifiedTime": "2026-11-16T15:19:46.661Z",
     "holder": {
       "key": "h2:THALITSON WILKSON PINTO NUNES",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2033-10-24T03:00:00.000Z",
     "expirationDate": "2033-10-24T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 24/10/2033",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2033-10-24T03:00:00.000Z",
         "expirationDate": "2033-10-24T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 24/10/2033",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -98979,7 +98966,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "eed1e0ce55910113aa54233fcc6ae97a",
-    "llmAt": "2026-11-12T18:58:05.442Z",
+    "llmAt": "2026-11-16T18:40:56.266Z",
     "modifiedTime": "2026-11-16T13:15:08.481Z",
     "holder": {
       "key": "h2:THAYNA NOGUEIRA TAVARES",
@@ -99016,7 +99003,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "9c9d0f0194c856f06b95a802b4d17803",
-    "llmAt": "2026-11-12T18:58:05.443Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-16T13:15:07.350Z",
     "holder": {
       "key": "h2:THAYNA NOGUEIRA TAVARES",
@@ -99029,20 +99016,9 @@
     "statusDetail": "Válido até 08/10/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 16_GWO-FA (Pág. 4)",
-    "extractedClause": "Data do curso impressa no documento (08/10/2025), anterior à assinatura",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem; Norma GWO Versão 19 (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
-      {
-        "code": "16",
-        "issueDate": "2025-10-08T03:00:00.000Z",
-        "expirationDate": "2027-10-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/10/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 16_GWO-FA (Pág. 4)",
-        "extractedClause": "Data do curso impressa no documento (08/10/2025), anterior à assinatura"
-      },
       {
         "code": "30",
         "issueDate": "2023-11-20T03:00:00.000Z",
@@ -99052,6 +99028,17 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-10-08T03:00:00.000Z",
+        "expirationDate": "2027-10-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem; Norma GWO Versão 19 (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -99236,38 +99223,36 @@
   },
   {
     "fileId": "1tzjKe13zYInCdfaWfO1tstyivFd_qUDW",
-    "filename": "08 – CNH – 09.01.2036 – Thayna Nogueira Tavares.pdf",
+    "filename": "08_CNH-UNICO_EMI-2026-01-09_VAL-2036-01-09_THAYNA-NOGUEIRA-TAVARES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "325670af2a13a35f9ae2aa8ab629b123",
-    "llmAt": "2026-11-16T11:31:03.376Z",
-    "modifiedTime": "2026-02-02T06:32:10.000Z",
+    "llmAt": "2026-11-16T18:44:35.677Z",
+    "modifiedTime": "2026-11-16T15:19:48.210Z",
     "holder": {
       "key": "h2:THAYNA NOGUEIRA TAVARES",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2036-01-09T03:00:00.000Z",
     "expirationDate": "2036-01-09T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 09/01/2036",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2036-01-09T03:00:00.000Z",
         "expirationDate": "2036-01-09T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 09/01/2036",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -99454,7 +99439,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "7737dbd63ee36bad4f14ced7d64202c7",
-    "llmAt": "2026-11-12T18:27:14.026Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-16T11:49:43.376Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -99671,7 +99656,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d789c115580cad956907f4709f740e8a",
-    "llmAt": "2026-11-16T17:00:20.008Z",
+    "llmAt": "2026-11-16T18:44:35.678Z",
     "modifiedTime": "2026-11-13T10:36:24.878Z",
     "holder": {
       "key": "h2:WANDERSON AVELINO SOUZA",
@@ -99683,7 +99668,7 @@
     "statusDetail": "Válido até 01/12/2035",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ausente",
+    "matchedTerm": "CNH",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -99693,7 +99678,7 @@
         "statusDetail": "Válido até 01/12/2035",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ausente",
+        "matchedTerm": "CNH",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -101386,7 +101371,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "70c85d39a52c0963051babaa37e74685",
-    "llmAt": "2026-11-12T18:27:14.026Z",
+    "llmAt": "2026-11-16T18:44:35.678Z",
     "modifiedTime": "2026-11-16T11:49:10.314Z",
     "holder": {
       "key": "h2:RAFAEL SIQUEIRA SILVA",
@@ -101521,38 +101506,36 @@
   },
   {
     "fileId": "1yktPTKX1Ldu9YzvYgsKS0NQiU5RTwZQW",
-    "filename": "08 – CNH – 01.11.33 - Rafael Siqueira da Silva.pdf",
+    "filename": "08_CNH-UNICO_EMI-2023-11-01_VAL-2033-11-01_RAFAEL-SIQUEIRA-DA-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "998233bd6965f4daedbfcd0e77a92da3",
-    "llmAt": "2026-11-16T11:31:03.375Z",
-    "modifiedTime": "2025-06-10T09:39:06.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:19:40.768Z",
     "holder": {
       "key": "h2:RAFAEL SIQUEIRA SILVA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2033-11-01T03:00:00.000Z",
     "expirationDate": "2033-11-01T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 01/11/2033",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2033-11-01T03:00:00.000Z",
         "expirationDate": "2033-11-01T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/11/2033",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -102889,7 +102872,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c295498178309b5bdb91b318ae279c7b",
-    "llmAt": "2026-11-12T18:31:19.720Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-16T12:05:12.078Z",
     "holder": {
       "key": "h2:CARLOS HENRIQUE SOARES SILVA",
@@ -103028,7 +103011,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c295498178309b5bdb91b318ae279c7b",
-    "llmAt": "2026-11-12T18:31:19.720Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-10-21T14:54:55.834Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
@@ -103136,7 +103119,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0301d5c27448e7fd2f81f7f6bd93e29e",
-    "llmAt": "2026-11-12T18:31:19.722Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-16T11:49:27.829Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
@@ -103749,7 +103732,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f2972baf37aa78b0097de079d0d47ef5",
-    "llmAt": "2026-11-12T18:31:19.721Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-16T11:49:04.611Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
@@ -104516,7 +104499,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "8e6b354147615f5b241dd00582579f26",
-    "llmAt": "2026-11-16T16:52:29.421Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-09-28T14:36:44.000Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
@@ -104543,38 +104526,36 @@
   },
   {
     "fileId": "1HbbVsLNIKmDly4VxM3GkQlQZP_JeEIH3",
-    "filename": "08 – CNH – 22.06.2032 - Rafael Andrade Barbosa.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-06-22_VAL-2032-06-22_RAFAEL-ANDRADE-BARBOSA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "7196d214b28d6e5173b400a34e4a4090",
-    "llmAt": "2026-11-16T11:31:03.375Z",
-    "modifiedTime": "2026-01-13T07:25:12.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:19:37.646Z",
     "holder": {
       "key": "h2:RAFAEL ANDRADE BARBOSA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-06-22T03:00:00.000Z",
     "expirationDate": "2032-06-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 22/06/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-06-22T03:00:00.000Z",
         "expirationDate": "2032-06-22T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/06/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -105875,38 +105856,36 @@
   },
   {
     "fileId": "1Ymho0znN-v-gKhucFVHGnMdiesrdFpEG",
-    "filename": "08 - CNH - 31.07.2035 - Rafael Pereira Nunes.pdf",
+    "filename": "08_CNH-UNICO_EMI-2025-07-31_VAL-2035-07-31_RAFAEL-PEREIRA-NUNES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "c4286c61507083535edb5622421ff7a4",
-    "llmAt": "2026-11-16T11:31:03.375Z",
-    "modifiedTime": "2025-08-05T10:12:30.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:19:39.124Z",
     "holder": {
       "key": "h2:RAFAEL PEREIRA NUNES",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2035-07-31T03:00:00.000Z",
     "expirationDate": "2035-07-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 31/07/2035",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "CARTEIRA NACIONAL DE HABILITAÇÃO",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2035-07-31T03:00:00.000Z",
         "expirationDate": "2035-07-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/07/2035",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "CARTEIRA NACIONAL DE HABILITAÇÃO",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -108010,7 +107989,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6baed1d8e854ba10453f4991c4666c38",
-    "llmAt": "2026-11-16T16:52:29.418Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-13T10:34:24.681Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
@@ -109008,37 +108987,35 @@
   },
   {
     "fileId": "18h6SA06pldxZsZYNvjC5beS9ww3DopOt",
-    "filename": "08 – CNH – 15.07.31 - Nyllys Rodrigues Martins.pdf",
+    "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-07-15_NYLLYS-RODRIGUES-MARTINS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "29cd1b20b1ec86c3502b6ffef5ce55e2",
-    "llmAt": "2026-11-16T11:31:03.374Z",
-    "modifiedTime": "2025-06-09T14:31:58.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:15:44.866Z",
     "holder": {
       "key": "h2:NYLLYS RODRIGUES MARTINS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-07-15T03:00:00.000Z",
     "expirationDate": "2031-07-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 15/07/2031",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "Book EHS 08_CNH",
     "extractedClause": "VALIDADE 15/07/2031",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-07-15T03:00:00.000Z",
         "expirationDate": "2031-07-15T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/07/2031",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
+        "matchedTerm": "Book EHS 08_CNH",
         "extractedClause": "VALIDADE 15/07/2031"
       }
     ]
@@ -110004,32 +109981,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "860edcbbf1b513e74715a28828aa14ce",
-    "llmAt": "2026-11-12T18:58:05.443Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-16T12:16:45.177Z",
     "holder": {
       "key": "h2:MICHEL PLATINI SOARES BARROS",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "31",
-    "issueDate": "2026-02-12T03:00:00.000Z",
-    "expirationDate": "2028-02-12T03:00:00.000Z",
+    "issueDate": "2025-03-17T03:00:00.000Z",
+    "expirationDate": "2027-03-17T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 12/02/2028",
+    "statusDetail": "Válido até 17/03/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Operation of Avanti Service Lift Model Pegasus L/XL - Basic Training (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "31",
-        "issueDate": "2026-02-12T03:00:00.000Z",
-        "expirationDate": "2028-02-12T03:00:00.000Z",
+        "issueDate": "2025-03-17T03:00:00.000Z",
+        "expirationDate": "2027-03-17T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 12/02/2028",
+        "statusDetail": "Válido até 17/03/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Operation of Avanti Service Lift Model Pegasus L/XL - Basic Training (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -110171,38 +110148,36 @@
   },
   {
     "fileId": "11DzfFFnlFvF9nKAoif7nDcHBbGNDe-qm",
-    "filename": "08 – CNH – 13.10.31 – Michel Platini Soares Barros.pdf",
+    "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-10-13_MICHEL-PLATINI-SOARES-BARROS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "553e00ca44ea62b7bb9a96b1dbdb48c4",
-    "llmAt": "2026-11-16T11:31:03.373Z",
-    "modifiedTime": "2025-06-02T09:24:18.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:15:43.305Z",
     "holder": {
       "key": "h2:MICHEL PLATINI SOARES BARROS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-10-13T03:00:00.000Z",
     "expirationDate": "2031-10-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 13/10/2031",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-10-13T03:00:00.000Z",
         "expirationDate": "2031-10-13T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/10/2031",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -110883,33 +110858,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "6363087ac8c844cf96bdf76e0159687c",
-    "llmAt": "2026-11-12T18:31:19.723Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2025-05-23T13:12:14.000Z",
     "holder": {
       "key": "h2:MARIA BRUNA SOARES SANTOS",
-      "status": "OUTRA_PESSOA",
-      "other": "JOSE ORLANDO BARROS DA SILVA FILHO"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-06-18T03:00:00.000Z",
     "expirationDate": "2031-06-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 18/06/2031",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-06-18T03:00:00.000Z",
         "expirationDate": "2031-06-18T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 18/06/2031",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -111963,7 +111935,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "90847193544626925b55512172e98e93",
-    "llmAt": "2026-11-16T16:52:29.412Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
     "modifiedTime": "2026-11-13T10:33:48.503Z",
     "holder": {
       "key": "h2:LUCAS JEAN GONCALVES SOUZA",
@@ -112781,38 +112753,36 @@
   },
   {
     "fileId": "14XG9Cd-5Cmct5HnZG7Fr53RbtWTqAAOr",
-    "filename": "08 – CNH – 31.07.33 – Lucas Batista Araujo.pdf",
+    "filename": "08_CNH-UNICO_EMI-2023-07-31_VAL-2033-07-31_LUCAS-BATISTA-ARAUJO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "34f5a8c8330c52a3a2c9b893f65ad0a3",
-    "llmAt": "2026-11-16T11:31:03.373Z",
-    "modifiedTime": "2025-05-23T12:26:24.000Z",
+    "llmAt": "2026-11-16T18:44:35.679Z",
+    "modifiedTime": "2026-11-16T15:19:32.887Z",
     "holder": {
       "key": "h2:LUCAS BATISTA ARAUJO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2033-07-31T03:00:00.000Z",
     "expirationDate": "2033-07-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 31/07/2033",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2033-07-31T03:00:00.000Z",
         "expirationDate": "2033-07-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/07/2033",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -116227,7 +116197,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d55bbc1af82c92bccdb981d7a2f018eb",
-    "llmAt": "2026-11-12T18:31:19.724Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-12T12:55:45.947Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
@@ -116262,7 +116232,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d55bbc1af82c92bccdb981d7a2f018eb",
-    "llmAt": "2026-11-12T18:31:19.724Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-16T11:48:16.096Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
@@ -116530,14 +116500,14 @@
   },
   {
     "fileId": "1hY3aRMKQHY1koWCv-anshqVgbLd2MLKI",
-    "filename": "Recibo da Carta de Riscos Ambientais- 08.06.2026-Leandro Camilo de Jesus.pdf",
+    "filename": "GUIA-DE-RISCOS-USINA-CATANDUBA_EMI-NA_VAL-NA_LEANDRO-CAMILO-DE-JESUS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "8ac09c6036bd2707122f8d1ba6e91369",
-    "llmAt": "2026-11-16T11:31:03.376Z",
-    "modifiedTime": "2026-06-08T10:42:44.000Z",
+    "llmAt": "2026-11-16T18:44:35.686Z",
+    "modifiedTime": "2026-11-16T14:26:55.649Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
       "status": "OK"
@@ -116548,7 +116518,7 @@
     "statusDetail": "Data não informada ou formato inválido",
     "source": "PDF_CONTENT",
     "classificationSource": "NONE",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Assinou em 08 jun 2026",
     "documents": [
       {
         "code": null,
@@ -116557,7 +116527,7 @@
         "statusDetail": "Data não informada ou formato inválido",
         "source": "PDF_CONTENT",
         "classificationSource": "NONE",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Assinou em 08 jun 2026"
       }
     ]
   },
@@ -117386,38 +117356,36 @@
   },
   {
     "fileId": "1RWkxo077jYlrjomSFLZNGT_D7yCoZzNS",
-    "filename": "08 - CNH - 13.04.2035 - Leandro Camilo de Jeus.pdf",
+    "filename": "08_CNH-UNICO_EMI-2025-04-13_VAL-2035-04-13_LEANDRO-CAMILO-DE-JESUS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "1fef36be863be40a18fecc87a291e2a7",
-    "llmAt": "2026-11-16T11:31:03.373Z",
-    "modifiedTime": "2025-05-23T09:34:30.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:19:30.041Z",
     "holder": {
       "key": "h2:LEANDRO CAMILO JESUS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2035-04-13T03:00:00.000Z",
     "expirationDate": "2035-04-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 13/04/2035",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2035-04-13T03:00:00.000Z",
         "expirationDate": "2035-04-13T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/04/2035",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -117571,11 +117539,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "8142694510ed336c24302a88f8d4e342",
-    "llmAt": "2026-11-12T18:31:19.725Z",
+    "llmAt": "2026-11-16T18:40:56.270Z",
     "modifiedTime": "2026-11-16T12:16:09.022Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "31",
     "issueDate": "2026-10-13T03:00:00.000Z",
@@ -117584,8 +117552,8 @@
     "statusDetail": "Válido até 13/10/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "GWO SLU - Módulo de Formação de Usuário do Elevador de Serviço (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "31",
@@ -117595,8 +117563,8 @@
         "statusDetail": "Válido até 13/10/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "GWO SLU - Módulo de Formação de Usuário do Elevador de Serviço (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -118850,38 +118818,36 @@
   },
   {
     "fileId": "1lmAhpu1nTvAWK0X0vrNlrEcPbCinkXek",
-    "filename": "08 – CNH – 01.12.2032 - Juan Ilgner Marinho Lima.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-12-01_VAL-2032-12-01_JUAN-ILGNER-MARINHO-LIMA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "b97cf1718371ceb7f5f7c7aeef273fa6",
-    "llmAt": "2026-11-16T11:31:03.373Z",
-    "modifiedTime": "2025-12-12T12:48:06.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:19:25.665Z",
     "holder": {
       "key": "h2:JUAN ILGNER MARINHO LIMA",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2032-12-01T03:00:00.000Z",
-    "expirationDate": "2032-12-01T03:00:00.000Z",
+    "expirationDate": "2032-10-07T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 01/12/2032",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 07/10/2032",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-12-01T03:00:00.000Z",
-        "expirationDate": "2032-12-01T03:00:00.000Z",
+        "expirationDate": "2032-10-07T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2032",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 07/10/2032",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -118939,7 +118905,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "fe08302b005028f58fa289804e6d48df",
-    "llmAt": "2026-11-12T18:31:19.726Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
     "modifiedTime": "2026-11-16T13:14:45.678Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
@@ -120130,7 +120096,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "77969fe49346d5a968916726fa86849a",
-    "llmAt": "2026-11-16T16:37:50.517Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2025-12-09T14:37:18.000Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
@@ -120189,38 +120155,36 @@
   },
   {
     "fileId": "16VP7KUmpHtoMnc8dcs7KB6veTIZP6Gi1",
-    "filename": "08 – CNH – 07.07.31 - João Carlos Guardiano da Silva.pdf",
+    "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-07-07_JOAO-CARLOS-GUARDIANO-DA-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "dd51291039e00a974d14b7426616ac11",
-    "llmAt": "2026-11-12T18:31:19.725Z",
-    "modifiedTime": "2025-05-14T12:41:34.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:15:26.244Z",
     "holder": {
       "key": "h2:JOAO CARLOS GUARDIANO SILVA",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-07-07T03:00:00.000Z",
-    "expirationDate": "2031-07-07T03:00:00.000Z",
+    "expirationDate": "2031-07-03T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 07/07/2031",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 03/07/2031",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-07-07T03:00:00.000Z",
-        "expirationDate": "2031-07-07T03:00:00.000Z",
+        "expirationDate": "2031-07-03T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 07/07/2031",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 03/07/2031",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -120232,32 +120196,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "fab7bf326013a3143f451699669c39f9",
-    "llmAt": "2026-11-12T18:58:05.444Z",
+    "llmAt": "2026-11-16T18:44:35.686Z",
     "modifiedTime": "2026-11-16T13:14:44.018Z",
     "holder": {
       "key": "h2:JOAO BATISTA CRUZ SILVA",
       "status": "OK"
     },
     "code": "17",
-    "issueDate": "2025-12-02T03:00:00.000Z",
-    "expirationDate": "2027-12-02T03:00:00.000Z",
+    "issueDate": "2025-11-29T03:00:00.000Z",
+    "expirationDate": "2027-11-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 02/12/2027",
+    "statusDetail": "Válido até 29/11/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 17_GWO-MH",
-    "extractedClause": "nos dias 29/11/2025 | Atualizado via nome: 02/12/2025",
+    "matchedTerm": "GWO Manuseio Manual de Cargas / Manual Handling (MH), padrão GWO versão 18.0",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "17",
-        "issueDate": "2025-12-02T03:00:00.000Z",
-        "expirationDate": "2027-12-02T03:00:00.000Z",
+        "issueDate": "2025-11-29T03:00:00.000Z",
+        "expirationDate": "2027-11-29T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 02/12/2027",
+        "statusDetail": "Válido até 29/11/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 17_GWO-MH",
-        "extractedClause": "nos dias 29/11/2025 | Atualizado via nome: 02/12/2025"
+        "matchedTerm": "GWO Manuseio Manual de Cargas / Manual Handling (MH), padrão GWO versão 18.0",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -123419,32 +123383,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "980c29a8033057cc47accbc2b9fa63e9",
-    "llmAt": "2026-11-13T15:18:19.210Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-13T10:32:01.769Z",
     "holder": {
       "key": "h2:JONATAS CARLOS MOTA SANTOS",
       "status": "OK"
     },
     "code": "32",
-    "issueDate": "2025-07-01T03:00:00.000Z",
-    "expirationDate": "2027-05-29T03:00:00.000Z",
+    "issueDate": "2025-05-31T03:00:00.000Z",
+    "expirationDate": "2027-05-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 29/05/2027",
+    "statusDetail": "Válido até 31/05/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 32_GWO-ART",
-    "extractedClause": "Expiration date 29/05/2027",
+    "matchedTerm": "Treinamento de Resgate Avançado (ART/GWO) - Nacelle, Torre e Basement (NTBR)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "32",
-        "issueDate": "2025-07-01T03:00:00.000Z",
-        "expirationDate": "2027-05-29T03:00:00.000Z",
+        "issueDate": "2025-05-31T03:00:00.000Z",
+        "expirationDate": "2027-05-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/05/2027",
+        "statusDetail": "Válido até 31/05/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 32_GWO-ART",
-        "extractedClause": "Expiration date 29/05/2027"
+        "matchedTerm": "Treinamento de Resgate Avançado (ART/GWO) - Nacelle, Torre e Basement (NTBR)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -125763,38 +125727,36 @@
   },
   {
     "fileId": "1ZaV_6ssXtfFTjI_Kvw_sAKxlyqzjLP-y",
-    "filename": "08 – CNH – 12.01.2036 - Jose Orlando Barros da Silva Filho.pdf",
+    "filename": "08_CNH-UNICO_EMI-2026-01-12_VAL-2036-01-12_JOSE-ORLANDO-BARROS-DA-SILVA-FILHO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "1a836e3aa082de64a90ec312f93709c9",
-    "llmAt": "2026-11-16T11:31:03.372Z",
-    "modifiedTime": "2026-02-10T13:53:38.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:19:22.655Z",
     "holder": {
       "key": "h2:JOSE ORLANDO BARROS SILVA FILHO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2036-01-12T03:00:00.000Z",
     "expirationDate": "2036-01-12T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 12/01/2036",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Carteira Nacional de Habilitação - categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2036-01-12T03:00:00.000Z",
         "expirationDate": "2036-01-12T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 12/01/2036",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Carteira Nacional de Habilitação - categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -127994,38 +127956,36 @@
   },
   {
     "fileId": "1W-wU9Jtuh9gCed3PbptSbdY1VxboMUbd",
-    "filename": "08 – CNH – 10.04.2034 - Francisco Vinicius Sousa Santos.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-04-10_VAL-2034-04-10_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "17c1a64eb202810754e1a37bc1ff4741",
-    "llmAt": "2026-11-16T11:19:36.201Z",
-    "modifiedTime": "2025-08-29T07:01:48.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:19:10.104Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-04-10T03:00:00.000Z",
     "expirationDate": "2034-04-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 10/04/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-04-10T03:00:00.000Z",
         "expirationDate": "2034-04-10T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 10/04/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -129141,7 +129101,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f6c8d0066c2ea1b24c63878e55766f6a",
-    "llmAt": "2026-11-12T18:31:19.728Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2026-11-16T11:11:52.791Z",
     "holder": {
       "key": "h2:JOAO ELIENAI RIBEIRO",
@@ -130295,7 +130255,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "c6996654796db2bada5b2a8ce88b00a4",
-    "llmAt": "2026-11-12T19:02:04.451Z",
+    "llmAt": "2026-11-16T18:40:56.271Z",
     "modifiedTime": "2026-11-12T12:46:32.262Z",
     "holder": {
       "key": "h2:ISMAELSON YURI ARAUJO SOUSA",
@@ -130308,8 +130268,8 @@
     "statusDetail": "PROGRAMAR: Vence em 80 dias (04/02/2027)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 20_NR33",
-    "extractedClause": "no dia 4 de Fevereiro de 2026 (validade 1 anos)",
+    "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "20",
@@ -130319,8 +130279,8 @@
         "statusDetail": "PROGRAMAR: Vence em 80 dias (04/02/2027)",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 20_NR33",
-        "extractedClause": "no dia 4 de Fevereiro de 2026 (validade 1 anos)"
+        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -131772,38 +131732,36 @@
   },
   {
     "fileId": "1TJt1wz5SPB3AkxXBrO0OtmFja6dTdxmg",
-    "filename": "08 – CNH – 04.06.2034 - Gerardo Lucas Viana Filho.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-06-04_VAL-2034-06-04_GERARDO-LUCAS-VIANA-FILHO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "fb5149f1320ce8b6a26f40434fa6d8e1",
-    "llmAt": "2026-11-16T11:19:36.201Z",
-    "modifiedTime": "2025-12-02T14:49:34.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:19:11.611Z",
     "holder": {
       "key": "h2:GERARDO LUCAS VIANA FILHO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-06-04T03:00:00.000Z",
-    "expirationDate": "2034-06-04T03:00:00.000Z",
+    "expirationDate": "2034-06-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 04/06/2034",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 14/06/2034",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-06-04T03:00:00.000Z",
-        "expirationDate": "2034-06-04T03:00:00.000Z",
+        "expirationDate": "2034-06-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/06/2034",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 14/06/2034",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -132743,38 +132701,36 @@
   },
   {
     "fileId": "16LtqVAHr0TIQFhqC7LEQJw-YjfgU1ykn",
-    "filename": "08 - CNH – 20.05.31 – Igor Martins Rocha.pdf",
+    "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-05-20_IGOR-MARTINS-ROCHA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "0891fcd111b67c46122c1460bedf11b5",
-    "llmAt": "2026-11-16T11:31:03.371Z",
-    "modifiedTime": "2025-05-22T09:21:12.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:15:17.918Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-05-20T03:00:00.000Z",
     "expirationDate": "2031-05-20T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 20/05/2031",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-05-20T03:00:00.000Z",
         "expirationDate": "2031-05-20T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/05/2031",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -133828,33 +133784,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "4d987037911eeae2025953ad55b3a320",
-    "llmAt": "2026-11-12T18:31:19.729Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
     "modifiedTime": "2025-12-17T07:22:44.000Z",
     "holder": {
       "key": "h2:INOCENCIO ROCHA MOURA",
-      "status": "OUTRA_PESSOA",
-      "other": "JOSE MARCOS LIMA DE MOURA"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-06-29T03:00:00.000Z",
-    "expirationDate": "2031-06-29T03:00:00.000Z",
+    "expirationDate": "2031-04-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 29/06/2031",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 29/04/2031",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-06-29T03:00:00.000Z",
-        "expirationDate": "2031-06-29T03:00:00.000Z",
+        "expirationDate": "2031-04-29T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 29/06/2031",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 29/04/2031",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -135230,7 +135183,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "736582449303ee3101c3e33d26170285",
-    "llmAt": "2026-11-12T19:02:04.451Z",
+    "llmAt": "2026-11-16T18:40:56.271Z",
     "modifiedTime": "2026-11-12T12:30:48.030Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
@@ -135243,8 +135196,8 @@
     "statusDetail": "PROGRAMAR: Vence em 63 dias (18/01/2027)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 20_NR33",
-    "extractedClause": "no dia 18 de Janeiro de 2026 (validade 1 anos)",
+    "matchedTerm": "NR-33 Trabalhador e Vigia (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "20",
@@ -135254,8 +135207,8 @@
         "statusDetail": "PROGRAMAR: Vence em 63 dias (18/01/2027)",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 20_NR33",
-        "extractedClause": "no dia 18 de Janeiro de 2026 (validade 1 anos)"
+        "matchedTerm": "NR-33 Trabalhador e Vigia (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -136334,38 +136287,36 @@
   },
   {
     "fileId": "1OndDqLjfJJ9NmscH6SSiovhdxSTd_XTF",
-    "filename": "08– CNH – 15.09.32 - Fabio Samuel Leandro Monteiro.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-09-15_VAL-2032-09-15_FABIO-SAMUEL-LEANDRO-MONTEIRO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "d699a9a2225f2badf34d5863cc550c8c",
-    "llmAt": "2026-11-16T11:11:07.662Z",
-    "modifiedTime": "2026-04-01T14:09:04.000Z",
+    "llmAt": "2026-11-16T18:44:35.680Z",
+    "modifiedTime": "2026-11-16T15:18:56.422Z",
     "holder": {
       "key": "h2:FABIO SAMUEL LEANDRO MONTEIRO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-09-15T03:00:00.000Z",
     "expirationDate": "2032-09-15T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 15/09/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-09-15T03:00:00.000Z",
         "expirationDate": "2032-09-15T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/09/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -137951,7 +137902,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ae5f2f1a03a59f4c18c90f720d882ed3",
-    "llmAt": "2026-11-16T16:24:30.714Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
     "modifiedTime": "2026-11-13T10:30:16.113Z",
     "holder": {
       "key": "h2:FRANCISCO THIAGO ABREU",
@@ -138838,7 +138789,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e18026e82632cf70dd73295b4254efb1",
-    "llmAt": "2026-11-12T18:31:19.730Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
     "modifiedTime": "2026-11-16T11:10:09.923Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
@@ -139048,37 +138999,37 @@
   },
   {
     "fileId": "1m8HH2SXMERB44M5Z0xJzDZi-3zaApiQD",
-    "filename": "08 – CNH – 02.10.34 – Francisco Leonardo da Silva Ferreira.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-10-02_VAL-2034-10-02_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "44b3226468b58fc99330f644de5d4039",
-    "llmAt": "2026-11-16T11:19:36.201Z",
-    "modifiedTime": "2025-05-21T14:54:02.000Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
+    "modifiedTime": "2026-11-16T15:19:08.606Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-10-02T03:00:00.000Z",
+    "issueDate": "2024-10-02T03:00:00.000Z",
     "expirationDate": "2034-10-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 02/10/2034",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "Book EHS 08_CNH",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-10-02T03:00:00.000Z",
+        "issueDate": "2024-10-02T03:00:00.000Z",
         "expirationDate": "2034-10-02T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 02/10/2034",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
+        "matchedTerm": "Book EHS 08_CNH",
         "extractedClause": "Data do nome do arquivo"
       }
     ]
@@ -139205,7 +139156,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3e481fbf5437811e6d5cd5fbde91dc21",
-    "llmAt": "2026-11-12T18:31:19.731Z",
+    "llmAt": "2026-11-16T18:44:35.682Z",
     "modifiedTime": "2026-11-16T12:14:40.235Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
@@ -140141,11 +140092,11 @@
     "sv": 1,
     "ev": 7,
     "md5": "f9f4db16067f3bdab2272bdfd420abb2",
-    "llmAt": "2026-11-16T16:24:30.713Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
     "modifiedTime": "2026-11-13T10:29:38.490Z",
     "holder": {
       "key": "h2:FRANCISCO JHON HEBSON RODRIGUES CARVALHO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
     "expirationDate": "2033-03-07T03:00:00.000Z",
@@ -141274,38 +141225,36 @@
   },
   {
     "fileId": "1OzbY_rLgagES_ZlJZa-rHNICBSogfM3s",
-    "filename": "08 – CNH –  19.04.2032 - Francisco Kelvio Torres Assunção.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-04-19_VAL-2032-04-19_FRANCISCO-KELVIO-TORRES-ASSUNCAO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "e348cf4e2e36bd33130f2637f73bbfc2",
-    "llmAt": "2026-11-16T11:19:36.201Z",
-    "modifiedTime": "2025-11-28T12:27:18.000Z",
+    "llmAt": "2026-11-16T18:44:35.681Z",
+    "modifiedTime": "2026-11-16T15:19:06.880Z",
     "holder": {
       "key": "h2:FRANCISCO KELVIO TORRES ASSUNCAO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-04-19T03:00:00.000Z",
     "expirationDate": "2032-04-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 19/04/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-04-19T03:00:00.000Z",
         "expirationDate": "2032-04-19T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 19/04/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -142468,38 +142417,36 @@
   },
   {
     "fileId": "1kdJdiiByRfrxg8obKy6oMjJ4wfklNRS8",
-    "filename": "08 – CNH – 26.08.2035 - Francisco George Martins Silva.pdf",
+    "filename": "08_CNH-UNICO_EMI-2025-08-26_VAL-2035-08-26_FRANCISCO-GEORGE-MARTINS-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "b12bedefd9b6155ca58524d9c8a3b4d3",
-    "llmAt": "2026-11-16T11:19:36.200Z",
-    "modifiedTime": "2025-09-22T15:35:52.000Z",
+    "llmAt": "2026-11-16T18:44:35.682Z",
+    "modifiedTime": "2026-11-16T15:19:05.486Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2035-08-26T03:00:00.000Z",
     "expirationDate": "2035-08-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 26/08/2035",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2035-08-26T03:00:00.000Z",
         "expirationDate": "2035-08-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/08/2035",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -143260,7 +143207,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "5c58265dd11c715738d3121d8a4ab9ec",
-    "llmAt": "2026-11-12T17:42:07.552Z",
+    "llmAt": "2026-11-16T18:40:56.271Z",
     "modifiedTime": "2026-11-16T13:14:38.164Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
@@ -143770,38 +143717,36 @@
   },
   {
     "fileId": "1fGalX3MNTkEvHywZXtlxeTNv4lC3cKBN",
-    "filename": "08 – CNH – 16.09.32 – Francisco Fabricio Freire Barbosa.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-09-16_VAL-2032-09-16_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "333a3861e9456734294ecbb1e66f3c20",
-    "llmAt": "2026-11-12T18:31:19.731Z",
-    "modifiedTime": "2025-05-20T09:43:06.000Z",
+    "llmAt": "2026-11-16T18:44:35.682Z",
+    "modifiedTime": "2026-11-16T15:19:03.989Z",
     "holder": {
       "key": "h2:FRANCISCO FABRICIO FREIRE BARBOSA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-09-16T03:00:00.000Z",
     "expirationDate": "2032-09-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 16/09/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-09-16T03:00:00.000Z",
         "expirationDate": "2032-09-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/09/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -145170,7 +145115,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "1d1e3f9895f90298b4c039c94781b326",
-    "llmAt": "2026-11-16T16:24:30.712Z",
+    "llmAt": "2026-11-16T18:44:35.682Z",
     "modifiedTime": "2026-11-13T10:29:05.493Z",
     "holder": {
       "key": "h2:FRANCISCO ELVISON PEREIRA SOUSA",
@@ -145182,7 +145127,7 @@
     "statusDetail": "Válido até 01/03/2033",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ausente",
+    "matchedTerm": "CNH",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -145192,7 +145137,7 @@
         "statusDetail": "Válido até 01/03/2033",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ausente",
+        "matchedTerm": "CNH",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
@@ -146412,38 +146357,36 @@
   },
   {
     "fileId": "1q1MIJ29rwg2n73L6BMcE53l-im7CbIb8",
-    "filename": "08 – CNH –  20.01.2036 - Francisco Davilo Marques de Sousa.pdf",
+    "filename": "08_CNH-UNICO_EMI-2026-01-20_VAL-2036-01-20_FRANCISCO-DAVILO-MARQUES-DE-SOUSA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "43457217d3fd6535945f01e7f04dcfd2",
-    "llmAt": "2026-11-16T11:19:36.199Z",
-    "modifiedTime": "2026-03-25T14:10:26.000Z",
+    "llmAt": "2026-11-16T18:44:35.682Z",
+    "modifiedTime": "2026-11-16T15:19:02.521Z",
     "holder": {
       "key": "h2:FRANCISCO DAVILO MARQUES SOUSA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2036-01-20T03:00:00.000Z",
     "expirationDate": "2036-01-20T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 20/01/2036",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2036-01-20T03:00:00.000Z",
         "expirationDate": "2036-01-20T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/01/2036",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -147649,7 +147592,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ec27e466ba30e10f2a1cb54c89affb33",
-    "llmAt": "2026-11-16T16:24:30.711Z",
+    "llmAt": "2026-11-16T18:44:35.683Z",
     "modifiedTime": "2026-11-13T10:28:37.396Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
@@ -150927,33 +150870,30 @@
     "sv": 1,
     "ev": 7,
     "md5": "b9116bc95084718d01e2c390f327b28a",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T18:44:35.683Z",
     "modifiedTime": "2025-12-12T13:54:58.462Z",
     "holder": {
       "key": "h2:FELIPE JARDEL SILVA CARVALHO",
-      "status": "OUTRA_PESSOA",
-      "other": "FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-04-26T03:00:00.000Z",
     "expirationDate": "2032-04-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 26/04/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-04-26T03:00:00.000Z",
         "expirationDate": "2032-04-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/04/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -151668,7 +151608,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "d6906ce800c5a18e4607b078650a3760",
-    "llmAt": "2026-11-12T19:02:04.453Z",
+    "llmAt": "2026-11-16T18:40:56.273Z",
     "modifiedTime": "2026-11-16T13:14:30.122Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
@@ -152036,38 +151976,36 @@
   },
   {
     "fileId": "1sQ1zRTYhlW_37jHRbdSFTw76TxVXu0wC",
-    "filename": "08 - CNH- 28.08.2034 - Ezequiel Cruz Vieira.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-08-28_VAL-2034-08-28_EZEQUIEL-CRUZ-VIEIRA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "86595ef60c92a0e0fb5890ae83beb6c6",
-    "llmAt": "2026-11-16T11:11:07.662Z",
-    "modifiedTime": "2026-09-09T10:53:57.903Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:54.836Z",
     "holder": {
       "key": "h2:EZEQUIEL CRUZ VIEIRA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-08-28T03:00:00.000Z",
-    "expirationDate": "2034-08-28T03:00:00.000Z",
+    "expirationDate": "2034-08-27T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 28/08/2034",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 27/08/2034",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "CNH categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-08-28T03:00:00.000Z",
-        "expirationDate": "2034-08-28T03:00:00.000Z",
+        "expirationDate": "2034-08-27T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 28/08/2034",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 27/08/2034",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "CNH categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -153270,7 +153208,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "f0790ae9f734631d86effa597c3fddfb",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
     "modifiedTime": "2026-11-16T11:08:57.777Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
@@ -153477,38 +153415,36 @@
   },
   {
     "fileId": "1yVtaGXSjtYSCGkYLAI94IMRPUKbAMsrh",
-    "filename": "08 – CNH – 16.05.32 - Felipe Rodrigues Bispo.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-05-16_VAL-2032-05-16_FELIPE-RODRIGUES-BISPO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9ede1417eb3fc5ccab8b85051cd90280",
-    "llmAt": "2026-11-12T18:35:16.841Z",
-    "modifiedTime": "2025-12-31T12:38:10.643Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:59.474Z",
     "holder": {
       "key": "h2:FELIPE RODRIGUES BISPO",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-05-16T03:00:00.000Z",
     "expirationDate": "2032-05-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 16/05/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-05-16T03:00:00.000Z",
         "expirationDate": "2032-05-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/05/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -153938,7 +153874,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "2f4cc54045110db08bf5ee090c408cce",
-    "llmAt": "2026-11-12T19:02:04.453Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
     "modifiedTime": "2026-11-16T13:14:27.356Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -153951,20 +153887,9 @@
     "statusDetail": "Válido até 08/10/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 16_GWO-FA (Pág. 4)",
-    "extractedClause": "Data do curso impressa no documento (08/10/2025), anterior à assinatura",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
-      {
-        "code": "16",
-        "issueDate": "2025-10-08T03:00:00.000Z",
-        "expirationDate": "2027-10-08T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/10/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 16_GWO-FA (Pág. 4)",
-        "extractedClause": "Data do curso impressa no documento (08/10/2025), anterior à assinatura"
-      },
       {
         "code": "30",
         "issueDate": "2023-11-20T03:00:00.000Z",
@@ -153974,6 +153899,17 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 6)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-10-08T03:00:00.000Z",
+        "expirationDate": "2027-10-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -154376,7 +154312,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "e29a51750d5b62eeb135700a5c2dfa08",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
     "modifiedTime": "2026-11-16T11:08:15.939Z",
     "holder": {
       "key": "h2:ERIKA NAIANE OLIVEIRA HONORATO",
@@ -156289,38 +156225,36 @@
   },
   {
     "fileId": "1QA9_L3UBY3JitQ4FQ1jPVNiN7mDUllvg",
-    "filename": "08 – CNH –02.10.34 - ERVESON NASCIMENTO DOS SANTOS.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-10-02_VAL-2034-10-02_ERVESON-NASCIMENTO-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "6295a45dd5917620d294c4fe833a9d8f",
-    "llmAt": "2026-11-16T11:11:07.662Z",
-    "modifiedTime": "2026-04-09T06:22:30.000Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:53.360Z",
     "holder": {
       "key": "h2:ERVESON NASCIMENTO SANTOS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-10-02T03:00:00.000Z",
     "expirationDate": "2034-10-02T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 02/10/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Carteira Nacional de Habilitação",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-10-02T03:00:00.000Z",
         "expirationDate": "2034-10-02T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 02/10/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Carteira Nacional de Habilitação",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -156769,7 +156703,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "cdd9e850e75a609e0e1db8ccea5886e2",
-    "llmAt": "2026-11-12T18:35:16.841Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
     "modifiedTime": "2026-11-16T11:08:09.197Z",
     "holder": {
       "key": "h2:EMERSON PALLOTTA RIBEIRO",
@@ -157431,7 +157365,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6966f9e250345a4615562b2be67c7c77",
-    "llmAt": "2026-11-12T18:35:16.843Z",
+    "llmAt": "2026-11-16T18:44:35.686Z",
     "modifiedTime": "2026-11-16T11:08:01.178Z",
     "holder": {
       "key": "h2:EMERSON PALLOTTA RIBEIRO",
@@ -157498,38 +157432,36 @@
   },
   {
     "fileId": "1q0NGN9w68kO4SBP5bCAeW8Ze-_unaqqe",
-    "filename": "08 – CNH – 30.06.2035 –EMERSON PALLOTTA RIBEIRO.pdf",
+    "filename": "08_CNH-UNICO_EMI-2025-06-30_VAL-2035-06-30_EMERSON-PALLOTTA-RIBEIRO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "e9fb68fe9a7f857e930671696dc34a51",
-    "llmAt": "2026-11-16T11:11:07.660Z",
-    "modifiedTime": "2025-07-03T18:17:05.275Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:50.229Z",
     "holder": {
       "key": "h2:EMERSON PALLOTTA RIBEIRO",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2035-06-30T03:00:00.000Z",
     "expirationDate": "2035-06-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 30/06/2035",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2035-06-30T03:00:00.000Z",
         "expirationDate": "2035-06-30T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/06/2035",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -158551,37 +158483,37 @@
   },
   {
     "fileId": "1_JVU-hNVpJKyl8ZiaYSYXRkperRPCxZA",
-    "filename": "08 - CNH - 22.04.2034 - Elias dos santos Rodrigues.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-04-22_VAL-2034-04-22_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "73f1945ed3561d4bf40a99ca46977478",
-    "llmAt": "2026-11-16T11:11:07.660Z",
-    "modifiedTime": "2025-05-08T16:05:24.624Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:48.828Z",
     "holder": {
       "key": "h2:ELIAS SANTOS RODRIGUES",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-04-22T03:00:00.000Z",
+    "issueDate": "2024-04-22T03:00:00.000Z",
     "expirationDate": "2034-04-22T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 22/04/2034",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
+    "matchedTerm": "Book EHS 08_CNH",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-04-22T03:00:00.000Z",
+        "issueDate": "2024-04-22T03:00:00.000Z",
         "expirationDate": "2034-04-22T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/04/2034",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
+        "matchedTerm": "Book EHS 08_CNH",
         "extractedClause": "Data do nome do arquivo"
       }
     ]
@@ -159391,14 +159323,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
         "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
-        "code": "31",
-        "statusEHS": "INDETERMINADO",
-        "statusDetail": "Data não informada ou formato inválido",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO) (via PDF) (Pág. 1)"
       }
     ]
   },
@@ -159652,38 +159576,36 @@
   },
   {
     "fileId": "1XxB40YCWmo4RR_-_vfPTxp-3VvyypHSO",
-    "filename": "08 – CNH – 16.05.34 - Edward Thiago Herculano Ribeiro",
+    "filename": "08_CNH-UNICO_EMI-2024-05-16_VAL-2034-05-16_EDWARD-THIAGO-HERCULANO-RIBEIRO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "e832c96d614fbf55e23979f2cb9261dd",
-    "llmAt": "2026-11-16T11:11:07.660Z",
-    "modifiedTime": "2025-05-08T13:08:34.477Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:47.268Z",
     "holder": {
       "key": "h2:EDWARD THIAGO HERCULANO RIBEIRO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-05-16T03:00:00.000Z",
     "expirationDate": "2034-05-16T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 16/05/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "CNH categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-05-16T03:00:00.000Z",
         "expirationDate": "2034-05-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/05/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "CNH categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -161399,30 +161321,32 @@
     "sv": 1,
     "ev": 7,
     "md5": "aed338c4f386bd59da8fef47aea3fc8c",
-    "llmAt": "2026-11-12T17:40:29.558Z",
+    "llmAt": "2026-11-16T18:44:35.686Z",
     "modifiedTime": "2026-11-12T12:24:00.245Z",
     "holder": {
       "key": "h2:DIEGO MENEZES NUNES COELHO",
       "status": "OK"
     },
     "code": "10",
-    "issueDate": "2025-06-03T03:00:00.000Z",
+    "issueDate": "2025-05-18T03:00:00.000Z",
+    "expirationDate": "2075-05-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Documento permanente — sem vencimento",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Book EHS 10_NR01",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "NR1 - Disposições Gerais e Gerenciamento de Riscos Ocupacionais",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "10",
-        "issueDate": "2025-06-03T03:00:00.000Z",
+        "issueDate": "2025-05-18T03:00:00.000Z",
+        "expirationDate": "2075-05-18T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Documento permanente — sem vencimento",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Book EHS 10_NR01",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "NR1 - Disposições Gerais e Gerenciamento de Riscos Ocupacionais",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -162740,38 +162664,36 @@
   },
   {
     "fileId": "18ZDH58BQTFh_6EW1ssIfFwNY8ckPGkSw",
-    "filename": "08 – CNH – 30.12.34 - Diego Menezes Nunes Coelho",
+    "filename": "08_CNH-UNICO_EMI-2024-12-30_VAL-2034-12-30_DIEGO-MENEZES-NUNES-COELHO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "1f75b9b71e52467e793db6399e15cfce",
-    "llmAt": "2026-11-12T18:35:16.842Z",
-    "modifiedTime": "2025-05-07T19:04:32.476Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:44.225Z",
     "holder": {
       "key": "h2:DIEGO MENEZES NUNES COELHO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-12-30T03:00:00.000Z",
     "expirationDate": "2034-12-30T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 30/12/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-12-30T03:00:00.000Z",
         "expirationDate": "2034-12-30T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 30/12/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -164007,38 +163929,36 @@
   },
   {
     "fileId": "1PVcUbLAzWUM887Fe6H7JhuyuuTVolFrW",
-    "filename": "08– CNH – 16.01.2036 - David Kelson de Souza Loyola.pdf",
+    "filename": "08_CNH-UNICO_EMI-2026-01-16_VAL-2036-01-16_DAVID-KELSON-DE-SOUZA-LOYOLA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "7b6cfb360aba2fd97347a6dcef00b7b4",
-    "llmAt": "2026-11-16T11:11:07.659Z",
-    "modifiedTime": "2026-02-02T11:35:16.442Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:42.677Z",
     "holder": {
       "key": "h2:DAVID KELSON SOUZA LOYOLA",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2036-01-16T03:00:00.000Z",
-    "expirationDate": "2036-01-16T03:00:00.000Z",
+    "expirationDate": "2036-01-31T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 16/01/2036",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 31/01/2036",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2036-01-16T03:00:00.000Z",
-        "expirationDate": "2036-01-16T03:00:00.000Z",
+        "expirationDate": "2036-01-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/01/2036",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 31/01/2036",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -165272,38 +165192,36 @@
   },
   {
     "fileId": "1WOEfd5014dck5nhLzz1jn-6Hc69x9KYY",
-    "filename": "08 – CNH – 29.06.2033 - DANIEL FERREIRA DA SILVA FILHO.pdf",
+    "filename": "08_CNH-UNICO_EMI-2023-06-29_VAL-2033-06-29_DANIEL-FERREIRA-DA-SILVA-FILHO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "df3d774017335f3833598fcd02de659a",
-    "llmAt": "2026-11-16T11:11:07.659Z",
-    "modifiedTime": "2025-03-18T18:02:32.100Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:41.294Z",
     "holder": {
       "key": "h2:DANIEL FERREIRA SILVA FILHO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2033-06-29T03:00:00.000Z",
     "expirationDate": "2033-06-29T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 29/06/2033",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2033-06-29T03:00:00.000Z",
         "expirationDate": "2033-06-29T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/06/2033",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -166272,7 +166190,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "3f055840ca663f763824917d1a63a689",
-    "llmAt": "2026-11-16T11:11:07.659Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
     "modifiedTime": "2026-11-16T14:25:42.792Z",
     "holder": {
       "key": "h2:CARLOS EDUARDO FERREIRA ALVES",
@@ -167605,38 +167523,36 @@
   },
   {
     "fileId": "1FquXFJ4MFa-IrPrNxRsXWTf_mFNYY-CT",
-    "filename": "08 – CNH –  26.11.2034 - Caio Victor de Oliveira Balbino.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-11-26_VAL-2034-11-26_CAIO-VICTOR-OLIVEIRA-BALBINO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "5d0abf87df2f38bcd5070fe7a91c17f3",
-    "llmAt": "2026-11-16T11:11:07.659Z",
-    "modifiedTime": "2025-12-12T17:42:18.197Z",
+    "llmAt": "2026-11-16T18:44:35.684Z",
+    "modifiedTime": "2026-11-16T15:18:38.138Z",
     "holder": {
       "key": "h2:CAIO VICTOR OLIVEIRA BALBINO",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-11-26T03:00:00.000Z",
     "expirationDate": "2034-11-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 26/11/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-11-26T03:00:00.000Z",
         "expirationDate": "2034-11-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/11/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -170735,38 +170651,36 @@
   },
   {
     "fileId": "1rEzFppBKpp7B0WbbmdN7WBN8x8Zy-Zt_",
-    "filename": "08 – CNH – 10.11.32 – Caio Felipe Ribeiro Rodrigues.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-11-10_VAL-2032-11-10_CAIO-FELIPE-RIBEIRO-RODRIGUES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "8fd3ee0b395fc85952ff4572c75ff731",
-    "llmAt": "2026-11-16T11:11:07.659Z",
-    "modifiedTime": "2025-05-07T12:46:28.011Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:18:36.607Z",
     "holder": {
       "key": "h2:CAIO FELIPE RIBEIRO RODRIGUES",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-11-10T03:00:00.000Z",
-    "expirationDate": "2032-11-10T03:00:00.000Z",
+    "expirationDate": "2032-10-10T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 10/11/2032",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 10/10/2032",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "CNH categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-11-10T03:00:00.000Z",
-        "expirationDate": "2032-11-10T03:00:00.000Z",
+        "expirationDate": "2032-10-10T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 10/11/2032",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 10/10/2032",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "CNH categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -171959,38 +171873,36 @@
   },
   {
     "fileId": "1dLDAuJJlRh7EayKaFa6IU23UBMId6NYI",
-    "filename": "08 – CNH – 04.05.34 – Antonio Rafael dos Santos.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-05-04_VAL-2034-05-04_ANTONIO-RAFAEL-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "e5c6dd4a988fe874e9e7175c570319ac",
-    "llmAt": "2026-11-16T11:11:07.658Z",
-    "modifiedTime": "2025-05-06T13:04:00.076Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:18:33.408Z",
     "holder": {
       "key": "h2:ANTONIO RAFAEL SANTOS",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2034-05-04T03:00:00.000Z",
-    "expirationDate": "2034-05-04T03:00:00.000Z",
+    "expirationDate": "2034-05-14T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 04/05/2034",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 14/05/2034",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-05-04T03:00:00.000Z",
-        "expirationDate": "2034-05-04T03:00:00.000Z",
+        "expirationDate": "2034-05-14T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/05/2034",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 14/05/2034",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -173318,38 +173230,36 @@
   },
   {
     "fileId": "1kkiJcxzKzvQz-gjfh-A_T7Oe_krsXxGz",
-    "filename": "08. CNH - 26.03.2034 - Antonio Geiciano Mendes Serpa.pdf",
+    "filename": "08_CNH-UNICO_EMI-2024-03-26_VAL-2034-03-26_ANTONIO-GEICIANO-MENDES-SERPA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "b6ceb60372d49fda14126b51db8e2e87",
-    "llmAt": "2026-11-16T11:11:07.658Z",
-    "modifiedTime": "2025-11-04T13:27:43.012Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:18:31.753Z",
     "holder": {
       "key": "h2:ANTONIO GEICIANO MENDES SERPA",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2034-03-26T03:00:00.000Z",
     "expirationDate": "2034-03-26T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 26/03/2034",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2034-03-26T03:00:00.000Z",
         "expirationDate": "2034-03-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/03/2034",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -174104,7 +174014,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0df079d2fdcce5ec2da1b17440046089",
-    "llmAt": "2026-11-16T15:54:43.288Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
     "modifiedTime": "2026-11-12T12:13:22.924Z",
     "holder": {
       "key": "h2:ADRIANO CIRILO GARCIA LIMA",
@@ -174354,7 +174264,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "0df079d2fdcce5ec2da1b17440046089",
-    "llmAt": "2026-11-16T15:54:43.288Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
     "modifiedTime": "2025-11-24T13:19:43.000Z",
     "holder": {
       "key": "h2:ADRIANO CIRILO GARCIA LIMA",
@@ -176726,38 +176636,36 @@
   },
   {
     "fileId": "1CDDmtV31xRjzOG--VyoFWHOtUuPTqf8w",
-    "filename": "08 - CNH - 08.09.2032 - Alisson Mateus Almeida da Costa.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-09-08_VAL-2032-09-08_ALISSON-MATEUS-ALMEIDA-DA-COSTA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9fa19d4a454f8564a4f9c07ca056de52",
-    "llmAt": "2026-11-16T11:11:07.658Z",
-    "modifiedTime": "2025-05-05T16:19:54.456Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:18:27.090Z",
     "holder": {
       "key": "h2:ALISSON MATEUS ALMEIDA COSTA",
-      "status": "OK"
+      "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2032-09-08T03:00:00.000Z",
-    "expirationDate": "2032-09-08T03:00:00.000Z",
+    "expirationDate": "2032-08-07T03:00:00.000Z",
     "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 08/09/2032",
-    "source": "IMAGE_FALLBACK",
+    "statusDetail": "Válido até 07/08/2032",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "CNH categoria D",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-09-08T03:00:00.000Z",
-        "expirationDate": "2032-09-08T03:00:00.000Z",
+        "expirationDate": "2032-08-07T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/09/2032",
-        "source": "IMAGE_FALLBACK",
+        "statusDetail": "Válido até 07/08/2032",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "CNH categoria D",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -178153,38 +178061,36 @@
   },
   {
     "fileId": "16bKpTTCGnzmH0Z44q6Rcxuyv7bXDKkZ2",
-    "filename": "08 - CNH - 23.12.2032 - Leonardo Simon Costa Gaem.pdf",
+    "filename": "08_CNH-UNICO_EMI-2022-12-23_VAL-2032-12-23_LEONARDO-SIMON-COSTA-GAEM.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9c6612eb157a47a23a17b7d6f55a4f5a",
-    "llmAt": "2026-11-16T11:31:03.373Z",
-    "modifiedTime": "2025-06-13T12:26:14.000Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:19:31.501Z",
     "holder": {
       "key": "h2:LEONARDO SIMON COSTA GAEM",
       "status": "OK"
     },
     "code": "08",
-    "issueDate": "2032-12-23T03:00:00.000Z",
     "expirationDate": "2032-12-23T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 23/12/2032",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "Carteira Nacional de Habilitação (CNH)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2032-12-23T03:00:00.000Z",
         "expirationDate": "2032-12-23T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 23/12/2032",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "Carteira Nacional de Habilitação (CNH)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -179270,38 +179176,36 @@
   },
   {
     "fileId": "1LHSph1fTbdxMgjxF04DqxQm7cp7XdaaU",
-    "filename": "08 – CNH – 13.10.31 - Diego Patrick Sanches Campos.pdf",
+    "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-10-13_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "f57b7df439679b96a9e992e870759b8a",
-    "llmAt": "2026-11-12T18:35:16.843Z",
-    "modifiedTime": "2025-03-31T10:20:10.000Z",
+    "llmAt": "2026-11-16T18:44:35.685Z",
+    "modifiedTime": "2026-11-16T15:14:46.892Z",
     "holder": {
       "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
-      "status": "NAO_ENCONTRADO"
+      "status": "OK"
     },
     "code": "08",
-    "issueDate": "2031-10-13T03:00:00.000Z",
     "expirationDate": "2031-10-13T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 13/10/2031",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "CNH",
-    "extractedClause": "Data do nome do arquivo",
+    "matchedTerm": "ausente",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "08",
-        "issueDate": "2031-10-13T03:00:00.000Z",
         "expirationDate": "2031-10-13T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 13/10/2031",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "CNH",
-        "extractedClause": "Data do nome do arquivo"
+        "matchedTerm": "ausente",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -185299,7 +185203,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "ceda5aa98f7ec0109eb3af72d5006234",
-    "llmAt": "2026-11-12T19:06:04.752Z",
+    "llmAt": "2026-11-16T18:59:37.370Z",
     "modifiedTime": "2026-11-16T13:14:42.522Z",
     "holder": {
       "key": "h2:FRANCISCO MARCOS SOUZA MAGALHAES",
@@ -192867,7 +192771,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "391d1ab18d900bfb027133af697d5a55",
-    "llmAt": "2026-11-12T18:42:07.200Z",
+    "llmAt": "2026-11-16T18:33:08.235Z",
     "modifiedTime": "2026-03-19T13:17:20.000Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
@@ -211175,17 +211079,6 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "LOTO - Guia Prático (FORMACAO)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      },
-      {
-        "code": "20",
-        "issueDate": "2026-01-17T03:00:00.000Z",
-        "expirationDate": "2027-01-17T03:00:00.000Z",
-        "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 62 dias (17/01/2027)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
@@ -211948,7 +211841,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "bed9d3ad6185755cdfd830f246f0b309",
-    "llmAt": "2026-11-12T18:46:09.321Z",
+    "llmAt": "2026-11-16T18:59:37.373Z",
     "modifiedTime": "2026-11-16T11:48:04.043Z",
     "holder": {
       "key": "h2:KELVIN GARCIA OLIVEIRA",
@@ -219474,7 +219367,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "baee452951960662f9867fe5bd883165",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T18:33:08.233Z",
     "modifiedTime": "2026-11-13T10:28:42.625Z",
     "holder": {
       "key": "h2:FLAVIO ALVES SANTANA",
@@ -219554,7 +219447,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "baee452951960662f9867fe5bd883165",
-    "llmAt": "2026-11-12T18:49:48.474Z",
+    "llmAt": "2026-11-16T18:33:08.233Z",
     "modifiedTime": "2026-11-13T10:28:44.168Z",
     "holder": {
       "key": "h2:FLAVIO ALVES SANTANA",
@@ -230839,13 +230732,14 @@
   },
   {
     "fileId": "1Hfti0s3fSxI5KZfyXq-ZqGl0Uebtm11W",
-    "filename": "12-11-2026_Felipe_Alan_Peghin_Dos_Santos_Atendimento_Pré-Hospitalar__Sensibilização_e_Primeiros_Cuidados_para_Aprendizes.pdf",
+    "filename": "11_NR06-FORMACAO_EMI-2026-11-12_VAL-2027-11-12_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "874f43edb0cb99ffe136404a757c2932",
-    "modifiedTime": "2026-11-12T16:58:37.702Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T11:08:41.489Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
       "status": "OK"
@@ -230856,7 +230750,7 @@
     "statusDetail": "Documento permanente — sem vencimento",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-06 (via PDF)",
+    "matchedTerm": "Book EHS 11_NR06",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
@@ -230866,7 +230760,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-06 (via PDF)",
+        "matchedTerm": "Book EHS 11_NR06",
         "extractedClause": "Data do nome do arquivo"
       }
     ]
@@ -234860,7 +234754,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "94e2a53c5364a8f8759b787ebc47fa56",
-    "llmAt": "2026-11-12T19:40:52.171Z",
+    "llmAt": "2026-11-16T18:33:08.235Z",
     "modifiedTime": "2026-10-06T19:23:50.508Z",
     "holder": {
       "key": "h2:SIMON DIAS SILVA",
@@ -238711,7 +238605,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "66eb589fd20fb66ebb2144d1202736e3",
-    "llmAt": "2026-11-12T18:42:07.201Z",
+    "llmAt": "2026-11-16T18:33:08.236Z",
     "modifiedTime": "2026-09-11T17:06:42.000Z",
     "holder": {
       "key": "h2:LUCAS ANDRE SOUSA RIBEIRO",
@@ -261010,13 +260904,14 @@
   },
   {
     "fileId": "1qD1E4bc_sio88LlYTIFjBVxazfetlLyP",
-    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-10-30_VAL-2027-10-30_WILLAMES-WAGNER-DA-SILVA.pdf",
+    "filename": "20_NR33-FORMACAO_EMI-2026-10-30_VAL-2027-10-30_WILLAMES-WAGNER-DA-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9d8a92c49d64998efb1f0a99dbba987a",
-    "modifiedTime": "2026-11-16T10:36:53.393Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T12:17:48.423Z",
     "holder": {
       "key": "h2:WILLAMES WAGNER SILVA",
       "status": "OK"
@@ -261028,7 +260923,7 @@
     "statusDetail": "Válido até 30/10/2027",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "matchedTerm": "Book EHS 20_NR33",
     "extractedClause": "Concluído em 30/10/2026",
     "documents": [
       {
@@ -261039,7 +260934,7 @@
         "statusDetail": "Válido até 30/10/2027",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "matchedTerm": "Book EHS 20_NR33",
         "extractedClause": "Concluído em 30/10/2026"
       }
     ]
@@ -262374,13 +262269,14 @@
   },
   {
     "fileId": "1nTjosPxg-zh5IBcQKWTldiuTCjvPm-sy",
-    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-09-22_VAL-2027-09-22_DANIEL-FERNANDES-PACHECO.pdf",
+    "filename": "20_NR33-FORMACAO_EMI-2026-09-22_VAL-2027-09-22_DANIEL-FERNANDES-PACHECO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "0711d882582bd789f7777e6f541cf963",
-    "modifiedTime": "2026-11-16T10:37:40.997Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T12:12:53.801Z",
     "holder": {
       "key": "h2:DANIEL FERNANDES PACHECO",
       "status": "OK"
@@ -262392,7 +262288,7 @@
     "statusDetail": "Válido até 22/09/2027",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "matchedTerm": "Book EHS 20_NR33",
     "extractedClause": "Concluído em 22/09/2026",
     "documents": [
       {
@@ -262403,7 +262299,7 @@
         "statusDetail": "Válido até 22/09/2027",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "matchedTerm": "Book EHS 20_NR33",
         "extractedClause": "Concluído em 22/09/2026"
       }
     ]
@@ -262446,13 +262342,14 @@
   },
   {
     "fileId": "1bNh8VPz-XdOkwmzOkyLsGxuW4WSpp5dj",
-    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-10-20_VAL-2027-10-20_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
+    "filename": "20_NR33-FORMACAO_EMI-2026-10-20_VAL-2027-10-20_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "23f16d507d47784ee9e5bbc31f5ae2a2",
-    "modifiedTime": "2026-11-16T10:37:35.180Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T12:12:41.818Z",
     "holder": {
       "key": "h2:BRUNO EDUARDO FERREIRA PAIVA",
       "status": "OK"
@@ -262464,7 +262361,7 @@
     "statusDetail": "Válido até 20/10/2027",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "matchedTerm": "Book EHS 20_NR33",
     "extractedClause": "Concluído em 20/10/2026",
     "documents": [
       {
@@ -262475,7 +262372,7 @@
         "statusDetail": "Válido até 20/10/2027",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "matchedTerm": "Book EHS 20_NR33",
         "extractedClause": "Concluído em 20/10/2026"
       }
     ]
@@ -262518,13 +262415,14 @@
   },
   {
     "fileId": "1yD2Zer-XhwVtWCcI102Rul3u6u88oi4X",
-    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2026-10-29_VAL-2027-10-29_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+    "filename": "20_NR33-FORMACAO_EMI-2026-10-29_VAL-2027-10-29_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "874f43edb0cb99ffe136404a757c2932",
-    "modifiedTime": "2026-11-16T10:36:39.666Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T12:13:50.316Z",
     "holder": {
       "key": "h2:FELIPE ALAN PEGHIN SANTOS",
       "status": "OK"
@@ -262536,7 +262434,7 @@
     "statusDetail": "Válido até 29/10/2027",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "matchedTerm": "Book EHS 20_NR33",
     "extractedClause": "Concluído em 29/10/2026",
     "documents": [
       {
@@ -262547,7 +262445,7 @@
         "statusDetail": "Válido até 29/10/2027",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "matchedTerm": "Book EHS 20_NR33",
         "extractedClause": "Concluído em 29/10/2026"
       }
     ]
@@ -262590,13 +262488,14 @@
   },
   {
     "fileId": "1CDqpwdF7ZVSLmy42wqeMt5FFsfAew51-",
-    "filename": "46_NR23-INCENDIO-FORMACAO_EMI-2026-01-28_VAL-2027-01-28_THIAGO-LIMA-SANTOS-SILVA.pdf",
+    "filename": "20_NR33-FORMACAO_EMI-2026-01-28_VAL-2027-01-28_THIAGO-LIMA-SANTOS-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9b81b02f3574449f0d86822f3b3e995b",
-    "modifiedTime": "2026-11-16T10:36:56.557Z",
+    "llmAt": "2026-11-16T18:35:29.466Z",
+    "modifiedTime": "2026-11-16T12:17:35.272Z",
     "holder": {
       "key": "h2:THIAGO LIMA SANTOS SILVA",
       "status": "OK"
@@ -262608,7 +262507,7 @@
     "statusDetail": "PROGRAMAR: Vence em 73 dias (28/01/2027)",
     "source": "IMAGE_FALLBACK",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+    "matchedTerm": "Book EHS 20_NR33",
     "extractedClause": "Concluído em 28/01/2026",
     "documents": [
       {
@@ -262619,7 +262518,7 @@
         "statusDetail": "PROGRAMAR: Vence em 73 dias (28/01/2027)",
         "source": "IMAGE_FALLBACK",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-33 (via PDF) (Pág. 1)",
+        "matchedTerm": "Book EHS 20_NR33",
         "extractedClause": "Concluído em 28/01/2026"
       }
     ]
@@ -262705,7 +262604,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "23e6035cd5f1e2f7e307af601b1a9c47",
-    "llmAt": "2026-11-16T16:02:12.348Z",
+    "llmAt": "2026-11-16T18:35:29.465Z",
     "modifiedTime": "2026-11-16T15:44:00.093Z",
     "holder": {
       "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
@@ -262736,7 +262635,7 @@
     "sv": 1,
     "ev": 7,
     "md5": "6b5afb3d0486d2d4cde55ec3986496d8",
-    "llmAt": "2026-11-16T16:02:58.780Z",
+    "llmAt": "2026-11-16T18:35:29.465Z",
     "modifiedTime": "2026-11-16T14:09:49.765Z",
     "holder": {
       "key": "h2:ADENIO FRANCISCO SOUSA",
@@ -262940,6 +262839,409 @@
         "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ESO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
         "source": "FILENAME",
         "classificationSource": "NONE"
+      }
+    ]
+  },
+  {
+    "fileId": "1YuESkGdd84G_ChbQxqo7fk4Z4sw4Vaf6",
+    "filename": "Drielton Francisco de Araújo Silva - ART Formação N.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "14d1a8d3e33a3723ed7b8d33b8e67a4b",
+    "llmAt": "2026-11-16T22:01:20.469Z",
+    "modifiedTime": "2026-11-16T20:30:39.800Z",
+    "holder": {
+      "key": "h2:DRIELTON FRANCISCO ARAUJO SILVA",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-09T03:00:00.000Z",
+    "expirationDate": "2028-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "expirationDate": "2028-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1iwTwqBrW6Pptsfp7mxqL-3IS4X3YBZGG",
+    "filename": "Henrique Elânio Gomes Fernandes - ART N.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "20d31bdbcb3e8ab116d80b345ac81975",
+    "llmAt": "2026-11-16T22:01:21.580Z",
+    "modifiedTime": "2026-11-16T20:57:56.211Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-09T03:00:00.000Z",
+    "expirationDate": "2028-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "expirationDate": "2028-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1SU9ja9kkRvPjeMxRtDp9l6SCI5LV9KAb",
+    "filename": "GWO ART -Npdf.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "80dc66bfd0179fa55caaed3222b4359c",
+    "llmAt": "2026-11-16T22:01:22.225Z",
+    "modifiedTime": "2026-11-16T17:00:41.446Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-09T03:00:00.000Z",
+    "expirationDate": "2028-11-09T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 09/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-09T03:00:00.000Z",
+        "expirationDate": "2028-11-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO (Global Wind Organisation) – ART-N – Módulo Nacelle, Torre e Porão (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1PjKmYOG0BR3uNdzZ8E28IEjQfycZPksp",
+    "filename": "Drielton Francisco de Araújo Silva - ART Formação H.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4befb09c596147d45caf6880bb4cb103",
+    "llmAt": "2026-11-16T22:01:59.366Z",
+    "modifiedTime": "2026-11-16T20:30:01.600Z",
+    "holder": {
+      "key": "h2:DRIELTON FRANCISCO ARAUJO SILVA",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-10T03:00:00.000Z",
+    "expirationDate": "2028-11-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO ART (via PDF) (Pág. 2)",
+    "extractedClause": "Caucaia, 10 de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "expirationDate": "2028-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (via PDF) (Pág. 2)",
+        "extractedClause": "Caucaia, 10 de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1uCFqhX_u2wlfQ2bj56mP8OMCH1hZkPBj",
+    "filename": "Henrique Elânio Gomes Fernandes - ART Formação H.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "f7d3f6fd45d9b0ab97bb1a49aaab63e9",
+    "llmAt": "2026-11-16T22:02:06.622Z",
+    "modifiedTime": "2026-11-16T20:57:14.829Z",
+    "holder": {
+      "key": "h2:HENRIQUE ELANIO GOMES FERNANDES",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-10T03:00:00.000Z",
+    "expirationDate": "2028-11-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO (Global Wind Organisation) – ART – Módulo Hub, Spinner e Blade (FORMACAO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 2)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "expirationDate": "2028-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO (Global Wind Organisation) – ART – Módulo Hub, Spinner e Blade (FORMACAO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1BHmm7OsCmeNj3NHQDjIc-SZru8HGWGaQ",
+    "filename": "GWO ART -H.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "672d4989bfd2d82fb453cd27cef0d5c1",
+    "llmAt": "2026-11-16T22:02:07.067Z",
+    "modifiedTime": "2026-11-16T16:59:39.392Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "32",
+    "issueDate": "2026-11-10T03:00:00.000Z",
+    "expirationDate": "2028-11-10T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 10/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO ART (Pág. 1)",
+    "extractedClause": "Caucaia, 10de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "32",
+        "issueDate": "2026-11-10T03:00:00.000Z",
+        "expirationDate": "2028-11-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO ART (Pág. 1)",
+        "extractedClause": "Caucaia, 10de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "16LEUqWKo2AUD1xlIDZGMSJwO6BkhKqVb",
+    "filename": "Certificado - BSTR - PS - Mario Sergio Castro de Sousa (1) primeiros socorros- Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "7b02937a35485d29edd07422bfb7bb9a",
+    "llmAt": "2026-11-16T22:02:41.092Z",
+    "modifiedTime": "2026-10-19T19:33:00.292Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "16",
+    "issueDate": "2025-02-24T03:00:00.000Z",
+    "expirationDate": "2027-02-24T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 24/02/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Primeiros Socorros – NR 07 (BSTR - GWO)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-10-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2025-02-24T03:00:00.000Z",
+        "expirationDate": "2027-02-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/02/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Primeiros Socorros – NR 07 (BSTR - GWO)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1j43rbU3LGZ2MYOfH199YinMEneG_5zmc",
+    "filename": "16-11-2026_Igor_Martins_Rocha_NR12_-_Segurança_no_Trabalho_em_Máquinas_e_Equipamentos_(Geral)_(Periódico).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "7ec66445f0e167bb586023b0ebbf648c",
+    "llmAt": "2026-11-16T22:05:16.414Z",
+    "modifiedTime": "2026-11-16T18:55:33.752Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2026-11-16T03:00:00.000Z",
+    "expirationDate": "2028-11-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2026-11-16T03:00:00.000Z",
+        "expirationDate": "2028-11-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "[STORZ] - NR12 - SEGURANÇA NO TRABALHO EM MÁQUINAS E EQUIPAMENTOS (GERAL) (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1jsq8EsbeoDR-UHuLA9qGqp0Cv6mZW-cp",
+    "filename": "13-11-2026_Igor_Martins_Rocha_[STORZ]_-_NR10_-_CURSO_BáSICO_-_SEGURANçA_EM_INSTALAçõES_E_SERVIçOS_COM_ELETRICIDADE_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "f7ce3640b853607fa4a603744af0e1f5",
+    "llmAt": "2026-11-16T22:05:50.676Z",
+    "modifiedTime": "2026-11-16T18:50:04.023Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR10 - Curso Básico - Segurança em Instalações e Serviços com Eletricidade (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   }
