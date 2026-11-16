@@ -122,6 +122,8 @@ async function main() {
           const cur = f.name.match(/^\d\d_[A-Z0-9-]+_EMI-(\d{4}-\d{2}-\d{2}|NA)_VAL-(\d{4}-\d{2}-\d{2}|NA)_/)
           let emiName = emi
           if (cur && map) {
+            const curDoc = f.name.match(/^\d\d_([A-Z0-9]+(?:-[A-Z0-9]+)*?)-(?:FORMACAO|RECICLAGEM|ADM|PER|MRO|RT|DEM|UNICO)_/)?.[1]
+            if (curDoc && curDoc !== map.doc) issues.push(`Tipo no nome (${curDoc}) difere da leitura (${map.doc})`)
             const [, curEmi, curVal] = cur
             if (!emiName && curEmi !== 'NA') emiName = curEmi
             if (map.kind === 'UNICO' && !months && curVal === 'NA') val = 'NA'
@@ -145,6 +147,7 @@ async function main() {
             draftName: proposed,
             proposedSubfolder: map ? SUBFOLDER[map.kind] : null,
             unchanged: proposed === f.name,
+            multiDoc: docs.length > 1,
             issues,
           })
         }
@@ -156,7 +159,8 @@ async function main() {
   rows.sort((a, b) => a.person.localeCompare(b.person) || (a.code ?? '').localeCompare(b.code ?? ''))
   // Book R04: um só documento vigente por código; versões extras viram candidatas a 00_OBSOLETOS.
   const seen = new Map<string, any[]>()
-  for (const r of rows) if (r.draftName) {
+  // Certificado com vários documentos (GWO BST combinado) cobre outros códigos: nunca vira obsoleto por um deles.
+  for (const r of rows) if (r.draftName && !r.multiDoc) {
     const k = `${r.personFolderId}|${r.draftName.split('_')[0]}_${r.draftName.split('_')[1]}`
     seen.set(k, [...(seen.get(k) ?? []), r])
   }
