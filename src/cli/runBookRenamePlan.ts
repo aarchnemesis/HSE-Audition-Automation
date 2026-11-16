@@ -59,6 +59,11 @@ async function main() {
 
   const raw = JSON.parse(fs.readFileSync('data/pdf_content_cache.json', 'utf8'))
   const cache = new Map<string, any>((Array.isArray(raw) ? raw : Object.values(raw)).map((e: any) => [e.fileId, e]))
+  // Leitura do LLM por md5 (opcional): diz quantos documentos há no PDF e em que páginas.
+  const llm = new Map<string, any>()
+  try { for (const [k, v] of Object.entries<any>(JSON.parse(fs.readFileSync('data/llm_reading_cache.json', 'utf8')))) llm.set(k.split('|')[0], v) } catch {}
+  const GWO_TRAINING = new Set(['16', '17', '19', '21', '32'])
+  const CONTRACT = new Set(['04', '04.1', '40', '40.1'])
 
   const people: { id: string; name: string }[] = []
   for (const r of roots)
@@ -80,7 +85,13 @@ async function main() {
             continue
           }
           const c = cache.get(f.id)
-          const doc = c?.documents?.[0] ?? c
+          // Documentos de fato no PDF. O número WINDA (30) impresso num certificado GWO não é outro documento,
+          // e contrato + aditivo que o leitor LLM vê como um documento só também não são para separar.
+          let docs: any[] = c?.documents ?? []
+          if (docs.some(d => GWO_TRAINING.has(d.code))) docs = docs.filter(d => d.code !== '30')
+          const llmDocs = c?.md5 ? (llm.get(c.md5)?.consensus ?? llm.get(c.md5)?.a) : undefined
+          if (docs.length > 1 && llmDocs?.length === 1 && docs.every(d => CONTRACT.has(d.code))) docs = docs.slice(0, 1)
+          const doc = docs[0] ?? c
           const code: string | null = doc?.code ?? null
           const issues: string[] = []
           const map = code ? BOOK_CODE[code] : undefined
@@ -88,7 +99,9 @@ async function main() {
           else if (!map) issues.push(OUT_OF_BOOK[code] ?? `Código ${code} fora da tabela do Book`)
           if (c?.statusEHS === 'NAO_LIDO' || doc?.statusEHS === 'NAO_LIDO') issues.push('NC-04: documento sem data legível no conteúdo')
           if (c?.holder?.status === 'OUTRA_PESSOA') issues.push(`NC-05: conteúdo de outra pessoa (${c.holder.other})`)
-          if ((c?.documents?.length ?? 0) > 1) issues.push('Book seção 2: mais de um documento no mesmo PDF; separar em arquivos')
+          const samePage = docs.length > 1 && llmDocs?.length > 1 && new Set(llmDocs.map((d: any) => (d.paginas ?? []).join(','))).size === 1
+          if (samePage && docs.every(d => GWO_TRAINING.has(d.code))) issues.push('Certificado GWO combinado: vários módulos na mesma página (não separável)')
+          else if (docs.length > 1) issues.push('Book seção 2: mais de um documento no mesmo PDF; separar em arquivos')
           const exp = iso(doc?.expirationDate)
           // CNH e afins só trazem a validade: sem emissão impressa, EMI fica NA em vez de repetir o VAL.
           const emi = iso(doc?.issueDate) && iso(doc?.issueDate) !== exp ? iso(doc?.issueDate) : undefined

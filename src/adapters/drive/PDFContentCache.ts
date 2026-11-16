@@ -124,6 +124,8 @@ export interface CachedPDFEntry {
   matchedTerm?: string
   extractedClause?: string
   md5?: string
+  /** Data da leitura do Prometheus usada nesta entrada; leitura mais nova invalida o cache. */
+  llmAt?: string
   ev?: number
   holder?: {
     key: string

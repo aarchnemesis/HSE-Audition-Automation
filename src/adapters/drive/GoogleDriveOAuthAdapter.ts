@@ -391,9 +391,12 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       )
 
     const cached = cache.get(fileId, entry.modifiedTime || undefined, md5)
+    // Leitura do Prometheus gravada depois deste cache (fila do runLlmQueue): reavalia o arquivo.
+    const llmAt = PrometheusReader.enabled() ? PrometheusReader.readingAt(md5 || fileId) : undefined
     if (
       cached?.ev === CONTENT_EXTRACTOR_VERSION &&
-      cached.holder?.key === holderKey
+      cached.holder?.key === holderKey &&
+      (!llmAt || cached.llmAt === llmAt)
     ) {
       return {
         holderCheck: cached.holder,
@@ -585,6 +588,7 @@ export class GoogleDriveOAuthAdapter implements IDocumentProvider {
       sv: SIGNATURE_DATE_EXTRACTOR_VERSION,
       ev: CONTENT_EXTRACTOR_VERSION,
       md5,
+      llmAt: PrometheusReader.enabled() ? PrometheusReader.readingAt(md5 || fileId) : undefined,
       modifiedTime: entry.modifiedTime || undefined,
       holder: { key: holderKey, ...holderCheck },
       code: primaryDoc?.code || null,

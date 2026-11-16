@@ -236,6 +236,12 @@ export class PrometheusReader {
     return reading
   }
 
+  /** Quando a leitura (sem erro) deste md5 foi gravada; undefined se não há. */
+  static readingAt(key: string): string | undefined {
+    const c = this.load()[`${key}|v${LLM_PROMPT_VERSION}`]
+    return c && !c.error ? c.at : undefined
+  }
+
   /** Já lido (sem erro) para este md5? */
   static has(key: string): boolean {
     const c = this.load()[`${key}|v${LLM_PROMPT_VERSION}`]
