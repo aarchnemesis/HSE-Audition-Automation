@@ -841,9 +841,9 @@
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
-        "expirationDate": "2026-11-24T12:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 8 dias (24/11/2026)"
+        "expirationDate": "2027-11-15T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2027"
       },
       "32": {
         "code": "32",
@@ -1965,9 +1965,9 @@
       "28": {
         "code": "28",
         "name": "NR 33 SUP",
-        "expirationDate": "2027-01-06T12:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 51 dias (06/01/2027)"
+        "expirationDate": "2027-11-14T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2027"
       },
       "31": {
         "code": "31",
@@ -6079,16 +6079,16 @@
       "14": {
         "code": "14",
         "name": "NR 11",
-        "expirationDate": "2027-12-16T12:00:00.000Z",
+        "expirationDate": "2028-11-13T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 16/12/2027"
+        "statusDetail": "Válido até 13/11/2028"
       },
       "15": {
         "code": "15",
         "name": "NR 12",
-        "expirationDate": "2027-12-17T12:00:00.000Z",
+        "expirationDate": "2028-11-13T12:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/12/2027"
+        "statusDetail": "Válido até 13/11/2028"
       },
       "16": {
         "code": "16",
@@ -10016,9 +10016,9 @@
       "27": {
         "code": "27",
         "name": "NR 07 - PS",
-        "expirationDate": "2026-11-08T12:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 8 dias (08/11/2026)"
+        "expirationDate": "2028-11-16T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2028"
       },
       "28": {
         "code": "28",
