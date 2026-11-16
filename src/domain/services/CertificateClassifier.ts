@@ -325,7 +325,8 @@ export const BOOK_DOC_TO_CODE: Record<string, string> = {
   NR12: '15', 'GWO-FA': '16', 'GWO-MH': '17', NR18: '18', 'GWO-FAW': '19', NR33: '20',
   'NR33-SUPERVISOR': '28', NR35: '21', LOTO: '22', SIT: '25', ESO: '26', WINDA: '30',
   'GWO-ART': '32', 'CARTA-NR10': '12.1', 'CARTA-NR12': '15.1', 'CARTA-NR33': '20.1',
-  'CARTA-NR35': '21.1',
+  'CARTA-NR35': '21.1', 'NR07-PRIMEIROS-SOCORROS': '27', 'NR05-CIPA': '34', 'NR23-INCENDIO': '46',
+  'ELEVADOR-JASO': '31', 'INTEGRACAO-ATW': '29', 'DIPLOMA-TECNICO': '24', CRT: '23',
 }
 
 export class CertificateClassifier {

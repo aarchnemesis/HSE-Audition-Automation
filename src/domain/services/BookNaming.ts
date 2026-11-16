@@ -41,6 +41,11 @@ export const BOOK_CODE: Record<string, { cc: string; doc: string; kind: BookKind
   '27': { cc: '27', doc: 'NR07-PRIMEIROS-SOCORROS', kind: 'TREINO' },
   '34': { cc: '34', doc: 'NR05-CIPA', kind: 'TREINO' },
   '46': { cc: '46', doc: 'NR23-INCENDIO', kind: 'TREINO' },
+  '31': { cc: '31', doc: 'ELEVADOR-JASO', kind: 'TREINO' },
+  '29': { cc: '29', doc: 'INTEGRACAO-ATW', kind: 'TREINO' },
+  '24': { cc: '24', doc: 'DIPLOMA-TECNICO', kind: 'UNICO' },
+  // No Drive o 23 é CRT; no Book o 23 é GWO BST (altura). O CRT vai para o 47 para não confundir.
+  '23': { cc: '47', doc: 'CRT', kind: 'UNICO' },
   '12.1': { cc: '41', doc: 'CARTA-NR10', kind: 'UNICO' },
   '15.1': { cc: '42', doc: 'CARTA-NR12', kind: 'UNICO' },
   '20.1': { cc: '43', doc: 'CARTA-NR33', kind: 'UNICO' },
@@ -54,7 +59,7 @@ export const BOOK_SUBFOLDER: Record<BookKind, string> = {
 }
 
 /** Sem vencimento (seção 4: registro, OS, contrato, vacina, diploma). */
-export const BOOK_NO_EXPIRY = new Set(['02', '03', '04', '05', '24', '40', '40.1', '04.1'])
+export const BOOK_NO_EXPIRY = new Set(['02', '03', '04', '05', '23', '24', '40', '40.1', '04.1'])
 
 /** Seção 4: validade em meses a partir da EMI, pelo código do Book (cc). */
 export const BOOK_VALIDITY_MONTHS: Record<string, number> = {
@@ -64,6 +69,8 @@ export const BOOK_VALIDITY_MONTHS: Record<string, number> = {
   // CIPA: mandato anual (guia de treinamentos SST). Primeiros socorros e incêndio: a NR não fixa prazo;
   // 12 meses como a reciclagem da brigada (ABNT NBR 14276), o mais conservador.
   '27': 12, '34': 12, '46': 12,
+  // Elevador JASO e Integração ATW: 24 meses, o prazo declarado em todos os certificados lidos.
+  '31': 24, '29': 24,
 }
 
 export function slugPersonName(n: string): string {

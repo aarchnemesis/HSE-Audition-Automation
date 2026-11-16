@@ -12,20 +12,15 @@ import fs from 'fs'
 import path from 'path'
 import { drive_v3, google } from 'googleapis'
 import { getAuthorizedClient } from '../adapters/drive/googleAuth.js'
-import { BOOK_CODE, BOOK_VALIDITY_MONTHS } from '../domain/services/BookNaming.js'
+import { BOOK_CODE, BOOK_NO_EXPIRY, BOOK_VALIDITY_MONTHS } from '../domain/services/BookNaming.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
 // Tabela única do Book (domain/services/BookNaming), a mesma usada pela Storz e pela leitura do Drive.
 /** Códigos do Drive que o Book não prevê (ou que mudaram de sentido): ficam para decisão humana. */
-const OUT_OF_BOOK: Record<string, string> = {
-  '23': 'No Drive o 23 é CRT/Declaração de Classe; no Book o 23 é GWO BST Trabalho em Altura (WAH)',
-  '24': 'Diploma técnico: o Book cita na tabela de validade, mas não dá código na seção 3',
-  '29': 'ATW Integração não está na tabela do Book',
-  '31': 'Elevador (JASO) não está na tabela do Book',
-}
+const OUT_OF_BOOK: Record<string, string> = {}
 const SUBFOLDER: Record<string, string> = { ASO: '02_SAUDE_OCUPACIONAL', TREINO: '03_TREINAMENTOS', UNICO: '01_DOCUMENTOS_PESSOAIS' }
-const NO_EXPIRY = new Set(['02', '03', '04', '05', '24', '40', '40.1', '04.1'])
+const NO_EXPIRY = BOOK_NO_EXPIRY
 
 const iso = (d?: string) => (d ? d.slice(0, 10) : undefined)
 const slugName = (n: string) =>
