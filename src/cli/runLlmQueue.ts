@@ -45,7 +45,22 @@ async function main() {
   try { llm = JSON.parse(fs.readFileSync('data/llm_reading_cache.json', 'utf8')) } catch {}
 
   const queue: { f: any; person: string; strong: boolean }[] = []
-  for (const f of files) {
+  // --ids=arquivo.json: lê exatamente esses fileIds (ex.: pendentes do plano do Book), sem filtro de dúvida.
+  const idsPath = process.argv.find(a => a.startsWith('--ids='))?.split('=')[1]
+  if (idsPath) {
+    const byId = new Map(files.map(f => [f.fileId, f]))
+    const planRows = new Map<string, any>()
+    try { for (const r of JSON.parse(fs.readFileSync('scratch/book_rename_plan.json', 'utf8')).rows) planRows.set(r.fileId, r) } catch {}
+    for (const id of JSON.parse(fs.readFileSync(idsPath, 'utf8')) as string[]) {
+      const f = byId.get(id) ?? { fileId: id, filename: planRows.get(id)?.currentName ?? id }
+      const person = owner.get(id)
+      if (!person) continue
+      const k = `${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`
+      if (llm[k]?.at && !llm[k]?.error) continue
+      queue.push({ f, person, strong: true })
+    }
+  }
+  for (const f of idsPath ? [] : files) {
     const person = owner.get(f.fileId)
     if (!person) continue
     if (llm[`${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`]?.at && !llm[`${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`]?.error) continue
