@@ -154,6 +154,12 @@ async function main() {
               issues.push(`Datas lidas no conteúdo (EMI ${emiName ?? 'NA'}, VAL ${val}) diferem do nome atual no padrão do Book`)
           }
           if (emiName && val !== 'NA' && val < emiName) issues.push(`Validade (${val}) anterior à emissão (${emiName})`)
+          // CNH definitiva emitida desde 2021 vale 10 anos (5 a partir dos 50 anos). Vencimento além de hoje + 5 anos
+          // só pode ser de uma CNH de 10 anos, então a emissão é o vencimento - 10 anos. PPD (permissão) fica de fora.
+          if (code === '08' && !emiName && val !== 'NA' && !/PPD|PERMISS/i.test(f.name)) {
+            const lim = new Date(); lim.setFullYear(lim.getFullYear() + 5)
+            if (new Date(`${val}T12:00:00`) > lim) { const d = new Date(`${val}T12:00:00`); d.setFullYear(d.getFullYear() - 10); emiName = d.toISOString().slice(0, 10) }
+          }
           // CNH: vale o vencimento impresso; sem emissão lida, EMI fica NA.
           const valOnly = code === '08' && val !== 'NA'
           if (map && !emiName && !permanent && !valOnly) issues.push('Sem data de emissão lida no conteúdo')
