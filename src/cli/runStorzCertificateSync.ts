@@ -52,9 +52,14 @@ async function plan(since?: string) {
   const roster: string[] = drive.map((x: any) => x.name)
   fs.mkdirSync(OUT_DIR, { recursive: true })
 
+  // Nome do aluno na Storz escrito diferente da pasta do Drive: scratch/storz_aliases.json { "nome na Storz": "nome da pasta" }.
+  let aliases: Record<string, string> = {}
+  try { aliases = JSON.parse(fs.readFileSync('scratch/storz_aliases.json', 'utf8')) } catch {}
+
   const rows: any[] = []
   for (const c of recent) {
-    const person = drive.find((x: any) => namesMatch(x.name, c.ds_nome_aluno))
+    const alias = aliases[c.ds_nome_aluno]
+    const person = drive.find((x: any) => alias ? x.name === alias : namesMatch(x.name, c.ds_nome_aluno))
     const code = CertificateClassifier.classify(c.ds_nome_curso).code
     const concl = brToIso(c.dt_conclusao)
     const base = { certId: c.id_certificado, student: c.ds_nome_aluno, course: c.ds_nome_curso, conclusion: concl, code }
@@ -81,6 +86,9 @@ async function plan(since?: string) {
     const holder = checkHolder(col.pages.join('\n'), person.name, roster)
     const emi = read?.issueDate ? new Date(read.issueDate).toISOString().slice(0, 10) : concl
     const issues: string[] = []
+    // Só certificados com assinatura eletrônica embutida (Clicksign, ICP etc.) entram no Drive: um PDF
+    // sem assinatura não pode virar o vigente no lugar de um assinado.
+    if (!hasEmbeddedSignature(pdf)) issues.push('PDF sem assinatura eletrônica; não substitui certificado assinado')
     if (holder.status !== 'OK') issues.push(`Titular não confirmado no PDF (${holder.status}${holder.other ? `: ${holder.other}` : ''})`)
     if (emi !== concl) issues.push(`Data lida no PDF (${emi}) diferente da conclusão na Storz (${concl})`)
     const tipo = /PERI[OÓ]DIC|RECICL/i.test(c.ds_nome_curso) ? 'RECICLAGEM' : 'FORMACAO'
@@ -122,6 +130,12 @@ async function apply(decisionsPath: string) {
     done++
   }
   console.log(`[storz-certs] ${done} certificados incluídos no Drive`)
+}
+
+/** Assinatura digital embutida no PDF (campo /ByteRange + PKCS7/CAdES), ou carimbo de plataforma de assinatura. */
+export function hasEmbeddedSignature(pdf: Buffer): boolean {
+  const raw = pdf.toString('latin1')
+  return (/\/ByteRange/.test(raw) && /adbe\.pkcs7|ETSI\.CAdES/.test(raw)) ||/clicksign|d4sign|docusign|autentique|zapsign/i.test(raw)
 }
 
 const arg = (k: string) => process.argv.find(a => a.startsWith(`--${k}=`))?.split('=')[1]
