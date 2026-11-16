@@ -260942,5 +260942,77 @@
         "extractedClause": "Concluído em 28/01/2026"
       }
     ]
+  },
+  {
+    "fileId": "1alO2hOaJXQwP4vwEOgyJLTQqY67-C4Sa",
+    "filename": "14-11-2026_Diego_Menezes_Nunes_Coelho_[STORZ]_-_NR33_SUPERVISOR_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "db783533bb8031f10f1f778ee096935b",
+    "modifiedTime": "2026-11-16T12:49:53.067Z",
+    "holder": {
+      "key": "h2:DIEGO MENEZES NUNES COELHO",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-11-14T03:00:00.000Z",
+    "expirationDate": "2027-11-14T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 14/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 SUPERVISOR (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-11-14T03:00:00.000Z",
+        "expirationDate": "2027-11-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 SUPERVISOR (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1jhXl3-wD1syki0Rom9-5VGJbllQyFdE1",
+    "filename": "Antonio_Carvalho_ATENDIMENTO_PRé_HOSPITALAR_(PRIMEIROS_SOCORROS)_BáSICO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ba7d79de07d33c29252a61d44818855e",
+    "modifiedTime": "2026-11-16T12:11:31.233Z",
+    "holder": {
+      "key": "h2:ANTONIO CARVALHO JUNIOR",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2026-10-08T03:00:00.000Z",
+    "expirationDate": "2028-10-08T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 08/10/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-07 Primeiros Socorros",
+    "extractedClause": "Iniciado em 08/10/2026",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2026-10-08T03:00:00.000Z",
+        "expirationDate": "2028-10-08T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 08/10/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-07 Primeiros Socorros",
+        "extractedClause": "Iniciado em 08/10/2026"
+      }
+    ]
   }
 ]
