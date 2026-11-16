@@ -93,6 +93,12 @@ const SEMANTIC_RULES: Array<{
     code: '20.1',
     matchedTerm: 'Carta NR-33',
   },
+  // NR-20 Inflamáveis e combustíveis (código 48; o 20 do Drive é NR-33)
+  {
+    regex: /\b(?:NR\s*[-_]?\s*20\b(?!\s*[./-]\s*\d)|INFLAMAVEIS\s+E\s+COMBUSTIVEIS|SEGURANCA\s+COM\s+INFLAMAVEIS)/i,
+    code: '48',
+    matchedTerm: 'NR-20 Inflamáveis',
+  },
   // NR-33 Supervisor - deve vir antes de NR-33 Vigia/Trabalhador
   {
     regex:
@@ -326,7 +332,7 @@ export const BOOK_DOC_TO_CODE: Record<string, string> = {
   'NR33-SUPERVISOR': '28', NR35: '21', LOTO: '22', SIT: '25', ESO: '26', WINDA: '30',
   'GWO-ART': '32', 'CARTA-NR10': '12.1', 'CARTA-NR12': '15.1', 'CARTA-NR33': '20.1',
   'CARTA-NR35': '21.1', 'NR07-PRIMEIROS-SOCORROS': '27', 'NR05-CIPA': '34', 'NR23-INCENDIO': '46',
-  'ELEVADOR-JASO': '31', 'INTEGRACAO-ATW': '29', 'DIPLOMA-TECNICO': '24', CRT: '23',
+  'ELEVADOR-JASO': '31', 'INTEGRACAO-ATW': '29', 'DIPLOMA-TECNICO': '24', CRT: '23', NR20: '48',
 }
 
 export class CertificateClassifier {

@@ -25,7 +25,13 @@ async function main() {
 
   const drive = google.drive({ version: 'v3', auth: (await getAuthorizedClient()) as any })
   const folderCache = new Map<string, string>()
-  const subfolder = async (personFolderId: string, name: string) => {
+  // Subpasta em mais de um nível ("02_SAUDE_OCUPACIONAL/EXAMES"): resolve um nível de cada vez.
+  const subfolder = async (personFolderId: string, path: string): Promise<string> => {
+    let parent = personFolderId
+    for (const part of path.split('/')) parent = await oneLevel(parent, part)
+    return parent
+  }
+  const oneLevel = async (personFolderId: string, name: string) => {
     const key = `${personFolderId}/${name}`
     if (folderCache.has(key)) return folderCache.get(key)!
     const q = `'${personFolderId}' in parents and name = '${name}' and mimeType = '${FOLDER_MIME}' and trashed = false`

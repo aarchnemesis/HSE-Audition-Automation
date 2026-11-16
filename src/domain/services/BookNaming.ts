@@ -46,6 +46,8 @@ export const BOOK_CODE: Record<string, { cc: string; doc: string; kind: BookKind
   '24': { cc: '24', doc: 'DIPLOMA-TECNICO', kind: 'UNICO' },
   // No Drive o 23 é CRT; no Book o 23 é GWO BST (altura). O CRT vai para o 47 para não confundir.
   '23': { cc: '47', doc: 'CRT', kind: 'UNICO' },
+  // NR-20 (inflamáveis) não existia no Drive; o 20 do Drive é NR-33, por isso 48.
+  '48': { cc: '48', doc: 'NR20', kind: 'TREINO' },
   '12.1': { cc: '41', doc: 'CARTA-NR10', kind: 'UNICO' },
   '15.1': { cc: '42', doc: 'CARTA-NR12', kind: 'UNICO' },
   '20.1': { cc: '43', doc: 'CARTA-NR33', kind: 'UNICO' },
@@ -71,6 +73,8 @@ export const BOOK_VALIDITY_MONTHS: Record<string, number> = {
   '27': 12, '34': 12, '46': 12,
   // Elevador JASO e Integração ATW: 24 meses, o prazo declarado em todos os certificados lidos.
   '31': 24, '29': 24,
+  // NR-20 básico: trienal (guia de treinamentos SST).
+  '48': 36,
 }
 
 export function slugPersonName(n: string): string {

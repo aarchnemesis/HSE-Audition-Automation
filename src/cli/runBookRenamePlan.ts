@@ -26,6 +26,28 @@ const iso = (d?: string) => (d ? d.slice(0, 10) : undefined)
 const slugName = (n: string) =>
   n.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z]+/g, '-').replace(/^-|-$/g, '')
 
+/** Documento sem código no Book: pasta e nome a partir do nome do arquivo e da leitura do Prometheus. */
+function extraFor(filename: string, d?: any): { sub: string; slug: string; emi?: string; val: string } | null {
+  const ok = (x?: string) => (x && x !== 'ausente' ? x : undefined)
+  const curso = ok(d?.curso_ou_norma)
+  if (!d || !curso) return null
+  const t = `${filename} ${curso}`.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase()
+  const dateOf = (x?: string) => (x && /^\d{4}-\d{2}-\d{2}$/.test(x) ? x : undefined)
+  const emi = dateOf(ok(d.data_conclusao)) ?? dateOf(ok(d.data_assinatura))
+  const val = dateOf(ok(d.validade_declarada)) ?? 'NA'
+  const slug = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase().replace(/[^A-Z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40).replace(/-$/, '')
+  if (/EXAME|AUDIOMETR|ACUIDADE|ESPIROMETR|ELETROCARDIO|\bECG\b|\bEEG\b|ELETROENCEF|HEMOGRAMA|GLICEMIA|\bIGE\b|TOXICOL|LAUDO/.test(t))
+    return { sub: '02_SAUDE_OCUPACIONAL/EXAMES', slug: `EXAME-${slug(curso)}`, emi, val }
+  if (/CERTIDAO|ENSINO MEDIO|HISTORICO ESCOLAR|CARTA DE (IDENTIFICACAO DOS )?RISCOS|GUIA DE RISCOS|RISCOS AMBIENTAIS/.test(t))
+    return { sub: '01_DOCUMENTOS_PESSOAIS/OUTROS', slug: slug(curso), emi, val }
+  if (d.tipo_documento !== 'certificado_treinamento') return null
+  if (/GAMESA|SIEMENS|SGRE|\bSGTT\b|\bSG ?\d|\bTSWA?\b|TASK SPECIFIC|BLADE INSPECTION/.test(t))
+    return { sub: '03_TREINAMENTOS/CLIENTE', slug: `TSW-GAMESA-${slug(curso)}`, emi, val }
+  if (/INTEGRACAO|SAFETY INDUCTION|INDUCAO/.test(t))
+    return { sub: '03_TREINAMENTOS/CLIENTE', slug: `INTEGRACAO-${slug(curso)}`, emi, val }
+  return { sub: '03_TREINAMENTOS/COMPLEMENTARES', slug: slug(curso), emi, val }
+}
+
 function tipoFor(kind: string, filename: string): string {
   const f = filename.toUpperCase()
   if (kind === 'ASO') {
@@ -133,9 +155,22 @@ async function main() {
           }
           if (emiName && val !== 'NA' && val < emiName) issues.push(`Validade (${val}) anterior à emissão (${emiName})`)
           if (map && !emiName && !permanent) issues.push('Sem data de emissão lida no conteúdo')
-          const proposed = map
+          let proposed = map
             ? `${map.cc}_${map.doc}-${tipoFor(map.kind, f.name)}_EMI-${emiName ?? 'NA'}_VAL-${val}_${slugName(p.name)}.pdf`
             : null
+          let sub = map ? SUBFOLDER[map.kind] : null
+          // Documentos sem código no Book (exames, certificações do cliente, treinamentos complementares,
+          // documentos pessoais extras): pasta própria, nome com as datas lidas pelo Prometheus.
+          if (!code) {
+            const llmEntry = c?.md5 ? llm.get(c.md5) : undefined
+            const ex = llmEntry?.agreed === false && !llmEntry?.consensus ? null : extraFor(f.name, llmDocs?.[0])
+            if (ex) {
+              for (const k of ['Tipo de documento não reconhecido', 'NC-04: documento sem data legível no conteúdo'])
+                if (issues.includes(k)) issues.splice(issues.indexOf(k), 1)
+              proposed = `${ex.slug}_EMI-${ex.emi ?? 'NA'}_VAL-${ex.val}_${slugName(p.name)}.pdf`
+              sub = ex.sub
+            }
+          }
           rows.push({
             fileId: f.id,
             person: p.name,
@@ -145,7 +180,7 @@ async function main() {
             code,
             proposedName: issues.length ? null : proposed,
             draftName: proposed,
-            proposedSubfolder: map ? SUBFOLDER[map.kind] : null,
+            proposedSubfolder: sub,
             unchanged: proposed === f.name,
             multiDoc: docs.length > 1,
             issues,
