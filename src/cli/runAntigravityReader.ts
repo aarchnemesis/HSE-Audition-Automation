@@ -35,7 +35,7 @@ function agy(cwd: string, text: string, model: string): Promise<{ out: string; t
     p.on('close', () => {
       try {
         const j = JSON.parse(out.slice(out.indexOf('{')))
-        if (j.status !== 'SUCCESS') return reject(new Error(`agy ${j.status}: ${String(j.response ?? err).slice(0, 200)}`))
+        if (j.status !== "SUCCESS") return reject(new Error(`agy ${j.status}: ${JSON.stringify({ ...j, conversation_id: undefined }).slice(0, 300)}`))
         resolve({ out: String(j.response ?? ''), tokens: Number(j.usage?.total_tokens ?? 0) })
       } catch {
         reject(new Error(`agy sem JSON: ${(err || out).slice(0, 200)}`))
@@ -117,8 +117,15 @@ async function main() {
         if (c.agreed) agreed++
         patch[f.key] = { a, b, consensus: c.consensus, agreed: c.agreed, confirmedBy: c.agreed ? 'B' : undefined, disagreement: c.why, vision: true, tier: 3, engine: 'antigravity', models: [modelA, modelB], at: new Date().toISOString() }
       } catch (e: any) {
+        const msg = String(e?.message || e)
+        // Cota esgotada é da conta pessoal do João (a mesma do trabalho dele): para tudo na hora, sem insistir.
+        if (/quota reached|usage limit|exceeded your current quota|\b429\b/i.test(msg)) {
+          next = run.length
+          console.log(`[agy] PARADO: cota do Antigravity esgotada. ${msg.match(/Resets in [0-9hms]+/)?.[0] ?? ''}`)
+          continue
+        }
         errors++
-        patch[f.key] = { ...(patch[f.key] ?? {}), agreed: false, engine: 'antigravity', error: String(e?.message || e).slice(0, 300), at: new Date().toISOString() }
+        patch[f.key] = { ...(patch[f.key] ?? {}), agreed: false, engine: 'antigravity', error: msg.slice(0, 300), at: new Date().toISOString() }
       } finally {
         fs.rmSync(dir, { recursive: true, force: true })
       }
