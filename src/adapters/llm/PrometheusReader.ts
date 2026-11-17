@@ -50,6 +50,7 @@ export interface LlmReading {
 }
 
 const CONTAINER = process.env.HSE_PROMETHEUS_CONTAINER || 'planing-tfpwdbeqynthb9m1xs698zlq'
+const PROMETHEUS_USER = process.env.HSE_PROMETHEUS_USER || '10000:10000'
 const CACHE_FILE = path.join(process.cwd(), 'data', 'llm_reading_cache.json')
 const MAX_PARALLEL = Number(process.env.HSE_PROMETHEUS_PARALLEL) || 8
 
@@ -84,7 +85,9 @@ export function runBatch(
   threads = MAX_PARALLEL,
   onProgress?: (line: string) => void
 ): Promise<Map<string, string>> {
-  const docker = ['docker', 'exec', '-i', CONTAINER, '/opt/hermes/.venv/bin/python', '/opt/data/hse/prometheus_llm_worker.py', '-', '-', String(threads)]
+  // Roda como o usuário do Prometheus (hermes, 10000). Como root, a renovação do token do Codex regravava
+  // /opt/data/auth.json como root:root 600 e o Prometheus perdia o acesso (13/11 11h e 16/11 21h44).
+  const docker = ['docker', 'exec', '-i', '-u', PROMETHEUS_USER, CONTAINER, '/opt/hermes/.venv/bin/python', '/opt/data/hse/prometheus_llm_worker.py', '-', '-', String(threads)]
   const ssh = process.env.HSE_PROMETHEUS_SSH
   const [cmd, ...args] = ssh ? ['ssh', '-F', '/dev/null', '-o', 'BatchMode=yes', ssh, docker.join(' ')] : docker
   return new Promise((resolve, reject) => {
