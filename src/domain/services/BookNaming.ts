@@ -40,7 +40,8 @@ export const BOOK_CODE: Record<string, { cc: string; doc: string; kind: BookKind
   '32': { cc: '32', doc: 'GWO-ART', kind: 'TREINO' },
   '27': { cc: '27', doc: 'NR07-PRIMEIROS-SOCORROS', kind: 'TREINO' },
   '34': { cc: '34', doc: 'NR05-CIPA', kind: 'TREINO' },
-  '46': { cc: '46', doc: 'NR23-INCENDIO', kind: 'TREINO' },
+  // 46 no Book é Exames complementares; NR-23 Incêndio usa o 49 (Book v1.2).
+  '49': { cc: '49', doc: 'NR23-INCENDIO', kind: 'TREINO' },
   '31': { cc: '31', doc: 'ELEVADOR-JASO', kind: 'TREINO' },
   '29': { cc: '29', doc: 'INTEGRACAO-ATW', kind: 'TREINO' },
   '24': { cc: '24', doc: 'DIPLOMA-TECNICO', kind: 'UNICO' },
@@ -70,7 +71,7 @@ export const BOOK_VALIDITY_MONTHS: Record<string, number> = {
   '41': 12, '42': 12, '43': 12, '44': 12,
   // CIPA: mandato anual (guia de treinamentos SST). Primeiros socorros e incêndio: a NR não fixa prazo;
   // 12 meses como a reciclagem da brigada (ABNT NBR 14276), o mais conservador.
-  '27': 12, '34': 12, '46': 12,
+  '27': 12, '34': 12, '49': 12,
   // Elevador JASO e Integração ATW: 24 meses, o prazo declarado em todos os certificados lidos.
   '31': 24, '29': 24,
   // NR-20 básico: trienal (guia de treinamentos SST).

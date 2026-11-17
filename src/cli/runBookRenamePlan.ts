@@ -114,7 +114,8 @@ async function main() {
           const llmDocs = c?.md5 ? (llm.get(c.md5)?.consensus ?? llm.get(c.md5)?.a) : undefined
           if (docs.length > 1 && llmDocs?.length === 1 && docs.every(d => CONTRACT.has(d.code))) docs = docs.slice(0, 1)
           const doc = docs[0] ?? c
-          const code: string | null = doc?.code ?? null
+          // Book v1.2: NR-23 Incêndio saiu do 46 (exames) para o 49; o cache ainda pode trazer o 46 antigo.
+          const code: string | null = doc?.code === '46' && /NR23-INCENDIO|INCENDIO/i.test(f.name) ? '49' : (doc?.code ?? null)
           const issues: string[] = []
           const map = code ? BOOK_CODE[code] : undefined
           if (!code) issues.push('Tipo de documento não reconhecido')
