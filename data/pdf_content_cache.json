@@ -263048,5 +263048,41 @@
         "extractedClause": "Concluido em 29 de Novembro de 2023"
       }
     ]
+  },
+  {
+    "fileId": "1FX3r0xTcqE4ScP0jwCoJ-ZD-wOIv0N7Z",
+    "filename": "Certificado_NR35_-_Francisco_Franklin_Da_Silva_ass_assinado.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "16f77f6b4d8dd6f1fd5ccacebd587d72",
+    "modifiedTime": "2026-11-17T13:31:16.428Z",
+    "holder": {
+      "key": "h2:FRANCISCO FRANKLIN SILVA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-08-01T03:00:00.000Z",
+    "expirationDate": "2028-08-01T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 01/08/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 01 de agosto de 2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-08-01T03:00:00.000Z",
+        "expirationDate": "2028-08-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/08/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35",
+        "extractedClause": "no dia 01 de agosto de 2026"
+      }
+    ]
   }
 ]
