@@ -1305,12 +1305,13 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 07.08.2026 - Antonio Rafael dos Santos.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "expirationDate": "2027-08-07T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 07/08/2027",
     "evidenceUrl": "https://drive.google.com/file/d/1CNQ-hghr3ZoIzJpoInKGXkSDzLmu65G7/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-17T10:11:38.223Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -2520,12 +2521,13 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2025-11-26_VAL-2026-11-26_CAIO-VICTOR-OLIVEIRA-BALBINO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "expirationDate": "2026-11-26T03:00:00.000Z",
+    "statusEHS": "VENCE_15",
+    "detail": "ALERTA URGENTE: Vence em 9 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1fvsUp8zlTdqSTzZeMEfmwEErsi8BXcQ2/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-13T17:49:03.616Z"
+    "lastUpdated": "2026-11-17T10:11:38.223Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -13907,12 +13909,13 @@
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
     "modality": "PRESENCIAL",
-    "statusEHS": "NAO_LIDO",
-    "detail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 30.07.2027 - JOSE ORLANDO BARROS DA SILVA FILHO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+    "expirationDate": "2027-07-30T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 30/07/2027 | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (30/07/2027) difere da data impressa no documento (30/07/2026).",
     "evidenceUrl": "https://drive.google.com/file/d/1MrK5sY_t5uDmtzVq8yPQ_wS84wMaMKrv/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1gtsv6eCtZ4oaW_nFjvRBgXHhAj87MzD0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-12T10:02:21.451Z"
+    "lastUpdated": "2026-11-17T10:11:38.223Z"
   },
   {
     "inspectorId": "rpo_55",
