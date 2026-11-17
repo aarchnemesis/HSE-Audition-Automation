@@ -263121,5 +263121,77 @@
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
+  },
+  {
+    "fileId": "1cYol04uZ4bMWFaZzvqNYThE6RFEoA0Aq",
+    "filename": "Francisco Leonardo da Silva Ferreira - ALTURA - Clicksign_removed.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "9e3210d2c8735439cb96b6207f44609a",
+    "modifiedTime": "2026-11-17T20:45:51.697Z",
+    "holder": {
+      "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-09-29T03:00:00.000Z",
+    "expirationDate": "2028-09-29T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 29/09/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 29de Setembro de 2026",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-09-29T03:00:00.000Z",
+        "expirationDate": "2028-09-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/09/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35",
+        "extractedClause": "no dia 29de Setembro de 2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1AwV66p6x3jCPhUC6AIbB9RUnu1eF4VH9",
+    "filename": "2026-02-06_Elias dos Santos Rodrigues_NR18 - Seguran+┬║a e Sa+┬ªde No Trabalho Na Ind+┬ªstria Da Constru+┬║+├║o (B+├¡sico em Seguran+┬║a do Trabalho) - Clicksign.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "3509889b498642c39e49378a6e9b1d47",
+    "modifiedTime": "2026-11-17T20:40:18.437Z",
+    "holder": {
+      "key": "h2:ELIAS SANTOS RODRIGUES",
+      "status": "OK"
+    },
+    "code": "18",
+    "issueDate": "2026-02-06T03:00:00.000Z",
+    "expirationDate": "2028-02-06T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 06/02/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-18",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "18",
+        "issueDate": "2026-02-06T03:00:00.000Z",
+        "expirationDate": "2028-02-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/02/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-18",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
   }
 ]
