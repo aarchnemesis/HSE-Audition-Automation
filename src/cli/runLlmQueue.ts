@@ -38,8 +38,10 @@ async function main() {
   const vision = tier >= 2
   const DPI = tier >= 3 ? '200' : '110'
   const MAX_PAGES = tier >= 3 ? '6' : '3'
-  const STRONG_A = { provider: process.env.HSE_LLM_STRONG_A_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_A_MODEL || 'gpt-6.1-sol' }
-  const STRONG_B = { provider: process.env.HSE_LLM_STRONG_B_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_B_MODEL || 'gpt-6-astra' }
+  // Cota do Codex é curta: modelos pesados (Sol, Astra) esgotam em minutos. Padrão é o modelo do Prometheus;
+  // modelo pesado só por variável de ambiente, de propósito.
+  const STRONG_A = { provider: process.env.HSE_LLM_STRONG_A_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_A_MODEL || 'gpt-5.6-luna' }
+  const STRONG_B = { provider: process.env.HSE_LLM_STRONG_B_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_B_MODEL || 'gpt-5.6-luna' }
   const limit = Number(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1]) || Infinity
   const raw = JSON.parse(fs.readFileSync('data/pdf_content_cache.json', 'utf8'))
   const files: any[] = Array.isArray(raw) ? raw : Object.values(raw)
