@@ -1934,6 +1934,18 @@
   },
   {
     "inspectorName": "FRANCISCO FRANKLIN DA SILVA",
+    "docCode": "21",
+    "docName": "NR-35 / GWO Working at Heights",
+    "driveExpiration": "2028-08-01T03:00:00.000Z",
+    "trustedSource": "DRIVE",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy"
+  },
+  {
+    "inspectorName": "FRANCISCO FRANKLIN DA SILVA",
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "driveExpiration": "2027-12-05T03:00:00.000Z",
