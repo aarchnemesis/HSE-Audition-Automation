@@ -71,10 +71,11 @@
     "driveExpiration": "2028-11-13T03:00:00.000Z",
     "storzExpiration": "2028-11-13T03:00:00.000Z",
     "trustedSource": "DRIVE",
-    "divergent": true,
-    "divergenceKind": "SOMENTE_DRIVE",
-    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
-    "recommendedAction": "Incluir na RPO com base no Drive",
+    "rpoExpiration": "2028-11-09T12:00:00.000Z",
+    "divergent": false,
+    "diffDays": 4,
+    "detail": "Drive e RPO consistentes.",
+    "recommendedAction": "Nenhuma ação necessária (Consistente)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC"
   },
   {
