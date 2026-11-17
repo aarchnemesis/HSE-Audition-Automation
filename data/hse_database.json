@@ -1822,15 +1822,15 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-11-16T03:00:00.000Z",
+    "expirationDate": "2027-11-16T12:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "621274",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (621274) em 16/11/2026 — Válido até 16/11/2027 (aguardando upload no Drive).",
+    "detail": "Válido até 16/11/2027 (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1OLwcwGxacW4yBI0CfFCH5TEvTWi0mZwM",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T00:58:07.260Z"
+    "lastUpdated": "2026-11-17T16:04:20.638Z"
   },
   {
     "inspectorId": "rpo_16",
@@ -12291,11 +12291,14 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-21T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 4 dia(s) (21/11/2026)",
+    "storzRequestId": "625648",
+    "storzState": "SOLICITADO",
+    "storzProgressPercent": 0,
+    "detail": "CRÍTICO: Vence em 4 dia(s) (21/11/2026) | SOLICITADO NA STORZ (625648 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/11Z-quN1c4daSe8fb4VqcFaRq-k-4LVS4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-17T16:04:20.638Z"
   },
   {
     "inspectorId": "rpo_49",
