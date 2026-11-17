@@ -13,6 +13,7 @@ import path from 'path'
 import { drive_v3, google } from 'googleapis'
 import { getAuthorizedClient } from '../adapters/drive/googleAuth.js'
 import { BOOK_CODE, BOOK_NO_EXPIRY, BOOK_VALIDITY_MONTHS } from '../domain/services/BookNaming.js'
+import { CertificateClassifier } from '../domain/services/CertificateClassifier.js'
 
 const FOLDER_MIME = 'application/vnd.google-apps.folder'
 
@@ -111,11 +112,24 @@ async function main() {
           // e contrato + aditivo que o leitor LLM vê como um documento só também não são para separar.
           let docs: any[] = c?.documents ?? []
           if (docs.some(d => GWO_TRAINING.has(d.code))) docs = docs.filter(d => d.code !== '30')
-          const llmDocs = c?.md5 ? (llm.get(c.md5)?.consensus ?? llm.get(c.md5)?.a) : undefined
+          const llmKey = c?.md5 || f.id
+          const llmDocs = llm.get(llmKey)?.consensus ?? llm.get(llmKey)?.a
           if (docs.length > 1 && llmDocs?.length === 1 && docs.every(d => CONTRACT.has(d.code))) docs = docs.slice(0, 1)
-          const doc = docs[0] ?? c
+          let doc = docs[0] ?? c
           // Book v1.2: NR-23 Incêndio saiu do 46 (exames) para o 49; o cache ainda pode trazer o 46 antigo.
-          const code: string | null = doc?.code === '46' && /NR23-INCENDIO|INCENDIO/i.test(f.name) ? '49' : (doc?.code ?? null)
+          let code: string | null = doc?.code === '46' && /NR23-INCENDIO|INCENDIO/i.test(f.name) ? '49' : (doc?.code ?? null)
+          // Sem código pelas regras, mas com leitura dos leitores em acordo e curso conhecido: o código sai do
+          // curso lido (ex.: "Atendimento pré-hospitalar" -> 27) e as datas, da leitura. Só com acordo A x B.
+          const llmEntry0 = llm.get(llmKey)
+          const ld = llmEntry0?.agreed ? llmEntry0.consensus?.[0] : undefined
+          if (!code && ld?.curso_ou_norma && ld.curso_ou_norma !== 'ausente') {
+            const byCourse = CertificateClassifier.classify(ld.curso_ou_norma).code
+            const iso10 = (s?: string) => (s && /^\d{4}-\d{2}-\d{2}$/.test(s) ? `${s}T12:00:00.000Z` : undefined)
+            if (byCourse && BOOK_CODE[byCourse]) {
+              code = byCourse
+              doc = { code, issueDate: iso10(ld.data_conclusao) ?? iso10(ld.data_assinatura), expirationDate: iso10(ld.validade_declarada) }
+            }
+          }
           const issues: string[] = []
           const map = code ? BOOK_CODE[code] : undefined
           if (!code) issues.push('Tipo de documento não reconhecido')
@@ -171,7 +185,7 @@ async function main() {
           // Documentos sem código no Book (exames, certificações do cliente, treinamentos complementares,
           // documentos pessoais extras): pasta própria, nome com as datas lidas pelo Prometheus.
           if (!code) {
-            const llmEntry = c?.md5 ? llm.get(c.md5) : undefined
+            const llmEntry = llm.get(llmKey)
             const ex = llmEntry?.agreed === false && !llmEntry?.consensus ? null : extraFor(f.name, llmDocs?.[0])
             if (ex) {
               for (const k of ['Tipo de documento não reconhecido', 'NC-04: documento sem data legível no conteúdo'])
@@ -204,7 +218,8 @@ async function main() {
   // Book R04: um só documento vigente por código; versões extras viram candidatas a 00_OBSOLETOS.
   const seen = new Map<string, any[]>()
   // Certificado com vários documentos (GWO BST combinado) cobre outros códigos: nunca vira obsoleto por um deles.
-  for (const r of rows) if (r.draftName && !r.multiDoc) {
+  // Sem código no Book (CLIENTE, COMPLEMENTARES, OUTROS) também não vira obsoleto: o agrupamento é só pelo título lido.
+  for (const r of rows) if (r.draftName && !r.multiDoc && r.code) {
     const k = `${r.personFolderId}|${r.draftName.split('_')[0]}_${r.draftName.split('_')[1]}`
     seen.set(k, [...(seen.get(k) ?? []), r])
   }
