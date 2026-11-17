@@ -2,7 +2,7 @@
   "portalId": "datalife",
   "portalName": "Datalife (Neoenergia, Enel, GE Vernova)",
   "system": "Datalife",
-  "capturedAt": "2026-11-16T18:09:47.952Z",
+  "capturedAt": "2026-11-17T09:08:01.644Z",
   "workers": [
     {
       "name": "ADRIANO CIRILO GARCIA LIMA",
@@ -5908,7 +5908,7 @@
       "cpf": "07483946300",
       "status": "BLOCKED",
       "cleared": false,
-      "pendingCount": 4,
+      "pendingCount": 0,
       "totalDocuments": 25,
       "plant": "(EDF) VENTOS DA BAHIA",
       "role": "Assistente de Operações",
@@ -6006,24 +6006,25 @@
         },
         {
           "title": "NR 10 SEP (Complementar) - Certificado de Treinamento",
-          "status": "EXPIRING",
-          "expiresOn": "2028-10-26",
+          "status": "EXPIRED",
+          "expiresOn": "2028-11-11",
           "required": true
         },
         {
           "title": "Primeiros Socorros",
-          "status": "EXPIRING",
+          "status": "EXPIRED",
           "expiresOn": "2027-02-25",
           "required": true
         },
         {
           "title": "NR 01 - Ordem de Serviço",
-          "status": "EXPIRING",
+          "status": "EXPIRED",
+          "expiresOn": "2027-10-22",
           "required": true
         },
         {
           "title": "NR 07 - ASO -Atestado de Saúde Ocupacional",
-          "status": "EXPIRING",
+          "status": "EXPIRED",
           "expiresOn": "2027-10-09",
           "required": true
         },
