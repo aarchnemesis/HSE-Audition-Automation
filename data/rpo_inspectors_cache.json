@@ -2610,7 +2610,6 @@
       }
     },
     "exemptDocCodes": [
-      "32",
       "31"
     ]
   },
@@ -2781,9 +2780,9 @@
       "11": {
         "code": "11",
         "name": "NR 06",
-        "expirationDate": "2026-12-10T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (10/12/2026)"
+        "expirationDate": "2028-10-13T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/10/2028"
       },
       "12": {
         "code": "12",
@@ -3385,9 +3384,9 @@
       "11": {
         "code": "11",
         "name": "NR 06",
-        "expirationDate": "2027-01-21T12:00:00.000Z",
-        "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 65 dias (21/01/2027)"
+        "expirationDate": "2028-11-11T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2028"
       },
       "12": {
         "code": "12",
@@ -3448,9 +3447,9 @@
       "20": {
         "code": "20",
         "name": "NR33 [DATA]",
-        "expirationDate": "2026-12-13T12:00:00.000Z",
-        "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 26 dias (13/12/2026)"
+        "expirationDate": "2027-10-31T12:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027"
       },
       "22": {
         "code": "22",
