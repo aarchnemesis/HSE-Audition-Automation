@@ -67,7 +67,7 @@ const COMMON_RULES = `Regras:
 Responda SOMENTE com JSON válido, sem comentários, neste formato:
 ${SCHEMA}`
 
-function prompt(reader: 'A' | 'B', text: string): string {
+export function prompt(reader: 'A' | 'B', text: string): string {
   const head =
     reader === 'A'
       ? 'Você é o Leitor A do Book de Padronização EHS da Arthwind. Tarefa: extrair campos de UM arquivo de documento EHS. Você NÃO avalia conformidade e NÃO usa ferramentas.'
@@ -136,7 +136,7 @@ function textFromPages(pages: string[]): string {
     .slice(0, 24000)
 }
 
-function parse(out: string): LlmDocument[] {
+export function parse(out: string): LlmDocument[] {
   const m = out.match(/\{[\s\S]*\}/)
   if (!m) throw new Error('resposta sem JSON')
   const j = JSON.parse(m[0])
