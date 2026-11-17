@@ -453,17 +453,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "30": {
-        "code": "30",
-        "name": "Doc 30",
-        "filename": "Drielton Francisco de Araújo Silva - ART Formação N.pdf",
-        "issueDate": "2026-11-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "sourcePath": "https://drive.google.com/file/d/1YuESkGdd84G_ChbQxqo7fk4Z4sw4Vaf6/view",
-        "readSource": "CONTENT",
-        "divergences": []
-      },
       "32": {
         "code": "32",
         "name": "Doc 32",
@@ -492,9 +481,9 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-2031-07-23_DRIELTON-FRANCISCO-DE-ARAUJO-SILVA.pdf",
-        "expirationDate": "2031-07-23T03:00:00.000Z",
+        "expirationDate": "2033-03-27T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 23/07/2031",
+        "statusDetail": "Válido até 27/03/2033",
         "sourcePath": "https://drive.google.com/file/d/1GNjUH6fltq-NUahHOfqwD5lBl6EId3Xg/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -692,17 +681,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "30": {
-        "code": "30",
-        "name": "Doc 30",
-        "filename": "Henrique Elânio Gomes Fernandes - ART N.pdf",
-        "issueDate": "2026-11-09T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "sourcePath": "https://drive.google.com/file/d/1iwTwqBrW6Pptsfp7mxqL-3IS4X3YBZGG/view",
-        "readSource": "CONTENT",
-        "divergences": []
-      },
       "32": {
         "code": "32",
         "name": "Doc 32",
@@ -731,9 +709,9 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-12-03_VAL-2034-12-03_HENRIQUE-ELANIO-GOMES-FERNANDES.pdf",
-        "expirationDate": "2034-12-03T03:00:00.000Z",
+        "expirationDate": "2034-12-22T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 03/12/2034",
+        "statusDetail": "Válido até 22/12/2034",
         "sourcePath": "https://drive.google.com/file/d/1NTP_QHfuBu945vS5Xjm-ec8kleC3Qaro/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -1175,7 +1153,9 @@
         "statusDetail": "Válido até 12/07/2032",
         "sourcePath": "https://drive.google.com/file/d/1wIphPgj1Upi3eZL5QFL0cZqErqOxjj9N/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
+        ]
       },
       "05": {
         "code": "05",
@@ -2009,9 +1989,9 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_FRANCISCO-EVERSON-BARBOSA-VASCONCELOS.pdf",
-        "expirationDate": "2028-05-17T03:00:00.000Z",
+        "expirationDate": "2028-10-17T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 17/05/2028",
+        "statusDetail": "Válido até 17/10/2028",
         "sourcePath": "https://drive.google.com/file/d/1gGzVFxXr4_-FLa6Jb3Uv_2N3k_Jw-pvj/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -3180,13 +3160,15 @@
         "code": "13",
         "name": "Doc 13",
         "filename": "13_NR10-SEP-RECICLAGEM_EMI-2026-10-13_VAL-2028-10-13_WERMESON-DE-OLIVEIRA-FRANCO.pdf",
-        "issueDate": "2026-10-13T03:00:00.000Z",
-        "expirationDate": "2028-10-13T03:00:00.000Z",
+        "issueDate": "2026-10-17T03:00:00.000Z",
+        "expirationDate": "2028-10-17T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 13/10/2028",
+        "statusDetail": "Válido até 17/10/2028",
         "sourcePath": "https://drive.google.com/file/d/1vJLbFUOq7Fc2zcEK_sODWzLvNYDIpjRO/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "Data no nome (13/10/2026) difere da data impressa no documento (17/10/2026)"
+        ]
       },
       "14": {
         "code": "14",
@@ -4469,7 +4451,7 @@
         "issueDate": "2025-10-10T03:00:00.000Z",
         "expirationDate": "2025-10-10T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 402 dias (10/10/2025)",
+        "statusDetail": "VENCIDO há 403 dias (10/10/2025)",
         "sourcePath": "https://drive.google.com/file/d/1JxgQu72POfv3PNbK5h3NKva5HjrohGdU/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -5665,7 +5647,6 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-2027-03-07_RAIMUNDO-NONATO-DE-HOLANDA-FILHO.pdf",
-        "issueDate": "2027-03-07T03:00:00.000Z",
         "expirationDate": "2027-03-07T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 07/03/2027",
@@ -5776,9 +5757,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1aSgSFh9CqSWZ-zQEwLmTCsb_EIJBbgel/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -6059,6 +6038,7 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "CNH.jpg",
+        "issueDate": "2019-09-19T03:00:00.000Z",
         "expirationDate": "2034-05-16T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 16/05/2034",
@@ -6775,7 +6755,7 @@
         "issueDate": "2025-01-14T03:00:00.000Z",
         "expirationDate": "2025-01-14T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 671 dias (14/01/2025)",
+        "statusDetail": "VENCIDO há 672 dias (14/01/2025)",
         "sourcePath": "https://drive.google.com/file/d/18kCbeM0cNDVcMgi92kK70JYNF94rYX4I/view",
         "readSource": "OCR",
         "divergences": []
@@ -7408,7 +7388,7 @@
         "issueDate": "2026-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
         "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 67 dias (22/01/2027)",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1-QQRtgl1P_P1DuUiFxg7FmdKNQFC39Wf/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -9456,7 +9436,7 @@
         "issueDate": "2026-12-06T03:00:00.000Z",
         "expirationDate": "2026-12-06T03:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 20 dias (06/12/2026)",
+        "statusDetail": "ALERTA MÉDIO: Vence em 19 dias (06/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1QlKqcByD5GZMvjtYqvJBsJ6SQptK5Cf1/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -9465,10 +9445,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 03.10.2025 - Lucas Batista Araujo .pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 03.10.2025 - Lucas Batista Araujo .pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-10-03T03:00:00.000Z",
+        "expirationDate": "2026-10-03T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 45 dias (03/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1QZjhvqavjWbFcnJnVtCeO6yz0HRGbfkl/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "05": {
@@ -10531,7 +10513,7 @@
         "issueDate": "2025-10-07T03:00:00.000Z",
         "expirationDate": "2025-12-06T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 345 dias (06/12/2025)",
+        "statusDetail": "VENCIDO há 346 dias (06/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1QoT2F5pimJClsguZUbe61BPiUN4B-PYm/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -11150,13 +11132,15 @@
         "code": "22",
         "name": "Doc 22",
         "filename": "22_LOTO-RECICLAGEM_EMI-2025-12-01_VAL-2026-12-01_JUAN-ILGNER-MARINHO-LIMA.pdf",
-        "issueDate": "2025-12-01T03:00:00.000Z",
-        "expirationDate": "2027-12-01T03:00:00.000Z",
+        "issueDate": "2025-11-28T03:00:00.000Z",
+        "expirationDate": "2027-11-28T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 01/12/2027",
+        "statusDetail": "Válido até 28/11/2027",
         "sourcePath": "https://drive.google.com/file/d/1NXYQTf6VUNKjGvxdvlhq-F2a1LIjNRTp/view",
         "readSource": "CONTENT",
-        "divergences": []
+        "divergences": [
+          "Data no nome (01/12/2025) difere da data impressa no documento (28/11/2025)"
+        ]
       },
       "24": {
         "code": "24",
@@ -11909,7 +11893,7 @@
         "issueDate": "2023-12-18T03:00:00.000Z",
         "expirationDate": "2025-12-18T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 333 dias (18/12/2025)",
+        "statusDetail": "VENCIDO há 334 dias (18/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1OpBr4ocPLroPSwUv4i-7CeDxtM6C6VVc/view",
         "readSource": "OCR",
         "divergences": []
@@ -12047,15 +12031,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-05-15_VAL-2034-05-15_JOAO-BATISTA-CRUZ-DA-SILVA.pdf",
-        "issueDate": "2034-05-15T03:00:00.000Z",
         "expirationDate": "2034-05-15T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/05/2034",
         "sourcePath": "https://drive.google.com/file/d/1VvYsD9sZnqWkQihSeIhNomO3dgaZ6_65/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (15/05/2024) difere da data impressa no documento (15/05/2034)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "04": {
         "code": "04",
@@ -12464,11 +12445,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2023-06-12_VAL-2033-06-12_JOSE-RICARDO-BRAGA-MATOS.pdf",
+        "issueDate": "2023-06-12T03:00:00.000Z",
         "expirationDate": "2033-06-12T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 12/06/2033",
         "sourcePath": "https://drive.google.com/file/d/1emRpC7CJ1VfN2vXQuFMUZFzyK-koFjAO/view",
-        "readSource": "CONTENT",
+        "readSource": "OCR",
         "divergences": []
       },
       "06": {
@@ -13148,9 +13130,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1Z5NfbWt3ZnI5Wgt1vITg7rX-Uc87i35I/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "25": {
         "code": "25",
@@ -13353,11 +13333,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 09.04.2027 - JONATAS CARLOS DA MOTA SANTOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 09.04.2027 - JONATAS CARLOS DA MOTA SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-04-09T03:00:00.000Z",
+        "expirationDate": "2027-04-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1GuxczyXB_aBfwh7rDAbyPYo3869WramV/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (09/04/2027) difere da data impressa no documento (09/04/2026)"
+        ]
       },
       "08": {
         "code": "08",
@@ -14010,7 +13994,7 @@
         "issueDate": "1997-08-22T03:00:00.000Z",
         "expirationDate": "2025-12-16T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 335 dias (16/12/2025)",
+        "statusDetail": "VENCIDO há 336 dias (16/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1YBQDo-NMso8PbM7elXAF0Q4IbtmNrnYW/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -15252,16 +15236,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2022-01-31_VAL-2032-01-31_ISMAELSON-YURI-ARAUJO-SOUSA.pdf",
-        "issueDate": "2032-01-31T03:00:00.000Z",
         "expirationDate": "2032-01-31T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 31/01/2032",
         "sourcePath": "https://drive.google.com/file/d/14stgJbeZRMeGDKNT7JiTVsa9dwnRJzi0/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (31/01/2022) difere da data impressa no documento (31/01/2032)",
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "04": {
         "code": "04",
@@ -17994,7 +17974,7 @@
         "issueDate": "2025-01-14T03:00:00.000Z",
         "expirationDate": "2025-01-14T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 671 dias (14/01/2025)",
+        "statusDetail": "VENCIDO há 672 dias (14/01/2025)",
         "sourcePath": "https://drive.google.com/file/d/1enuBQnfUBGCUrBPIBGcs5u-jzdSQdLga/view",
         "readSource": "OCR",
         "divergences": []
@@ -18078,9 +18058,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1s6KPmNhdAi54e04nakTVD1QwwB2XiiX7/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -18951,18 +18929,6 @@
         "readSource": "CONTENT",
         "divergences": []
       },
-      "12": {
-        "code": "12",
-        "name": "Doc 12",
-        "filename": "12_NR10-RECICLAGEM_EMI-2026-09-04_VAL-2028-09-04_FRANCISCO-FABRICIO-FREIRE-BARBOSA.pdf",
-        "issueDate": "2026-09-04T03:00:00.000Z",
-        "expirationDate": "2028-09-04T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 04/09/2028",
-        "sourcePath": "https://drive.google.com/file/d/15r0rhckFGcHCj2g8GFcf_Dl66PFZ6NhG/view",
-        "readSource": "OCR",
-        "divergences": []
-      },
       "13": {
         "code": "13",
         "name": "Doc 13",
@@ -19006,7 +18972,7 @@
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
         "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 80 dias (04/02/2027)",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1m5weYP8pakCPgNcmZwhGlsiAv3xC6sjz/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -19307,9 +19273,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1C1d6kSUXJqTdfFnibDReyXZ8bbdvN6MV/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -20126,10 +20090,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "ASO-PER-FRANCISCO DAVILO MARQUES DE SOUSA27-08-2026 (1).pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ASO-PER-FRANCISCO DAVILO MARQUES DE SOUSA27-08-2026 (1).pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-08-27T03:00:00.000Z",
+        "expirationDate": "2027-08-27T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 27/08/2027",
         "sourcePath": "https://drive.google.com/file/d/1EEgYFHefGIszzb7whPcCjzg9J5SpISLT/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -21521,7 +21487,7 @@
         "issueDate": "1998-07-23T03:00:00.000Z",
         "expirationDate": "2025-12-16T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 335 dias (16/12/2025)",
+        "statusDetail": "VENCIDO há 336 dias (16/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1W_pFQuWu0PV-fQQp063sCtZMpmI-t05_/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22672,7 +22638,7 @@
         "issueDate": "2025-10-14T03:00:00.000Z",
         "expirationDate": "2025-10-14T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 398 dias (14/10/2025)",
+        "statusDetail": "VENCIDO há 399 dias (14/10/2025)",
         "sourcePath": "https://drive.google.com/file/d/1034AA3dNHgTXBhcHu_lGVgQL3KvHlYRc/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22693,9 +22659,9 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-07-27_VAL-2034-07-27_ERIKA-NAIANE-DE-OLIVEIRA-HONORATO.pdf",
-        "expirationDate": "2034-07-27T03:00:00.000Z",
+        "expirationDate": "2031-07-27T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 27/07/2034",
+        "statusDetail": "Válido até 27/07/2031",
         "sourcePath": "https://drive.google.com/file/d/1ic4r8uKRuHOcLL4P9xk2ysoqMjjt8yob/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -22719,7 +22685,7 @@
         "issueDate": "2025-10-14T03:00:00.000Z",
         "expirationDate": "2025-10-14T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 398 dias (14/10/2025)",
+        "statusDetail": "VENCIDO há 399 dias (14/10/2025)",
         "sourcePath": "https://drive.google.com/file/d/1B77dlKlVuzJ8v6DDwQ9JFAtfKjAmKRPH/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -23482,10 +23448,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 14.09.2026 - Erveson Nascimento dos Santos.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 14.09.2026 - Erveson Nascimento dos Santos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-14T03:00:00.000Z",
+        "expirationDate": "2027-09-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1x3hDowEcYy5pJlcmpfctIZI2-UQgZ_2t/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -24908,15 +24876,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2023-08-29_VAL-2033-08-29_EDCLEI-DA-CONCEICAO-CUSTODIO.pdf",
-        "issueDate": "2033-08-29T03:00:00.000Z",
         "expirationDate": "2033-08-29T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 29/08/2033",
         "sourcePath": "https://drive.google.com/file/d/1NxEL3Arbv8xVB3_CFyWSN6zA4fruiU8p/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (29/08/2023) difere da data impressa no documento (29/08/2033)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "20.1": {
         "code": "20.1",
@@ -25371,9 +25336,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1VQIw2hMePuz9zwiCrBt-Ob2hhDHqz0DD/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -27393,7 +27356,7 @@
         "issueDate": "2002-02-01T02:00:00.000Z",
         "expirationDate": "2025-09-27T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 415 dias (27/09/2025)",
+        "statusDetail": "VENCIDO há 416 dias (27/09/2025)",
         "sourcePath": "https://drive.google.com/file/d/14CYlDRiiUD6a-ofK4R9ADrBbY8yvSqHA/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -29241,15 +29204,13 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-09-03_VAL-2034-09-03_ADENILCO-QUEIROZ-DA-SILVA.pdf",
-        "issueDate": "2034-09-03T03:00:00.000Z",
+        "issueDate": "2024-09-03T03:00:00.000Z",
         "expirationDate": "2034-09-03T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 03/09/2034",
         "sourcePath": "https://drive.google.com/file/d/1qGFWh9ODWLVQlA_cXXGbvv_eXm2Kdj0u/view",
         "readSource": "OCR",
-        "divergences": [
-          "Data no nome (03/09/2024) difere da data impressa no documento (03/09/2034)"
-        ]
+        "divergences": []
       },
       "06": {
         "code": "06",
@@ -29330,9 +29291,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/14qLt3zbKzn28JOH8pTvvhQ-JXLIkBEID/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -29731,9 +29690,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1Bi_FIAOzLAetTmqtn6M7tFayztWkyy0c/view",
         "readSource": "OCR",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -31066,15 +31023,13 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2026-02-26_VAL-2036-02-26_ITALO-DE-ABREU-DUARTE.pdf",
-        "issueDate": "2036-02-26T03:00:00.000Z",
+        "issueDate": "2026-02-26T03:00:00.000Z",
         "expirationDate": "2036-02-26T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 26/02/2036",
         "sourcePath": "https://drive.google.com/file/d/1Wz_fKFOyOwqCz6iNA7305a9hIBPEURKh/view",
         "readSource": "OCR",
-        "divergences": [
-          "Data no nome (26/02/2026) difere da data impressa no documento (26/02/2036)"
-        ]
+        "divergences": []
       },
       "07": {
         "code": "07",
@@ -31083,7 +31038,7 @@
         "issueDate": "1997-09-09T03:00:00.000Z",
         "expirationDate": "2025-12-16T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 335 dias (16/12/2025)",
+        "statusDetail": "VENCIDO há 336 dias (16/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1NTfpq41hkDVwD8sMKcizv5I9iKd_Zs6k/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -31095,7 +31050,7 @@
         "issueDate": "2026-01-27T03:00:00.000Z",
         "expirationDate": "2027-01-27T03:00:00.000Z",
         "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 72 dias (27/01/2027)",
+        "statusDetail": "PROGRAMAR: Vence em 71 dias (27/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1Udm0QGkDR6KMltd_jL8QkPqV0xptN2Jf/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -31497,15 +31452,13 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2026-05-08_VAL-2036-05-08_ALLAN-THIAGO-RAMOS-VEIGA.pdf",
-        "issueDate": "2036-05-08T03:00:00.000Z",
+        "issueDate": "2026-05-08T03:00:00.000Z",
         "expirationDate": "2036-05-08T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/05/2036",
         "sourcePath": "https://drive.google.com/file/d/1T25ayAbeHXTYtYNUORoBq6vjhRT84miV/view",
         "readSource": "OCR",
-        "divergences": [
-          "Data no nome (08/05/2026) difere da data impressa no documento (08/05/2036)"
-        ]
+        "divergences": []
       },
       "07": {
         "code": "07",
@@ -31902,15 +31855,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-05-08_VAL-2034-05-08_RAMON-RAMIRES-COSTA-CIRINO.pdf",
-        "issueDate": "2034-05-08T03:00:00.000Z",
         "expirationDate": "2034-05-08T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 08/05/2034",
         "sourcePath": "https://drive.google.com/file/d/1_I6F3HBbQcaH7H_YVZLKoHovU8Ik3cqm/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (08/05/2024) difere da data impressa no documento (08/05/2034)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "07": {
         "code": "07",
@@ -32495,15 +32445,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2023-09-22_VAL-2033-09-22_KARLA-RIBEIRO-DE-BRITO.pdf",
-        "issueDate": "2033-09-22T03:00:00.000Z",
         "expirationDate": "2033-09-22T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 22/09/2033",
         "sourcePath": "https://drive.google.com/file/d/1DrM_X1ibJ7d_nVCIGBE0JNwRPTLlrchk/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (22/09/2023) difere da data impressa no documento (22/09/2033)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       }
     },
     "driveFolderId": "108MIHsO_MH8FVBH7gtdjZ7shQSvslcb-",
@@ -33512,15 +33459,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-07-12_VAL-2034-07-12_SERGIO-LUIZ-ROSA-TAVUENCAS.pdf",
-        "issueDate": "2034-07-12T03:00:00.000Z",
         "expirationDate": "2034-07-12T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 12/07/2034",
         "sourcePath": "https://drive.google.com/file/d/1AmjsHa82VBbJdH3XnknZCUxXxBFfHfb4/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (12/07/2024) difere da data impressa no documento (12/07/2034)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -33792,15 +33736,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2025-01-15_VAL-2035-01-15_KELVIN-GARCIA-DE-OLIVEIRA.pdf",
-        "issueDate": "2035-01-15T03:00:00.000Z",
         "expirationDate": "2035-01-15T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 15/01/2035",
         "sourcePath": "https://drive.google.com/file/d/16wUYLMctciFb-HTN3TBto9GPnLuNC7aU/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (15/01/2025) difere da data impressa no documento (15/01/2035)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "06": {
         "code": "06",
@@ -34088,9 +34029,7 @@
         "statusDetail": "Válido até 21/10/2031",
         "sourcePath": "https://drive.google.com/file/d/1J-qK-Czfn-Lwx8E5tENlOExbUKvWuvRD/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -34619,15 +34558,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2023-05-08_VAL-2033-05-08_RAPHAEL-AFONSO-CARDOSO-PEREIRA.pdf",
-        "issueDate": "2033-05-08T03:00:00.000Z",
-        "expirationDate": "2033-05-08T03:00:00.000Z",
+        "expirationDate": "2035-08-03T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 08/05/2033",
+        "statusDetail": "Válido até 03/08/2035",
         "sourcePath": "https://drive.google.com/file/d/1BkJgZJjQt5nMQA7CAT8KF_E2Ktpu0oFM/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (08/05/2023) difere da data impressa no documento (08/05/2033)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "07": {
         "code": "07",
@@ -34899,7 +34835,7 @@
         "issueDate": "2026-01-22T03:00:00.000Z",
         "expirationDate": "2027-01-22T03:00:00.000Z",
         "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 67 dias (22/01/2027)",
+        "statusDetail": "PROGRAMAR: Vence em 66 dias (22/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1UyL10fnlDSOPy6qMGjfBPIKIbMr_h1l4/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -35152,7 +35088,7 @@
         "issueDate": "2024-07-01T03:00:00.000Z",
         "expirationDate": "2024-08-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 837 dias (01/08/2024)",
+        "statusDetail": "VENCIDO há 838 dias (01/08/2024)",
         "sourcePath": "https://drive.google.com/file/d/1VhsPY5AQ-rOXOO4AkupY1TmQJeSQIasu/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -35198,7 +35134,7 @@
         "issueDate": "2024-07-01T03:00:00.000Z",
         "expirationDate": "2024-08-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 837 dias (01/08/2024)",
+        "statusDetail": "VENCIDO há 838 dias (01/08/2024)",
         "sourcePath": "https://drive.google.com/file/d/10R0AYSv2-lBCUkGxARd9f_N-T5xtATY-/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -35449,15 +35385,13 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2023-04-20_VAL-2033-04-20_BRUNO-EDUARDO-FERREIRA-DE-PAIVA.pdf",
-        "issueDate": "2033-04-20T03:00:00.000Z",
+        "issueDate": "2023-04-20T03:00:00.000Z",
         "expirationDate": "2033-04-20T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 20/04/2033",
         "sourcePath": "https://drive.google.com/file/d/14VVmcQK29IaaN4w6ljX0rVv08lanKG_M/view",
         "readSource": "OCR",
-        "divergences": [
-          "Data no nome (20/04/2023) difere da data impressa no documento (20/04/2033)"
-        ]
+        "divergences": []
       },
       "40.1": {
         "code": "40.1",
@@ -35732,7 +35666,7 @@
         "issueDate": "2023-07-01T03:00:00.000Z",
         "expirationDate": "2023-08-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1203 dias (01/08/2023)",
+        "statusDetail": "VENCIDO há 1204 dias (01/08/2023)",
         "sourcePath": "https://drive.google.com/file/d/1L9-8oK-EdJtplgu6j_6XAi-eVidZ6sMt/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -36289,15 +36223,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-09-11_VAL-2034-09-11_THIAGO-AUGUSTO-DE-PAULA-PEPE.pdf",
-        "issueDate": "2034-09-11T03:00:00.000Z",
         "expirationDate": "2034-09-11T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 11/09/2034",
         "sourcePath": "https://drive.google.com/file/d/1Q6J6jBMdOMsz1cwIbcxneXlKcR2So5jh/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (11/09/2024) difere da data impressa no documento (11/09/2034)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "03": {
         "code": "03",
@@ -36587,12 +36518,10 @@
         "code": "06",
         "name": "Doc 06",
         "filename": "06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
-        "issueDate": "2024-08-22T03:00:00.000Z",
-        "expirationDate": "2025-08-22T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 451 dias (22/08/2025)",
+        "statusEHS": "NAO_LIDO",
+        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"06_FICHA-EPI-UNICO_EMI-NA_VAL-NA_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
         "sourcePath": "https://drive.google.com/file/d/15F-aOjer9J-SsBVmQDao5NDWidvMJ2pw/view",
-        "readSource": "CONTENT",
+        "readSource": "NAO_LIDO",
         "divergences": []
       },
       "15.1": {
@@ -36719,9 +36648,9 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-NA_VAL-NA_GUILHERME-ROASIO-DA-SILVA.pdf",
-        "expirationDate": "2035-08-09T03:00:00.000Z",
+        "expirationDate": "2035-08-13T03:00:00.000Z",
         "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 09/08/2035",
+        "statusDetail": "Válido até 13/08/2035",
         "sourcePath": "https://drive.google.com/file/d/1cqEPWimCuymGzXRpt-D_XVSfqoRQenDY/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -37073,15 +37002,12 @@
         "code": "08",
         "name": "Doc 08",
         "filename": "08_CNH-UNICO_EMI-2024-02-05_VAL-2034-02-05_JOSE-MARCELO-MAGALHAES-SOUSA.pdf",
-        "issueDate": "2034-02-05T03:00:00.000Z",
         "expirationDate": "2034-02-05T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 05/02/2034",
         "sourcePath": "https://drive.google.com/file/d/1ttrkt1CsOWYTOS9lunCXUGzPD049YizY/view",
-        "readSource": "OCR",
-        "divergences": [
-          "Data no nome (05/02/2024) difere da data impressa no documento (05/02/2034)"
-        ]
+        "readSource": "CONTENT",
+        "divergences": []
       },
       "04": {
         "code": "04",
@@ -37113,7 +37039,7 @@
         "issueDate": "2025-03-17T03:00:00.000Z",
         "expirationDate": "2026-03-17T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 244 dias (17/03/2026)",
+        "statusDetail": "VENCIDO há 245 dias (17/03/2026)",
         "sourcePath": "https://drive.google.com/file/d/1Jro4LkSbzLH3eYgxSSu9VMGeYEafYEm9/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -37126,9 +37052,7 @@
         "statusDetail": "Documento permanente — sem vencimento",
         "sourcePath": "https://drive.google.com/file/d/1z1Z3zr-JJZmDJRL9eyFIu05sOsOx7M-z/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "O nome do colaborador não aparece no documento: conferir se o arquivo é dele"
-        ]
+        "divergences": []
       },
       "40.1": {
         "code": "40.1",
