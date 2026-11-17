@@ -39,7 +39,7 @@ async function main() {
   const DPI = tier >= 3 ? '200' : '110'
   const MAX_PAGES = tier >= 3 ? '6' : '3'
   const STRONG_A = { provider: process.env.HSE_LLM_STRONG_A_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_A_MODEL || 'gpt-6.1-sol' }
-  const STRONG_B = { provider: process.env.HSE_LLM_STRONG_B_PROVIDER || 'gemini', model: process.env.HSE_LLM_STRONG_B_MODEL || 'gemini-3.1-pro-preview' }
+  const STRONG_B = { provider: process.env.HSE_LLM_STRONG_B_PROVIDER || 'openai-codex', model: process.env.HSE_LLM_STRONG_B_MODEL || 'gpt-6-astra' }
   const limit = Number(process.argv.find(a => a.startsWith('--limit='))?.split('=')[1]) || Infinity
   const raw = JSON.parse(fs.readFileSync('data/pdf_content_cache.json', 'utf8'))
   const files: any[] = Array.isArray(raw) ? raw : Object.values(raw)
