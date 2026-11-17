@@ -223,7 +223,7 @@ const SEMANTIC_RULES: Array<{
   },
   // Direção Defensiva
   {
-    regex: /\b(?:DIRECAO\s+DEFENSIVA|DEFENSIVE\s+DRIVING)\b/i,
+    regex: /\b(?:DIRECAO\s+(?:DEFENSIVA|PREVENTIVA)|DEFENSIVE\s+DRIVING)\b/i,
     code: '09',
     matchedTerm: 'Direção Defensiva',
   },
