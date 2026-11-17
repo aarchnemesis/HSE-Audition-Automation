@@ -263084,5 +263084,42 @@
         "extractedClause": "no dia 01 de agosto de 2026"
       }
     ]
+  },
+  {
+    "fileId": "1a_P3lNgn-RFef0gw8YJXmL7GHQ-0kLw3",
+    "filename": "16-11-2026_Antonio_Roberto_Dos_Santos_Nascimento_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "6de15c6dc98ee65157c99297927563a0",
+    "llmAt": "2026-11-17T16:02:06.833Z",
+    "modifiedTime": "2026-11-17T14:07:58.474Z",
+    "holder": {
+      "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-11-16T03:00:00.000Z",
+    "expirationDate": "2027-11-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-11-16T03:00:00.000Z",
+        "expirationDate": "2027-11-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
   }
 ]
