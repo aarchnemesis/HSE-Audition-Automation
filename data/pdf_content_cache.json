@@ -262940,5 +262940,113 @@
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
+  },
+  {
+    "fileId": "1AFI2M0L5K9mkdZJSR6-J2FBv6DR_2i4t",
+    "filename": "49_NR23-INCENDIO-FORMACAO_EMI-2023-12-20_VAL-2024-12-20_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "87c742e7ce1c5055313b9a92fb7cd68a",
+    "modifiedTime": "2026-11-17T11:28:13.377Z",
+    "holder": {
+      "key": "h2:FELIPE ALAN PEGHIN SANTOS",
+      "status": "OK"
+    },
+    "code": "49",
+    "issueDate": "2023-12-20T03:00:00.000Z",
+    "expirationDate": "2025-12-20T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "statusDetail": "VENCIDO há 332 dias (20/12/2025)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 49_NR23-INCENDIO",
+    "extractedClause": "Concluido em 20 de Dezembro de 2023",
+    "documents": [
+      {
+        "code": "49",
+        "issueDate": "2023-12-20T03:00:00.000Z",
+        "expirationDate": "2025-12-20T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 332 dias (20/12/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 49_NR23-INCENDIO",
+        "extractedClause": "Concluido em 20 de Dezembro de 2023"
+      }
+    ]
+  },
+  {
+    "fileId": "1_iH61yvWnpGwGzXwc67eYJdxvbj7LF-X",
+    "filename": "27_NR07-PRIMEIROS-SOCORROS-FORMACAO_EMI-2023-12-09_VAL-2024-12-09_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "10f92e5f09e44057465674d2e7918482",
+    "modifiedTime": "2026-11-17T11:28:11.770Z",
+    "holder": {
+      "key": "h2:FELIPE ALAN PEGHIN SANTOS",
+      "status": "OK"
+    },
+    "code": "27",
+    "issueDate": "2023-12-09T03:00:00.000Z",
+    "expirationDate": "2025-12-09T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "statusDetail": "VENCIDO há 343 dias (09/12/2025)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 27_NR07-PRIMEIROS-SOCORROS",
+    "extractedClause": "Concluido em 9 de Dezembro de 2023",
+    "documents": [
+      {
+        "code": "27",
+        "issueDate": "2023-12-09T03:00:00.000Z",
+        "expirationDate": "2025-12-09T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 343 dias (09/12/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 27_NR07-PRIMEIROS-SOCORROS",
+        "extractedClause": "Concluido em 9 de Dezembro de 2023"
+      }
+    ]
+  },
+  {
+    "fileId": "1n3q02dWEpSp0hRL1JSnw8IcYEy_ix5V9",
+    "filename": "12_NR10-RECICLAGEM_EMI-2023-11-29_VAL-2025-11-29_FELIPE-ALAN-PEGHIN-DOS-SANTOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "30d220b8738690778e12250aabdbc7cc",
+    "modifiedTime": "2026-11-17T11:28:09.961Z",
+    "holder": {
+      "key": "h2:FELIPE ALAN PEGHIN SANTOS",
+      "status": "OK"
+    },
+    "code": "12",
+    "issueDate": "2023-11-29T03:00:00.000Z",
+    "expirationDate": "2025-11-29T03:00:00.000Z",
+    "statusEHS": "VENCIDO",
+    "statusDetail": "VENCIDO há 353 dias (29/11/2025)",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 12_NR10",
+    "extractedClause": "Concluido em 29 de Novembro de 2023",
+    "documents": [
+      {
+        "code": "12",
+        "issueDate": "2023-11-29T03:00:00.000Z",
+        "expirationDate": "2025-11-29T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 353 dias (29/11/2025)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 12_NR10",
+        "extractedClause": "Concluido em 29 de Novembro de 2023"
+      }
+    ]
   }
 ]
