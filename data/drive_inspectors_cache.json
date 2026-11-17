@@ -7736,7 +7736,7 @@
         "issueDate": "2023-12-01T03:00:00.000Z",
         "expirationDate": "2025-12-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 350 dias (01/12/2025)",
+        "statusDetail": "VENCIDO há 351 dias (01/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1wHqUhxtvHYeZhxm-cMMJvgW8_A3OqflM/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -13717,11 +13717,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 30.07.2027 - JOSE ORLANDO BARROS DA SILVA FILHO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 30.07.2027 - JOSE ORLANDO BARROS DA SILVA FILHO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-30T03:00:00.000Z",
+        "expirationDate": "2027-07-30T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 30/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1MrK5sY_t5uDmtzVq8yPQ_wS84wMaMKrv/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (30/07/2027) difere da data impressa no documento (30/07/2026)"
+        ]
       }
     },
     "driveFolderId": "1gtsv6eCtZ4oaW_nFjvRBgXHhAj87MzD0",
@@ -21715,7 +21719,7 @@
         "issueDate": "2025-02-04T03:00:00.000Z",
         "expirationDate": "2027-02-04T03:00:00.000Z",
         "statusEHS": "VENCE_90",
-        "statusDetail": "PROGRAMAR: Vence em 80 dias (04/02/2027)",
+        "statusDetail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/1UVDGmaEaEE6tuTpHs6PcawGj_cQfdLRx/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -26899,10 +26903,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2025-11-26_VAL-2026-11-26_CAIO-VICTOR-OLIVEIRA-BALBINO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2025-11-26_VAL-2026-11-26_CAIO-VICTOR-OLIVEIRA-BALBINO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-11-26T03:00:00.000Z",
+        "expirationDate": "2026-11-26T03:00:00.000Z",
+        "statusEHS": "VENCE_15",
+        "statusDetail": "ALERTA URGENTE: Vence em 9 dias (26/11/2026)",
         "sourcePath": "https://drive.google.com/file/d/1fvsUp8zlTdqSTzZeMEfmwEErsi8BXcQ2/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -27747,7 +27753,7 @@
         "issueDate": "1995-02-23T03:00:00.000Z",
         "expirationDate": "2025-12-16T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 335 dias (16/12/2025)",
+        "statusDetail": "VENCIDO há 336 dias (16/12/2025)",
         "sourcePath": "https://drive.google.com/file/d/1zwHYNnEKqomn4bUJZ7KcQiXYtSQulDvV/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -28230,10 +28236,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 07.08.2026 - Antonio Rafael dos Santos.pdf.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 07.08.2026 - Antonio Rafael dos Santos.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-08-07T03:00:00.000Z",
+        "expirationDate": "2027-08-07T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 07/08/2027",
         "sourcePath": "https://drive.google.com/file/d/1CNQ-hghr3ZoIzJpoInKGXkSDzLmu65G7/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -29332,7 +29340,7 @@
         "issueDate": "2026-01-14T03:00:00.000Z",
         "expirationDate": "2026-01-13T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 307 dias (13/01/2026)",
+        "statusDetail": "VENCIDO há 308 dias (13/01/2026)",
         "sourcePath": "https://drive.google.com/file/d/1kxpRGnjB3_cnuNWyd2JC_pUwfNQ3Ndhi/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -29718,10 +29726,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 06.03.26 – ALISSON MATEUS ALMEIDA DA COSTA ",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 06.03.26 – ALISSON MATEUS ALMEIDA DA COSTA \") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-03-06T03:00:00.000Z",
+        "expirationDate": "2027-03-06T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 06/03/2027",
         "sourcePath": "https://drive.google.com/file/d/1IYLslmkZIy3qphC5rO1Cph0vCAKyX5f_/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -30782,10 +30792,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 02.06.2026 - DIEGO PATRICK SANCHES CAMPOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 02.06.2026 - DIEGO PATRICK SANCHES CAMPOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-06-02T03:00:00.000Z",
+        "expirationDate": "2027-06-02T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 02/06/2027",
         "sourcePath": "https://drive.google.com/file/d/13JELRb4iLMOeaADV8lwuQ5g2FVSXc-iC/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -32896,10 +32908,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 22.07.2026 -  Francisco Marcos de Souza Magalhaes.pdf.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 22.07.2026 -  Francisco Marcos de Souza Magalhaes.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-22T03:00:00.000Z",
+        "expirationDate": "2027-07-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1zBQaXm3niFI45z7jcHFZY3x32Z4gvCmG/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -33991,7 +34005,7 @@
         "issueDate": "2023-07-01T03:00:00.000Z",
         "expirationDate": "2023-08-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1203 dias (01/08/2023)",
+        "statusDetail": "VENCIDO há 1204 dias (01/08/2023)",
         "sourcePath": "https://drive.google.com/file/d/1Jxt_NrfIxFkBvy3Gu3_W4awKGeJiLLGA/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -34049,7 +34063,7 @@
         "issueDate": "2023-07-01T03:00:00.000Z",
         "expirationDate": "2023-08-01T03:00:00.000Z",
         "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 1203 dias (01/08/2023)",
+        "statusDetail": "VENCIDO há 1204 dias (01/08/2023)",
         "sourcePath": "https://drive.google.com/file/d/1GTcbVz0MYTvRgw9bDtTQIiLLffanu3L7/view",
         "readSource": "CONTENT",
         "divergences": []
@@ -34847,7 +34861,7 @@
         "issueDate": "2026-01-27T03:00:00.000Z",
         "expirationDate": "2026-12-09T03:00:00.000Z",
         "statusEHS": "VENCE_30",
-        "statusDetail": "ALERTA MÉDIO: Vence em 23 dias (09/12/2026)",
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (09/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1jfP1B3SkCznbCSrLEZ0HnzjZYhDlY21c/view",
         "readSource": "CONTENT",
         "divergences": [
@@ -35641,8 +35655,8 @@
         "filename": "01_ASO-PER_EMI-2025-12-17_VAL-2026-12-17_DANIEL-FERNANDES-PACHECO.pdf",
         "issueDate": "2025-12-17T03:00:00.000Z",
         "expirationDate": "2026-12-17T03:00:00.000Z",
-        "statusEHS": "VENCE_60",
-        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (17/12/2026)",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 30 dias (17/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1k2sEHmCHK1FFM5WVlM0Q02MIR6hbVOFC/view",
         "readSource": "CONTENT",
         "divergences": []
