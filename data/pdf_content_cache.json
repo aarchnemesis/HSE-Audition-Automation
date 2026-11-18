@@ -96066,14 +96066,14 @@
     "sv": 1,
     "ev": 7,
     "md5": "3acff75acd9da3e82eef8fadccc7ef90",
-    "llmAt": "2026-11-16T18:44:35.677Z",
+    "llmAt": "2026-11-18T12:03:34.612Z",
     "modifiedTime": "2026-11-16T15:19:51.367Z",
     "holder": {
       "key": "h2:WERMESON OLIVEIRA FRANCO",
       "status": "NAO_ENCONTRADO"
     },
     "code": "08",
-    "issueDate": "2022-02-17T03:00:00.000Z",
+    "issueDate": "2020-02-17T03:00:00.000Z",
     "expirationDate": "2034-10-28T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 28/10/2034",
@@ -96084,7 +96084,7 @@
     "documents": [
       {
         "code": "08",
-        "issueDate": "2022-02-17T03:00:00.000Z",
+        "issueDate": "2020-02-17T03:00:00.000Z",
         "expirationDate": "2034-10-28T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 28/10/2034",
@@ -262154,17 +262154,17 @@
     "sv": 1,
     "ev": 7,
     "md5": "b1ececf3c227a789404d4425e655ff7b",
-    "llmAt": "2026-11-16T23:51:36.170Z",
+    "llmAt": "2026-11-18T12:04:05.684Z",
     "modifiedTime": "2026-01-29T08:48:12.000Z",
     "holder": {
       "key": "h2:PEDRO EDUARDO OLIVEIRA CAVALCANTI SILVA",
       "status": "OK"
     },
     "code": "01",
-    "issueDate": "2024-01-26T03:00:00.000Z",
-    "expirationDate": "2025-01-26T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "statusDetail": "VENCIDO há 661 dias (26/01/2025)",
+    "issueDate": "2026-01-26T03:00:00.000Z",
+    "expirationDate": "2027-01-26T03:00:00.000Z",
+    "statusEHS": "VENCE_90",
+    "statusDetail": "PROGRAMAR: Vence em 69 dias (26/01/2027)",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
     "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
@@ -262172,10 +262172,10 @@
     "documents": [
       {
         "code": "01",
-        "issueDate": "2024-01-26T03:00:00.000Z",
-        "expirationDate": "2025-01-26T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 661 dias (26/01/2025)",
+        "issueDate": "2026-01-26T03:00:00.000Z",
+        "expirationDate": "2027-01-26T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 69 dias (26/01/2027)",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
         "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
@@ -263480,13 +263480,14 @@
   },
   {
     "fileId": "1tYsGDFzalm6swZy_tikyo1HuEpKaKvOe",
-    "filename": "LUANA QUEIROZ DE SOUSA - TREINAMENTO INICIAL DE OPERADOR DE ELEVADOR AVANTI - MODELO PEGASUS L - Clicksign.pdf",
+    "filename": "31_ELEVADOR-JASO-FORMACAO_EMI-2026-11-16_VAL-2028-11-16_LUANA-QUEIROZ-DE-SOUSA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "ce1a52b1d921d6496f1eec7757ac0744",
-    "modifiedTime": "2026-11-17T14:42:24.180Z",
+    "llmAt": "2026-11-18T12:05:25.918Z",
+    "modifiedTime": "2026-11-18T12:06:19.055Z",
     "holder": {
       "key": "h2:LUANA QUEIROZ SOUSA",
       "status": "OK"
@@ -263498,7 +263499,7 @@
     "statusDetail": "Válido até 16/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Elevador (JASO)",
+    "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
     "extractedClause": "no dia 16/11/2026",
     "documents": [
       {
@@ -263509,20 +263510,21 @@
         "statusDetail": "Válido até 16/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
+        "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
         "extractedClause": "no dia 16/11/2026"
       }
     ]
   },
   {
     "fileId": "1Edk0B2YBj80iV5O7zmpGDv13RmFvTTm0",
-    "filename": "DIEGO MENEZES NUNES COELHO - TREINAMENTO INICIAL DE OPERADOR DE ELEVADOR AVANTI - MODELO PEGASUS L - Clicksign.pdf",
+    "filename": "31_ELEVADOR-JASO-FORMACAO_EMI-2026-11-16_VAL-2028-11-16_DIEGO-MENEZES-NUNES-COELHO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "f36ad40e1c107534d88739e61c9fab3e",
-    "modifiedTime": "2026-11-18T10:54:23.934Z",
+    "llmAt": "2026-11-18T12:05:25.922Z",
+    "modifiedTime": "2026-11-18T12:06:10.864Z",
     "holder": {
       "key": "h2:DIEGO MENEZES NUNES COELHO",
       "status": "OK"
@@ -263534,7 +263536,7 @@
     "statusDetail": "Válido até 16/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Elevador (JASO)",
+    "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
     "extractedClause": "no dia 16/11/2026",
     "documents": [
       {
@@ -263545,20 +263547,21 @@
         "statusDetail": "Válido até 16/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
+        "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
         "extractedClause": "no dia 16/11/2026"
       }
     ]
   },
   {
     "fileId": "1LtcP2MNUalStL2CuzkRKZBqTlbJZgsd3",
-    "filename": "DIEGO PATRICK SANCHES CAMPOS - TREINAMENTO INICIAL DE OPERADOR DE ELEVADOR AVANTI - MODELO PEGASUS L - Clicksign.pdf",
+    "filename": "31_ELEVADOR-JASO-FORMACAO_EMI-2026-11-16_VAL-2028-11-16_DIEGO-PATRICK-SANCHES-CAMPOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "ff661809a0957a98bac3b7139eb257cb",
-    "modifiedTime": "2026-11-17T14:43:01.120Z",
+    "llmAt": "2026-11-18T12:05:25.923Z",
+    "modifiedTime": "2026-11-18T12:06:15.167Z",
     "holder": {
       "key": "h2:DIEGO PATRICK SANCHES CAMPOS",
       "status": "OK"
@@ -263570,7 +263573,7 @@
     "statusDetail": "Válido até 16/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Elevador (JASO)",
+    "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
     "extractedClause": "no dia 16/11/2026",
     "documents": [
       {
@@ -263581,8 +263584,118 @@
         "statusDetail": "Válido até 16/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Elevador (JASO)",
+        "matchedTerm": "Book EHS 31_ELEVADOR-JASO",
         "extractedClause": "no dia 16/11/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1Ud_yg2P81xn_B66qpjAUNHGYW_Gbktt9",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c1ca3ac7b2ee422420a0bbcb007e2da9",
+    "modifiedTime": "2026-11-18T13:08:01.509Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "13",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "IMAGE_FALLBACK",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 13_NR10-SEP",
+    "extractedClause": "Iniciado em 26/10/2026 | Atualizado via nome: 13/11/2026",
+    "documents": [
+      {
+        "code": "13",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "IMAGE_FALLBACK",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 13_NR10-SEP",
+        "extractedClause": "Iniciado em 26/10/2026 | Atualizado via nome: 13/11/2026"
+      }
+    ]
+  },
+  {
+    "fileId": "1jDBYr2vC4Jo_LwshcsSzpinyoNAPHIGL",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-11-16_VAL-2027-11-16_ANTONIO-ROBERTO-DOS-SANTOS-NASCIMENTO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "bb5638cdbb250d8ef5747186a83d1504",
+    "llmAt": "2026-11-18T14:02:43.833Z",
+    "modifiedTime": "2026-11-18T13:23:19.720Z",
+    "holder": {
+      "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
+      "status": "OK"
+    },
+    "code": "20",
+    "issueDate": "2026-11-16T03:00:00.000Z",
+    "expirationDate": "2027-11-16T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 16/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "20",
+        "issueDate": "2026-11-16T03:00:00.000Z",
+        "expirationDate": "2027-11-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1cMRFk3EUEbfaBUKSpVS3eu4u0ec4jRrq",
+    "filename": "28_NR33-SUPERVISOR-RECICLAGEM_EMI-2026-11-15_VAL-2027-11-15_ANTONIO-ROBERTO-DOS-SANTOS-NASCIMENTO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "001614ea35fb1f510eeb7ad68fcb1d54",
+    "llmAt": "2026-11-18T14:03:28.583Z",
+    "modifiedTime": "2026-11-18T13:18:45.835Z",
+    "holder": {
+      "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
+      "status": "OK"
+    },
+    "code": "28",
+    "issueDate": "2026-11-15T03:00:00.000Z",
+    "expirationDate": "2027-11-15T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 15/11/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-33 Supervisor (Periódico) (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "28",
+        "issueDate": "2026-11-15T03:00:00.000Z",
+        "expirationDate": "2027-11-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/11/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-33 Supervisor (Periódico) (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   }
