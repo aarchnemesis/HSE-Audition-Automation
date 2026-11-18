@@ -49,6 +49,28 @@ function extraFor(filename: string, d?: any): { sub: string; slug: string; emi?:
   return { sub: '03_TREINAMENTOS/COMPLEMENTARES', slug: slug(curso), emi, val }
 }
 
+/**
+ * Documento pessoal sem código no Book (RG, CPF, passaporte, foto, assinatura, admissão): vai para
+ * 01_DOCUMENTOS_PESSOAIS (decisão do João, 18/11/2026). Pelo nome do arquivo ou pelo tipo lido; o que estiver
+ * solto na raiz da pasta do colaborador sem tipo reconhecido também vai, como DOC-PESSOAL.
+ */
+function personalFor(filename: string, atRoot: boolean, d?: any): string | null {
+  const t = `${filename} ${d?.curso_ou_norma ?? ''}`.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase()
+  const rules: [RegExp, string][] = [
+    [/PASSAPORT|PASSPORT/, 'PASSAPORTE'],
+    [/\bRG\b|IDENTIDADE|\bCIN\b/, 'RG'],
+    [/CPF/, 'CPF'],
+    [/TITULO|ELEITOR/, 'TITULO-ELEITOR'],
+    [/RESERVISTA|DISPENSA DE INCORPORA/, 'RESERVISTA'],
+    [/FOTO|3X4/, 'FOTO-3X4'],
+    [/ASSINATURA/, 'ASSINATURA'],
+    [/ADMISS/, 'DOCUMENTOS-ADMISSIONAIS'],
+    [/COMPROVANTE DE (RESIDENCIA|ENDERECO)/, 'COMPROVANTE-RESIDENCIA'],
+  ]
+  for (const [re, slug] of rules) if (re.test(t)) return slug
+  return atRoot && (!d || d.tipo_documento === 'outro') ? 'DOC-PESSOAL' : null
+}
+
 function tipoFor(kind: string, filename: string): string {
   const f = filename.toUpperCase()
   if (kind === 'ASO') {
@@ -192,6 +214,17 @@ async function main() {
                 if (issues.includes(k)) issues.splice(issues.indexOf(k), 1)
               proposed = `${ex.slug}_EMI-${ex.emi ?? 'NA'}_VAL-${ex.val}_${slugName(p.name)}.pdf`
               sub = ex.sub
+            } else {
+              const pessoal = personalFor(f.name, folderPath === p.name, llmDocs?.[0])
+              if (pessoal) {
+                for (const k of ['Tipo de documento não reconhecido', 'NC-04: documento sem data legível no conteúdo'])
+                  if (issues.includes(k)) issues.splice(issues.indexOf(k), 1)
+                // Mantém a extensão (foto, imagem); genérico ganha o início do id para não colidir.
+                const ext = (path.extname(f.name) || '.pdf').toLowerCase()
+                const tag = pessoal === 'DOC-PESSOAL' ? `-${f.id.slice(0, 6).toUpperCase().replace(/[^A-Z0-9]/g, 'X')}` : ''
+                proposed = `${pessoal}${tag}_EMI-NA_VAL-NA_${slugName(p.name)}${ext}`
+                sub = '01_DOCUMENTOS_PESSOAIS'
+              }
             }
           }
           rows.push({
