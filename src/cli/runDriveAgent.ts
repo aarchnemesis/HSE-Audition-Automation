@@ -58,9 +58,21 @@ function conferir() {
   const files: any[] = Array.isArray(raw) ? raw : Object.values(raw)
   let llm: Record<string, any> = {}
   try { llm = JSON.parse(fs.readFileSync('data/llm_reading_cache.json', 'utf8')) } catch {}
+  // Só arquivos com dono (mesma regra da fila de leitura): plano do Book ou certificado vigente de alguém.
+  // Sem dono são cópias em pastas antigas de obsoletos; a fila pularia e eles voltariam a cada rodada.
+  const owned = new Set<string>()
+  try { for (const r of JSON.parse(fs.readFileSync('scratch/book_rename_plan.json', 'utf8')).rows) owned.add(r.fileId) } catch {}
+  try {
+    for (const p of JSON.parse(fs.readFileSync('data/drive_inspectors_cache.json', 'utf8')))
+      for (const c of Object.values<any>(p.certificates ?? {})) {
+        const id = c.sourcePath?.match(/\/d\/([^/]+)/)?.[1]
+        if (id) owned.add(id)
+      }
+  } catch {}
   const YEAR = 365 * 86_400_000
   const hits: { id: string; gap: number }[] = []
   for (const f of files) {
+    if (!owned.has(f.fileId)) continue
     const fn = parseDateFromFilename(String(f.filename ?? ''))
     // Data futura no nome é a validade, não a emissão; seguro de vida (07) traz data de nascimento.
     if (!fn || fn.getTime() > Date.now() || f.code === '07') continue
