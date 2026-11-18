@@ -7349,6 +7349,18 @@
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlQ3AY2WduKTDlHbsSnt14BBj3wpqMLr"
   },
   {
+    "inspectorName": "LUANA QUEIROZ DE SOUSA",
+    "docCode": "31",
+    "docName": "Elevador (JASO)",
+    "driveExpiration": "2028-11-16T03:00:00.000Z",
+    "trustedSource": "DRIVE",
+    "divergent": true,
+    "divergenceKind": "SOMENTE_DRIVE",
+    "detail": "Curso/certificado confirmado via Drive, mas sem registro correspondente na planilha RPO (pessoa encontrada na RPO).",
+    "recommendedAction": "Incluir na RPO com base no Drive",
+    "driveFolderUrl": "https://drive.google.com/drive/folders/1jlQ3AY2WduKTDlHbsSnt14BBj3wpqMLr"
+  },
+  {
     "inspectorName": "LEANDRO CAMILO DE JESUS",
     "docCode": "01",
     "docName": "ASO - Atestado de Saúde Ocupacional",
@@ -14756,7 +14768,7 @@
     "inspectorName": "DIEGO MENEZES NUNES COELHO",
     "docCode": "31",
     "docName": "Elevador (JASO)",
-    "driveExpiration": "2028-09-28T03:00:00.000Z",
+    "driveExpiration": "2028-11-16T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "rpoExpiration": "2024-11-12T12:00:00.000Z",
     "divergent": true,
@@ -14764,9 +14776,9 @@
     "direction": "DRIVE_NEWER",
     "isSwappedDayMonth": false,
     "isRpoValidated": false,
-    "detail": "Drive mais recente que a RPO em 1416 dia(s) (28/09/2028 no Drive vs 12/11/2024 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
-    "diffDays": 1416,
-    "recommendedAction": "Atualizar data na RPO para 28/09/2028",
+    "detail": "Drive mais recente que a RPO em 1465 dia(s) (16/11/2028 no Drive vs 12/11/2024 na RPO) — certificado atualizado no Drive, mas planilha RPO desatualizada.",
+    "diffDays": 1465,
+    "recommendedAction": "Atualizar data na RPO para 16/11/2028",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3"
   },
   {
@@ -18543,7 +18555,7 @@
     "inspectorName": "DIEGO PATRICK SANCHES CAMPOS",
     "docCode": "31",
     "docName": "Elevador (JASO)",
-    "driveExpiration": "2027-04-04T03:00:00.000Z",
+    "driveExpiration": "2028-11-16T03:00:00.000Z",
     "trustedSource": "DRIVE",
     "divergent": true,
     "divergenceKind": "SOMENTE_DRIVE",
