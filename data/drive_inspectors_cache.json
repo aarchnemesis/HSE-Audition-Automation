@@ -19005,15 +19005,13 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 21.05.2026 -  FRANCISCO GEORGE MARTINS SILVA.pdf",
-        "issueDate": "2024-05-22T03:00:00.000Z",
-        "expirationDate": "2025-05-22T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 545 dias (22/05/2025)",
+        "issueDate": "2026-05-21T03:00:00.000Z",
+        "expirationDate": "2027-05-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/05/2027",
         "sourcePath": "https://drive.google.com/file/d/1NDQFvqaEbPJbT8bvU-VfBG3BvZldEnkV/view",
         "readSource": "CONTENT",
-        "divergences": [
-          "Data no nome (21/05/2026) difere da data impressa no documento (22/05/2024)"
-        ]
+        "divergences": []
       }
     },
     "driveFolderId": "1yB1GDSwBuvJEOBv8N-0RKmVKjaAbM1nm",

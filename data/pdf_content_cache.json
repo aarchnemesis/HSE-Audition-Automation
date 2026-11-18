@@ -262487,31 +262487,31 @@
     "sv": 1,
     "ev": 7,
     "md5": "98a3f35f1d7e6dc3bc3b466b27dbbbcb",
-    "llmAt": "2026-11-16T16:24:30.713Z",
+    "llmAt": "2026-11-18T10:51:28.362Z",
     "modifiedTime": "2026-06-23T08:16:02.000Z",
     "holder": {
       "key": "h2:FRANCISCO GEORGE MARTINS SILVA",
       "status": "OK"
     },
     "code": "01",
-    "issueDate": "2024-05-22T03:00:00.000Z",
-    "expirationDate": "2025-05-22T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
-    "statusDetail": "VENCIDO há 545 dias (22/05/2025)",
+    "issueDate": "2026-05-21T03:00:00.000Z",
+    "expirationDate": "2027-05-21T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 21/05/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "ausente",
+    "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
         "code": "01",
-        "issueDate": "2024-05-22T03:00:00.000Z",
-        "expirationDate": "2025-05-22T03:00:00.000Z",
-        "statusEHS": "VENCIDO",
-        "statusDetail": "VENCIDO há 545 dias (22/05/2025)",
+        "issueDate": "2026-05-21T03:00:00.000Z",
+        "expirationDate": "2027-05-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/05/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "ausente",
+        "matchedTerm": "ASO - Atestado de Saúde Ocupacional",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
