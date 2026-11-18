@@ -120,11 +120,9 @@ export function getCollabOperationalHealth(person: {
     } else if (r.statusEHS === 'AUSENTE' || r.statusEHS === 'NAO_LIDO') {
       missingItems.push({ docCode: code, statusEHS: r.statusEHS })
     } else if (
-      ['VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(r.statusEHS)
+      // Só o vencido bloqueia; até 90 dias (PROGRAMAR e menos de 60 d) libera com alerta.
+      ['VENCE_90', 'VENCE_60', 'VENCE_30', 'VENCE_15', 'VENCE_07'].includes(r.statusEHS)
     ) {
-      // Book EHS: vencimento em menos de 60 dias é tratado como vencido (NC-03, bloqueia).
-      expiredItems.push(r)
-    } else if (r.statusEHS === 'VENCE_90') {
       alertItems.push(r)
     }
   })

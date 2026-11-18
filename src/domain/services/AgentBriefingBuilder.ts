@@ -19,8 +19,8 @@ import {
 export const AGENT_BRIEFING_VERSION = 1
 
 const FRONTLINE_ROLES = ['IQ', 'IE', 'TO']
-// Book EHS: menos de 60 dias já bloqueia; "vai bloquear" é a faixa PROGRAMAR (61-90 dias).
-const SOON_STATUSES = ['VENCE_90']
+// "Vai bloquear": vence em até 30 dias (só o vencido bloqueia).
+const SOON_STATUSES = ['VENCE_07', 'VENCE_15', 'VENCE_30']
 const DAY_MS = 24 * 60 * 60 * 1000
 /** Gravidade para ordenar matrículas fora do ritmo: a primeira da lista é a mais urgente. */
 const PACE_SEVERITY: TrainingPaceCategory[] = [

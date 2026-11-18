@@ -77,7 +77,7 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('id="cockpitKpiTotal"')
     expect(html).toContain('Colaboradores Ativos')
     expect(html).toContain('Colaboradores Aptos')
-    expect(html).toContain('Aptos a programar (61–90 d)')
+    expect(html).toContain('Aptos que vencem em até 90 d')
     expect(html).toContain('Colaboradores Bloqueados')
     expect(html).toContain('Colaboradores em Treinamento')
     expect(html).toContain('Linha de frente')
@@ -130,7 +130,7 @@ describe('DashboardHtmlGenerator', () => {
   it('keeps people with a future expiry as fit for the field and shows days on the cards', () => {
     const html = buildDashboardHtml(sampleRecords)
     expect(html).toContain('Seguem aptos para campo')
-    expect(html).toContain(' a programar (61–90 d)')
+    expect(html).toContain(' com vencimento em até 90 d')
     expect(html).toContain('function overdueLabel')
     expect(html).toContain('function cockpitUrgency')
     expect(html).toContain(
@@ -204,10 +204,10 @@ describe('DashboardHtmlGenerator', () => {
     expect(html).toContain('.tab-view:not(.active)')
   })
 
-  it('bloqueia quem tem documento vencendo em menos de 60 dias e só alerta na faixa PROGRAMAR (Book EHS)', () => {
+  it('só bloqueia o vencido: menos de 60 dias e PROGRAMAR liberam com alerta', () => {
     const html = buildDashboardHtml(sampleRecords)
-    expect(html).toMatch(/else if \(isAVencer\(r\.statusEHS\)\) \{\s+expiredItems\.push\(r\);/)
-    expect(html).toMatch(/else if \(isProgramar\(r\.statusEHS\)\) \{\s+alertItems\.push\(r\);/)
+    expect(html).toMatch(/else if \(isAVencer\(r\.statusEHS\) \|\| isProgramar\(r\.statusEHS\)\) \{\s+alertItems\.push\(r\);/)
+    expect(html).not.toContain('Bloq. &lt;')
   })
 
   it('deve ordenar registros do prontuario do mais proximo de vencer ate o mais longe', () => {

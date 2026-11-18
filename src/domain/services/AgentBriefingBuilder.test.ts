@@ -79,9 +79,9 @@ describe('buildAgentBriefing', () => {
     ])
   })
 
-  it('aponta quem entra na faixa PROGRAMAR do ASO (vai bloquear em menos de 60 dias)', () => {
+  it('aponta quem vai bloquear pelo ASO (vence em até 30 dias)', () => {
     const records = dronePilot('CAIO', {
-      '01': { statusEHS: 'VENCE_90', expirationDate: '2026-10-20' },
+      '01': { statusEHS: 'VENCE_30', expirationDate: '2026-10-20' },
     })
     const { fieldReadiness } = buildAgentBriefing(records, [], { refDate: REF })
 
