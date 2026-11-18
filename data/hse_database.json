@@ -1444,11 +1444,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
+    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1KHDGyorspqOgBh8MdcPKNSESMH6ZTtcM/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1461,11 +1461,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1lDbBtmhMifnsFoS6B4yXAzya4pUE8CY8/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1495,11 +1495,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/16_HTCt_e90W_nYzsQ7DSWV0QabZWnjF2/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1532,11 +1532,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-03T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 78 dias (03/02/2027)",
+    "detail": "PROGRAMAR: Vence em 77 dias (03/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1Sy2UUjH_Qzu2eaPn-9jJfQ8YLYwyG1mB/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -1568,12 +1568,12 @@
     "docName": "SIT (Vestas)",
     "modality": "ONLINE",
     "expirationDate": "2027-02-16T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "detail": "Válido até 16/02/2027",
+    "statusEHS": "VENCE_90",
+    "detail": "PROGRAMAR: Vence em 90 dias (16/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1MkGGmxTOgMcUR5Hfl_KMLGJwIAtxWUf8/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fwnSdVjtIU_2mE2fNVbIut2DgK5WlmLc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_15",
@@ -2527,11 +2527,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 9 dias (26/11/2026)",
+    "detail": "ALERTA URGENTE: Vence em 8 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1fvsUp8zlTdqSTzZeMEfmwEErsi8BXcQ2/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T10:11:38.223Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -2625,17 +2625,16 @@
     "docCode": "14",
     "docName": "NR-11 Uso de Talha",
     "modality": "ONLINE",
-    "expirationDate": "2027-12-10T03:00:00.000Z",
+    "expirationDate": "2028-11-18T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "621787",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 0,
-    "storzDeadline": "15/01/2027",
-    "detail": "Válido até 10/12/2027 | Reciclagem já solicitada na Storz (621787 - Status: EM_ANDAMENTO).",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (621787) em 18/11/2026 — Válido até 18/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/14neJ2zlM4SpB3dAUvQJV61JwHHggZN8c/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-16T12:11:33.630Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -2732,13 +2731,13 @@
     "statusEHS": "VENCE_30",
     "storzRequestId": "621789",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 3,
+    "storzProgressPercent": 19,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA MÉDIO: Vence em 27 dias (14/12/2026) | EM ANDAMENTO NA STORZ (621789 - Progresso: 3%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 14/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "detail": "ALERTA MÉDIO: Vence em 26 dias (14/12/2026) | EM ANDAMENTO NA STORZ (621789 - Progresso: 19%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 14/12/2026, ANTES do prazo da Storz (15/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/18CcNXh35yz5ZHNZTUA7ihrkbnsSKdKtb/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -2818,16 +2817,16 @@
     "docName": "NR-33 Supervisor",
     "modality": "ONLINE",
     "expirationDate": "2026-12-18T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
+    "statusEHS": "VENCE_30",
     "storzRequestId": "596031",
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 3,
     "storzDeadline": "11/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 31 dias (18/12/2026) | EM ANDAMENTO NA STORZ (596031 - Progresso: 3%) [Prazo Storz: 11/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 18/12/2026, ANTES do prazo da Storz (11/01/2027)!",
+    "detail": "ALERTA MÉDIO: Vence em 30 dias (18/12/2026) | EM ANDAMENTO NA STORZ (596031 - Progresso: 3%) [Prazo Storz: 11/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 18/12/2026, ANTES do prazo da Storz (11/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1MrifxdR2CEfW6BviLPFooyDm4HTxur3Y/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1RJ5PHi52STg0farSAc2bOL0TWTF9kWlG",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_19",
@@ -2857,11 +2856,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-06T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 50 dias (06/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 49 dias (06/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1FdrI5URGjT4wtKKuqEna9BzXHjdjiphP/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1tb2BYqc1xnjJLBsOvL-P_erHepi4n3nO",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_20",
@@ -3640,11 +3639,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-11T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 86 dias (11/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
+    "detail": "PROGRAMAR: Vence em 85 dias (11/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
     "evidenceUrl": "https://drive.google.com/file/d/1_xB4NA2OIE6UVvXOeeWWquYR2Ig6mxzp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3657,11 +3656,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-14T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 89 dias (14/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (11/02/2025) difere da data impressa no documento (14/02/2025).",
+    "detail": "PROGRAMAR: Vence em 88 dias (14/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (11/02/2025) difere da data impressa no documento (14/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1_xB4NA2OIE6UVvXOeeWWquYR2Ig6mxzp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3694,11 +3693,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-14T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 89 dias (14/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (11/02/2025) difere da data impressa no documento (14/02/2025).",
+    "detail": "PROGRAMAR: Vence em 88 dias (14/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (11/02/2025) difere da data impressa no documento (14/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1_xB4NA2OIE6UVvXOeeWWquYR2Ig6mxzp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3714,11 +3713,11 @@
     "storzRequestId": "622545",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027) | SOLICITADO NA STORZ (622545 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027) | SOLICITADO NA STORZ (622545 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1y4LttwEG3zBBsYUUz9XO-z_WsvqmnxpZ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_22",
@@ -3802,11 +3801,11 @@
     "storzRequestId": "622560",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 77 dias (02/02/2027) | SOLICITADO NA STORZ (622560 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 76 dias (02/02/2027) | SOLICITADO NA STORZ (622560 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/18BJQGZQ0k_b8p7yWMUoHIaHvGP0vhSVt/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_23",
@@ -4205,11 +4204,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 30,
     "storzDeadline": "09/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (13/01/2027) | EM ANDAMENTO NA STORZ (613533 - Progresso: 30%) [Prazo Storz: 09/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (13/01/2027) | EM ANDAMENTO NA STORZ (613533 - Progresso: 30%) [Prazo Storz: 09/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1hQ7GruKutkrPxOj4ADqmwZiiqRyb414h/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -4417,11 +4416,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-15T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 59 dias (15/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 58 dias (15/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1tFIJGRAB8_30bMuJ0RV-eRZdHYZ87ZEC/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -5123,11 +5122,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-12T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 87 dias (12/02/2027)",
+    "detail": "PROGRAMAR: Vence em 86 dias (12/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1wz1r0Jpo-paqUp3GHO0NLg4eq6AYkHHt/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1s33CXZbJeHZ0KquQQFk7c5T4F2FT_eVI",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -5140,11 +5139,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-11T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 86 dias (11/02/2027)",
+    "detail": "PROGRAMAR: Vence em 85 dias (11/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1ZbT7vR9xyz90034MwbuNQwNJf3F0N4B9/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1s33CXZbJeHZ0KquQQFk7c5T4F2FT_eVI",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -5177,11 +5176,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-17T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 31 dias (17/10/2026)",
+    "detail": "VENCIDO há 32 dias (17/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1c-0Fr2x1NZPaBDP82Oy-qQsMnvSZmhND/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1s33CXZbJeHZ0KquQQFk7c5T4F2FT_eVI",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_26",
@@ -6025,11 +6024,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-07T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 82 dias (07/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
+    "detail": "PROGRAMAR: Vence em 81 dias (07/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
     "evidenceUrl": "https://drive.google.com/file/d/1-DXw67x8vewDgtTUXIJeBE-JsL2Wp7oF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1irCYviCefZCk9JOJVl7P-USvnStV9n4M",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -6042,11 +6041,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-08T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 83 dias (08/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (07/02/2025) difere da data impressa no documento (08/02/2025).",
+    "detail": "PROGRAMAR: Vence em 82 dias (08/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (07/02/2025) difere da data impressa no documento (08/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1-DXw67x8vewDgtTUXIJeBE-JsL2Wp7oF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1irCYviCefZCk9JOJVl7P-USvnStV9n4M",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -6076,11 +6075,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-08T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 83 dias (08/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (07/02/2025) difere da data impressa no documento (08/02/2025).",
+    "detail": "PROGRAMAR: Vence em 82 dias (08/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (07/02/2025) difere da data impressa no documento (08/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1-DXw67x8vewDgtTUXIJeBE-JsL2Wp7oF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1irCYviCefZCk9JOJVl7P-USvnStV9n4M",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -7040,11 +7039,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
+    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1UVDGmaEaEE6tuTpHs6PcawGj_cQfdLRx/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7057,11 +7056,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1ztI6ckcRFlA88wejzsU_zL_NHFTcy4yV/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7077,11 +7076,11 @@
     "storzRequestId": "613573",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 72 dias (28/01/2027) | SOLICITADO NA STORZ (613573 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 71 dias (28/01/2027) | SOLICITADO NA STORZ (613573 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1ivz_pZkWYVUnSpMHnjEHxgyrpyQTSllx/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7094,11 +7093,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (09/02/2027) difere da data impressa no documento (05/02/2025).",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (09/02/2027) difere da data impressa no documento (05/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1Yjh_e-hxrhSm6ZVft6UUQAqV0ZFcuWMO/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7114,11 +7113,11 @@
     "storzRequestId": "613584",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "CRÍTICO: Vence em 3 dia(s) (20/11/2026) | SOLICITADO NA STORZ (613584 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "CRÍTICO: Vence em 2 dia(s) (20/11/2026) | SOLICITADO NA STORZ (613584 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1b2PITdVMD41WrL4bJwHgQl9hRwVDM7RN/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7131,11 +7130,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-23T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 67 dias (23/01/2027)",
+    "detail": "PROGRAMAR: Vence em 66 dias (23/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/17A82zNAW4SiIthCJvXMxhgmDvamJBN6M/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_32",
@@ -7202,11 +7201,11 @@
     "storzRequestId": "613589",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "VENCIDO há 235 dias (27/03/2026) | SOLICITADO NA STORZ (613589 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "VENCIDO há 236 dias (27/03/2026) | SOLICITADO NA STORZ (613589 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1UH4guv032iNPY-gcYn-jOndflDUsaE00/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1IcrLWxzp1jy09SVGDntmkt6zDqyOMnxV",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_33",
@@ -7596,11 +7595,11 @@
     "storzRequestId": "606990",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 75 dias (31/01/2027) | SOLICITADO NA STORZ (606990 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 74 dias (31/01/2027) | SOLICITADO NA STORZ (606990 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1-PbJXsW0On4kpDOPYrHIOqaw7M3l4ybE/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7656,11 +7655,11 @@
     "storzRequestId": "607011",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 67 dias (23/01/2027) | SOLICITADO NA STORZ (607011 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 66 dias (23/01/2027) | SOLICITADO NA STORZ (607011 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1x8XA0jimR39WYasNJtHXfTghzYq5LIVf/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7677,11 +7676,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 68,
     "storzDeadline": "10/01/2027",
-    "detail": "PROGRAMAR: Vence em 66 dias (22/01/2027) | EM ANDAMENTO NA STORZ (606891 - Progresso: 68%) [Prazo Storz: 10/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 65 dias (22/01/2027) | EM ANDAMENTO NA STORZ (606891 - Progresso: 68%) [Prazo Storz: 10/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1mBkS-azuzScmT-ZGdXj4wepxEElBc-TP/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7694,11 +7693,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-21T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 65 dias (21/01/2027)",
+    "detail": "PROGRAMAR: Vence em 64 dias (21/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1noQeUqQ_8arcuxgv-ZP4V35V-PzgtHhu/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7714,11 +7713,11 @@
     "storzRequestId": "607018",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 67 dias (23/01/2027) | SOLICITADO NA STORZ (607018 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 66 dias (23/01/2027) | SOLICITADO NA STORZ (607018 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/11VNY-L4siRXPYVnt8vfW71PdErUVdUDb/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7734,11 +7733,11 @@
     "storzRequestId": "607028",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 65 dias (21/01/2027) | SOLICITADO NA STORZ (607028 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 64 dias (21/01/2027) | SOLICITADO NA STORZ (607028 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1Qu9hXDHZMBSjmgftOZlPRNrDOlnuAoGI/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7771,11 +7770,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-24T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 68 dias (24/01/2027)",
+    "detail": "PROGRAMAR: Vence em 67 dias (24/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1KExPD2cAQyAQN0i-z4F73UBiP2bOGk1X/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7791,11 +7790,11 @@
     "storzRequestId": "607043",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 71 dias (27/01/2027) | SOLICITADO NA STORZ (607043 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 70 dias (27/01/2027) | SOLICITADO NA STORZ (607043 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1RlsHniJjzfyJ-DbH6fbkQHxZeaD_ay3L/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7808,11 +7807,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-27T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 71 dias (27/01/2027)",
+    "detail": "PROGRAMAR: Vence em 70 dias (27/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/15imNibBm3PwILwe2kgCkicIi9iDV1aXe/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -7825,11 +7824,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-28T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 72 dias (28/01/2027)",
+    "detail": "PROGRAMAR: Vence em 71 dias (28/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1z4sOprQDNXanW10AGdv_0ezqi5bqAn6o/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sMyspKvGGsGF9K1AV9eJioIVq2-LoDLa",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_34",
@@ -8015,11 +8014,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-14T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 3 dias (14/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (13/11/2024) difere da data impressa no documento (14/11/2024).",
+    "detail": "VENCIDO há 4 dias (14/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (13/11/2024) difere da data impressa no documento (14/11/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1SBevJuWK81Jpp1vSZHELq_VlROIU0O7f/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fka0blI99SrBmds_TvYyvBs2mV3Jlwnh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_35",
@@ -8109,11 +8108,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-13T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 4 dias (13/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
+    "detail": "VENCIDO há 5 dias (13/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
     "evidenceUrl": "https://drive.google.com/file/d/1SBevJuWK81Jpp1vSZHELq_VlROIU0O7f/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1fka0blI99SrBmds_TvYyvBs2mV3Jlwnh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_35",
@@ -8981,11 +8980,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
+    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1m5weYP8pakCPgNcmZwhGlsiAv3xC6sjz/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1VpgC7OjybwrF8wCNKOlLy1KbAGy6yXvo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -8998,11 +8997,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (03/02/2025) difere da data impressa no documento (05/02/2025).",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (03/02/2025) difere da data impressa no documento (05/02/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1OYqM3F87smx3LstltuJb9DWGx0oleWIp/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1VpgC7OjybwrF8wCNKOlLy1KbAGy6yXvo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -9032,11 +9031,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1pBgnqrRpDId742sN1XiJh_VmlZgWVQFh/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1VpgC7OjybwrF8wCNKOlLy1KbAGy6yXvo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -9069,11 +9068,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-03T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 78 dias (03/02/2027)",
+    "detail": "PROGRAMAR: Vence em 77 dias (03/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1FKoai-LtcyL5_zeyOo-WHyBScl_muycC/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1VpgC7OjybwrF8wCNKOlLy1KbAGy6yXvo",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_38",
@@ -9362,11 +9361,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 65,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 36 dias (23/12/2026) | EM ANDAMENTO NA STORZ (623445 - Progresso: 65%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 23/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 35 dias (23/12/2026) | EM ANDAMENTO NA STORZ (623445 - Progresso: 65%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 23/12/2026, ANTES do prazo da Storz (15/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1neib_t7litrk-XA-BfcIDLuzHn4XptaZ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -9451,11 +9450,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 10,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 10%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 33 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 10%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1wfCQCHLM15vOaTksAf4fbWvNHdXTb7WX/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -9880,11 +9879,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-03T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 78 dias (03/02/2027)",
+    "detail": "PROGRAMAR: Vence em 77 dias (03/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1SzxLNt3gtqEzuB-ej2XDPl0OEUVcD3EU/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9901,11 +9900,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
     "storzDeadline": "10/01/2027",
-    "detail": "PROGRAMAR: Vence em 85 dias (10/02/2027) | EM ANDAMENTO NA STORZ (622192 - Progresso: 0%) [Prazo Storz: 10/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 84 dias (10/02/2027) | EM ANDAMENTO NA STORZ (622192 - Progresso: 0%) [Prazo Storz: 10/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1QsTR-kZJbMRDZUc9KhIvkrqqokGp4-pA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9962,11 +9961,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 31,
     "storzDeadline": "08/01/2027",
-    "detail": "PROGRAMAR: Vence em 66 dias (22/01/2027) | EM ANDAMENTO NA STORZ (606892 - Progresso: 31%) [Prazo Storz: 08/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 65 dias (22/01/2027) | EM ANDAMENTO NA STORZ (606892 - Progresso: 31%) [Prazo Storz: 08/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1D4LSxMuR_b3m1Ykk93nD6yLDIHJlV_YI/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9979,11 +9978,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-21T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 65 dias (21/01/2027)",
+    "detail": "PROGRAMAR: Vence em 64 dias (21/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1p7qXI9MFzS05EtcQJhMkoJ5DKCA-ZRTo/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -9999,11 +9998,11 @@
     "storzRequestId": "607019",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 72 dias (28/01/2027) | SOLICITADO NA STORZ (607019 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 71 dias (28/01/2027) | SOLICITADO NA STORZ (607019 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1JAwUT5teFSICCyX9P7bLKRvxmYScizdc/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10019,11 +10018,11 @@
     "storzRequestId": "607030",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 65 dias (21/01/2027) | SOLICITADO NA STORZ (607030 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 64 dias (21/01/2027) | SOLICITADO NA STORZ (607030 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1nta3PlcftdoLci5u_2oZRgFLN8oR3ZMN/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10056,11 +10055,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/11ELH5bRVhEbWLfiYTh3X_yoao4ssBIe1/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10077,11 +10076,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 0,
     "storzDeadline": "18/12/2026",
-    "detail": "PROGRAMAR: Vence em 73 dias (29/01/2027) | EM ANDAMENTO NA STORZ (607044 - Progresso: 0%) [Prazo Storz: 18/12/2026] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 72 dias (29/01/2027) | EM ANDAMENTO NA STORZ (607044 - Progresso: 0%) [Prazo Storz: 18/12/2026] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1YxF8BCK7ATqCjWV6tLB13dsKDJrVPvcr/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10094,11 +10093,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-29T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 73 dias (29/01/2027)",
+    "detail": "PROGRAMAR: Vence em 72 dias (29/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1hERyjQSiKWII-anRGVfm5C9ePhADPmJC/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10111,11 +10110,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-25T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 69 dias (25/01/2027)",
+    "detail": "PROGRAMAR: Vence em 68 dias (25/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1kBsydDo_l3o65yFo8tefxBgT9dbTB-hI/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10129,12 +10128,13 @@
     "expirationDate": "2027-01-07T12:00:00.000Z",
     "statusEHS": "VENCE_60",
     "storzRequestId": "607040",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 51 dias (07/01/2027) | SOLICITADO NA STORZ (607040 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 10,
+    "storzDeadline": "16/01/2027",
+    "detail": "ALERTA INICIAL: Vence em 51 dias (07/01/2027) | EM ANDAMENTO NA STORZ (607040 - Progresso: 10%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 07/01/2027, ANTES do prazo da Storz (16/01/2027)!",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1pBOkWBGLyV_dbADz1oszrogKzHUpfP_0",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T12:05:20.895Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_41",
@@ -10453,11 +10453,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-24T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 7 dia(s) (24/11/2026)",
+    "detail": "CRÍTICO: Vence em 6 dia(s) (24/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1JXZu2IUF3473ncetyxGsheNkXgm2HALx/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10470,11 +10470,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-23T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 6 dia(s) (23/11/2026)",
+    "detail": "CRÍTICO: Vence em 5 dia(s) (23/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1HE7-ikq2ChS8NABJywy84JHEvQpuPIXl/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1lwgpjhybujh30VugoHhIJi7w0Rf6NoMN",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_42",
@@ -10708,11 +10708,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-25T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 38 dias (25/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 37 dias (25/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1mrqG_8mAyfU3YKX8XOTT7iB0UbYd-lTr/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NPxObU2Ddf99YzztLVhX6sNpCiZ5LV0V",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -10793,11 +10793,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-30T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 43 dias (30/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 42 dias (30/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1HsJVs4ZX1Vh0S2VQZUV1rtE4EziWapHA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NPxObU2Ddf99YzztLVhX6sNpCiZ5LV0V",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_43",
@@ -11012,11 +11012,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-09T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 53 dias (09/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 52 dias (09/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/18erfZKtdt8molf7Isef_43uYhhwi1IUS/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -11089,11 +11089,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-13T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 57 dias (13/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 56 dias (13/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/17-nxyx0kbwwjyJElOuD8w5Y6SF9VcakD/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -11126,11 +11126,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027)",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/124trj5UM7K1sbD2liREeEdEgtk8B61AK/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -11143,11 +11143,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027)",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1ZtQoBr_ZPbWMThw9TBNUQmKKUsGeoxkA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_44",
@@ -11321,11 +11321,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-06T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 19 dias (06/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (03/11/2026) difere da data impressa no documento (06/12/2024).",
+    "detail": "ALERTA MÉDIO: Vence em 18 dias (06/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (03/11/2026) difere da data impressa no documento (06/12/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1FVzzIKYO_97nmWxO-VUL1Mn5OXvKiKhT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11338,11 +11338,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-05T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 18 dias (05/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (03/11/2026) difere da data impressa no documento (05/12/2024).",
+    "detail": "ALERTA MÉDIO: Vence em 17 dias (05/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual); Data no nome (03/11/2026) difere da data impressa no documento (05/12/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1FVzzIKYO_97nmWxO-VUL1Mn5OXvKiKhT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11370,11 +11370,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-05T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 18 dias (05/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (03/11/2026) difere da data impressa no documento (05/12/2024).",
+    "detail": "ALERTA MÉDIO: Vence em 17 dias (05/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio); Data no nome (03/11/2026) difere da data impressa no documento (05/12/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1FVzzIKYO_97nmWxO-VUL1Mn5OXvKiKhT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -11402,11 +11402,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-04T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 17 dias (04/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights); Data no nome (03/11/2026) difere da data impressa no documento (04/12/2024).",
+    "detail": "ALERTA MÉDIO: Vence em 16 dias (04/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights); Data no nome (03/11/2026) difere da data impressa no documento (04/12/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1FVzzIKYO_97nmWxO-VUL1Mn5OXvKiKhT/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1rZpf-sm0WsNB-67BD81Vz3LiLIsk4o28",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_45",
@@ -12190,11 +12190,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-06T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 11 dias (06/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (04/11/2024) difere da data impressa no documento (06/11/2024).",
+    "detail": "VENCIDO há 12 dias (06/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros); Data no nome (04/11/2024) difere da data impressa no documento (06/11/2024).",
     "evidenceUrl": "https://drive.google.com/file/d/1a7Y2AJKHg1_PTKTUWaYZj4jfPbQFLpRF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -12305,13 +12305,14 @@
     "expirationDate": "2026-11-21T03:00:00.000Z",
     "statusEHS": "VENCE_07",
     "storzRequestId": "625648",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "CRÍTICO: Vence em 4 dia(s) (21/11/2026) | SOLICITADO NA STORZ (625648 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 33,
+    "storzDeadline": "16/01/2027",
+    "detail": "CRÍTICO: Vence em 3 dia(s) (21/11/2026) | EM ANDAMENTO NA STORZ (625648 - Progresso: 33%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/11/2026, ANTES do prazo da Storz (16/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/11Z-quN1c4daSe8fb4VqcFaRq-k-4LVS4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T16:04:20.638Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -12324,11 +12325,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 9 dias (26/11/2026)",
+    "detail": "ALERTA URGENTE: Vence em 8 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/15XDUbwTIFtHV3QYpLLtOdtd5BlcF1d_m/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -12341,11 +12342,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-11-26T03:00:00.000Z",
     "statusEHS": "VENCE_15",
-    "detail": "ALERTA URGENTE: Vence em 9 dias (26/11/2026)",
+    "detail": "ALERTA URGENTE: Vence em 8 dias (26/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1lemoWZPbAKzW-GzNsahGS2UBQcSbCDno/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -12378,11 +12379,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-24T03:00:00.000Z",
     "statusEHS": "VENCE_07",
-    "detail": "CRÍTICO: Vence em 7 dia(s) (24/11/2026)",
+    "detail": "CRÍTICO: Vence em 6 dia(s) (24/11/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Yh10WKlEVzqjD4e6GKfOyh_qo_Qtsc22/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlRgblQW3jQ6_S26aimmQiGyTLDfQr-P",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -12656,11 +12657,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-25T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 115 dias (25/07/2026)",
+    "detail": "VENCIDO há 116 dias (25/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1Yl4Yd4rOW-6HJPt8H-KhdrShT-luhZnQ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlRgblQW3jQ6_S26aimmQiGyTLDfQr-P",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_50",
@@ -13028,11 +13029,11 @@
     "storzRequestId": "613535",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 60 dias (16/01/2027) | SOLICITADO NA STORZ (613535 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 59 dias (16/01/2027) | SOLICITADO NA STORZ (613535 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1j4xC6XUzGdlLwTxNUBk8FZBvwcp7yE3N/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1YU6P2S0ZDqCeIf2k5GSY8_nfTzTnhZQj",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_52",
@@ -13260,11 +13261,11 @@
     "storzRequestId": "622566",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 86 dias (11/02/2027) | SOLICITADO NA STORZ (622566 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 85 dias (11/02/2027) | SOLICITADO NA STORZ (622566 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1atzeohhGkSQjmLRupHctj-FIm6gHY3qg/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1YU6P2S0ZDqCeIf2k5GSY8_nfTzTnhZQj",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_52",
@@ -14501,11 +14502,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-11-04T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 13 dias (04/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
+    "detail": "VENCIDO há 14 dias (04/11/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
     "evidenceUrl": "https://drive.google.com/file/d/1gMu9Qchba9oKOf08QDPT7Irp6sIdXmtr/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_56",
@@ -14569,11 +14570,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-02-26T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 264 dias (26/02/2026)",
+    "detail": "VENCIDO há 265 dias (26/02/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1pjcV1yzW0jvJCKhl0DFU3kAlmo692dip/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1e0i-PDT2e9FTkebVFe3S-qutcETVoLov",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_57",
@@ -15249,11 +15250,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-23T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 25 dias (23/10/2026)",
+    "detail": "VENCIDO há 26 dias (23/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/13n6AmQyS3KdUFl15-jKVGvhi-oY4sTdl/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jlQ3AY2WduKTDlHbsSnt14BBj3wpqMLr",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_59",
@@ -17267,11 +17268,11 @@
     "storzRequestId": "622203",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 76 dias (01/02/2027) | SOLICITADO NA STORZ (622203 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 75 dias (01/02/2027) | SOLICITADO NA STORZ (622203 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1xHcF1EpvO2iM1r9tWYfqlbCbHYlH-gA7/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17284,11 +17285,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 16 (GWO Primeiros Socorros).",
     "evidenceUrl": "https://drive.google.com/file/d/1xSJojNj4mqe2rrx3TvDsUEHrlbBHRMZJ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17301,11 +17302,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual).",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 17 (GWO NR-17 Ergonomia / Carga Manual).",
     "evidenceUrl": "https://drive.google.com/file/d/1xSJojNj4mqe2rrx3TvDsUEHrlbBHRMZJ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17334,11 +17335,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio).",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 19 (GWO NR-23 Combate a Incêndio).",
     "evidenceUrl": "https://drive.google.com/file/d/1xSJojNj4mqe2rrx3TvDsUEHrlbBHRMZJ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -17370,11 +17371,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-09T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 84 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
+    "detail": "PROGRAMAR: Vence em 83 dias (09/02/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Nome do arquivo indica código 30, o conteúdo é 21 (NR-35 / GWO Working at Heights).",
     "evidenceUrl": "https://drive.google.com/file/d/1xSJojNj4mqe2rrx3TvDsUEHrlbBHRMZJ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1AP9jsVKaVzMaC2nqh9-6OLdUZVFos_p7",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_65",
@@ -18292,11 +18293,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 80,
     "storzDeadline": "15/01/2027",
-    "detail": "PROGRAMAR: Vence em 69 dias (25/01/2027) | EM ANDAMENTO NA STORZ (613576 - Progresso: 80%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 68 dias (25/01/2027) | EM ANDAMENTO NA STORZ (613576 - Progresso: 80%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1d3dxM3mPo9Xg36l1BTRgamQ85I5PXCN8/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vZ0Jvl7owpIV-_pbqvOgW4dn0X320WNt",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -18370,11 +18371,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 7,
     "storzDeadline": "15/01/2027",
-    "detail": "PROGRAMAR: Vence em 63 dias (19/01/2027) | EM ANDAMENTO NA STORZ (613597 - Progresso: 7%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 62 dias (19/01/2027) | EM ANDAMENTO NA STORZ (613597 - Progresso: 7%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1aApTxJn4XUo0T5Zl4HDtDOMxFz_xfKCs/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vZ0Jvl7owpIV-_pbqvOgW4dn0X320WNt",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -18509,11 +18510,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-10T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 85 dias (10/02/2027)",
+    "detail": "PROGRAMAR: Vence em 84 dias (10/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1SLJM3cAnp6atPlpkHIPECzHcNcnHABJQ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18647,15 +18648,15 @@
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
     "expirationDate": "2027-02-16T03:00:00.000Z",
-    "statusEHS": "CONFORME",
+    "statusEHS": "VENCE_90",
     "storzRequestId": "622550",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "Válido até 16/02/2027 | Reciclagem já solicitada na Storz (622550 - Status: SOLICITADO).",
+    "detail": "PROGRAMAR: Vence em 90 dias (16/02/2027) | SOLICITADO NA STORZ (622550 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/17D5p56EkkmoFvkBz9vscuXMw70Tez6Ij/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-11T17:47:13.228Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18684,15 +18685,15 @@
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
     "expirationDate": "2027-01-17T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
+    "statusEHS": "VENCE_60",
     "storzRequestId": "613598",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 61 dias (17/01/2027) | SOLICITADO NA STORZ (613598 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (17/01/2027) | SOLICITADO NA STORZ (613598 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1bIONRuZEFHReBlwo-cQqYTrQKTeKZ7ZC/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18742,11 +18743,11 @@
     "storzRequestId": "622567",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 90 dias (15/02/2027) | SOLICITADO NA STORZ (622567 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 89 dias (15/02/2027) | SOLICITADO NA STORZ (622567 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/191lurjM15qLmwBJTX7y3MxCZNC5eL8WU/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_69",
@@ -18907,11 +18908,11 @@
     "storzRequestId": "622205",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 76 dias (01/02/2027) | SOLICITADO NA STORZ (622205 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 75 dias (01/02/2027) | SOLICITADO NA STORZ (622205 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1URsZkabG3Y3fyS5tyczyDrIkW1bNvsD5/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ABjHM_c_rwPojp4twTsd4WLW91R4nMOh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -19024,11 +19025,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 31 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1IhVjkd0z0ASSK5uBJnnQ7FTovHNLlYSE/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ABjHM_c_rwPojp4twTsd4WLW91R4nMOh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -19061,11 +19062,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-25T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 69 dias (25/01/2027)",
+    "detail": "PROGRAMAR: Vence em 68 dias (25/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1upMUD1nrFxkjxdxy9K1ipAhwPrYVsRUf/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ABjHM_c_rwPojp4twTsd4WLW91R4nMOh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -19078,11 +19079,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-25T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 69 dias (25/01/2027)",
+    "detail": "PROGRAMAR: Vence em 68 dias (25/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1fE-KNekC22v5CgJdQE9pBQ1cfWhQc_c8/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ABjHM_c_rwPojp4twTsd4WLW91R4nMOh",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_70",
@@ -19189,11 +19190,11 @@
     "storzRequestId": "622162",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 82 dias (07/02/2027) | SOLICITADO NA STORZ (622162 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 81 dias (07/02/2027) | SOLICITADO NA STORZ (622162 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1lWHEt1RuFKWKtHeLXHFFWV4CD2w-w4e1/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19209,11 +19210,11 @@
     "storzRequestId": "622193",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 88 dias (13/02/2027) | SOLICITADO NA STORZ (622193 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 87 dias (13/02/2027) | SOLICITADO NA STORZ (622193 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/101vFfY-2lEqA2pM3fsg4q_Q7QNCIastF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19266,11 +19267,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
+    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1gA_JfbnY4Yw2SmE5nqqlR95hHObsjvxn/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19283,11 +19284,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1kONTeXJR7w_q8IucBQA0xiFMzE0pqCsA/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19300,11 +19301,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-02T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 77 dias (02/02/2027)",
+    "detail": "PROGRAMAR: Vence em 76 dias (02/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/13toE157RoaGUklr-IlIZ-PzKEK6D-cyF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19317,11 +19318,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1B933UMydjkePm2jq19tSlscwP9rhfVpI/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19337,11 +19338,11 @@
     "storzRequestId": "607039",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 53 dias (09/01/2027) | SOLICITADO NA STORZ (607039 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 52 dias (09/01/2027) | SOLICITADO NA STORZ (607039 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1RdEaZad1SwimwhNccIT-olxVQLyWGqfL/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19354,11 +19355,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-07T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 82 dias (07/02/2027)",
+    "detail": "PROGRAMAR: Vence em 81 dias (07/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1p1YCoeQYka7FKpXjZZmpfX61VTdxIjrF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19371,11 +19372,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-02-03T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 78 dias (03/02/2027)",
+    "detail": "PROGRAMAR: Vence em 77 dias (03/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1y4I_iIDsn6ReMve2Di5dXqn6-2e6jRZV/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19425,11 +19426,11 @@
     "storzRequestId": "607041",
     "storzState": "SOLICITADO",
     "storzProgressPercent": 0,
-    "detail": "ALERTA INICIAL: Vence em 47 dias (03/01/2027) | SOLICITADO NA STORZ (607041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 46 dias (03/01/2027) | SOLICITADO NA STORZ (607041 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/18TUs1US7T27kByGiZebu5MTuqCnKMNla/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_72",
@@ -19922,11 +19923,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-04T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (04/02/2027)",
+    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1IYWu5qBABblO7ELj6hr611A_5dAfKNOm/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vebmggue3qa7m-1kR83vo_h_BQYHAV6V",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_73",
@@ -19975,11 +19976,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-02-05T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 80 dias (05/02/2027)",
+    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1nf2XzvXFlx2oyrBPacwojTbgUF3tLKeY/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vebmggue3qa7m-1kR83vo_h_BQYHAV6V",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_73",
@@ -20425,11 +20426,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-10-19T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 29 dias (19/10/2026)",
+    "detail": "VENCIDO há 30 dias (19/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1fKpnyhkP_lcIXhB2fkVOxEIWWE_I41Lg/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1DY4WISGgK4LRd7M6uAsaxlEpFOYKo1yU",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_75",
@@ -20646,11 +20647,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 65,
     "storzDeadline": "02/01/2027",
-    "detail": "VENCIDO há 29 dias (19/10/2026) | EM ANDAMENTO NA STORZ (616712 - Progresso: 65%) [Prazo Storz: 02/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 19/10/2026, ANTES do prazo da Storz (02/01/2027)!",
+    "detail": "VENCIDO há 30 dias (19/10/2026) | EM ANDAMENTO NA STORZ (616712 - Progresso: 65%) [Prazo Storz: 02/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 19/10/2026, ANTES do prazo da Storz (02/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1DLQDg4BcsGHw3fEzJsuvQrSMdnjUOoFk/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1MqqufZsNHsFqYUJyJq_gbTmI353Rmg4C",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_75",
@@ -22260,11 +22261,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-22T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 66 dias (22/01/2027)",
+    "detail": "PROGRAMAR: Vence em 65 dias (22/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/18fY59Lj4TJttCTqapgxFoSQAI8UHCGKM/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_81",
@@ -22350,11 +22351,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2027-01-24T03:00:00.000Z",
     "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 68 dias (24/01/2027)",
+    "detail": "PROGRAMAR: Vence em 67 dias (24/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1TuOWMLLvc8Hk7btmKcNMVZcbxygzA4-s/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_81",
@@ -22545,11 +22546,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 11,
     "storzDeadline": "12/01/2027",
-    "detail": "VENCIDO há 9 dias (08/11/2026) | EM ANDAMENTO NA STORZ (622180 - Progresso: 11%) [Prazo Storz: 12/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 08/11/2026, ANTES do prazo da Storz (12/01/2027)!",
+    "detail": "VENCIDO há 10 dias (08/11/2026) | EM ANDAMENTO NA STORZ (622180 - Progresso: 11%) [Prazo Storz: 12/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 08/11/2026, ANTES do prazo da Storz (12/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1gd0f_j0xQZDPNcCU5CAgQVvTy6CchEcE/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22580,13 +22581,14 @@
     "expirationDate": "2026-10-02T03:00:00.000Z",
     "statusEHS": "VENCIDO",
     "storzRequestId": "625323",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "VENCIDO há 46 dias (02/10/2026) | SOLICITADO NA STORZ (625323 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 12,
+    "storzDeadline": "16/01/2027",
+    "detail": "VENCIDO há 47 dias (02/10/2026) | EM ANDAMENTO NA STORZ (625323 - Progresso: 12%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 02/10/2026, ANTES do prazo da Storz (16/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1JmByUzmkEgoc0MJXmweBXfSm0Oa3bZSG/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T12:05:20.895Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22619,11 +22621,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-30T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 18 dias (30/10/2026)",
+    "detail": "VENCIDO há 19 dias (30/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/15sKvJxiJjhxgGINAGZnP5m2Q25-VCkAq/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22656,11 +22658,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-10-30T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 18 dias (30/10/2026)",
+    "detail": "VENCIDO há 19 dias (30/10/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/13SUZSviivreeIVV5mYdANCveAfFtKEo6/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22710,11 +22712,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-25T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 115 dias (25/07/2026)",
+    "detail": "VENCIDO há 116 dias (25/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1KnRMENax69e99fOdJUIAG_tRSx4M3bwq/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -22727,11 +22729,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-07-26T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 114 dias (26/07/2026)",
+    "detail": "VENCIDO há 115 dias (26/07/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1jj4F2e5IncVdCzQ5Tn-5lgHM17qlDHXo/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_82",
@@ -24322,11 +24324,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-15T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 59 dias (15/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (15/12/2025) difere da data impressa no documento (12/12/2025).",
+    "detail": "ALERTA INICIAL: Vence em 58 dias (15/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (15/12/2025) difere da data impressa no documento (12/12/2025).",
     "evidenceUrl": "https://drive.google.com/file/d/1PhaNl7tm4h7As5iyZqyh6pnhEbYqRNII/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1riB8D6yph-Rvn0g2PaWjwJsLFH9yaOI9",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_95",
@@ -24523,11 +24525,11 @@
     "modality": "ONLINE",
     "expirationDate": "2026-12-09T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 22 dias (09/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (28/01/2026) difere da data impressa no documento (27/01/2026).",
+    "detail": "ALERTA MÉDIO: Vence em 21 dias (09/12/2026) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (28/01/2026) difere da data impressa no documento (27/01/2026).",
     "evidenceUrl": "https://drive.google.com/file/d/1jfP1B3SkCznbCSrLEZ0HnzjZYhDlY21c/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1gwOmrszXymgc4ACDmJrMdKnGx9wJZgfB",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_96",
@@ -24629,11 +24631,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 93,
     "storzDeadline": "31/12/2026",
-    "detail": "PROGRAMAR: Vence em 66 dias (22/01/2027) | EM ANDAMENTO NA STORZ (613532 - Progresso: 93%) [Prazo Storz: 31/12/2026] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 65 dias (22/01/2027) | EM ANDAMENTO NA STORZ (613532 - Progresso: 93%) [Prazo Storz: 31/12/2026] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1KNEN4bl9_BaHelveH37AjSO3Su9YvItj/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_96",
@@ -24687,11 +24689,11 @@
     "storzState": "EM_ANDAMENTO",
     "storzProgressPercent": 80,
     "storzDeadline": "13/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 50 dias (06/01/2027) | EM ANDAMENTO NA STORZ (613572 - Progresso: 80%) [Prazo Storz: 13/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 06/01/2027, ANTES do prazo da Storz (13/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 49 dias (06/01/2027) | EM ANDAMENTO NA STORZ (613572 - Progresso: 80%) [Prazo Storz: 13/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 06/01/2027, ANTES do prazo da Storz (13/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1TFQdnDYq1EaFB-ahZtXmw8o_p4YTRyTb/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_96",
@@ -24741,11 +24743,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-08T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 52 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (09/01/2026) difere da data impressa no documento (08/01/2026).",
+    "detail": "ALERTA INICIAL: Vence em 51 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (09/01/2026) difere da data impressa no documento (08/01/2026).",
     "evidenceUrl": "https://drive.google.com/file/d/1Iq1HG8_3J2fmw5T4OnyNwII5-ezDDxKQ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_97",
@@ -24758,11 +24760,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-17T03:00:00.000Z",
     "statusEHS": "VENCE_30",
-    "detail": "ALERTA MÉDIO: Vence em 30 dias (17/12/2026)",
+    "detail": "ALERTA MÉDIO: Vence em 29 dias (17/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1k2sEHmCHK1FFM5WVlM0Q02MIR6hbVOFC/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1ydZhrx_ryj9TvmD96PfEeQ4j0NLfFd-s",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_97",
@@ -25138,11 +25140,11 @@
     "modality": "ONLINE",
     "expirationDate": "2025-12-09T03:00:00.000Z",
     "statusEHS": "VENCIDO",
-    "detail": "VENCIDO há 343 dias (09/12/2025)",
+    "detail": "VENCIDO há 344 dias (09/12/2025)",
     "evidenceUrl": "https://drive.google.com/file/d/1_iH61yvWnpGwGzXwc67eYJdxvbj7LF-X/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1HFfUKYt5o_u8SiF_xtxFSEgdBpefQi82",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T12:05:20.895Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_98",
@@ -25172,11 +25174,11 @@
     "modality": "PRESENCIAL",
     "expirationDate": "2026-12-19T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (19/12/2026)",
+    "detail": "ALERTA INICIAL: Vence em 31 dias (19/12/2026)",
     "evidenceUrl": "https://drive.google.com/file/d/1YNwLo99RoL799qua5wiFxavA6_jK-Cot/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1x51uESYKnTWT2TknfjVRPlGeXQptHaxc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_99",
@@ -25578,11 +25580,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-08T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 52 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (12/01/2026) difere da data impressa no documento (08/01/2026).",
+    "detail": "ALERTA INICIAL: Vence em 51 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (12/01/2026) difere da data impressa no documento (08/01/2026).",
     "evidenceUrl": "https://drive.google.com/file/d/1WfJXi5_CySxMf6izbRjR0eJlBjj5lchd/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-Xmd_OILBfCvDiGGCQRSxk9hYfckQ5zv",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_101",
@@ -26200,11 +26202,11 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-02T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 46 dias (02/01/2027)",
+    "detail": "ALERTA INICIAL: Vence em 45 dias (02/01/2027)",
     "evidenceUrl": "https://drive.google.com/file/d/1nbvekxaHQCax9qZUOaQ4nLskYOoWxaew/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1sD-np2jvKjX57RZUnfcp4HQC2ChG64gA",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   },
   {
     "inspectorId": "rpo_103",
@@ -26718,10 +26720,10 @@
     "modality": "ONLINE",
     "expirationDate": "2027-01-08T03:00:00.000Z",
     "statusEHS": "VENCE_60",
-    "detail": "ALERTA INICIAL: Vence em 52 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (09/01/2026) difere da data impressa no documento (08/01/2026).",
+    "detail": "ALERTA INICIAL: Vence em 51 dias (08/01/2027) | ATENÇÃO, nome do arquivo diverge do conteúdo: Data no nome (09/01/2026) difere da data impressa no documento (08/01/2026).",
     "evidenceUrl": "https://drive.google.com/file/d/16xLndmPWloNZN1rslu8swIB04oL1bAhz/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jVB6rjg0mrxtMJF_7DuLuXc7pP5uUn2k",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-17T09:32:19.851Z"
+    "lastUpdated": "2026-11-18T09:32:12.487Z"
   }
 ]
