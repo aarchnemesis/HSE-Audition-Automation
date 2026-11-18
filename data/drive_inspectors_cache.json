@@ -506,10 +506,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.10.26 – Drielton Francisco de Araujo Silva.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – Drielton Francisco de Araujo Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1LM9IYOCcVEHs5JjaEp73yek8KVRY8kt5/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "05": {
@@ -736,11 +738,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.10.26 – HENRIQUE ELANIO GOMES FERNANDES.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.10.26 – HENRIQUE ELANIO GOMES FERNANDES.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-21T03:00:00.000Z",
+        "expirationDate": "2027-10-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1mz8Yut5bmvSkTIXBLFrEDQg-zIsePme6/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (19/10/2026) difere da data impressa no documento (21/10/2026)"
+        ]
       }
     },
     "driveFolderId": "1pRgc04-u4d9Kunxi_JMpF3gqMRDjewW5",
@@ -898,11 +904,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2026-10-19_VAL-2027-10-19_JOCELEO-ABREU-VENANCIO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2026-10-19_VAL-2027-10-19_JOCELEO-ABREU-VENANCIO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-21T03:00:00.000Z",
+        "expirationDate": "2027-10-21T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 21/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1_SUheznA4A8bFhpDRVWzjHFkUkTHhcK4/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (19/10/2026) difere da data impressa no documento (21/10/2026)"
+        ]
       },
       "20.1": {
         "code": "20.1",
@@ -1132,10 +1142,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2026-10-14_VAL-2027-10-14_WILLAMES-WAGNER-DA-SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2026-10-14_VAL-2027-10-14_WILLAMES-WAGNER-DA-SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2027-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2027",
         "sourcePath": "https://drive.google.com/file/d/19uMV8kTbKIfMIrQR297xBfTEVkNphvDO/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "09": {
@@ -1459,10 +1471,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2026-10-19_VAL-2027-10-19_ADENIO-FRANCISCO-DE-SOUSA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2026-10-19_VAL-2027-10-19_ADENIO-FRANCISCO-DE-SOUSA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-19T03:00:00.000Z",
+        "expirationDate": "2027-10-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1zABVYVGsPc1kceTpfd5nolBZc3lxymdx/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "09": {
@@ -1813,11 +1827,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "ASO-ADM-MARIO SERGIO CASTRO DE SOUSA-09-10-2026.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ASO-ADM-MARIO SERGIO CASTRO DE SOUSA-09-10-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2027-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1hhSRuKPWx8oplZtN-7enxTHfH9sc_F-R/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (09/10/2026) difere da data impressa no documento (14/10/2026)"
+        ]
       }
     },
     "driveFolderId": "1JWlxjY9qvJKfR_SdYqSo7rGrEXVJ16VC",
@@ -2044,11 +2062,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 09.10.2026 - FRANCISCO EVERSON BARBOSA VASCONCELOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 09.10.2026 - FRANCISCO EVERSON BARBOSA VASCONCELOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2027-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1yY1Dh3Sg03jtki0JRYYjLctsod3tWaeb/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (09/10/2026) difere da data impressa no documento (14/10/2026)"
+        ]
       }
     },
     "driveFolderId": "1UwirVxcPOhPKYqwevWfqccEEPcfgb1v3",
@@ -2724,10 +2746,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 14.10.26 – Francisco Franklin da Silva",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 14.10.26 – Francisco Franklin da Silva\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-14T03:00:00.000Z",
+        "expirationDate": "2027-10-14T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 14/10/2027",
         "sourcePath": "https://drive.google.com/file/d/19uTGODiVjp5NZ49GVba5zN0E2OiX2B5o/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -3477,11 +3501,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 29.09.2026 - WERMESON DE OLIVEIRA FRANCO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 29.09.2026 - WERMESON DE OLIVEIRA FRANCO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-01T03:00:00.000Z",
+        "expirationDate": "2027-10-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1MDplW9oiG7UAxY58KRkZJ20tZVTJ7SKs/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (29/09/2026) difere da data impressa no documento (01/10/2026)"
+        ]
       }
     },
     "driveFolderId": "1aTvYOAQXr3GIZsPZL4hQ6B30z3vuQ2hD",
@@ -3848,11 +3876,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 21.11.2025 - THALITSON WILKSON PINTO NUNES.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 21.11.2025 - THALITSON WILKSON PINTO NUNES.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-11-25T03:00:00.000Z",
+        "expirationDate": "2026-11-25T03:00:00.000Z",
+        "statusEHS": "VENCE_07",
+        "statusDetail": "CRÍTICO: Vence em 7 dia(s) (25/11/2026)",
         "sourcePath": "https://drive.google.com/file/d/1-_obO5hpkLZWzcia6sMD7cetV9M08GJh/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (21/11/2025) difere da data impressa no documento (25/11/2025)"
+        ]
       },
       "05": {
         "code": "05",
@@ -4250,10 +4282,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2025-10-20_VAL-2026-10-20_VALDERSON-DO-NASCIMENTO-FERREIRA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2025-10-20_VAL-2026-10-20_VALDERSON-DO-NASCIMENTO-FERREIRA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-10-20T03:00:00.000Z",
+        "expirationDate": "2026-10-20T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 29 dias (20/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1zT6k3RVbXri7VssWykLZR9V03AyaQzyG/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "08": {
@@ -4622,11 +4656,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 01.09.2026 - THAYNA NOGUEIRA TAVARES.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 01.09.2026 - THAYNA NOGUEIRA TAVARES.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-20T03:00:00.000Z",
+        "expirationDate": "2027-09-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1CmVP0ZY5ULPVWjJdDWYt5MQBIlFo1KSi/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (01/09/2026) difere da data impressa no documento (20/09/2026)"
+        ]
       }
     },
     "driveFolderId": "1DY4WISGgK4LRd7M6uAsaxlEpFOYKo1yU",
@@ -4993,10 +5031,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 21.11.2025 - WANDERSON AVELINO DE SOUZA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 21.11.2025 - WANDERSON AVELINO DE SOUZA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-11-21T03:00:00.000Z",
+        "expirationDate": "2026-11-21T03:00:00.000Z",
+        "statusEHS": "VENCE_07",
+        "statusDetail": "CRÍTICO: Vence em 3 dia(s) (21/11/2026)",
         "sourcePath": "https://drive.google.com/file/d/18utkID-HX78rRqA1E_naCofhcvL3ZzkN/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -6063,11 +6103,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-ADM_EMI-2026-09-29_VAL-2027-09-29_SIMON-DIAS-DA-SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-ADM_EMI-2026-09-29_VAL-2027-09-29_SIMON-DIAS-DA-SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-01T03:00:00.000Z",
+        "expirationDate": "2027-10-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1DBbx7XSXUoFJ22NgW9beetaIj8TiaQO0/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (29/09/2026) difere da data impressa no documento (01/10/2026)"
+        ]
       },
       "05": {
         "code": "05",
@@ -6453,11 +6497,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 24.06.26 - Rafael Andrade Barbosa",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 24.06.26 - Rafael Andrade Barbosa\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-24T03:00:00.000Z",
+        "expirationDate": "2027-07-24T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 24/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1h-GiBfrtOHbCFpqziS-2jmaubttMt8Bv/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (24/06/2026) difere da data impressa no documento (24/07/2026)"
+        ]
       }
     },
     "driveFolderId": "1cDR6_r9_V_Jj_uQ1UntFeH_9uGZmWUuY",
@@ -7193,10 +7241,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 29.04.2026 - Pedro Paulo Ferreira de Almeida.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 29.04.2026 - Pedro Paulo Ferreira de Almeida.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-04-29T03:00:00.000Z",
+        "expirationDate": "2027-04-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1dfbKF4YskQNxInvBb7hUPmBti8zUzlrw/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -7549,11 +7599,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 26.01.2026 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 26.01.2026 - PEDRO EDUARDO DE OLIVEIRA CAVALCANTI SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2024-01-26T03:00:00.000Z",
+        "expirationDate": "2025-01-26T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 661 dias (26/01/2025)",
         "sourcePath": "https://drive.google.com/file/d/1oXatudPyJsjU6nf4grL7L4v0hvadLbSi/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (26/01/2026) difere da data impressa no documento (26/01/2024)"
+        ]
       }
     },
     "driveFolderId": "1BxPYugHVKn9ZRj6RiBM3VICIMZ4lpEoR",
@@ -9011,10 +9065,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2025-10-23_VAL-2026-10-23_LUCAS-JEAN-GONCALVES-DE-SOUZA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2025-10-23_VAL-2026-10-23_LUCAS-JEAN-GONCALVES-DE-SOUZA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-10-23T03:00:00.000Z",
+        "expirationDate": "2026-10-23T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 26 dias (23/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1Cqs6IQ2WsgMX0nNC2ow1DY4Iqt7MfWhZ/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "21.1": {
@@ -10281,11 +10337,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 03.08.2026 - Lucas Andre de Sousa Ribeiro.pdf.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 03.08.2026 - Lucas Andre de Sousa Ribeiro.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-08-03T03:00:00.000Z",
+        "expirationDate": "2026-08-03T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 107 dias (03/08/2026)",
         "sourcePath": "https://drive.google.com/file/d/14hDIayicmfcrlrNglcpk2e-mGcNvCrAM/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (03/08/2026) difere da data impressa no documento (03/08/2025)"
+        ]
       }
     },
     "driveFolderId": "1DjPZaMEXOSqzqs295cX58nDe8qTXEIaK",
@@ -12599,10 +12659,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 27.10.2025 - JOSE RICARDO BRAGA MATOS.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 27.10.2025 - JOSE RICARDO BRAGA MATOS.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-10-27T03:00:00.000Z",
+        "expirationDate": "2026-10-27T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 22 dias (27/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1Etha8RGNcFHEVuCsRGepzE0kkomOR9V_/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -12967,11 +13029,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 09.09.2026 - JOSE MARCOS LIMA DE MOURA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 09.09.2026 - JOSE MARCOS LIMA DE MOURA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-10T03:00:00.000Z",
+        "expirationDate": "2027-09-10T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 10/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1MxZ1mjk6fRYQuESMdG4XXvHO2aEzX-3j/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (09/09/2026) difere da data impressa no documento (10/09/2026)"
+        ]
       }
     },
     "driveFolderId": "1UAAnzbqYxgOiPqAo6X6aWUCwHY9VsAh1",
@@ -14146,10 +14212,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2025-10-01_VAL-2026-10-01_ISMAEL-DE-FREITAS-SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2025-10-01_VAL-2026-10-01_ISMAEL-DE-FREITAS-SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-10-01T03:00:00.000Z",
+        "expirationDate": "2026-10-01T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 48 dias (01/10/2026)",
         "sourcePath": "https://drive.google.com/file/d/1JKmj9Y0j9INNeE5MTUikpbwkL5Qru1qz/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -14551,11 +14619,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 17.10.26 – Francisco Vinicius Sousa dos Santos.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 17.10.26 – Francisco Vinicius Sousa dos Santos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-20T03:00:00.000Z",
+        "expirationDate": "2027-10-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/10/2027",
         "sourcePath": "https://drive.google.com/file/d/15XafG7Mina39qC0PuiROxJH-Ujdj3-LY/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (17/10/2026) difere da data impressa no documento (20/10/2026)"
+        ]
       }
     },
     "driveFolderId": "1rcqf4zjHOx7R3KU5Vq1bZcRO0lSW4Ea9",
@@ -17296,10 +17368,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 17.12.2025 - FRANCISCO THIAGO DE ABREU.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 17.12.2025 - FRANCISCO THIAGO DE ABREU.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-17T03:00:00.000Z",
+        "expirationDate": "2026-12-17T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 29 dias (17/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1N3yGNKSFz1HOnjpnmioZc0aoMOLjj67r/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -17973,11 +18047,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "ASO-PER-FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO-23-10-2026.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ASO-PER-FRANCISCO JHON HEBSON RODRIGUES DE CARVALHO-23-10-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-26T03:00:00.000Z",
+        "expirationDate": "2027-10-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1hCAiX33Cz7zADh5KPQWW5O7QdaJmBmt3/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (23/10/2026) difere da data impressa no documento (26/10/2026)"
+        ]
       },
       "08": {
         "code": "08",
@@ -18927,11 +19005,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 21.05.2026 -  FRANCISCO GEORGE MARTINS SILVA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 21.05.2026 -  FRANCISCO GEORGE MARTINS SILVA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2024-05-22T03:00:00.000Z",
+        "expirationDate": "2025-05-22T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 545 dias (22/05/2025)",
         "sourcePath": "https://drive.google.com/file/d/1NDQFvqaEbPJbT8bvU-VfBG3BvZldEnkV/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (21/05/2026) difere da data impressa no documento (22/05/2024)"
+        ]
       }
     },
     "driveFolderId": "1yB1GDSwBuvJEOBv8N-0RKmVKjaAbM1nm",
@@ -20519,10 +20601,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 19.12.2025 – Fernando Teodoro de Morais Neto.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 19.12.2025 – Fernando Teodoro de Morais Neto.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-19T03:00:00.000Z",
+        "expirationDate": "2026-12-19T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 31 dias (19/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1GAy_BezkGvZcG7FWNYpUGZ5J2JjLnAtJ/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -20904,10 +20988,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 04.12.2025 - FLAVIO ALVES SANTANA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 04.12.2025 - FLAVIO ALVES SANTANA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-04T03:00:00.000Z",
+        "expirationDate": "2026-12-04T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 16 dias (04/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1SCyesDUu3iFDOvSFWDlePJ5ym58hCQCE/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       },
       "05": {
@@ -21660,11 +21746,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 08.12.2025 - FELIPE JARDEL SILVA DE CARVALHO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 08.12.2025 - FELIPE JARDEL SILVA DE CARVALHO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-10T03:00:00.000Z",
+        "expirationDate": "2026-12-10T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (10/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1a2Lg_mIOLbdCxCutSgidDBdAqOrBQfY5/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (08/12/2025) difere da data impressa no documento (10/12/2025)"
+        ]
       }
     },
     "driveFolderId": "1zzaJ92TlWIZ82YxUS6hmvIAg-n6bgNyt",
@@ -22059,10 +22149,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 22.12.2025 - Ezequiel Cruz Vieira.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 22.12.2025 - Ezequiel Cruz Vieira.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-22T03:00:00.000Z",
+        "expirationDate": "2026-12-22T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 34 dias (22/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1PZO11RBpfyhs4BQtZ8cp72kSa-DhApB-/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -23003,11 +23095,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2026-08-05_VAL-2027-08-05_ERALDO-ANTONIO-DE-MOURA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2026-08-05_VAL-2027-08-05_ERALDO-ANTONIO-DE-MOURA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-08-03T03:00:00.000Z",
+        "expirationDate": "2027-08-03T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 03/08/2027",
         "sourcePath": "https://drive.google.com/file/d/1wG3v7DodAnbQZJeX86LQETlwZuYgGpsD/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (05/08/2026) difere da data impressa no documento (03/08/2026)"
+        ]
       },
       "09": {
         "code": "09",
@@ -25405,10 +25501,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO- 16.07.2026 - Diego Menezes Nunes Coelho.pdf..pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO- 16.07.2026 - Diego Menezes Nunes Coelho.pdf..pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-07-16T03:00:00.000Z",
+        "expirationDate": "2027-07-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/07/2027",
         "sourcePath": "https://drive.google.com/file/d/1kaigSUWE40F4u9qlYQK1XMhIY9TvA6aJ/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -26152,11 +26250,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 26.01.2026 - DANIEL FERREIRA DA SILVA FILHO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 26.01.2026 - DANIEL FERREIRA DA SILVA FILHO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-01-16T03:00:00.000Z",
+        "expirationDate": "2027-01-16T03:00:00.000Z",
+        "statusEHS": "VENCE_60",
+        "statusDetail": "ALERTA INICIAL: Vence em 59 dias (16/01/2027)",
         "sourcePath": "https://drive.google.com/file/d/1oj5mKMXMk3wLIMeB08Rj-22Y754b8mHC/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (26/01/2026) difere da data impressa no documento (16/01/2026)"
+        ]
       }
     },
     "driveFolderId": "1lkhYx6tH25LDQPGMdPDjTe7kCeyQj5q5",
@@ -27406,11 +27508,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "ASO-PER-ANTONIO ROBERTO DOS SANTOS NASCIMENTO-24-10-2026.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ASO-PER-ANTONIO ROBERTO DOS SANTOS NASCIMENTO-24-10-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-23T03:00:00.000Z",
+        "expirationDate": "2027-10-23T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 23/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1AmLJzsWdZO9lM0rarAf2DG6yLZaSG4r-/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (24/10/2026) difere da data impressa no documento (23/10/2026)"
+        ]
       },
       "04": {
         "code": "04",
@@ -28668,10 +28774,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 16.10.26 – Antonio Geiciano Mendes Serpa.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 16.10.26 – Antonio Geiciano Mendes Serpa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-16T03:00:00.000Z",
+        "expirationDate": "2027-10-16T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 16/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1vle9A04yPXw1c0exunJRzH1XZ7eBudQK/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -29362,11 +29470,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 12.05.2026 - Adenilço Queiroz da Silva.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 12.05.2026 - Adenilço Queiroz da Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-04-12T03:00:00.000Z",
+        "expirationDate": "2027-04-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1lNMA7A9y0aGLFz39qr6_VmyZGse0wUYI/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (12/05/2026) difere da data impressa no documento (12/04/2026)"
+        ]
       },
       "07": {
         "code": "07",
@@ -30123,10 +30235,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 15.05.2025 - Joao Victor Costa Campos.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 15.05.2025 - Joao Victor Costa Campos.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-05-15T03:00:00.000Z",
+        "expirationDate": "2026-05-15T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 187 dias (15/05/2026)",
         "sourcePath": "https://drive.google.com/file/d/1TjR1BBcxqFunY8olkhJHR8B8CfFUPf5A/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -30456,10 +30570,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 23.06.2025 - Leonardo Simon Costa Gaem.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 23.06.2025 - Leonardo Simon Costa Gaem.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-06-23T03:00:00.000Z",
+        "expirationDate": "2026-06-23T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 148 dias (23/06/2026)",
         "sourcePath": "https://drive.google.com/file/d/162NGFUcmcxZ11wtgK1ccDsjFPOhYpiO0/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -31212,10 +31328,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 13.02.2026 - ITALO DE ABREU DUARTE.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 13.02.2026 - ITALO DE ABREU DUARTE.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-02-13T03:00:00.000Z",
+        "expirationDate": "2027-02-13T03:00:00.000Z",
+        "statusEHS": "VENCE_90",
+        "statusDetail": "PROGRAMAR: Vence em 87 dias (13/02/2027)",
         "sourcePath": "https://drive.google.com/file/d/13OmyfQd1As12ucTZN0wQP1EtwXt6-77j/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -31640,11 +31758,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 09.02.2026 - ALLAN THIAGO RAMOS VEIGA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 09.02.2026 - ALLAN THIAGO RAMOS VEIGA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-04-09T03:00:00.000Z",
+        "expirationDate": "2027-04-09T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 09/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1VaKbPaa94xoCsLmA8JOp-JYGV6oUj-wm/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (09/02/2026) difere da data impressa no documento (09/04/2026)"
+        ]
       }
     },
     "driveFolderId": "18PHZDGjVxnRwBT92LhQvte_yKCRIhCrz",
@@ -32042,11 +32164,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 28.04.26 - Ramon Ramires Costa Cirino_28_04_2026.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 28.04.26 - Ramon Ramires Costa Cirino_28_04_2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-04-29T03:00:00.000Z",
+        "expirationDate": "2027-04-29T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 29/04/2027",
         "sourcePath": "https://drive.google.com/file/d/1kjSMQ7S_b_fDBhAAkQSQ3VcXximKDPfP/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (28/04/2026) difere da data impressa no documento (29/04/2026)"
+        ]
       }
     },
     "driveFolderId": "1aLA9OjyTQHgdgjbTeRRxnQzn1rRdSyK2",
@@ -32475,10 +32601,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 20.02.2026 - PHILIPE DE SOUZA ANDRADE.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 20.02.2026 - PHILIPE DE SOUZA ANDRADE.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-02-20T03:00:00.000Z",
+        "expirationDate": "2027-02-20T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 20/02/2027",
         "sourcePath": "https://drive.google.com/file/d/1YRQA259KaZlJX3exfVHJEZyfyzAsTuNE/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -32536,11 +32664,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01_ASO-PER_EMI-2026-06-11_VAL-2027-06-11_MASSUDE-MADRE-DE-DEUS-AFONSO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01_ASO-PER_EMI-2026-06-11_VAL-2027-06-11_MASSUDE-MADRE-DE-DEUS-AFONSO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-06-15T03:00:00.000Z",
+        "expirationDate": "2027-06-15T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 15/06/2027",
         "sourcePath": "https://drive.google.com/file/d/14vrpwl0NaPALzwmTesOJknPQOCUx4FTn/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (11/06/2026) difere da data impressa no documento (15/06/2026)"
+        ]
       }
     },
     "driveFolderId": "1dwA3PiYJ7y80NsNPBiIiAY24NlaXVZsO",
@@ -33341,11 +33473,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "ASO-PER- ANTONIO CARVALHO JÚNIOR-02-06-2026.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"ASO-PER- ANTONIO CARVALHO JÚNIOR-02-06-2026.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-06-22T03:00:00.000Z",
+        "expirationDate": "2027-06-22T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 22/06/2027",
         "sourcePath": "https://drive.google.com/file/d/14Wmgi97GsKgTAqy-jwe0gIcxfppZ9Yoa/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (02/06/2026) difere da data impressa no documento (22/06/2026)"
+        ]
       },
       "05": {
         "code": "05",
@@ -34476,11 +34612,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 31.08.2027 - ALISON DOS SANTOS RIBEIRO.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 31.08.2027 - ALISON DOS SANTOS RIBEIRO.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-01T03:00:00.000Z",
+        "expirationDate": "2027-09-01T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 01/09/2027",
         "sourcePath": "https://drive.google.com/file/d/16IxkMMO_jt6tgOlWId3xRmFIEvb-oACz/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (31/08/2027) difere da data impressa no documento (01/09/2026)"
+        ]
       }
     },
     "driveFolderId": "1riB8D6yph-Rvn0g2PaWjwJsLFH9yaOI9",
@@ -34726,10 +34866,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 18.09.2026 - Raphael Afonso Cardoso Pereira.pdf.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 18.09.2026 - Raphael Afonso Cardoso Pereira.pdf.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-09-18T03:00:00.000Z",
+        "expirationDate": "2027-09-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/09/2027",
         "sourcePath": "https://drive.google.com/file/d/1VOmVGlrfn6vqGbafHMeCt1MrJDkI98We/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -35006,11 +35148,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 01.12.2025 - ANTONIO CARLOS PEREIRA.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 01.12.2025 - ANTONIO CARLOS PEREIRA.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-02T03:00:00.000Z",
+        "expirationDate": "2026-12-02T03:00:00.000Z",
+        "statusEHS": "VENCE_15",
+        "statusDetail": "ALERTA URGENTE: Vence em 14 dias (02/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1GsBfdfKd1m94g-nq5Iktii62mnJCcSzp/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (01/12/2025) difere da data impressa no documento (02/12/2025)"
+        ]
       }
     },
     "driveFolderId": "1gwOmrszXymgc4ACDmJrMdKnGx9wJZgfB",
@@ -35549,11 +35695,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 10.09.2025 - BRUNO EDUARDO FERREIRA DE PAIVA .pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 10.09.2025 - BRUNO EDUARDO FERREIRA DE PAIVA .pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-09-09T03:00:00.000Z",
+        "expirationDate": "2026-09-09T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 70 dias (09/09/2026)",
         "sourcePath": "https://drive.google.com/file/d/1xPfySqWJKnERcwYB112miYefRSDE8cUA/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (10/09/2025) difere da data impressa no documento (09/09/2025)"
+        ]
       }
     },
     "driveFolderId": "1ueZj9zCcbyPMWs8DK0odieUlV63bxDYR",
@@ -36398,10 +36548,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 11.03.2026 - Thiago Augusto de Paula Pepe.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 11.03.2026 - Thiago Augusto de Paula Pepe.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-03-11T03:00:00.000Z",
+        "expirationDate": "2027-03-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/03/2027",
         "sourcePath": "https://drive.google.com/file/d/163n1al4l4G-SuruCbWljcKptr0dHvn_3/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -36669,11 +36821,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 03-11-2026-FELIPE ALAN PEGHIN DOS SANTOS- .pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 03-11-2026-FELIPE ALAN PEGHIN DOS SANTOS- .pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2026-10-31T03:00:00.000Z",
+        "expirationDate": "2027-10-31T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 31/10/2027",
         "sourcePath": "https://drive.google.com/file/d/1-Bxjt9I9Srl5HyaoPoZGkGOnaAZbRcRG/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (03/11/2026) difere da data impressa no documento (31/10/2026)"
+        ]
       },
       "07": {
         "code": "07",
@@ -36825,10 +36981,12 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 – ASO – 05.09.2025 - Guilherme Roasio da Silva.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 – ASO – 05.09.2025 - Guilherme Roasio da Silva.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-09-05T03:00:00.000Z",
+        "expirationDate": "2026-09-05T03:00:00.000Z",
+        "statusEHS": "VENCIDO",
+        "statusDetail": "VENCIDO há 74 dias (05/09/2026)",
         "sourcePath": "https://drive.google.com/file/d/1-V0-QQKy6W2NkhqyXbqVHcHVjtlSJPuF/view",
-        "readSource": "NAO_LIDO",
+        "readSource": "CONTENT",
         "divergences": []
       }
     },
@@ -37216,11 +37374,15 @@
         "code": "01",
         "name": "Doc 01",
         "filename": "01 - ASO - 08.12.2025 - José Marcelo Magalhães Sousa.pdf",
-        "statusEHS": "NAO_LIDO",
-        "statusDetail": "BLOQUEADO — NÃO LIDO: o conteúdo foi lido, mas nenhuma data de emissão ou validade está impressa no documento. Não existe nenhuma referência válida deste documento no Drive; o nome do arquivo (\"01 - ASO - 08.12.2025 - José Marcelo Magalhães Sousa.pdf\") não é aceito como prova. Ação do responsável: salvar na pasta do colaborador o PDF legível do documento.",
+        "issueDate": "2025-12-10T03:00:00.000Z",
+        "expirationDate": "2026-12-10T03:00:00.000Z",
+        "statusEHS": "VENCE_30",
+        "statusDetail": "ALERTA MÉDIO: Vence em 22 dias (10/12/2026)",
         "sourcePath": "https://drive.google.com/file/d/1aibPIbW9OKIWEB0L2MoYCPgtKgiNMmTU/view",
-        "readSource": "NAO_LIDO",
-        "divergences": []
+        "readSource": "CONTENT",
+        "divergences": [
+          "Data no nome (08/12/2025) difere da data impressa no documento (10/12/2025)"
+        ]
       }
     },
     "driveFolderId": "1jVB6rjg0mrxtMJF_7DuLuXc7pP5uUn2k",
