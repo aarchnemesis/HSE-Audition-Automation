@@ -62,6 +62,9 @@ async function main() {
   const queue: { f: any; person: string; strong: boolean }[] = []
   // --ids=arquivo.json: lê exatamente esses fileIds (ex.: pendentes do plano do Book), sem filtro de dúvida.
   const idsPath = process.argv.find(a => a.startsWith('--ids='))?.split('=')[1]
+  // --force (só com --ids): relê mesmo o que já tem acordo. Usado quando há sinal forte de leitura errada
+  // (ex.: data do nome um ano mais nova que a lida), porque dois leitores podem concordar no mesmo erro.
+  const force = !!idsPath && process.argv.includes('--force')
   if (idsPath) {
     const byId = new Map(files.map(f => [f.fileId, f]))
     const planRows = new Map<string, any>()
@@ -73,7 +76,7 @@ async function main() {
       const k = `${f.md5 || f.fileId}|v${LLM_PROMPT_VERSION}`
       if (tier === 1 && llm[k]?.at && !llm[k]?.error) continue
       if (tier === 2 && llm[k]?.vision) continue
-      if (tier >= 3 && (llm[k]?.agreed || (llm[k]?.tier ?? 1) >= tier)) continue
+      if (tier >= 3 && !force && (llm[k]?.agreed || (llm[k]?.tier ?? 1) >= tier)) continue
       queue.push({ f, person, strong: true })
     }
   }
