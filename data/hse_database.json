@@ -6015,14 +6015,14 @@
     "statusEHS": "CONFORME",
     "storzRequestId": "625324",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 41,
+    "storzProgressPercent": 45,
     "storzDuplicateSuspect": true,
     "storzDeadline": "16/01/2027",
-    "detail": "Válido até 26/04/2027 | POSSÍVEL PEDIDO DUPLICADO NA STORZ: o documento vale até 26/04/2027, mas há novo pedido do mesmo curso (625324, aberto em 17/11/2026, em andamento, 41%). Confirmar se precisa refazer antes de seguir (custo).",
+    "detail": "Válido até 26/04/2027 | POSSÍVEL PEDIDO DUPLICADO NA STORZ: o documento vale até 26/04/2027, mas há novo pedido do mesmo curso (625324, aberto em 17/11/2026, em andamento, 45%). Confirmar se precisa refazer antes de seguir (custo).",
     "evidenceUrl": "https://drive.google.com/file/d/1UpNwxzqXdHYboO6PwR8Ki_dQklrV9meF/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1irCYviCefZCk9JOJVl7P-USvnStV9n4M",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T10:17:04.364Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_29",
@@ -12835,12 +12835,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619379",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 53,
+    "storzProgressPercent": 69,
     "storzDeadline": "15/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619379 - Progresso: 53%) [Prazo Storz: 15/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619379 - Progresso: 69%) [Prazo Storz: 15/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1n4psskXTm1-rtGDZjjXuofjMO5M3J0v3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T22:04:07.258Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_51",
@@ -19319,13 +19319,13 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-04T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 78 dias (04/02/2027)",
-    "evidenceUrl": "https://drive.google.com/file/d/1gA_JfbnY4Yw2SmE5nqqlR95hHObsjvxn/view",
+    "expirationDate": "2028-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 11/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1GYmlLxk-CIf0F4L3HUkcBA_bMhOFJp4C/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T09:32:12.487Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19336,13 +19336,13 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-05T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
-    "evidenceUrl": "https://drive.google.com/file/d/1kONTeXJR7w_q8IucBQA0xiFMzE0pqCsA/view",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 13/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1NABgJ04m290pJLuXkz-91jSG4Ttoaf4M/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T09:32:12.487Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19370,13 +19370,13 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-05T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 79 dias (05/02/2027)",
-    "evidenceUrl": "https://drive.google.com/file/d/1B933UMydjkePm2jq19tSlscwP9rhfVpI/view",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 13/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1k2BqnspzTMnMIQMpn_-VbeBxOMYD9OAn/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T09:32:12.487Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -19407,13 +19407,13 @@
     "docCode": "21",
     "docName": "NR-35 / GWO Working at Heights",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-07T03:00:00.000Z",
-    "statusEHS": "VENCE_90",
-    "detail": "PROGRAMAR: Vence em 81 dias (07/02/2027)",
-    "evidenceUrl": "https://drive.google.com/file/d/1p1YCoeQYka7FKpXjZZmpfX61VTdxIjrF/view",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "detail": "Válido até 12/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/1_VSurrp1MFKm3zSjqhIMy64QFIEI_OEt/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1T1nx3FD8ITQxpP9PKZi4DKFPHQPWRwCc",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T09:32:12.487Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_71",
@@ -25756,12 +25756,12 @@
     "statusEHS": "VENCE_90",
     "storzRequestId": "622163",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 3,
+    "storzProgressPercent": 30,
     "storzDeadline": "17/01/2027",
-    "detail": "PROGRAMAR: Vence em 62 dias (19/01/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622163 - Progresso: 3%) [Prazo Storz: 17/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 62 dias (19/01/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622163 - Progresso: 30%) [Prazo Storz: 17/01/2027] — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-g1TZGvCPWPdyMhSE4vfcykV8skusaQv",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-18T20:04:23.765Z"
+    "lastUpdated": "2026-11-18T22:07:38.790Z"
   },
   {
     "inspectorId": "rpo_101",
