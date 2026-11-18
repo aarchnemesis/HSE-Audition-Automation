@@ -263051,13 +263051,14 @@
   },
   {
     "fileId": "1FX3r0xTcqE4ScP0jwCoJ-ZD-wOIv0N7Z",
-    "filename": "Certificado_NR35_-_Francisco_Franklin_Da_Silva_ass_assinado.pdf",
+    "filename": "21_NR35-FORMACAO_EMI-2026-08-01_VAL-2028-08-01_FRANCISCO-FRANKLIN-DA-SILVA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "16f77f6b4d8dd6f1fd5ccacebd587d72",
-    "modifiedTime": "2026-11-17T13:31:16.428Z",
+    "llmAt": "2026-11-18T09:34:15.909Z",
+    "modifiedTime": "2026-11-18T09:37:58.420Z",
     "holder": {
       "key": "h2:FRANCISCO FRANKLIN SILVA",
       "status": "OK"
@@ -263067,10 +263068,10 @@
     "expirationDate": "2028-08-01T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "statusDetail": "Válido até 01/08/2028",
-    "source": "IMAGE_FALLBACK",
+    "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-35",
-    "extractedClause": "no dia 01 de agosto de 2026",
+    "matchedTerm": "Book EHS 21_NR35",
+    "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
         "code": "21",
@@ -263078,23 +263079,23 @@
         "expirationDate": "2028-08-01T03:00:00.000Z",
         "statusEHS": "CONFORME",
         "statusDetail": "Válido até 01/08/2028",
-        "source": "IMAGE_FALLBACK",
+        "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-35",
-        "extractedClause": "no dia 01 de agosto de 2026"
+        "matchedTerm": "Book EHS 21_NR35",
+        "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "1a_P3lNgn-RFef0gw8YJXmL7GHQ-0kLw3",
-    "filename": "16-11-2026_Antonio_Roberto_Dos_Santos_Nascimento_[STORZ]_-_NR33_TRABALHADOR_E_VIGIA_(PERIóDICO).pdf",
+    "filename": "20_NR33-RECICLAGEM_EMI-2026-11-16_VAL-2027-11-16_ANTONIO-ROBERTO-DOS-SANTOS-NASCIMENTO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "6de15c6dc98ee65157c99297927563a0",
-    "llmAt": "2026-11-17T16:02:06.833Z",
-    "modifiedTime": "2026-11-17T14:07:58.474Z",
+    "llmAt": "2026-11-18T09:34:15.914Z",
+    "modifiedTime": "2026-11-18T09:37:49.497Z",
     "holder": {
       "key": "h2:ANTONIO ROBERTO SANTOS NASCIMENTO",
       "status": "OK"
@@ -263106,7 +263107,7 @@
     "statusDetail": "Válido até 16/11/2027",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+    "matchedTerm": "NR-33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -263117,20 +263118,21 @@
         "statusDetail": "Válido até 16/11/2027",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR33 TRABALHADOR E VIGIA (PERIÓDICO) (RECICLAGEM)",
+        "matchedTerm": "NR-33 Trabalhador e Vigia (Periódico) (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
   {
     "fileId": "1cYol04uZ4bMWFaZzvqNYThE6RFEoA0Aq",
-    "filename": "Francisco Leonardo da Silva Ferreira - ALTURA - Clicksign_removed.pdf",
+    "filename": "21_NR35-FORMACAO_EMI-2026-09-29_VAL-2028-09-29_FRANCISCO-LEONARDO-DA-SILVA-FERREIRA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "9e3210d2c8735439cb96b6207f44609a",
-    "modifiedTime": "2026-11-17T20:45:51.697Z",
+    "llmAt": "2026-11-18T09:34:15.914Z",
+    "modifiedTime": "2026-11-18T09:38:00.374Z",
     "holder": {
       "key": "h2:FRANCISCO LEONARDO SILVA FERREIRA",
       "status": "OK"
@@ -263142,7 +263144,7 @@
     "statusDetail": "Válido até 29/09/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-35",
+    "matchedTerm": "Book EHS 21_NR35",
     "extractedClause": "no dia 29de Setembro de 2026",
     "documents": [
       {
@@ -263153,20 +263155,21 @@
         "statusDetail": "Válido até 29/09/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-35",
+        "matchedTerm": "Book EHS 21_NR35",
         "extractedClause": "no dia 29de Setembro de 2026"
       }
     ]
   },
   {
     "fileId": "1AwV66p6x3jCPhUC6AIbB9RUnu1eF4VH9",
-    "filename": "2026-02-06_Elias dos Santos Rodrigues_NR18 - Seguran+┬║a e Sa+┬ªde No Trabalho Na Ind+┬ªstria Da Constru+┬║+├║o (B+├¡sico em Seguran+┬║a do Trabalho) - Clicksign.pdf",
+    "filename": "18_NR18-FORMACAO_EMI-2026-02-06_VAL-2027-02-06_ELIAS-DOS-SANTOS-RODRIGUES.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "3509889b498642c39e49378a6e9b1d47",
-    "modifiedTime": "2026-11-17T20:40:18.437Z",
+    "llmAt": "2026-11-18T09:34:28.500Z",
+    "modifiedTime": "2026-11-18T09:37:54.136Z",
     "holder": {
       "key": "h2:ELIAS SANTOS RODRIGUES",
       "status": "OK"
@@ -263178,7 +263181,7 @@
     "statusDetail": "Válido até 06/02/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-18",
+    "matchedTerm": "Book EHS 18_NR18",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
@@ -263189,7 +263192,7 @@
         "statusDetail": "Válido até 06/02/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-18",
+        "matchedTerm": "Book EHS 18_NR18",
         "extractedClause": "Data do nome do arquivo"
       }
     ]
