@@ -62,9 +62,12 @@ function conferir() {
   const hits: { id: string; gap: number }[] = []
   for (const f of files) {
     const fn = parseDateFromFilename(String(f.filename ?? ''))
-    if (!fn) continue
+    // Data futura no nome é a validade, não a emissão; seguro de vida (07) traz data de nascimento.
+    if (!fn || fn.getTime() > Date.now() || f.code === '07') continue
     const docs = (f.documents?.length ? f.documents : [f]).filter((d: any) => d.issueDate)
     if (!docs.length) continue
+    // Nome com a data de vencimento que a leitura também achou: nada a conferir.
+    if (docs.some((d: any) => d.expirationDate && Math.abs(new Date(d.expirationDate).getTime() - fn.getTime()) < 10 * 86_400_000)) continue
     const newest = Math.max(...docs.map((d: any) => new Date(d.issueDate).getTime()))
     const gap = fn.getTime() - newest
     if (gap < YEAR) continue
