@@ -263829,5 +263829,229 @@
         "classificationSource": "NONE"
       }
     ]
+  },
+  {
+    "fileId": "1k2BqnspzTMnMIQMpn_-VbeBxOMYD9OAn",
+    "filename": "Rafael Siqueira da Silva - BSTR [assinado]_removed (4).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "57f7d3260b7ab68a3cbf3b061dd062be",
+    "llmAt": "2026-11-18T22:01:09.134Z",
+    "modifiedTime": "2026-11-18T20:24:31.635Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "19",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio / Prevenção e Combate a Incêndio (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "19",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio / Prevenção e Combate a Incêndio (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1GYmlLxk-CIf0F4L3HUkcBA_bMhOFJp4C",
+    "filename": "Rafael Siqueira da Silva - BSTR [assinado]_removed (3).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4841f969f32ed05e0ff9469fc97db159",
+    "llmAt": "2026-11-18T22:01:38.548Z",
+    "modifiedTime": "2026-11-18T20:24:00.970Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "16",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "expirationDate": "2028-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "expirationDate": "2028-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1NABgJ04m290pJLuXkz-91jSG4Ttoaf4M",
+    "filename": "Rafael Siqueira da Silva - BSTR [assinado]_removed (2).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "ab5d73fee239ed9cbcfa0cc248d55ca1",
+    "llmAt": "2026-11-18T22:02:07.959Z",
+    "modifiedTime": "2026-11-18T20:23:23.655Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1_VSurrp1MFKm3zSjqhIMy64QFIEI_OEt",
+    "filename": "Rafael Siqueira da Silva - BSTR [assinado]_removed (1).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "cdcce4852e07136311a1c94a7e37ab54",
+    "modifiedTime": "2026-11-18T20:22:45.337Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF)",
+    "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF)",
+        "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1pH3qCJ13z_h_hz2seFBb7TYKEIWtgDjA",
+    "filename": "Rafael Siqueira da Silva - BSTR [assinado]_removed.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a3747925fa1f56a1197504e2118202e3",
+    "llmAt": "2026-11-18T22:02:42.958Z",
+    "modifiedTime": "2026-11-18T20:22:02.321Z",
+    "holder": {
+      "key": "h2:RAFAEL SIQUEIRA SILVA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
+    "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
+        "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
   }
 ]
