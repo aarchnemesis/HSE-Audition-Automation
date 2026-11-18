@@ -12336,17 +12336,16 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2026-11-21T03:00:00.000Z",
-    "statusEHS": "VENCE_07",
+    "expirationDate": "2028-11-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "625648",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 58,
-    "storzDeadline": "16/01/2027",
-    "detail": "CRÍTICO: Vence em 3 dia(s) (21/11/2026) | EM ANDAMENTO NA STORZ (625648 - Progresso: 58%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/11/2026, ANTES do prazo da Storz (16/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (625648) em 18/11/2026 — Válido até 18/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/11Z-quN1c4daSe8fb4VqcFaRq-k-4LVS4/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T18:08:11.745Z"
+    "lastUpdated": "2026-11-18T18:32:00.539Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -24357,15 +24356,15 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2028-10-22T03:00:00.000Z",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "606696",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (606696) em 22/10/2026 — Válido até 22/10/2028 (aguardando upload no Drive).",
+    "detail": "Válido até 22/10/2028 (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1riB8D6yph-Rvn0g2PaWjwJsLFH9yaOI9",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-10T18:47:04.821Z"
+    "lastUpdated": "2026-11-18T18:32:00.539Z"
   },
   {
     "inspectorId": "rpo_94",
@@ -24376,13 +24375,12 @@
     "docCode": "27",
     "docName": "NR-07 Primeiros Socorros",
     "modality": "ONLINE",
-    "expirationDate": "2028-10-22T03:00:00.000Z",
+    "expirationDate": "2028-10-22T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 22/10/2028",
-    "evidenceUrl": "https://drive.google.com/file/d/1jQjmKOHhkGM2BPIWbcjSZhChlZVaIjjk/view",
+    "detail": "Válido até 22/10/2028 (Validado no RPO | Comprovante pendente no Drive)",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1riB8D6yph-Rvn0g2PaWjwJsLFH9yaOI9",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-16T12:11:33.630Z"
+    "lastUpdated": "2026-11-18T18:32:00.539Z"
   },
   {
     "inspectorId": "rpo_94",
