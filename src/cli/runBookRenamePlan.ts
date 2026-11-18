@@ -232,6 +232,7 @@ async function main() {
       r.action = 'OBSOLETO'
       r.proposedName = null
       r.proposedSubfolder = '00_OBSOLETOS'
+      r.supersededBy = group[0].fileId
       r.issues.push(`NC-20: versão mais antiga (a vigente é ${group[0].currentName})`)
     }
   }

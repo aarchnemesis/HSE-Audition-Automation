@@ -35,7 +35,10 @@ export function codeForLlmDocument(d: LlmDocument): string | null {
 export function mapLlmDocument(d: LlmDocument, refDate: Date, note: string): InspectedDocumentResult | null {
   const code = codeForLlmDocument(d)
   if (!code) return null
-  const issue = iso(d.data_conclusao) ?? iso(d.data_inicio) ?? (d.tipo_documento === 'carta_autorizacao' ? iso(d.data_assinatura) : undefined)
+  // Carta, ASO, ficha de EPI e ordem de serviço não têm "conclusão": a data do documento é a da
+  // assinatura (no ASO, a do exame). Sem isso, ASO lido com acordo virava NÃO LIDO.
+  const signedDoc = ['carta_autorizacao', 'aso', 'ficha_epi', 'ordem_servico'].includes(d.tipo_documento)
+  const issue = iso(d.data_conclusao) ?? iso(d.data_inicio) ?? (signedDoc ? iso(d.data_assinatura) : undefined)
   let expiration: Date | undefined
   const prazo = norm(d.prazo_contrato)
   if (code === '40' || code === '40.1') {

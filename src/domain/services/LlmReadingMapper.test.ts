@@ -22,6 +22,11 @@ describe('leitura Prometheus (gold set)', () => {
     const r = mapLlmDocument(doc({ curso_ou_norma: 'GWO Fire Awareness', data_inicio: '2026-01-08', data_conclusao: '2026-01-08', data_assinatura: '2026-11-10' }), REF, 't')
     expect(r?.issueDate?.toISOString().slice(0, 10)).toBe('2026-01-08')
   })
+  it('ASO sem conclusão usa a data da assinatura (exame) e vence em 1 ano', () => {
+    const r = mapLlmDocument(doc({ tipo_documento: 'aso', curso_ou_norma: 'ASO', data_assinatura: '2026-10-21' }), REF, 't')
+    expect(r?.issueDate?.toISOString().slice(0, 10)).toBe('2026-10-21')
+    expect(r?.statusEHS).toBe('CONFORME')
+  })
   it('só há consenso quando A e B leem o mesmo documento e o mesmo titular', () => {
     const a = [doc({ curso_ou_norma: 'NR-10 Básico', data_conclusao: '2026-10-27' })]
     expect(consensusOf(a, [doc({ curso_ou_norma: 'NR10 Curso Básico', data_conclusao: '2026-10-27' })]).agreed).toBe(true)
