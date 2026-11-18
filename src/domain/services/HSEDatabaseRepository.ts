@@ -35,6 +35,8 @@ export interface HSEDatabaseRecord {
   storzRequestId?: string
   storzState?: string
   storzProgressPercent?: number
+  /** Pedido novo na Storz com o documento ainda válido por mais de 90 dias (possível curso repetido). */
+  storzDuplicateSuspect?: boolean
   storzDeadline?: string
   detail: string
   /** Link to the certificate in Google Drive, when the evidence comes from a Drive file */
@@ -110,6 +112,7 @@ export class HSEDatabaseRepository {
           storzRequestId: item.storzRequestFound?.requestId,
           storzState: item.storzRequestFound?.state,
           storzProgressPercent: item.storzProgressPercent,
+          storzDuplicateSuspect: item.storzDuplicateSuspect,
           storzDeadline: item.storzDeadline
             ? item.storzDeadline.toLocaleDateString('pt-BR')
             : undefined,

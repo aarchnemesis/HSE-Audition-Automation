@@ -1197,6 +1197,7 @@ export function buildDashboardHtml(
     }
     .storz-mini-tag.in-prog { background: #EDE9FE; color: #6D28D9; border: 1px solid #DDD6FE; }
     .storz-mini-tag.req { background: #EFF6FF; color: #1D4ED8; border: 1px solid #DBEAFE; }
+    .storz-mini-tag.dup { background: #FFEDD5; color: #C2410C; border: 1px solid #FDBA74; font-weight: 700; }
     .storz-mini-tag.done { background: #DCFCE7; color: #15803D; border: 1px solid #BBF7D0; }
     .storz-badge-pill {
       background: #6D28D9;
@@ -3849,7 +3850,10 @@ export function buildDashboardHtml(
 
       const activeStorz = isStorzActive(r);
       let storzTag = '';
-      if (activeStorz) {
+      if (activeStorz && r.storzDuplicateSuspect) {
+        const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : 0;
+        storzTag = '<span class="storz-mini-tag dup" title="Possível pedido duplicado: o documento ainda está válido e há um novo pedido do mesmo curso na Storz (' + (r.storzRequestId || '') + ', ' + prog + '%). Confirmar se precisa refazer (custo).">' + SVG_ICONS.alert + 'Pedido duplicado?</span>';
+      } else if (activeStorz) {
         if (r.storzState === 'EM_ANDAMENTO') {
           const prog = r.storzProgressPercent !== undefined ? r.storzProgressPercent : 0;
           storzTag = '<span class="storz-mini-tag in-prog" title="Storz: Em andamento (' + prog + '%) | ' + (r.storzDeadline ? 'Prazo: ' + r.storzDeadline : '') + '">' + SVG_ICONS.cap + prog + '%</span>';

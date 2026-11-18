@@ -94,6 +94,27 @@ describe('AuditTriangulator — auditoria de vencimentos', () => {
     expect(result.overallStatus).toBe('APTO_COM_ATENCAO')
   })
 
+  it('documento em dia (mais de 90 dias) e pedido novo do mesmo curso na Storz: sinaliza possível pedido duplicado', () => {
+    const inspector = makeInspector([makeCert('21', FAR_FUTURE)])
+    const storzRequests: StorzRequest[] = [
+      { id: 'REQ-9', collaboratorName: 'FULANO DE TAL', trainingCode: '21', trainingName: 'NR-35', modality: 'PRESENCIAL', requestDate: new Date(2026, 7, 10), state: 'EM_ANDAMENTO', progressPercent: 3 },
+    ]
+    const item = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE).auditItems[0]
+    expect(item.status).toBe('CONFORME')
+    expect(item.storzDuplicateSuspect).toBe(true)
+    expect(item.storzProgressPercent).toBe(3)
+    expect(item.detail).toContain('POSSÍVEL PEDIDO DUPLICADO')
+  })
+
+  it('pedido na Storz perto do vencimento é reciclagem normal, não duplicidade', () => {
+    const inspector = makeInspector([makeCert('21', NEAR_EXPIRY)])
+    const storzRequests: StorzRequest[] = [
+      { id: 'REQ-1', collaboratorName: 'FULANO DE TAL', trainingCode: '21', trainingName: 'NR-35', modality: 'PRESENCIAL', requestDate: new Date(2026, 7, 1), state: 'EM_ANDAMENTO' },
+    ]
+    const item = AuditTriangulator.performTripleAudit(inspector, PARK, storzRequests, REF_DATE).auditItems[0]
+    expect(item.storzDuplicateSuspect).toBeUndefined()
+  })
+
   it('MANTÉM o status de urgência real mesmo com curso EM_ANDAMENTO na Storz — não estende o prazo', () => {
     const inspector = makeInspector([makeCert('21', NEAR_EXPIRY)])
     const storzRequests: StorzRequest[] = [

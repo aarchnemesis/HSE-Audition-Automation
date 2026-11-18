@@ -36,6 +36,8 @@ export interface TripleAuditResult {
     expirationDate?: Date
     storzProgressPercent?: number
     storzDeadline?: Date
+    /** Pedido novo na Storz com o documento ainda válido por mais de 90 dias: possível curso repetido (custo). */
+    storzDuplicateSuspect?: boolean
     storzRequestFound?: {
       requestId: string
       state: string
@@ -148,6 +150,7 @@ export class AuditTriangulator {
 
       let storzProgressPercent: number | undefined
       let storzDeadline: Date | undefined
+      let storzDuplicateSuspect = false
 
       if (completedReq) {
         storzProgressPercent = 100
@@ -215,7 +218,10 @@ export class AuditTriangulator {
           detail = `${evaluation.detail} | Concluído na Storz (${completedReq!.id}) em ${completionStr} (aguardando upload no Drive).`
         }
 
-        if (activeReq) {
+        if (activeReq && status === 'CONFORME' && !permanent && storzExpDate.getTime() - refDate.getTime() > 90 * 86_400_000) {
+          storzDuplicateSuspect = true
+          detail += ` | POSSÍVEL PEDIDO DUPLICADO NA STORZ: o curso foi concluído (${completedReq!.id}) e vale até ${storzExpDate.toLocaleDateString('pt-BR')}, mas há novo pedido do mesmo curso (${activeReq.id}, ${activeReq.state === 'EM_ANDAMENTO' ? `em andamento, ${activeReq.progressPercent ?? 0}%` : 'não iniciado'}). Confirmar se precisa refazer antes de seguir (custo).`
+        } else if (activeReq) {
           detail += ` | Próxima reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
         }
       } else if (cert && cert.statusEHS === 'NAO_LIDO') {
@@ -253,7 +259,18 @@ export class AuditTriangulator {
         if (status === 'CONFORME') {
           validCount++
           if (activeReq) {
-            detail += ` | Reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+            // Documento em dia (mais de 90 dias de validade) e pedido novo do mesmo curso: a pessoa pode
+            // estar refazendo um curso que não precisa, com custo para a empresa.
+            const exp = cert.expirationDate
+            const farFromExpiry = !!exp && exp.getTime() - refDate.getTime() > 90 * 86_400_000
+            if (farFromExpiry) {
+              storzDuplicateSuspect = true
+              storzProgressPercent = activeReq.progressPercent ?? 0
+              const pedido = activeReq.requestDate ? ` em ${activeReq.requestDate.toLocaleDateString('pt-BR')}` : ''
+              detail += ` | POSSÍVEL PEDIDO DUPLICADO NA STORZ: o documento vale até ${exp!.toLocaleDateString('pt-BR')}, mas há novo pedido do mesmo curso (${activeReq.id}, aberto${pedido}, ${activeReq.state === 'EM_ANDAMENTO' ? `em andamento, ${activeReq.progressPercent ?? 0}%` : 'não iniciado'}). Confirmar se precisa refazer antes de seguir (custo).`
+            } else {
+              detail += ` | Reciclagem já solicitada na Storz (${activeReq.id} - Status: ${activeReq.state}).`
+            }
           }
         } else if (status === 'VENCIDO') {
           expiredCount++
@@ -334,6 +351,7 @@ export class AuditTriangulator {
         expirationDate: effectiveExpiration,
         storzProgressPercent,
         storzDeadline,
+        storzDuplicateSuspect: storzDuplicateSuspect || undefined,
         storzRequestFound: primaryStorzReq
           ? {
               requestId: primaryStorzReq.id,
