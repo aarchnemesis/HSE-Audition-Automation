@@ -263591,13 +263591,14 @@
   },
   {
     "fileId": "1Ud_yg2P81xn_B66qpjAUNHGYW_Gbktt9",
-    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA",
+    "filename": "13_NR10-SEP-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "c1ca3ac7b2ee422420a0bbcb007e2da9",
-    "modifiedTime": "2026-11-18T13:08:01.509Z",
+    "llmAt": "2026-11-18T14:05:26.644Z",
+    "modifiedTime": "2026-11-18T14:06:15.999Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
       "status": "OK"
@@ -263696,6 +263697,42 @@
         "classificationSource": "SEMANTIC",
         "matchedTerm": "NR-33 Supervisor (Periódico) (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1zqWscL3UH5VgfVfETHltDv14KZT_tXqo",
+    "filename": "Willames Wagner da Silva - NR 35 [assinado].pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c422a5308cb794a77a1d1549b4e69660",
+    "modifiedTime": "2026-11-18T15:23:22.639Z",
+    "holder": {
+      "key": "h2:WILLAMES WAGNER SILVA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35",
+    "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35",
+        "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)"
       }
     ]
   }
