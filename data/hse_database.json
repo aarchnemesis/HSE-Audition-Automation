@@ -25755,12 +25755,13 @@
     "expirationDate": "2027-01-19T12:00:00.000Z",
     "statusEHS": "VENCE_90",
     "storzRequestId": "622163",
-    "storzState": "SOLICITADO",
-    "storzProgressPercent": 0,
-    "detail": "PROGRAMAR: Vence em 62 dias (19/01/2027) (Validado no RPO | Comprovante pendente no Drive) | SOLICITADO NA STORZ (622163 - Não iniciado / 0% de progresso) — o prazo que vale é o vencimento do documento.",
+    "storzState": "EM_ANDAMENTO",
+    "storzProgressPercent": 3,
+    "storzDeadline": "17/01/2027",
+    "detail": "PROGRAMAR: Vence em 62 dias (19/01/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622163 - Progresso: 3%) [Prazo Storz: 17/01/2027] — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-g1TZGvCPWPdyMhSE4vfcykV8skusaQv",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-18T12:08:21.149Z"
+    "lastUpdated": "2026-11-18T20:04:23.765Z"
   },
   {
     "inspectorId": "rpo_101",
