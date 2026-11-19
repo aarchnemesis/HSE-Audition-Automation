@@ -264024,5 +264024,77 @@
         "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
       }
     ]
+  },
+  {
+    "fileId": "1Y5QDNka5YsZjSNZoMtTfXdpnrJ8heb1z",
+    "filename": "19-11-2026_FRANCISCO_VINICIUS_SOUSA_DOS_SANTOS_[STORZ-ARTHWIND]_-_PREVENçãO_E_PROTEçãO_CONTRA_INCêNDIOS.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "d0c184430542f8eedad0b9d0fc99a7a8",
+    "modifiedTime": "2026-11-19T12:02:18.684Z",
+    "holder": {
+      "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
+      "status": "OK"
+    },
+    "code": "49",
+    "issueDate": "2026-11-19T03:00:00.000Z",
+    "expirationDate": "2028-11-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "49",
+        "issueDate": "2026-11-19T03:00:00.000Z",
+        "expirationDate": "2028-11-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "12FFdvgE2XDqB7Uy1SAc_B-pySyywTP3R",
+    "filename": "19-11-2026_Igor_Martins_Rocha_[ARTHWIND]_-_LOTO_-_GUIA_PRáTICO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "7d4e7bf3f4c803781f698141d15cc2f0",
+    "modifiedTime": "2026-11-19T12:10:35.086Z",
+    "holder": {
+      "key": "h2:IGOR MARTINS ROCHA",
+      "status": "OK"
+    },
+    "code": "22",
+    "issueDate": "2026-11-19T03:00:00.000Z",
+    "expirationDate": "2028-11-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 19/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "LOTO",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "22",
+        "issueDate": "2026-11-19T03:00:00.000Z",
+        "expirationDate": "2028-11-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "LOTO",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
   }
 ]

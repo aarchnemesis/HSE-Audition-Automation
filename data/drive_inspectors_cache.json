@@ -14461,6 +14461,18 @@
           "Nome do arquivo indica código 49, o conteúdo é 46 (46)"
         ]
       },
+      "49": {
+        "code": "49",
+        "name": "Doc 49",
+        "filename": "19-11-2026_FRANCISCO_VINICIUS_SOUSA_DOS_SANTOS_[STORZ-ARTHWIND]_-_PREVENçãO_E_PROTEçãO_CONTRA_INCêNDIOS.pdf",
+        "issueDate": "2026-11-19T03:00:00.000Z",
+        "expirationDate": "2028-11-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/11/2028",
+        "sourcePath": "https://drive.google.com/file/d/1Y5QDNka5YsZjSNZoMtTfXdpnrJ8heb1z/view",
+        "readSource": "CONTENT",
+        "divergences": []
+      },
       "01": {
         "code": "01",
         "name": "Doc 01",
@@ -15989,12 +16001,12 @@
       "22": {
         "code": "22",
         "name": "Doc 22",
-        "filename": "22_LOTO-FORMACAO_EMI-2024-11-21_VAL-2025-11-21_IGOR-MARTINS-ROCHA.pdf",
-        "issueDate": "2024-11-21T03:00:00.000Z",
-        "expirationDate": "2026-11-21T03:00:00.000Z",
-        "statusEHS": "VENCE_15",
-        "statusDetail": "ALERTA URGENTE: Vence em 8 dias (21/11/2026)",
-        "sourcePath": "https://drive.google.com/file/d/11Z-quN1c4daSe8fb4VqcFaRq-k-4LVS4/view",
+        "filename": "19-11-2026_Igor_Martins_Rocha_[ARTHWIND]_-_LOTO_-_GUIA_PRáTICO.pdf",
+        "issueDate": "2026-11-19T03:00:00.000Z",
+        "expirationDate": "2028-11-19T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 19/11/2028",
+        "sourcePath": "https://drive.google.com/file/d/12FFdvgE2XDqB7Uy1SAc_B-pySyywTP3R/view",
         "readSource": "CONTENT",
         "divergences": []
       },
