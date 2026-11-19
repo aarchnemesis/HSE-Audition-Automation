@@ -264027,13 +264027,14 @@
   },
   {
     "fileId": "1Y5QDNka5YsZjSNZoMtTfXdpnrJ8heb1z",
-    "filename": "19-11-2026_FRANCISCO_VINICIUS_SOUSA_DOS_SANTOS_[STORZ-ARTHWIND]_-_PREVENçãO_E_PROTEçãO_CONTRA_INCêNDIOS.pdf",
+    "filename": "49_NR23-INCENDIO-FORMACAO_EMI-2026-11-19_VAL-2027-11-19_FRANCISCO-VINICIUS-SOUSA-DOS-SANTOS.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "d0c184430542f8eedad0b9d0fc99a7a8",
-    "modifiedTime": "2026-11-19T12:02:18.684Z",
+    "llmAt": "2026-11-19T14:04:51.554Z",
+    "modifiedTime": "2026-11-19T14:05:41.398Z",
     "holder": {
       "key": "h2:FRANCISCO VINICIUS SOUSA SANTOS",
       "status": "OK"
@@ -264045,7 +264046,7 @@
     "statusDetail": "Válido até 19/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio",
+    "matchedTerm": "Book EHS 49_NR23-INCENDIO",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
@@ -264056,20 +264057,21 @@
         "statusDetail": "Válido até 19/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-23 Prevenção e Proteção contra Incêndio",
+        "matchedTerm": "Book EHS 49_NR23-INCENDIO",
         "extractedClause": "Data do nome do arquivo"
       }
     ]
   },
   {
     "fileId": "12FFdvgE2XDqB7Uy1SAc_B-pySyywTP3R",
-    "filename": "19-11-2026_Igor_Martins_Rocha_[ARTHWIND]_-_LOTO_-_GUIA_PRáTICO.pdf",
+    "filename": "22_LOTO-FORMACAO_EMI-2026-11-19_VAL-2027-11-19_IGOR-MARTINS-ROCHA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "7d4e7bf3f4c803781f698141d15cc2f0",
-    "modifiedTime": "2026-11-19T12:10:35.086Z",
+    "llmAt": "2026-11-19T14:04:39.052Z",
+    "modifiedTime": "2026-11-19T14:05:45.530Z",
     "holder": {
       "key": "h2:IGOR MARTINS ROCHA",
       "status": "OK"
@@ -264081,7 +264083,7 @@
     "statusDetail": "Válido até 19/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "LOTO",
+    "matchedTerm": "Book EHS 22_LOTO",
     "extractedClause": "Data do nome do arquivo",
     "documents": [
       {
@@ -264092,8 +264094,45 @@
         "statusDetail": "Válido até 19/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "LOTO",
+        "matchedTerm": "Book EHS 22_LOTO",
         "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1UMI83XrLgHA6SYJNLI5fi2g8VLbNW5sa",
+    "filename": "18-11-2026_Caio_Victor_Oliveira_Balbino_[ARTHWIND]_-_NR11_-_TRANSPORTE_MOVIMENTAçãO_ARMAZENAGEM_E_MANUSEIO_DE_MATERIAIS_(PERIóDICO).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "a1e606a2d4b8638384bec8d57f0dd855",
+    "llmAt": "2026-11-19T16:02:21.269Z",
+    "modifiedTime": "2026-11-19T14:23:40.197Z",
+    "holder": {
+      "key": "h2:CAIO VICTOR OLIVEIRA BALBINO",
+      "status": "OK"
+    },
+    "code": "14",
+    "issueDate": "2026-11-18T03:00:00.000Z",
+    "expirationDate": "2028-11-18T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 18/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "14",
+        "issueDate": "2026-11-18T03:00:00.000Z",
+        "expirationDate": "2028-11-18T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 18/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR11 - TRANSPORTE MOVIMENTAcaO ARMAZENAGEM E MANUSEIO DE MATERIAIS (PERIÓDICO). Complementar: Movimentação de Cargas com Talha Elétrica (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   }
