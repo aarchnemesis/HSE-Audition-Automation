@@ -264138,14 +264138,14 @@
   },
   {
     "fileId": "1qVpCFeErR-Nf13igiELQQvOnAPhU2Hmd",
-    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (4).pdf",
+    "filename": "16_GWO-FA-FORMACAO_EMI-2026-11-11_VAL-2028-11-11_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "67991c6548e1b5b943c19049dc6cc13a",
-    "llmAt": "2026-11-19T20:01:02.430Z",
-    "modifiedTime": "2026-11-19T19:47:23.848Z",
+    "llmAt": "2026-11-19T20:05:09.899Z",
+    "modifiedTime": "2026-11-19T20:06:00.135Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
       "status": "OK"
@@ -264157,7 +264157,7 @@
     "statusDetail": "Válido até 11/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, Norma GWO Versão 20 (RECICLAGEM)",
+    "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, de acordo com a Norma GWO Versão 20 (RECICLAGEM)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -264178,21 +264178,21 @@
         "statusDetail": "Válido até 11/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, Norma GWO Versão 20 (RECICLAGEM)",
+        "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, de acordo com a Norma GWO Versão 20 (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
   {
     "fileId": "1VA-itSB2QvPcKchOS2UfoKThNXOaXyS9",
-    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (3).pdf",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "23dbea9520ac53c4b7a34fd4c9b38c32",
-    "llmAt": "2026-11-19T20:01:32.762Z",
-    "modifiedTime": "2026-11-19T19:46:43.310Z",
+    "llmAt": "2026-11-19T20:05:09.898Z",
+    "modifiedTime": "2026-11-19T20:06:03.776Z",
     "holder": {
       "key": "h2:MARIO SERGIO CASTRO SOUZA",
       "status": "OK"
@@ -264204,7 +264204,469 @@
     "statusDetail": "Válido até 13/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas (RECICLAGEM)",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "17",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1vkFzvMjWOLNyggL-MSiyhr-IYIdONjZ-",
+    "filename": "19_GWO-FAW-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c3cde8fcb2b5224a6917b72f9ae47e29",
+    "llmAt": "2026-11-19T20:05:09.899Z",
+    "modifiedTime": "2026-11-19T20:06:05.172Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "19",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 19_GWO-FAW",
+    "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "19",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 19_GWO-FAW",
+        "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1zilTKGLsuATQhPAUT81iUupC0_A8Kalp",
+    "filename": "21_NR35-FORMACAO_EMI-2026-11-12_VAL-2028-11-12_MARIO-SERGIO-CASTRO-DE-SOUZA.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4f603aed98016c4248bcaba3c2a75f58",
+    "llmAt": "2026-11-19T20:04:46.712Z",
+    "modifiedTime": "2026-11-19T20:06:07.988Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 21_NR35",
+    "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 21_NR35",
+        "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1PwT9S8IU-5Pm9OFGi20exwK9GH8JRE4P",
+    "filename": "15_NR12-FORMACAO_EMI-2025-04-26_VAL-2026-04-26_EMERSON-PALLOTTA-RIBEIRO.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "786027504494bb22d7149b552e348753",
+    "llmAt": "2026-11-19T20:04:46.707Z",
+    "modifiedTime": "2026-11-19T20:05:56.034Z",
+    "holder": {
+      "key": "h2:EMERSON PALLOTTA RIBEIRO",
+      "status": "OK"
+    },
+    "code": "15",
+    "issueDate": "2025-04-26T03:00:00.000Z",
+    "expirationDate": "2027-04-26T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 26/04/2027",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Book EHS 15_NR12",
+    "extractedClause": "Data do nome do arquivo",
+    "documents": [
+      {
+        "code": "15",
+        "issueDate": "2025-04-26T03:00:00.000Z",
+        "expirationDate": "2027-04-26T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 26/04/2027",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Book EHS 15_NR12",
+        "extractedClause": "Data do nome do arquivo"
+      }
+    ]
+  },
+  {
+    "fileId": "1V1QQqHAaaiGdwDeb4VXB93FDV3Ni5C1n",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "16723bebbddc6092560ac1d8817a44bf",
+    "llmAt": "2026-11-19T20:02:41.118Z",
+    "modifiedTime": "2026-11-19T19:44:00.665Z",
+    "holder": {
+      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "status": "OK"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
+    "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
+        "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1tF35ZuxIr5pXIPar76u95925sICPpM3W",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (4).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "67991c6548e1b5b943c19049dc6cc13a",
+    "llmAt": "2026-11-19T20:05:09.899Z",
+    "modifiedTime": "2026-11-19T19:47:23.848Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OUTRA_PESSOA",
+      "other": "MARIO SERGIO CASTRO DE SOUZA"
+    },
+    "code": "16",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "expirationDate": "2028-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, de acordo com a Norma GWO Versão 20 (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "expirationDate": "2028-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, de acordo com a Norma GWO Versão 20 (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1mlnF6PZ0LqEdSGaEz4e1OrMyxWJN8jsu",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (3).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "23dbea9520ac53c4b7a34fd4c9b38c32",
+    "llmAt": "2026-11-19T20:05:09.898Z",
+    "modifiedTime": "2026-11-19T19:46:43.310Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OUTRA_PESSOA",
+      "other": "MARIO SERGIO CASTRO DE SOUZA"
+    },
+    "code": "17",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO NR-17 (via PDF) (Pág. 1)",
+    "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "17",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO NR-17 (via PDF) (Pág. 1)",
+        "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)"
+      }
+    ]
+  },
+  {
+    "fileId": "1nbmXH9vGs6bLhG-6GbFn9TkWAKu8hMQ1",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (2).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "c3cde8fcb2b5224a6917b72f9ae47e29",
+    "llmAt": "2026-11-19T20:05:09.899Z",
+    "modifiedTime": "2026-11-19T19:45:18.489Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OUTRA_PESSOA",
+      "other": "MARIO SERGIO CASTRO DE SOUZA"
+    },
+    "code": "19",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio – Reciclagem, norma GWO Versão 20 (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "19",
+        "issueDate": "2026-11-13T03:00:00.000Z",
+        "expirationDate": "2028-11-13T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 13/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio – Reciclagem, norma GWO Versão 20 (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1UKSPnKkI45RGRTLpI9vMwJNbNWIkg33b",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (1).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "4f603aed98016c4248bcaba3c2a75f58",
+    "llmAt": "2026-11-19T20:04:46.712Z",
+    "modifiedTime": "2026-11-19T19:44:48.331Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OUTRA_PESSOA",
+      "other": "MARIO SERGIO CASTRO DE SOUZA"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Trabalho em Altura de acordo com a NR 35 (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "Trabalho em Altura de acordo com a NR 35 (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1lP5pye2yWLVvO-KeSV0MLNTSbCd1uqEp",
+    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed.pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "16723bebbddc6092560ac1d8817a44bf",
+    "llmAt": "2026-11-19T20:05:09.898Z",
+    "modifiedTime": "2026-11-19T19:44:00.665Z",
+    "holder": {
+      "key": "h2:FRANCISCO WELLINGTON COSTA GOMES",
+      "status": "OUTRA_PESSOA",
+      "other": "MARIO SERGIO CASTRO DE SOUZA"
+    },
+    "code": "21",
+    "issueDate": "2026-11-12T03:00:00.000Z",
+    "expirationDate": "2028-11-12T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 12/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Trabalho em Altura – Reciclagem, norma GWO Versão 20 (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "21",
+        "issueDate": "2026-11-12T03:00:00.000Z",
+        "expirationDate": "2028-11-12T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 12/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Trabalho em Altura – Reciclagem, norma GWO Versão 20 (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "1X0aHhYC3KYOMwANH8rqaT8xYf0aKAKqw",
+    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (4).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "51c8a9b53220cf48e2e99bab02b34de8",
+    "llmAt": "2026-11-19T22:01:59.574Z",
+    "modifiedTime": "2026-11-19T20:47:28.846Z",
+    "holder": {
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
+      "status": "OK"
+    },
+    "code": "16",
+    "issueDate": "2026-11-11T03:00:00.000Z",
+    "expirationDate": "2028-11-11T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 11/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "documents": [
+      {
+        "code": "30",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
+        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
+      },
+      {
+        "code": "16",
+        "issueDate": "2026-11-11T03:00:00.000Z",
+        "expirationDate": "2028-11-11T03:00:00.000Z",
+        "statusEHS": "CONFORME",
+        "statusDetail": "Válido até 11/11/2028",
+        "source": "PDF_CONTENT",
+        "classificationSource": "SEMANTIC",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+      }
+    ]
+  },
+  {
+    "fileId": "182593wxME5hzmhCOSzqV1ZbDLpMIL_bo",
+    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (3).pdf",
+    "v": 2,
+    "cv": 3,
+    "sv": 1,
+    "ev": 7,
+    "md5": "dace60b14fa15984e42d303bfa3ab8f7",
+    "llmAt": "2026-11-19T22:02:29.244Z",
+    "modifiedTime": "2026-11-19T20:47:05.173Z",
+    "holder": {
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
+      "status": "OK"
+    },
+    "code": "17",
+    "issueDate": "2026-11-13T03:00:00.000Z",
+    "expirationDate": "2028-11-13T03:00:00.000Z",
+    "statusEHS": "CONFORME",
+    "statusDetail": "Válido até 13/11/2028",
+    "source": "PDF_CONTENT",
+    "classificationSource": "SEMANTIC",
+    "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem de acordo com a Norma GWO – Versão 19 (RECICLAGEM)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -264225,23 +264687,23 @@
         "statusDetail": "Válido até 13/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas (RECICLAGEM)",
+        "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem de acordo com a Norma GWO – Versão 19 (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
   {
-    "fileId": "1vkFzvMjWOLNyggL-MSiyhr-IYIdONjZ-",
-    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (2).pdf",
+    "fileId": "1il9orFtmXR5bZxjdH0Ta-NwDwOao11-b",
+    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (2).pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
-    "md5": "c3cde8fcb2b5224a6917b72f9ae47e29",
-    "llmAt": "2026-11-19T20:02:03.467Z",
-    "modifiedTime": "2026-11-19T19:45:18.489Z",
+    "md5": "0e3d6d46f8b5cd21902d5efb4f820c78",
+    "llmAt": "2026-11-19T22:02:59.996Z",
+    "modifiedTime": "2026-11-19T20:45:45.788Z",
     "holder": {
-      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
     },
     "code": "19",
@@ -264278,16 +264740,16 @@
     ]
   },
   {
-    "fileId": "1zilTKGLsuATQhPAUT81iUupC0_A8Kalp",
-    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed (1).pdf",
+    "fileId": "19uSI89WgLIq4eZYaAbetUBZeiErn3UFZ",
+    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (1).pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
-    "md5": "4f603aed98016c4248bcaba3c2a75f58",
-    "modifiedTime": "2026-11-19T19:44:48.331Z",
+    "md5": "ee1432056cfa3895168eb4fdcf3695aa",
+    "modifiedTime": "2026-11-19T20:45:17.932Z",
     "holder": {
-      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
     },
     "code": "21",
@@ -264314,54 +264776,17 @@
     ]
   },
   {
-    "fileId": "1PwT9S8IU-5Pm9OFGi20exwK9GH8JRE4P",
-    "filename": "nr12.pdf",
+    "fileId": "15YOrdn3kD8JNM3Wtop0GaKGaykDwByaz",
+    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
-    "md5": "786027504494bb22d7149b552e348753",
-    "llmAt": "2026-11-19T20:02:20.792Z",
-    "modifiedTime": "2026-11-19T18:33:26.803Z",
+    "md5": "2515965f0549e1accafa539eccef6ed1",
+    "llmAt": "2026-11-19T22:03:36.689Z",
+    "modifiedTime": "2026-11-19T20:44:45.236Z",
     "holder": {
-      "key": "h2:EMERSON PALLOTTA RIBEIRO",
-      "status": "OK"
-    },
-    "code": "15",
-    "issueDate": "2025-04-26T03:00:00.000Z",
-    "expirationDate": "2027-04-26T03:00:00.000Z",
-    "statusEHS": "CONFORME",
-    "statusDetail": "Válido até 26/04/2027",
-    "source": "PDF_CONTENT",
-    "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) (Iniciação) (FORMACAO)",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
-    "documents": [
-      {
-        "code": "15",
-        "issueDate": "2025-04-26T03:00:00.000Z",
-        "expirationDate": "2027-04-26T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "Válido até 26/04/2027",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR12 - Segurança no Trabalho em Máquinas e Equipamentos (Geral) (Iniciação) (FORMACAO)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
-      }
-    ]
-  },
-  {
-    "fileId": "1V1QQqHAaaiGdwDeb4VXB93FDV3Ni5C1n",
-    "filename": "Mário Sérgio Castro de Sousa - BSTR [assinado]_removed.pdf",
-    "v": 2,
-    "cv": 3,
-    "sv": 1,
-    "ev": 7,
-    "md5": "16723bebbddc6092560ac1d8817a44bf",
-    "llmAt": "2026-11-19T20:02:41.118Z",
-    "modifiedTime": "2026-11-19T19:44:00.665Z",
-    "holder": {
-      "key": "h2:MARIO SERGIO CASTRO SOUZA",
+      "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
     },
     "code": "21",
