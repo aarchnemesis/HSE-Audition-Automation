@@ -9375,17 +9375,16 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2026-12-23T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
+    "expirationDate": "2027-11-19T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "623445",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 73,
-    "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 34 dias (23/12/2026) | EM ANDAMENTO NA STORZ (623445 - Progresso: 73%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 23/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (623445) em 19/11/2026 — Válido até 19/11/2027 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1neib_t7litrk-XA-BfcIDLuzHn4XptaZ/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-19T12:05:45.373Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -9468,13 +9467,13 @@
     "statusEHS": "VENCE_60",
     "storzRequestId": "623446",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 25,
+    "storzProgressPercent": 53,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 25%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 32 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 53%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1wfCQCHLM15vOaTksAf4fbWvNHdXTb7WX/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-19T09:32:05.998Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_39",
@@ -12336,16 +12335,16 @@
     "docCode": "22",
     "docName": "LOTO - Bloqueio e Etiquetagem",
     "modality": "ONLINE",
-    "expirationDate": "2028-11-18T03:00:00.000Z",
+    "expirationDate": "2028-11-19T03:00:00.000Z",
     "statusEHS": "CONFORME",
     "storzRequestId": "625648",
     "storzState": "CONCLUIDO",
     "storzProgressPercent": 100,
-    "detail": "Curso renovado e aprovado na Storz (625648) em 18/11/2026 — Válido até 18/11/2028 (aguardando upload no Drive).",
-    "evidenceUrl": "https://drive.google.com/file/d/11Z-quN1c4daSe8fb4VqcFaRq-k-4LVS4/view",
+    "detail": "Válido até 19/11/2028",
+    "evidenceUrl": "https://drive.google.com/file/d/12FFdvgE2XDqB7Uy1SAc_B-pySyywTP3R/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1-gI74kUVdACZkk18E8hr5u-BkjbmFjjv",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-18T18:32:00.539Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_49",
@@ -17038,11 +17037,11 @@
     "docCode": "16",
     "docName": "GWO Primeiros Socorros",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-03-09T12:00:00.000Z",
+    "expirationDate": "2028-11-11T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 09/03/2027",
+    "detail": "Válido até 11/11/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -17053,11 +17052,11 @@
     "docCode": "17",
     "docName": "GWO NR-17 Ergonomia / Carga Manual",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-25T12:00:00.000Z",
+    "expirationDate": "2028-11-13T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 25/02/2027",
+    "detail": "Válido até 13/11/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -17086,11 +17085,11 @@
     "docCode": "19",
     "docName": "GWO NR-23 Combate a Incêndio",
     "modality": "PRESENCIAL",
-    "expirationDate": "2027-02-25T12:00:00.000Z",
+    "expirationDate": "2028-11-13T12:00:00.000Z",
     "statusEHS": "CONFORME",
-    "detail": "Válido até 25/02/2027",
+    "detail": "Válido até 13/11/2028",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-03T17:14:43.799Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_64",
@@ -23654,12 +23653,12 @@
     "statusEHS": "VENCE_90",
     "storzRequestId": "623835",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 18,
+    "storzProgressPercent": 37,
     "storzDeadline": "14/01/2027",
-    "detail": "PROGRAMAR: Vence em 80 dias (07/02/2027) | EM ANDAMENTO NA STORZ (623835 - Progresso: 18%) [Prazo Storz: 14/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "PROGRAMAR: Vence em 80 dias (07/02/2027) | EM ANDAMENTO NA STORZ (623835 - Progresso: 37%) [Prazo Storz: 14/01/2027] — o prazo que vale é o vencimento do documento.",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1NJnZ40IuEcIqjABonS5apgTOLiwQoYOz",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-19T12:05:45.373Z"
+    "lastUpdated": "2026-11-19T14:07:55.293Z"
   },
   {
     "inspectorId": "rpo_85",

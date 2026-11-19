@@ -4028,9 +4028,10 @@
     "trainingName": "[STORZ] - NR33 TRABALHADOR E VIGIA (PERIóDICO)",
     "modality": "PRESENCIAL",
     "requestDate": "2026-11-16T03:00:00.000Z",
-    "state": "EM_ANDAMENTO",
-    "rawSituacao": "Em andamento",
-    "progressPercent": 73,
+    "completionDate": "2026-11-19T03:00:00.000Z",
+    "state": "CONCLUIDO",
+    "rawSituacao": "Aprovado",
+    "progressPercent": 100,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -4045,7 +4046,7 @@
     "requestDate": "2026-11-16T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 25,
+    "progressPercent": 53,
     "courseDurationDays": 60,
     "workloadHours": 8,
     "idealSlaDays": 1
@@ -10292,7 +10293,7 @@
     "requestDate": "2026-11-15T03:00:00.000Z",
     "state": "EM_ANDAMENTO",
     "rawSituacao": "Em andamento",
-    "progressPercent": 18,
+    "progressPercent": 37,
     "courseDurationDays": 60,
     "workloadHours": 14,
     "idealSlaDays": 2
