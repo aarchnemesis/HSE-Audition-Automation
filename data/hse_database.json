@@ -2039,12 +2039,12 @@
     "statusEHS": "STORZ_EM_ANDAMENTO",
     "storzRequestId": "619378",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 3,
+    "storzProgressPercent": 11,
     "storzDeadline": "15/01/2027",
-    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619378 - Progresso: 3%) [Prazo Storz: 15/01/2027].",
+    "detail": "Documento ausente no Drive, mas EM ANDAMENTO NA STORZ (619378 - Progresso: 11%) [Prazo Storz: 15/01/2027].",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1btUh84ZP6NdRdxvlurQpG7remkACyYDC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-17T00:58:07.260Z"
+    "lastUpdated": "2026-11-19T18:32:09.801Z"
   },
   {
     "inspectorId": "rpo_17",
@@ -9467,13 +9467,13 @@
     "statusEHS": "VENCE_60",
     "storzRequestId": "623446",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 71,
+    "storzProgressPercent": 75,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 32 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 71%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
+    "detail": "ALERTA INICIAL: Vence em 32 dias (21/12/2026) | EM ANDAMENTO NA STORZ (623446 - Progresso: 75%) [Prazo Storz: 15/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 21/12/2026, ANTES do prazo da Storz (15/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1wfCQCHLM15vOaTksAf4fbWvNHdXTb7WX/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1nFZNVWwCt4s1bx9j1BDlBEscwMGgTiXy",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-19T16:06:51.069Z"
+    "lastUpdated": "2026-11-19T18:32:09.801Z"
   },
   {
     "inspectorId": "rpo_39",
