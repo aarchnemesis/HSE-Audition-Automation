@@ -4206,17 +4206,16 @@
     "docCode": "12",
     "docName": "NR-10 Básico",
     "modality": "ONLINE",
-    "expirationDate": "2027-01-13T03:00:00.000Z",
-    "statusEHS": "VENCE_60",
+    "expirationDate": "2028-11-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "613533",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 63,
-    "storzDeadline": "09/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 54 dias (13/01/2027) | EM ANDAMENTO NA STORZ (613533 - Progresso: 63%) [Prazo Storz: 09/01/2027] — o prazo que vale é o vencimento do documento.",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (613533) em 20/11/2026 — Válido até 20/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1hQ7GruKutkrPxOj4ADqmwZiiqRyb414h/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-20T14:05:34.724Z"
+    "lastUpdated": "2026-11-20T18:05:36.878Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -22649,13 +22648,13 @@
     "statusEHS": "VENCIDO",
     "storzRequestId": "625323",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 45,
+    "storzProgressPercent": 79,
     "storzDeadline": "16/01/2027",
-    "detail": "VENCIDO há 49 dias (02/10/2026) | EM ANDAMENTO NA STORZ (625323 - Progresso: 45%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 02/10/2026, ANTES do prazo da Storz (16/01/2027)!",
+    "detail": "VENCIDO há 49 dias (02/10/2026) | EM ANDAMENTO NA STORZ (625323 - Progresso: 79%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 02/10/2026, ANTES do prazo da Storz (16/01/2027)!",
     "evidenceUrl": "https://drive.google.com/file/d/1JmByUzmkEgoc0MJXmweBXfSm0Oa3bZSG/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-20T16:05:22.793Z"
+    "lastUpdated": "2026-11-20T18:05:36.878Z"
   },
   {
     "inspectorId": "rpo_82",
