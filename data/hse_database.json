@@ -18418,13 +18418,13 @@
     "statusEHS": "VENCE_60",
     "storzRequestId": "613597",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 16,
+    "storzProgressPercent": 26,
     "storzDeadline": "15/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 60 dias (19/01/2027) | EM ANDAMENTO NA STORZ (613597 - Progresso: 16%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 60 dias (19/01/2027) | EM ANDAMENTO NA STORZ (613597 - Progresso: 26%) [Prazo Storz: 15/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1aApTxJn4XUo0T5Zl4HDtDOMxFz_xfKCs/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1vZ0Jvl7owpIV-_pbqvOgW4dn0X320WNt",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-20T18:32:04.884Z"
+    "lastUpdated": "2026-11-20T22:05:34.997Z"
   },
   {
     "inspectorId": "rpo_68",
@@ -22644,17 +22644,16 @@
     "docCode": "15",
     "docName": "NR-12 Segurança em Máquinas",
     "modality": "ONLINE",
-    "expirationDate": "2026-10-02T03:00:00.000Z",
-    "statusEHS": "VENCIDO",
+    "expirationDate": "2028-11-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "625323",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 79,
-    "storzDeadline": "16/01/2027",
-    "detail": "VENCIDO há 49 dias (02/10/2026) | EM ANDAMENTO NA STORZ (625323 - Progresso: 79%) [Prazo Storz: 16/01/2027]. ATENÇÃO AO RITMO: o certificado vence em 02/10/2026, ANTES do prazo da Storz (16/01/2027)!",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (625323) em 20/11/2026 — Válido até 20/11/2028 (aguardando upload no Drive).",
     "evidenceUrl": "https://drive.google.com/file/d/1JmByUzmkEgoc0MJXmweBXfSm0Oa3bZSG/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1KrIY2dv28v9E-x8eZLXH67Pduxu3tFpC",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-20T18:05:36.878Z"
+    "lastUpdated": "2026-11-20T22:05:34.997Z"
   },
   {
     "inspectorId": "rpo_82",
