@@ -4210,13 +4210,13 @@
     "statusEHS": "VENCE_60",
     "storzRequestId": "613533",
     "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 53,
+    "storzProgressPercent": 63,
     "storzDeadline": "09/01/2027",
-    "detail": "ALERTA INICIAL: Vence em 54 dias (13/01/2027) | EM ANDAMENTO NA STORZ (613533 - Progresso: 53%) [Prazo Storz: 09/01/2027] — o prazo que vale é o vencimento do documento.",
+    "detail": "ALERTA INICIAL: Vence em 54 dias (13/01/2027) | EM ANDAMENTO NA STORZ (613533 - Progresso: 63%) [Prazo Storz: 09/01/2027] — o prazo que vale é o vencimento do documento.",
     "evidenceUrl": "https://drive.google.com/file/d/1hQ7GruKutkrPxOj4ADqmwZiiqRyb414h/view",
     "driveFolderUrl": "https://drive.google.com/drive/folders/17_uludgZNyDZW1C2FmeRbwN5hYLz-MS3",
     "rpoAuditStatus": "PENDENTE_REVISAO",
-    "lastUpdated": "2026-11-20T09:32:09.029Z"
+    "lastUpdated": "2026-11-20T14:05:34.724Z"
   },
   {
     "inspectorId": "rpo_24",
@@ -26726,16 +26726,15 @@
     "docCode": "20",
     "docName": "NR-33 Espaço Confinado",
     "modality": "ONLINE",
-    "expirationDate": "2027-02-11T12:00:00.000Z",
-    "statusEHS": "VENCE_90",
+    "expirationDate": "2027-11-20T03:00:00.000Z",
+    "statusEHS": "CONFORME",
     "storzRequestId": "622549",
-    "storzState": "EM_ANDAMENTO",
-    "storzProgressPercent": 73,
-    "storzDeadline": "11/01/2027",
-    "detail": "PROGRAMAR: Vence em 83 dias (11/02/2027) (Validado no RPO | Comprovante pendente no Drive) | EM ANDAMENTO NA STORZ (622549 - Progresso: 73%) [Prazo Storz: 11/01/2027] — o prazo que vale é o vencimento do documento.",
+    "storzState": "CONCLUIDO",
+    "storzProgressPercent": 100,
+    "detail": "Curso renovado e aprovado na Storz (622549) em 20/11/2026 — Válido até 20/11/2027 (aguardando upload no Drive).",
     "driveFolderUrl": "https://drive.google.com/drive/folders/1jVB6rjg0mrxtMJF_7DuLuXc7pP5uUn2k",
     "rpoAuditStatus": "VALIDADO",
-    "lastUpdated": "2026-11-20T12:05:31.953Z"
+    "lastUpdated": "2026-11-20T14:05:34.724Z"
   },
   {
     "inspectorId": "rpo_106",
