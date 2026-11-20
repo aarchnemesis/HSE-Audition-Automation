@@ -264442,16 +264442,6 @@
     "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-11-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "17",
         "issueDate": "2026-11-13T03:00:00.000Z",
         "expirationDate": "2028-11-13T03:00:00.000Z",
@@ -264489,16 +264479,6 @@
     "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio – Reciclagem, norma GWO Versão 20 (RECICLAGEM)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-11-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "19",
         "issueDate": "2026-11-13T03:00:00.000Z",
@@ -264576,16 +264556,6 @@
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
-        "code": "30",
-        "issueDate": "2026-11-12T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
-      {
         "code": "21",
         "issueDate": "2026-11-12T03:00:00.000Z",
         "expirationDate": "2028-11-12T03:00:00.000Z",
@@ -264600,14 +264570,14 @@
   },
   {
     "fileId": "1X0aHhYC3KYOMwANH8rqaT8xYf0aKAKqw",
-    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (4).pdf",
+    "filename": "16_GWO-FA-FORMACAO_EMI-2026-11-11_VAL-2028-11-11_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "51c8a9b53220cf48e2e99bab02b34de8",
-    "llmAt": "2026-11-19T22:01:59.574Z",
-    "modifiedTime": "2026-11-19T20:47:28.846Z",
+    "llmAt": "2026-11-19T22:05:27.255Z",
+    "modifiedTime": "2026-11-19T22:06:12.431Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
@@ -264619,7 +264589,7 @@
     "statusDetail": "Válido até 11/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, Norma GWO Versão 20 (RECICLAGEM)",
     "extractedClause": "Leitura Prometheus: leitores A e B concordam",
     "documents": [
       {
@@ -264640,21 +264610,21 @@
         "statusDetail": "Válido até 11/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem (RECICLAGEM)",
+        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo Primeiros Socorros – Reciclagem, Norma GWO Versão 20 (RECICLAGEM)",
         "extractedClause": "Leitura Prometheus: leitores A e B concordam"
       }
     ]
   },
   {
     "fileId": "182593wxME5hzmhCOSzqV1ZbDLpMIL_bo",
-    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (3).pdf",
+    "filename": "17_GWO-MH-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "dace60b14fa15984e42d303bfa3ab8f7",
-    "llmAt": "2026-11-19T22:02:29.244Z",
-    "modifiedTime": "2026-11-19T20:47:05.173Z",
+    "llmAt": "2026-11-19T22:05:27.255Z",
+    "modifiedTime": "2026-11-19T22:06:15.982Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
@@ -264666,19 +264636,9 @@
     "statusDetail": "Válido até 13/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem de acordo com a Norma GWO – Versão 19 (RECICLAGEM)",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "matchedTerm": "Book EHS 17_GWO-MH",
+    "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-11-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "17",
         "issueDate": "2026-11-13T03:00:00.000Z",
@@ -264687,21 +264647,21 @@
         "statusDetail": "Válido até 13/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "Curso GWO/BST (Global Wind Organisation) – Módulo Manuseio Manual de Cargas – Reciclagem de acordo com a Norma GWO – Versão 19 (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+        "matchedTerm": "Book EHS 17_GWO-MH",
+        "extractedClause": "no dia 13de Novembrode 2026 (validade 2 anos)"
       }
     ]
   },
   {
     "fileId": "1il9orFtmXR5bZxjdH0Ta-NwDwOao11-b",
-    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (2).pdf",
+    "filename": "19_GWO-FAW-FORMACAO_EMI-2026-11-13_VAL-2028-11-13_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "0e3d6d46f8b5cd21902d5efb4f820c78",
-    "llmAt": "2026-11-19T22:02:59.996Z",
-    "modifiedTime": "2026-11-19T20:45:45.788Z",
+    "llmAt": "2026-11-19T22:05:27.255Z",
+    "modifiedTime": "2026-11-19T22:06:18.860Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
@@ -264713,19 +264673,9 @@
     "statusDetail": "Válido até 13/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio (RECICLAGEM)",
-    "extractedClause": "Leitura Prometheus: leitores A e B concordam",
+    "matchedTerm": "Book EHS 19_GWO-FAW",
+    "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-11-13T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "19",
         "issueDate": "2026-11-13T03:00:00.000Z",
@@ -264734,20 +264684,21 @@
         "statusDetail": "Válido até 13/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO/BST (Global Wind Organisation) – Módulo de Conscientização sobre Incêndio (RECICLAGEM)",
-        "extractedClause": "Leitura Prometheus: leitores A e B concordam"
+        "matchedTerm": "Book EHS 19_GWO-FAW",
+        "extractedClause": "no dia 13 de Novembro de 2026 (validade 2 anos)"
       }
     ]
   },
   {
     "fileId": "19uSI89WgLIq4eZYaAbetUBZeiErn3UFZ",
-    "filename": "Fernando Teodoro de Morais Neto - BSTR [assinado]_removed (1).pdf",
+    "filename": "21_NR35-FORMACAO_EMI-2026-11-12_VAL-2028-11-12_FERNANDO-TEODORO-DE-MORAIS-NETO.pdf",
     "v": 2,
     "cv": 3,
     "sv": 1,
     "ev": 7,
     "md5": "ee1432056cfa3895168eb4fdcf3695aa",
-    "modifiedTime": "2026-11-19T20:45:17.932Z",
+    "llmAt": "2026-11-19T22:05:12.437Z",
+    "modifiedTime": "2026-11-19T22:06:21.848Z",
     "holder": {
       "key": "h2:FERNANDO TEODORO MORAIS NETO",
       "status": "OK"
@@ -264759,7 +264710,7 @@
     "statusDetail": "Válido até 12/11/2028",
     "source": "PDF_CONTENT",
     "classificationSource": "SEMANTIC",
-    "matchedTerm": "NR-35 (via PDF)",
+    "matchedTerm": "Book EHS 21_NR35",
     "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
     "documents": [
       {
@@ -264770,7 +264721,7 @@
         "statusDetail": "Válido até 12/11/2028",
         "source": "PDF_CONTENT",
         "classificationSource": "SEMANTIC",
-        "matchedTerm": "NR-35 (via PDF)",
+        "matchedTerm": "Book EHS 21_NR35",
         "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)"
       }
     ]
@@ -264799,16 +264750,6 @@
     "matchedTerm": "NR-35 (via PDF) (Pág. 1)",
     "extractedClause": "no dia 12de Novembro de 2026 (validade 2 anos)",
     "documents": [
-      {
-        "code": "30",
-        "issueDate": "2026-11-12T03:00:00.000Z",
-        "statusEHS": "CONFORME",
-        "statusDetail": "ID Vitalício (Detectado via conteúdo GWO)",
-        "source": "PDF_CONTENT",
-        "classificationSource": "SEMANTIC",
-        "matchedTerm": "GWO WINDA ID (Detectado na Pág. 1)",
-        "extractedClause": "Conteúdo da página confirmou o WINDA ID do colaborador."
-      },
       {
         "code": "21",
         "issueDate": "2026-11-12T03:00:00.000Z",
